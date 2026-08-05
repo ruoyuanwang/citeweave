@@ -10,7 +10,7 @@ BibAgent 把检索协议、合规采集或文件导入、元数据清洗与去�
 
 ## 已生成的 Word 成果
 
-以下截图直接来自真实端到端运行生成的 `manuscript.docx`，保留了 Word 中的页眉、页码、图题、正文和实际分页。
+以下截图直接来自最新一次真实端到端运行生成的 43 页 `manuscript.docx`。图表按最终 Word 分页分别展示，并保留图题及相邻结果正文。
 
 [下载完整 Word 示例](examples/bibliometric-report-example.docx)
 
@@ -18,9 +18,13 @@ BibAgent 把检索协议、合规采集或文件导入、元数据清洗与去�
 
 ![Word 报告中的文献类型构成和主要来源图](docs/images/readme/word-statistical-overview.png)
 
-### 作者与机构合作网络
+### 作者合作网络
 
-![Word 报告中的作者和机构合作网络](docs/images/readme/word-collaboration-networks.png)
+![最新 Word 报告中的作者合作网络独立页面](docs/images/readme/word-author-collaboration.png)
+
+### 机构合作网络
+
+![最新 Word 报告中的机构合作网络独立页面](docs/images/readme/word-institution-collaboration.png)
 
 ### 关键词时间叠加图
 
