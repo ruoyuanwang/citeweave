@@ -1,0 +1,27 @@
+project_id: llm-bibliometric-analysis
+protocol:
+  title: Large language models in bibliometric research
+  keywords:
+    - large language model
+    - bibliometric
+  year_from: 2022
+  year_to: 2026
+  source: crossref
+  query_mode: all
+  document_types:
+    - journal-article
+  language: null
+  max_records: null
+  enrich_crossref: false
+  include_abstracts: true
+  include_references: true
+  notes: End-to-end acceptance example.
+created_at: 2026-08-04T00:00:00Z
+crossref_mailto: null
+openalex_api_key_env: OPENALEX_API_KEY
+llm_model: deepseek-v4-flash
+llm_base_url: https://api.deepseek.com
+min_completeness_ratio: 0.995
+visualization_max_nodes: 70
+visualization_label_budget: 22
+random_seed: 42

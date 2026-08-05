@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+*.docx binary
+*.gz binary
+*.parquet binary
+*.pdf binary
+*.png binary
+*.svg text eol=lf

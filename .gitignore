@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+.env
+runs/
+dist/
+build/
+*.egg-info/
+
+# Internal development planning and frozen benchmark intermediates.
+# Keep these files locally; do not publish them with the repository.
+docs/GENERATION_OPTIMIZATION_PLAN.md
+docs/MASTER_PLAN.md
+docs/TEXT_GENERATION_BENCHMARK.md
+docs/references/
