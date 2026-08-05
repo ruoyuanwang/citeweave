@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">CiteWeave</title>
+  <desc id="desc">Evidence-first bibliometric research agent</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#102845"/>
+      <stop offset="1" stop-color="#153a4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#63e6be"/>
+      <stop offset="1" stop-color="#74c0fc"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#63e6be" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#63e6be" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="28" fill="url(#bg)"/>
+  <circle cx="1015" cy="135" r="185" fill="url(#glow)"/>
+
+  <g fill="none" stroke="#9debd7" stroke-opacity=".24" stroke-width="1.5">
+    <path d="M835 72 942 116 1046 64 1131 134 1030 206 910 218 835 72Z"/>
+    <path d="M942 116 1030 206M1046 64 910 218M835 72 1131 134"/>
+    <path d="M780 180 910 218 846 274M1030 206 1110 265"/>
+  </g>
+  <g fill="#071426" stroke="url(#accent)" stroke-width="4">
+    <circle cx="835" cy="72" r="11"/>
+    <circle cx="942" cy="116" r="17"/>
+    <circle cx="1046" cy="64" r="13"/>
+    <circle cx="1131" cy="134" r="10"/>
+    <circle cx="1030" cy="206" r="21"/>
+    <circle cx="910" cy="218" r="14"/>
+    <circle cx="780" cy="180" r="9"/>
+    <circle cx="846" cy="274" r="8"/>
+    <circle cx="1110" cy="265" r="12"/>
+  </g>
+
+  <g transform="translate(76 70)">
+    <g transform="translate(0 16)">
+      <circle cx="66" cy="66" r="58" fill="#0c2038" stroke="#63e6be" stroke-width="3"/>
+      <path d="M29 79C47 43 72 35 101 50M30 80C54 100 80 102 104 80M47 42C54 66 75 84 99 91"
+            fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="29" cy="79" r="7" fill="#63e6be"/>
+      <circle cx="47" cy="42" r="7" fill="#74c0fc"/>
+      <circle cx="101" cy="50" r="7" fill="#63e6be"/>
+      <circle cx="104" cy="80" r="7" fill="#74c0fc"/>
+      <circle cx="99" cy="91" r="7" fill="#63e6be"/>
+    </g>
+    <text x="158" y="92" fill="#f8fbff" font-family="Segoe UI, Inter, Arial, sans-serif"
+          font-size="72" font-weight="700" letter-spacing="-2">CiteWeave</text>
+    <text x="161" y="132" fill="#8ff0d4" font-family="Segoe UI, Inter, Arial, sans-serif"
+          font-size="19" font-weight="600" letter-spacing="3.2">EVIDENCE · METRICS · NARRATIVE</text>
+    <text x="161" y="178" fill="#c8d6e5" font-family="Segoe UI, Inter, Arial, sans-serif"
+          font-size="22">Evidence-first, auditable bibliometric research agent</text>
+    <rect x="161" y="205" width="325" height="3" rx="1.5" fill="url(#accent)"/>
+  </g>
+</svg>

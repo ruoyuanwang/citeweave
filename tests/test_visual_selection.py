@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import pandas as pd
 
-from bibagent.models import VisualizationPolicy
-from bibagent.visual_selection import adaptive_occurrence_threshold, select_network
+from citeweave.models import VisualizationPolicy
+from citeweave.visual_selection import adaptive_occurrence_threshold, select_network
 
 
 def _fixture_graph() -> tuple[pd.DataFrame, pd.DataFrame]:

@@ -1,4 +1,4 @@
-from bibagent.scale import run_duckdb_benchmark
+from citeweave.scale import run_duckdb_benchmark
 
 
 def test_scale_benchmark_full_counts_and_bounds_candidates() -> None:

@@ -248,7 +248,7 @@ def _run_metadata(
             "keep_partitions": keep_partitions,
         },
         "runtime": {
-            "bibagent": __version__,
+            "citeweave": __version__,
             "python": platform.python_version(),
             "duckdb": duckdb.__version__,
             "pandas": pd.__version__,

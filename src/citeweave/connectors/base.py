@@ -36,7 +36,7 @@ class BaseConnector(ABC):
         timeout: float = 60,
         max_retries: int = 6,
         requests_per_second: float | None = None,
-        user_agent: str = "BibAgent/0.1 (metadata research workflow)",
+        user_agent: str = "CiteWeave/0.1 (metadata research workflow)",
     ):
         self.raw_dir = raw_dir
         self.raw_dir.mkdir(parents=True, exist_ok=True)

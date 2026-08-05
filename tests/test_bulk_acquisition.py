@@ -8,11 +8,11 @@ from typing import Any
 import httpx
 import pytest
 
-from bibagent.bulk_acquisition import bulk_acquire, harvest_lock, iter_staged_records
-from bibagent.connectors.base import BaseConnector
-from bibagent.exceptions import AcquisitionError
-from bibagent.harvest_acceptance import verify_bulk_harvest
-from bibagent.models import (
+from citeweave.bulk_acquisition import bulk_acquire, harvest_lock, iter_staged_records
+from citeweave.connectors.base import BaseConnector
+from citeweave.exceptions import AcquisitionError
+from citeweave.harvest_acceptance import verify_bulk_harvest
+from citeweave.models import (
     AcquisitionPolicy,
     ProjectConfig,
     ProjectPaths,
@@ -265,8 +265,8 @@ def test_request_retries_429_and_server_error(monkeypatch, tmp_path: Path):
     connector = DummyConnector(tmp_path, max_retries=3)
     connector.client.close()
     connector.client = httpx.Client(transport=httpx.MockTransport(handler))
-    monkeypatch.setattr("bibagent.connectors.base.time.sleep", lambda _: None)
-    monkeypatch.setattr("bibagent.connectors.base.random.uniform", lambda _a, _b: 0)
+    monkeypatch.setattr("citeweave.connectors.base.time.sleep", lambda _: None)
+    monkeypatch.setattr("citeweave.connectors.base.random.uniform", lambda _a, _b: 0)
 
     payload = connector._request_json(connector.endpoint, params={"rows": 0})
 

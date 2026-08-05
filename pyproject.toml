@@ -3,7 +3,7 @@ requires = ["hatchling>=1.25"]
 build-backend = "hatchling.build"
 
 [project]
-name = "bibagent"
+name = "citeweave"
 version = "0.1.0"
 description = "Evidence-first, auditable bibliometric research agent"
 readme = "README.md"
@@ -36,10 +36,11 @@ dependencies = [
 dev = ["pytest>=8.3", "pytest-cov>=5", "ruff>=0.7"]
 
 [project.scripts]
-bibagent = "bibagent.cli:app"
+citeweave = "citeweave.cli:app"
+bibagent = "citeweave.cli:app"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/bibagent"]
+packages = ["src/citeweave"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

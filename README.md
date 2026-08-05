@@ -1,38 +1,77 @@
-# BibAgent
+<p align="center">
+  <img src="docs/assets/citeweave-banner.svg" alt="CiteWeave — Evidence-first bibliometric research agent" width="100%">
+</p>
 
-证据优先、端到端、可审计的文献计量研究 Agent。
+<h1 align="center">CiteWeave · 文脉</h1>
 
-BibAgent 把检索协议、合规采集或文件导入、元数据清洗与去重、确定性文献计量分析、出版级可视化、证据绑定、受约束正文生成，以及 HTML/Word 交付组织在同一条可复现流水线上。它既能处理小型研究，也提供面向万级至百万级元数据的磁盘优先处理与可恢复执行路径。
+<p align="center">
+  <a href="https://github.com/ruoyuanwang/citeweave/actions/workflows/ci.yml"><img src="https://github.com/ruoyuanwang/citeweave/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white" alt="Python 3.11+">
+  <img src="https://img.shields.io/badge/License-Apache--2.0-63E6BE" alt="Apache-2.0">
+  <img src="https://img.shields.io/badge/Output-Word%20%7C%20HTML%20%7C%20SVG-74C0FC" alt="Word, HTML and SVG output">
+</p>
 
-当前流水线：
+<p align="center">
+  <strong>证据优先、端到端、可审计的文献计量研究智能体</strong><br>
+  从检索协议和规范化元数据，一路编织到科学图谱、证据链与可交付研究报告。
+</p>
 
-`研究协议 → 采集/导入 → 清洗去重 → 10 张规范表 → 指标与 6 类网络 → PNG/SVG 图 → 证据图谱 → 分节写作与审稿 → HTML/Word → 独立验收`
+<p align="center">
+  <a href="#快速运行">快速开始</a> ·
+  <a href="#架构">系统架构</a> ·
+  <a href="#真实-word-成果">成果预览</a> ·
+  <a href="examples/bibliometric-report-example.docx">下载 Word 示例</a>
+</p>
 
-## 已生成的 Word 成果
+CiteWeave 把合规采集或文件导入、元数据清洗与去重、确定性文献计量分析、出版级可视化、证据绑定、受约束正文生成，以及 HTML/Word 交付组织在同一条可复现流水线上。它既能处理小型研究，也提供面向万级至百万级元数据的磁盘优先处理与可恢复执行路径。
 
-以下截图直接来自最新一次真实端到端运行生成的 43 页 `manuscript.docx`。图表按最终 Word 分页分别展示，并保留图题及相邻结果正文。
+```text
+研究协议 → 采集/导入 → 清洗去重 → 10 张规范表 → 指标与 6 类网络
+        → PNG/SVG 图 → 证据图谱 → 分节写作与审稿 → HTML/Word → 独立验收
+```
 
-[下载完整 Word 示例](examples/bibliometric-report-example.docx)
+| Evidence-first | Reproducible at scale | Publication-ready |
+| :--- | :--- | :--- |
+| 数值与声明绑定证据项，模型不能自由补写 | 日期分片、检查点、有界内存和确定性布局 | 规范图题、内嵌图、引文、页眉与 Word 原生兼容 |
 
-### 统计分布与来源分析
+## 真实 Word 成果
 
-![Word 报告中的文献类型构成和主要来源图](docs/images/readme/word-statistical-overview.png)
+以下六张截图均直接提取自最新的 43 页 CiteWeave Word 成果，按照最终分页展示。每行两张，在 GitHub 上可并列浏览；点击图片可查看原图。
 
-### 作者合作网络
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <strong>文献类型构成</strong><br>
+      <a href="docs/images/readme/word-statistical-overview.png"><img src="docs/images/readme/word-statistical-overview.png" alt="Word 报告中的文献类型构成" width="100%"></a>
+    </td>
+    <td width="50%" align="center">
+      <strong>作者合作网络</strong><br>
+      <a href="docs/images/readme/word-author-collaboration.png"><img src="docs/images/readme/word-author-collaboration.png" alt="Word 报告中的作者合作网络" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>机构合作网络</strong><br>
+      <a href="docs/images/readme/word-institution-collaboration.png"><img src="docs/images/readme/word-institution-collaboration.png" alt="Word 报告中的机构合作网络" width="100%"></a>
+    </td>
+    <td width="50%" align="center">
+      <strong>关键词共现网络</strong><br>
+      <a href="docs/images/readme/word-keyword-network.png"><img src="docs/images/readme/word-keyword-network.png" alt="Word 报告中的关键词共现网络" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>关键词时间叠加</strong><br>
+      <a href="docs/images/readme/word-keyword-overlay.png"><img src="docs/images/readme/word-keyword-overlay.png" alt="Word 报告中的关键词时间叠加图" width="100%"></a>
+    </td>
+    <td width="50%" align="center">
+      <strong>关键词密度</strong><br>
+      <a href="docs/images/readme/word-keyword-density.png"><img src="docs/images/readme/word-keyword-density.png" alt="Word 报告中的关键词密度图" width="100%"></a>
+    </td>
+  </tr>
+</table>
 
-![最新 Word 报告中的作者合作网络独立页面](docs/images/readme/word-author-collaboration.png)
-
-### 机构合作网络
-
-![最新 Word 报告中的机构合作网络独立页面](docs/images/readme/word-institution-collaboration.png)
-
-### 关键词时间叠加图
-
-![Word 报告中的关键词时间叠加网络](docs/images/readme/word-keyword-overlay.png)
-
-### 关键词密度图
-
-![Word 报告中的关键词密度可视化及其结果正文](docs/images/readme/word-keyword-density.png)
+<p align="center"><a href="examples/bibliometric-report-example.docx"><strong>下载完整 Word 成果 →</strong></a></p>
 
 ## 架构
 
@@ -98,8 +137,8 @@ my-study/
 ### Windows PowerShell
 
 ```powershell
-git clone https://github.com/ruoyuanwang/Ragent-report.git
-cd Ragent-report
+git clone https://github.com/ruoyuanwang/citeweave.git
+cd citeweave
 
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -U pip
@@ -109,14 +148,16 @@ py -3.12 -m venv .venv
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/ruoyuanwang/Ragent-report.git
-cd Ragent-report
+git clone https://github.com/ruoyuanwang/citeweave.git
+cd citeweave
 
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -U pip
 python -m pip install -e ".[dev]"
 ```
+
+主命令为 `citeweave`。为兼容改名前的自动化脚本，当前版本仍提供同参数的 `bibagent` 命令别名；新项目请统一使用 `citeweave`。
 
 需要 LLM 写作时设置 DeepSeek 密钥；OpenAlex 密钥可选，Crossref 建议提供可联系邮箱：
 
@@ -135,7 +176,7 @@ $env:CROSSREF_MAILTO="researcher@example.org"
 不加 `--llm` 时仍会完成采集、分析、可视化、证据和模板化报告；加上 `--llm` 后执行受约束写作与审稿。
 
 ```powershell
-.\.venv\Scripts\bibagent.exe quickstart runs\my-study `
+.\.venv\Scripts\citeweave.exe quickstart runs\my-study `
   --title "Large language models and bibliometrics" `
   --keyword "large language model" `
   --keyword "bibliometric" `
@@ -150,7 +191,7 @@ $env:CROSSREF_MAILTO="researcher@example.org"
 ### 2. 先审查协议，再执行
 
 ```powershell
-.\.venv\Scripts\bibagent.exe init runs\my-study `
+.\.venv\Scripts\citeweave.exe init runs\my-study `
   --title "My topic" `
   --keyword "term one" `
   --keyword "term two" `
@@ -158,15 +199,15 @@ $env:CROSSREF_MAILTO="researcher@example.org"
   --source openalex
 
 # 审查并按需修改 runs\my-study\project.yml
-.\.venv\Scripts\bibagent.exe run runs\my-study --llm
+.\.venv\Scripts\citeweave.exe run runs\my-study --llm
 ```
 
 ### 3. 导入 WoS、Scopus、RIS 或 BibTeX
 
-对于受许可约束的数据源，请先在数据库界面导出完整记录与参考文献，再导入 BibAgent。系统不会绕过登录、验证码或数据库服务条款。
+对于受许可约束的数据源，请先在数据库界面导出完整记录与参考文献，再导入 CiteWeave。系统不会绕过登录、验证码或数据库服务条款。
 
 ```powershell
-.\.venv\Scripts\bibagent.exe quickstart runs\wos-study `
+.\.venv\Scripts\citeweave.exe quickstart runs\wos-study `
   --title "Imported bibliometric study" `
   --keyword "bibliometric" `
   --from 2015 --to 2026 `
@@ -183,7 +224,7 @@ $env:CROSSREF_MAILTO="researcher@example.org"
 热门主题或大时间跨度研究可启用 bulk 模式。采集器先按来源报告数自适应切分日期范围，再分页压缩落盘，并在每一页后更新检查点。
 
 ```powershell
-.\.venv\Scripts\bibagent.exe init runs\bulk-study `
+.\.venv\Scripts\citeweave.exe init runs\bulk-study `
   --title "Bibliometric metadata 2020-2025" `
   --keyword "bibliometric" `
   --mode phrase `
@@ -193,15 +234,15 @@ $env:CROSSREF_MAILTO="researcher@example.org"
   --target-slice-records 10000
 
 # 可选：只下载两页，用于演练中断恢复
-.\.venv\Scripts\bibagent.exe harvest runs\bulk-study --page-budget 2
+.\.venv\Scripts\citeweave.exe harvest runs\bulk-study --page-budget 2
 
 # 继续采集并逐阶段验收
-.\.venv\Scripts\bibagent.exe harvest runs\bulk-study
-.\.venv\Scripts\bibagent.exe harvest-accept runs\bulk-study
-.\.venv\Scripts\bibagent.exe process runs\bulk-study
-.\.venv\Scripts\bibagent.exe process-accept runs\bulk-study
-.\.venv\Scripts\bibagent.exe visualize runs\bulk-study
-.\.venv\Scripts\bibagent.exe visualize-accept runs\bulk-study
+.\.venv\Scripts\citeweave.exe harvest runs\bulk-study
+.\.venv\Scripts\citeweave.exe harvest-accept runs\bulk-study
+.\.venv\Scripts\citeweave.exe process runs\bulk-study
+.\.venv\Scripts\citeweave.exe process-accept runs\bulk-study
+.\.venv\Scripts\citeweave.exe visualize runs\bulk-study
+.\.venv\Scripts\citeweave.exe visualize-accept runs\bulk-study
 ```
 
 Europe PMC 和 OpenAlex 从已保存游标继续；Crossref 重启未完成的最小日期分片，以规避服务端滚动游标过期。处理阶段采用有界内存批次、磁盘分区和全局去重；重新执行同一命令即可从清单恢复。
@@ -218,13 +259,13 @@ Europe PMC 和 OpenAlex 从已保存游标继续；Crossref 重启未完成的�
 
 ```powershell
 # 从生成阶段继续
-.\.venv\Scripts\bibagent.exe resume runs\my-study
+.\.venv\Scripts\citeweave.exe resume runs\my-study
 
 # 根据证据和审稿意见逐节修订
-.\.venv\Scripts\bibagent.exe refine runs\my-study
+.\.venv\Scripts\citeweave.exe refine runs\my-study
 
 # 单独重新导出 Word
-.\.venv\Scripts\bibagent.exe word runs\my-study `
+.\.venv\Scripts\citeweave.exe word runs\my-study `
   --output runs\my-study\report\manuscript.docx `
   --native-word
 ```
@@ -234,7 +275,7 @@ Europe PMC 和 OpenAlex 从已保存游标继续；Crossref 重启未完成的�
 ## 本地 API
 
 ```powershell
-.\.venv\Scripts\bibagent.exe serve --host 127.0.0.1 --port 8000
+.\.venv\Scripts\citeweave.exe serve --host 127.0.0.1 --port 8000
 ```
 
 启动后访问 `http://127.0.0.1:8000/docs` 查看 OpenAPI 交互文档。主要接口包括：
@@ -263,10 +304,10 @@ Europe PMC 和 OpenAlex 从已保存游标继续；Crossref 重启未完成的�
 .\.venv\Scripts\ruff.exe check src tests
 
 # 完整研究包验收
-.\.venv\Scripts\bibagent.exe accept runs\my-study
+.\.venv\Scripts\citeweave.exe accept runs\my-study
 
 # 合成规模基准
-.\.venv\Scripts\bibagent.exe benchmark `
+.\.venv\Scripts\citeweave.exe benchmark `
   --documents 1000000 `
   --terms-per-document 5 `
   --output runs\benchmark-1m.json

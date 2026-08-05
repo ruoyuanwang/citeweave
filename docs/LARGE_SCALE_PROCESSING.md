@@ -11,34 +11,34 @@
 5. 生成完整统计表和候选优先的网络边表；
 6. 独立校验文件哈希、主键、外键、输入守恒与可视化表契约。
 
-该阶段的完成标准是 `bibagent process-accept <project>` 六项检查全部通过，而不是“程序没有报错”。
+该阶段的完成标准是 `citeweave process-accept <project>` 六项检查全部通过，而不是“程序没有报错”。
 
 ## 2. 命令
 
 所有命令必须在项目虚拟环境中执行：
 
 ```powershell
-.\.venv\Scripts\bibagent.exe process runs\bulk-study
-.\.venv\Scripts\bibagent.exe process-accept runs\bulk-study
+.\.venv\Scripts\citeweave.exe process runs\bulk-study
+.\.venv\Scripts\citeweave.exe process-accept runs\bulk-study
 ```
 
 常用控制项：
 
 ```powershell
 # 改变单批上限；中断后必须使用相同值恢复
-.\.venv\Scripts\bibagent.exe process runs\bulk-study --chunk-size 2000
+.\.venv\Scripts\citeweave.exe process runs\bulk-study --chunk-size 2000
 
 # 从 processing_manifest.json 恢复
-.\.venv\Scripts\bibagent.exe process runs\bulk-study --resume
+.\.venv\Scripts\citeweave.exe process runs\bulk-study --resume
 
 # 提交两个批次后受控暂停，用于故障演练；再次执行即可恢复
-.\.venv\Scripts\bibagent.exe process runs\bulk-study --batch-budget 2
+.\.venv\Scripts\citeweave.exe process runs\bulk-study --batch-budget 2
 
 # 放弃旧分区并从 staged 文件重新规范化
-.\.venv\Scripts\bibagent.exe process runs\bulk-study --no-resume
+.\.venv\Scripts\citeweave.exe process runs\bulk-study --no-resume
 
 # 规范化规则未变时，仅从已有分区重建规范表、质量表和可视化表
-.\.venv\Scripts\bibagent.exe process runs\bulk-study --refinalize
+.\.venv\Scripts\citeweave.exe process runs\bulk-study --refinalize
 ```
 
 `project.yml` 中的处理策略：
@@ -203,7 +203,7 @@ staged/source_records.jsonl.gz
 可用以下命令在目标机器上执行包含规范化器的全链路容量测试，而不仅是 SQL 聚合微基准：
 
 ```powershell
-.\.venv\Scripts\bibagent.exe benchmark-processing runs\processing-benchmark-100k `
+.\.venv\Scripts\citeweave.exe benchmark-processing runs\processing-benchmark-100k `
   --documents 100000 --references-per-document 10 --chunk-size 2000
 ```
 

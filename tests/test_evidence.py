@@ -1,15 +1,15 @@
 from datetime import UTC, datetime
 
-from bibagent.analytics import analyze
-from bibagent.evidence import bind_claims, build_evidence
-from bibagent.generation import (
+from citeweave.analytics import analyze
+from citeweave.evidence import bind_claims, build_evidence
+from citeweave.generation import (
     _bind_paragraph_numeric_claims,
     _normalize_evidence_tokens,
     evaluate_manuscript_quality,
     validate_manuscript,
 )
-from bibagent.models import AcquisitionManifest, SourceName
-from bibagent.transform import Canonicalizer
+from citeweave.models import AcquisitionManifest, SourceName
+from citeweave.transform import Canonicalizer
 
 
 def _bundle(crossref_records):

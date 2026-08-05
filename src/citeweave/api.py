@@ -14,7 +14,7 @@ from .visual_acceptance import verify_visualization
 from .workflow import process_project, run_project
 
 api = FastAPI(
-    title="BibAgent API",
+    title="CiteWeave API",
     version="0.1.0",
     description="Auditable acquisition-to-manuscript bibliometric workflow.",
 )
@@ -39,7 +39,7 @@ class ProcessRequest(BaseModel):
 
 @api.get("/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "service": "bibagent"}
+    return {"status": "ok", "service": "citeweave"}
 
 
 @api.post("/v1/projects/run")

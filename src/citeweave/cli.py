@@ -29,7 +29,7 @@ from .workflow import (
 )
 
 app = typer.Typer(
-    name="bibagent",
+    name="citeweave",
     help="Evidence-first bibliometric research agent.",
     no_args_is_help=True,
 )
@@ -270,7 +270,7 @@ def serve(
     """Start the local HTTP API."""
     import uvicorn
 
-    uvicorn.run("bibagent.api:api", host=host, port=port, reload=False)
+    uvicorn.run("citeweave.api:api", host=host, port=port, reload=False)
 
 
 @app.command()

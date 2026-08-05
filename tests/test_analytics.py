@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from bibagent.analytics import analyze
-from bibagent.transform import Canonicalizer
-from bibagent.visualization import render_all
+from citeweave.analytics import analyze
+from citeweave.transform import Canonicalizer
+from citeweave.visualization import render_all
 
 
 def test_analysis_networks(crossref_records):

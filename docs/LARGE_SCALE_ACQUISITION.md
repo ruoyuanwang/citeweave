@@ -10,7 +10,7 @@
 4. 合并后全局唯一记录数等于各分片预计总数；
 5. 进程中断后只重做最小必要范围；
 6. API 密钥、游标和临时响应不会写入最终公开查询描述；
-7. `bibagent harvest-accept` 的五项检查全部通过。
+7. `citeweave harvest-accept` 的五项检查全部通过。
 
 这里的“全量”仍然是相对于数据源、检索式、日期范围、文献类型、语言和
 采集时间的源内全量，不等于多个数据库合并后的绝对召回。
@@ -123,7 +123,7 @@ Crossref 当前官方列表请求限制为公共池 1 请求/秒、polite 池 3 
 创建 bulk 项目：
 
 ```powershell
-.\.venv\Scripts\bibagent.exe init runs\bulk-study `
+.\.venv\Scripts\citeweave.exe init runs\bulk-study `
   --title "Bibliometric metadata 2020-2025" `
   --keyword bibliometric --mode phrase `
   --from 2020 --to 2025 --source crossref `
@@ -133,12 +133,12 @@ Crossref 当前官方列表请求限制为公共池 1 请求/秒、polite 池 3 
 采集、受控暂停、恢复和验收：
 
 ```powershell
-.\.venv\Scripts\bibagent.exe harvest runs\bulk-study --page-budget 2
-.\.venv\Scripts\bibagent.exe harvest runs\bulk-study
-.\.venv\Scripts\bibagent.exe harvest-accept runs\bulk-study
+.\.venv\Scripts\citeweave.exe harvest runs\bulk-study --page-budget 2
+.\.venv\Scripts\citeweave.exe harvest runs\bulk-study
+.\.venv\Scripts\citeweave.exe harvest-accept runs\bulk-study
 ```
 
-完整项目也可以在 `project.yml` 中设置 `acquisition.mode: bulk` 后执行 `bibagent run`。
+完整项目也可以在 `project.yml` 中设置 `acquisition.mode: bulk` 后执行 `citeweave run`。
 采集器会复用相同的压缩 staged 文件进入规范化阶段，不再额外构造一个来源记录列表。
 
 ## 8. 已验证的故障模型

@@ -2,10 +2,10 @@ from pathlib import Path
 
 import pandas as pd
 
-from bibagent.analytics import NetworkResult, analyze
-from bibagent.interoperability import export_all, export_vosviewer
-from bibagent.models import SourceName
-from bibagent.transform import Canonicalizer
+from citeweave.analytics import NetworkResult, analyze
+from citeweave.interoperability import export_all, export_vosviewer
+from citeweave.models import SourceName
+from citeweave.transform import Canonicalizer
 
 
 def test_vosviewer_export_uses_stable_numeric_ids(tmp_path: Path) -> None:

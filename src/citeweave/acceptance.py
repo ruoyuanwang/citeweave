@@ -319,7 +319,7 @@ def verify_project(
     }
     write_json(paths.audit / "acceptance_report.json", result)
     lines = [
-        "# BibAgent 验收报告",
+        "# CiteWeave 验收报告",
         "",
         f"- 总体结果：{'通过' if result['passed'] else '未通过'}",
         f"- 检查项：{result['passed_checks']}/{result['total_checks']}",

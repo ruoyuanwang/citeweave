@@ -1,12 +1,12 @@
-# BibAgent 大规模文献计量可视化
+# CiteWeave 大规模文献计量可视化
 
 ## 1. 运行
 
 必须使用项目虚拟环境：
 
 ```powershell
-.\.venv\Scripts\bibagent.exe visualize runs\your-project
-.\.venv\Scripts\bibagent.exe visualize-accept runs\your-project
+.\.venv\Scripts\citeweave.exe visualize runs\your-project
+.\.venv\Scripts\citeweave.exe visualize-accept runs\your-project
 ```
 
 HTTP API 同时提供：

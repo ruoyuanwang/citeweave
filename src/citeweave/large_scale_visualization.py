@@ -915,7 +915,7 @@ def render_large_project(
     canonical = project / "canonical"
     visual = canonical / "visualization"
     if not visual.exists():
-        raise FileNotFoundError("canonical/visualization is missing; run `bibagent process` first")
+        raise FileNotFoundError("canonical/visualization is missing; run `citeweave process` first")
     _theme()
     connection = duckdb.connect()
     connection.execute(f"SET memory_limit='{config.processing.duckdb_memory_limit}'")

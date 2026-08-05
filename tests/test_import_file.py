@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from bibagent.connectors.import_file import ImportFileConnector
-from bibagent.models import SearchProtocol, SourceName
-from bibagent.transform import Canonicalizer
+from citeweave.connectors.import_file import ImportFileConnector
+from citeweave.models import SearchProtocol, SourceName
+from citeweave.transform import Canonicalizer
 
 
 def test_import_wos_csv_is_complete_and_canonical(tmp_path: Path) -> None:

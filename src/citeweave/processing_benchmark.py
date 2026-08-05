@@ -35,7 +35,7 @@ def _synthetic_record(index: int, references_per_document: int) -> dict[str, Any
         "ISSN": [f"{1000 + index % 9000:04d}-{index % 10}{index % 10}{index % 10}X"],
         "type": "journal-article",
         "language": "en",
-        "publisher": "BibAgent Benchmark Press",
+        "publisher": "CiteWeave Benchmark Press",
         "author": [
             {
                 "given": "Author",

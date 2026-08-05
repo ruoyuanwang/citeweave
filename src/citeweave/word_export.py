@@ -362,7 +362,7 @@ def _configure_document(document: Document, title: str) -> None:
     header = section.header.paragraphs[0]
     header.alignment = WD_ALIGN_PARAGRAPH.CENTER
     header.paragraph_format.space_after = Pt(0)
-    run = header.add_run("BibAgent 文献计量研究报告")
+    run = header.add_run("CiteWeave 文献计量研究报告")
     _set_run_font(run, east_asia="宋体", size=8.5, color="64748B")
 
     footer = section.footer.paragraphs[0]
@@ -374,7 +374,7 @@ def _configure_document(document: Document, title: str) -> None:
 
     document.core_properties.title = title
     document.core_properties.subject = "Evidence-first bibliometric research report"
-    document.core_properties.author = "BibAgent"
+    document.core_properties.author = "CiteWeave"
     document.core_properties.keywords = "文献计量; 科学知识图谱; Crossref"
 
 
@@ -767,7 +767,7 @@ def export_word_report(
     figures: tuple[WordFigure, ...] | None = None,
     native_word: bool = False,
 ) -> Path:
-    """Export an inline-figure academic DOCX from a completed BibAgent project.
+    """Export an inline-figure academic DOCX from a completed CiteWeave project.
 
     Design basis: ``narrative_proposal``. Named ``academic_article`` overrides:
     A4 paper, 2.54 cm margins, Song/Times typography, black heading hierarchy,

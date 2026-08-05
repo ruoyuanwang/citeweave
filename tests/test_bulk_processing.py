@@ -7,17 +7,17 @@ from pathlib import Path
 
 import pytest
 
-from bibagent.bulk_processing import process_large_metadata
-from bibagent.exceptions import ProcessingError
-from bibagent.models import (
+from citeweave.bulk_processing import process_large_metadata
+from citeweave.exceptions import ProcessingError
+from citeweave.models import (
     ProcessingPolicy,
     ProjectConfig,
     ProjectPaths,
     SearchProtocol,
     SourceName,
 )
-from bibagent.processing_acceptance import verify_large_processing
-from bibagent.transform import Canonicalizer
+from citeweave.processing_acceptance import verify_large_processing
+from citeweave.transform import Canonicalizer
 
 
 def _write_gzip_jsonl(path: Path, records: list[dict]) -> None:

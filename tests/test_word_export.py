@@ -4,8 +4,8 @@ from docx import Document
 from docx.oxml.ns import qn
 from PIL import Image
 
-from bibagent.models import ProjectPaths
-from bibagent.word_export import (
+from citeweave.models import ProjectPaths
+from citeweave.word_export import (
     DEFAULT_FIGURES,
     FIGURE_RESULT_SECTION_PREFIXES,
     export_word_report,

@@ -1,4 +1,4 @@
-from bibagent.transform import Canonicalizer, derive_keywords, normalize_doi
+from citeweave.transform import Canonicalizer, derive_keywords, normalize_doi
 
 
 def test_normalize_doi():

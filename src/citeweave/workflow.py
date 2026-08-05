@@ -443,7 +443,7 @@ def _render_html(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{html.escape(config.protocol.title)} · BibAgent</title>
+<title>{html.escape(config.protocol.title)} · CiteWeave</title>
 <style>
 :root{{--ink:#172033;--muted:#64748b;--blue:#2563eb;--paper:#fbfcfe;--line:#dce3ed}}
 *{{box-sizing:border-box}} body{{margin:0;background:#eef2f7;color:var(--ink);
