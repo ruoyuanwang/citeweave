@@ -1,0 +1,12 @@
+{
+  "packet_id": "FP2c3d068534019cddeb1d",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The candidate accurately reports the evidenced display label and integer cluster membership.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label"
+  ],
+  "suggested_revision": null
+}

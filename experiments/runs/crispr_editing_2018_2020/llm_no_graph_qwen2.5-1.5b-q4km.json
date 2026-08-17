@@ -1,0 +1,2811 @@
+{
+  "condition": "no_graph",
+  "metadata": {
+    "dataset_id": "crispr_editing_2018_2020",
+    "prompt_version": "graph-qa-v3",
+    "model": "qwen2.5-1.5b-q4km",
+    "base_url": "http://127.0.0.1:8091/v1",
+    "temperature": 0.0,
+    "max_tokens": 384,
+    "seed": 42,
+    "workers": 2,
+    "response_format": "json_schema",
+    "items": 30,
+    "elapsed_seconds": 85.84524480000255,
+    "raw_records": [
+      {
+        "item_id": "crispr_editing_2018_2020:G001",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G001\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"crispr_editing_2018_2020:G001\"],\n  \"evidence_edges\": [\"crispr_editing_2018_2020:G001\"],\n  \"statement\": \"The bibliographic_coupling network has 1 node and 1 edge.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959591,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 124,
+            "prompt_tokens": 215,
+            "total_tokens": 339,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-aEiroYTfeavuZlvfHeGJBbb2iLFbgPG7",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 47,
+            "prompt_ms": 381.717,
+            "prompt_per_token_ms": 8.121638297872341,
+            "prompt_per_second": 123.12786697998779,
+            "predicted_n": 124,
+            "predicted_ms": 3635.691,
+            "predicted_per_token_ms": 29.320088709677417,
+            "predicted_per_second": 34.10630881447296
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G001",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "crispr_editing_2018_2020:G001"
+          ],
+          "evidence_edges": [
+            "crispr_editing_2018_2020:G001"
+          ],
+          "statement": "The bibliographic_coupling network has 1 node and 1 edge."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G002",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G002\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G002\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The highest weighted degree is 10.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959589,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 225,
+            "total_tokens": 301,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-5A4gD9rzIxd9PZ57stFJGNubygnPkVos",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 57,
+            "prompt_ms": 381.451,
+            "prompt_per_token_ms": 6.692122807017544,
+            "prompt_per_second": 149.429415573691,
+            "predicted_n": 76,
+            "predicted_ms": 2165.515,
+            "predicted_per_token_ms": 28.49361842105263,
+            "predicted_per_second": 35.095577726314524
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G002",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The highest weighted degree is 10."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G003",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G003\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G003\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The bibliometric graph analysis of the CRISPR editing research shows that 2 clusters are detected.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959592,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 87,
+            "prompt_tokens": 215,
+            "total_tokens": 302,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-VJVf3ms0SbxA0FfrV7JC5NlxerZubzPa",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 174.682,
+            "prompt_per_token_ms": 3.9700454545454544,
+            "prompt_per_second": 251.88628479179312,
+            "predicted_n": 87,
+            "predicted_ms": 2588.219,
+            "predicted_per_token_ms": 29.74964367816092,
+            "predicted_per_second": 33.61384797808841
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G003",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The bibliometric graph analysis of the CRISPR editing research shows that 2 clusters are detected."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G004",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G004\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G004\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n  ],\n  \"statement\": \"The pair with the strongest connection in the bibliographic_coupling network is crispr_editing_2018_2020:G004, crispr_editing_2018_2020:G003, crispr_editing_2018_2020:G002, and crispr_editing_2018_2020:G001.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959601,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 350,
+            "prompt_tokens": 226,
+            "total_tokens": 576,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-zOEDTGWuzioiJlWqdDe87xLzRN7XWtZi",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 55,
+            "prompt_ms": 211.498,
+            "prompt_per_token_ms": 3.845418181818182,
+            "prompt_per_second": 260.0497404230773,
+            "predicted_n": 350,
+            "predicted_ms": 10231.953,
+            "predicted_per_token_ms": 29.234151428571426,
+            "predicted_per_second": 34.206568384354384
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G004",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "crispr_editing_2018_2020:G004",
+            "crispr_editing_2018_2020:G003",
+            "crispr_editing_2018_2020:G002",
+            "crispr_editing_2018_2020:G001"
+          ],
+          "evidence_edges": [
+            "crispr_editing_2018_2020:G004",
+            "crispr_editing_2018_2020:G003",
+            "crispr_editing_2018_2020:G002",
+            "crispr_editing_2018_2020:G001"
+          ],
+          "statement": "The pair with the strongest connection in the bibliographic_coupling network is crispr_editing_2018_2020:G004, crispr_editing_2018_2020:G003, crispr_editing_2018_2020:G002, and crispr_editing_2018_2020:G001."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G005",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G005\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G005\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G005\",\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"crispr_editing_2018_2020:G005\",\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n  ],\n  \"statement\": \"The citation network has 5 nodes and 5 edges.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959602,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 313,
+            "prompt_tokens": 212,
+            "total_tokens": 525,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-xrwZ4ks54cclgF3l3agddjGxBnLvdHbh",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 41,
+            "prompt_ms": 174.825,
+            "prompt_per_token_ms": 4.264024390243902,
+            "prompt_per_second": 234.52023452023454,
+            "predicted_n": 313,
+            "predicted_ms": 9216.719,
+            "predicted_per_token_ms": 29.446386581469646,
+            "predicted_per_second": 33.960024169121354
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G005",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "crispr_editing_2018_2020:G005",
+            "crispr_editing_2018_2020:G004",
+            "crispr_editing_2018_2020:G003",
+            "crispr_editing_2018_2020:G002",
+            "crispr_editing_2018_2020:G001"
+          ],
+          "evidence_edges": [
+            "crispr_editing_2018_2020:G005",
+            "crispr_editing_2018_2020:G004",
+            "crispr_editing_2018_2020:G003",
+            "crispr_editing_2018_2020:G002",
+            "crispr_editing_2018_2020:G001"
+          ],
+          "statement": "The citation network has 5 nodes and 5 edges."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G006",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G006\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G006\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree is the one with the highest number of citations.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959604,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 84,
+            "prompt_tokens": 222,
+            "total_tokens": 306,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-EZRltXXALt0VQ0mPYL8OPE93LotlVkNY",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 51,
+            "prompt_ms": 209.919,
+            "prompt_per_token_ms": 4.1160588235294115,
+            "prompt_per_second": 242.95085247166764,
+            "predicted_n": 84,
+            "predicted_ms": 2506.376,
+            "predicted_per_token_ms": 29.837809523809526,
+            "predicted_per_second": 33.51452455657092
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G006",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree is the one with the highest number of citations."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G007",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G007\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G007\",\n    \"crispr_editing_2018_2020:G006\",\n    \"crispr_editing_2018_2020:G005\",\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"crispr_editing_2018_2020:G007\",\n    \"crispr_editing_2018_2020:G006\",\n    \"crispr_editing_2018_2020:G005\",\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n "
+              }
+            }
+          ],
+          "created": 1785959613,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 212,
+            "total_tokens": 596,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-Q8udb11L47FoGEDHl5zwTlONeIr0QdYd",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 41,
+            "prompt_ms": 182.883,
+            "prompt_per_token_ms": 4.460560975609757,
+            "prompt_per_second": 224.18704855016594,
+            "predicted_n": 384,
+            "predicted_ms": 11305.73,
+            "predicted_per_token_ms": 29.44200520833333,
+            "predicted_per_second": 33.96507788528472
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G007",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G007\",\n    \"crispr_editing_2018_2020:G006\",\n    \"crispr_editing_2018_2020:G005\",\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"crispr_editing_2018_2020:G007\",\n    \"crispr_editing_2018_2020:G006\",\n    \"crispr_editing_2018_2020:G005\",\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n "
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G008",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G008\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G008\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_20"
+              }
+            }
+          ],
+          "created": 1785959616,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 223,
+            "total_tokens": 607,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-kJjNh0SA7Ug2Rebkf6fK3Pd1NaoSQyd6",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 52,
+            "prompt_ms": 212.593,
+            "prompt_per_token_ms": 4.088326923076923,
+            "prompt_per_second": 244.59883439247764,
+            "predicted_n": 384,
+            "predicted_ms": 11372.144,
+            "predicted_per_token_ms": 29.614958333333334,
+            "predicted_per_second": 33.76671980235213
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G008",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G008\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_20"
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G009",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G009\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G009\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The coauthorship network for the period 2018-2020 has 0 nodes and 0 edges.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959616,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 94,
+            "prompt_tokens": 214,
+            "total_tokens": 308,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-uq6Scz7rvZZdjRuUQwoy3WHhXIrMr7JY",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 43,
+            "prompt_ms": 196.551,
+            "prompt_per_token_ms": 4.570953488372092,
+            "prompt_per_second": 218.77273582937764,
+            "predicted_n": 94,
+            "predicted_ms": 2937.828,
+            "predicted_per_token_ms": 31.253489361702126,
+            "predicted_per_second": 31.996427292544016
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G009",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The coauthorship network for the period 2018-2020 has 0 nodes and 0 edges."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G010",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G010\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G010\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The highest weighted degree is 10.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959618,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 224,
+            "total_tokens": 300,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-Kecvz9sQez1jmasb5mqZeoZAms3WQoGJ",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 54,
+            "prompt_ms": 240.893,
+            "prompt_per_token_ms": 4.460981481481482,
+            "prompt_per_second": 224.16591598759615,
+            "predicted_n": 76,
+            "predicted_ms": 2269.394,
+            "predicted_per_token_ms": 29.86044736842105,
+            "predicted_per_second": 33.48911647779099
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G010",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The highest weighted degree is 10."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G011",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G011\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G011\",\n    \"crispr_editing_2018_2020:G012\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G014\",\n    \"crispr_editing_2018_2020:G015\",\n    \"crispr_editing_2018_2020:G016\",\n    \"crispr_editing_2018_2020:G017\",\n    \"crispr_editing_2018_2020:G018\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G020\",\n    \"crispr_editing_2018_2020:G021\",\n    \"crispr_editing_2018_2020:G022\",\n    \"crispr_editing_2018_2020:G023\",\n    \"crispr_editing_2018_2020:G024\",\n    \"crispr_editing_20"
+              }
+            }
+          ],
+          "created": 1785959628,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 214,
+            "total_tokens": 598,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-ASieZFQPCs70sMCDTtTu4CvEJQUnsSRj",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 44,
+            "prompt_ms": 185.521,
+            "prompt_per_token_ms": 4.216386363636364,
+            "prompt_per_second": 237.16991607419106,
+            "predicted_n": 384,
+            "predicted_ms": 11554.183,
+            "predicted_per_token_ms": 30.08901822916667,
+            "predicted_per_second": 33.234716812084415
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G011",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G011\",\n    \"crispr_editing_2018_2020:G012\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G014\",\n    \"crispr_editing_2018_2020:G015\",\n    \"crispr_editing_2018_2020:G016\",\n    \"crispr_editing_2018_2020:G017\",\n    \"crispr_editing_2018_2020:G018\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G020\",\n    \"crispr_editing_2018_2020:G021\",\n    \"crispr_editing_2018_2020:G022\",\n    \"crispr_editing_2018_2020:G023\",\n    \"crispr_editing_2018_2020:G024\",\n    \"crispr_editing_20"
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G012",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G012\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G012\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"crispr_editing_2018:G001\", \"crispr_editing_2020:G002\"],\n  \"evidence_edges\": [\"coauthorship:G003\"],\n  \"statement\": \"The pair 'crispr_editing_2018:G001' and 'crispr_editing_2020:G002' has the strongest connection in the coauthorship network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959623,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 157,
+            "prompt_tokens": 225,
+            "total_tokens": 382,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-rdKOAEl8SeGJtsWYTlGLamWUTJqk0sMJ",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 54,
+            "prompt_ms": 224.837,
+            "prompt_per_token_ms": 4.163648148148148,
+            "prompt_per_second": 240.17399271472223,
+            "predicted_n": 157,
+            "predicted_ms": 4474.977,
+            "predicted_per_token_ms": 28.50303821656051,
+            "predicted_per_second": 35.083979202574675
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G012",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "crispr_editing_2018:G001",
+            "crispr_editing_2020:G002"
+          ],
+          "evidence_edges": [
+            "coauthorship:G003"
+          ],
+          "statement": "The pair 'crispr_editing_2018:G001' and 'crispr_editing_2020:G002' has the strongest connection in the coauthorship network."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G013",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G013\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_20"
+              }
+            }
+          ],
+          "created": 1785959635,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 213,
+            "total_tokens": 597,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-XFNRYqkGlbIJnOC8XbJdZ3DS6ji2O74v",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 42,
+            "prompt_ms": 188.795,
+            "prompt_per_token_ms": 4.495119047619047,
+            "prompt_per_second": 222.4635186313197,
+            "predicted_n": 384,
+            "predicted_ms": 11826.926,
+            "predicted_per_token_ms": 30.79928645833333,
+            "predicted_per_second": 32.468284658245096
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G013",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_20"
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G014",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G014\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G014\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the cocitation network is 'crispr_editing_2018_2020:G014'.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959631,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 103,
+            "prompt_tokens": 223,
+            "total_tokens": 326,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-CKNSPS9eKi5Z7WxZT7bzOmbly2IJ1yCK",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 52,
+            "prompt_ms": 237.797,
+            "prompt_per_token_ms": 4.573019230769231,
+            "prompt_per_second": 218.67391094084448,
+            "predicted_n": 103,
+            "predicted_ms": 2975.588,
+            "predicted_per_token_ms": 28.88920388349515,
+            "predicted_per_second": 34.6150071851345
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G014",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the cocitation network is 'crispr_editing_2018_2020:G014'."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G015",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G015\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G015\",\n    \"crispr_editing_2018_2020:G016\",\n    \"crispr_editing_2018_2020:G017\",\n    \"crispr_editing_2018_2020:G018\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G020\",\n    \"crispr_editing_2018_2020:G021\",\n    \"crispr_editing_2018_2020:G022\",\n    \"crispr_editing_2018_2020:G023\",\n    \"crispr_editing_2018_2020:G024\",\n    \"crispr_editing_2018_2020:G025\",\n    \"crispr_editing_2018_2020:G026\",\n    \"crispr_editing_2018_2020:G027\",\n    \"crispr_editing_2018_2020:G028\",\n    \"crispr_editing_20"
+              }
+            }
+          ],
+          "created": 1785959643,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 213,
+            "total_tokens": 597,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-0NhedP4zAwUQaaZO2eMOt22woQYUKytF",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 42,
+            "prompt_ms": 187.143,
+            "prompt_per_token_ms": 4.455785714285715,
+            "prompt_per_second": 224.42730959747357,
+            "predicted_n": 384,
+            "predicted_ms": 11642.486,
+            "predicted_per_token_ms": 30.318973958333334,
+            "predicted_per_second": 32.98264648976172
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G015",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G015\",\n    \"crispr_editing_2018_2020:G016\",\n    \"crispr_editing_2018_2020:G017\",\n    \"crispr_editing_2018_2020:G018\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G020\",\n    \"crispr_editing_2018_2020:G021\",\n    \"crispr_editing_2018_2020:G022\",\n    \"crispr_editing_2018_2020:G023\",\n    \"crispr_editing_2018_2020:G024\",\n    \"crispr_editing_2018_2020:G025\",\n    \"crispr_editing_2018_2020:G026\",\n    \"crispr_editing_2018_2020:G027\",\n    \"crispr_editing_2018_2020:G028\",\n    \"crispr_editing_20"
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G016",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G016\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018:G001\",\n    \"crispr_editing_2018:G002\",\n    \"crispr_editing_2018:G003\",\n    \"crispr_editing_2018:G004\",\n    \"crispr_editing_2018:G005\",\n    \"crispr_editing_2018:G006\",\n    \"crispr_editing_2018:G007\",\n    \"crispr_editing_2018:G008\",\n    \"crispr_editing_2018:G009\",\n    \"crispr_editing_2018:G010\",\n    \"crispr_editing_2018:G011\",\n    \"crispr_editing_2018:G012\",\n    \"crispr_editing_2018:G013\",\n    \"crispr_editing_2018:G014\",\n    \"crispr_editing_2018:G015\",\n    \"crispr_editing_2018:G016\",\n    \"crispr_editing_2018:G017\",\n    \"crispr_editing_2018:G018\",\n    \"crispr_editing_"
+              }
+            }
+          ],
+          "created": 1785959647,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 224,
+            "total_tokens": 608,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-YUVRY5g9UIQJ11j1exsSJdLvo5vgKTST",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 53,
+            "prompt_ms": 231.179,
+            "prompt_per_token_ms": 4.361867924528302,
+            "prompt_per_second": 229.2595780758633,
+            "predicted_n": 384,
+            "predicted_ms": 11877.411,
+            "predicted_per_token_ms": 30.9307578125,
+            "predicted_per_second": 32.33027803786533
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G016",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018:G001\",\n    \"crispr_editing_2018:G002\",\n    \"crispr_editing_2018:G003\",\n    \"crispr_editing_2018:G004\",\n    \"crispr_editing_2018:G005\",\n    \"crispr_editing_2018:G006\",\n    \"crispr_editing_2018:G007\",\n    \"crispr_editing_2018:G008\",\n    \"crispr_editing_2018:G009\",\n    \"crispr_editing_2018:G010\",\n    \"crispr_editing_2018:G011\",\n    \"crispr_editing_2018:G012\",\n    \"crispr_editing_2018:G013\",\n    \"crispr_editing_2018:G014\",\n    \"crispr_editing_2018:G015\",\n    \"crispr_editing_2018:G016\",\n    \"crispr_editing_2018:G017\",\n    \"crispr_editing_2018:G018\",\n    \"crispr_editing_"
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G017",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G017\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G017\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The institution_collaboration network has 0 nodes and 0 edges.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959646,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 82,
+            "prompt_tokens": 215,
+            "total_tokens": 297,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-Iq4TsTRBXnNjSpcBcU2aHeygH8yfpY7F",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 217.84,
+            "prompt_per_token_ms": 4.950909090909091,
+            "prompt_per_second": 201.98310686742562,
+            "predicted_n": 82,
+            "predicted_ms": 2482.336,
+            "predicted_per_token_ms": 30.272390243902436,
+            "predicted_per_second": 33.03340079666895
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G017",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The institution_collaboration network has 0 nodes and 0 edges."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G018",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G018\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G018\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The highest weighted degree is 10.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959649,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 225,
+            "total_tokens": 301,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-PY57bBa1BGRzBdMsJuSO7WyVmrWBMxJZ",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 54,
+            "prompt_ms": 246.536,
+            "prompt_per_token_ms": 4.5654814814814815,
+            "prompt_per_second": 219.03494824285298,
+            "predicted_n": 76,
+            "predicted_ms": 2395.771,
+            "predicted_per_token_ms": 31.52330263157895,
+            "predicted_per_second": 31.72256446880774
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G018",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The highest weighted degree is 10."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G019",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G019\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G019\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_20"
+              }
+            }
+          ],
+          "created": 1785959659,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 215,
+            "total_tokens": 599,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-mdc4rp4qZI0SjSt8taAlbQP1cNrd6kkd",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 200.735,
+            "prompt_per_token_ms": 4.562159090909091,
+            "prompt_per_second": 219.19446035818368,
+            "predicted_n": 384,
+            "predicted_ms": 11914.526,
+            "predicted_per_token_ms": 31.027411458333333,
+            "predicted_per_second": 32.22956582578274
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G019",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G019\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_20"
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G020",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G020\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G020\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"crispr_editing_2018_2020:G020\", \"crispr_editing_2018_2020:G020\", \"crispr_editing_2018_2020:G020\"],\n  \"evidence_edges\": [\"crispr_editing_2018_2020:G020\", \"crispr_editing_2018_2020:G020\", \"crispr_editing_2018_2020:G020\"],\n  \"statement\": \"The pair 'crispr_editing_2018_2020:G020' has the strongest connection in the institution_collaboration network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959656,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 233,
+            "prompt_tokens": 226,
+            "total_tokens": 459,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-y0PUuqCOjlWy7SXVavifN3vxOjNyHlCR",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 56,
+            "prompt_ms": 238.209,
+            "prompt_per_token_ms": 4.253732142857143,
+            "prompt_per_second": 235.087675108833,
+            "predicted_n": 233,
+            "predicted_ms": 6803.951,
+            "predicted_per_token_ms": 29.20150643776824,
+            "predicted_per_second": 34.24480864133207
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G020",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "crispr_editing_2018_2020:G020",
+            "crispr_editing_2018_2020:G020",
+            "crispr_editing_2018_2020:G020"
+          ],
+          "evidence_edges": [
+            "crispr_editing_2018_2020:G020",
+            "crispr_editing_2018_2020:G020",
+            "crispr_editing_2018_2020:G020"
+          ],
+          "statement": "The pair 'crispr_editing_2018_2020:G020' has the strongest connection in the institution_collaboration network."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G021",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G021\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G021\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The keyword cooccurrence network is not provided.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959658,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 77,
+            "prompt_tokens": 215,
+            "total_tokens": 292,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-hkNT4r8QYThTpWu7qDiLiuJl32iJDE6O",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 225.868,
+            "prompt_per_token_ms": 5.133363636363637,
+            "prompt_per_second": 194.80404484034923,
+            "predicted_n": 77,
+            "predicted_ms": 2265.243,
+            "predicted_per_token_ms": 29.418740259740257,
+            "predicted_per_second": 33.99193817175464
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G021",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The keyword cooccurrence network is not provided."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G022",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G022\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G022\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The highest weighted degree is 1000.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959661,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 78,
+            "prompt_tokens": 225,
+            "total_tokens": 303,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-MA3mZ0LHnG2zX5KXH2qq2g9OzWcPgoy9",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 54,
+            "prompt_ms": 238.957,
+            "prompt_per_token_ms": 4.425129629629629,
+            "prompt_per_second": 225.98208045799038,
+            "predicted_n": 78,
+            "predicted_ms": 2500.01,
+            "predicted_per_token_ms": 32.05141025641026,
+            "predicted_per_second": 31.199875200499193
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G022",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The highest weighted degree is 1000."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G023",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G023\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G023\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The keyword co-occurrence network is not provided.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959662,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 78,
+            "prompt_tokens": 215,
+            "total_tokens": 293,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-wXapR6n5b1ps9pFOm664ypFLOKuQlWPv",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 215.662,
+            "prompt_per_token_ms": 4.901409090909091,
+            "prompt_per_second": 204.0229618569799,
+            "predicted_n": 78,
+            "predicted_ms": 2508.302,
+            "predicted_per_token_ms": 32.15771794871795,
+            "predicted_per_second": 31.09673396584622
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G023",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The keyword co-occurrence network is not provided."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:G024",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:G024\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:G024\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The keyword cooccurrence network is not provided.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959664,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 77,
+            "prompt_tokens": 226,
+            "total_tokens": 303,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-XMNNxnQB8IOpeS1cQnWQPFRvzZWVYm3o",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 55,
+            "prompt_ms": 249.06,
+            "prompt_per_token_ms": 4.528363636363636,
+            "prompt_per_second": 220.83032201076045,
+            "predicted_n": 77,
+            "predicted_ms": 2415.233,
+            "predicted_per_token_ms": 31.36666233766234,
+            "predicted_per_second": 31.880982083302104
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:G024",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The keyword cooccurrence network is not provided."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:U:bibliographic_coupling",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:U:bibliographic_coupling\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:U:bibliographic_coupling\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959665,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 91,
+            "prompt_tokens": 226,
+            "total_tokens": 317,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-W3uVTIEe8rnG57wom0PP9l1BxLjQvfiO",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 58,
+            "prompt_ms": 248.308,
+            "prompt_per_token_ms": 4.2811724137931035,
+            "prompt_per_second": 233.58087536446672,
+            "predicted_n": 91,
+            "predicted_ms": 2775.169,
+            "predicted_per_token_ms": 30.496362637362637,
+            "predicted_per_second": 32.79079580378709
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:U:bibliographic_coupling",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:U:citation",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:U:citation\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:U:citation\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The citation network contains the node 'CiteWeave absent benchmark node'.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959666,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 82,
+            "prompt_tokens": 220,
+            "total_tokens": 302,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-M2mG5cJeAd13bRdhMkU3ZYRSU8iguUmX",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 52,
+            "prompt_ms": 229.205,
+            "prompt_per_token_ms": 4.407788461538462,
+            "prompt_per_second": 226.8711415545036,
+            "predicted_n": 82,
+            "predicted_ms": 2562.515,
+            "predicted_per_token_ms": 31.250182926829268,
+            "predicted_per_second": 31.999812684023315
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:U:citation",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The citation network contains the node 'CiteWeave absent benchmark node'."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:U:coauthorship",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:U:coauthorship\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:U:coauthorship\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the coauthorship network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959668,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 89,
+            "prompt_tokens": 224,
+            "total_tokens": 313,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-Mcb5lIz8perqqG6zCRQpzpA0MOX9JjE8",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 55,
+            "prompt_ms": 228.607,
+            "prompt_per_token_ms": 4.156490909090909,
+            "prompt_per_second": 240.5875585611989,
+            "predicted_n": 89,
+            "predicted_ms": 2806.241,
+            "predicted_per_token_ms": 31.53079775280899,
+            "predicted_per_second": 31.715023763105165
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:U:coauthorship",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the coauthorship network."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:U:cocitation",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:U:cocitation\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:U:cocitation\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the cocitation network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959669,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 87,
+            "prompt_tokens": 222,
+            "total_tokens": 309,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-XK4qyh4VO6VYbFfSxAbemabfOodhpvOa",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 52,
+            "prompt_ms": 211.164,
+            "prompt_per_token_ms": 4.060846153846153,
+            "prompt_per_second": 246.25409634217957,
+            "predicted_n": 87,
+            "predicted_ms": 2733.573,
+            "predicted_per_token_ms": 31.420379310344828,
+            "predicted_per_second": 31.826477653971562
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:U:cocitation",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the cocitation network."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:U:institution_collaboration",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:U:institution_collaboration\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:U:institution_collaboration\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959671,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 91,
+            "prompt_tokens": 226,
+            "total_tokens": 317,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-Im6gQlZGsNNS9sAhJjHPqS3BuP5CBm8r",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 56,
+            "prompt_ms": 229.751,
+            "prompt_per_token_ms": 4.102696428571429,
+            "prompt_per_second": 243.7421382279076,
+            "predicted_n": 91,
+            "predicted_ms": 2807.619,
+            "predicted_per_token_ms": 30.852956043956045,
+            "predicted_per_second": 32.41180516302247
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:U:institution_collaboration",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network."
+        }
+      },
+      {
+        "item_id": "crispr_editing_2018_2020:U:keyword_cooccurrence",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: crispr_editing_2018_2020:U:keyword_cooccurrence\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"crispr_editing_2018_2020:U:keyword_cooccurrence\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The statement is false because the node 'CiteWeave absent benchmark node' is not present in the keyword_cooccurrence network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959672,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 96,
+            "prompt_tokens": 226,
+            "total_tokens": 322,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-2lM7mzDeprnAhkFfgCBEgEUXFVB4GH6x",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 57,
+            "prompt_ms": 230.24,
+            "prompt_per_token_ms": 4.039298245614035,
+            "prompt_per_second": 247.5677553856845,
+            "predicted_n": 96,
+            "predicted_ms": 2700.17,
+            "predicted_per_token_ms": 28.126770833333335,
+            "predicted_per_second": 35.55331701337323
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "crispr_editing_2018_2020:U:keyword_cooccurrence",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The statement is false because the node 'CiteWeave absent benchmark node' is not present in the keyword_cooccurrence network."
+        }
+      }
+    ]
+  },
+  "benchmark_version": 1,
+  "items": 30,
+  "predictions_received": 30,
+  "metrics": {
+    "exact_answer_accuracy": 0.2,
+    "schema_valid_rate": 0.2,
+    "unsupported_claim_rate": 1.0,
+    "structured_unsupported_answer_rate": 1.0,
+    "atomic_statement_precision": 0.0,
+    "statement_claim_coverage": 0.7083333333333334,
+    "format_failure_rate": 0.8,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 0.0,
+    "evidence_recall": 0.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "abstention_f1": 1.0
+  },
+  "counts": {
+    "correct": 6,
+    "answered": 24,
+    "incorrect_answered": 24,
+    "statement_claims": 17,
+    "unsupported_statement_claims": 17,
+    "evidence_tp": 0,
+    "evidence_fp": 25,
+    "evidence_fn": 162,
+    "evidence_path_eligible_answers": 24,
+    "abstention": {
+      "tn": 24,
+      "tp": 6
+    }
+  },
+  "by_task": {
+    "cluster_count": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_weighted_degree": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_edge": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "crispr_editing_2018_2020:G001",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G001",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "crispr_editing_2018_2020:G001"
+        ],
+        "evidence_edges": [
+          "crispr_editing_2018_2020:G001"
+        ],
+        "statement": "The bibliographic_coupling network has 1 node and 1 edge."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G002",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G002",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The highest weighted degree is 10."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G003",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G003",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The bibliometric graph analysis of the CRISPR editing research shows that 2 clusters are detected."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G004",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G004",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "crispr_editing_2018_2020:G004",
+          "crispr_editing_2018_2020:G003",
+          "crispr_editing_2018_2020:G002",
+          "crispr_editing_2018_2020:G001"
+        ],
+        "evidence_edges": [
+          "crispr_editing_2018_2020:G004",
+          "crispr_editing_2018_2020:G003",
+          "crispr_editing_2018_2020:G002",
+          "crispr_editing_2018_2020:G001"
+        ],
+        "statement": "The pair with the strongest connection in the bibliographic_coupling network is crispr_editing_2018_2020:G004, crispr_editing_2018_2020:G003, crispr_editing_2018_2020:G002, and crispr_editing_2018_2020:G001."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G005",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G005",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "crispr_editing_2018_2020:G005",
+          "crispr_editing_2018_2020:G004",
+          "crispr_editing_2018_2020:G003",
+          "crispr_editing_2018_2020:G002",
+          "crispr_editing_2018_2020:G001"
+        ],
+        "evidence_edges": [
+          "crispr_editing_2018_2020:G005",
+          "crispr_editing_2018_2020:G004",
+          "crispr_editing_2018_2020:G003",
+          "crispr_editing_2018_2020:G002",
+          "crispr_editing_2018_2020:G001"
+        ],
+        "statement": "The citation network has 5 nodes and 5 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G006",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G006",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree is the one with the highest number of citations."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G007",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G007",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G007\",\n    \"crispr_editing_2018_2020:G006\",\n    \"crispr_editing_2018_2020:G005\",\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"crispr_editing_2018_2020:G007\",\n    \"crispr_editing_2018_2020:G006\",\n    \"crispr_editing_2018_2020:G005\",\n    \"crispr_editing_2018_2020:G004\",\n    \"crispr_editing_2018_2020:G003\",\n    \"crispr_editing_2018_2020:G002\",\n    \"crispr_editing_2018_2020:G001\"\n "
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G008",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G008",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G008\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_2018_2020:G008\",\n    \"crispr_editing_20"
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G009",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G009",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The coauthorship network for the period 2018-2020 has 0 nodes and 0 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G010",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G010",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The highest weighted degree is 10."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G011",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G011",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G011\",\n    \"crispr_editing_2018_2020:G012\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G014\",\n    \"crispr_editing_2018_2020:G015\",\n    \"crispr_editing_2018_2020:G016\",\n    \"crispr_editing_2018_2020:G017\",\n    \"crispr_editing_2018_2020:G018\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G020\",\n    \"crispr_editing_2018_2020:G021\",\n    \"crispr_editing_2018_2020:G022\",\n    \"crispr_editing_2018_2020:G023\",\n    \"crispr_editing_2018_2020:G024\",\n    \"crispr_editing_20"
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G012",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G012",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "crispr_editing_2018:G001",
+          "crispr_editing_2020:G002"
+        ],
+        "evidence_edges": [
+          "coauthorship:G003"
+        ],
+        "statement": "The pair 'crispr_editing_2018:G001' and 'crispr_editing_2020:G002' has the strongest connection in the coauthorship network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G013",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G013",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_2018_2020:G013\",\n    \"crispr_editing_20"
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G014",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G014",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the cocitation network is 'crispr_editing_2018_2020:G014'."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G015",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G015",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G015\",\n    \"crispr_editing_2018_2020:G016\",\n    \"crispr_editing_2018_2020:G017\",\n    \"crispr_editing_2018_2020:G018\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G020\",\n    \"crispr_editing_2018_2020:G021\",\n    \"crispr_editing_2018_2020:G022\",\n    \"crispr_editing_2018_2020:G023\",\n    \"crispr_editing_2018_2020:G024\",\n    \"crispr_editing_2018_2020:G025\",\n    \"crispr_editing_2018_2020:G026\",\n    \"crispr_editing_2018_2020:G027\",\n    \"crispr_editing_2018_2020:G028\",\n    \"crispr_editing_20"
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G016",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G016",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018:G001\",\n    \"crispr_editing_2018:G002\",\n    \"crispr_editing_2018:G003\",\n    \"crispr_editing_2018:G004\",\n    \"crispr_editing_2018:G005\",\n    \"crispr_editing_2018:G006\",\n    \"crispr_editing_2018:G007\",\n    \"crispr_editing_2018:G008\",\n    \"crispr_editing_2018:G009\",\n    \"crispr_editing_2018:G010\",\n    \"crispr_editing_2018:G011\",\n    \"crispr_editing_2018:G012\",\n    \"crispr_editing_2018:G013\",\n    \"crispr_editing_2018:G014\",\n    \"crispr_editing_2018:G015\",\n    \"crispr_editing_2018:G016\",\n    \"crispr_editing_2018:G017\",\n    \"crispr_editing_2018:G018\",\n    \"crispr_editing_"
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G017",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G017",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The institution_collaboration network has 0 nodes and 0 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G018",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G018",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The highest weighted degree is 10."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G019",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G019",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"crispr_editing_2018_2020:G019\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_2018_2020:G019\",\n    \"crispr_editing_20"
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G020",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G020",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "crispr_editing_2018_2020:G020",
+          "crispr_editing_2018_2020:G020",
+          "crispr_editing_2018_2020:G020"
+        ],
+        "evidence_edges": [
+          "crispr_editing_2018_2020:G020",
+          "crispr_editing_2018_2020:G020",
+          "crispr_editing_2018_2020:G020"
+        ],
+        "statement": "The pair 'crispr_editing_2018_2020:G020' has the strongest connection in the institution_collaboration network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G021",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G021",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The keyword cooccurrence network is not provided."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G022",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G022",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The highest weighted degree is 1000."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G023",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G023",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The keyword co-occurrence network is not provided."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G024",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G024",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The keyword cooccurrence network is not provided."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:bibliographic_coupling",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:bibliographic_coupling",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:citation",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:citation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The citation network contains the node 'CiteWeave absent benchmark node'."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:coauthorship",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:coauthorship",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the coauthorship network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:cocitation",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:cocitation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the cocitation network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:institution_collaboration",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:institution_collaboration",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:keyword_cooccurrence",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:keyword_cooccurrence",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The statement is false because the node 'CiteWeave absent benchmark node' is not present in the keyword_cooccurrence network."
+      }
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "benchmark_version": 1,
+  "items": 6,
+  "predictions_received": 6,
+  "metrics": {
+    "exact_answer_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.0,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 0.0,
+    "abstention_recall": 0.0,
+    "abstention_f1": 0.0
+  },
+  "counts": {
+    "correct": 6,
+    "answered": 6,
+    "incorrect_answered": 0,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 6,
+    "abstention": {
+      "tn": 6
+    }
+  },
+  "by_task": {
+    "network_size": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 230,
+          "nodes": 72
+        },
+        "explanation": "The subtitle visibly states “72 nodes · 230 links.”",
+        "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size"
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:citation:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 4,
+          "nodes": 5
+        },
+        "explanation": "The subtitle visibly states “5 nodes · 4 links.”",
+        "item_id": "digital_twins_healthcare_2012_2024:citation:network_size"
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:coauthorship:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 128,
+          "nodes": 59
+        },
+        "explanation": "The subtitle visibly states “59 nodes · 128 links.”",
+        "item_id": "digital_twins_healthcare_2012_2024:coauthorship:network_size"
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:cocitation:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 203,
+          "nodes": 72
+        },
+        "explanation": "The subtitle visibly states “72 nodes · 203 links.”",
+        "item_id": "digital_twins_healthcare_2012_2024:cocitation:network_size"
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 153,
+          "nodes": 72
+        },
+        "explanation": "The subtitle visibly states “72 nodes · 153 links.”",
+        "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:network_size"
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 188,
+          "nodes": 72
+        },
+        "explanation": "The subtitle visibly states “72 nodes · 188 links.”",
+        "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size"
+      }
+    }
+  ],
+  "formal_metadata": {
+    "run_id": "formal_v2_nonthinking_20260806",
+    "dataset_id": "digital_twins_healthcare_2012_2024",
+    "condition": "figure_vlm",
+    "role": "cross_model_extension",
+    "generator": "independent_codex_visual_subagent",
+    "main_inference": false,
+    "visible_only": true,
+    "packet_sha256": "0696891515fc35de1282f768774e872c008f8a4a2cdbed775c0bfd7339dd55cf",
+    "output_sha256": "c4eb3bffe5783d1b04fd0be91b9385f78585d54e7c615a3aa588945e2f6a8b16",
+    "items": 6,
+    "item_ids": [
+      "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size",
+      "digital_twins_healthcare_2012_2024:citation:network_size",
+      "digital_twins_healthcare_2012_2024:coauthorship:network_size",
+      "digital_twins_healthcare_2012_2024:cocitation:network_size",
+      "digital_twins_healthcare_2012_2024:institution_collaboration:network_size",
+      "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size"
+    ],
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate"
+    ]
+  }
+}

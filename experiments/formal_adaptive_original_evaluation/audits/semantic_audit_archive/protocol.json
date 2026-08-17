@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "protocol_version": "adaptive-original-semantic-audit-v1",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "read_only": true,
+  "may_edit_candidate_or_result": false,
+  "hidden_metadata_withheld": true,
+  "allowed_result_fields": [
+    "audit_packet_id",
+    "auditor_role",
+    "semantic_consistent",
+    "decision_defensible",
+    "audit_reason"
+  ],
+  "instructions": "Inspect only whether the evaluation decision is semantically consistent with the visible candidate and evidence and whether its stated reason is defensible. Return flags and a reason only; do not edit either artifact."
+}

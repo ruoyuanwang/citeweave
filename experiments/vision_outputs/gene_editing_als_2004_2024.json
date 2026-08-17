@@ -1,0 +1,54 @@
+{
+  "dataset_id": "gene_editing_als_2004_2024",
+  "generator_role": "codex_visual_subagent",
+  "packet_sha256": "b9e605588f19d5d2d8b48cd8ff1cb2be7f3187a48768114da9d9eefd00345cb2",
+  "results": [
+    {
+      "abstain": false,
+      "answer": {
+        "links": 208,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle reads “72 nodes · 208 links.”",
+      "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 141,
+        "nodes": 60
+      },
+      "explanation": "The visible subtitle reads “60 nodes · 141 links.”",
+      "item_id": "gene_editing_als_2004_2024:coauthorship:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 204,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle reads “72 nodes · 204 links.”",
+      "item_id": "gene_editing_als_2004_2024:cocitation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 168,
+        "nodes": 71
+      },
+      "explanation": "The visible subtitle reads “71 nodes · 168 links.”",
+      "item_id": "gene_editing_als_2004_2024:institution_collaboration:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 192,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle reads “72 nodes · 192 links.”",
+      "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:network_size"
+    }
+  ],
+  "schema_version": 1,
+  "visible_only": true
+}

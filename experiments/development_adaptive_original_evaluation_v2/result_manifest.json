@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "protocol_version": "adaptive-original-evaluation-v1",
+  "results": [
+    {
+      "packet_id": "EP6529045186746961c7d4",
+      "result_sha256": "08127b10d295154a23d14a997ff67f35f2441b8bd12205eab7fc1de9bc4c66a6"
+    },
+    {
+      "packet_id": "EP1785d1bcaa8541e45de7",
+      "result_sha256": "99f88ef885bf9fb5ff45263ef8ef8459535c6e7b2fa71c02537654fba017ad02"
+    },
+    {
+      "packet_id": "EP1a09fde961cd61ae1d4a",
+      "result_sha256": "8b21359ce51e2efa949e285cab74415cdef6e9086c70ea0bd6ceb885e9788e3c"
+    },
+    {
+      "packet_id": "EP6610fd551c266ee997c3",
+      "result_sha256": "c7e88b402883950197d4862c558e2e84ad885bec1a0c305b0d362554e65eac2f"
+    },
+    {
+      "packet_id": "EPc93d67d3a14c8b63469e",
+      "result_sha256": "87f0b982b9720c96f7786b2345ae4b105610d34e7b052342e335eb3a8742557d"
+    },
+    {
+      "packet_id": "EP14ee3bcaa3548757dbca",
+      "result_sha256": "aee70e060dd5eb217cbaf6b38acf5bbb7378cd2989d9eef0777be5b107f0c1fb"
+    },
+    {
+      "packet_id": "EP1a7fd5a119de8d769475",
+      "result_sha256": "bff31e7dbf10885a57445e70e8671257644291d75ef17e0f373447d8b64522e0"
+    },
+    {
+      "packet_id": "EP6f096a00bfbf01e1e979",
+      "result_sha256": "eec9bb63c1e561cb0ef1240a76441a56c46e6ef10fe21cc0a34c8a72476248d8"
+    },
+    {
+      "packet_id": "EP89259f134e0747c213cd",
+      "result_sha256": "99deff843f7dad6eec7d1243bd126cdb38f62a383e85a765f42e60b754cbe2b3"
+    },
+    {
+      "packet_id": "EP061a45f3a6ba2dbacc10",
+      "result_sha256": "f5e0837e6f2bc517b937afd5c7301cec63802b86d7928d1fdba6e9d1b9402a82"
+    },
+    {
+      "packet_id": "EP80db886b932ba18be90b",
+      "result_sha256": "fdcf7b491a9025b7fd16a0d102bf5784edd499091e4d5557fbe5ef30d75f517a"
+    },
+    {
+      "packet_id": "EP95ce0c14549a9ca500e5",
+      "result_sha256": "958c3ebcf4b0d4e91764125d876fd978dace4a8b6cae8020208d7f2f0a393f55"
+    }
+  ]
+}

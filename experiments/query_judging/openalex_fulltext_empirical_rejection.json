@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "excluded_before_formal_analysis",
+  "formal_results_used": false,
+  "search_scope": "OpenAlex default search over title, abstract, and full text",
+  "reason": "Deterministic random samples showed that incidental full-text mentions caused unacceptable topical imprecision in every one of the eight topic corpora. The full-text query registry is therefore rejected before exhaustive acquisition and no sampled record or count is used as a formal result.",
+  "registry": {
+    "path": "experiments/formal_datasets_openalex_boolean_round6.yml",
+    "sha256": "7a4a5928bbdf9919fb0e9f7b14470f5fac14479a01a1395019f855d06cc3e055"
+  },
+  "probe": {
+    "path": "experiments/query_judging/openalex_empirical_probe_v2.json",
+    "sha256": "9c4955f053c1124b319b4d3ecc68c3e163243a366795cd5bddff5dc55f137b4b",
+    "random_sample_size_per_topic": 30,
+    "seed": 20260806
+  },
+  "independent_codex_judgments": [
+    {
+      "path": "experiments/query_judging/openalex_sample_judge_a.json",
+      "sha256": "e3bcbbe282dfa922b5adc67a2db3e8e5370c2aa3c3884a09687fd4e567eed003"
+    },
+    {
+      "path": "experiments/query_judging/openalex_sample_judge_b.json",
+      "sha256": "3886c25b93aad19adb7b58739c07a8e7ef75a8ed61362caa0780685bc18964b5"
+    },
+    {
+      "path": "experiments/query_judging/openalex_sample_judge_c.json",
+      "sha256": "727c1fc9e6e2a15adc0e6e75c320d5ae49ddd31af7071269838a47e4d1b09afd"
+    }
+  ],
+  "adjudicated_random_sample_counts": {
+    "gnn_drug_discovery_2017_2023": {"relevant": 8, "borderline": 10, "irrelevant": 12},
+    "crispr_extracellular_vesicles_2015_2022": {"relevant": 0, "borderline": 3, "irrelevant": 27},
+    "machine_learning_climate_change_2008_2022": {"relevant": 4, "borderline": 7, "irrelevant": 19},
+    "climate_change_risk_assessment_1990_2021": {"relevant": 7, "borderline": 4, "irrelevant": 19},
+    "digital_twins_healthcare_2012_2023": {"relevant": 2, "borderline": 1, "irrelevant": 27},
+    "plant_heat_drought_stress_2008_2021": {"relevant": 2, "borderline": 5, "irrelevant": 23},
+    "gene_editing_als_2004_2023": {"relevant": 0, "borderline": 8, "irrelevant": 22},
+    "global_microplastics_2004_2019": {"relevant": 14, "borderline": 5, "irrelevant": 11}
+  },
+  "replacement_contract": "Use the same independently generated Boolean expressions with OpenAlex title_and_abstract.search, then repeat independent Query Judge review and deterministic random-sample validation before full acquisition.",
+  "documentation": [
+    "https://developers.openalex.org/guides/searching",
+    "https://developers.openalex.org/api-reference/works"
+  ]
+}

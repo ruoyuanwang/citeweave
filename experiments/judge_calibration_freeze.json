@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "frozen_after_development_calibration",
+  "development_topics": [
+    "gnn_drug_discovery_2017_2023",
+    "crispr_extracellular_vesicles_2015_2022"
+  ],
+  "formal_results_used": false,
+  "locked_topic_count": 6,
+  "report_rubric_version": "judge-formal-v1-addressable-evidence",
+  "graph_rubric_version": "graph-judge-formal-v1",
+  "rules": {
+    "claim_unit": "distinct factual, numeric, relational, methodological, or interpretive claim",
+    "supported_requires_evidence_id": true,
+    "system_evidence_prefix": "E",
+    "published_reference_evidence_prefix": "H",
+    "paired_corpora_are_scored_against_their_own_evidence": true,
+    "human_reference_counts_are_not_gold_for_system_corpora": true,
+    "independent_judges": 2,
+    "blind_adjudication_on_conflict": true,
+    "judges_may_modify_pipeline_or_artifacts": false
+  },
+  "calibration_metrics": {
+    "report_full_vs_one_shot": "development_judging/full_vs_oneshot/resolved_v2/judge_metrics.json",
+    "report_full_vs_human": "development_judging/full_vs_human/resolved_v2/judge_metrics.json",
+    "report_one_shot_vs_human": "development_judging/oneshot_vs_human/resolved_v2/judge_metrics.json",
+    "graph_vs_no_rag": "development_graph_judging/graph_vs_no/resolved_v1/judge_metrics.json",
+    "graph_vs_flat_structured": "development_graph_judging/graph_vs_flat/resolved_v1/judge_metrics.json",
+    "graph_vs_figure_vlm": "development_graph_judging/graph_vs_figure/resolved_v1/judge_metrics.json"
+  },
+  "excluded_preflights": [
+    "rejected_judge_calibration_v0_unaddressable_human_evidence/exclusion.json",
+    "rejected_judge_calibration_v1_condition_label_leak/exclusion.json"
+  ]
+}

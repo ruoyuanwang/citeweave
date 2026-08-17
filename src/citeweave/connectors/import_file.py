@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import json
 import re
 import shutil
 from collections.abc import Iterable
@@ -204,6 +205,21 @@ def _read_bibtex(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def _read_jsonl(path: Path) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for line_number, line in enumerate(
+        path.read_text(encoding="utf-8-sig").splitlines(),
+        start=1,
+    ):
+        if not line.strip():
+            continue
+        value = json.loads(line)
+        if not isinstance(value, dict):
+            raise TypeError(f"JSONL line {line_number} is not an object")
+        rows.append(value)
+    return rows
+
+
 class ImportFileConnector(BaseConnector):
     source_name = SourceName.import_file.value
 
@@ -221,13 +237,24 @@ class ImportFileConnector(BaseConnector):
                 ".ris": "ris",
                 ".bib": "bibtex",
                 ".bibtex": "bibtex",
+                ".jsonl": "jsonl",
             }.get(source_path.suffix.casefold(), "wos")
-        readers = {"csv": _read_csv, "ris": _read_ris, "bibtex": _read_bibtex, "wos": _read_ris}
+        readers = {
+            "csv": _read_csv,
+            "ris": _read_ris,
+            "bibtex": _read_bibtex,
+            "wos": _read_ris,
+            "jsonl": _read_jsonl,
+        }
         try:
             raw_rows = readers[fmt](source_path)
         except Exception as exc:
             raise AcquisitionError(f"Failed to parse {fmt} file: {exc}") from exc
-        staged = [_as_crossref(row, index) for index, row in enumerate(raw_rows, 1)]
+        staged = (
+            raw_rows
+            if fmt == "jsonl"
+            else [_as_crossref(row, index) for index, row in enumerate(raw_rows, 1)]
+        )
 
         terms = [term.casefold() for term in protocol.keywords]
         filtered = []

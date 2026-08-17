@@ -1,0 +1,95 @@
+{
+  "assignment_role": "independent_read_only_evaluation_judge",
+  "condition_identity_visible": false,
+  "instructions": [
+    "Act only as a read-only quality Judge. Use only canonical_evidence, anonymous_candidate, and allowed_evidence_ids visible in the supplied packet.",
+    "Score whether the candidate is supported by the visible evidence. Cite only visible evidence IDs.",
+    "Do not propose, encode, or apply any revision. Do not modify the candidate, pipeline, source artifacts, feedback memory, query, corpus, or evidence.",
+    "Do not browse, call APIs, inspect unlisted workspace files, use hidden condition identities, or use outside knowledge."
+  ],
+  "items": [
+    {
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\assignments\\evaluation\\packets\\EP0de99d5b854ecb4a6c16.json",
+      "packet_id": "EP0de99d5b854ecb4a6c16",
+      "packet_sha256": "cdee6a9b17851256399c3c10178975287d0aa2c7c8e54637d3b416b4a5b84571",
+      "result_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\results\\evaluation\\EP0de99d5b854ecb4a6c16.json"
+    },
+    {
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\assignments\\evaluation\\packets\\EP50184d372e70fdb655f0.json",
+      "packet_id": "EP50184d372e70fdb655f0",
+      "packet_sha256": "bc9707e797b1c9e1d203f96e37d950c6c6991af5b16b4b6d0fa58f0bf92aa9b7",
+      "result_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\results\\evaluation\\EP50184d372e70fdb655f0.json"
+    },
+    {
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\assignments\\evaluation\\packets\\EPfdd3cd0e1352b0b29235.json",
+      "packet_id": "EPfdd3cd0e1352b0b29235",
+      "packet_sha256": "efa274c3ef82b9cace452939063460a63b15c435ee889d406cf81a5ee2fc6a4c",
+      "result_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\results\\evaluation\\EPfdd3cd0e1352b0b29235.json"
+    }
+  ],
+  "may_directly_modify_candidate": false,
+  "may_directly_update_feedback_memory": false,
+  "may_modify_pipeline_or_source_artifacts": false,
+  "may_read_unlisted_workspace_files": false,
+  "may_return_one_scoped_edit": false,
+  "only_listed_packets_are_visible": true,
+  "output_contract": "Return exactly one JSON object per listed packet at its unique result_file. Do not create any other file.",
+  "packet_kind": "evaluation",
+  "result_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "confidence": {
+        "maximum": 1.0,
+        "minimum": 0.0,
+        "title": "Confidence",
+        "type": "number"
+      },
+      "decision": {
+        "enum": [
+          "pass",
+          "fail"
+        ],
+        "title": "Decision",
+        "type": "string"
+      },
+      "evidence_ids": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Evidence Ids",
+        "type": "array"
+      },
+      "judge_id": {
+        "const": "evaluation",
+        "default": "evaluation",
+        "title": "Judge Id",
+        "type": "string"
+      },
+      "packet_id": {
+        "pattern": "^EP[0-9a-f]{20}$",
+        "title": "Packet Id",
+        "type": "string"
+      },
+      "reason": {
+        "minLength": 1,
+        "title": "Reason",
+        "type": "string"
+      }
+    },
+    "required": [
+      "packet_id",
+      "decision",
+      "confidence",
+      "reason"
+    ],
+    "title": "AdaptiveEvaluationResult",
+    "type": "object"
+  },
+  "schema_version": 1,
+  "validated_result_eligible_for_feedback_memory": false,
+  "write_scope": [
+    "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\results\\evaluation\\EP0de99d5b854ecb4a6c16.json",
+    "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\results\\evaluation\\EP50184d372e70fdb655f0.json",
+    "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_058\\results\\evaluation\\EPfdd3cd0e1352b0b29235.json"
+  ]
+}

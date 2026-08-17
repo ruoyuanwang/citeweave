@@ -1,0 +1,101 @@
+{
+  "assignment_role": "independent_codex_visible_only_figure_evaluation",
+  "controller_metadata_in_scope": false,
+  "dataset_id": "gene_editing_als_2004_2024",
+  "figure_manifest_sha256": "f791c47fdaa2baf076e052b6ba7a18dbc4ae423d910cdc36a6eea843b50834b2",
+  "generator_role": "codex_visual_subagent",
+  "instructions": [
+    "Use only the PNG files explicitly listed in items. Do not inspect the workspace, packet source, benchmark, graph data, reports, gold answers, or outputs from any other condition.",
+    "Visually inspect each PNG and answer only its paired question. If the requested values are not established by the visible image, abstain with answer=null.",
+    "Return exactly one result for every item in the listed order. Do not add fields, commentary, Markdown, or modify any other file."
+  ],
+  "items": [
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\gene_editing_als_2004_2024\\figures\\network_bibliographic_coupling.png",
+      "figure_sha256": "f41a71f9901d6e589fe8cc04ef6144d788f663071dcd83b67f2106279abd63b2",
+      "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:network_size",
+      "question": "How many nodes and links are displayed in the bibliographic_coupling network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\gene_editing_als_2004_2024\\figures\\network_coauthorship.png",
+      "figure_sha256": "fc6ec842888f16f3ae8b899037d0d5b00feaea8b9959bf8fb8011dd6cbb2e454",
+      "item_id": "gene_editing_als_2004_2024:coauthorship:network_size",
+      "question": "How many nodes and links are displayed in the coauthorship network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\gene_editing_als_2004_2024\\figures\\network_cocitation.png",
+      "figure_sha256": "cac48ca9055cff97f0728587a11341c0f2246e073885c5d40eaa4d85ef50805d",
+      "item_id": "gene_editing_als_2004_2024:cocitation:network_size",
+      "question": "How many nodes and links are displayed in the cocitation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\gene_editing_als_2004_2024\\figures\\network_institution_collaboration.png",
+      "figure_sha256": "fe632a63723d6a26aade13c34c3ffce96309fdf37f4c474849a18f038f61e0e5",
+      "item_id": "gene_editing_als_2004_2024:institution_collaboration:network_size",
+      "question": "How many nodes and links are displayed in the institution_collaboration network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\gene_editing_als_2004_2024\\figures\\network_keyword_cooccurrence.png",
+      "figure_sha256": "d4184ce8d40421831331a5c22d3d774571da4ba127cde850365f676603412bc7",
+      "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:network_size",
+      "question": "How many nodes and links are displayed in the keyword_cooccurrence network?",
+      "task_type": "network_size"
+    }
+  ],
+  "main_inference": false,
+  "may_modify_pipeline_or_source_artifacts": false,
+  "may_read_unlisted_workspace_files": false,
+  "prohibited_inputs": [
+    "flat structured context",
+    "gold_answer",
+    "graph JSON",
+    "human reference output",
+    "other condition output"
+  ],
+  "registry_sha256": "7c0ea6f10726e986793780ba5469879255f034eeefdb1c506af54cde9e07d3cd",
+  "return_path": "D:\\project\\bibagent\\experiments\\formal_vision_returns\\gene_editing_als_2004_2024.json",
+  "schema_version": 1,
+  "source_packet_file_sha256": "b254b8de5b7c032d55f91389631acada126219257618426f87577a1849d9287a",
+  "source_packet_sha256": "b9e605588f19d5d2d8b48cd8ff1cb2be7f3187a48768114da9d9eefd00345cb2",
+  "strict_output_schema": {
+    "dataset_id": "gene_editing_als_2004_2024",
+    "generator_role": "codex_visual_subagent",
+    "packet_sha256": "b9e605588f19d5d2d8b48cd8ff1cb2be7f3187a48768114da9d9eefd00345cb2",
+    "results": [
+      {
+        "abstain": "<boolean>",
+        "answer": "<object matching answer_contract exactly, or null iff abstain>",
+        "explanation": "<brief visible-image basis, 1..1000 characters>",
+        "item_id": "<copy exact item_id in input order>"
+      }
+    ],
+    "schema_version": 1,
+    "visible_only": true
+  },
+  "visible_only": true,
+  "write_scope": "Only return_path may be created or replaced by the assigned visual subagent."
+}

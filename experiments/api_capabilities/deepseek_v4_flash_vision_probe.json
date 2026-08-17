@@ -1,0 +1,18 @@
+{
+  "retrieved_at": "2026-08-06T07:04:51.991312+00:00",
+  "base_url": "https://api.deepseek.com",
+  "models": [
+    "deepseek-v4-flash",
+    "deepseek-v4-pro"
+  ],
+  "required_text_model": "deepseek-v4-pro",
+  "text_model_available": true,
+  "configured_vlm_model": "deepseek-v4-flash",
+  "vlm_probe": {
+    "model": "deepseek-v4-flash",
+    "request_sha256": "b820366f2af8643585f276d733ea17a470292edd6435e494d04e797d89f92e90",
+    "status_code": 400,
+    "accepted_image_input": false,
+    "response": "{\"error\":{\"message\":\"Failed to deserialize the JSON body into the target type: messages[0]: unknown variant `image_url`, expected `text` at line 1 column 290\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"invalid_request_error\"}}"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "condition": "no_graph",
+  "metadata": {
+    "dataset_id": "rag_graph_2022_2025",
+    "model": "qwen2.5-1.5b-q4km",
+    "base_url": "http://127.0.0.1:8091/v1",
+    "temperature": 0.0,
+    "items": 1,
+    "raw_records": [
+      {
+        "item_id": "rag_graph_2022_2025:G001",
+        "condition": "no_graph",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G001\nQUESTION: How many nodes and edges are in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "```json\n{\n  \"item_id\": \"rag_graph_2022_2025:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"rag_graph_2022_2025:G001\",\n    \"rag_graph_2022_2025:G002\",\n    \"rag_graph_2022_2025:G003\",\n    \"rag_graph_2022_2025:G004\",\n    \"rag_graph_2022_2025:G005\",\n    \"rag_graph_2022_2025:G006\",\n    \"rag_graph_2022_2025:G007\",\n    \"rag_graph_2022_2025:G008\",\n    \"rag_graph_2022_2025:G009\",\n    \"rag_graph_2022_2025:G010\",\n    \"rag_graph_2022_2025:G011\",\n    \"rag_graph_2022_2025:G012\",\n    \"rag_graph_2022_2025:G013\",\n    \"rag_graph_2022_2025:G014\",\n    \"rag_graph_2022_2025:G015\",\n    \"rag_graph_2022_2025:G016\",\n    \"rag_graph_2022_2025:G017\",\n    \"rag_graph_2022_2025:G018\",\n    \"rag_graph_2022_2025:G019\",\n    \"rag_graph_2022_2025:G020\",\n    \"rag_graph_2022_2025:G021\",\n    \"rag_graph_2022_2025:G022\",\n    \"rag_graph_2022_2025:G023\",\n    \"rag_graph_2022_2025:G024\",\n    \"rag_graph_2022_2025:G025\",\n    \"rag_graph_2022_2025:G026\",\n    \"rag_graph_2022_2025:G027\",\n    \"rag_graph_2022_2025:G028\",\n    \"rag_graph_2022_2025:G029\",\n    \"rag_graph_2022_2025:G030\",\n    \"rag_graph_2022_2025:G031\",\n    \"rag_graph_2022_2025:G032\",\n    \"rag_graph_2022_2025:G033\",\n    \"rag_graph_2022_2025:G034\",\n    \"rag_graph_2022_2025:G035\",\n    \"rag_graph_2022_2025:G036\",\n    \"rag_graph_2022_2025:G037\",\n    \"rag_graph_2022_2025:G038\",\n    \"rag_graph_2022_2025:G039\",\n    \"rag_graph_2022_2025:G040\",\n    \"rag_graph_2022_2025:G041\",\n    \"rag_graph_2022_2025:G042\",\n    \"rag_graph_2022_2025:G043\",\n    \"rag_graph_2022_2025:G044\",\n    \"rag_graph_2022_2025:G045\",\n    \"rag_graph_2022_2025:G046\",\n    \"rag_graph_2022_2025:G047\",\n    \"rag_graph_2022_2025:G048\",\n    \"rag_graph_2022_2025:G049\",\n    \"rag_graph_2022_2025:G050\",\n    \"rag_graph_2022_2025:G051\",\n    \"rag_graph_2022_2025:G052\",\n    \"rag_graph_2022_2025:G053\",\n    \"rag_graph_2022_2025:G054\",\n    \"rag_graph_2022_2025:G055\",\n    \"rag_graph_2022_2025:G056\",\n    \"rag_graph_2022_2025:G057\",\n    \"rag_graph_2022_2025:G058\",\n    \"rag_graph_2022_2025:G059\",\n    \"rag_graph_2022_2025:G060\",\n    \"rag_graph_2022_2025:G061\",\n    \"rag_graph_2022_2025:G062\",\n    \"rag_graph_2022_2025:G063\",\n    \"rag_graph_2022_2025:G064\",\n    \"rag_graph_2022_2025:G065\",\n    \"rag_graph_2022_2025:G066\",\n    \"rag_graph_2022_2025:G067\",\n    \"rag_graph_2022_2025:G068\",\n    \"rag_graph_2022_2025:G069\",\n    \"rag_graph_2022_2025:G070\",\n    \"rag_graph_2022_2025:G071\",\n    \"rag_graph_2022_2025:G072\",\n    \"rag_graph_2022_2025:G073\",\n    \"rag_graph_2022_2025:G074\",\n    \"rag_graph_2022_2025:G075\",\n    \"rag_graph_2022_2025:G076\",\n    \"rag_graph_2022_2025:G077\",\n    \"rag_graph_2022_2025:G078\",\n    \"rag_graph_2022_2025:G079\",\n    \"rag_graph_2022_2025:G080\",\n    \"rag_graph_2022_2025:G081\",\n    \"rag_graph_2022_2025:G082\",\n    \"rag_graph_2022_2025:G083\",\n    \"rag_graph_2022_2025:G084\",\n    \"rag_graph_2022_2025:G085\",\n    \"rag_graph_2022_2025:G086\",\n    \"rag_graph_2022_2025:G087\",\n    \"rag_graph_2022_2025:G088\",\n    \"rag_graph_2022_2025:G089\",\n    \"rag_graph_2022_2025:G090\",\n    \"rag_graph_2022_2025:G091\",\n    \"rag_graph_2022_2025:G092\",\n    \"rag_graph_2022_2025:G093\",\n    \"rag_graph_2022_2025:G094\",\n    \""
+              }
+            }
+          ],
+          "created": 1785958477,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 1931,
+            "prompt_tokens": 117,
+            "total_tokens": 2048,
+            "prompt_tokens_details": {
+              "cached_tokens": 111
+            }
+          },
+          "id": "chatcmpl-rbmVe9r0NuqCG351XJejnUN5gCQFJUjH",
+          "timings": {
+            "cache_n": 111,
+            "prompt_n": 6,
+            "prompt_ms": 37.35,
+            "prompt_per_token_ms": 6.2250000000000005,
+            "prompt_per_second": 160.6425702811245,
+            "predicted_n": 1931,
+            "predicted_ms": 56961.066,
+            "predicted_per_token_ms": 29.49822164681512,
+            "predicted_per_second": 33.90034870485043
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G001",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "```json\n{\n  \"item_id\": \"rag_graph_2022_2025:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"rag_graph_2022_2025:G001\",\n    \"rag_graph_2022_2025:G002\",\n    \"rag_graph_2022_2025:G003\",\n    \"rag_graph_2022_2025:G004\",\n    \"rag_graph_2022_2025:G005\",\n    \"rag_graph_2022_2025:G006\",\n    \"rag_graph_2022_2025:G007\",\n    \"rag_graph_2022_2025:G008\",\n    \"rag_graph_2022_2025:G009\",\n    \"rag_graph_2022_2025:G010\",\n    \"rag_graph_2022_2025:G011\",\n    \"rag_graph_2022_2025:G012\",\n    \"rag_graph_2022_2025:G013\",\n    \"rag_graph_2022_2025:G014\",\n    \"rag_graph_2022_2025:G015\",\n    \"rag_graph_2022_2025:G016\",\n    \"rag_graph_2022_2025:G017\",\n    \"rag_graph_2022_2025:G018\",\n    \"rag_graph_2022_2025:G019\",\n    \"rag_graph_2022_2025:G020\",\n    \"rag_graph_2022_2025:G021\",\n    \"rag_graph_2022_2025:G022\",\n    \"rag_graph_2022_2025:G023\",\n    \"rag_graph_2022_2025:G024\",\n    \"rag_graph_2022_2025:G025\",\n    \"rag_graph_2022_2025:G026\",\n    \"rag_graph_2022_2025:G027\",\n    \"rag_graph_2022_2025:G028\",\n    \"rag_graph_2022_2025:G029\",\n    \"rag_graph_2022_2025:G030\",\n    \"rag_graph_2022_2025:G031\",\n    \"rag_graph_2022_2025:G032\",\n    \"rag_graph_2022_2025:G033\",\n    \"rag_graph_2022_2025:G034\",\n    \"rag_graph_2022_2025:G035\",\n    \"rag_graph_2022_2025:G036\",\n    \"rag_graph_2022_2025:G037\",\n    \"rag_graph_2022_2025:G038\",\n    \"rag_graph_2022_2025:G039\",\n    \"rag_graph_2022_2025:G040\",\n    \"rag_graph_2022_2025:G041\",\n    \"rag_graph_2022_2025:G042\",\n    \"rag_graph_2022_2025:G043\",\n    \"rag_graph_2022_2025:G044\",\n    \"rag_graph_2022_2025:G045\",\n    \"rag_graph_2022_2025:G046\",\n    \"rag_graph_2022_2025:G047\",\n    \"rag_graph_2022_2025:G048\",\n    \"rag_graph_2022_2025:G049\",\n    \"rag_graph_2022_2025:G050\",\n    \"rag_graph_2022_2025:G051\",\n    \"rag_graph_2022_2025:G052\",\n    \"rag_graph_2022_2025:G053\",\n    \"rag_graph_2022_2025:G054\",\n    \"rag_graph_2022_2025:G055\",\n    \"rag_graph_2022_2025:G056\",\n    \"rag_graph_2022_2025:G057\",\n    \"rag_graph_2022_2025:G058\",\n    \"rag_graph_2022_2025:G059\",\n    \"rag_graph_2022_2025:G060\",\n    \"rag_graph_2022_2025:G061\",\n    \"rag_graph_2022_2025:G062\",\n    \"rag_graph_2022_2025:G063\",\n    \"rag_graph_2022_2025:G064\",\n    \"rag_graph_2022_2025:G065\",\n    \"rag_graph_2022_2025:G066\",\n    \"rag_graph_2022_2025:G067\",\n    \"rag_graph_2022_2025:G068\",\n    \"rag_graph_2022_2025:G069\",\n    \"rag_graph_2022_2025:G070\",\n    \"rag_graph_2022_2025:G071\",\n    \"rag_graph_2022_2025:G072\",\n    \"rag_graph_2022_2025:G073\",\n    \"rag_graph_2022_2025:G074\",\n    \"rag_graph_2022_2025:G075\",\n    \"rag_graph_2022_2025:G076\",\n    \"rag_graph_2022_2025:G077\",\n    \"rag_graph_2022_2025:G078\",\n    \"rag_graph_2022_2025:G079\",\n    \"rag_graph_2022_2025:G080\",\n    \"rag_graph_2022_2025:G081\",\n    \"rag_graph_2022_2025:G082\",\n    \"rag_graph_2022_2025:G083\",\n    \"rag_graph_2022_2025:G084\",\n    \"rag_graph_2022_2025:G085\",\n    \"rag_graph_2022_2025:G086\",\n    \"rag_graph_2022_2025:G087\",\n    \"rag_graph_2022_2025:G088\",\n    \"rag_graph_2022_2025:G089\",\n    \"rag_graph_2022_2025:G090\",\n    \"rag_graph_2022_2025:G091\",\n    \"rag_graph_2022_2025:G092\",\n    \"rag_graph_2022_2025:G093\",\n    \"rag_graph_2022_2025:G094\",\n    \""
+        }
+      }
+    ]
+  },
+  "benchmark_version": 1,
+  "items": 1,
+  "predictions_received": 1,
+  "metrics": {
+    "exact_answer_accuracy": 0.0,
+    "schema_valid_rate": 0.0,
+    "unsupported_claim_rate": 1.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 0.0,
+    "evidence_recall": 0.0,
+    "abstention_precision": 0.0,
+    "abstention_recall": 0.0,
+    "abstention_f1": 0.0
+  },
+  "counts": {
+    "correct": 0,
+    "answered": 1,
+    "incorrect_answered": 1,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 2,
+    "evidence_path_eligible_answers": 1,
+    "abstention": {
+      "tn": 1
+    }
+  },
+  "by_task": {
+    "network_size": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "rag_graph_2022_2025:G001",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G001",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "```json\n{\n  \"item_id\": \"rag_graph_2022_2025:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"rag_graph_2022_2025:G001\",\n    \"rag_graph_2022_2025:G002\",\n    \"rag_graph_2022_2025:G003\",\n    \"rag_graph_2022_2025:G004\",\n    \"rag_graph_2022_2025:G005\",\n    \"rag_graph_2022_2025:G006\",\n    \"rag_graph_2022_2025:G007\",\n    \"rag_graph_2022_2025:G008\",\n    \"rag_graph_2022_2025:G009\",\n    \"rag_graph_2022_2025:G010\",\n    \"rag_graph_2022_2025:G011\",\n    \"rag_graph_2022_2025:G012\",\n    \"rag_graph_2022_2025:G013\",\n    \"rag_graph_2022_2025:G014\",\n    \"rag_graph_2022_2025:G015\",\n    \"rag_graph_2022_2025:G016\",\n    \"rag_graph_2022_2025:G017\",\n    \"rag_graph_2022_2025:G018\",\n    \"rag_graph_2022_2025:G019\",\n    \"rag_graph_2022_2025:G020\",\n    \"rag_graph_2022_2025:G021\",\n    \"rag_graph_2022_2025:G022\",\n    \"rag_graph_2022_2025:G023\",\n    \"rag_graph_2022_2025:G024\",\n    \"rag_graph_2022_2025:G025\",\n    \"rag_graph_2022_2025:G026\",\n    \"rag_graph_2022_2025:G027\",\n    \"rag_graph_2022_2025:G028\",\n    \"rag_graph_2022_2025:G029\",\n    \"rag_graph_2022_2025:G030\",\n    \"rag_graph_2022_2025:G031\",\n    \"rag_graph_2022_2025:G032\",\n    \"rag_graph_2022_2025:G033\",\n    \"rag_graph_2022_2025:G034\",\n    \"rag_graph_2022_2025:G035\",\n    \"rag_graph_2022_2025:G036\",\n    \"rag_graph_2022_2025:G037\",\n    \"rag_graph_2022_2025:G038\",\n    \"rag_graph_2022_2025:G039\",\n    \"rag_graph_2022_2025:G040\",\n    \"rag_graph_2022_2025:G041\",\n    \"rag_graph_2022_2025:G042\",\n    \"rag_graph_2022_2025:G043\",\n    \"rag_graph_2022_2025:G044\",\n    \"rag_graph_2022_2025:G045\",\n    \"rag_graph_2022_2025:G046\",\n    \"rag_graph_2022_2025:G047\",\n    \"rag_graph_2022_2025:G048\",\n    \"rag_graph_2022_2025:G049\",\n    \"rag_graph_2022_2025:G050\",\n    \"rag_graph_2022_2025:G051\",\n    \"rag_graph_2022_2025:G052\",\n    \"rag_graph_2022_2025:G053\",\n    \"rag_graph_2022_2025:G054\",\n    \"rag_graph_2022_2025:G055\",\n    \"rag_graph_2022_2025:G056\",\n    \"rag_graph_2022_2025:G057\",\n    \"rag_graph_2022_2025:G058\",\n    \"rag_graph_2022_2025:G059\",\n    \"rag_graph_2022_2025:G060\",\n    \"rag_graph_2022_2025:G061\",\n    \"rag_graph_2022_2025:G062\",\n    \"rag_graph_2022_2025:G063\",\n    \"rag_graph_2022_2025:G064\",\n    \"rag_graph_2022_2025:G065\",\n    \"rag_graph_2022_2025:G066\",\n    \"rag_graph_2022_2025:G067\",\n    \"rag_graph_2022_2025:G068\",\n    \"rag_graph_2022_2025:G069\",\n    \"rag_graph_2022_2025:G070\",\n    \"rag_graph_2022_2025:G071\",\n    \"rag_graph_2022_2025:G072\",\n    \"rag_graph_2022_2025:G073\",\n    \"rag_graph_2022_2025:G074\",\n    \"rag_graph_2022_2025:G075\",\n    \"rag_graph_2022_2025:G076\",\n    \"rag_graph_2022_2025:G077\",\n    \"rag_graph_2022_2025:G078\",\n    \"rag_graph_2022_2025:G079\",\n    \"rag_graph_2022_2025:G080\",\n    \"rag_graph_2022_2025:G081\",\n    \"rag_graph_2022_2025:G082\",\n    \"rag_graph_2022_2025:G083\",\n    \"rag_graph_2022_2025:G084\",\n    \"rag_graph_2022_2025:G085\",\n    \"rag_graph_2022_2025:G086\",\n    \"rag_graph_2022_2025:G087\",\n    \"rag_graph_2022_2025:G088\",\n    \"rag_graph_2022_2025:G089\",\n    \"rag_graph_2022_2025:G090\",\n    \"rag_graph_2022_2025:G091\",\n    \"rag_graph_2022_2025:G092\",\n    \"rag_graph_2022_2025:G093\",\n    \"rag_graph_2022_2025:G094\",\n    \""
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "packet_id": "FPce5172af904ce4aeb7f1",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The candidate accurately identifies the evidenced strongest connected labeled pair and its displayed edge weight of 65.0.",
+  "evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1071/fp13340:label",
+    "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776:label"
+  ],
+  "suggested_revision": null
+}

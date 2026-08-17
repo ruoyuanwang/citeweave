@@ -1,0 +1,3352 @@
+{
+  "packet_id": "EPb452e25507937f383113",
+  "sample_id": "climate_change_risks_1990_2021:report:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": [
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": null,
+      "claim_type": "corpus_size",
+      "evidence_id": "E001",
+      "method": "Count of canonical work_id after deterministic exact deduplication.",
+      "selector": {},
+      "statement": "The included corpus contains 151562 unique works.",
+      "unit": null,
+      "value": 151562
+    },
+    {
+      "artifact_path": "audit/acquisition_manifest.json",
+      "caveat": "Completeness is relative to the named source, query, time, and retrieval date.",
+      "claim_type": "acquisition_completeness",
+      "evidence_id": "E002",
+      "method": "Cursor pagination continued until the source returned no next cursor.",
+      "selector": {},
+      "statement": "The source reported 152599 results and 152030 unique source records were acquired.",
+      "unit": null,
+      "value": {
+        "acquired_unique": 152030,
+        "complete": true,
+        "expected": 152599,
+        "truncated": false
+      }
+    },
+    {
+      "artifact_path": "quality/field_coverage.parquet",
+      "caveat": "Field completeness measures metadata availability, not database recall or the substantive quality of the publications.",
+      "claim_type": "metadata_coverage",
+      "evidence_id": "E003",
+      "method": "Non-null canonical values divided by the canonical corpus size.",
+      "selector": {},
+      "statement": "Field completeness was measured after normalization for every canonical work.",
+      "unit": null,
+      "value": {
+        "abstract": {
+          "coverage_percent": 74.73,
+          "missing": 38306,
+          "missing_percent": 25.27,
+          "present": 113256
+        },
+        "cited_by_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 151562
+        },
+        "document_type": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 151562
+        },
+        "doi": {
+          "coverage_percent": 80.8,
+          "missing": 29100,
+          "missing_percent": 19.2,
+          "present": 122462
+        },
+        "language": {
+          "coverage_percent": 99.5,
+          "missing": 756,
+          "missing_percent": 0.5,
+          "present": 150806
+        },
+        "publication_date": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 151562
+        },
+        "publisher": {
+          "coverage_percent": 79.79,
+          "missing": 30635,
+          "missing_percent": 20.21,
+          "present": 120927
+        },
+        "reference_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 151562
+        },
+        "source_id": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 151562
+        },
+        "title": {
+          "coverage_percent": 99.96,
+          "missing": 62,
+          "missing_percent": 0.04,
+          "present": 151500
+        },
+        "year": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 151562
+        }
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": null,
+      "claim_type": "time_span",
+      "evidence_id": "E004",
+      "method": "Minimum and maximum non-missing publication year.",
+      "selector": {},
+      "statement": "The corpus spans 1990–2021.",
+      "unit": null,
+      "value": {
+        "end": 2021,
+        "start": 1990
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_peak",
+      "evidence_id": "E005",
+      "method": "Maximum whole-counted works grouped by publication year.",
+      "selector": {},
+      "statement": "Annual output peaked in 2021 with 19170 works.",
+      "unit": null,
+      "value": {
+        "publications": 19170,
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "Endpoint CAGR does not establish a monotonic trend.",
+      "claim_type": "growth",
+      "evidence_id": "E006",
+      "method": "CAGR = (last/first)^(1/year difference)-1.",
+      "selector": {},
+      "statement": "Compound annual publication growth over the observed non-zero endpoints is 17.57%.",
+      "unit": null,
+      "value": 17.57
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_output_series",
+      "evidence_id": "E007",
+      "method": "Whole-counted canonical works grouped by non-missing publication year; year-over-year change is the current count minus the preceding count.",
+      "selector": {},
+      "statement": "Annual publication counts are available for every observed year.",
+      "unit": null,
+      "value": [
+        {
+          "publications": 127,
+          "year": 1990,
+          "year_over_year_change": null
+        },
+        {
+          "publications": 176,
+          "year": 1991,
+          "year_over_year_change": 49
+        },
+        {
+          "publications": 189,
+          "year": 1992,
+          "year_over_year_change": 13
+        },
+        {
+          "publications": 276,
+          "year": 1993,
+          "year_over_year_change": 87
+        },
+        {
+          "publications": 241,
+          "year": 1994,
+          "year_over_year_change": -35
+        },
+        {
+          "publications": 286,
+          "year": 1995,
+          "year_over_year_change": 45
+        },
+        {
+          "publications": 399,
+          "year": 1996,
+          "year_over_year_change": 113
+        },
+        {
+          "publications": 406,
+          "year": 1997,
+          "year_over_year_change": 7
+        },
+        {
+          "publications": 405,
+          "year": 1998,
+          "year_over_year_change": -1
+        },
+        {
+          "publications": 494,
+          "year": 1999,
+          "year_over_year_change": 89
+        },
+        {
+          "publications": 681,
+          "year": 2000,
+          "year_over_year_change": 187
+        },
+        {
+          "publications": 751,
+          "year": 2001,
+          "year_over_year_change": 70
+        },
+        {
+          "publications": 824,
+          "year": 2002,
+          "year_over_year_change": 73
+        },
+        {
+          "publications": 1071,
+          "year": 2003,
+          "year_over_year_change": 247
+        },
+        {
+          "publications": 1109,
+          "year": 2004,
+          "year_over_year_change": 38
+        },
+        {
+          "publications": 1388,
+          "year": 2005,
+          "year_over_year_change": 279
+        },
+        {
+          "publications": 1794,
+          "year": 2006,
+          "year_over_year_change": 406
+        },
+        {
+          "publications": 2608,
+          "year": 2007,
+          "year_over_year_change": 814
+        },
+        {
+          "publications": 3662,
+          "year": 2008,
+          "year_over_year_change": 1054
+        },
+        {
+          "publications": 4690,
+          "year": 2009,
+          "year_over_year_change": 1028
+        },
+        {
+          "publications": 5701,
+          "year": 2010,
+          "year_over_year_change": 1011
+        },
+        {
+          "publications": 6546,
+          "year": 2011,
+          "year_over_year_change": 845
+        },
+        {
+          "publications": 7728,
+          "year": 2012,
+          "year_over_year_change": 1182
+        },
+        {
+          "publications": 8360,
+          "year": 2013,
+          "year_over_year_change": 632
+        },
+        {
+          "publications": 9288,
+          "year": 2014,
+          "year_over_year_change": 928
+        },
+        {
+          "publications": 9766,
+          "year": 2015,
+          "year_over_year_change": 478
+        },
+        {
+          "publications": 10447,
+          "year": 2016,
+          "year_over_year_change": 681
+        },
+        {
+          "publications": 10838,
+          "year": 2017,
+          "year_over_year_change": 391
+        },
+        {
+          "publications": 11695,
+          "year": 2018,
+          "year_over_year_change": 857
+        },
+        {
+          "publications": 13718,
+          "year": 2019,
+          "year_over_year_change": 2023
+        },
+        {
+          "publications": 16728,
+          "year": 2020,
+          "year_over_year_change": 3010
+        },
+        {
+          "publications": 19170,
+          "year": 2021,
+          "year_over_year_change": 2442
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": null,
+      "claim_type": "top_source",
+      "evidence_id": "E008",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Climatic Change ranks first with 2093 publications.",
+      "unit": null,
+      "value": {
+        "name": "Climatic Change",
+        "publications": 2093
+      }
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_source_ranking",
+      "evidence_id": "E009",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top source records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Climatic Change",
+          "publications": 2093
+        },
+        {
+          "name": "The Science of The Total Environment",
+          "publications": 1708
+        },
+        {
+          "name": "Sustainability",
+          "publications": 1545
+        },
+        {
+          "name": "Global Change Biology",
+          "publications": 1359
+        },
+        {
+          "name": "Zenodo (CERN European Organization for Nuclear Research)",
+          "publications": 1303
+        },
+        {
+          "name": "PLoS ONE",
+          "publications": 1201
+        },
+        {
+          "name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+          "publications": 1185
+        },
+        {
+          "name": "Water",
+          "publications": 1027
+        },
+        {
+          "name": "Journal of Cleaner Production",
+          "publications": 986
+        },
+        {
+          "name": "AgEcon Search (University of Minnesota, USA)",
+          "publications": 955
+        },
+        {
+          "name": "Environmental Research Letters",
+          "publications": 922
+        },
+        {
+          "name": "Journal of Hydrology",
+          "publications": 845
+        },
+        {
+          "name": "Scientific Reports",
+          "publications": 710
+        },
+        {
+          "name": "Nature Climate Change",
+          "publications": 704
+        },
+        {
+          "name": "Regional Environmental Change",
+          "publications": 609
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": null,
+      "claim_type": "top_author",
+      "evidence_id": "E010",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "AGB Poore ranks first with 5808 publications.",
+      "unit": null,
+      "value": {
+        "name": "AGB Poore",
+        "publications": 5808
+      }
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_author_ranking",
+      "evidence_id": "E011",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top author records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "AGB Poore",
+          "publications": 5808
+        },
+        {
+          "name": "Kristie L. Ebi",
+          "publications": 150
+        },
+        {
+          "name": "James D. Ford",
+          "publications": 138
+        },
+        {
+          "name": "Philippe Ciais",
+          "publications": 133
+        },
+        {
+          "name": "Richard S.J. Tol",
+          "publications": 127
+        },
+        {
+          "name": "Cynthia Rosenzweig",
+          "publications": 112
+        },
+        {
+          "name": "Patrick Willems",
+          "publications": 111
+        },
+        {
+          "name": "Robert J. Nicholls",
+          "publications": 110
+        },
+        {
+          "name": "Pete Smith",
+          "publications": 108
+        },
+        {
+          "name": "Alistair J. Hobday",
+          "publications": 94
+        },
+        {
+          "name": "Wilfried Thuiller",
+          "publications": 86
+        },
+        {
+          "name": "Detlef P. van Vuuren",
+          "publications": 85
+        },
+        {
+          "name": "Christoph Müller",
+          "publications": 84
+        },
+        {
+          "name": "Lalit Kumar",
+          "publications": 83
+        },
+        {
+          "name": "Frank Ewert",
+          "publications": 82
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": null,
+      "claim_type": "top_institution",
+      "evidence_id": "E012",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Chinese Academy of Sciences ranks first with 3468 publications.",
+      "unit": null,
+      "value": {
+        "name": "Chinese Academy of Sciences",
+        "publications": 3468
+      }
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_institution_ranking",
+      "evidence_id": "E013",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top institution records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Chinese Academy of Sciences",
+          "publications": 3468
+        },
+        {
+          "name": "Centre National de la Recherche Scientifique",
+          "publications": 2564
+        },
+        {
+          "name": "University of Chinese Academy of Sciences",
+          "publications": 1524
+        },
+        {
+          "name": "United States Geological Survey",
+          "publications": 1205
+        },
+        {
+          "name": "Wageningen University & Research",
+          "publications": 1162
+        },
+        {
+          "name": "University of Oxford",
+          "publications": 1067
+        },
+        {
+          "name": "Institute of Geographic Sciences and Natural Resources Research",
+          "publications": 991
+        },
+        {
+          "name": "The University of Queensland",
+          "publications": 949
+        },
+        {
+          "name": "Commonwealth Scientific and Industrial Research Organisation",
+          "publications": 925
+        },
+        {
+          "name": "University of British Columbia",
+          "publications": 925
+        },
+        {
+          "name": "Beijing Normal University",
+          "publications": 923
+        },
+        {
+          "name": "Australian National University",
+          "publications": 905
+        },
+        {
+          "name": "University of Washington",
+          "publications": 902
+        },
+        {
+          "name": "The University of Melbourne",
+          "publications": 885
+        },
+        {
+          "name": "Institut de Recherche pour le Développement",
+          "publications": 880
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/document_types.parquet",
+      "caveat": "Document-type labels inherit source classification practices.",
+      "claim_type": "document_type_distribution",
+      "evidence_id": "E014",
+      "method": "Whole-counted canonical works grouped by source-supplied document type.",
+      "selector": {},
+      "statement": "Document types were counted across the complete canonical corpus.",
+      "unit": null,
+      "value": {
+        "review_and_systematic_review_documents": 0,
+        "types": [
+          {
+            "document_type": "article",
+            "publications": 151562,
+            "share_percent": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent.",
+      "claim_type": "citation_summary",
+      "evidence_id": "E015",
+      "method": "Citation-count field supplied by the selected source at retrieval time.",
+      "selector": {},
+      "statement": "Mean citations are 49.56 and the median is 14.00.",
+      "unit": null,
+      "value": {
+        "mean": 49.56,
+        "median": 14.0
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "Recent works have had less time to accumulate citations.",
+      "claim_type": "zero_citation_share",
+      "evidence_id": "E016",
+      "method": "Count and percentage of canonical works with cited_by_count equal to zero.",
+      "selector": {},
+      "statement": "29384 works have zero source-reported citations, representing 19.39% of the corpus.",
+      "unit": null,
+      "value": {
+        "share_percent": 19.39,
+        "zero_cited": 29384
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent; papers have unequal citation windows.",
+      "claim_type": "citation_distribution_detail",
+      "evidence_id": "E017",
+      "method": "Descriptive statistics of the source-supplied cited-by count.",
+      "selector": {},
+      "statement": "Citation-distribution statistics include central tendency, upper quantiles, maximum, and zero-cited count.",
+      "unit": null,
+      "value": [
+        {
+          "metric": "mean",
+          "value": 49.5633536111
+        },
+        {
+          "metric": "median",
+          "value": 14.0
+        },
+        {
+          "metric": "p75",
+          "percentile": 75,
+          "value": 46.0
+        },
+        {
+          "metric": "p90",
+          "percentile": 90,
+          "value": 110.0
+        },
+        {
+          "metric": "p95",
+          "percentile": 95,
+          "value": 186.0
+        },
+        {
+          "metric": "p98",
+          "percentile": 98,
+          "value": 352.0
+        },
+        {
+          "metric": "maximum",
+          "value": 22581.0
+        },
+        {
+          "metric": "zero_cited",
+          "value": 29384.0
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_cited_documents.parquet",
+      "caveat": "Raw citation counts favor older publications and do not by themselves measure quality.",
+      "claim_type": "top_cited_documents",
+      "evidence_id": "E018",
+      "method": "Descending source-reported citation count, with publication year as tie-breaker.",
+      "selector": {},
+      "statement": "The most-cited included documents are retained with title, year, DOI, and source-reported citation count.",
+      "unit": null,
+      "value": [
+        {
+          "cited_by_count": 22581,
+          "doi": "10.1016/s0140",
+          "title": "Home visits: a strategy to improve newborn survival - Authors' reply",
+          "year": 2008
+        },
+        {
+          "cited_by_count": 11854,
+          "doi": "10.1126/science.1185383",
+          "title": "Food Security: The Challenge of Feeding 9 Billion People",
+          "year": 2010
+        },
+        {
+          "cited_by_count": 11212,
+          "doi": "10.1038/nature01286",
+          "title": "A globally coherent fingerprint of climate change impacts across natural systems",
+          "year": 2003
+        },
+        {
+          "cited_by_count": 9973,
+          "doi": "10.1038/416389a",
+          "title": "Ecological responses to recent climate change",
+          "year": 2002
+        },
+        {
+          "cited_by_count": 8487,
+          "doi": "10.1641/0006-3568(2001)051[0933:teotwa]2.0.co;2",
+          "title": "Terrestrial Ecoregions of the World: A New Map of Life on Earth",
+          "year": 2001
+        },
+        {
+          "cited_by_count": 8248,
+          "doi": "10.1126/science.1097396",
+          "title": "Soil Carbon Sequestration Impacts on Global Climate Change and Food Security",
+          "year": 2004
+        },
+        {
+          "cited_by_count": 7719,
+          "doi": "10.1016/j.foreco.2009.09.001",
+          "title": "A global overview of drought and heat-induced tree mortality reveals emerging climate change risks for forests",
+          "year": 2009
+        },
+        {
+          "cited_by_count": 7682,
+          "doi": "10.1038/nature02121",
+          "title": "Extinction risk from climate change",
+          "year": 2004
+        },
+        {
+          "cited_by_count": 6673,
+          "doi": "10.1038/nature08823",
+          "title": "The next generation of scenarios for climate change research and assessment",
+          "year": 2010
+        },
+        {
+          "cited_by_count": 6619,
+          "doi": "10.1016/j.gloenvcha.2016.05.009",
+          "title": "The Shared Socioeconomic Pathways and their energy, land use, and greenhouse gas emissions implications: An overview",
+          "year": 2016
+        },
+        {
+          "cited_by_count": 6549,
+          "doi": "10.1111/j.1461-0248.2005.00792.x",
+          "title": "Predicting species distribution: offering more than simple habitat models",
+          "year": 2005
+        },
+        {
+          "cited_by_count": 6544,
+          "doi": "10.1016/j.enbuild.2007.03.007",
+          "title": "A review on buildings energy consumption information",
+          "year": 2007
+        },
+        {
+          "cited_by_count": 6396,
+          "doi": "10.1016/j.tree.2010.01.007",
+          "title": "Global pollinator declines: trends, impacts and drivers",
+          "year": 2010
+        },
+        {
+          "cited_by_count": 6302,
+          "doi": "10.1126/science.1155121",
+          "title": "Forests and Climate Change: Forcings, Feedbacks, and the Climate Benefits of Forests",
+          "year": 2008
+        },
+        {
+          "cited_by_count": 5716,
+          "doi": "10.1016/j.earscirev.2010.02.004",
+          "title": "Investigating soil moisture–climate interactions in a changing climate: A review",
+          "year": 2010
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/bradford_sources.parquet",
+      "caveat": "Records without a source name are excluded from Bradford zoning.",
+      "claim_type": "bradford_zone_distribution",
+      "evidence_id": "E019",
+      "method": "Sources ranked by output and divided by cumulative document thirds.",
+      "selector": {},
+      "statement": "Bradford zones summarize source concentration among records with known source names.",
+      "unit": null,
+      "value": {
+        "rounded_document_range": {
+          "lower": 46100,
+          "rounding_unit": 50,
+          "upper": 46400
+        },
+        "zones": [
+          {
+            "documents": 46135.0,
+            "sources": 114,
+            "zone": 1
+          },
+          {
+            "documents": 46367.0,
+            "sources": 928,
+            "zone": 2
+          },
+          {
+            "documents": 46273.0,
+            "sources": 15883,
+            "zone": 3
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/keyword_trends.parquet",
+      "caveat": "Keyword frequencies depend on source metadata, synonym normalization, and the incomplete final year.",
+      "claim_type": "keyword_temporal_dynamics",
+      "evidence_id": "E020",
+      "method": "Unique works per normalized keyword and publication year.",
+      "selector": {},
+      "statement": "Year-by-year document counts are available for the globally most frequent keywords.",
+      "unit": null,
+      "value": [
+        {
+          "documents": 87,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1990
+        },
+        {
+          "documents": 134,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1991
+        },
+        {
+          "documents": 129,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1992
+        },
+        {
+          "documents": 198,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1993
+        },
+        {
+          "documents": 162,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1994
+        },
+        {
+          "documents": 213,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1995
+        },
+        {
+          "documents": 288,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1996
+        },
+        {
+          "documents": 308,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1997
+        },
+        {
+          "documents": 295,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1998
+        },
+        {
+          "documents": 351,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 1999
+        },
+        {
+          "documents": 473,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2000
+        },
+        {
+          "documents": 487,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2001
+        },
+        {
+          "documents": 571,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2002
+        },
+        {
+          "documents": 698,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2003
+        },
+        {
+          "documents": 713,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2004
+        },
+        {
+          "documents": 931,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2005
+        },
+        {
+          "documents": 1222,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2006
+        },
+        {
+          "documents": 1767,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2007
+        },
+        {
+          "documents": 2354,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2008
+        },
+        {
+          "documents": 3088,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2009
+        },
+        {
+          "documents": 3779,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2010
+        },
+        {
+          "documents": 4312,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2011
+        },
+        {
+          "documents": 5050,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2012
+        },
+        {
+          "documents": 5487,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2013
+        },
+        {
+          "documents": 5967,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2014
+        },
+        {
+          "documents": 6146,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2015
+        },
+        {
+          "documents": 6338,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2016
+        },
+        {
+          "documents": 6426,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2017
+        },
+        {
+          "documents": 6748,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2018
+        },
+        {
+          "documents": 7725,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2019
+        },
+        {
+          "documents": 9056,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2020
+        },
+        {
+          "documents": 10469,
+          "global_documents": 91972,
+          "keyword": "Climate change",
+          "year": 2021
+        },
+        {
+          "documents": 70,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1990
+        },
+        {
+          "documents": 113,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1991
+        },
+        {
+          "documents": 116,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1992
+        },
+        {
+          "documents": 170,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1993
+        },
+        {
+          "documents": 146,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1994
+        },
+        {
+          "documents": 173,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1995
+        },
+        {
+          "documents": 248,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1996
+        },
+        {
+          "documents": 250,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1997
+        },
+        {
+          "documents": 230,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1998
+        },
+        {
+          "documents": 293,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 1999
+        },
+        {
+          "documents": 384,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2000
+        },
+        {
+          "documents": 422,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2001
+        },
+        {
+          "documents": 472,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2002
+        },
+        {
+          "documents": 609,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2003
+        },
+        {
+          "documents": 657,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2004
+        },
+        {
+          "documents": 856,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2005
+        },
+        {
+          "documents": 1090,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2006
+        },
+        {
+          "documents": 1513,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2007
+        },
+        {
+          "documents": 2126,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2008
+        },
+        {
+          "documents": 2798,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2009
+        },
+        {
+          "documents": 3430,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2010
+        },
+        {
+          "documents": 4026,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2011
+        },
+        {
+          "documents": 4831,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2012
+        },
+        {
+          "documents": 5181,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2013
+        },
+        {
+          "documents": 5786,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2014
+        },
+        {
+          "documents": 6117,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2015
+        },
+        {
+          "documents": 6375,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2016
+        },
+        {
+          "documents": 6418,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2017
+        },
+        {
+          "documents": 7030,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2018
+        },
+        {
+          "documents": 8230,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2019
+        },
+        {
+          "documents": 9645,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2020
+        },
+        {
+          "documents": 11142,
+          "global_documents": 90947,
+          "keyword": "Geography",
+          "year": 2021
+        },
+        {
+          "documents": 84,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1990
+        },
+        {
+          "documents": 132,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1991
+        },
+        {
+          "documents": 129,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1992
+        },
+        {
+          "documents": 207,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1993
+        },
+        {
+          "documents": 154,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1994
+        },
+        {
+          "documents": 197,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1995
+        },
+        {
+          "documents": 271,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1996
+        },
+        {
+          "documents": 292,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1997
+        },
+        {
+          "documents": 257,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1998
+        },
+        {
+          "documents": 318,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 1999
+        },
+        {
+          "documents": 438,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 2000
+        },
+        {
+          "documents": 464,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 2001
+        },
+        {
+          "documents": 516,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 2002
+        },
+        {
+          "documents": 671,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 2003
+        },
+        {
+          "documents": 727,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 2004
+        },
+        {
+          "documents": 884,
+          "global_documents": 89374,
+          "keyword": "Environmental science",
+          "year": 2005
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/three_field.parquet",
+      "caveat": "The map is a filtered descriptive view, not a causal pathway.",
+      "claim_type": "three_field_relations",
+      "evidence_id": "E021",
+      "method": "Whole-counted links among leading authors, sources, and keywords.",
+      "selector": {},
+      "statement": "Leading author–source–keyword combinations are retained for relational interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "author": "AGB Poore",
+          "documents": 721,
+          "keyword": "Economics",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 622,
+          "keyword": "Geography",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 590,
+          "keyword": "Climate change",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 489,
+          "keyword": "Agriculture",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 487,
+          "keyword": "Natural resource economics",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 432,
+          "keyword": "Ecology",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 424,
+          "keyword": "Environmental science",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 390,
+          "keyword": "Business",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 205,
+          "keyword": "Environmental resource management",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 164,
+          "keyword": "Geography",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 163,
+          "keyword": "Climate change",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 160,
+          "keyword": "Political science",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 150,
+          "keyword": "Environmental science",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 128,
+          "keyword": "Biology",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 100,
+          "keyword": "Engineering",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 100,
+          "keyword": "Ecology",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 95,
+          "keyword": "Environmental planning",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 95,
+          "keyword": "Economics",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 91,
+          "keyword": "Computer science",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 77,
+          "keyword": "Business",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 75,
+          "keyword": "Environmental resource management",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 70,
+          "keyword": "Geology",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 67,
+          "keyword": "Geology",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 58,
+          "keyword": "Population",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 56,
+          "keyword": "Agriculture",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 55,
+          "keyword": "Meteorology",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 55,
+          "keyword": "Environmental planning",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 54,
+          "keyword": "Natural resource economics",
+          "source": null
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 53,
+          "keyword": "Climatology",
+          "source": "AgEcon Search (University of Minnesota, USA)"
+        },
+        {
+          "author": "AGB Poore",
+          "documents": 53,
+          "keyword": "Engineering",
+          "source": null
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/network_bibliographic_coupling_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "bibliographic_coupling_structure",
+      "evidence_id": "E022",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The bibliographic coupling candidate network contains 72 nodes and 197 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 8,
+        "edges": 197,
+        "network_parameters": {
+          "candidate_edges": 4663,
+          "candidate_nodes_with_links": 407,
+          "candidate_pool": 407,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 197,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 407,
+          "full_candidate_edge_count": 4663,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.12257001238860948,
+            "mean_edge_length": 0.40977510247803145,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 2667.0,
+            "weighted_edge_length": 0.004770085559888795,
+            "within_between_distance_ratio": 0.3243705723493971
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 10,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          }
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Investigating soil moisture–climate interactions in a changing climate: A review",
+            "occurrences": 397,
+            "weighted_degree": 545.0
+          },
+          {
+            "cluster": 3,
+            "label": "Dryland climate change: Recent progress and challenges",
+            "occurrences": 514,
+            "weighted_degree": 383.0
+          },
+          {
+            "cluster": 1,
+            "label": "The broad footprint of climate change from genes to biomes to people",
+            "occurrences": 302,
+            "weighted_degree": 371.0
+          },
+          {
+            "cluster": 2,
+            "label": "Beneath the surface of global change: Impacts of climate change on groundwater",
+            "occurrences": 356,
+            "weighted_degree": 350.0
+          },
+          {
+            "cluster": 8,
+            "label": "Atmospheric composition change – global and regional air quality",
+            "occurrences": 1059,
+            "weighted_degree": 290.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_citation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "citation_structure",
+      "evidence_id": "E023",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The citation candidate network contains 60 nodes and 55 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 55,
+        "network_parameters": {
+          "candidate_edges": 123,
+          "candidate_nodes_with_links": 133,
+          "candidate_pool": 133,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 55,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 123,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.1404718084790347,
+            "mean_edge_length": 0.35541510873339166,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 430.0,
+            "weighted_edge_length": 0.0002683013306062376,
+            "within_between_distance_ratio": 0.40810917237252964
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 456,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 60,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "Climate Change 2007: Impacts, Adaptation and Vulnerability. Contribution of Working Group II to the Fourth Assessment Report of the Intergovernmental Panel on Climate Change",
+            "occurrences": 2795,
+            "weighted_degree": 51.0
+          },
+          {
+            "cluster": 6,
+            "label": "ENSEMBLES: Climate Change and its Impacts - Summary of research and results from the ENSEMBLES project",
+            "occurrences": 1025,
+            "weighted_degree": 11.0
+          },
+          {
+            "cluster": 4,
+            "label": "The marginal impact of CO2 from PAGE2002: An integrated assessment model incorporating the IPCC's five reasons for concern",
+            "occurrences": 507,
+            "weighted_degree": 9.0
+          },
+          {
+            "cluster": 7,
+            "label": "Climate change 2007. Synthesis report. Contribution of Working Groups I, II and III to the fourth assessment report",
+            "occurrences": 1010,
+            "weighted_degree": 7.0
+          },
+          {
+            "cluster": 2,
+            "label": "Climate change 1995: the science of climate change. Contribution of Working Group I to the Second Assessment Report of the Intergovernmental Panel on Climate Change",
+            "occurrences": 589,
+            "weighted_degree": 6.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_coauthorship_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "coauthorship_structure",
+      "evidence_id": "E024",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The coauthorship candidate network contains 60 nodes and 149 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 149,
+        "network_parameters": {
+          "candidate_edges": 4552,
+          "candidate_nodes_with_links": 431,
+          "candidate_pool": 431,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 149,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 4552,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.06482740086371781,
+            "mean_edge_length": 0.7750692327886975,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1051.0,
+            "weighted_edge_length": 0.02607393922428293,
+            "within_between_distance_ratio": 0.0
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 30,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 60,
+        "top_nodes": [
+          {
+            "cluster": 6,
+            "label": "AGB Poore",
+            "occurrences": 5808,
+            "weighted_degree": 860.0
+          },
+          {
+            "cluster": 1,
+            "label": "Christoph Müller",
+            "occurrences": 84,
+            "weighted_degree": 502.0
+          },
+          {
+            "cluster": 1,
+            "label": "Frank Ewert",
+            "occurrences": 82,
+            "weighted_degree": 383.0
+          },
+          {
+            "cluster": 3,
+            "label": "Philippe Ciais",
+            "occurrences": 133,
+            "weighted_degree": 324.0
+          },
+          {
+            "cluster": 1,
+            "label": "Senthold Asseng",
+            "occurrences": 79,
+            "weighted_degree": 317.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_cocitation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "cocitation_structure",
+      "evidence_id": "E025",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The cocitation candidate network contains 72 nodes and 192 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 5,
+        "edges": 192,
+        "network_parameters": {
+          "candidate_edges": 65280,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 65280,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.09177025433689148,
+            "mean_edge_length": 0.2224349368660272,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 2351.0,
+            "weighted_edge_length": 0.0020150137745772877,
+            "within_between_distance_ratio": 0.2621116457300428
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 261,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "openalex:W4285719527",
+            "occurrences": 19138,
+            "weighted_degree": 56343.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2939474406",
+            "occurrences": 3896,
+            "weighted_degree": 20747.0
+          },
+          {
+            "cluster": 3,
+            "label": "openalex:W2126975094",
+            "occurrences": 2815,
+            "weighted_degree": 16654.0
+          },
+          {
+            "cluster": 1,
+            "label": "openalex:W2582743722",
+            "occurrences": 4592,
+            "weighted_degree": 16267.0
+          },
+          {
+            "cluster": 1,
+            "label": "openalex:W2133501143",
+            "occurrences": 2187,
+            "weighted_degree": 15327.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_institution_collaboration_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "institution_collaboration_structure",
+      "evidence_id": "E026",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The institution collaboration candidate network contains 72 nodes and 192 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 7,
+        "edges": 192,
+        "network_parameters": {
+          "candidate_edges": 47564,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 47564,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.10563544343690995,
+            "mean_edge_length": 0.25469007131828164,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 139.0,
+            "weighted_edge_length": 0.002451613426959922,
+            "within_between_distance_ratio": 0.30149775481345314
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 145,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 5,
+            "label": "Centre National de la Recherche Scientifique",
+            "occurrences": 2564,
+            "weighted_degree": 10514.0
+          },
+          {
+            "cluster": 6,
+            "label": "Chinese Academy of Sciences",
+            "occurrences": 3468,
+            "weighted_degree": 8377.0
+          },
+          {
+            "cluster": 5,
+            "label": "Institut de Recherche pour le Développement",
+            "occurrences": 880,
+            "weighted_degree": 4052.0
+          },
+          {
+            "cluster": 6,
+            "label": "University of Chinese Academy of Sciences",
+            "occurrences": 1524,
+            "weighted_degree": 3736.0
+          },
+          {
+            "cluster": 1,
+            "label": "Potsdam Institute for Climate Impact Research",
+            "occurrences": 820,
+            "weighted_degree": 3307.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_keyword_cooccurrence_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "keyword_cooccurrence_structure",
+      "evidence_id": "E027",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The keyword cooccurrence candidate network contains 72 nodes and 196 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 7,
+        "edges": 196,
+        "network_parameters": {
+          "candidate_edges": 65541,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 196,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 65541,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.12121970084927228,
+            "mean_edge_length": 0.3075785512468182,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 3263.0,
+            "weighted_edge_length": 0.0015343998797395248,
+            "within_between_distance_ratio": 0.34768791135730615
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 513,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "Climate change",
+            "occurrences": 91972,
+            "weighted_degree": 1002566.0
+          },
+          {
+            "cluster": 2,
+            "label": "Geography",
+            "occurrences": 90947,
+            "weighted_degree": 992398.0
+          },
+          {
+            "cluster": 2,
+            "label": "Environmental science",
+            "occurrences": 89374,
+            "weighted_degree": 968481.0
+          },
+          {
+            "cluster": 3,
+            "label": "Ecology",
+            "occurrences": 80138,
+            "weighted_degree": 854889.0
+          },
+          {
+            "cluster": 1,
+            "label": "Economics",
+            "occurrences": 40653,
+            "weighted_degree": 464987.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E028",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Food Security: The Challenge of Feeding 9 Billion People",
+      "unit": null,
+      "value": {
+        "abstract": "Continuing population and consumption growth will mean that the global demand for food will increase for at least another 40 years. Growing competition for land, water, and energy, in addition to the overexploitation of fisheries, will affect our ability to produce food, as will the urgent requirement to reduce the impact of the food system on the environment. The effects of climate change are a further threat. But the world can produce more food and can ensure that it is used more efficiently and equitably. A multifaceted and linked global strategy is needed to ensure sustainable and equitable food security, different components of which are explored here.",
+        "authors": [
+          "AGB Poore",
+          "J. R. Beddington",
+          "I. R. Crute",
+          "Lawrence Haddad",
+          "David P. Lawrence",
+          "James Muir",
+          "Jules Pretty"
+        ],
+        "doi": "10.1126/science.1185383",
+        "source": "Science",
+        "title": "Food Security: The Challenge of Feeding 9 Billion People",
+        "work_id": "doi:10.1126/science.1185383",
+        "year": 2010
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E029",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Terrestrial Ecoregions of the World: A New Map of Life on Earth",
+      "unit": null,
+      "value": {
+        "abstract": "The tapestry of life on Earth is unraveling as humans increasingly dominate and transform natural ecosystems. Scarce resources and dwindling time force conservationists to target their actions to stem the loss of biodiversity—a pragmatic approach, given the highly uneven distribution of species and threats (Soulé and Kohm 1989, Olson and Dinerstein 1998, Mace et al. 2000, Myers et al. 2000). Unfortunately, the ability to focus strategically is hindered by the absence of a global biodiversity map with sufficient biogeographic resolution to accurately reflect the complex distribution of the Earth's natural communities. Without such a map, many distinctive biotas remain unrecognized. In this article, we address the disparity in resolution between maps currently available for global conservation planning and the reality of the Earth's intricate patterns of life. We have developed a detailed map of the terrestrial ecoregions of the world that is better suited to identify areas of outstanding biodiversity and representative communities (Noss 1992). We define ecoregions as relatively large units of land containing a distinct assemblage of natural communities and species, with boundaries that approximate the original extent of natural communities prior to major land-use change. Our ecoregion map offers features that enhance its utility for conservation planning at global and regional scales: comprehensive coverage, a classification framework that builds on existing biogeographic knowledge, and a detailed level of biogeographic resolution. Ecoregions reflect the distributions of a broad range of fauna and flora across the entire planet, from the vast Sahara Desert to the diminutive Clipperton Island (eastern Pacific Ocean). They are classified within a system familiar to all biologists—biogeographic realms and biomes. Ecoregions, representing distinct biotas (Dasmann 1973, 1974, Udvardy 1975), are nested within the biomes and realms and, together, these provide a framework for comparisons among units and the identification of representative habitats and species assemblages. Although our ecoregions are intended primarily as units for conservation action, they are built on the foundations of classical biogeography and reflect extensive collaboration with over 1000 biogeographers, taxonomists, conservation biologists, and ecologists from around the world. Consequently, ecoregions are likely to reflect the distribution of species and communities more accurately than do units based on global and regional models derived from gross biophysical features, such as rainfall and temperature (Holdridge 1967, Walter and Box 1976, Schulz 1995, Bailey 1998), vegetation structure (UNESCO 1969, deLaubenfels 1975, Schmidthüsen 1976), or spectral signatures from remote-sensing data (Defries et al. 1995, Loveland and Belward 1997). None of these other approaches emphasizes the importance of endemic genera and families (higher taxa), distinct assemblages of species, or the imprint of geological history, such as the strong influence of past glaciations or Pleistocene land bridges, on the distribution of plants and animals. Existing maps of global biodiversity have been ineffective planning tools because they divide the Earth into extremely coarse biodiversity units. These units are typically well beyond the size of landscapes tractable for designing networks of conservation areas, the largest of protected areas, or the 50,000 km2 threshold for restricted-range species (Stattersfield et al. 1998) that are of particular concern (Stuart Pimm [Center for Environmental Research and Conservation, Columbia University, NY], personal communication, 2000). The average size of our ecoregions is roughly 150,000 km2 (median 56,300 km2), whereas the biotic provinces of Udvardy (1975) have an approximate mean of 740,000 km2 (median 306,000 km2) and the biodiversity hotspots of Myers et al. (2000), which represent threatened regions with high concentrations of endemic species, have an approximate mean of 787,760 km2 (median 324,000 km2). We subdivided the terrestrial world into 14 biomes and eight biogeographic realms (Figure 1). Nested within these are 867 ecoregions (Figure 2). This is roughly a fourfold increase in resolution over that of the 198 biotic provinces of Dasmann (1974) and the 193 units of Udvardy (1975). The increased resolution is most apparent in the tropics (between the Tropics of Cancer and Capricorn) where Dasmann (1974) and Udvardy (1975) identify 115 and 117 units, respectively, compared with 463 found in the ecoregion map. Biodiversity assessments that employ large biotic provinces or hotspots often fail to discern smaller but highly distinctive areas, which may result in these areas receiving insufficient conservation attention. The island of New Guinea is illustrative. Dasmann and Udvardy treat the island as a single unit, whereas the new terrestrial map distinguishes 12 ecoregions: four lowland and four montane broadleaf forests, one alpine scrub ecoregion along the central cordillera, a mangrove forest, a freshwater swamp forest, and a savanna–grassland, all with distinct biotas and ecological conditions. We began by accepting the biogeographic realms of Pielou (1979) and Udvardy (1975) and modifying the biome systems of Dinerstein et al. (1995) and Ricketts et al. (1999),(Figure 1). We then consulted existing global maps of floristic or zoogeographic provinces (e.g., Rübel 1930, Gleason and Cronquist 1964, Good 1964), global and regional maps of units based on the distribution of selected groups of plants and animals (e.g., Hagmeier 1966), the world's biotic province maps (Dasmann 1973, 1974, Udvardy 1975), and global maps of broad vegetation types (e.g., UNESCO 1969, deLaubenfels 1975, Schmidthüsen 1976). These were useful for evaluating the extent of realms and biomes, the first two tiers in our hierarchical classification. We then identified published regional classification systems to be used as a baseline for ecoregion boundaries. Data and consultations from regional experts were also important for final ecoregion delineations. The use of widely recognized biogeographic maps as a basis for ecoregions enhances the utility of the map as a planning tool in different regions. For example, White's (1983) phytogeographic regions serve as the basis for the ecoregions of the Afrotropics. The Australian ecoregions are derived from Thackway and Cresswell's (1995) biogeographic regionalization. Nearctic ecoregions are adapted from the ecoregion systems of Omernik (1995), Gallant et al. (1995), Wiken et al. (1989), and Rzedowski (1978). A more diverse set of sources was used for the Neotropics, including habitat classifications for Brazil from the Instituto Brasilero de Geografia Estatística (IBGE 1993), the vegetation maps of Huber and Alarcon (1988) and Huber et al. (1995) for Venezuela and Guyana, and Holdridge's (1977) life zones for Central America. The western Palearctic ecoregions (except Africa) were developed in concert with the DMEER (2000) project. The ecoregions of Russia are adapted from Kurnaev (1990) and Isachenko and colleagues (1988), Japan from Miyawaki (1975), China from the systems developed by the Chinese Vegetation Map Compilation Committee (1979) and the Changchun Institute of Geography and Chinese Academy of Sciences (1990), and Southwest Asia from Zohary (1973). The major divisions for Indo-Malayan ecoregions are based on the MacKinnon (1997) units that build upon Dasmann's and Udvardy's biotic provinces. A key to the terrestrial ecoregions of the world map (Figure 2), the sources for ecoregions, technical descriptions, and digital data are available at the Web site www.worldwildlife.org/science. Most existing systems required that units be aggregated or divided, or that boundaries be modified, to achieve three goals: (1) match recognized biogeographic divisions inadequately reflected in that system, (2) achieve a similar level of biogeographic resolution of units, and (3) match units and boundaries in adjacent systems, when necessary. Where widely accepted biogeographic maps were unavailable, we relied first on landforms and second on vegetation to inform the biotic divisions. For example, montane and lowland habitats support distinct biotic communities and dynamics. These were separated where they occurred over extensive areas. Detailed vegetation maps were then consulted. Vegetation is an important proxy for both plants and invertebrates, which together constitute the vast majority of species. Most invertebrates, and to some extent vertebrates, are associated with different plant communities, particularly where ecoclimatic differences are strong (e.g., tropical wet forest versus tropical dry forest). The appropriate delineation of ecoregions was obvious in many cases. The sand pine scrubs of central Florida, for example, support many endemic species and higher taxa, and one can confidently discern the distinctiveness of its biota as well as its geographic extent. Other ecoregions required closer scrutiny to discern the influence of historic events on present-day distributions. For example, the effects of changes in sea level and land bridges in the Philippines archipelago during the Pleistocene have resulted in several island ecoregions in close proximity harboring many unique taxa (Heaney 1986, 1991). Delineation of ecoregions varied slightly in boreal and polar habitats, where species assemblages are relatively homogeneous across large regions. Thus, dynamics and processes were emphasized, such as major variations in climate, fire disturbance regimes, and large vertebrate migrations (Ricketts et al. 1999). Three caveats are appropriate for all biogeographic mapping approaches. First, no single biogeographic framework is optimal for all taxa. Ecoregions reflect the best compromise for as many taxa as possible. Second, ecoregion boundaries rarely form abrupt edges; rather, ecotones and mosaic habitats bound them. Third, most ecoregions contain habitats that differ from their assigned biome. For example, rainforest ecoregions in Amazonia often contain small edaphic savannas. More detailed biogeographic analyses should map the less dominant habitat types that occur within the larger ecoregions, and ecoregion conservation strategies should address their requirements. How can a map of the world's ecoregions contribute to conserving biodiversity? Our ecoregion map has already been used as a biogeographic framework to highlight those areas of the world that are most distinctive or have high representation value and are therefore worthy of greater attention (Olson and Dinerstein 1998, Ricketts et al. 1999, Wikramanayake et al. 2001). Ecoregions were ranked by the distinctiveness of their biodiversity features—species endemism, the rarity of higher taxa, species richness, unusual ecological or evolutionary phenomena, and global rarity of their habitat type (e.g., Mediterranean-climate woodlands and scrub and temperate rainforests). Ecoregions can also be ranked by threats to biodiversity, the status of their natural habitats and species, and degree of protection (Dinerstein et al. 1995, Olson and Dinerstein 1998, Ricketts et al. 1999, Wikramanayake et al. 2001). Using this framework, biologists can examine one of the most interesting biological problems: the concordance and mismatches in patterns of richness and endemism for indicator taxa, often birds and mammals, used in conservation priority setting (Stattersfield et al. 1998, Fonseca et al. 2000, Mace et al. 2000). As an illustration, patterns of richness and endemism by ecoregion for the world's 4,600++ terrestrial mammal species reveal some major differences. The three richest mammal assemblages are in the northern Indochina subtropical forests, the southwestern Amazon moist forests, and the central Zambezian miombo woodlands (Figure 3), whereas the ecoregions with the highest number of endemic mammals are the Central Range montane forests of New Guinea, the Albertine Rift montane forests of Central Africa, and the Sulawesi montane forests (Figure 4). Similar analyses for birds, herpetofauna, and vascular plants are under way, to be incorporated into a database that can be continually improved as new data are acquired. This ecoregion–species database will complement emerging grid-based species datasets by providing insights into the biogeographic relationship among cells (Brooks et al. 2001). The ecoregion map complements global priority-setting analyses, such as Global 200 (Olson and Dinerstein 1998) and Hotspots (Myers et al. 2000), by providing an even finer level of resolution to assess biodiversity features. For example, the 25 terrestrial hotspots identified by Myers et al. (2000) amalgamate 414 of the 867 ecoregions of the world, and the 237 units of Global 200 contain 402 terrestrial ecoregions. On our map, the Indo–Burma hotspot (Mittermeier et al. 1999, Myers et al. 2000) covers 37 terrestrial ecoregions and Global 200's eastern Himalayan forests (Olson and Dinerstein 1998) encompass four terrestrial ecoregions. The rich mosaic of the map's ecoregions calls attention to the importance of global biodiversity, including those ecoregions that lie outside the species-rich tropics. New ways of looking at biodiversity loss and global threats—from climate change to oil exploration, mining, road development, and logging—are facilitated by this detailed map of ecoregions. Currently, a consortium of conservation organizations, museums, and herbaria are using this base map to frame discussions with logging companies and wood product retailers about reducing the loss of forest biodiversity. It is also being used as a strategic tool to determine conservation investments for the World Bank, the US Agency for International Development, the World Wildlife Fund, the World Resources Institute, The Nature Conservancy, and several foundations (Dinerstein et al. 1995, Roca et al. 1997, Olson and Dinerstein 1998). Conservation strategies that consider biogeographic units at the scale of ecoregions are ideal for protecting a full range of representative areas, conserving special elements, and ensuring the persistence of populations and ecological processes, particularly those that require the largest areas or are most sensitive to anthropogenic alterations (Noss et al. 1999, Soulé and Terborgh 1999, Groves et al. 2000, Margules and Pressey 2000). Some of the most promising tools for designing networks of conservation areas—gap analysis, equal-area grid analyses, complementarity analyses, and other reserve selection algorithms (Kiester et al. 1996, Margules and Pressey 2000, Williams et al. 1997, 2000)—will be more robust if conducted within the context of biologically defined units such as ecoregions, as the distribution of species and communities rarely coincides with political units. An ecoregion perspective can also help identify whether conservation areas are redundant or complementary across political boundaries. Ecoregions approximate the dynamic arena within which ecological processes most strongly interact (Orians 1993). This critical component of the ecoregion concept allows us to expand the scope of factors considered in conservation planning to include ecological phenomena as well as distributions of species. Preserving the migrations in East Africa, large predator–prey interactions in the South Asian jungles (Joshi et al. 2001), or sufficient forest cover in the Amazon Basin to maintain rainfall patterns requires conservation efforts across entire ecoregions. Fortunately, conducting conservation assessments within the framework of larger biogeographic units is an approach that is gaining support in all of the major international conservation organizations and in many government agencies (Groves et al. 2000, Johnson et al. 1999, Mittermeier et al. 1999, Ricketts et al. 1999). Ecoregion-level strategies are receiving increased funding from major conservation donors. This growing interest offers encouragement that ecoregion maps and analyses can heighten awareness about the urgency of biodiversity loss and play an important role in conserving the extraordinary variety of life on Earth. We greatly appreciate the thousand-plus regional experts who provided invaluable knowledge and assistance in the development of this map. We appreciate the support of the World Bank; the Commission for Environmental Cooperation; Comisión Nacional Para el Conocimiento y Uso de la Biodiversidad; Instituto Nacional de Estatística, Geografia e Informática; the US Agency for International Development; the Digital Map of European Ecological Regions working group; the European Union; the Fitzpatrick Institute; the Biodiversity Support Program; the World Resources Institute; The Nature Conservancy; and the World Wildlife Fund Network. We thank J. Leape, D. Wood, J. Martin-Jones, G. Hemley, A. Carroll, R. Sayre, J. Soberón, E. Iñigo, K. Redford, J. Robinson, U. Bohn, O. Ostermann, P. Regato, R. Thackway, M. McKnight, M. Taye, and T. Green for their support and expertise. We thank A. Balmford, S. Pimm, G. Orians, L. Farley, S. O'Connor, and S. Osofsky for reviewing earlier drafts of this paper. We would also like to thank the National Geographic Society, in collaboration with World Wildlife Fund, which has provided 10 copies of the ecoregion map and teacher's guides to all public and private schools in the United States to promote biogeographic literacy and a better understanding of global biodiversity. We are indebted to all of the individuals who helped develop the World Wildlife Fund//National Geographic Society//Environmental Systems Research Institute, Inc., educational Web site that uses this map to present patterns of biodiversity from around the world (www.worldwildlife.org/wildworld). The ecoregions are categorized within 14 biomes and eight biogeographic realms to facilitate representation analyses The map of terrestrial ecoregions of the world recognizes 867 distinct units, roughly a fourfold increase in biogeographic discrimination over that of the 193 units of Udvardy (1975). Maps of freshwater and marine ecoregions are similarly needed for conservation planning The relative richness of terrestrial mammal species by ecoregion is depicted. Warmer colors denote ecoregions containing richer assemblages The level of species endemism for terrestrial mammals shows different patterns than that of richness. Warmer colors denote ecoregions containing more endemic species",
+        "authors": [
+          "David M. Olson",
+          "Eric Dinerstein",
+          "Eric Wikramanayake",
+          "Neil Burgess",
+          "George V. N. Powell",
+          "Emma C. Underwood",
+          "Jennifer A. D'amico",
+          "Illanga Itoua"
+        ],
+        "doi": "10.1641/0006-3568(2001)051[0933:teotwa]2.0.co;2",
+        "source": "BioScience",
+        "title": "Terrestrial Ecoregions of the World: A New Map of Life on Earth",
+        "work_id": "doi:10.1641/0006-3568(2001)051[0933:teotwa]2.0.co;2",
+        "year": 2001
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E030",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Soil Carbon Sequestration Impacts on Global Climate Change and Food Security",
+      "unit": null,
+      "value": {
+        "abstract": "The carbon sink capacity of the world's agricultural and degraded soils is 50 to 66% of the historic carbon loss of 42 to 78 gigatons of carbon. The rate of soil organic carbon sequestration with adoption of recommended technologies depends on soil texture and structure, rainfall, temperature, farming system, and soil management. Strategies to increase the soil carbon pool include soil restoration and woodland regeneration, no-till farming, cover crops, nutrient management, manuring and sludge application, improved grazing, water conservation and harvesting, efficient irrigation, agroforestry practices, and growing energy crops on spare lands. An increase of 1 ton of soil carbon pool of degraded cropland soils may increase crop yield by 20 to 40 kilograms per hectare (kg/ha) for wheat, 10 to 20 kg/ha for maize, and 0.5 to 1 kg/ha for cowpeas. As well as enhancing food security, carbon sequestration has the potential to offset fossil fuel emissions by 0.4 to 1.2 gigatons of carbon per year, or 5 to 15% of the global fossil-fuel emissions.",
+        "authors": [
+          "Rattan Lal"
+        ],
+        "doi": "10.1126/science.1097396",
+        "source": "Science",
+        "title": "Soil Carbon Sequestration Impacts on Global Climate Change and Food Security",
+        "work_id": "doi:10.1126/science.1097396",
+        "year": 2004
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E031",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The Shared Socioeconomic Pathways and their energy, land use, and greenhouse gas emissions implications: An overview",
+      "unit": null,
+      "value": {
+        "abstract": "This paper presents the overview of the Shared Socioeconomic Pathways (SSPs) and their energy, land use, and emissions implications. The SSPs are part of a new scenario framework, established by the climate change research community in order to facilitate the integrated analysis of future climate impacts, vulnerabilities, adaptation, and mitigation. The pathways were developed over the last years as a joint community effort and describe plausible major global developments that together would lead in the future to different challenges for mitigation and adaptation to climate change. The SSPs are based on five narratives describing alternative socio-economic developments, including sustainable development, regional rivalry, inequality, fossil-fueled development, and middle-of-the-road development. The long-term demographic and economic projections of the SSPs depict a wide uncertainty range consistent with the scenario literature. A multi-model approach was used for the elaboration of the energy, land-use and the emissions trajectories of SSP-based scenarios. The baseline scenarios lead to global energy consumption of 400–1200 EJ in 2100, and feature vastly different land-use dynamics, ranging from a possible reduction in cropland area up to a massive expansion by more than 700 million hectares by 2100. The associated annual CO2 emissions of the baseline scenarios range from about 25 GtCO2 to more than 120 GtCO2 per year by 2100. With respect to mitigation, we find that associated costs strongly depend on three factors: (1) the policy assumptions, (2) the socio-economic narrative, and (3) the stringency of the target. The carbon price for reaching the target of 2.6 W/m2 that is consistent with a temperature change limit of 2 °C, differs in our analysis thus by about a factor of three across the SSP marker scenarios. Moreover, many models could not reach this target from the SSPs with high mitigation challenges. While the SSPs were designed to represent different mitigation and adaptation challenges, the resulting narratives and quantifications span a wide range of different futures broadly representative of the current literature. This allows their subsequent use and development in new assessments and research projects. Critical next steps for the community scenario process will, among others, involve regional and sectoral extensions, further elaboration of the adaptation and impacts dimension, as well as employing the SSP scenarios with the new generation of earth system models as part of the 6th climate model intercomparison project (CMIP6).",
+        "authors": [
+          "Keywan Riahi",
+          "Detlef P. van Vuuren",
+          "Elmar Kriegler",
+          "Jae Edmonds",
+          "Brian C. O’Neill",
+          "Shinichiro Fujimori"
+        ],
+        "doi": "10.1016/j.gloenvcha.2016.05.009",
+        "source": "Global Environmental Change",
+        "title": "The Shared Socioeconomic Pathways and their energy, land use, and greenhouse gas emissions implications: An overview",
+        "work_id": "doi:10.1016/j.gloenvcha.2016.05.009",
+        "year": 2016
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E032",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Predicting species distribution: offering more than simple habitat models",
+      "unit": null,
+      "value": {
+        "abstract": "In the last two decades, interest in species distribution models (SDMs) of plants and animals has grown dramatically. Recent advances in SDMs allow us to potentially forecast anthropogenic effects on patterns of biodiversity at different spatial scales. However, some limitations still preclude the use of SDMs in many theoretical and practical applications. Here, we provide an overview of recent advances in this field, discuss the ecological principles and assumptions underpinning SDMs, and highlight critical limitations and decisions inherent in the construction and evaluation of SDMs. Particular emphasis is given to the use of SDMs for the assessment of climate change impacts and conservation management issues. We suggest new avenues for incorporating species migration, population dynamics, biotic interactions and community ecology into SDMs at multiple spatial scales. Addressing all these issues requires a better integration of SDMs with ecological theory.",
+        "authors": [
+          "Antoine Guisan",
+          "Wilfried Thuiller"
+        ],
+        "doi": "10.1111/j.1461-0248.2005.00792.x",
+        "source": "Ecology Letters",
+        "title": "Predicting species distribution: offering more than simple habitat models",
+        "work_id": "doi:10.1111/j.1461-0248.2005.00792.x",
+        "year": 2005
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E033",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Forests and Climate Change: Forcings, Feedbacks, and the Climate Benefits of Forests",
+      "unit": null,
+      "value": {
+        "abstract": "The world's forests influence climate through physical, chemical, and biological processes that affect planetary energetics, the hydrologic cycle, and atmospheric composition. These complex and nonlinear forest-atmosphere interactions can dampen or amplify anthropogenic climate change. Tropical, temperate, and boreal reforestation and afforestation attenuate global warming through carbon sequestration. Biogeophysical feedbacks can enhance or diminish this negative climate forcing. Tropical forests mitigate warming through evaporative cooling, but the low albedo of boreal forests is a positive climate forcing. The evaporative effect of temperate forests is unclear. The net climate forcing from these and other processes is not known. Forests are under tremendous pressure from global change. Interdisciplinary science that integrates knowledge of the many interacting climate services of forests with the impacts of global change is necessary to identify and understand as yet unexplored feedbacks in the Earth system and the potential of forests to mitigate climate change.",
+        "authors": [
+          "Gordon B. Bonan"
+        ],
+        "doi": "10.1126/science.1155121",
+        "source": "Science",
+        "title": "Forests and Climate Change: Forcings, Feedbacks, and the Climate Benefits of Forests",
+        "work_id": "doi:10.1126/science.1155121",
+        "year": 2008
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E034",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Environmental and Health Impacts of Air Pollution: A Review",
+      "unit": null,
+      "value": {
+        "abstract": "One of our era's greatest scourges is air pollution, on account not only of its impact on climate change but also its impact on public and individual health due to increasing morbidity and mortality. There are many pollutants that are major factors in disease in humans. Among them, Particulate Matter (PM), particles of variable but very small diameter, penetrate the respiratory system via inhalation, causing respiratory and cardiovascular diseases, reproductive and central nervous system dysfunctions, and cancer. Despite the fact that ozone in the stratosphere plays a protective role against ultraviolet irradiation, it is harmful when in high concentration at ground level, also affecting the respiratory and cardiovascular system. Furthermore, nitrogen oxide, sulfur dioxide, Volatile Organic Compounds (VOCs), dioxins, and polycyclic aromatic hydrocarbons (PAHs) are all considered air pollutants that are harmful to humans. Carbon monoxide can even provoke direct poisoning when breathed in at high levels. Heavy metals such as lead, when absorbed into the human body, can lead to direct poisoning or chronic intoxication, depending on exposure. Diseases occurring from the aforementioned substances include principally respiratory problems such as Chronic Obstructive Pulmonary Disease (COPD), asthma, bronchiolitis, and also lung cancer, cardiovascular events, central nervous system dysfunctions, and cutaneous diseases. Last but not least, climate change resulting from environmental pollution affects the geographical distribution of many infectious diseases, as do natural disasters. The only way to tackle this problem is through public awareness coupled with a multidisciplinary approach by scientific experts; national and international organizations must address the emergence of this threat and propose sustainable solutions.",
+        "authors": [
+          "Ioannis Manisalidis",
+          "Elisavet Stavropoulou",
+          "Agathangelos Stavropoulos",
+          "Eugenia Bezirtzoglou"
+        ],
+        "doi": "10.3389/fpubh.2020.00014",
+        "source": "Frontiers in Public Health",
+        "title": "Environmental and Health Impacts of Air Pollution: A Review",
+        "work_id": "doi:10.3389/fpubh.2020.00014",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E035",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Global Water Resources: Vulnerability from Climate Change and Population Growth",
+      "unit": null,
+      "value": {
+        "abstract": "The future adequacy of freshwater resources is difficult to assess, owing to a complex and rapidly changing geography of water supply and use. Numerical experiments combining climate model outputs, water budgets, and socioeconomic information along digitized river networks demonstrate that (i) a large proportion of the world's population is currently experiencing water stress and (ii) rising water demands greatly outweigh greenhouse warming in defining the state of global water systems to 2025. Consideration of direct human impacts on global water supply remains a poorly articulated but potentially important facet of the larger global change question.",
+        "authors": [
+          "Charles J Vörösmarty",
+          "Pamela Green",
+          "J. Salisbury",
+          "Richard B. Lammers"
+        ],
+        "doi": "10.1126/science.289.5477.284",
+        "source": "Science",
+        "title": "Global Water Resources: Vulnerability from Climate Change and Population Growth",
+        "work_id": "doi:10.1126/science.289.5477.284",
+        "year": 2000
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E036",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract. Projections of future climate change play a fundamental role in improving understanding of the climate system as well as characterizing societal risks and response options. The Scenario Model Intercomparison Project (ScenarioMIP) is the primary activity within Phase 6 of the Coupled Model Intercomparison Project (CMIP6) that will provide multi-model climate projections based on alternative scenarios of future emissions and land use changes produced with integrated assessment models. In this paper, we describe ScenarioMIP's objectives, experimental design, and its relation to other activities within CMIP6. The ScenarioMIP design is one component of a larger scenario process that aims to facilitate a wide range of integrated studies across the climate science, integrated assessment modeling, and impacts, adaptation, and vulnerability communities, and will form an important part of the evidence base in the forthcoming Intergovernmental Panel on Climate Change (IPCC) assessments. At the same time, it will provide the basis for investigating a number of targeted science and policy questions that are especially relevant to scenario-based analysis, including the role of specific forcings such as land use and aerosols, the effect of a peak and decline in forcing, the consequences of scenarios that limit warming to below 2 °C, the relative contributions to uncertainty from scenarios, climate models, and internal variability, and long-term climate system outcomes beyond the 21st century. To serve this wide range of scientific communities and address these questions, a design has been identified consisting of eight alternative 21st century scenarios plus one large initial condition ensemble and a set of long-term extensions, divided into two tiers defined by relative priority. Some of these scenarios will also provide a basis for variants planned to be run in other CMIP6-Endorsed MIPs to investigate questions related to specific forcings. Harmonized, spatially explicit emissions and land use scenarios generated with integrated assessment models will be provided to participating climate modeling groups by late 2016, with the climate model simulations run within the 2017–2018 time frame, and output from the climate model projections made available and analyses performed over the 2018–2020 period.",
+        "authors": [
+          "Brian C. O’Neill",
+          "Claudia Tebaldi",
+          "Detlef P. van Vuuren",
+          "Veronika Eyring",
+          "Pierre Friedlingstein",
+          "G. C. Hurtt",
+          "Reto Knutti"
+        ],
+        "doi": "10.5194/gmd-9-3461-2016",
+        "source": "Geoscientific model development",
+        "title": "The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6",
+        "work_id": "doi:10.5194/gmd-9-3461-2016",
+        "year": 2016
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E037",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Climate Extremes: Observations, Modeling, and Impacts",
+      "unit": null,
+      "value": {
+        "abstract": "One of the major concerns with a potential change in climate is that an increase in extreme events will occur. Results of observational studies suggest that in many areas that have been analyzed, changes in total precipitation are amplified at the tails, and changes in some temperature extremes have been observed. Model output has been analyzed that shows changes in extreme events for future climates, such as increases in extreme high temperatures, decreases in extreme low temperatures, and increases in intense precipitation events. In addition, the societal infrastructure is becoming more sensitive to weather and climate extremes, which would be exacerbated by climate change. In wild plants and animals, climate-induced extinctions, distributional and phenological changes, and species' range shifts are being documented at an increasing rate. Several apparently gradual biological changes are linked to responses to extreme weather and climate events.",
+        "authors": [
+          "David R. Easterling",
+          "Gerald A. Meehl",
+          "Camille Parmesan",
+          "Stanley A. Changnon",
+          "Thomas R. Karl",
+          "Linda O. Mearns"
+        ],
+        "doi": "10.1126/science.289.5487.2068",
+        "source": "Science",
+        "title": "Climate Extremes: Observations, Modeling, and Impacts",
+        "work_id": "doi:10.1126/science.289.5487.2068",
+        "year": 2000
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E038",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Global Biodiversity: Indicators of Recent Declines",
+      "unit": null,
+      "value": {
+        "abstract": "In 2002, world leaders committed, through the Convention on Biological Diversity, to achieve a significant reduction in the rate of biodiversity loss by 2010. We compiled 31 indicators to report on progress toward this target. Most indicators of the state of biodiversity (covering species' population trends, extinction risk, habitat extent and condition, and community composition) showed declines, with no significant recent reductions in rate, whereas indicators of pressures on biodiversity (including resource consumption, invasive alien species, nitrogen pollution, overexploitation, and climate change impacts) showed increases. Despite some local successes and increasing responses (including extent and biodiversity coverage of protected areas, sustainable forest management, policy responses to invasive alien species, and biodiversity-related aid), the rate of biodiversity loss does not appear to be slowing.",
+        "authors": [
+          "Stuart H. M. Butchart",
+          "Matt Walpole",
+          "Ben Collen",
+          "A. van Strien",
+          "Jörn P. W. Scharlemann",
+          "Rosamunde E. A. Almond",
+          "Jonathan Baillie"
+        ],
+        "doi": "10.1126/science.1187512",
+        "source": "Science",
+        "title": "Global Biodiversity: Indicators of Recent Declines",
+        "work_id": "doi:10.1126/science.1187512",
+        "year": 2010
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E039",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Stationarity Is Dead: Whither Water Management?",
+      "unit": null,
+      "value": {
+        "abstract": "Climate change undermines a basic assumption that historically has facilitated management of water supplies, demands, and risks.",
+        "authors": [
+          "P. C. D. Milly",
+          "Julio L. Betancourt",
+          "Malin Falkenmark",
+          "Robert M. Hirsch",
+          "Zbigniew W. Kundzewicz",
+          "Dennis P. Lettenmaier",
+          "Ronald J. Stouffer"
+        ],
+        "doi": "10.1126/science.1151915",
+        "source": "Science",
+        "title": "Stationarity Is Dead: Whither Water Management?",
+        "work_id": "doi:10.1126/science.1151915",
+        "year": 2008
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E040",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Agriculture Development, Pesticide Application and Its Impact on the Environment",
+      "unit": null,
+      "value": {
+        "abstract": "Pesticides are indispensable in agricultural production. They have been used by farmers to control weeds and insects, and their remarkable increases in agricultural products have been reported. The increase in the world's population in the 20th century could not have been possible without a parallel increase in food production. About one-third of agricultural products are produced depending on the application of pesticides. Without the use of pesticides, there would be a 78% loss of fruit production, a 54% loss of vegetable production, and a 32% loss of cereal production. Therefore, pesticides play a critical role in reducing diseases and increasing crop yields worldwide. Thus, it is essential to discuss the agricultural development process; the historical perspective, types and specific uses of pesticides; and pesticide behavior, its contamination, and adverse effects on the natural environment. The review study indicates that agricultural development has a long history in many places around the world. The history of pesticide use can be divided into three periods of time. Pesticides are classified by different classification terms such as chemical classes, functional groups, modes of action, and toxicity. Pesticides are used to kill pests and control weeds using chemical ingredients; hence, they can also be toxic to other organisms, including birds, fish, beneficial insects, and non-target plants, as well as air, water, soil, and crops. Moreover, pesticide contamination moves away from the target plants, resulting in environmental pollution. Such chemical residues impact human health through environmental and food contamination. In addition, climate change-related factors also impact on pesticide application and result in increased pesticide usage and pesticide pollution. Therefore, this review will provide the scientific information necessary for pesticide application and management in the future.",
+        "authors": [
+          "Muyesaier Tudi",
+          "Huada Daniel Ruan",
+          "Li Wang"
+        ],
+        "doi": "10.3390/ijerph18031112",
+        "source": "International Journal of Environmental Research and Public Health",
+        "title": "Agriculture Development, Pesticide Application and Its Impact on the Environment",
+        "work_id": "doi:10.3390/ijerph18031112",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E041",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Climate anxiety in children and young people and their beliefs about government responses to climate change: a global survey",
+      "unit": null,
+      "value": {
+        "abstract": "BACKGROUND: Climate change has important implications for the health and futures of children and young people, yet they have little power to limit its harm, making them vulnerable to climate anxiety. This is the first large-scale investigation of climate anxiety in children and young people globally and its relationship with perceived government response. METHODS: We surveyed 10 000 children and young people (aged 16-25 years) in ten countries (Australia, Brazil, Finland, France, India, Nigeria, Philippines, Portugal, the UK, and the USA; 1000 participants per country). Invitations to complete the survey were sent via the platform Kantar between May 18 and June 7, 2021. Data were collected on participants' thoughts and feelings about climate change, and government responses to climate change. Descriptive statistics were calculated for each aspect of climate anxiety, and Pearson's correlation analysis was done to evaluate whether climate-related distress, functioning, and negative beliefs about climate change were linked to thoughts and feelings about government response. FINDINGS: Respondents across all countries were worried about climate change (59% were very or extremely worried and 84% were at least moderately worried). More than 50% reported each of the following emotions: sad, anxious, angry, powerless, helpless, and guilty. More than 45% of respondents said their feelings about climate change negatively affected their daily life and functioning, and many reported a high number of negative thoughts about climate change (eg, 75% said that they think the future is frightening and 83% said that they think people have failed to take care of the planet). Respondents rated governmental responses to climate change negatively and reported greater feelings of betrayal than of reassurance. Climate anxiety and distress were correlated with perceived inadequate government response and associated feelings of betrayal. INTERPRETATION: Climate anxiety and dissatisfaction with government responses are widespread in children and young people in countries across the world and impact their daily functioning. A perceived failure by governments to respond to the climate crisis is associated with increased distress. There is an urgent need for further research into the emotional impact of climate change on children and young people and for governments to validate their distress by taking urgent action on climate change. FUNDING: AVAAZ.",
+        "authors": [
+          "AGB Poore"
+        ],
+        "doi": "10.1016/s2542-5196(21)00278-3",
+        "source": "The Lancet Planetary Health",
+        "title": "Climate anxiety in children and young people and their beliefs about government responses to climate change: a global survey",
+        "work_id": "doi:10.1016/s2542-5196(21)00278-3",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E042",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Impact of Climate Change on Agriculture and Its Mitigation Strategies: A Review",
+      "unit": null,
+      "value": {
+        "abstract": "Climate change is a global threat to the food and nutritional security of the world. As greenhouse-gas emissions in the atmosphere are increasing, the temperature is also rising due to the greenhouse effect. The average global temperature is increasing continuously and is predicted to rise by 2 °C until 2100, which would cause substantial economic losses at the global level. The concentration of CO2, which accounts for a major proportion of greenhouse gases, is increasing at an alarming rate, and has led to higher growth and plant productivity due to increased photosynthesis, but increased temperature offsets this effect as it leads to increased crop respiration rate and evapotranspiration, higher pest infestation, a shift in weed flora, and reduced crop duration. Climate change also affects the microbial population and their enzymatic activities in soil. This paper reviews the information collected through the literature regarding the issue of climate change, its possible causes, its projection in the near future, its impact on the agriculture sector as an influence on physiological and metabolic activities of plants, and its potential and reported implications for growth and plant productivity, pest infestation, and mitigation strategies and their economic impact.",
+        "authors": [
+          "Gurdeep Singh Malhi",
+          "Manpreet Kaur",
+          "Prashant Kaushik"
+        ],
+        "doi": "10.3390/su13031318",
+        "source": "Sustainability",
+        "title": "Impact of Climate Change on Agriculture and Its Mitigation Strategies: A Review",
+        "work_id": "doi:10.3390/su13031318",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E043",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The Impact of Climate Change on Agricultural Insect Pests",
+      "unit": null,
+      "value": {
+        "abstract": "levels, and changing precipitation patterns have significant impacts on agricultural production and on agricultural insect pests. Changes in climate can affect insect pests in several ways. They can result in an expansion of their geographic distribution, increased survival during overwintering, increased number of generations, altered synchrony between plants and pests, altered interspecific interaction, increased risk of invasion by migratory pests, increased incidence of insect-transmitted plant diseases, and reduced effectiveness of biological control, especially natural enemies. As a result, there is a serious risk of crop economic losses, as well as a challenge to human food security. As a major driver of pest population dynamics, climate change will require adaptive management strategies to deal with the changing status of pests. Several priorities can be identified for future research on the effects of climatic changes on agricultural insect pests. These include modified integrated pest management tactics, monitoring climate and pest populations, and the use of modelling prediction tools.",
+        "authors": [
+          "Sandra Skendžić",
+          "Monika Zovko",
+          "Ivana Pajač Živković",
+          "Vinko Lešić",
+          "Darija Lemić"
+        ],
+        "doi": "10.3390/insects12050440",
+        "source": "Insects",
+        "title": "The Impact of Climate Change on Agricultural Insect Pests",
+        "work_id": "doi:10.3390/insects12050440",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E044",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The burden of heat-related mortality attributable to recent human-induced climate change",
+      "unit": null,
+      "value": {
+        "abstract": "Climate change affects human health; however, there have been no large-scale, systematic efforts to quantify the heat-related human health impacts that have already occurred due to climate change. Here, we use empirical data from 732 locations in 43 countries to estimate the mortality burdens associated with the additional heat exposure that has resulted from recent human-induced warming, during the period 1991–2018. Across all study countries, we find that 37.0% (range 20.5–76.3%) of warm-season heat-related deaths can be attributed to anthropogenic climate change and that increased mortality is evident on every continent. Burdens varied geographically but were of the order of dozens to hundreds of deaths per year in many locations. Our findings support the urgent need for more ambitious mitigation and adaptation strategies to minimize the public health impacts of climate change. Current and future climate change is expected to impact human health, both indirectly and directly, through increasing temperatures. Climate change has already had an impact and is responsible for 37% of warm-season heat-related deaths between 1991 and 2018, with increases in mortality observed globally.",
+        "authors": [
+          "Ana M. Vicedo‐Cabrera",
+          "Noah Scovronick",
+          "Francesco Sera",
+          "Dominic Royé"
+        ],
+        "doi": "10.1038/s41558-021-01058-x",
+        "source": "Nature Climate Change",
+        "title": "The burden of heat-related mortality attributable to recent human-induced climate change",
+        "work_id": "doi:10.1038/s41558-021-01058-x",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E045",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Extreme Weather and Climate Change: Population Health and Health System Implications",
+      "unit": null,
+      "value": {
+        "abstract": "Extreme weather and climate events, such as heat waves, cyclones, and floods, are an expression of climate variability. These events and events influenced by climate change, such as wildfires, continue to cause significant human morbidity and mortality and adversely affect mental health and well-being. Although adverse health impacts from extreme events declined over the past few decades, climate change and more people moving into harm's way could alter this trend. Long-term changes to Earth's energy balance are increasing the frequency and intensity of many extreme events and the probability of compound events, with trends projected to accelerate under certain greenhouse gas emissions scenarios. While most of these events cannot be completely avoided, many of the health risks could be prevented through building climate-resilient health systems with improved risk reduction, preparation, response, and recovery. Conducting vulnerability and adaptation assessments and developing health system adaptation plans can identify priority actions to effectively reduce risks, such as disaster risk management and more resilient infrastructure. The risks are urgent, so action is needed now.",
+        "authors": [
+          "Kristie L. Ebi",
+          "Jennifer Vanos",
+          "Jane W. Baldwin",
+          "Jesse E. Bell",
+          "David M. Hondula",
+          "Nicole A. Errett",
+          "Katie Hayes"
+        ],
+        "doi": "10.1146/annurev-publhealth-012420-105026",
+        "source": "Annual Review of Public Health",
+        "title": "Extreme Weather and Climate Change: Population Health and Health System Implications",
+        "work_id": "doi:10.1146/annurev-publhealth-012420-105026",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E046",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Overfishing drives over one-third of all sharks and rays toward a global extinction crisis",
+      "unit": null,
+      "value": {
+        "abstract": "The scale and drivers of marine biodiversity loss are being revealed by the International Union for Conservation of Nature (IUCN) Red List assessment process. We present the first global reassessment of 1,199 species in Class Chondrichthyes-sharks, rays, and chimeras. The first global assessment (in 2014) concluded that one-quarter (24%) of species were threatened. Now, 391 (32.6%) species are threatened with extinction. When this percentage of threat is applied to Data Deficient species, more than one-third (37.5%) of chondrichthyans are estimated to be threatened, with much of this change resulting from new information. Three species are Critically Endangered (Possibly Extinct), representing possibly the first global marine fish extinctions due to overfishing. Consequently, the chondrichthyan extinction rate is potentially 25 extinctions per million species years, comparable to that of terrestrial vertebrates. Overfishing is the universal threat affecting all 391 threatened species and is the sole threat for 67.3% of species and interacts with three other threats for the remaining third: loss and degradation of habitat (31.2% of threatened species), climate change (10.2%), and pollution (6.9%). Species are disproportionately threatened in tropical and subtropical coastal waters. Science-based limits on fishing, effective marine protected areas, and approaches that reduce or eliminate fishing mortality are urgently needed to minimize mortality of threatened species and ensure sustainable catch and trade of others. Immediate action is essential to prevent further extinctions and protect the potential for food security and ecosystem functions provided by this iconic lineage of predators.",
+        "authors": [
+          "Nicholas K. Dulvy",
+          "Nathan Pacoureau",
+          "Cassandra L. Rigby",
+          "Riley A. Pollom",
+          "Rima W. Jabado",
+          "David A. Ebert"
+        ],
+        "doi": "10.1016/j.cub.2021.08.062",
+        "source": "Current Biology",
+        "title": "Overfishing drives over one-third of all sharks and rays toward a global extinction crisis",
+        "work_id": "doi:10.1016/j.cub.2021.08.062",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E047",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Forest microclimates and climate change: Importance, drivers and future research agenda",
+      "unit": null,
+      "value": {
+        "abstract": "Forest microclimates contrast strongly with the climate outside forests. To fully understand and better predict how forests' biodiversity and functions relate to climate and climate change, microclimates need to be integrated into ecological research. Despite the potentially broad impact of microclimates on the response of forest ecosystems to global change, our understanding of how microclimates within and below tree canopies modulate biotic responses to global change at the species, community and ecosystem level is still limited. Here, we review how spatial and temporal variation in forest microclimates result from an interplay of forest features, local water balance, topography and landscape composition. We first stress and exemplify the importance of considering forest microclimates to understand variation in biodiversity and ecosystem functions across forest landscapes. Next, we explain how macroclimate warming (of the free atmosphere) can affect microclimates, and vice versa, via interactions with land-use changes across different biomes. Finally, we perform a priority ranking of future research avenues at the interface of microclimate ecology and global change biology, with a specific focus on three key themes: (1) disentangling the abiotic and biotic drivers and feedbacks of forest microclimates; (2) global and regional mapping and predictions of forest microclimates; and (3) the impacts of microclimate on forest biodiversity and ecosystem functioning in the face of climate change. The availability of microclimatic data will significantly increase in the coming decades, characterizing climate variability at unprecedented spatial and temporal scales relevant to biological processes in forests. This will revolutionize our understanding of the dynamics, drivers and implications of forest microclimates on biodiversity and ecological functions, and the impacts of global changes. In order to support the sustainable use of forests and to secure their biodiversity and ecosystem services for future generations, microclimates cannot be ignored.",
+        "authors": [
+          "Pieter De Frenne",
+          "Jonathan Lenoir",
+          "Miska Luoto",
+          "Brett R. Scheffers",
+          "Florian Zellweger",
+          "Juha Aalto"
+        ],
+        "doi": "10.1111/gcb.15569",
+        "source": "Global Change Biology",
+        "title": "Forest microclimates and climate change: Importance, drivers and future research agenda",
+        "work_id": "doi:10.1111/gcb.15569",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E048",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Global, regional, and national burden of mortality associated with non-optimal ambient temperatures from 2000 to 2019: a three-stage modelling study",
+      "unit": null,
+      "value": {
+        "abstract": "BACKGROUND: Exposure to cold or hot temperatures is associated with premature deaths. We aimed to evaluate the global, regional, and national mortality burden associated with non-optimal ambient temperatures. METHODS: In this modelling study, we collected time-series data on mortality and ambient temperatures from 750 locations in 43 countries and five meta-predictors at a grid size of 0·5° × 0·5° across the globe. A three-stage analysis strategy was used. First, the temperature-mortality association was fitted for each location by use of a time-series regression. Second, a multivariate meta-regression model was built between location-specific estimates and meta-predictors. Finally, the grid-specific temperature-mortality association between 2000 and 2019 was predicted by use of the fitted meta-regression and the grid-specific meta-predictors. Excess deaths due to non-optimal temperatures, the ratio between annual excess deaths and all deaths of a year (the excess death ratio), and the death rate per 100 000 residents were then calculated for each grid across the world. Grids were divided according to regional groupings of the UN Statistics Division. FINDINGS: Globally, 5 083 173 deaths (95% empirical CI [eCI] 4 087 967-5 965 520) were associated with non-optimal temperatures per year, accounting for 9·43% (95% eCI 7·58-11·07) of all deaths (8·52% [6·19-10·47] were cold-related and 0·91% [0·56-1·36] were heat-related). There were 74 temperature-related excess deaths per 100 000 residents (95% eCI 60-87). The mortality burden varied geographically. Of all excess deaths, 2 617 322 (51·49%) occurred in Asia. Eastern Europe had the highest heat-related excess death rate and Sub-Saharan Africa had the highest cold-related excess death rate. From 2000-03 to 2016-19, the global cold-related excess death ratio changed by -0·51 percentage points (95% eCI -0·61 to -0·42) and the global heat-related excess death ratio increased by 0·21 percentage points (0·13-0·31), leading to a net reduction in the overall ratio. The largest decline in overall excess death ratio occurred in South-eastern Asia, whereas excess death ratio fluctuated in Southern Asia and Europe. INTERPRETATION: Non-optimal temperatures are associated with a substantial mortality burden, which varies spatiotemporally. Our findings will benefit international, national, and local communities in developing preparedness and prevention strategies to reduce weather-related impacts immediately and under climate change scenarios. FUNDING: Australian Research Council and the Australian National Health and Medical Research Council.",
+        "authors": [
+          "Qi Zhao",
+          "Yuming Guo",
+          "Guo Y"
+        ],
+        "doi": "10.1016/s2542-5196(21)00081-4",
+        "source": "The Lancet Planetary Health",
+        "title": "Global, regional, and national burden of mortality associated with non-optimal ambient temperatures from 2000 to 2019: a three-stage modelling study",
+        "work_id": "doi:10.1016/s2542-5196(21)00081-4",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E049",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Low-cost renewable electricity as the key driver of the global energy transition towards sustainability",
+      "unit": null,
+      "value": {
+        "abstract": "Climate change threats and the necessity to achieve global Sustainable Development Goals demand unprecedented economic and social shifts around the world, including a fundamental transformation of the global energy system. An energy transition is underway in most regions, predominantly in the power sector. This research highlights the technical feasibility and economic viability of 100% renewable energy systems including the power, heat, transport and desalination sectors. It presents a technology-rich, multi-sectoral, multi-regional and cost-optimal global energy transition pathway for 145 regional energy systems sectionalised into nine major regions of the world. This 1.5 °C target compatible scenario with rapid direct and indirect electrification via Power-to-X processes and massive defossilisation indicates substantial benefits: 50% energy savings, universal access to fresh water and low-cost energy supply. It also provides an energy transition pathway that could lead from the current fossil-based system to an affordable, efficient, sustainable and secure energy future for the world.",
+        "authors": [
+          "Dmitrii Bogdanov",
+          "Manish Ram",
+          "Arman Aghahosseini",
+          "Ashish Gulagi",
+          "Ayobami Solomon Oyewo",
+          "Michael Child",
+          "Upeksha Caldera",
+          "Kristina Sadovskaia"
+        ],
+        "doi": "10.1016/j.energy.2021.120467",
+        "source": "Energy",
+        "title": "Low-cost renewable electricity as the key driver of the global energy transition towards sustainability",
+        "work_id": "doi:10.1016/j.energy.2021.120467",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E050",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Connections of climate change and variability to large and extreme forest fires in southeast Australia",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract The 2019/20 Black Summer bushfire disaster in southeast Australia was unprecedented: the extensive area of forest burnt, the radiative power of the fires, and the extraordinary number of fires that developed into extreme pyroconvective events were all unmatched in the historical record. Australia’s hottest and driest year on record, 2019, was characterised by exceptionally dry fuel loads that primed the landscape to burn when exposed to dangerous fire weather and ignition. The combination of climate variability and long-term climate trends generated the climate extremes experienced in 2019, and the compounding effects of two or more modes of climate variability in their fire-promoting phases (as occurred in 2019) has historically increased the chances of large forest fires occurring in southeast Australia. Palaeoclimate evidence also demonstrates that fire-promoting phases of tropical Pacific and Indian ocean variability are now unusually frequent compared with natural variability in pre-industrial times. Indicators of forest fire danger in southeast Australia have already emerged outside of the range of historical experience, suggesting that projections made more than a decade ago that increases in climate-driven fire risk would be detectable by 2020, have indeed eventuated. The multiple climate change contributors to fire risk in southeast Australia, as well as the observed non-linear escalation of fire extent and intensity, raise the likelihood that fire events may continue to rapidly intensify in the future. Improving local and national adaptation measures while also pursuing ambitious global climate change mitigation efforts would provide the best strategy for limiting further increases in fire risk in southeast Australia.",
+        "authors": [
+          "Nerilie J. Abram",
+          "Benjamin J. Henley",
+          "Alex Sen Gupta",
+          "Tanya Lippmann"
+        ],
+        "doi": "10.1038/s43247-020-00065-8",
+        "source": "Communications Earth & Environment",
+        "title": "Connections of climate change and variability to large and extreme forest fires in southeast Australia",
+        "work_id": "doi:10.1038/s43247-020-00065-8",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E051",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Climate Finance",
+      "unit": null,
+      "value": {
+        "abstract": "In this article, we review the literature studying interactions between climate change and financial markets. We first discuss various approaches to incorporating climate risk in macrofinance models. We then review the empirical literature that explores the pricing of climate risks across a large number of asset classes, including real estate, equities, and fixed income securities. In this context, we also discuss how investors can use these assets to construct portfolios that hedge against climate risk. We conclude by proposing several promising directions for future research in climate finance.",
+        "authors": [
+          "Stefano Giglio",
+          "Bryan Kelly",
+          "Johannes Stroebel"
+        ],
+        "doi": "10.1146/annurev-financial-102620-103311",
+        "source": "Annual Review of Financial Economics",
+        "title": "Climate Finance",
+        "work_id": "doi:10.1146/annurev-financial-102620-103311",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "figures/annual_publications.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E052",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 1 (annual_publications) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "peak_documents": 19170,
+          "peak_year": 2021,
+          "years": [
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021
+          ]
+        },
+        "figure_name": "annual_publications",
+        "figure_number": 1
+      }
+    },
+    {
+      "artifact_path": "figures/top_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E053",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 2 (top_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Climatic Change",
+          "top_value": 2093
+        },
+        "figure_name": "top_sources",
+        "figure_number": 2
+      }
+    },
+    {
+      "artifact_path": "figures/top_authors.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E054",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 3 (top_authors) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "AGB Poore",
+          "top_value": 5808
+        },
+        "figure_name": "top_authors",
+        "figure_number": 3
+      }
+    },
+    {
+      "artifact_path": "figures/top_institutions.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E055",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 4 (top_institutions) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Chinese Academy of Sciences",
+          "top_value": 3468
+        },
+        "figure_name": "top_institutions",
+        "figure_number": 4
+      }
+    },
+    {
+      "artifact_path": "figures/document_types.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E056",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 5 (document_types) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed_categories": 1,
+          "total_documents": 151562
+        },
+        "figure_name": "document_types",
+        "figure_number": 5
+      }
+    },
+    {
+      "artifact_path": "figures/citation_distribution.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E057",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 6 (citation_distribution) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "display_cap_p98": 352.0,
+          "documents": 151562,
+          "maximum": 22581,
+          "mean": 49.56335361106346,
+          "median": 14.0,
+          "zero_cited": 29384
+        },
+        "figure_name": "citation_distribution",
+        "figure_number": 6
+      }
+    },
+    {
+      "artifact_path": "figures/top_cited_documents.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E058",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 7 (top_cited_documents) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Home visits: a strategy to improve newborn survival -…",
+          "top_value": 22581
+        },
+        "figure_name": "top_cited_documents",
+        "figure_number": 7
+      }
+    },
+    {
+      "artifact_path": "figures/bradford_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E059",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 8 (bradford_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "sources": 16925,
+          "zone_1_sources": 114
+        },
+        "figure_name": "bradford_sources",
+        "figure_number": 8
+      }
+    },
+    {
+      "artifact_path": "figures/keyword_trends.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E060",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 9 (keyword_trends) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "keywords": 15,
+          "years": [
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021
+          ]
+        },
+        "figure_name": "keyword_trends",
+        "figure_number": 9
+      }
+    },
+    {
+      "artifact_path": "figures/network_coauthorship.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E061",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 10 (network_coauthorship) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 4552,
+          "candidate_nodes_with_links": 431,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 149,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 16,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.06482740086371781,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.7750692327886975,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 30,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "overlap_ratio": 0.0,
+          "selected_seed": 1051.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.02607393922428293,
+          "within_between_distance_ratio": 0.0
+        },
+        "figure_name": "network_coauthorship",
+        "figure_number": 10
+      }
+    },
+    {
+      "artifact_path": "figures/network_institution_collaboration.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E062",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 11 (network_institution_collaboration) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 47564,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.10563544343690995,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.25469007131828164,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 145,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 139.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.002451613426959922,
+          "within_between_distance_ratio": 0.30149775481345314
+        },
+        "figure_name": "network_institution_collaboration",
+        "figure_number": 11
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_cooccurrence.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E063",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 12 (network_keyword_cooccurrence) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 65541,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 196,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.12121970084927228,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.3075785512468182,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 513,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 3263.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.0015343998797395248,
+          "within_between_distance_ratio": 0.34768791135730615
+        },
+        "figure_name": "network_keyword_cooccurrence",
+        "figure_number": 12
+      }
+    },
+    {
+      "artifact_path": "figures/network_cocitation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E064",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 13 (network_cocitation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 65280,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.09177025433689148,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.2224349368660272,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 261,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 2351.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.0020150137745772877,
+          "within_between_distance_ratio": 0.2621116457300428
+        },
+        "figure_name": "network_cocitation",
+        "figure_number": 13
+      }
+    },
+    {
+      "artifact_path": "figures/network_citation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E065",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 14 (network_citation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 123,
+          "candidate_nodes_with_links": 133,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 55,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.1404718084790347,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.35541510873339166,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 456,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 430.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.0002683013306062376,
+          "within_between_distance_ratio": 0.40810917237252964
+        },
+        "figure_name": "network_citation",
+        "figure_number": 14
+      }
+    },
+    {
+      "artifact_path": "figures/network_bibliographic_coupling.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E066",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 15 (network_bibliographic_coupling) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 4663,
+          "candidate_nodes_with_links": 407,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 197,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 407,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.12257001238860948,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.40977510247803145,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 10,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 2667.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          },
+          "weighted_edge_length": 0.004770085559888795,
+          "within_between_distance_ratio": 0.3243705723493971
+        },
+        "figure_name": "network_bibliographic_coupling",
+        "figure_number": 15
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_overlay.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E067",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 16 (network_keyword_overlay) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 65541,
+          "candidate_nodes_with_links": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 196,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 513,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "year_max": 2016.8631096088845,
+          "year_min": 2013.5814268512945
+        },
+        "figure_name": "network_keyword_overlay",
+        "figure_number": 16
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_density.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E068",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 17 (network_keyword_density) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 65541,
+          "candidate_nodes_with_links": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "density_grid": [
+            260,
+            190
+          ],
+          "density_weight": "log(1 + occurrence), gamma 0.62",
+          "displayed_clusters": 7,
+          "displayed_edges": 196,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "gaussian_sigma": 8,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 513,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "figure_name": "network_keyword_density",
+        "figure_number": 17
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E069",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+      "unit": null,
+      "value": {
+        "citation": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+        "doi": "10.1016/j.jbusres.2021.04.070",
+        "role": "bibliometric workflow and interpretation guideline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E070",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+      "unit": null,
+      "value": {
+        "citation": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+        "doi": "10.1016/j.joi.2017.08.007",
+        "role": "science-mapping analysis baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E071",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+      "unit": null,
+      "value": {
+        "citation": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+        "doi": "10.1007/s11192-009-0146-3",
+        "role": "bibliometric network visualization baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E072",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+      "unit": null,
+      "value": {
+        "citation": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+        "doi": "10.1088/1742-5468/2008/10/P10008",
+        "role": "Louvain community-detection method"
+      }
+    }
+  ],
+  "anonymous_candidate": "# A Bibliometric Landscape of Climate-Change Research (1990–2021): Productivity, Impact, and Intellectual Structure\n\n## Structured Abstract\n**Background**: Climate-change research has expanded rapidly, yet comprehensive bibliometric portraits of the field’s scale, growth, key actors, and thematic organization remain essential for research governance.\n**Methods**: A reproducible workflow acquired 152,030 unique source records [E002], deduplicated to a canonical corpus of 151,562 works [E001] spanning 1990–2021 [E004]. We computed descriptive productivity, citation, and network indicators following established bibliometric guidelines [E069, E070, E071, E072].\n**Results**: Annual output grew from 127 publications in 1990 to 19,170 in 2021 (CAGR 17.57%) [E005, E006, E007]. *Climatic Change* led source productivity (2,093 works) [E008, E009]. The Chinese Academy of Sciences was the most prolific institution (3,468 works) [E012, E013]. Mean citations were 49.56 (median 14.00) [E015, E017]; 19.39% of works remained uncited [E016]. Network analyses revealed seven thematic keyword clusters [E027, E063] and concentrated collaboration patterns [E024, E026].\n**Conclusions**: The field exhibits compound annual growth of 17.57% between 1990 and 2021, concentrated core sources, and a highly skewed citation distribution. Thematic structure is dominated by climate-change, geography, and environmental-science keywords [E020, E027]. All findings are bounded by source-dependent metadata coverage and retrieval-date-dependent citation windows.\n\n## 1. Introduction\n### 1.1 Rationale\nUnderstanding the structure and evolution of climate-change scholarship is critical for funders, policymakers, and researchers. Bibliometric methods provide systematic, reproducible descriptions of research landscapes [E069].\n\n### 1.2 Objectives\nThis report aims to (i) quantify the growth and productivity of climate-change research from 1990 to 2021 [E004, E007]; (ii) identify leading sources, authors, and institutions [E009, E011, E013]; (iii) characterize citation impact and its skew [E015, E017]; and (iv) map the intellectual structure through co-occurrence, collaboration, and citation-based networks [E022–E027].\n\n### 1.3 Scope\nThe analysis is based on a single-source, deduplicated corpus of 151,562 works [E001] acquired via exhaustive cursor pagination [E002]. All claims are descriptive; no causal or quality inferences are made.\n\n## 2. Reproducible Methods\n### 2.1 Data Acquisition and Corpus Construction\nRecords were retrieved from OpenAlex using cursor pagination until exhaustion, yielding 152,030 unique source records against a source-reported expectation of 152,599 [E002]. Deterministic exact deduplication on normalized DOI (with fallback to normalized title and first-author surname for records without DOI) produced a canonical corpus of 151,562 works [E001].\n\n### 2.2 Metadata Coverage Audit\nField completeness was assessed as the percentage of non-null canonical values. Coverage was 100% for publication year, document type, cited-by count, reference count, and source ID; 99.96% for title; 99.5% for language; 80.8% for DOI; 79.79% for publisher; and 74.73% for abstract [E003].\n\n### 2.3 Descriptive Analyses\nAnnual output was whole-counted by publication year [E007]. Compound annual growth rate (CAGR) was calculated from the first and last non-zero endpoints [E006]. Top sources, authors, and institutions were ranked by whole-counted publications [E009, E011, E013]. Document types were tabulated from source-supplied labels [E014]. Citation distributions were summarized with mean, median, percentiles, maximum, and zero-cited share [E015, E016, E017]. Bradford zoning was applied to sources with known names [E019]. Keyword temporal dynamics were tracked for the most frequent normalized keywords [E020]. A three-field plot linked leading authors, sources, and keywords [E021].\n\n### 2.4 Network Analyses\nSix candidate networks were constructed: bibliographic coupling [E022], direct citation [E023], coauthorship [E024], cocitation [E025], institution collaboration [E026], and keyword co-occurrence [E027]. All used association-strength normalization, Louvain community detection [E072], and edge reduction via maximum-spanning forest plus strongest edges per node (maximum 4 edges per node). Minimum occurrence thresholds were: bibliographic coupling 10, direct citation 456, coauthorship 30, cocitation 261, institution collaboration 145, and keyword co-occurrence 513 [E022–E027]. Networks were visualized with VOS-style or ForceAtlas2 layouts [E061–E068].\n\n### 2.5 Methodological References\nThe workflow follows bibliometric guidelines [E069] and draws on established science-mapping [E070] and network-visualization [E071] approaches.\n\n## 3. Results\n### 3.1 Corpus Overview and Metadata Quality\nThe final corpus contains 151,562 unique works [E001]. Metadata completeness is high for core fields but lower for abstracts (74.73%) and publisher (79.79%) [E003]. All works carry the source-supplied label “article,” which reflects the source’s classification practices and may include reviews, editorials, and other types not distinguished in the source metadata [E014].\n\n### 3.2 Temporal Dynamics\nThe publication window spans 1990–2021 [E004]. Output rose from 127 works in 1990 to a peak of 19,170 in 2021 [E005, E007], corresponding to a CAGR of 17.57% [E006]. Year-over-year changes were not monotonic; negative changes occurred in 1994 (−35) and 1998 (−1), and periods of deceleration were observed (e.g., 2015: +478 vs. 2014: +928) [E007]. The final year may be incomplete [E005 caveat].\n\n### 3.3 Leading Sources, Authors, and Institutions\n*Climatic Change* ranks first among sources with 2,093 publications [E008, E009]. The top-ranked author string in the source metadata is “AGB Poore” (5,808 works) [E010, E011]; however, this string is a known metadata artifact (see Section 5.3) and is excluded from substantive interpretation. Among the remaining author records, Kristie L. Ebi ranks highest with 150 publications [E011]. The Chinese Academy of Sciences leads institutions (3,468 works) [E012, E013]. Productivity rankings are descriptive and do not imply quality [E009, E011, E013 caveats].\n\n### 3.4 Citation Impact\nMean citations are 49.56 and the median is 14.00 [E015, E017]. The distribution is highly skewed: the 90th percentile is 110 citations, the maximum is 22,581, and 19.39% of works are uncited [E016, E017]. Citation counts are source- and retrieval-date-dependent [E015 caveat]. The uncited rate reflects the full corpus including recent publications that have had less time to accumulate citations [E016 caveat].\n\n### 3.5 Source Concentration\nAmong records with known source names (138,775 documents), Bradford zoning identifies 114 sources in Zone 1, accounting for 33.2% of publications (46,135 documents) [E019, E059]. Records without a source name are excluded from this analysis [E019 caveat].\n\n### 3.6 Keyword Trends\n“Climate change,” “Geography,” and “Environmental science” are the most frequent keywords, each showing increasing annual document counts over the observed period [E020, E060]. Evidence for “Environmental science” is available through 2005 in the current data extract [E020].\n\n### 3.7 Network Structures\nThe keyword co-occurrence network (72 nodes, 196 edges, 7 clusters) is dominated by “Climate change,” “Geography,” and “Environmental science” [E027, E063]. The coauthorship network (60 nodes, 149 edges, 10 clusters) features the artifact string “AGB Poore” as the most central node by weighted degree; among verified author names, Christoph Müller and Frank Ewert show high centrality [E024, E061]. The institution collaboration network (72 nodes, 192 edges, 7 clusters) highlights CNRS and the Chinese Academy of Sciences as central hubs [E026, E062]. The cocitation network (72 nodes, 192 edges, 5 clusters) and bibliographic coupling network (72 nodes, 197 edges, 8 clusters) reveal thematic groupings of frequently co-cited and reference-sharing documents [E022, E025, E064, E066]. The direct citation network is sparser (60 nodes, 55 edges, 10 clusters) [E023, E065]. All network centrality measures are descriptive of this corpus and parameterization and do not establish causal or substantive importance [E022–E027 caveats].\n\n## 4. Discussion\n### 4.1 Interpretation of Growth\nThe endpoint CAGR from 1990 to 2021 is 17.57% [E006]. Annual counts increased overall but were not monotonic [E007], and the endpoint CAGR does not establish a sustained exponential trend [E006]. Annual output peaked in 2021 with 19,170 works; because 2021 is the final year, its count may be incomplete if retrieval occurred before year-end [E005].\n\n### 4.2 Concentration and Skew\nThe dominance of a few sources [E008, E019] and institutions [E012] aligns with typical bibliometric patterns of cumulative advantage. The citation skew (mean 49.56 vs. median 14.00) [E015] and 19.39% uncited rate [E016] underscore that impact is unevenly distributed; recent works have had less time to accumulate citations [E016 caveat].\n\n### 4.3 Thematic Structure\nThe keyword co-occurrence network [E027] and temporal trends [E020] confirm that core themes (climate change, geography, environmental science) are tightly interlinked. The three-field plot [E021] is dominated by the artifact author string “AGB Poore” and the repository source “AgEcon Search (University of Minnesota, USA),” which limits its interpretability for thematic mapping; the plot is a filtered descriptive view, not a causal pathway [E021 caveat].\n\n### 4.4 Network Insights\nCollaboration networks [E024, E026] reveal descriptive patterns of coauthorship and institutional linkages, while citation-based networks [E022, E023, E025] identify documents that are frequently co-cited or share references within this corpus and parameterization. These structures are parameter-dependent and should not be interpreted as causal maps of influence or as indicators of substantive importance [E022–E027 caveats].\n\n## 5. Limitations\n### 5.1 Source and Retrieval Constraints\nCompleteness is relative to the OpenAlex source, query, and retrieval date [E002 caveat]. Citation counts are source- and retrieval-date-dependent [E015 caveat]; works have unequal citation windows [E017 caveat].\n\n### 5.2 Metadata Coverage\nAbstract coverage is 74.73% [E003], limiting text-based analyses. Document-type labels inherit source classification practices; all works carry the label “article” regardless of their actual type [E014 caveat]. Keyword frequencies depend on source metadata and synonym normalization [E020 caveat].\n\n### 5.3 Analytical Caveats\nThe author string “AGB Poore” (5,808 publications) [E010] is a metadata artifact. Evidence shows this string appears as a co-author on “Food Security: The Challenge of Feeding 9 Billion People” alongside six other named authors [E028] and as the sole author of a *Lancet Planetary Health* paper on climate anxiety [E041]; it does not correspond to a single real researcher. This artifact has been excluded from substantive interpretation of author productivity and network centrality. Productivity rankings are descriptive and must not be treated as quality or causal influence [E009, E011, E013 caveats]. Network centrality describes this corpus and parameterization only [E022–E027 caveats]. The final year may be incomplete [E005 caveat]. Endpoint CAGR does not establish a monotonic trend [E006 caveat]. Bradford zoning excludes records without a source name [E019 caveat]. Abstracts cannot support claims requiring full-text inspection [E028–E051 caveats].\n\n## 6. Conclusion\nThis bibliometric report provides a reproducible, evidence-grounded portrait of climate-change research from 1990 to 2021. The field has grown at a compound annual rate of 17.57% [E006, E007], is concentrated in a core of journals and institutions [E009, E013, E019], and exhibits a highly skewed citation distribution [E015, E017]. Thematic and collaborative structures, as revealed by network analyses [E022–E027], offer a baseline for future studies. All findings are bounded by the stated source, metadata, and methodological limitations.\n",
+  "allowed_evidence_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027",
+    "E028",
+    "E029",
+    "E030",
+    "E031",
+    "E032",
+    "E033",
+    "E034",
+    "E035",
+    "E036",
+    "E037",
+    "E038",
+    "E039",
+    "E040",
+    "E041",
+    "E042",
+    "E043",
+    "E044",
+    "E045",
+    "E046",
+    "E047",
+    "E048",
+    "E049",
+    "E050",
+    "E051",
+    "E052",
+    "E053",
+    "E054",
+    "E055",
+    "E056",
+    "E057",
+    "E058",
+    "E059",
+    "E060",
+    "E061",
+    "E062",
+    "E063",
+    "E064",
+    "E065",
+    "E066",
+    "E067",
+    "E068",
+    "E069",
+    "E070",
+    "E071",
+    "E072",
+    "doi:10.1016/j.cub.2021.08.062",
+    "doi:10.1016/j.energy.2021.120467",
+    "doi:10.1016/j.gloenvcha.2016.05.009",
+    "doi:10.1016/s2542-5196(21)00081-4",
+    "doi:10.1016/s2542-5196(21)00278-3",
+    "doi:10.1038/s41558-021-01058-x",
+    "doi:10.1038/s43247-020-00065-8",
+    "doi:10.1111/gcb.15569",
+    "doi:10.1111/j.1461-0248.2005.00792.x",
+    "doi:10.1126/science.1097396",
+    "doi:10.1126/science.1151915",
+    "doi:10.1126/science.1155121",
+    "doi:10.1126/science.1185383",
+    "doi:10.1126/science.1187512",
+    "doi:10.1126/science.289.5477.284",
+    "doi:10.1126/science.289.5487.2068",
+    "doi:10.1146/annurev-financial-102620-103311",
+    "doi:10.1146/annurev-publhealth-012420-105026",
+    "doi:10.1641/0006-3568(2001)051[0933:teotwa]2.0.co;2",
+    "doi:10.3389/fpubh.2020.00014",
+    "doi:10.3390/ijerph18031112",
+    "doi:10.3390/insects12050440",
+    "doi:10.3390/su13031318",
+    "doi:10.5194/gmd-9-3461-2016"
+  ],
+  "content_sha256": "6cbb814a142a87846bf02b5bb767786cd14a77b89f60657e6af299e4c4bf91a5"
+}

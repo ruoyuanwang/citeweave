@@ -1,0 +1,16 @@
+{
+  "packet_id": "FP623de0344bbaef7925e2",
+  "judge_id": "feedback",
+  "decision": "revise",
+  "confidence": 0.99,
+  "reason": "The visible temporal evidence does not directly establish a directional shift from foundational physiological and biological studies toward applied areas.",
+  "evidence_ids": [
+    "E020",
+    "E067"
+  ],
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "suggesting a thematic evolution from foundational physiological and biological studies towards more applied areas",
+    "replacement_text": "describing temporal variation in frequent-keyword counts without establishing a directional shift from foundational to applied research [E020, E067]"
+  }
+}

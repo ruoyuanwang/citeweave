@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "dataset_id": "digital_twins_healthcare_2012_2024",
+  "condition": "structured_one_shot",
+  "evidence_sha256": "5ee578d978e6476086c056aedbaa10536b81f141c9c97429583b5f33f5ac458e",
+  "model": "deepseek-v4-pro",
+  "base_url": "https://api.deepseek.com",
+  "temperature": 0.1,
+  "seed": 42,
+  "max_tokens": 8000,
+  "report_language": "English",
+  "internal_review_policy": "Revision-only artifact. It must not be reused as an experimental evaluation.",
+  "external_evaluation_policy": "Use a separately instantiated external Judge with independent prompts and traces."
+}

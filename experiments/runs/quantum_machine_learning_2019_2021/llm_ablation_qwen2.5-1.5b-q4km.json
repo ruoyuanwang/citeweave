@@ -1,0 +1,97 @@
+{
+  "analysis_version": 2,
+  "paired_items": 30,
+  "graph_condition": "graph_rag",
+  "no_graph_condition": "no_graph",
+  "graph_metrics": {
+    "accuracy": 0.7666666666666667,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.2916666666666667,
+    "statement_claim_coverage": 0.9583333333333334,
+    "format_failure_rate": 0.23333333333333334,
+    "evidence_path_validity": 0.75
+  },
+  "no_graph_metrics": {
+    "accuracy": 0.2,
+    "unsupported_claim_rate": 1.0,
+    "structured_unsupported_answer_rate": 1.0,
+    "statement_claim_coverage": 0.4583333333333333,
+    "format_failure_rate": 0.8,
+    "evidence_path_validity": 0.0
+  },
+  "effects": {
+    "accuracy_difference": 0.5666666666666667,
+    "accuracy_difference_bootstrap_95_ci": [
+      0.39999999999999997,
+      0.7333333333333334
+    ],
+    "accuracy_difference_topic_stratified_bootstrap_95_ci": [
+      0.39999999999999997,
+      0.7333333333333334
+    ],
+    "unsupported_claim_rate_reduction": 1.0,
+    "unsupported_claim_rate_reduction_bootstrap_95_ci": [
+      1.0,
+      1.0
+    ],
+    "unsupported_claim_rate_reduction_topic_stratified_bootstrap_95_ci": [
+      1.0,
+      1.0
+    ]
+  },
+  "mcnemar_exact": {
+    "graph_only_correct": 17,
+    "no_graph_only_correct": 0,
+    "discordant_pairs": 17,
+    "two_sided_p_value": 1.52587890625e-05
+  },
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 42,
+    "strata": [
+      "quantum_machine_learning_2019_2021"
+    ]
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "graph_accuracy": 1.0,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.8
+    },
+    "citation": {
+      "items": 5,
+      "graph_accuracy": 0.4,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.2
+    },
+    "coauthorship": {
+      "items": 5,
+      "graph_accuracy": 0.4,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.2
+    },
+    "cocitation": {
+      "items": 5,
+      "graph_accuracy": 0.8,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.6000000000000001
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "graph_accuracy": 1.0,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.8
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "graph_accuracy": 1.0,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.8
+    }
+  },
+  "dataset_id": "quantum_machine_learning_2019_2021",
+  "model": "qwen2.5-1.5b-q4km",
+  "graph_run": "experiments\\runs\\quantum_machine_learning_2019_2021\\llm_graph_rag_qwen2.5-1.5b-q4km.json",
+  "no_graph_run": "experiments\\runs\\quantum_machine_learning_2019_2021\\llm_no_graph_qwen2.5-1.5b-q4km.json"
+}

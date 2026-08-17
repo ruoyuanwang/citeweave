@@ -8,13 +8,42 @@ from itertools import pairwise
 from pathlib import Path
 from typing import Any
 
-from .bulk_acquisition import _read_raw_page
-from .io import read_json, sha256_bytes, sha256_file, write_json
+from .bulk_acquisition import _fingerprint, _read_raw_page
+from .io import load_config, read_json, sha256_bytes, sha256_file, write_json
 from .models import HarvestManifest, ProjectPaths, SourceName
 
 
 def _check(name: str, passed: bool, detail: Any) -> dict[str, Any]:
     return {"name": name, "passed": bool(passed), "detail": detail}
+
+
+def _payload_items(source: SourceName, payload: dict[str, Any]) -> list[dict[str, Any]]:
+    if source == SourceName.crossref:
+        return list((payload.get("message") or {}).get("items") or [])
+    if source == SourceName.europe_pmc:
+        return list((payload.get("resultList") or {}).get("result") or [])
+    return list(payload.get("results") or [])
+
+
+def _payload_next_cursor(source: SourceName, payload: dict[str, Any]) -> str | None:
+    if source == SourceName.crossref:
+        return (payload.get("message") or {}).get("next-cursor")
+    if source == SourceName.europe_pmc:
+        return payload.get("nextCursorMark")
+    return (payload.get("meta") or {}).get("next_cursor")
+
+
+def _raw_identity(source: SourceName, item: dict[str, Any]) -> str:
+    if source == SourceName.crossref:
+        value = (item.get("DOI") or item.get("URL") or "").casefold()
+    elif source == SourceName.europe_pmc:
+        value = f"{item.get('source', '')}:{item.get('id', '')}".strip(":")
+    else:
+        value = str(item.get("id") or "")
+    if value:
+        return value
+    encoded = json.dumps(item, ensure_ascii=False, sort_keys=True, default=str).encode("utf-8")
+    return f"anonymous:{sha256_bytes(encoded)}"
 
 
 def verify_bulk_harvest(root: Path) -> dict[str, Any]:
@@ -32,20 +61,45 @@ def verify_bulk_harvest(root: Path) -> dict[str, Any]:
     harvest = HarvestManifest.model_validate(read_json(manifest_path))
     checks: list[dict[str, Any]] = []
 
+    config_path = paths.root / "project.yml"
+    config = load_config(config_path) if config_path.exists() else None
+    checks.append(
+        _check(
+            "protocol_fingerprint",
+            config is not None and _fingerprint(config) == harvest.query_fingerprint,
+            {
+                "project_config": str(config_path),
+                "config_present": config is not None,
+                "manifest_fingerprint": harvest.query_fingerprint,
+                "computed_fingerprint": _fingerprint(config) if config is not None else None,
+            },
+        )
+    )
+
     slices = sorted(harvest.slices, key=lambda item: item.date_from)
     coverage_errors: list[str] = []
     for previous, current in pairwise(slices):
         expected_next = date.fromisoformat(previous.date_to) + timedelta(days=1)
         if date.fromisoformat(current.date_from) != expected_next:
             coverage_errors.append(f"{previous.slice_id} -> {current.slice_id}")
+    expected_first = f"{config.protocol.year_from:04d}-01-01" if config else None
+    expected_last = f"{config.protocol.year_to:04d}-12-31" if config else None
+    boundary_complete = bool(
+        slices
+        and config is not None
+        and slices[0].date_from == expected_first
+        and slices[-1].date_to == expected_last
+    )
     checks.append(
         _check(
-            "non_overlapping_contiguous_slices",
-            bool(slices) and not coverage_errors,
+            "full_period_non_overlapping_contiguous_slices",
+            boundary_complete and not coverage_errors,
             {
                 "slices": len(slices),
                 "first": slices[0].date_from if slices else None,
                 "last": slices[-1].date_to if slices else None,
+                "expected_first": expected_first,
+                "expected_last": expected_last,
                 "errors": coverage_errors,
             },
         )
@@ -55,11 +109,28 @@ def verify_bulk_harvest(root: Path) -> dict[str, Any]:
     count_errors = [
         {
             "slice": item.slice_id,
-            "expected": item.expected_records,
+            "planned_expected": item.expected_records,
+            "cursor_snapshot_expected": item.cursor_snapshot_expected_records,
             "received": item.received_records,
         }
         for item in slices
-        if item.expected_records != item.received_records
+        if (
+            (
+                item.cursor_snapshot_expected_records
+                if item.cursor_snapshot_expected_records is not None
+                else item.expected_records
+            )
+            != item.received_records
+            and not (
+                harvest.source == SourceName.openalex
+                and item.cursor_exhausted
+                and any(
+                    f"OpenAlex cursor exhausted with count drift for {item.slice_id}"
+                    in warning
+                    for warning in harvest.warnings
+                )
+            )
+        )
     ]
     checks.append(
         _check(
@@ -71,35 +142,147 @@ def verify_bulk_harvest(root: Path) -> dict[str, Any]:
 
     page_errors: list[str] = []
     checked_pages = 0
-    for shard in slices:
-        expected_indices = list(range(1, len(shard.pages) + 1))
-        actual_indices = [page.page_index for page in shard.pages]
-        if actual_indices != expected_indices:
-            page_errors.append(f"{shard.slice_id}: page index gap")
-        if sum(page.records for page in shard.pages) != shard.received_records:
-            page_errors.append(f"{shard.slice_id}: page count mismatch")
-        for page in shard.pages:
-            path = paths.root / page.raw_path
-            if not path.exists():
-                page_errors.append(f"{page.raw_path}: missing")
-                continue
-            payload = _read_raw_page(path)
-            encoded = json.dumps(
-                payload,
-                ensure_ascii=False,
-                separators=(",", ":"),
-                default=str,
-            ).encode("utf-8")
-            if sha256_bytes(encoded) != page.raw_sha256:
-                page_errors.append(f"{page.raw_path}: hash mismatch")
-            if path.stat().st_size != page.bytes_compressed:
-                page_errors.append(f"{page.raw_path}: size mismatch")
-            checked_pages += 1
+    raw_seen_path = paths.audit / "harvest_verify_raw_seen.sqlite.tmp"
+    raw_seen_path.unlink(missing_ok=True)
+    raw_connection = sqlite3.connect(raw_seen_path)
+    raw_connection.execute("CREATE TABLE seen (record_id TEXT PRIMARY KEY)")
+    raw_records = 0
+    raw_unique = 0
+    archived_pages_checked = 0
+    try:
+        for shard in slices:
+            for restart in shard.restart_history:
+                archived_indices = list(range(1, len(restart.pages) + 1))
+                if [page.page_index for page in restart.pages] != archived_indices:
+                    page_errors.append(
+                        f"{shard.slice_id}: restart {restart.restart_index} page index gap"
+                    )
+                if sum(page.records for page in restart.pages) != restart.received_records:
+                    page_errors.append(
+                        f"{shard.slice_id}: restart {restart.restart_index} page count mismatch"
+                    )
+                archived_cursor = "*"
+                for page in restart.pages:
+                    if page.cursor_in != archived_cursor:
+                        page_errors.append(
+                            f"{shard.slice_id}: restart {restart.restart_index} "
+                            f"cursor chain mismatch at page {page.page_index}"
+                        )
+                    path = paths.root / page.raw_path
+                    if not path.exists():
+                        page_errors.append(f"{page.raw_path}: archived page missing")
+                        archived_cursor = page.cursor_out or ""
+                        continue
+                    try:
+                        payload = _read_raw_page(path)
+                        encoded = json.dumps(
+                            payload,
+                            ensure_ascii=False,
+                            separators=(",", ":"),
+                            default=str,
+                        ).encode("utf-8")
+                        if sha256_bytes(encoded) != page.raw_sha256:
+                            page_errors.append(f"{page.raw_path}: archived hash mismatch")
+                        if path.stat().st_size != page.bytes_compressed:
+                            page_errors.append(f"{page.raw_path}: archived size mismatch")
+                        if len(_payload_items(harvest.source, payload)) != page.records:
+                            page_errors.append(
+                                f"{page.raw_path}: archived payload item count mismatch"
+                            )
+                        if _payload_next_cursor(harvest.source, payload) != page.cursor_out:
+                            page_errors.append(
+                                f"{page.raw_path}: archived response cursor mismatch"
+                            )
+                    except (
+                        OSError,
+                        EOFError,
+                        gzip.BadGzipFile,
+                        UnicodeError,
+                        json.JSONDecodeError,
+                    ) as exc:
+                        page_errors.append(
+                            f"{page.raw_path}: archived unreadable ({type(exc).__name__})"
+                        )
+                    archived_cursor = page.cursor_out or ""
+                    archived_pages_checked += 1
+                if archived_cursor != restart.prior_cursor:
+                    page_errors.append(
+                        f"{shard.slice_id}: restart {restart.restart_index} "
+                        "prior cursor does not continue its archived page chain"
+                    )
+            expected_indices = list(range(1, len(shard.pages) + 1))
+            actual_indices = [page.page_index for page in shard.pages]
+            if actual_indices != expected_indices:
+                page_errors.append(f"{shard.slice_id}: page index gap")
+            if sum(page.records for page in shard.pages) != shard.received_records:
+                page_errors.append(f"{shard.slice_id}: page count mismatch")
+            expected_cursor = "*"
+            for page in shard.pages:
+                if page.cursor_in != expected_cursor:
+                    page_errors.append(
+                        f"{shard.slice_id}: cursor chain mismatch at page {page.page_index}"
+                    )
+                path = paths.root / page.raw_path
+                if not path.exists():
+                    page_errors.append(f"{page.raw_path}: missing")
+                    expected_cursor = page.cursor_out or ""
+                    continue
+                try:
+                    payload = _read_raw_page(path)
+                    encoded = json.dumps(
+                        payload,
+                        ensure_ascii=False,
+                        separators=(",", ":"),
+                        default=str,
+                    ).encode("utf-8")
+                    if sha256_bytes(encoded) != page.raw_sha256:
+                        page_errors.append(f"{page.raw_path}: hash mismatch")
+                    if path.stat().st_size != page.bytes_compressed:
+                        page_errors.append(f"{page.raw_path}: size mismatch")
+                    items = _payload_items(harvest.source, payload)
+                    if len(items) != page.records:
+                        page_errors.append(f"{page.raw_path}: payload item count mismatch")
+                    if _payload_next_cursor(harvest.source, payload) != page.cursor_out:
+                        page_errors.append(f"{page.raw_path}: response cursor mismatch")
+                    for item in items:
+                        raw_records += 1
+                        cursor = raw_connection.execute(
+                            "INSERT OR IGNORE INTO seen(record_id) VALUES (?)",
+                            (_raw_identity(harvest.source, item),),
+                        )
+                        raw_unique += int(cursor.rowcount > 0)
+                except (
+                    OSError,
+                    EOFError,
+                    gzip.BadGzipFile,
+                    UnicodeError,
+                    json.JSONDecodeError,
+                    sqlite3.Error,
+                ) as exc:
+                    page_errors.append(f"{page.raw_path}: unreadable ({type(exc).__name__})")
+                expected_cursor = page.cursor_out or ""
+                checked_pages += 1
+        raw_connection.commit()
+    finally:
+        raw_connection.close()
+        raw_seen_path.unlink(missing_ok=True)
+    raw_duplicates = raw_records - raw_unique
+    if raw_records != harvest.received_records:
+        page_errors.append("raw payload total does not match harvest.received_records")
+    if raw_unique != harvest.unique_records or raw_duplicates != harvest.duplicate_records:
+        page_errors.append("raw identity accounting does not match harvest deduplication totals")
     checks.append(
         _check(
             "raw_page_integrity",
             not page_errors and checked_pages == sum(len(item.pages) for item in slices),
-            {"checked_pages": checked_pages, "errors": page_errors},
+            {
+                "checked_pages": checked_pages,
+                "archived_pages_checked": archived_pages_checked,
+                "raw_records": raw_records,
+                "raw_unique": raw_unique,
+                "raw_duplicates": raw_duplicates,
+                "errors": page_errors,
+            },
         )
     )
 
@@ -193,11 +376,50 @@ def verify_bulk_harvest(root: Path) -> dict[str, Any]:
         )
     )
 
+    root_count_equal = harvest.root_expected_records == harvest.planned_expected_records
+    count_drift_documented = any(
+        "Count changed while planning" in warning for warning in harvest.warnings
+    )
+    cursor_drift_documented = any(
+        "Cursor snapshot count changed from planning" in warning
+        for warning in harvest.warnings
+    )
+    exhausted_count_drift_documented = any(
+        "OpenAlex cursor exhausted with count drift" in warning
+        for warning in harvest.warnings
+    )
     aggregate_pass = (
         harvest.status == "complete"
+        and (root_count_equal or count_drift_documented)
         and harvest.planned_expected_records == sum(item.expected_records for item in slices)
         and harvest.received_records == sum(item.received_records for item in slices)
-        and harvest.unique_records == harvest.planned_expected_records
+        and (
+            harvest.received_records == harvest.planned_expected_records
+            or cursor_drift_documented
+            or exhausted_count_drift_documented
+        )
+        and all(
+            item.status == "complete"
+            and item.cursor_exhausted
+            and (
+                item.received_records
+                == (
+                    item.cursor_snapshot_expected_records
+                    if item.cursor_snapshot_expected_records is not None
+                    else item.expected_records
+                )
+                or (
+                    harvest.source == SourceName.openalex
+                    and any(
+                        f"OpenAlex cursor exhausted with count drift for {item.slice_id}"
+                        in warning
+                        for warning in harvest.warnings
+                    )
+                )
+            )
+            for item in slices
+        )
+        and harvest.unique_records + harvest.duplicate_records == harvest.received_records
     )
     checks.append(
         _check(
@@ -207,6 +429,7 @@ def verify_bulk_harvest(root: Path) -> dict[str, Any]:
                 "status": harvest.status,
                 "root_expected": harvest.root_expected_records,
                 "planned_expected": harvest.planned_expected_records,
+                "cursor_snapshot_expected": harvest.cursor_snapshot_expected_records,
                 "received": harvest.received_records,
                 "unique": harvest.unique_records,
                 "duplicates": harvest.duplicate_records,

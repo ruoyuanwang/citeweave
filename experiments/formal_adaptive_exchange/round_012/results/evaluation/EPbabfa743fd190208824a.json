@@ -1,0 +1,10 @@
+{
+  "packet_id": "EPbabfa743fd190208824a",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The visible evidence states that the network does not contain the requested visible label, so the candidate's abstention is fully supported and conforms to the abstain-true contract.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "judge_id": "evaluation"
+}

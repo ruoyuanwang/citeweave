@@ -1,0 +1,64 @@
+{
+  "protocol_version": "formal-adaptive-v3-scoped-human-proxy",
+  "cases_path": "D:\\project\\bibagent\\experiments\\formal_adaptive_cases\\real_outputs.jsonl",
+  "cases_sha256": "7bd0d10197f4ec40281af002e93c9b1bf88339bbd482b2338cb8c545b8bd7566",
+  "reference_registry": "D:\\project\\bibagent\\experiments\\human_references.yml",
+  "reference_registry_sha256": "280eedb52fcf76055d2343c646f63c4143f79bea7c11d6399b4dc533eb8461bf",
+  "topic_sequence": [
+    "gnn_drug_discovery_2017_2023",
+    "crispr_extracellular_vesicles_2015_2022",
+    "machine_learning_climate_change_2008_2022",
+    "climate_change_risks_1990_2021",
+    "digital_twins_healthcare_2012_2024",
+    "plant_heat_drought_2008_2021",
+    "gene_editing_als_2004_2024",
+    "global_microplastics_2004_2019"
+  ],
+  "cases": 48,
+  "conditions": [
+    "always_review",
+    "static_review",
+    "adaptive_review"
+  ],
+  "formal_results_used": true,
+  "config": {
+    "protocol_version": "formal-adaptive-v3-scoped-human-proxy",
+    "feedback_rubric_version": "feedback-human-proxy-v3",
+    "evaluation_rubric_version": "adaptive-evaluation-v1",
+    "experiment_mode": "formal",
+    "seed": 42,
+    "minimum_confirmations": 2,
+    "auto_accept_threshold": 0.95,
+    "audit_rate": 0.1,
+    "static_detector_threshold": 0.5,
+    "static_review_severities": [
+      "high",
+      "critical"
+    ]
+  },
+  "config_sha256": "532bcdccca5ffc1db9d5e27757bc6b67f05137bc3da8e5bd26d9d4c3682cd459",
+  "judge_separation": {
+    "feedback_updates_online_memory": true,
+    "evaluation_updates_online_memory": false
+  },
+  "human_proxy_capability": {
+    "experiment_only": true,
+    "active_only_after_visible_risk_notice": true,
+    "visible_packet_only": true,
+    "flagged_risk_only": true,
+    "candidate_visibility": "flagged_excerpt_only",
+    "edit_target_bound_to_flagged_text": true,
+    "maximum_flagged_text_characters": 500,
+    "may_search_for_additional_issues": false,
+    "may_use_model_knowledge_or_model_scale_synthesis": false,
+    "permitted_local_edits": [
+      "replace_span",
+      "delete_span",
+      "append_caveat"
+    ],
+    "maximum_edits_per_intervention": 1,
+    "maximum_edit_characters": 500,
+    "external_tools_or_retrieval": false,
+    "full_artifact_rewrite": false
+  }
+}

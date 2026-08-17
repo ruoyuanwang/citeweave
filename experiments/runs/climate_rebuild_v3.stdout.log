@@ -1,0 +1,2418 @@
+{
+  "dry_run": false,
+  "registry": "D:\\project\\bibagent\\experiments\\formal_datasets_openalex_title_abstract.yml",
+  "frozen_dataset_count": 8,
+  "selected_dataset_ids": [
+    "climate_change_risks_1990_2021"
+  ],
+  "formal_graph_run_id": "formal_v2_nonthinking_20260806",
+  "text_profile": "D:\\project\\bibagent\\experiments\\provider_profiles\\deepseek_v4_pro.json",
+  "planned_steps": [
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "visualize",
+      "kind": "pipeline",
+      "reason": "visualization artifact is missing",
+      "command": [
+        "D:\\project\\bibagent\\.venv\\Scripts\\python.exe",
+        "D:\\project\\bibagent\\scripts\\run_formal_pipeline.py",
+        "--registry",
+        "D:\\project\\bibagent\\experiments\\formal_datasets_openalex_title_abstract.yml",
+        "--dataset",
+        "climate_change_risks_1990_2021",
+        "--stage",
+        "visualize"
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "evidence_and_graph_grounding",
+      "kind": "pipeline",
+      "reason": "evidence and graph-grounding artifacts are missing",
+      "command": [
+        "D:\\project\\bibagent\\.venv\\Scripts\\python.exe",
+        "D:\\project\\bibagent\\scripts\\run_formal_pipeline.py",
+        "--registry",
+        "D:\\project\\bibagent\\experiments\\formal_datasets_openalex_title_abstract.yml",
+        "--dataset",
+        "climate_change_risks_1990_2021",
+        "--stage",
+        "evidence"
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "report:structured_one_shot",
+      "kind": "report",
+      "reason": "report condition is missing or resumable incomplete",
+      "command": [
+        "D:\\project\\bibagent\\.venv\\Scripts\\python.exe",
+        "D:\\project\\bibagent\\scripts\\run_report_conditions.py",
+        "--dataset-id",
+        "climate_change_risks_1990_2021",
+        "--evidence",
+        "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\evidence\\evidence_items.json",
+        "--output-root",
+        "D:\\project\\bibagent\\experiments\\formal_reports",
+        "--condition",
+        "structured_one_shot",
+        "--model",
+        "deepseek-v4-pro",
+        "--resume"
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "report:citeweave_full",
+      "kind": "report",
+      "reason": "report condition is missing or resumable incomplete",
+      "command": [
+        "D:\\project\\bibagent\\.venv\\Scripts\\python.exe",
+        "D:\\project\\bibagent\\scripts\\run_report_conditions.py",
+        "--dataset-id",
+        "climate_change_risks_1990_2021",
+        "--evidence",
+        "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\evidence\\evidence_items.json",
+        "--output-root",
+        "D:\\project\\bibagent\\experiments\\formal_reports",
+        "--condition",
+        "citeweave_full",
+        "--model",
+        "deepseek-v4-pro",
+        "--resume"
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "graph:no_rag",
+      "kind": "graph_text",
+      "reason": "graph text condition is missing or resumable incomplete",
+      "command": [
+        "D:\\project\\bibagent\\.venv\\Scripts\\python.exe",
+        "D:\\project\\bibagent\\scripts\\run_formal_graph_experiment.py",
+        "--dataset",
+        "climate_change_risks_1990_2021",
+        "--condition",
+        "no_rag",
+        "--text-profile",
+        "D:\\project\\bibagent\\experiments\\provider_profiles\\deepseek_v4_pro.json",
+        "--run-id",
+        "formal_v2_nonthinking_20260806",
+        "--execute"
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "graph:flat_structured",
+      "kind": "graph_text",
+      "reason": "graph text condition is missing or resumable incomplete",
+      "command": [
+        "D:\\project\\bibagent\\.venv\\Scripts\\python.exe",
+        "D:\\project\\bibagent\\scripts\\run_formal_graph_experiment.py",
+        "--dataset",
+        "climate_change_risks_1990_2021",
+        "--condition",
+        "flat_structured",
+        "--text-profile",
+        "D:\\project\\bibagent\\experiments\\provider_profiles\\deepseek_v4_pro.json",
+        "--run-id",
+        "formal_v2_nonthinking_20260806",
+        "--execute"
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "graph:graph_rag",
+      "kind": "graph_text",
+      "reason": "graph text condition is missing or resumable incomplete",
+      "command": [
+        "D:\\project\\bibagent\\.venv\\Scripts\\python.exe",
+        "D:\\project\\bibagent\\scripts\\run_formal_graph_experiment.py",
+        "--dataset",
+        "climate_change_risks_1990_2021",
+        "--condition",
+        "graph_rag",
+        "--text-profile",
+        "D:\\project\\bibagent\\experiments\\provider_profiles\\deepseek_v4_pro.json",
+        "--run-id",
+        "formal_v2_nonthinking_20260806",
+        "--execute"
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "vlm_packet",
+      "kind": "vlm_packet",
+      "reason": "Figure/VLM packet is missing",
+      "command": [
+        "D:\\project\\bibagent\\.venv\\Scripts\\python.exe",
+        "D:\\project\\bibagent\\scripts\\prepare_codex_figure_vlm_packet.py",
+        "--dataset",
+        "climate_change_risks_1990_2021",
+        "--workspace-root",
+        "D:\\project\\bibagent\\experiments\\formal_workspaces",
+        "--output-root",
+        "D:\\project\\bibagent\\experiments\\vision_packets"
+      ]
+    }
+  ],
+  "verified_skips": [
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "stage": "process"
+    }
+  ],
+  "vlm_output_policy": "Packets only; Figure/VLM answers remain a Codex visual-subagent task.",
+  "execution_preflight": "A dry run does not claim harvest acceptance. A real run verifies every selected harvest before starting its first downstream subprocess."
+}
+[
+  {
+    "dataset_id": "climate_change_risks_1990_2021",
+    "workspace": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+    "harvest_acceptance": {
+      "project_root": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+      "passed": true,
+      "passed_checks": 6,
+      "total_checks": 6,
+      "checks": [
+        {
+          "name": "protocol_fingerprint",
+          "passed": true,
+          "detail": {
+            "project_config": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\project.yml",
+            "config_present": true,
+            "manifest_fingerprint": "c4249c1d6e5677636c0d422fb9a99225577e8b01d114d290d0ece52e6d16af02",
+            "computed_fingerprint": "c4249c1d6e5677636c0d422fb9a99225577e8b01d114d290d0ece52e6d16af02"
+          }
+        },
+        {
+          "name": "full_period_non_overlapping_contiguous_slices",
+          "passed": true,
+          "detail": {
+            "slices": 10,
+            "first": "1990-01-01",
+            "last": "2021-12-31",
+            "expected_first": "1990-01-01",
+            "expected_last": "2021-12-31",
+            "errors": []
+          }
+        },
+        {
+          "name": "slice_completeness",
+          "passed": true,
+          "detail": {
+            "incomplete": [],
+            "count_errors": []
+          }
+        },
+        {
+          "name": "raw_page_integrity",
+          "passed": true,
+          "detail": {
+            "checked_pages": 1534,
+            "archived_pages_checked": 0,
+            "raw_records": 152865,
+            "raw_unique": 152030,
+            "raw_duplicates": 835,
+            "errors": []
+          }
+        },
+        {
+          "name": "staged_corpus_integrity",
+          "passed": true,
+          "detail": {
+            "path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\staged\\source_records.jsonl.gz",
+            "lines": 152030,
+            "unique_ids": 152030,
+            "expected_lines": 152030,
+            "profile": {
+              "records": 152030,
+              "with_doi": 122802,
+              "with_title": 151968,
+              "with_authors": 150987,
+              "with_abstract": 113614,
+              "with_references": 110887,
+              "reference_links": 5590438
+            },
+            "error": null
+          }
+        },
+        {
+          "name": "aggregate_completeness",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "root_expected": 152599,
+            "planned_expected": 152599,
+            "cursor_snapshot_expected": 152599,
+            "received": 152865,
+            "unique": 152030,
+            "duplicates": 835
+          }
+        }
+      ]
+    },
+    "processing_acceptance": {
+      "project_root": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+      "passed": true,
+      "passed_checks": 6,
+      "total_checks": 6,
+      "checks": [
+        {
+          "name": "processing_complete",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "records": 152030,
+            "batches": 153
+          }
+        },
+        {
+          "name": "input_count_contract",
+          "passed": true,
+          "detail": {
+            "processed": 152030,
+            "harvest_unique": 152030
+          }
+        },
+        {
+          "name": "canonical_file_integrity",
+          "passed": true,
+          "detail": {
+            "missing": [],
+            "hash_errors": []
+          }
+        },
+        {
+          "name": "primary_and_foreign_key_integrity",
+          "passed": true,
+          "detail": {
+            "uniqueness": {},
+            "foreign_key_orphans": {
+              "authorship_work": 0,
+              "authorship_author": 0,
+              "keyword_work": 0,
+              "reference_citing_work": 0,
+              "provenance_work": 0
+            }
+          }
+        },
+        {
+          "name": "processing_quality_gate",
+          "passed": true,
+          "detail": {
+            "version": 1,
+            "created_at": "2026-08-06T14:06:41.074329+00:00",
+            "passed": true,
+            "input_records": 152030,
+            "canonical_records": 151562,
+            "duplicates_removed": 467,
+            "scope_filter": {
+              "protocol_year_from": 1990,
+              "protocol_year_to": 2021,
+              "out_of_scope_in_canonical": 0,
+              "excluded_source_records": 0,
+              "included_source_records": 152030,
+              "input_records_accounted": 152030,
+              "excluded_records_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\quality\\excluded_records.parquet"
+            },
+            "table_rows": {
+              "works": 151562,
+              "authors": 303794,
+              "institutions": 22482,
+              "authorships": 734319,
+              "sources": 16926,
+              "keywords": 2015384,
+              "topics": 406393,
+              "references": 5588721,
+              "provenance": 152030,
+              "duplicates": 467
+            },
+            "field_coverage": {
+              "doi": {
+                "present": 122462,
+                "ratio": 0.807999
+              },
+              "title": {
+                "present": 151500,
+                "ratio": 0.999591
+              },
+              "abstract": {
+                "present": 113256,
+                "ratio": 0.747259
+              },
+              "year": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "publication_date": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "document_type": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "language": {
+                "present": 150806,
+                "ratio": 0.995012
+              },
+              "source_id": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "publisher": {
+                "present": 120927,
+                "ratio": 0.797871
+              },
+              "cited_by_count": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "reference_count": {
+                "present": 151562,
+                "ratio": 1.0
+              }
+            },
+            "year_bounds": {
+              "minimum": 1990,
+              "maximum": 2021
+            },
+            "foreign_key_orphans": {
+              "authorship_work": 0,
+              "authorship_author": 0,
+              "authorship_institution": 0,
+              "keyword_work": 0,
+              "topic_work": 0,
+              "reference_citing_work": 0,
+              "provenance_work": 0,
+              "work_source": 0
+            },
+            "primary_key_uniqueness": {
+              "works": {
+                "rows": 151562,
+                "distinct_ids": 151562
+              },
+              "authors": {
+                "rows": 303794,
+                "distinct_ids": 303794
+              },
+              "institutions": {
+                "rows": 22482,
+                "distinct_ids": 22482
+              },
+              "sources": {
+                "rows": 16926,
+                "distinct_ids": 16926
+              }
+            },
+            "rules": {
+              "doi": "lowercase DOI, resolver prefix removed, invalid DOI stored as null",
+              "text": "HTML removed, Unicode NFKC normalized, whitespace collapsed",
+              "deduplication": "exact normalized DOI; otherwise exact normalized title of at least 20 characters + year; short or missing titles are not auto-merged; winner selected by metadata completeness with deterministic tie-break",
+              "author_identity": "ORCID first; otherwise source identifier where available; Crossref fallback uses normalized name + primary normalized affiliation",
+              "relationships": "all loser work identifiers remapped to the retained work",
+              "year_scope": "canonical publication year must fall inside the protocol range; other source records are retained in the exclusion ledger",
+              "statistics": "all rows, no sampling",
+              "networks": "full occurrence counts followed by bounded candidate-first expansion"
+            },
+            "paths": {
+              "canonical": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\canonical",
+              "visualization": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\canonical\\visualization"
+            },
+            "keyword_derivation": {
+              "applied": false,
+              "reason": "source_keyword_coverage_sufficient",
+              "source_coverage": 0.999974,
+              "derived_rows": 0
+            }
+          }
+        },
+        {
+          "name": "visualization_ready_contract",
+          "passed": true,
+          "detail": {
+            "missing": [],
+            "integrity_errors": [],
+            "processing_contract_matches": true,
+            "rows": {
+              "annual_output": 32,
+              "document_types": 1,
+              "languages": 61,
+              "source_productivity": 16926,
+              "author_productivity": 303794,
+              "institution_productivity": 22482,
+              "keyword_occurrences": 19166,
+              "topic_occurrences": 3439,
+              "reference_impact": 2009615,
+              "coauthor_edges": 6602,
+              "institution_collaboration_edges": 77148,
+              "keyword_cooccurrence_edges": 116671,
+              "cocitation_edges": 122381,
+              "direct_citation_edges": 22237
+            }
+          }
+        }
+      ],
+      "independent_profile": {
+        "table_rows": {
+          "works": 151562,
+          "authors": 303794,
+          "institutions": 22482,
+          "authorships": 734319,
+          "sources": 16926,
+          "keywords": 2015384,
+          "topics": 406393,
+          "references": 5588721,
+          "provenance": 152030,
+          "duplicates": 467
+        }
+      }
+    },
+    "visualization": {
+      "version": 1,
+      "project": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+      "elapsed_seconds": 26.894,
+      "policy": {
+        "mode": "auto",
+        "max_display_nodes": 72,
+        "label_budget": 22,
+        "candidate_multiplier": 6,
+        "max_candidate_nodes": 640,
+        "max_edges_per_node": 4,
+        "max_display_clusters": 10,
+        "layout_restarts": 4,
+        "layout_iterations": 700,
+        "layout_algorithm": "vos",
+        "min_cluster_size": 3,
+        "counting_method": "full",
+        "dpi": 240
+      },
+      "scalability": {
+        "canonical_relations_loaded_as_full_pandas_tables": false,
+        "full_adjacency_matrix_materialized": false,
+        "descriptive_statistics": "DuckDB scans full Parquet corpus",
+        "network_maps": "candidate-first sparse edges; displayed graph is bounded"
+      },
+      "networks": {
+        "coauthorship": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 30,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 431,
+          "candidate_edges": 4552,
+          "displayed_nodes": 60,
+          "displayed_edges": 149,
+          "displayed_clusters": 10,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.7750692327886975,
+          "weighted_edge_length": 0.02607393922428293,
+          "within_between_distance_ratio": 0.0,
+          "layout_score": 0.06482740086371781,
+          "selected_seed": 1051.0
+        },
+        "institution_collaboration": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 145,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 432,
+          "candidate_edges": 47564,
+          "displayed_nodes": 72,
+          "displayed_edges": 192,
+          "displayed_clusters": 7,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.25469007131828164,
+          "weighted_edge_length": 0.002451613426959922,
+          "within_between_distance_ratio": 0.30149775481345314,
+          "layout_score": 0.10563544343690995,
+          "selected_seed": 139.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        },
+        "keyword_cooccurrence": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 513,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 432,
+          "candidate_edges": 65541,
+          "displayed_nodes": 72,
+          "displayed_edges": 196,
+          "displayed_clusters": 7,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.3075785512468182,
+          "weighted_edge_length": 0.0015343998797395248,
+          "within_between_distance_ratio": 0.34768791135730615,
+          "layout_score": 0.12121970084927228,
+          "selected_seed": 3263.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        },
+        "cocitation": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 261,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 432,
+          "candidate_edges": 65280,
+          "displayed_nodes": 72,
+          "displayed_edges": 192,
+          "displayed_clusters": 5,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.2224349368660272,
+          "weighted_edge_length": 0.0020150137745772877,
+          "within_between_distance_ratio": 0.2621116457300428,
+          "layout_score": 0.09177025433689148,
+          "selected_seed": 2351.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        },
+        "citation": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 456,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 133,
+          "candidate_edges": 123,
+          "displayed_nodes": 60,
+          "displayed_edges": 55,
+          "displayed_clusters": 10,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.35541510873339166,
+          "weighted_edge_length": 0.0002683013306062376,
+          "within_between_distance_ratio": 0.40810917237252964,
+          "layout_score": 0.1404718084790347,
+          "selected_seed": 430.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        },
+        "bibliographic_coupling": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 10,
+          "eligible_items": 407,
+          "candidate_nodes_with_links": 407,
+          "candidate_edges": 4663,
+          "displayed_nodes": 72,
+          "displayed_edges": 197,
+          "displayed_clusters": 8,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2,
+            "maximum_reference_document_frequency": 87,
+            "matrix_materialized": false,
+            "construction": "candidate documents first, then sparse shared-reference self-join"
+          },
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.40977510247803145,
+          "weighted_edge_length": 0.004770085559888795,
+          "within_between_distance_ratio": 0.3243705723493971,
+          "layout_score": 0.12257001238860948,
+          "selected_seed": 2667.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        }
+      },
+      "figures": [
+        {
+          "name": "annual_publications",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\annual_publications.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\annual_publications.svg",
+          "png_sha256": "9bb41d60d98377155e89430436e3d68e5f2c092f11f4a57a2c875362fb7673f8",
+          "svg_sha256": "b3221377e7132bc1caacd515baa22ea91f4d5c69161fc41169650cee27658d1b",
+          "width_px": 2760,
+          "height_px": 1488,
+          "facts": {
+            "years": [
+              1990,
+              1991,
+              1992,
+              1993,
+              1994,
+              1995,
+              1996,
+              1997,
+              1998,
+              1999,
+              2000,
+              2001,
+              2002,
+              2003,
+              2004,
+              2005,
+              2006,
+              2007,
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021
+            ],
+            "peak_year": 2021,
+            "peak_documents": 19170
+          }
+        },
+        {
+          "name": "top_sources",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\top_sources.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\top_sources.svg",
+          "png_sha256": "89096afaaa33359f77d7d24b79a6b6f481c5c959a2e6d75e2ddddddbda365782",
+          "svg_sha256": "8cab706b54243c39c2cdc3a6564b6c7ac06f0c8f8e85d73678984f3ea26a60b0",
+          "width_px": 2688,
+          "height_px": 1824,
+          "facts": {
+            "displayed": 15,
+            "top_label": "Climatic Change",
+            "top_value": 2093
+          }
+        },
+        {
+          "name": "top_authors",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\top_authors.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\top_authors.svg",
+          "png_sha256": "09d05c1a003fc532d4c865129d41e13f0fa57d78391b4976f539347bbe96b183",
+          "svg_sha256": "7db0ebd0613101b6b2df39807bbd34a7c2e45efc69c8ed162547766ead81ae0f",
+          "width_px": 2688,
+          "height_px": 1824,
+          "facts": {
+            "displayed": 15,
+            "top_label": "AGB Poore",
+            "top_value": 5808
+          }
+        },
+        {
+          "name": "top_institutions",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\top_institutions.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\top_institutions.svg",
+          "png_sha256": "161d8a69a544dd64a23f6b5d94126ec116d096e970a18b65d5a78f1c2b3eb4e2",
+          "svg_sha256": "96248aa5d67462a2643b2ecc586813f87d8a93ed3f5dc3036a363db9243a15ab",
+          "width_px": 2688,
+          "height_px": 1824,
+          "facts": {
+            "displayed": 15,
+            "top_label": "Chinese Academy of Sciences",
+            "top_value": 3468
+          }
+        },
+        {
+          "name": "document_types",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\document_types.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\document_types.svg",
+          "png_sha256": "a5e27f3976c4e15e3ef426753a65c12d114695712f1a900659d3b36c371a9d6f",
+          "svg_sha256": "84dda2ca0aecf37c439fad379698066d4d343821aaf35f323ee154caaa3bc3bc",
+          "width_px": 2520,
+          "height_px": 1488,
+          "facts": {
+            "displayed_categories": 1,
+            "total_documents": 151562
+          }
+        },
+        {
+          "name": "citation_distribution",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\citation_distribution.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\citation_distribution.svg",
+          "png_sha256": "009dd182389d3349ff028b7f1450abdd8d619e9b6d5cbab754cdce5705e7d8fc",
+          "svg_sha256": "103db0861070ec1c12e2de6296fcb3b50d5c353272256b457e08b5861a00e7de",
+          "width_px": 2592,
+          "height_px": 1488,
+          "facts": {
+            "documents": 151562,
+            "mean": 49.56335361106346,
+            "median": 14.0,
+            "maximum": 22581,
+            "zero_cited": 29384,
+            "display_cap_p98": 352.0
+          }
+        },
+        {
+          "name": "top_cited_documents",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\top_cited_documents.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\top_cited_documents.svg",
+          "png_sha256": "5ac2f6d10be464f4d5529032edb07d8e57b13860bca77c93532085a6b8d3b6c7",
+          "svg_sha256": "ee43d9344dda5c2f4b564fa600535be634337c371f602e97d59e002744aaf08f",
+          "width_px": 2688,
+          "height_px": 1824,
+          "facts": {
+            "displayed": 15,
+            "top_label": "Home visits: a strategy to improve newborn survival -бн",
+            "top_value": 22581
+          }
+        },
+        {
+          "name": "bradford_sources",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\bradford_sources.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\bradford_sources.svg",
+          "png_sha256": "a4dc0e5f8da8ca934e3214982947d66b60706264e5771e1b2b08d74e4db86dcd",
+          "svg_sha256": "cc9db2fb055f99960523dcb5e9ea5bd69eed7e79bd29e34831cd5828e4da1a8d",
+          "width_px": 2592,
+          "height_px": 1512,
+          "facts": {
+            "sources": 16925,
+            "zone_1_sources": 114
+          }
+        },
+        {
+          "name": "keyword_trends",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\keyword_trends.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\keyword_trends.svg",
+          "png_sha256": "5b0e8726d78723d06f7ef432456c762863e879e4e18a5e75f208ce88ca435765",
+          "svg_sha256": "066bb649ec4f972974b3c750eadc280d66d3a4608bf14b8b1cbecce6968c8b85",
+          "width_px": 2832,
+          "height_px": 1848,
+          "facts": {
+            "keywords": 15,
+            "years": [
+              1990,
+              1991,
+              1992,
+              1993,
+              1994,
+              1995,
+              1996,
+              1997,
+              1998,
+              1999,
+              2000,
+              2001,
+              2002,
+              2003,
+              2004,
+              2005,
+              2006,
+              2007,
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021
+            ]
+          }
+        },
+        {
+          "name": "network_coauthorship",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_coauthorship.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_coauthorship.svg",
+          "png_sha256": "d06e4484f1fd4f41d82102d860990a8b8d030df79c5b99495f616f211d54865d",
+          "svg_sha256": "d3312757c913364c0dd5a136b4067d57164a20b9ffd190540215263230fbfe28",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 30,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 431,
+            "candidate_edges": 4552,
+            "displayed_nodes": 60,
+            "displayed_edges": 149,
+            "displayed_clusters": 10,
+            "maximum_display_clusters": 10,
+            "maximum_display_nodes": 60,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.7750692327886975,
+            "weighted_edge_length": 0.02607393922428293,
+            "within_between_distance_ratio": 0.0,
+            "layout_score": 0.06482740086371781,
+            "selected_seed": 1051.0,
+            "labels": 16,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_institution_collaboration",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_institution_collaboration.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_institution_collaboration.svg",
+          "png_sha256": "0f3f0fb7d42d323f608a65dc263eae990238b7afa93d52df358ac53533474637",
+          "svg_sha256": "07e0f67a4feb37ebe652eb921c715d592a3e0d5e6b1f9af67ffdf6760a0be27d",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 145,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 47564,
+            "displayed_nodes": 72,
+            "displayed_edges": 192,
+            "displayed_clusters": 7,
+            "maximum_display_clusters": 10,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.25469007131828164,
+            "weighted_edge_length": 0.002451613426959922,
+            "within_between_distance_ratio": 0.30149775481345314,
+            "layout_score": 0.10563544343690995,
+            "selected_seed": 139.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 18,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_keyword_cooccurrence",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_keyword_cooccurrence.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_keyword_cooccurrence.svg",
+          "png_sha256": "cfe59fea5ae6b546113bbb4935d0c4bc1d3f6603ef043e485cf3325873768eb7",
+          "svg_sha256": "6cbe37fbff7e4e2e253909a81192e83a33754b8a3541a0cce04c40ef372f2df6",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 513,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 65541,
+            "displayed_nodes": 72,
+            "displayed_edges": 196,
+            "displayed_clusters": 7,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.3075785512468182,
+            "weighted_edge_length": 0.0015343998797395248,
+            "within_between_distance_ratio": 0.34768791135730615,
+            "layout_score": 0.12121970084927228,
+            "selected_seed": 3263.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 20,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_cocitation",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_cocitation.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_cocitation.svg",
+          "png_sha256": "a332ced4991014d4bdcfcd139d8aef98cdc12e2917d7238ded28d471aa34fe55",
+          "svg_sha256": "cbccf97b9f898a06dea002042000c037f670f5e3b690cfd7a5fcd7f0774f5998",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 261,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 65280,
+            "displayed_nodes": 72,
+            "displayed_edges": 192,
+            "displayed_clusters": 5,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.2224349368660272,
+            "weighted_edge_length": 0.0020150137745772877,
+            "within_between_distance_ratio": 0.2621116457300428,
+            "layout_score": 0.09177025433689148,
+            "selected_seed": 2351.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 12,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_citation",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_citation.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_citation.svg",
+          "png_sha256": "9aa8697a51e916e72b6b15885e171673894c7d00cc9d33ceee0f68141a1b1e10",
+          "svg_sha256": "037b3e3e75b6fd367129755f8153f24f38daa7865ac686adefa7492a0778b506",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 456,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 133,
+            "candidate_edges": 123,
+            "displayed_nodes": 60,
+            "displayed_edges": 55,
+            "displayed_clusters": 10,
+            "maximum_display_clusters": 10,
+            "maximum_display_nodes": 60,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.35541510873339166,
+            "weighted_edge_length": 0.0002683013306062376,
+            "within_between_distance_ratio": 0.40810917237252964,
+            "layout_score": 0.1404718084790347,
+            "selected_seed": 430.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 12,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_bibliographic_coupling",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_bibliographic_coupling.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_bibliographic_coupling.svg",
+          "png_sha256": "d839dac0234ca20f61bec3f93666e24612f2d13b1584c79ec74a94b82e443fec",
+          "svg_sha256": "3516ad0518ebc78fe914f9b6948c2ad452608b5e12a2ef1c6af7837011c15969",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 10,
+            "eligible_items": 407,
+            "candidate_nodes_with_links": 407,
+            "candidate_edges": 4663,
+            "displayed_nodes": 72,
+            "displayed_edges": 197,
+            "displayed_clusters": 8,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "sparse_construction": {
+              "candidate_documents": 432,
+              "minimum_references_per_document": 5,
+              "minimum_shared_references": 2,
+              "maximum_reference_document_frequency": 87,
+              "matrix_materialized": false,
+              "construction": "candidate documents first, then sparse shared-reference self-join"
+            },
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.40977510247803145,
+            "weighted_edge_length": 0.004770085559888795,
+            "within_between_distance_ratio": 0.3243705723493971,
+            "layout_score": 0.12257001238860948,
+            "selected_seed": 2667.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 12,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_keyword_overlay",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_keyword_overlay.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_keyword_overlay.svg",
+          "png_sha256": "0b56d15cd0834ec0f2f9382583c495d50c05df920ca0ea13978a5b558fc4af60",
+          "svg_sha256": "9796e2f0f7e839d5e980815486f5d615b918bc37aa204697c1a9dda9b54bbb7e",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 513,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 65541,
+            "displayed_nodes": 72,
+            "displayed_edges": 196,
+            "displayed_clusters": 7,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "year_min": 2013.5814268512945,
+            "year_max": 2016.8631096088845,
+            "labels": 20,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0
+          }
+        },
+        {
+          "name": "network_keyword_density",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_keyword_density.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_keyword_density.svg",
+          "png_sha256": "5e8a0e17cca932f018f65c31fadfdd0b7f46b373ffe0c6fa6791260a32ff27bc",
+          "svg_sha256": "fafbaabcc4a5b0eb730174ad2e3d51278e4d6d9b6adf0ff2a4576310ba7cc0e6",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 513,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 65541,
+            "displayed_nodes": 72,
+            "displayed_edges": 196,
+            "displayed_clusters": 7,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "density_grid": [
+              260,
+              190
+            ],
+            "gaussian_sigma": 8,
+            "density_weight": "log(1 + occurrence), gamma 0.62",
+            "labels": 18,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0
+          }
+        }
+      ],
+      "figure_count": 17
+    },
+    "visualization_acceptance": {
+      "passed": true,
+      "checks": {
+        "manifest_exists": true,
+        "minimum_figure_count": true,
+        "png_svg_pairs_valid": true,
+        "no_blank_figures": true,
+        "expected_networks_rendered": true,
+        "all_networks_bounded": true,
+        "all_networks_sparse": true,
+        "network_methods_exported": true,
+        "layout_overlap_bounded": true
+      },
+      "figure_count": 17,
+      "rendered_networks": [
+        "bibliographic_coupling",
+        "citation",
+        "coauthorship",
+        "cocitation",
+        "institution_collaboration",
+        "keyword_cooccurrence"
+      ],
+      "expected_networks": [
+        "bibliographic_coupling",
+        "citation",
+        "coauthorship",
+        "cocitation",
+        "institution_collaboration",
+        "keyword_cooccurrence"
+      ],
+      "images": [
+        {
+          "name": "annual_publications",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9381
+        },
+        {
+          "name": "top_sources",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9449
+        },
+        {
+          "name": "top_authors",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9399
+        },
+        {
+          "name": "top_institutions",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9438
+        },
+        {
+          "name": "document_types",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.93
+        },
+        {
+          "name": "citation_distribution",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9375
+        },
+        {
+          "name": "top_cited_documents",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9451
+        },
+        {
+          "name": "bradford_sources",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9373
+        },
+        {
+          "name": "keyword_trends",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9445
+        },
+        {
+          "name": "network_coauthorship",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.872
+        },
+        {
+          "name": "network_institution_collaboration",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8881
+        },
+        {
+          "name": "network_keyword_cooccurrence",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8378
+        },
+        {
+          "name": "network_cocitation",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.886
+        },
+        {
+          "name": "network_citation",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8398
+        },
+        {
+          "name": "network_bibliographic_coupling",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8903
+        },
+        {
+          "name": "network_keyword_overlay",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8868
+        },
+        {
+          "name": "network_keyword_density",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9469
+        }
+      ],
+      "networks": {
+        "coauthorship": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "institution_collaboration": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "keyword_cooccurrence": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "cocitation": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "citation": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "bibliographic_coupling": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        }
+      },
+      "note": "VLM review is deliberately external to this automated acceptance stage."
+    }
+  }
+]
+[
+  {
+    "dataset_id": "climate_change_risks_1990_2021",
+    "workspace": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+    "harvest_acceptance": {
+      "project_root": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+      "passed": true,
+      "passed_checks": 6,
+      "total_checks": 6,
+      "checks": [
+        {
+          "name": "protocol_fingerprint",
+          "passed": true,
+          "detail": {
+            "project_config": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\project.yml",
+            "config_present": true,
+            "manifest_fingerprint": "c4249c1d6e5677636c0d422fb9a99225577e8b01d114d290d0ece52e6d16af02",
+            "computed_fingerprint": "c4249c1d6e5677636c0d422fb9a99225577e8b01d114d290d0ece52e6d16af02"
+          }
+        },
+        {
+          "name": "full_period_non_overlapping_contiguous_slices",
+          "passed": true,
+          "detail": {
+            "slices": 10,
+            "first": "1990-01-01",
+            "last": "2021-12-31",
+            "expected_first": "1990-01-01",
+            "expected_last": "2021-12-31",
+            "errors": []
+          }
+        },
+        {
+          "name": "slice_completeness",
+          "passed": true,
+          "detail": {
+            "incomplete": [],
+            "count_errors": []
+          }
+        },
+        {
+          "name": "raw_page_integrity",
+          "passed": true,
+          "detail": {
+            "checked_pages": 1534,
+            "archived_pages_checked": 0,
+            "raw_records": 152865,
+            "raw_unique": 152030,
+            "raw_duplicates": 835,
+            "errors": []
+          }
+        },
+        {
+          "name": "staged_corpus_integrity",
+          "passed": true,
+          "detail": {
+            "path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\staged\\source_records.jsonl.gz",
+            "lines": 152030,
+            "unique_ids": 152030,
+            "expected_lines": 152030,
+            "profile": {
+              "records": 152030,
+              "with_doi": 122802,
+              "with_title": 151968,
+              "with_authors": 150987,
+              "with_abstract": 113614,
+              "with_references": 110887,
+              "reference_links": 5590438
+            },
+            "error": null
+          }
+        },
+        {
+          "name": "aggregate_completeness",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "root_expected": 152599,
+            "planned_expected": 152599,
+            "cursor_snapshot_expected": 152599,
+            "received": 152865,
+            "unique": 152030,
+            "duplicates": 835
+          }
+        }
+      ]
+    },
+    "processing_acceptance": {
+      "project_root": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+      "passed": true,
+      "passed_checks": 6,
+      "total_checks": 6,
+      "checks": [
+        {
+          "name": "processing_complete",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "records": 152030,
+            "batches": 153
+          }
+        },
+        {
+          "name": "input_count_contract",
+          "passed": true,
+          "detail": {
+            "processed": 152030,
+            "harvest_unique": 152030
+          }
+        },
+        {
+          "name": "canonical_file_integrity",
+          "passed": true,
+          "detail": {
+            "missing": [],
+            "hash_errors": []
+          }
+        },
+        {
+          "name": "primary_and_foreign_key_integrity",
+          "passed": true,
+          "detail": {
+            "uniqueness": {},
+            "foreign_key_orphans": {
+              "authorship_work": 0,
+              "authorship_author": 0,
+              "keyword_work": 0,
+              "reference_citing_work": 0,
+              "provenance_work": 0
+            }
+          }
+        },
+        {
+          "name": "processing_quality_gate",
+          "passed": true,
+          "detail": {
+            "version": 1,
+            "created_at": "2026-08-06T14:06:41.074329+00:00",
+            "passed": true,
+            "input_records": 152030,
+            "canonical_records": 151562,
+            "duplicates_removed": 467,
+            "scope_filter": {
+              "protocol_year_from": 1990,
+              "protocol_year_to": 2021,
+              "out_of_scope_in_canonical": 0,
+              "excluded_source_records": 0,
+              "included_source_records": 152030,
+              "input_records_accounted": 152030,
+              "excluded_records_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\quality\\excluded_records.parquet"
+            },
+            "table_rows": {
+              "works": 151562,
+              "authors": 303794,
+              "institutions": 22482,
+              "authorships": 734319,
+              "sources": 16926,
+              "keywords": 2015384,
+              "topics": 406393,
+              "references": 5588721,
+              "provenance": 152030,
+              "duplicates": 467
+            },
+            "field_coverage": {
+              "doi": {
+                "present": 122462,
+                "ratio": 0.807999
+              },
+              "title": {
+                "present": 151500,
+                "ratio": 0.999591
+              },
+              "abstract": {
+                "present": 113256,
+                "ratio": 0.747259
+              },
+              "year": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "publication_date": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "document_type": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "language": {
+                "present": 150806,
+                "ratio": 0.995012
+              },
+              "source_id": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "publisher": {
+                "present": 120927,
+                "ratio": 0.797871
+              },
+              "cited_by_count": {
+                "present": 151562,
+                "ratio": 1.0
+              },
+              "reference_count": {
+                "present": 151562,
+                "ratio": 1.0
+              }
+            },
+            "year_bounds": {
+              "minimum": 1990,
+              "maximum": 2021
+            },
+            "foreign_key_orphans": {
+              "authorship_work": 0,
+              "authorship_author": 0,
+              "authorship_institution": 0,
+              "keyword_work": 0,
+              "topic_work": 0,
+              "reference_citing_work": 0,
+              "provenance_work": 0,
+              "work_source": 0
+            },
+            "primary_key_uniqueness": {
+              "works": {
+                "rows": 151562,
+                "distinct_ids": 151562
+              },
+              "authors": {
+                "rows": 303794,
+                "distinct_ids": 303794
+              },
+              "institutions": {
+                "rows": 22482,
+                "distinct_ids": 22482
+              },
+              "sources": {
+                "rows": 16926,
+                "distinct_ids": 16926
+              }
+            },
+            "rules": {
+              "doi": "lowercase DOI, resolver prefix removed, invalid DOI stored as null",
+              "text": "HTML removed, Unicode NFKC normalized, whitespace collapsed",
+              "deduplication": "exact normalized DOI; otherwise exact normalized title of at least 20 characters + year; short or missing titles are not auto-merged; winner selected by metadata completeness with deterministic tie-break",
+              "author_identity": "ORCID first; otherwise source identifier where available; Crossref fallback uses normalized name + primary normalized affiliation",
+              "relationships": "all loser work identifiers remapped to the retained work",
+              "year_scope": "canonical publication year must fall inside the protocol range; other source records are retained in the exclusion ledger",
+              "statistics": "all rows, no sampling",
+              "networks": "full occurrence counts followed by bounded candidate-first expansion"
+            },
+            "paths": {
+              "canonical": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\canonical",
+              "visualization": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\canonical\\visualization"
+            },
+            "keyword_derivation": {
+              "applied": false,
+              "reason": "source_keyword_coverage_sufficient",
+              "source_coverage": 0.999974,
+              "derived_rows": 0
+            }
+          }
+        },
+        {
+          "name": "visualization_ready_contract",
+          "passed": true,
+          "detail": {
+            "missing": [],
+            "integrity_errors": [],
+            "processing_contract_matches": true,
+            "rows": {
+              "annual_output": 32,
+              "document_types": 1,
+              "languages": 61,
+              "source_productivity": 16926,
+              "author_productivity": 303794,
+              "institution_productivity": 22482,
+              "keyword_occurrences": 19166,
+              "topic_occurrences": 3439,
+              "reference_impact": 2009615,
+              "coauthor_edges": 6602,
+              "institution_collaboration_edges": 77148,
+              "keyword_cooccurrence_edges": 116671,
+              "cocitation_edges": 122381,
+              "direct_citation_edges": 22237
+            }
+          }
+        }
+      ],
+      "independent_profile": {
+        "table_rows": {
+          "works": 151562,
+          "authors": 303794,
+          "institutions": 22482,
+          "authorships": 734319,
+          "sources": 16926,
+          "keywords": 2015384,
+          "topics": 406393,
+          "references": 5588721,
+          "provenance": 152030,
+          "duplicates": 467
+        }
+      }
+    },
+    "visualization_acceptance": {
+      "passed": true,
+      "checks": {
+        "manifest_exists": true,
+        "minimum_figure_count": true,
+        "png_svg_pairs_valid": true,
+        "no_blank_figures": true,
+        "expected_networks_rendered": true,
+        "all_networks_bounded": true,
+        "all_networks_sparse": true,
+        "network_methods_exported": true,
+        "layout_overlap_bounded": true
+      },
+      "figure_count": 17,
+      "rendered_networks": [
+        "bibliographic_coupling",
+        "citation",
+        "coauthorship",
+        "cocitation",
+        "institution_collaboration",
+        "keyword_cooccurrence"
+      ],
+      "expected_networks": [
+        "bibliographic_coupling",
+        "citation",
+        "coauthorship",
+        "cocitation",
+        "institution_collaboration",
+        "keyword_cooccurrence"
+      ],
+      "images": [
+        {
+          "name": "annual_publications",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9381
+        },
+        {
+          "name": "top_sources",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9449
+        },
+        {
+          "name": "top_authors",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9399
+        },
+        {
+          "name": "top_institutions",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9438
+        },
+        {
+          "name": "document_types",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.93
+        },
+        {
+          "name": "citation_distribution",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9375
+        },
+        {
+          "name": "top_cited_documents",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9451
+        },
+        {
+          "name": "bradford_sources",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9373
+        },
+        {
+          "name": "keyword_trends",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9445
+        },
+        {
+          "name": "network_coauthorship",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.872
+        },
+        {
+          "name": "network_institution_collaboration",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8881
+        },
+        {
+          "name": "network_keyword_cooccurrence",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8378
+        },
+        {
+          "name": "network_cocitation",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.886
+        },
+        {
+          "name": "network_citation",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8398
+        },
+        {
+          "name": "network_bibliographic_coupling",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8903
+        },
+        {
+          "name": "network_keyword_overlay",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8868
+        },
+        {
+          "name": "network_keyword_density",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9469
+        }
+      ],
+      "networks": {
+        "coauthorship": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "institution_collaboration": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "keyword_cooccurrence": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "cocitation": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "citation": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "bibliographic_coupling": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        }
+      },
+      "note": "VLM review is deliberately external to this automated acceptance stage."
+    },
+    "evidence": {
+      "version": 1,
+      "passed": true,
+      "project": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+      "evidence_items": 72,
+      "evidence_sha256": "2ca24703190ced83554a9cf5275e48820204c01ccf416b81b2bf4aaa83831d18",
+      "graph": {
+        "schema_version": 2,
+        "nodes": 473,
+        "edges": 1886,
+        "facts": 24,
+        "qa_items": 30
+      },
+      "graph_qa_available": true,
+      "scalability": {
+        "full_canonical_relations_loaded_into_pandas": false,
+        "duckdb_full_corpus_scans": true,
+        "bounded_abstract_works": 24,
+        "bounded_network_views": [
+          "bibliographic_coupling",
+          "citation",
+          "coauthorship",
+          "cocitation",
+          "institution_collaboration",
+          "keyword_cooccurrence"
+        ]
+      },
+      "elapsed_seconds": 3.125
+    },
+    "evidence_acceptance": {
+      "passed": true,
+      "checks": {
+        "manifest_exists": true,
+        "evidence_exists": true,
+        "graph_facts_exists": true,
+        "evidence_nonempty": true,
+        "evidence_hash_matches": true,
+        "unique_evidence_ids": true,
+        "evidence_artifacts_exist": true,
+        "graph_qa_exists": true
+      },
+      "passed_checks": 8,
+      "total_checks": 8
+    },
+    "formal_graph_experiment": {
+      "version": 1,
+      "dataset_id": "climate_change_risks_1990_2021",
+      "workspace": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021",
+      "source": "bounded selected networks used by formal visualizations",
+      "canonical_atoms_sha256": "53aba71bd17655bb8360e9c19d4951d6be176cfca71e7f7874a753477afd8d13",
+      "canonical_atoms_file_sha256": "c0b31b43a6719f1d0fbc82988729a61adb5c32592509fbdfc283c7ef277f0e2c",
+      "benchmark_sha256": "41b4c639e18b65c92513f5010b6ec95efce4f9f8efc97cc507c48511ad6b589e",
+      "figure_manifest_sha256": "0ec6965b68137a088f4d18cb7c2eefd9da94ecf8eaef22015496dfffe0fde733",
+      "bounded_graph_qa_sha256": "dbd2fabbf7e99504dcc8f57a1e3a22c90bdaa15ca6eb9d924919f55835c2cf2e",
+      "bounded_graph_facts_sha256": "adcd84117888c401a7247c7dbbfed39b83cded763fc3fe9fcb864de290848e80",
+      "questions": 30,
+      "figure_eligible_questions": 6,
+      "conditions": [
+        "no_rag",
+        "flat_structured",
+        "graph_rag",
+        "figure_vlm"
+      ],
+      "figure_vlm_comparison_role": "cross_model_extension",
+      "figure_contract": "Answers use only labels and numbers visibly represented in the image; canonical node and evidence ids are not required.",
+      "contexts": [
+        {
+          "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size",
+          "semantic_atom_sha256": "c6ddd98a15d6f52f50af70a1cbe2b6a3a98cfc66e6d8bc2f9c359778fd555d61",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__network_size.flat.json",
+          "flat_sha256": "26d5dffb2a42876db5b4db0dc563274f463e1a293c7fca3affb360b06d86dc98",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__network_size.graph.json",
+          "graph_sha256": "a860d6b148ff63117be97c71870272b62e5db1f466263cd8c63760645db412f6",
+          "flat_characters": 640,
+          "graph_characters": 700
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:highest_occurrence",
+          "semantic_atom_sha256": "308fa53fb719776f3f95521f5defa08302d9a222bd6bda83d1131d0bfa1d1aa1",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__highest_occurrence.flat.json",
+          "flat_sha256": "53acc9e5f6ee6405e8c06a02018dd8f206492af725c1f39e4a9a297fd65f0de4",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__highest_occurrence.graph.json",
+          "graph_sha256": "fcf0cd2b060c4b1d0312b42014970805c70a9ffc7d81ff2b33617c46eeaa3790",
+          "flat_characters": 1167,
+          "graph_characters": 1292
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:strongest_connection",
+          "semantic_atom_sha256": "a27bd1a51bc41b102459aba5292fe91e5335615e8c1ac39bfd62b52841b2eeae",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__strongest_connection.flat.json",
+          "flat_sha256": "c6f322cbc16a5c2b16d266fd29b62f5eb5615d22c4b531b29d338f1465206cb9",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__strongest_connection.graph.json",
+          "graph_sha256": "7543ae3d0d7f5a986d84fd4601d0d747873e63504fad7faca7c3ed27b4f02369",
+          "flat_characters": 1751,
+          "graph_characters": 2448
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:cluster_membership",
+          "semantic_atom_sha256": "e7ff53b7facc8242e0bdf806dccdcfe5acaa6b567b8a1796bcd446c6069bbc70",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__cluster_membership.flat.json",
+          "flat_sha256": "a929daba6f8de31ff0c5506d93c567951b2f08ce7a99237b9cba5e7dc5788d93",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__cluster_membership.graph.json",
+          "graph_sha256": "61ee6dbae7362c9469246492d8f2a602cb3362f9c44b28593c950736419be836",
+          "flat_characters": 828,
+          "graph_characters": 920
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:false_premise",
+          "semantic_atom_sha256": "4dc1c20ea265bfd424786d0da27cab7841e52ed8bf9b5feb536947ba1ff8ed0e",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__false_premise.flat.json",
+          "flat_sha256": "acd8b01fa732abc7a12af1d96dc3ff7a23a94750d6354f33e2c09d2acac58750",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__bibliographic_coupling__false_premise.graph.json",
+          "graph_sha256": "05b515dfd1f49d58cca43e02da60f491ab8785d453f3174b8756962a7265a235",
+          "flat_characters": 407,
+          "graph_characters": 467
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:citation:network_size",
+          "semantic_atom_sha256": "fff3f76253a759708c941223095cf5b4d3408fa479094f9c5ac700adcbb3be09",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__network_size.flat.json",
+          "flat_sha256": "f4b0ef85c14dcc4bfd2a6ad118b5e7443f4ac888127f70900d68e4103bcc750f",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__network_size.graph.json",
+          "graph_sha256": "23c766673db641a65ca3b9b2158b485da63b8b34b5424289c44491b8123a670b",
+          "flat_characters": 527,
+          "graph_characters": 573
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:citation:highest_occurrence",
+          "semantic_atom_sha256": "0557e4465655686aa3b952381929ce0efee9fc4fa8ba85736794a46fa7d88a2f",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__highest_occurrence.flat.json",
+          "flat_sha256": "a182d7360233a96b85aa367412e48581cd8f4e1267024ae558700c71b71fe623",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__highest_occurrence.graph.json",
+          "graph_sha256": "2818cfb568ed7ae384141961a4dd82be3e0034d0dfacad90aad81d2b9ea2449c",
+          "flat_characters": 909,
+          "graph_characters": 995
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:citation:strongest_connection",
+          "semantic_atom_sha256": "40dfc21b5d93c28623c4b2eff0b81c9f9e38e207cdf6ad497e034e97700b86e0",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__strongest_connection.flat.json",
+          "flat_sha256": "95507e7d5fc16941940749c2311535f478f232d415d41aef8ed805ea6474be39",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__strongest_connection.graph.json",
+          "graph_sha256": "d14c08c63b1556d44d0c65322d67d4b1f816109a4f58b83d394ab4f92f59c8af",
+          "flat_characters": 1323,
+          "graph_characters": 1794
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:citation:cluster_membership",
+          "semantic_atom_sha256": "f76f9462dc0ba50e03ac11b762338e463b0ad2da22a06c9bd0aa9dbc1d766a11",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__cluster_membership.flat.json",
+          "flat_sha256": "047a664dfa072b4754d439b8b199aca738f920ec6f76976f2028332ea67278eb",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__cluster_membership.graph.json",
+          "graph_sha256": "904088c50834997547882cc6153d8fee8b812c34fb8d7e92ca112ae2d45ee3fe",
+          "flat_characters": 633,
+          "graph_characters": 697
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:citation:false_premise",
+          "semantic_atom_sha256": "918158202357c30951ec2f3caac0edd45d85f21a92abf85be4ec355dde0d881a",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__false_premise.flat.json",
+          "flat_sha256": "f4ad4de2ada9df2781eae2d9496b60f0eb667a703d09f3946661f3213c51a002",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__citation__false_premise.graph.json",
+          "graph_sha256": "44f4c16b58755c4a0c0391f193e51e82ca3be5d6a819e30c1010e4a69f16b6ef",
+          "flat_characters": 351,
+          "graph_characters": 397
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:coauthorship:network_size",
+          "semantic_atom_sha256": "5254d02dba522838adc5429cde5cdbab6fce58e2d57d6f7889d4f2c7bb3f6079",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__network_size.flat.json",
+          "flat_sha256": "e30939478a34bafad20a6ea2012d397ede018f998644d159260c6101844a5584",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__network_size.graph.json",
+          "graph_sha256": "e2fca1d66a9787cc63c12ee2296ff03edf59ce77627628c7d64d2c4604ed9a7c",
+          "flat_characters": 560,
+          "graph_characters": 610
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:coauthorship:highest_occurrence",
+          "semantic_atom_sha256": "aa414e8927b9f6c26f3ab9423a55726f6aa4d15b8344fe73852c015f6de7f725",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__highest_occurrence.flat.json",
+          "flat_sha256": "df3917621e89226286afde3cffe33397db1523b0dc43e43388a39c35fcc9b12f",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__highest_occurrence.graph.json",
+          "graph_sha256": "759f68fd46c10f724110373bdf80118b9af93ab17e29d314781d4166641a25d0",
+          "flat_characters": 924,
+          "graph_characters": 1015
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:coauthorship:strongest_connection",
+          "semantic_atom_sha256": "13b538b90ec1132a3e50a5303e7af8e12dad245df35734035dd09db104e904ad",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__strongest_connection.flat.json",
+          "flat_sha256": "551f796c9cf7081d0e56bae2c035e21f53eb89766c0ec8427f7d6059a3605eaf",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__strongest_connection.graph.json",
+          "graph_sha256": "c8e4a263e3ab6d4e8a2c120658c82caee55ea984ff176f1ee4d83ee2c3bcff5d",
+          "flat_characters": 1450,
+          "graph_characters": 2001
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:coauthorship:cluster_membership",
+          "semantic_atom_sha256": "018442129cb283c8fb9de88c76ae77a5c559d5be794c8f220ceb096ee60e45e4",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__cluster_membership.flat.json",
+          "flat_sha256": "e13470a8bded9cf603bc92723b3b27f23e36258fe014f79b488d9047fa81b605",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__cluster_membership.graph.json",
+          "graph_sha256": "6cf39ec75a4f830e039a9e36934742d40259baa96be879f2f934b01161e6ece9",
+          "flat_characters": 649,
+          "graph_characters": 717
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:coauthorship:false_premise",
+          "semantic_atom_sha256": "3cf65859aa5240fb7fa452319c0f8daa5c6f5b100a7c54a221ebf32921fef887",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__false_premise.flat.json",
+          "flat_sha256": "7f4292e300db30aefad649927cd68ffd6c14ccad276a2542fff9a24c645e8790",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__coauthorship__false_premise.graph.json",
+          "graph_sha256": "ec6322b3f190cf6be6a1054d826f04ab67f45cf11286d843f6bbe037ce7a1597",
+          "flat_characters": 367,
+          "graph_characters": 417
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:cocitation:network_size",
+          "semantic_atom_sha256": "e78beef109e5178da99396caf3e24e3fe63adb1e62dddffe32cadc01fc8f04a1",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__network_size.flat.json",
+          "flat_sha256": "6505309e2d5f31f6a483d77709d1f431cc4506ec6ca6d5adb2f8c634de7ed7b5",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__network_size.graph.json",
+          "graph_sha256": "488eb32c18b82c75b0ea7f3b9bc23085fda831224bf57b680bfe47fc703e0fb5",
+          "flat_characters": 544,
+          "graph_characters": 592
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:cocitation:highest_occurrence",
+          "semantic_atom_sha256": "eb35ad62e0e71545be36506905882a32cb6d450834c921c54ee05dce8c04822f",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__highest_occurrence.flat.json",
+          "flat_sha256": "931ae0637635bc32c9bcd4cfaace801ef0599664609f97f712a862090e3f2678",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__highest_occurrence.graph.json",
+          "graph_sha256": "76f93246086d2348b86c24bbf606d6ce384fdb1ee059d7d2b3da6a290c6b1035",
+          "flat_characters": 910,
+          "graph_characters": 997
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:cocitation:strongest_connection",
+          "semantic_atom_sha256": "3e81a9b6768ff59e018f9a4cfd9aba2878b7e36b1076e7ae47fe51361351d004",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__strongest_connection.flat.json",
+          "flat_sha256": "a29c008d7b58dc2e237efd9209ca7885c6531ac1f84beb967f1be5732135b1d3",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__strongest_connection.graph.json",
+          "graph_sha256": "9e3fac40b09c3431a2e20d697d4adfb19a65c47ded67123037ee324487e5c768",
+          "flat_characters": 1370,
+          "graph_characters": 1869
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:cocitation:cluster_membership",
+          "semantic_atom_sha256": "787063ff072de0498b857babf9f92c1cd5034f879c8ad688ce45d570fafcf5e8",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__cluster_membership.flat.json",
+          "flat_sha256": "3c8dca3232522595d3737e32b947c1cd514b99335429a9ba21a7beed7052117c",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__cluster_membership.graph.json",
+          "graph_sha256": "4de699482b916ef8a9e47a8fbc4c8ea30a25b1dff5391a3421fe71bb3cf04721",
+          "flat_characters": 644,
+          "graph_characters": 710
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:cocitation:false_premise",
+          "semantic_atom_sha256": "ba1a2da5d977b8a5eaa4b049a231bd8809001875120012c5cca4b6bf8739a034",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__false_premise.flat.json",
+          "flat_sha256": "83b9d96e7d13588e8b22bea3dfe155e990a6bc0865d81ebe53dea17269f8482e",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__cocitation__false_premise.graph.json",
+          "graph_sha256": "09716a4ad03f73cbbce33642cab35724ac39d637a26a3673dc2bbac5ec6b18dd",
+          "flat_characters": 359,
+          "graph_characters": 407
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:institution_collaboration:network_size",
+          "semantic_atom_sha256": "6dab70bb002ab3d2390fab11f57110d5142b029eb43f34638f681f9a21bec7c4",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__network_size.flat.json",
+          "flat_sha256": "8137e411496b9d08af8af049779d12ed01fa66faf90c62fc33fffb756afef817",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__network_size.graph.json",
+          "graph_sha256": "da9ad8fc92518bb6b3a6e1e577d92472b56ea6185de9f4fa619350fedcafb502",
+          "flat_characters": 664,
+          "graph_characters": 727
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:institution_collaboration:highest_occurrence",
+          "semantic_atom_sha256": "186aa1e4dd32e06ecbcb63b2c114c5e2dd6ce1f86fbb90de1e79967de6db067a",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__highest_occurrence.flat.json",
+          "flat_sha256": "2aa42d3d835b1d00fa9cdd02185da8c1e6946932033962359818df4c4be39ae2",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__highest_occurrence.graph.json",
+          "graph_sha256": "31c3cdb4370ecacd2762b06fddd92f889bf099b3a618ad37283f1c2a1d245403",
+          "flat_characters": 1061,
+          "graph_characters": 1171
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:institution_collaboration:strongest_connection",
+          "semantic_atom_sha256": "738be18b5158166b2f72d993ede7f4ebc3f358dd4eff574bbe350ded279ce8dc",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__strongest_connection.flat.json",
+          "flat_sha256": "5399e9c1cefd7b94bb27fcf9775e418e00db4d923d6a351c71ec4af191d72d57",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__strongest_connection.graph.json",
+          "graph_sha256": "eba5320f9390713557e7882a78d5def8004e5c00b3bd3410db2a2ecb4919d0d4",
+          "flat_characters": 1642,
+          "graph_characters": 2264
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:institution_collaboration:cluster_membership",
+          "semantic_atom_sha256": "fa312b57213c428e2272b5afe4e8a157721c369992daf1c674355e3a627e1840",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__cluster_membership.flat.json",
+          "flat_sha256": "db9624053f2e4344d9a775327686c4f6462b6d13283c6aa6e73f9b495754fa12",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__cluster_membership.graph.json",
+          "graph_sha256": "36fb46a710f52b07b8a90fffc35acc1d1c4fa07e1435f318aaf1b0876163f03c",
+          "flat_characters": 728,
+          "graph_characters": 802
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:institution_collaboration:false_premise",
+          "semantic_atom_sha256": "4ca01b01aef934f79b687a30d2737ccbbaca77aa726b9487726d6588bcb2a18d",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__false_premise.flat.json",
+          "flat_sha256": "86efd90055a5463233c5043fe72acd3ad3dac711798a8a11cf5d02c86fc33a04",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__institution_collaboration__false_premise.graph.json",
+          "graph_sha256": "09737454130dc3d1031ea28c52e754889fcf63c7925ff8b756a41e301d0497fa",
+          "flat_characters": 419,
+          "graph_characters": 482
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:network_size",
+          "semantic_atom_sha256": "9fc8164735887df2f3f03fd6bb940e9d4962139b483a715b544f8192fd969973",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__network_size.flat.json",
+          "flat_sha256": "a3ee8a7d54882e31e46a7251532d9fe96fa50c04030ae2f941d446e8a1bfd6b8",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__network_size.graph.json",
+          "graph_sha256": "51e938ccac21d75e8aba0ae4e241fac5789c141ad7e1c9de51dc6e9b97b75f44",
+          "flat_characters": 624,
+          "graph_characters": 682
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:highest_occurrence",
+          "semantic_atom_sha256": "cf90d54e140eecc9ec6c1c7e289d2a631bcfacc2e092958b001cb306a81c07fa",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__highest_occurrence.flat.json",
+          "flat_sha256": "bf15d125d950e7107cc43066cc5548416af77c8dfb50f59afe01367d4662e424",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__highest_occurrence.graph.json",
+          "graph_sha256": "9a958e7fbc5131af0fc4e8a0e653f18bf7580175d7b25b95f5689dedb5590fab",
+          "flat_characters": 992,
+          "graph_characters": 1093
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:strongest_connection",
+          "semantic_atom_sha256": "11d074403363a5b3b55fd30d7111e5e059640eb6c0018f6dd015fe7c9eea9b99",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__strongest_connection.flat.json",
+          "flat_sha256": "4e0018f95ff6b4a80bc6ba343d6eef17b8bcede9147397c4fb4fccb67be39e36",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__strongest_connection.graph.json",
+          "graph_sha256": "2b27e0002b596ea53666106e0b5e463549c656ec5be9768bd74eec1e85f5fdaa",
+          "flat_characters": 1435,
+          "graph_characters": 1966
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:cluster_membership",
+          "semantic_atom_sha256": "7b03b3556a72b84baf241209b7a17241697bb10ccce317b9162685fcb9b47f3e",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__cluster_membership.flat.json",
+          "flat_sha256": "6894bd5d1c6233b84b4816cf5c78f959551daec0f92f74a53826b071e1b93f3d",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__cluster_membership.graph.json",
+          "graph_sha256": "ed5ba57eda9a2af8b76cedf4fe8a613124eca359ee7933f8ecc1baad9483564f",
+          "flat_characters": 682,
+          "graph_characters": 752
+        },
+        {
+          "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:false_premise",
+          "semantic_atom_sha256": "3879347579635f460cbb5826b326b151d4dc7036a762d3b3821c7a8262ac7afa",
+          "flat_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__false_premise.flat.json",
+          "flat_sha256": "faf03028e3aac1240f507e142c73a83f2e86067218ad19cf88af71bc2a5f8970",
+          "graph_path": "evidence/formal_graph_experiment/contexts/climate_change_risks_1990_2021__keyword_cooccurrence__false_premise.graph.json",
+          "graph_sha256": "11581b6c2ec2051e730f271835bd2afd6d1429a4ff016d73bc326bb909653fb8",
+          "flat_characters": 399,
+          "graph_characters": 457
+        }
+      ]
+    },
+    "formal_graph_experiment_acceptance": {
+      "passed": true,
+      "errors": [],
+      "questions": 30,
+      "contexts_verified": 30,
+      "manifest_sha256": "5df0a8e54e19c62666113e583b2a06bd33dc7cca794361dd152d0c14b89bf2ee"
+    }
+  }
+]
+[
+  {
+    "status": "complete",
+    "dataset_id": "climate_change_risks_1990_2021",
+    "condition": "structured_one_shot",
+    "evidence_sha256": "2ca24703190ced83554a9cf5275e48820204c01ccf416b81b2bf4aaa83831d18",
+    "report_sha256": "daf5754165532685191a75a98fdd48b553e0dc7a04293e436595fd589820815e",
+    "call_count": 1,
+    "model": "deepseek-v4-pro",
+    "temperature": 0.1,
+    "seed": 42,
+    "report_language": "English",
+    "internal_review_used_as_experimental_evaluation": false
+  }
+]
+[
+  {
+    "status": "complete",
+    "dataset_id": "climate_change_risks_1990_2021",
+    "condition": "citeweave_full",
+    "evidence_sha256": "2ca24703190ced83554a9cf5275e48820204c01ccf416b81b2bf4aaa83831d18",
+    "report_sha256": "e5935ba1f6be5ee6374be0287af8096cb835bd38976b3efac8b4265fd24fbfda",
+    "call_count": 4,
+    "model": "deepseek-v4-pro",
+    "temperature": 0.1,
+    "seed": 42,
+    "report_language": "English",
+    "internal_review_used_as_experimental_evaluation": false
+  }
+]
+D:\project\bibagent\experiments\vision_packets\climate_change_risks_1990_2021.json

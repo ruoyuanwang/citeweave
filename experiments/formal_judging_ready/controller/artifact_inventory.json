@@ -1,0 +1,33 @@
+{
+  "aggregate_sha256": "9eaa0e3946931169c38845c3b97dd82ba6efc67b8857f5064c939a6ed5a1e28d",
+  "files_excluding_this_inventory": {
+    "controller/inputs/graph/graph_vs_figure.jsonl": "a1a12d73dba2abc4a3937b330e6ec650f59ad5fc1904cf509b6bd50406094a31",
+    "controller/inputs/graph/graph_vs_flat.jsonl": "74a381d9cb869ca89c4fe0fe2d03d3d85a77ca300f711e2fdd29cb7e2595d30d",
+    "controller/inputs/graph/graph_vs_no.jsonl": "f39e55a397156eb5715263e5744e5d4dc3eb3b3bb6de5ff77255df183b6eb4ff",
+    "controller/inputs/report/full_vs_human.jsonl": "66e42ac6be0b8d08196215c1d8606984d26cee3cf2b40307672edb56560402f2",
+    "controller/inputs/report/full_vs_oneshot.jsonl": "7bf38b1fb3e3180acbe7529cb72c2d09f2c86e866d0c8b55a41ac1d0a14da487",
+    "controller/inputs/report/oneshot_vs_human.jsonl": "b718e3ea66aef70fee67203c1900a159b207e0024aac268a7a577f596c68ade2",
+    "controller/manifest.json": "74e9f4305127af830a081300266cb8390284b69e43081cd887b994b7f5f04762",
+    "controller/secret_maps/graph/GT01.json": "d31265a1be1cd3bd3900772b5b035f421ee5da8ca9bd83b3a1573f30ebc6f9f6",
+    "controller/secret_maps/graph/GT02.json": "685a6ccc1a71353e1e387289875ca9e31bb3617bba0a0421601982613e954ef8",
+    "controller/secret_maps/graph/GT03.json": "01fa54e8cf59704417daebcc06cbd6907919e62136923c4f2aaa3fda046629fe",
+    "controller/secret_maps/report/RT01.json": "06118b60e5e893a52e13079b74d5080af4c511d57d8d8544e7599c40cec6dbaf",
+    "controller/secret_maps/report/RT02.json": "80e79abb270c8a3816ddc80b343b48837e9f1dc0ef8917dd2b8188ec00f1c738",
+    "controller/secret_maps/report/RT03.json": "2cffc500c84063b03a7264d6a0837400fb87d6cd2d80a7563c90931b7dfbbbbf",
+    "neutral_worklists/eval_a.json": "fa56221fd5b37707bf327cd0b9cda19b1616fa4e766b64542811e82fda314cc2",
+    "neutral_worklists/eval_b.json": "d4413bd553e7c0384698e88794c11835ef4c3c95bdc42dbf1d9f151169bfc5c9",
+    "packets/eval_a/graph/GT01/packets.jsonl": "e51fe57841fc681f58e47e1f03b684a2d7d3ba2657f069895741a6d34d2b35fd",
+    "packets/eval_a/graph/GT02/packets.jsonl": "7b2ed974d702544be070d37d49988a09ecb2356a7af3567e708cb335d34ca6ba",
+    "packets/eval_a/graph/GT03/packets.jsonl": "aa10b6e1f48e0a5839ae3c76a4de65d4a3596d19870845f3385d57481cb3b519",
+    "packets/eval_a/report/RT01/packets.jsonl": "ff2a2f2f432d277902e9d5c270fb7d7cb5665fbe06a5dc0c63349bc7bd0051df",
+    "packets/eval_a/report/RT02/packets.jsonl": "b9a765d385abe8eecbf1920037de1139d486f4d86990a7e95c93546cf767b253",
+    "packets/eval_a/report/RT03/packets.jsonl": "6fba8aab3b3e37f290562f63a59bce0ca4a8cd438b70d8d053bab14024bde063",
+    "packets/eval_b/graph/GT01/packets.jsonl": "8b859fdd111ed2717c9a5922403f66b6b1d2d7f8e3cb4557afa3c560ffb36eed",
+    "packets/eval_b/graph/GT02/packets.jsonl": "f6c45176677942f1d41eccfd8590bea90cad7fe92ad60b8a678e7da8580d5f70",
+    "packets/eval_b/graph/GT03/packets.jsonl": "374ff9fe9ab37d8af236efc84c49de8f1a808bc5ae7f3c9edc617a6be68b4728",
+    "packets/eval_b/report/RT01/packets.jsonl": "f6ac294de0c10ca9dd34370d0f5e8e0aad5d4e0e53ac7adf8f8f533ba3f1347b",
+    "packets/eval_b/report/RT02/packets.jsonl": "208b019e3d7d04152585567f91c71a61c12204aa7d25652f2034a395d0cde6dd",
+    "packets/eval_b/report/RT03/packets.jsonl": "77af15f8030dc684d2f13740f205a86ff018fd8469bb90ce6b09ab8f35012c1e"
+  },
+  "schema_version": 1
+}

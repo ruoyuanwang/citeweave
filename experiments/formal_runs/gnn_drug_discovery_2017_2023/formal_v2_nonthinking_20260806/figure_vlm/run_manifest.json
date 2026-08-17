@@ -1,0 +1,20 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "gnn_drug_discovery_2017_2023",
+  "condition": "figure_vlm",
+  "role": "cross_model_extension",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "packet_sha256": "6c803379333522762a7268007cfdca6158362fa3b52098662e1ab0f6889715af",
+  "output_sha256": "75f1eca475e53f459f01ae671d9f7c0f9c4e746ceb422df21d493336832d0b26",
+  "items": 6,
+  "item_ids": [
+    "gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size",
+    "gnn_drug_discovery_2017_2023:citation:network_size",
+    "gnn_drug_discovery_2017_2023:coauthorship:network_size",
+    "gnn_drug_discovery_2017_2023:cocitation:network_size",
+    "gnn_drug_discovery_2017_2023:institution_collaboration:network_size",
+    "gnn_drug_discovery_2017_2023:keyword_cooccurrence:network_size"
+  ]
+}

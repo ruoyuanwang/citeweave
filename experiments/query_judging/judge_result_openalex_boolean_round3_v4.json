@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v4",
+  "prompt_sha256": "abd049df349329135d89a32b7b3110cb9830ef1ec046e0fc4a7a35ddfdb75f07",
+  "packet_sha256": "b41e0e9a8227a66f332fbe773e83e40dbd8a2b8cedbb1ec27abd73ced8d9539c",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "reject",
+      "reason": "The bare acronym GNN is not intrinsically unambiguous and can denote other kinds of neural or network models; despite the drug-related AND clause, it creates an avoidable homonym route."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "accept",
+      "reason": "Both concept groups are topically valid and well scoped; the ambiguous bare acronym EV is absent, and the AND/OR grouping is explicit and balanced."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The two inclusive synonym groups remain focused through an explicit AND, with balanced parentheses and no obvious bare-acronym homonym."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "The exact climate-change phrase is required alongside a properly grouped set of risk concepts, yielding appropriate breadth without Boolean scope leakage."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "The exact digital-twin concept is required with a well-parenthesized healthcare group; the explicit 2012-2023 protocol range is valid under the rubric despite the id suffix."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "The query correctly requires plant context plus both heat and drought dimensions, with each synonym group fully parenthesized and no ambiguous abbreviation."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "accept",
+      "reason": "The query uses recognizable gene-editing terms and spelled-out disease names, omits the ambiguous bare acronym ALS, and has correct grouped AND scope; the 2004-2023 protocol range is valid under the rubric."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "With query_mode=all and one unambiguous field term, the effective query is appropriately microplastics alone; no geographic restriction is required for a global mapping topic."
+    }
+  ]
+}

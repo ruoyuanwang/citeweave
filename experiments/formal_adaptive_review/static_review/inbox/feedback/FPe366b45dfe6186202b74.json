@@ -1,0 +1,15 @@
+{
+  "packet_id": "FPe366b45dfe6186202b74",
+  "decision": "revise",
+  "confidence": 0.98,
+  "reason": "Abstaining is supported because the requested label is not visible, but the explanation overstates this as proof that the node itself is absent from the network. The local revision limits the conclusion to what the visible evidence establishes.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "Therefore, the node is absent from the network, making the question unanswerable.",
+    "replacement_text": "Therefore, the requested labeled node cannot be identified in the visible network, so its cluster cannot be determined."
+  }
+}

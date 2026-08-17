@@ -1,0 +1,12 @@
+{
+  "packet_id": "FP3e979ccd1493e58adcd3",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 0.99,
+  "reason": "The candidate reports cluster 1 for the same visible labeled node, exactly matching the graph evidence.",
+  "suggested_revision": null,
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3390/ijms21197362:cluster",
+    "bibliographic_coupling:node:doi:10.3390/ijms21197362:label"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v4",
+  "prompt_sha256": "abd049df349329135d89a32b7b3110cb9830ef1ec046e0fc4a7a35ddfdb75f07",
+  "packet_sha256": "b92e99cbd65dd29a4e1a80d6f1b6b2d17994eb40649b6928d5773a187ed1964a",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "The two parenthesized concept groups are joined correctly by AND, cover major explicit GNN and drug-discovery variants, and avoid the ambiguous GNN acronym."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "accept",
+      "reason": "The query requires both a CRISPR-specific technology term and an extracellular-vesicle term, providing broad but topically bounded coverage without generic editing terms."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The Boolean grouping correctly requires an established machine-learning concept together with a climate-change or closely related climate-research concept."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "Requiring the exact climate-change phrase constrains the inclusive risk, vulnerability, impact, threat, and hazard vocabulary to the requested broad topic."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "The unambiguous digital-twin phrase is required alongside a suitably inclusive set of healthcare contexts, and the explicit 2012-2023 range is valid under the rubric."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "The three required concept groups correctly enforce plant relevance and simultaneous heat and drought stress coverage, with appropriate synonyms in each group."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "accept",
+      "reason": "Parentheses correctly require gene editing plus an ALS disease concept; the ambiguous ALS acronym is accepted only with motor-neuron, neurodegeneration, or ALS-gene context, preventing Boolean leakage."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "Microplastics is an unambiguous field term, and the single-term all-mode query appropriately treats global scope as the absence of a geographic restriction."
+    }
+  ]
+}

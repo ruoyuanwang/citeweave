@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "audit_packet_id": "AP8062ef261355588a7696",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:edge:0001:relation",
+        "bibliographic_coupling:edge:0001:weight",
+        "bibliographic_coupling:fact:strongest_connection",
+        "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307:label",
+        "bibliographic_coupling:node:openalex:W2782522152:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:edge:0001",
+        "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307",
+        "bibliographic_coupling:node:openalex:W2782522152"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "bibliographic_coupling:edge:0001:relation"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307",
+            "bibliographic_coupling:node:openalex:W2782522152"
+          ],
+          "path_id": "path:bibliographic_coupling:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "bibliographic_coupling:fact:strongest_connection"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307",
+            "bibliographic_coupling:node:openalex:W2782522152"
+          ],
+          "path_id": "path:bibliographic_coupling:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:relation",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:openalex:W2782522152",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307"
+        },
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:weight",
+          "network": "bibliographic_coupling",
+          "object": 143.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "bibliographic_coupling:edge:0001"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:strongest_connection",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:openalex:W2782522152",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307:label",
+          "network": "bibliographic_coupling",
+          "object": "Deep Learning in Remote…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:openalex:W2782522152:label",
+          "network": "bibliographic_coupling",
+          "object": "Deep learning in remote…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:openalex:W2782522152"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "224be0859cd5cf860a443bec43d711888667386f73f3cdc6e64f06626abc052d"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the bibliographic_coupling network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"Deep Learning in Remote…\",\"target_label\":\"Deep learning in remote…\",\"weight\":143.0},\"explanation\":\"The fact 'strongest_connection' explicitly states that the node with label 'Deep Learning in Remote…' has the strongest connection to the node with label 'Deep learning in remote…'. The weight of this connection is given as 143.0 in the edge weight relationship.\",\"item_id\":\"machine_learning_climate_change_2008_2022:bibliographic_coupling:strongest_connection\"}",
+  "evaluation_decision": "pass",
+  "evaluation_confidence": 0.99,
+  "evaluation_reason": "The two labels and weight 143.0 are exactly the strongest-connection values in the canonical subgraph.",
+  "evaluation_evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1109/mgrs.2017.2762307:label",
+    "bibliographic_coupling:node:openalex:W2782522152:label"
+  ],
+  "content_sha256": "0850934ea0529cb67d6c8993cc378f6be7853eac94083eafac58e0c2b583aa38"
+}

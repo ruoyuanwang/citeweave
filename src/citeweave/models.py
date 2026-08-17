@@ -30,6 +30,8 @@ class SearchProtocol(BaseModel):
     year_to: int = Field(ge=1800, le=2200)
     source: SourceName = SourceName.crossref
     query_mode: Literal["all", "any", "phrase"] = "all"
+    search_expression: str | None = None
+    search_scope: Literal["fulltext", "title_abstract", "title"] = "fulltext"
     document_types: list[str] = Field(default_factory=list)
     language: str | None = None
     max_records: int | None = Field(default=None, ge=1)
@@ -38,7 +40,7 @@ class SearchProtocol(BaseModel):
     include_references: bool = True
     notes: str = ""
     input_file: Path | None = None
-    input_format: Literal["auto", "csv", "ris", "bibtex", "wos"] = "auto"
+    input_format: Literal["auto", "csv", "ris", "bibtex", "wos", "jsonl"] = "auto"
 
     @field_validator("keywords")
     @classmethod
@@ -52,6 +54,14 @@ class SearchProtocol(BaseModel):
     def validate_years(self) -> SearchProtocol:
         if self.year_to < self.year_from:
             raise ValueError("year_to must be >= year_from")
+        if self.search_expression is not None:
+            self.search_expression = self.search_expression.strip()
+            if not self.search_expression:
+                raise ValueError("search_expression cannot be blank")
+            if self.source != SourceName.openalex:
+                raise ValueError("search_expression is currently supported only for OpenAlex")
+        if self.search_scope != "fulltext" and self.source != SourceName.openalex:
+            raise ValueError("non-default search_scope is supported only for OpenAlex")
         if self.source == SourceName.import_file and self.input_file is None:
             raise ValueError("input_file is required when source=import_file")
         return self
@@ -123,7 +133,7 @@ class ProjectConfig(BaseModel):
     acquisition: AcquisitionPolicy = Field(default_factory=AcquisitionPolicy)
     processing: ProcessingPolicy = Field(default_factory=ProcessingPolicy)
     visualization: VisualizationPolicy = Field(default_factory=VisualizationPolicy)
-    llm_model: str = "deepseek-v4-flash"
+    llm_model: str = "deepseek-v4-pro"
     llm_base_url: str = "https://api.deepseek.com"
     min_completeness_ratio: float = Field(default=0.995, ge=0, le=1)
     visualization_max_nodes: int = Field(default=80, ge=10, le=500)
@@ -163,6 +173,18 @@ class HarvestPage(BaseModel):
     bytes_compressed: int
 
 
+class HarvestRestart(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    restart_index: int
+    restarted_at: datetime = Field(default_factory=utc_now)
+    reason: str
+    prior_cursor: str
+    received_records: int
+    cursor_snapshot_expected_records: int | None = None
+    pages: list[HarvestPage] = Field(default_factory=list)
+
+
 class HarvestSlice(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -170,11 +192,14 @@ class HarvestSlice(BaseModel):
     date_from: str
     date_to: str
     expected_records: int
+    cursor_snapshot_expected_records: int | None = None
+    cursor_exhausted: bool = False
     status: Literal["pending", "running", "complete", "failed"] = "pending"
     cursor: str | None = "*"
     received_records: int = 0
     pages: list[HarvestPage] = Field(default_factory=list)
     restart_count: int = 0
+    restart_history: list[HarvestRestart] = Field(default_factory=list)
     failure_count: int = 0
     last_error: str | None = None
     started_at: datetime | None = None
@@ -196,6 +221,7 @@ class HarvestManifest(BaseModel):
     target_slice_records: int
     root_expected_records: int
     planned_expected_records: int
+    cursor_snapshot_expected_records: int | None = None
     received_records: int = 0
     unique_records: int = 0
     duplicate_records: int = 0

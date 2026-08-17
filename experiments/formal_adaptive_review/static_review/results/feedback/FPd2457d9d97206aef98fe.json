@@ -1,0 +1,15 @@
+{
+  "packet_id": "FPd2457d9d97206aef98fe",
+  "judge_id": "feedback",
+  "decision": "revise",
+  "confidence": 0.99,
+  "reason": "The evidence establishes that the target label is not visible, but it does not establish the stronger claim that the underlying node is absent from the network.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "meaning 'CiteWeave absent benchmark node' is not present in the network.",
+    "replacement_text": "so no cluster membership for that label is available in the visible evidence."
+  }
+}

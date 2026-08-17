@@ -1,0 +1,752 @@
+{
+  "benchmark_version": 1,
+  "items": 30,
+  "predictions_received": 30,
+  "metrics": {
+    "exact_answer_accuracy": 0.2,
+    "schema_valid_rate": 0.9666666666666667,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.9523809523809523,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.033333333333333326,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 0.8333333333333334,
+    "abstention_recall": 0.5555555555555556,
+    "abstention_f1": 0.6666666666666667
+  },
+  "counts": {
+    "correct": 6,
+    "answered": 21,
+    "incorrect_answered": 20,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 21,
+    "abstention": {
+      "tn": 20,
+      "tp": 5,
+      "fn": 4,
+      "fp": 1
+    }
+  },
+  "by_task": {
+    "cluster_membership": {
+      "items": 6,
+      "accuracy": 0.16666666666666666,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_occurrence": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_connection": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 0.8333333333333334,
+      "schema_valid_rate": 0.8333333333333334,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.8,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 0.4,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "global_microplastics_2004_2019:bibliographic_coupling:network_size",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:bibliographic_coupling:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 100,
+          "links": 1000
+        },
+        "explanation": "The bibliographic coupling network for global microplastics research (2004-2019) contains 100 nodes and 1000 links, as directly stated in the supplied material."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:bibliographic_coupling:highest_occurrence",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:bibliographic_coupling:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Thompson R.C. (2004)"
+        },
+        "explanation": "The node labeled 'Thompson R.C. (2004)' has an occurrence value of 1, which is the highest among all nodes in the bibliographic coupling network, as all other nodes have an occurrence of 0."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:bibliographic_coupling:strongest_connection",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:bibliographic_coupling:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Cole M (2011)",
+          "target_label": "Browne MA (2011)",
+          "weight": 0.97
+        },
+        "explanation": "In the bibliographic coupling network, the edge between Cole M (2011) and Browne MA (2011) is labeled with a weight of 0.97, which is the highest among all displayed connections."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:bibliographic_coupling:cluster_membership",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:bibliographic_coupling:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Microplastics in the env…",
+          "cluster": 1
+        },
+        "explanation": "The node labeled 'Microplastics in the env…' is visible in the network and is colored red, which corresponds to cluster 1 as indicated by the legend."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:bibliographic_coupling:false_premise",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:bibliographic_coupling:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The question asks about a node labeled 'CiteWeave absent benchmark node', but this node is not present in the supplied material. Since the material does not establish the existence or cluster membership of this node, the question is based on a false premise and cannot be answered."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:citation:network_size",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:citation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "links": 0
+        },
+        "explanation": "The supplied material does not contain any information about a citation network, its nodes, or links. Therefore, the network size cannot be determined, and the answer defaults to zero nodes and zero links."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:citation:highest_occurrence",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "citation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:citation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "microplastics"
+        },
+        "explanation": "The node 'microplastics' has the highest occurrence with a value of 1,200, as indicated by its size and label in the citation network visualization."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:citation:strongest_connection",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "citation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:citation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Andrady AL (2011)",
+          "target_label": "Cole M (2011)",
+          "weight": 4
+        },
+        "explanation": "The citation network shows a connection between Andrady AL (2011) and Cole M (2011) with a weight of 4, which is the highest among all displayed connections. Other connections have weights of 1 or 2, making this the strongest."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:citation:cluster_membership",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "citation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:citation:cluster_membership",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not include any information about a citation network, clusters, or a node labeled 'The plastic in microplas…'. Without the relevant data, it is impossible to determine the cluster membership."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:citation:false_premise",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:citation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question references 'CiteWeave absent benchmark node', which is not present in the supplied material. Since the material does not establish any information about this node, the question cannot be answered."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:coauthorship:network_size",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:coauthorship:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 50,
+          "links": 100
+        },
+        "explanation": "The coauthorship network visualization shows 50 nodes representing authors and 100 links representing coauthorship connections, as indicated in the figure caption or network statistics."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:coauthorship:highest_occurrence",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "coauthorship",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:coauthorship:highest_occurrence",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any data or description of a coauthorship network, including node labels or occurrence values, so it is impossible to determine which node has the highest occurrence."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:coauthorship:strongest_connection",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "coauthorship",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:coauthorship:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Thompson, Richard C.",
+          "target_label": "Gall, S. C.",
+          "weight": 5
+        },
+        "explanation": "The coauthorship network shows a link between Thompson, Richard C. and Gall, S. C. with a weight of 5, which is the highest among all displayed connections. Other links have lower weights, such as 4 between Thompson, Richard C. and Napper, Imogen E., and 3 between Thompson, Richard C. and Bakir, Adil. Therefore, this pair has the strongest connection."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:coauthorship:cluster_membership",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "coauthorship",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:coauthorship:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Huahong Shi",
+          "cluster": 1
+        },
+        "explanation": "The supplied material shows that 'Huahong Shi' is a labeled node in the coauthorship network, and it is assigned to cluster 1 based on the detected clusters."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:coauthorship:false_premise",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:coauthorship:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question refers to a node 'CiteWeave absent benchmark node' which is not present in the supplied material. Since the material does not establish the existence of this node, the premise is false, and we must abstain."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:cocitation:network_size",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:cocitation:network_size",
+        "abstain": true,
+        "answer": {},
+        "explanation": "The supplied material does not contain any information about a cocitation network, its nodes, or links, so the answer cannot be determined."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:cocitation:highest_occurrence",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "cocitation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:cocitation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Thompson RC 2004"
+        },
+        "explanation": "The node labeled 'Thompson RC 2004' has the highest occurrence with a value of 1, as indicated by its size and the legend showing occurrence values from 0 to 1."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:cocitation:strongest_connection",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "cocitation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:cocitation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Browne MA 2011",
+          "target_label": "Cole M 2011",
+          "weight": 0.99
+        },
+        "explanation": "The cocitation network shows a link between Browne MA 2011 and Cole M 2011 with a displayed weight of 0.99, which is the highest among all visible connections."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:cocitation:cluster_membership",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "cocitation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:cocitation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Cluster 1",
+          "cluster": 1
+        },
+        "explanation": "The node 'openalex:W2164526292' is listed under Cluster 1 in the cocitation network cluster membership data."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:cocitation:false_premise",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:cocitation:false_premise",
+        "abstain": "true",
+        "answer": "",
+        "explanation": "The question asks about a 'CiteWeave absent benchmark node', but the supplied material does not mention any such node or provide a cocitation network with clusters. Since the premise is false and the node is absent, we must abstain."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:institution_collaboration:network_size",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:institution_collaboration:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 50,
+          "links": 100
+        },
+        "explanation": "The supplied material states that the institution collaboration network contains 50 nodes and 100 links."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:institution_collaboration:highest_occurrence",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "institution_collaboration",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:institution_collaboration:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Chinese Acad Sci"
+        },
+        "explanation": "In the institution collaboration network, the node labeled 'Chinese Acad Sci' has the largest size, indicating the highest occurrence (most frequent institution)."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:institution_collaboration:strongest_connection",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "institution_collaboration",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:institution_collaboration:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Chinese Academy of Sciences",
+          "target_label": "University of Chinese Academy of Sciences",
+          "weight": 42
+        },
+        "explanation": "The edge between 'Chinese Academy of Sciences' and 'University of Chinese Academy of Sciences' has the highest displayed weight of 42, which is greater than all other edges in the network."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:institution_collaboration:cluster_membership",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "institution_collaboration",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:institution_collaboration:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Centre National de la Rec…",
+          "cluster": 1
+        },
+        "explanation": "In the institution_collaboration network, the node labeled 'Centre National de la Rec…' is assigned to cluster 1 as indicated by its color (red) and the legend mapping red to cluster 1."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:institution_collaboration:false_premise",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:institution_collaboration:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The supplied material does not contain any information about a 'CiteWeave absent benchmark node' in the institution_collaboration network, so it is impossible to determine which cluster it belongs to."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:network_size",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 60,
+          "links": 239
+        },
+        "explanation": "The network visualization shows 60 nodes (keywords) and 239 links (co-occurrence connections) as indicated by the network statistics in the figure caption or accompanying text."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:highest_occurrence",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "microplastics"
+        },
+        "explanation": "The node 'microplastics' has the largest size in the network, indicating the highest occurrence. Its occurrence value is 1, which is the maximum among all labeled nodes."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:strongest_connection",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "microplastics",
+          "target_label": "marine-environment",
+          "weight": 72
+        },
+        "explanation": "The network visualization shows the edge between 'microplastics' and 'marine-environment' with the highest link strength value of 72, which is the largest among all displayed connections."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:cluster_membership",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:cluster_membership",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not include any information about a keyword co-occurrence network, its clusters, or the node labeled 'Microplastics'. Therefore, it is impossible to determine the cluster membership."
+      }
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:false_premise",
+      "dataset_id": "global_microplastics_2004_2019",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any information about a 'CiteWeave absent benchmark node' or a keyword co-occurrence network, so it is impossible to determine which cluster it belongs to."
+      }
+    }
+  ],
+  "formal_metadata": {
+    "dataset_id": "global_microplastics_2004_2019",
+    "condition": "no_rag",
+    "run_id": "formal_v2_nonthinking_20260806",
+    "run_manifest_sha256": "7d9ecc37d79727f3b8f9bc0fe8214e0be0b264bd8e33a4382814a1331a6ba3e0",
+    "checkpoint_sha256": "fb19f0333a53f64360a3e7437659a5eeb46179da045bc2c27cce791cda731c3a",
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate",
+      "abstention_f1"
+    ]
+  }
+}

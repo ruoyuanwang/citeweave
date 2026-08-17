@@ -1,0 +1,238 @@
+{
+  "benchmark_version": 1,
+  "items": 6,
+  "predictions_received": 6,
+  "metrics": {
+    "exact_answer_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.0,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 0.0,
+    "abstention_recall": 0.0,
+    "abstention_f1": 0.0
+  },
+  "counts": {
+    "correct": 6,
+    "answered": 6,
+    "incorrect_answered": 0,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 6,
+    "abstention": {
+      "tn": 6
+    }
+  },
+  "by_task": {
+    "network_size": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 197,
+          "nodes": 72
+        },
+        "explanation": "The visible subtitle reads “72 nodes · 197 links.”",
+        "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size"
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:citation:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 55,
+          "nodes": 60
+        },
+        "explanation": "The visible subtitle reads “60 nodes · 55 links.”",
+        "item_id": "climate_change_risks_1990_2021:citation:network_size"
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:coauthorship:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 149,
+          "nodes": 60
+        },
+        "explanation": "The visible subtitle reads “60 nodes · 149 links.”",
+        "item_id": "climate_change_risks_1990_2021:coauthorship:network_size"
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:cocitation:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 192,
+          "nodes": 72
+        },
+        "explanation": "The visible subtitle reads “72 nodes · 192 links.”",
+        "item_id": "climate_change_risks_1990_2021:cocitation:network_size"
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:institution_collaboration:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 192,
+          "nodes": 72
+        },
+        "explanation": "The visible subtitle reads “72 nodes · 192 links.”",
+        "item_id": "climate_change_risks_1990_2021:institution_collaboration:network_size"
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "abstain": false,
+        "answer": {
+          "links": 196,
+          "nodes": 72
+        },
+        "explanation": "The visible subtitle reads “72 nodes · 196 links.”",
+        "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:network_size"
+      }
+    }
+  ],
+  "formal_metadata": {
+    "run_id": "formal_v2_nonthinking_20260806",
+    "dataset_id": "climate_change_risks_1990_2021",
+    "condition": "figure_vlm",
+    "role": "cross_model_extension",
+    "generator": "independent_codex_visual_subagent",
+    "main_inference": false,
+    "visible_only": true,
+    "packet_sha256": "378544bac34fded762f1b1dbcbcd6c208030b6862109987497c25861a0843118",
+    "output_sha256": "9b1e49ababaf9ddcfbab963fde104b20d027a35bcf12827757d7e8cb2a3d809f",
+    "items": 6,
+    "item_ids": [
+      "climate_change_risks_1990_2021:bibliographic_coupling:network_size",
+      "climate_change_risks_1990_2021:citation:network_size",
+      "climate_change_risks_1990_2021:coauthorship:network_size",
+      "climate_change_risks_1990_2021:cocitation:network_size",
+      "climate_change_risks_1990_2021:institution_collaboration:network_size",
+      "climate_change_risks_1990_2021:keyword_cooccurrence:network_size"
+    ],
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate"
+    ]
+  }
+}

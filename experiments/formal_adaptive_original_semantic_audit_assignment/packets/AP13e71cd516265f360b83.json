@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "audit_packet_id": "AP13e71cd516265f360b83",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:cluster",
+        "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:cluster",
+          "network": "bibliographic_coupling",
+          "object": 4,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label",
+          "network": "bibliographic_coupling",
+          "object": "Graph Neural Networks an…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "1f2293a57e5c9aa4de3236b71b2690df30225292a73cd2eba0737f0c6e05d319"
+    },
+    "question": "Which detected cluster contains the labeled node 'Graph Neural Networks an…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":4,\"label\":\"Graph Neural Networks an…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.3389/fgene.2021.690049 has a cluster value of 4 and a display label 'Graph Neural Networks an…'. Therefore, the labeled node belongs to cluster 4.\",\"item_id\":\"gnn_drug_discovery_2017_2023:bibliographic_coupling:cluster_membership\"}",
+  "evaluation_decision": "pass",
+  "evaluation_confidence": 0.99,
+  "evaluation_reason": "The returned visible label and cluster 4 exactly match the canonical relationships.",
+  "evaluation_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:cluster",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label"
+  ],
+  "content_sha256": "be4e11f7ec28e43a8eb9ae4b23442932ff0d374ea4410270f955ff374bb28aea"
+}

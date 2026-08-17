@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "dataset_id": "machine_learning_climate_change_2008_2022",
+  "condition": "citeweave_full",
+  "evidence_sha256": "3eea00286c152a59e08480d1a574fa0e23b0e70dc092f65748f2a7448280b470",
+  "report_sha256": "1002d8dea199ffb6f1fdee5d4e001475a73ec56f2160046223c57cc56609ca9c",
+  "call_count": 4,
+  "model": "deepseek-v4-pro",
+  "temperature": 0.1,
+  "seed": 42,
+  "report_language": "English",
+  "internal_review_used_as_experimental_evaluation": false
+}

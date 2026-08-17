@@ -1,0 +1,32 @@
+{
+  "experiment_protocol_version": "0.1",
+  "dataset_id": "rag_graph_2022_2025",
+  "role": "development",
+  "started_at": "2026-08-05 18:30:35.752376+00:00",
+  "status": "failed",
+  "git": {
+    "commit": "5f8c16c0ee5cb5574112b7910e07d1d7f6a8dc74",
+    "status": "M .gitignore\n M src/citeweave/connectors/crossref.py\n M src/citeweave/workflow.py\n?? .venv/\n?? docs/GENERATION_OPTIMIZATION_PLAN.md\n?? docs/MASTER_PLAN.md\n?? docs/TEXT_GENERATION_BENCHMARK.md\n?? docs/references/\n?? experiments/\n?? runs/\n?? scripts/\n?? src/citeweave/__pycache__/\n?? src/citeweave/adaptive_review.py\n?? src/citeweave/connectors/__pycache__/\n?? src/citeweave/experiment_benchmark.py\n?? src/citeweave/graph_grounding.py\n?? tests/__pycache__/\n?? tests/test_adaptive_review.py\n?? tests/test_connectors.py\n?? tests/test_experiment_benchmark.py\n?? tests/test_graph_grounding.py\n?? tmp/"
+  },
+  "registry_entry": {
+    "id": "rag_graph_2022_2025",
+    "role": "development",
+    "source": "crossref",
+    "title": "Graph retrieval-augmented generation research",
+    "keywords": [
+      "graph retrieval augmented generation"
+    ],
+    "query_mode": "phrase",
+    "year_from": 2022,
+    "year_to": 2025,
+    "document_types": [
+      "journal-article"
+    ],
+    "max_records": 300,
+    "include_references": true
+  },
+  "workspace": "D:\\project\\bibagent\\experiments\\workspaces\\rag_graph_2022_2025",
+  "finished_at": "2026-08-05 18:30:38.953599+00:00",
+  "error_type": "QualityGateError",
+  "error": "Deterministic manuscript failed evidence validation: {\"valid\": false, \"used_evidence_ids\": [\"E001\", \"E002\", \"E004\", \"E005\", \"E006\", \"E008\", \"E010\", \"E012\", \"E015\", \"E016\", \"E020\", \"E022\", \"E023\", \"E024\", \"E025\", \"E026\", \"E027\", \"E046\", \"E047\", \"E048\", \"E049\", \"E050\", \"E051\", \"E052\", \"E053\", \"E054\", \"E055\", \"E056\", \"E057\", \"E058\", \"E059\", \"E060\", \"E061\", \"E062\"], \"evidence_coverage\": 0.5151515151515151, \"invalid_evidence_ids\": [], \"malformed_evidence_tokens\": [], \"unsupported_numbers\": [], \"uncited_or_unapproved_dois\": [], \"uncited_numeric_sentences\": [], \"incomplete_paragraphs\": [\"The report evaluates a frozen metadata snapshot and treats bibliometric relationships as descriptive evidence rather than causal mechanisms.\", \"rue}. [E002]\\nThe analysis uses full counting for descriptive output and retains candidate nodes, edge weights, association strength, communities, and visualization selection parameters. Network relations are not interpreted as causal links.\", \"nge, source, retrieval time, and network parameterization. Database coverage, missing metadata, entity resolution, and thresholds can alter the results; substantive theme labels still require human verification against representative texts.\", \"This report preserves a traceable path from raw metadata to canonical tables, analysis figures, evidence items, and textual claims. Its outputs are bibliometric evidence and do not replace systematic reading.\"], \"missing_sections\": [\"摘要\", \"数据与方法\", \"结果\", \"讨论\", \"局限\", \"结论\"], \"minimum_content_pass\": true, \"journal_readiness\": {\"passed\": false, \"checks\": {\"characters_at_least_12000\": false, \"substantive_paragraphs_at_least_18\": true, \"subsections_at_least_15\": false, \"figure_mentions_at_least_12\": false, \"evidence_items_at_least_20\": true, \"references_at_least_8\": false, \"introduction_at_least_1500\": false, \"methods_at_least_2000\": false, \"results_at_least_4500\": false, \"discussion_at_least_2200\": false, \"research_questions_present\": false, \"method_moves_complete\": false, \"discussion_moves_complete\": false}, \"characters\": 4892, \"substantive_paragraphs\": 37, \"subsections\": 5, \"figure_mentions\": [], \"unique_evidence_items\": 34, \"reference_entries\": 0, \"section_characters\": {\"introduction\": 0, \"methods\": 0, \"results\": 0, \"discussion\": 0}, \"method_moves\": {\"data_source\": false, \"query\": false, \"completeness\": false, \"normalization\": false, \"counting\": false, \"threshold\": false, \"clustering\": false, \"visual_filter\": false, \"reproducibility\": false}, \"discussion_moves\": {\"principal_findings\": false, \"prior_work_comparison\": false, \"cross_result_synthesis\": false, \"implications\": false, \"future_agenda\": false, \"evidence_boundary\": false}}, \"paragraphs\": 49, \"characters\": 4892, \"mode\": \"deterministic_template\"}"
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+  "condition": "figure_vlm",
+  "role": "cross_model_extension",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "packet_sha256": "2285a29c81dd5e3c3490327f6d1731733791c214a539628d3bb23509da7aba00",
+  "output_sha256": "76bf454bcaad4f0dbf7cf7b4193c68cc7bf5489f61ed6291277fdd60bd08cec4",
+  "items": 5,
+  "item_ids": [
+    "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:network_size",
+    "crispr_extracellular_vesicles_2015_2022:coauthorship:network_size",
+    "crispr_extracellular_vesicles_2015_2022:cocitation:network_size",
+    "crispr_extracellular_vesicles_2015_2022:institution_collaboration:network_size",
+    "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:network_size"
+  ]
+}

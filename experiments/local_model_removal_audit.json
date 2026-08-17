@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "removed",
+  "formal_results_used": false,
+  "local_model_files_present": false,
+  "local_runtime_present": false,
+  "local_model_process_present": false,
+  "policy": "All formal generation uses hosted APIs or explicitly identified Codex subagents; no local model or GPU runtime is permitted."
+}

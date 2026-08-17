@@ -1,0 +1,1 @@
+{"packet_id":"EP4a77b2587e88b1fbea1a","judge_id":"evaluation","decision":"fail","confidence":0.99,"reason":"The substance calls for abstention, but the candidate encodes abstain as the string \"true\" rather than the required boolean true.","evidence_ids":["bibliographic_coupling:fact:absent_target"]}

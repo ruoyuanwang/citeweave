@@ -1,0 +1,49 @@
+{
+  "packet_id": "EP50184d372e70fdb655f0",
+  "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:cluster",
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:cluster",
+          "network": "bibliographic_coupling",
+          "object": 3,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label",
+          "network": "bibliographic_coupling",
+          "object": "Drought and heat stress-…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "8c50f652a2c0243dbef515dd37b289b03c3e0153580d1fb762cd3be0d54aec6f"
+    },
+    "question": "Which detected cluster contains the labeled node 'Drought and heat stress-…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":3,\"label\":\"Drought and heat stress-…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1007/s00122-019-03331-2 has a cluster value of 3 and a display label 'Drought and heat stress-…'. Therefore, the labeled node belongs to cluster 3.\",\"item_id\":\"plant_heat_drought_2008_2021:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:cluster",
+    "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label"
+  ],
+  "content_sha256": "473df48165cd3fa5f9117ecb5efbeac2ecfd823c4eee2541729c49abd76f6e91"
+}

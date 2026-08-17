@@ -1,0 +1,8 @@
+{
+  "packet_id": "EP6610fd551c266ee997c3",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The bibliographic-coupling connection answer correctly identifies “An effective self-superv…” and “BatmanNet: bi-branch mas…” as the strongest displayed pair and gives the supported edge weight of 38.0.",
+  "evidence_ids": ["bibliographic_coupling:fact:strongest_connection", "bibliographic_coupling:edge:0001:weight", "bibliographic_coupling:node:doi:10.1093/bib/bbab109:label", "bibliographic_coupling:node:doi:10.1093/bib/bbad400:label"]
+}

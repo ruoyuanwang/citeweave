@@ -1,0 +1,16 @@
+{
+  "packet_id": "EP7c6f810e187f39ad5e91",
+  "decision": "fail",
+  "confidence": 0.99,
+  "reason": "Several material claims exceed the visible evidence. E002 reports the acquisition counts but does not establish that the seven-record discrepancy arose from source-side deduplication or retrieval artifacts. E003 establishes 43.32% abstract coverage but does not show that keyword analyses rely exclusively on source-indexed terms or that the missing abstracts have no effect on those analyses. E021 shows the Kardashev–Materials science–Physics of the Solid State linkage, but it does not establish that this record is noise or misclassification. E024 and E026 provide parameterized cluster assignments and centrality values, not evidence that the clusters are regional or institutional in substantive character. Most importantly, E022 and E025 explicitly caution that network centrality does not establish substantive importance, yet the report calls high-centrality items foundational, key integrating nodes and anchors of the intellectual structure. The conclusion's claim that the field is driven by productive-author and institution networks is likewise unsupported by descriptive productivity rankings. These unsupported provenance, missing-data, classification, geographic, causal, and substantive-importance assertions prevent the report from being fully evidence-grounded.",
+  "evidence_ids": [
+    "E002",
+    "E003",
+    "E021",
+    "E022",
+    "E024",
+    "E025",
+    "E026"
+  ],
+  "judge_id": "evaluation"
+}

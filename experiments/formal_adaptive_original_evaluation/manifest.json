@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "protocol_version": "adaptive-original-evaluation-v1",
+  "evaluation_target": "untouched_pre_intervention_original_candidate",
+  "condition_identity_visible_to_judge": false,
+  "judge_role": "evaluation_only",
+  "judge_may_modify_artifacts": false,
+  "evaluation_updates_feedback_memory": false,
+  "formal_results_used": true,
+  "experiment_mode": "formal",
+  "rubric_version": "adaptive-evaluation-v1",
+  "seed": 42,
+  "cases_path": "D:\\project\\bibagent\\experiments\\formal_adaptive_cases\\real_outputs.jsonl",
+  "cases_sha256": "7bd0d10197f4ec40281af002e93c9b1bf88339bbd482b2338cb8c545b8bd7566",
+  "reference_registry": "D:\\project\\bibagent\\experiments\\human_references.yml",
+  "reference_registry_sha256": "280eedb52fcf76055d2343c646f63c4143f79bea7c11d6399b4dc533eb8461bf",
+  "topic_sequence": [
+    "gnn_drug_discovery_2017_2023",
+    "crispr_extracellular_vesicles_2015_2022",
+    "machine_learning_climate_change_2008_2022",
+    "climate_change_risks_1990_2021",
+    "digital_twins_healthcare_2012_2024",
+    "plant_heat_drought_2008_2021",
+    "gene_editing_als_2004_2024",
+    "global_microplastics_2004_2019"
+  ],
+  "items": [
+    {
+      "packet_id": "EP053e346448de3876a005",
+      "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "f112afab6e807fff95bc7ea10a66ea12f0bde8efe3a1c447787866226a3f5532",
+      "packet_path": "packets/evaluation/EP053e346448de3876a005.json",
+      "packet_sha256": "9362f635836a6b2878b0afe2e7b6956676f662ec57cf2a46a1f7a5aa3572acdb"
+    },
+    {
+      "packet_id": "EP098ce696d6bd046f5bdb",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "dd4810d953b5ce83bc13bbad13ac556ed7ccf8ba69a709a99fbf48caf8fb6edb",
+      "packet_path": "packets/evaluation/EP098ce696d6bd046f5bdb.json",
+      "packet_sha256": "bc9f37fb0fef2733995e6b08a23f0ced0681fcdafe80c9529ee16bb312c9bdb6"
+    },
+    {
+      "packet_id": "EP0ce799911f41538c06e6",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:strongest_connection:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "e3a62640ebad28d0ef3fa75e3183c2068160e2a5079ec1b476e696a023059319",
+      "packet_path": "packets/evaluation/EP0ce799911f41538c06e6.json",
+      "packet_sha256": "939cea58625c4b8233ce6c020b418f47fefe7a8d1fd1bf23702df83face9fd24"
+    },
+    {
+      "packet_id": "EP0fe525a16ede78d3b023",
+      "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:strongest_connection:grounding",
+      "dataset_id": "global_microplastics_2004_2019",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "981ecdd1500ccdedf1967b7e28f9ab8e5d53dd7ae7b6f47e853b389368264b9d",
+      "packet_path": "packets/evaluation/EP0fe525a16ede78d3b023.json",
+      "packet_sha256": "bf63ee4dd8214ea740349e814fcc101fb5ce935ca76465726ef4cc0699dd85e6"
+    },
+    {
+      "packet_id": "EP1887a3c04544968ceb7d",
+      "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "global_microplastics_2004_2019",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "cea43a9d99570033b1cda6dede7f623b931cfe40f0e735964236c5bae68a37c5",
+      "packet_path": "packets/evaluation/EP1887a3c04544968ceb7d.json",
+      "packet_sha256": "c4c6b9ba73e14fbcabd0ac2bd75e9a6c41e327ea0ec1760609c5dae7dc16e8aa"
+    },
+    {
+      "packet_id": "EP1cc1a1fe1fd42d9ebfcf",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:strongest_connection:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "96a53951f18a9e51dbeccb0429ad3bb10089498faa358b9834d677ec4a5d4c4e",
+      "packet_path": "packets/evaluation/EP1cc1a1fe1fd42d9ebfcf.json",
+      "packet_sha256": "411e48f8f5742a20dded7c894ccc483b485d28cc9e9378d67789cb5fe35e29f6"
+    },
+    {
+      "packet_id": "EP1e92caae4ea25e23c640",
+      "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "0415be96795ce129e9f30f8a8c52342dc58b11072493ec085e1093be1038802b",
+      "packet_path": "packets/evaluation/EP1e92caae4ea25e23c640.json",
+      "packet_sha256": "403bc30e63f965183c97d1ccde2f1b7c98179c31cc3081f41bb9e57dc53540e2"
+    },
+    {
+      "packet_id": "EP285913fd81cad10119ba",
+      "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "4fd076b0308cbd227fee15d74a02ee3ae452a62a9990ffbe57ce8637a64c4dea",
+      "packet_path": "packets/evaluation/EP285913fd81cad10119ba.json",
+      "packet_sha256": "4a6c044e5aab677aad88e46dcb5eb156b806f68367ffdf0393e002f24f7de2e1"
+    },
+    {
+      "packet_id": "EP2a7110aea5c90ccbbf1e",
+      "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "global_microplastics_2004_2019",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "d37058aaa45ca0098313c81546afb6950f7a19201ff4624d333ff6940f3c07e9",
+      "packet_path": "packets/evaluation/EP2a7110aea5c90ccbbf1e.json",
+      "packet_sha256": "b0311aa3e3e79e574b7d674afcc149a1ed923382dec924b050d4bc7c1377a60a"
+    },
+    {
+      "packet_id": "EP2a811a289b92f49806c8",
+      "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "4d2f847ee3505a8ca4bb59008c125413dbaae7efee26892e58d99b48f8424994",
+      "packet_path": "packets/evaluation/EP2a811a289b92f49806c8.json",
+      "packet_sha256": "9e611900238a4b41bdde060cc16d36aa9e1dc5216f07b73f3bfab649a567b39c"
+    },
+    {
+      "packet_id": "EP31d1cd7066d0399817f7",
+      "sample_id": "gene_editing_als_2004_2024:report:grounding",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "topic_role": "locked",
+      "artifact_type": "report",
+      "candidate_sha256": "11a225bc4e9645780f5cf4c523b3cd5a049f8b0b5b00859d0793d6f9488fbb4f",
+      "packet_path": "packets/evaluation/EP31d1cd7066d0399817f7.json",
+      "packet_sha256": "f153fb555b19e45a3af10cf88ae98e99da911976f342822ed07af7aaa4d07fcc"
+    },
+    {
+      "packet_id": "EP3ac2c3eda0a938ada226",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "5d8802a7bfe39c75bd7042c95941185084a206e3fbf8db976f0fb03b58f3e1ba",
+      "packet_path": "packets/evaluation/EP3ac2c3eda0a938ada226.json",
+      "packet_sha256": "baaebfbffa830c180d1e39ec2bdfd07147dd34754da5a076c65151ef75053ff1"
+    },
+    {
+      "packet_id": "EP3c4c86d20e4d812a67f8",
+      "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "e513edd5cbc99b1e13e79f6e528058ac17565c0779680c4c5a18390157246f93",
+      "packet_path": "packets/evaluation/EP3c4c86d20e4d812a67f8.json",
+      "packet_sha256": "f318190de929b93a3446c49fa7c636d0e6b894daa7bdf8bafac33e86b850c63a"
+    },
+    {
+      "packet_id": "EP4a34e611ab62b88113b5",
+      "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "b4d4586abeed6c5681039138cd53430007893f35322ed035d3ec95d83cb0e449",
+      "packet_path": "packets/evaluation/EP4a34e611ab62b88113b5.json",
+      "packet_sha256": "15909fe7f3bf0ad8f0aa5890335054ab6197abfde665aea89ef8bbf7d81c387e"
+    },
+    {
+      "packet_id": "EP4a77b2587e88b1fbea1a",
+      "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "a6c0debba7f82005eae48e91710a17f0cf19cf93fed25ade6cf4feb7a5f73e76",
+      "packet_path": "packets/evaluation/EP4a77b2587e88b1fbea1a.json",
+      "packet_sha256": "7e86c400698c85379e54448ca13e15e48ac2da11971fa243ada07962eb90caa4"
+    },
+    {
+      "packet_id": "EP4a9c625084dcff8570dd",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "c1531d4ce700abe15a64b8cbcf039d81b5f89ce6c6b5f1af5dd342f7b32d295d",
+      "packet_path": "packets/evaluation/EP4a9c625084dcff8570dd.json",
+      "packet_sha256": "ded00309f4c23849924cf49d9063e312e78dad7a1684f75c81746cfab065ecbe"
+    },
+    {
+      "packet_id": "EP4c1138bf63de02bf2ef3",
+      "sample_id": "digital_twins_healthcare_2012_2024:citation:strongest_connection:grounding",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "ebda6824d5ee516ff166b65629615c2701512dca0db35169a492eb406b7531c5",
+      "packet_path": "packets/evaluation/EP4c1138bf63de02bf2ef3.json",
+      "packet_sha256": "ff6fec9bde5d73db38ed6491da3ab6a85fb5332b7ffe33d2e980359c4b463224"
+    },
+    {
+      "packet_id": "EP4eb1444e982ffc122ab2",
+      "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "66a885de314273693d9268a88e625594cb253ce9cc56290f99c32fee86bddaf4",
+      "packet_path": "packets/evaluation/EP4eb1444e982ffc122ab2.json",
+      "packet_sha256": "96e43a0e4cd6adcf3cc02722a43e9482ce5d96f28a927c42b527f9d75bed7a4d"
+    },
+    {
+      "packet_id": "EP5e710fea151f4a3ecdf9",
+      "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "216b7146977fd7516826726b2f2d22f6f379d91d06eee8886030c5ae0367f9fb",
+      "packet_path": "packets/evaluation/EP5e710fea151f4a3ecdf9.json",
+      "packet_sha256": "3c4df9034b54c1d7aa46323667914d852e9ca0f40afe6645f91955088f487879"
+    },
+    {
+      "packet_id": "EP5fb59e99afc77aefd287",
+      "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "e0a3c6bd139d7abe1ffa7e68fdee10aa7532e69007f34f5cd4aad8d747b9cceb",
+      "packet_path": "packets/evaluation/EP5fb59e99afc77aefd287.json",
+      "packet_sha256": "45b616a7d510d49a96a954042a1a57673f08b75df635a5ed4d667cedd00c1002"
+    },
+    {
+      "packet_id": "EP614be06b0eaf8a77a74b",
+      "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:strongest_connection:grounding",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "c90b3761320b2b459a017db6affeabb9e2335f6fe1dd3a10a9ec4a60832c858b",
+      "packet_path": "packets/evaluation/EP614be06b0eaf8a77a74b.json",
+      "packet_sha256": "95a959427bfd814f242e462ab8adcbd5174ee6025a2c41cea0133c40c080b156"
+    },
+    {
+      "packet_id": "EP61776e99c71edaa7e761",
+      "sample_id": "digital_twins_healthcare_2012_2024:report:grounding",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "topic_role": "locked",
+      "artifact_type": "report",
+      "candidate_sha256": "1e59cc9ba927360b0240533f65a9be28588225c5548f0ec7de9d1ab3a832336c",
+      "packet_path": "packets/evaluation/EP61776e99c71edaa7e761.json",
+      "packet_sha256": "c25afcb47241cf8f5fb41f2056874a6bfc3c46407f46d0e999715c9f50cad87c"
+    },
+    {
+      "packet_id": "EP657398eaf729fc87bcf9",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "03e292ae13ec2dc64c42b9c12fa971dae8f427f7ef9471711b57bf4b11f43614",
+      "packet_path": "packets/evaluation/EP657398eaf729fc87bcf9.json",
+      "packet_sha256": "537e8469296da2faffaf9131f865440e8efe0d17bb8b7f657d83bd8dbc3bd7d6"
+    },
+    {
+      "packet_id": "EP682d5bcc19d5bf0a47a6",
+      "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "52dd35128c23a0d5b41f2c5162393ba0ee1431ed3caf76c9cff5299aeb5c89d1",
+      "packet_path": "packets/evaluation/EP682d5bcc19d5bf0a47a6.json",
+      "packet_sha256": "3976c62f5c7aea2523940c33825b07bf79c8a1e16557ca49472463c48ba80221"
+    },
+    {
+      "packet_id": "EP6f2f3c9f92ff9a675623",
+      "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:strongest_connection:grounding",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "99d98695929b6bbcd736cc3cf7c7b3a778200b6e68ef4a67580c912d102a035e",
+      "packet_path": "packets/evaluation/EP6f2f3c9f92ff9a675623.json",
+      "packet_sha256": "c8f92c209944e8cbfe8679a18e0c8142a2b8d0e654f0b531df8de3d9e3896118"
+    },
+    {
+      "packet_id": "EP787935550b74a261093b",
+      "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "fc2ec6c0876777e3345344c51bba902ec02486267769a0e949dd340bf01c7bad",
+      "packet_path": "packets/evaluation/EP787935550b74a261093b.json",
+      "packet_sha256": "cdd7a931e649f4ce5ce2958830a4545ed9b75bb05b1c821a632b7a7de7d32d73"
+    },
+    {
+      "packet_id": "EP7c6d2141a2f9b3497620",
+      "sample_id": "global_microplastics_2004_2019:report:grounding",
+      "dataset_id": "global_microplastics_2004_2019",
+      "topic_role": "locked",
+      "artifact_type": "report",
+      "candidate_sha256": "26e4930ed26ca3f060c51a8cf15715b1b5e2fca7f5d59b0f29b0184b42114fa5",
+      "packet_path": "packets/evaluation/EP7c6d2141a2f9b3497620.json",
+      "packet_sha256": "919110278cc3fa9337c7fff3541a821a4ff0ab9eb0c80b33288b8df5d6b3d37e"
+    },
+    {
+      "packet_id": "EP8313c31a23f98c13a747",
+      "sample_id": "plant_heat_drought_2008_2021:report:grounding",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "topic_role": "locked",
+      "artifact_type": "report",
+      "candidate_sha256": "5ca1af6e35129ce9d317ca6158058926074481443b92e946ec3988cdf2e6f27d",
+      "packet_path": "packets/evaluation/EP8313c31a23f98c13a747.json",
+      "packet_sha256": "037055f58182997b0f4fda6ab2eca184edc81319d53a6a560e3666b7049d0a52"
+    },
+    {
+      "packet_id": "EP834fec0bb0d23cfc3bfa",
+      "sample_id": "gnn_drug_discovery_2017_2023:report:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "report",
+      "candidate_sha256": "93af710b586567f50aa42d42ef7eae93573c87868b811e5af571569f91bc6180",
+      "packet_path": "packets/evaluation/EP834fec0bb0d23cfc3bfa.json",
+      "packet_sha256": "73b847b10f55e1433a2dea16deb787bb367474f6e83a84dc66c2b0036ffc9d30"
+    },
+    {
+      "packet_id": "EP8d7864df32fde3557691",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "230ccc43bebcc2071711ecb91cb0cc48b546a6a002d7a6dfad209a660d87e71b",
+      "packet_path": "packets/evaluation/EP8d7864df32fde3557691.json",
+      "packet_sha256": "bced04a6108152e9fd29392367104d87856438c917a3af421f134659d0cc2091"
+    },
+    {
+      "packet_id": "EP8ecd64b1b3d76a571ace",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:report:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "report",
+      "candidate_sha256": "8da1347d25421c8e0af311d47e0e5fad0c66bcf72093ca981154c02d042196e1",
+      "packet_path": "packets/evaluation/EP8ecd64b1b3d76a571ace.json",
+      "packet_sha256": "1a78058a26bbceffaef6f8b6329f883b7896f6a9317e0c17015b34da2c072d8f"
+    },
+    {
+      "packet_id": "EP8feed64c6de08b0c96ac",
+      "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:strongest_connection:grounding",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "bfe2940d6fde31b9fa22f05e694acb7d9e4478ee2608655539916d1586a9aee1",
+      "packet_path": "packets/evaluation/EP8feed64c6de08b0c96ac.json",
+      "packet_sha256": "b26ead87d0dee45d81d166d3678e24a605481bcb0b427c60744fed03c3bc236f"
+    },
+    {
+      "packet_id": "EP96bb4fc7f53af08c0650",
+      "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "global_microplastics_2004_2019",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "6ded3d222f24854711cc34b793a72321ea6ac8d41351154dedc586776f10d6e8",
+      "packet_path": "packets/evaluation/EP96bb4fc7f53af08c0650.json",
+      "packet_sha256": "63e9a74e9bab8143b8f149bd0ec50f5f72a6560e9b6c97c790a2bedb3e369cd0"
+    },
+    {
+      "packet_id": "EP97943495e1f7fff2d119",
+      "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "c5c3d30ed363c29dadf6ccbede2cc0b675484888607d0a1356a74febbd30d3e1",
+      "packet_path": "packets/evaluation/EP97943495e1f7fff2d119.json",
+      "packet_sha256": "f875aca4db91e3ce524d25166d13a04babe1399f1b2ee993de16571fe5788861"
+    },
+    {
+      "packet_id": "EPa08ae28a1e34407bbfc2",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "93e3186255a03f4a216d0f1f700cd976d7d970f9ca12bd638b7df3839ca8dac6",
+      "packet_path": "packets/evaluation/EPa08ae28a1e34407bbfc2.json",
+      "packet_sha256": "f56595ec79f50fefa874c1920199ed78b4381f294db61f12eb3cfe63df3d033b"
+    },
+    {
+      "packet_id": "EPa09e73fd1c457d6205fa",
+      "sample_id": "machine_learning_climate_change_2008_2022:report:grounding",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "topic_role": "locked",
+      "artifact_type": "report",
+      "candidate_sha256": "28e23cbac6ead168643a2758719a565dbbd439dd4355f029bf065f6ad8ab95cf",
+      "packet_path": "packets/evaluation/EPa09e73fd1c457d6205fa.json",
+      "packet_sha256": "23e4eda626c823f08ce8f70b9e620d79c35d0736cf4e03c4415c64910b4ae388"
+    },
+    {
+      "packet_id": "EPa646c00c52a4c9a6ebca",
+      "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "2dd39af905fd69750616ae38f8bb0c38c0d61c6705bb86c0723ee006e63c9fa8",
+      "packet_path": "packets/evaluation/EPa646c00c52a4c9a6ebca.json",
+      "packet_sha256": "fa925b8d7a68b9476cf4bc13fa8c40dc7eea05d9011c858d3723b92338c54b3e"
+    },
+    {
+      "packet_id": "EPafdc530c7efc0908c504",
+      "sample_id": "climate_change_risks_1990_2021:report:grounding",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "topic_role": "locked",
+      "artifact_type": "report",
+      "candidate_sha256": "c36647d218dcbb195f5a961b5c0c9dfef6e4cb0d541530b6204ce9a6a9beff6c",
+      "packet_path": "packets/evaluation/EPafdc530c7efc0908c504.json",
+      "packet_sha256": "ddf9867bfe386e414cd9d58ae712d90380253967f14da54fef2632c1ccf321a5"
+    },
+    {
+      "packet_id": "EPb29e8758d39018a789e8",
+      "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "5eb3965ef4d564325348231a0db8a20d97ca7a9718351815858cde81368fa3b9",
+      "packet_path": "packets/evaluation/EPb29e8758d39018a789e8.json",
+      "packet_sha256": "ef099afe6ecb4c04553e0854d201bba6cc3907f0dc98e48d5b846cc0a926d0fc"
+    },
+    {
+      "packet_id": "EPb6af867547ec7b33aad2",
+      "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "1d18e70b6326722785f1ef2a981e83593cbdb824ce0d8b0b5241b43eb7206a05",
+      "packet_path": "packets/evaluation/EPb6af867547ec7b33aad2.json",
+      "packet_sha256": "ae7f9d327e9733e688897970720f6cd67403b78ac844bbe9d2d153c9f795f3d7"
+    },
+    {
+      "packet_id": "EPd0401f146c74d09bfe34",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "6fe81638cdf1943c9483c6baf9ebbbb3e0d432777017d3df5d8c01fb18c7ee2b",
+      "packet_path": "packets/evaluation/EPd0401f146c74d09bfe34.json",
+      "packet_sha256": "f1e06d56bcca241de273dd1f8ebb7ab99c8fe73f6b60a05e28bf5a6df2438ac6"
+    },
+    {
+      "packet_id": "EPd94f9d72180d702f8ab4",
+      "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "912d9687cb1353ec7728f9f91f6240dd430d76063386ca0eb982b48c1f16684d",
+      "packet_path": "packets/evaluation/EPd94f9d72180d702f8ab4.json",
+      "packet_sha256": "f54520f8b0db119c2d53f3cde0debe650645fdb04f1f0628354d026a37b15212"
+    },
+    {
+      "packet_id": "EPe1edb12908bb28c46e22",
+      "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "b3044f549de14cfa1c1cdf59cc54395ed42083390320d070daf357e25edebdc2",
+      "packet_path": "packets/evaluation/EPe1edb12908bb28c46e22.json",
+      "packet_sha256": "f65cf44e99567c96d8a6a1531ad53971b5d63a4dd0797da2fefd5e55d12726fe"
+    },
+    {
+      "packet_id": "EPef4d19023b65605c225c",
+      "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "69c63a33f1ffc101934f9e3e43ffd55a4d44e92d3c3a55b9e5b61771a613956f",
+      "packet_path": "packets/evaluation/EPef4d19023b65605c225c.json",
+      "packet_sha256": "2daea64e819c4cd6a068d2579adca0289e799a69c475bb860a59e3dbf5b61a3c"
+    },
+    {
+      "packet_id": "EPf3e65d9d51c821920c0e",
+      "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:strongest_connection:grounding",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "0efe0212a36edb591bf29a8a272cac7eb767f4338222dd4a5f85a77a8b44c2d6",
+      "packet_path": "packets/evaluation/EPf3e65d9d51c821920c0e.json",
+      "packet_sha256": "7e3038e29d75469c6136c1f904f303efc8353f4df779820648a870012a6b6324"
+    },
+    {
+      "packet_id": "EPf7c7eb954106e7e1957e",
+      "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "dcebf24da5939b5ca45a71c82723037e6c4421c0cfb46efecd469efe77d06fd5",
+      "packet_path": "packets/evaluation/EPf7c7eb954106e7e1957e.json",
+      "packet_sha256": "7b64a59c1e894573eb04c5414f35ad199411dce4b6df4d05e45f428e79e4f629"
+    },
+    {
+      "packet_id": "EPff0bb52e38200dd2d2e0",
+      "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "global_microplastics_2004_2019",
+      "topic_role": "locked",
+      "artifact_type": "graph",
+      "candidate_sha256": "5541eec2333f00b750401d0c5c88fc2a9b1f50c1b3ebead6260eb6d30308e971",
+      "packet_path": "packets/evaluation/EPff0bb52e38200dd2d2e0.json",
+      "packet_sha256": "27f1812f54270db291521b53e1747dd217ab60535c73c8aa03a7c31fdeab5017"
+    },
+    {
+      "packet_id": "EPff4e9a2322be9dc5e45d",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "7eddd5e82140c7d5be2f757d29a5adcda056f0510433042ede5bdd7530e1fe00",
+      "packet_path": "packets/evaluation/EPff4e9a2322be9dc5e45d.json",
+      "packet_sha256": "64365c21944c6c1b440f1151d2e739b64a58367b6d393054654d0a5583c1c602"
+    }
+  ]
+}

@@ -1,0 +1,739 @@
+{
+  "benchmark_version": 1,
+  "items": 29,
+  "predictions_received": 29,
+  "metrics": {
+    "exact_answer_accuracy": 0.9655172413793104,
+    "schema_valid_rate": 0.9655172413793104,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.041666666666666664,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.03448275862068961,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 0.8333333333333334,
+    "abstention_recall": 1.0,
+    "abstention_f1": 0.9090909090909091
+  },
+  "counts": {
+    "correct": 28,
+    "answered": 24,
+    "incorrect_answered": 1,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 24,
+    "abstention": {
+      "tn": 23,
+      "tp": 5,
+      "fp": 1
+    }
+  },
+  "by_task": {
+    "cluster_membership": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_occurrence": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_connection": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 0.8333333333333334,
+      "schema_valid_rate": 0.8333333333333334,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 4,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.8,
+      "schema_valid_rate": 0.8,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 230
+        },
+        "explanation": "The supplied material includes two facts: the displayed node count is 72 and the displayed edge count is 230 for the bibliographic coupling network. These directly answer the question about the number of nodes and links."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:highest_occurrence",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Integrating mechanism-ba…"
+        },
+        "explanation": "The context states that the node with DOI 10.1063/5.0086789 has the highest occurrence in the bibliographic coupling network, and its display label is 'Integrating mechanism-ba…'."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Digital Twin Perspective…",
+          "cluster": 2
+        },
+        "explanation": "The context provides a row where the subject with DOI 10.1109/access.2022.3156062 has predicate 'cluster' with object 2, and another row where the same subject has predicate 'display_label' with object 'Digital Twin Perspective…'. Therefore, the node labeled 'Digital Twin Perspective…' belongs to cluster 2."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:false_premise",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the bibliographic coupling network does not contain any visible labels, and the question asks about a specific node 'CiteWeave absent benchmark node' which is not present in the provided material. Since the node is not part of the network, the premise is false, and the question is unanswerable."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:citation:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:citation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 5,
+          "links": 4
+        },
+        "explanation": "The context provides a displayed node count of 5 and a displayed edge count of 4 for the citation network, directly answering the question."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:citation:highest_occurrence",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "citation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:citation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Networking Architecture…"
+        },
+        "explanation": "The context states that the node with the highest occurrence in the citation network is citation:node:doi:10.1109/comst.2023.3308717, and its display label is 'Networking Architecture…'."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:citation:strongest_connection",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "citation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:citation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Networking Architecture…",
+          "target_label": "Leveraging Digital Twin…",
+          "weight": 1.0
+        },
+        "explanation": "The fact 'citation:fact:strongest_connection' explicitly states that the strongest connection is between the node with label 'Networking Architecture…' and the node with label 'Leveraging Digital Twin…'. The edge weight is given as 1.0 in 'citation:edge:0001:weight'."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:citation:cluster_membership",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "citation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:citation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Leveraging Digital Twin…",
+          "cluster": 1
+        },
+        "explanation": "The context provides a row where the subject 'citation:node:openalex:W3139024011' has predicate 'cluster' with object 1, and another row where the same subject has predicate 'display_label' with object 'Leveraging Digital Twin…'. Therefore, the node labeled 'Leveraging Digital Twin…' belongs to cluster 1."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:citation:false_premise",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:citation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question asks about a cluster containing 'CiteWeave absent benchmark node', but the provided context only states that the citation network does not contain visible labels. Since the node is not present in the network, the premise is false, making the question unanswerable."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:coauthorship:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:coauthorship:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 59,
+          "links": 128
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 59 and displayed_edge_count is 128 for the coauthorship network."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:coauthorship:highest_occurrence",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "coauthorship",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:coauthorship:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Kyle B. Enfield"
+        },
+        "explanation": "The context provides a row indicating that the highest occurrence node in the coauthorship network has the display label 'Kyle B. Enfield' and an occurrence value of 22.0. This directly answers the question about which labeled node has the highest occurrence."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:coauthorship:strongest_connection",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "coauthorship",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:coauthorship:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Mohamed Thajudeen",
+          "target_label": "Paramesh Shamanna",
+          "weight": 8.0
+        },
+        "explanation": "The fact 'coauthorship:fact:strongest_connection' explicitly states that Mohamed Thajudeen has the strongest connection to Paramesh Shamanna. The edge weight for this connection is given as 8.0 in 'coauthorship:edge:0001:weight'."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:coauthorship:cluster_membership",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "coauthorship",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:coauthorship:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Paramesh Shamanna",
+          "cluster": 11
+        },
+        "explanation": "The context provides a row where the subject 'coauthorship:node:openalex-author:A5054133725' has predicate 'cluster' with object 11, and another row where the same subject has predicate 'display_label' with object 'Paramesh Shamanna'. Therefore, the node labeled 'Paramesh Shamanna' belongs to cluster 11."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:coauthorship:false_premise",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:coauthorship:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question asks about a cluster containing 'CiteWeave absent benchmark node', but the provided context only states that the coauthorship network does not contain any visible labels. Since the node is not present in the network, the premise is false, and the question cannot be answered."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:cocitation:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:cocitation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 203
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 72 and displayed_edge_count is 203 for the cocitation network."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:cocitation:highest_occurrence",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "cocitation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:cocitation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W2941876953"
+        },
+        "explanation": "The context states that the node with the highest occurrence in the cocitation network is 'cocitation:node:openalex:W2941876953', which has a display label of 'openalex:W2941876953' and 74 occurrences."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:cocitation:strongest_connection",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "cocitation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:cocitation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "openalex:W2597150627",
+          "target_label": "openalex:W2910597635",
+          "weight": 21.0
+        },
+        "explanation": "The row with atom_id 'cocitation:fact:strongest_connection' explicitly states that the strongest connection is between openalex:W2597150627 and openalex:W2910597635. The weight for this edge is given as 21.0 in the row with atom_id 'cocitation:edge:0001:weight'. The display labels for both nodes are 'openalex:W2597150627' and 'openalex:W2910597635' respectively."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:cocitation:cluster_membership",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "cocitation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:cocitation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W2941876953",
+          "cluster": 2
+        },
+        "explanation": "The context provides a row with atom_id 'cocitation:node:openalex:W2941876953:cluster' where the predicate is 'cluster' and the object is 2, indicating that the node 'openalex:W2941876953' belongs to cluster 2. The label is confirmed by the row with predicate 'display_label' and object 'openalex:W2941876953'."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:cocitation:false_premise",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:cocitation:false_premise",
+        "abstain": "true",
+        "answer": "",
+        "explanation": "The question asks about a 'CiteWeave absent benchmark node', but the context states that the cocitation network does not contain any visible labels. Since the node is not present in the network, it cannot belong to any cluster."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 153
+        },
+        "explanation": "The supplied material includes two facts: one stating the displayed node count is 72 and another stating the displayed edge count is 153 for the institution_collaboration network. These directly answer the question about the number of nodes and links."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:highest_occurrence",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "institution_collaboration",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Johns Hopkins University"
+        },
+        "explanation": "The context states that the highest occurrence node in the institution_collaboration network is institution_collaboration:node:ror:00za53h95, which has the display label 'Johns Hopkins University' and an occurrence value of 12.0."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:strongest_connection",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "institution_collaboration",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Qingdao University",
+          "target_label": "Uppsala University",
+          "weight": 6.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that Qingdao University has the strongest connection to Uppsala University. The edge weight for this connection is given as 6.0. The display labels confirm the visible names of the institutions."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:cluster_membership",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "institution_collaboration",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Maastricht University",
+          "cluster": 3
+        },
+        "explanation": "The context provides a row where the subject 'institution_collaboration:node:ror:02jz4aj89' has predicate 'cluster' with object 3, and another row where the same subject has predicate 'display_label' with object 'Maastricht University'. Therefore, the node labeled 'Maastricht University' belongs to cluster 3."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:false_premise",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the institution_collaboration network does not contain any visible labels, and the question asks about a node named 'CiteWeave absent benchmark node' which is not mentioned in the provided material. Since the node is not present in the network, the premise is false, and the question cannot be answered."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 188
+        },
+        "explanation": "The context provides explicit facts: the displayed node count is 72 and the displayed edge count is 188 for the keyword_cooccurrence network."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:highest_occurrence",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Computer science"
+        },
+        "explanation": "The context states that the node with the highest occurrence in the keyword_cooccurrence network is 'keyword_cooccurrence:node:Computer science', which has a display label of 'Computer science' and 607 occurrences."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:strongest_connection",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Artificial intelligence",
+          "target_label": "Computer science",
+          "weight": 251.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that 'Artificial intelligence' has the strongest connection to 'Computer science'. The edge weight between them is given as 251.0. The display labels confirm the visible strings."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:cluster_membership",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Computer science",
+          "cluster": 3
+        },
+        "explanation": "The context provides a row with atom_id 'keyword_cooccurrence:node:Computer science:cluster' where the predicate is 'cluster' and the object is 3, indicating that the node labeled 'Computer science' belongs to cluster 3."
+      }
+    },
+    {
+      "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:false_premise",
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the keyword_cooccurrence network does not contain any visible label for 'CiteWeave absent benchmark node', so the node is absent from the network. Therefore, it cannot belong to any cluster."
+      }
+    }
+  ],
+  "formal_metadata": {
+    "dataset_id": "digital_twins_healthcare_2012_2024",
+    "condition": "flat_structured",
+    "run_id": "formal_v2_nonthinking_20260806",
+    "run_manifest_sha256": "34bdd71bfcf18835424c1848360cc3ea1013ac785f0e60eaf1d856346c695e7e",
+    "checkpoint_sha256": "230ab263e89d72c1be3681a8c31bf7912a79ea8ab55708a2a418043732f3e94b",
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate",
+      "abstention_f1"
+    ]
+  }
+}

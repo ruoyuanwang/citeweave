@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "blind_exchange": true,
+  "condition_identity_visible": false,
+  "packets": [
+    {
+      "packet_id": "EP6529045186746961c7d4",
+      "kind": "evaluation",
+      "packet_sha256": "43f004a0d6ad16ce140287fcdb103ba7d55d074f57251f08ea4d2341f8bbf111"
+    },
+    {
+      "packet_id": "EP1785d1bcaa8541e45de7",
+      "kind": "evaluation",
+      "packet_sha256": "6d41b9585fdbfb687f43b739fd9310bf1b95ff11a054591ad90befb3735f705e"
+    },
+    {
+      "packet_id": "EP1a09fde961cd61ae1d4a",
+      "kind": "evaluation",
+      "packet_sha256": "097059b4dd2ece02fd3424b4c6ae59400fbaed4b51bfa599b372866dd1672ecb"
+    },
+    {
+      "packet_id": "EP6610fd551c266ee997c3",
+      "kind": "evaluation",
+      "packet_sha256": "80948b9e453afa48e6c3e8c803a9671a949590af5dbe2a854431e7485999d665"
+    },
+    {
+      "packet_id": "EPc93d67d3a14c8b63469e",
+      "kind": "evaluation",
+      "packet_sha256": "fc062398d5bdf79c1aa6257c063c16765f6ccfe4ca61c019557325ce2d37a6fb"
+    },
+    {
+      "packet_id": "EP14ee3bcaa3548757dbca",
+      "kind": "evaluation",
+      "packet_sha256": "b8273e06d8b51b99474e7da9761ed9d522275592442c99376c342ed725c001a5"
+    },
+    {
+      "packet_id": "EP1a7fd5a119de8d769475",
+      "kind": "evaluation",
+      "packet_sha256": "8190c6695b7074ef5e077437480bf384014ba04891ee22a259b21b5ad3471f82"
+    },
+    {
+      "packet_id": "EP6f096a00bfbf01e1e979",
+      "kind": "evaluation",
+      "packet_sha256": "cf4401d64c866077ce32bdab369ad0b000225035ae7f76c1e54980996d82b467"
+    },
+    {
+      "packet_id": "EP89259f134e0747c213cd",
+      "kind": "evaluation",
+      "packet_sha256": "c6d0669a3671eee7bef112e99362a5665ee7d96a9aabf9b700d79bf1c558301e"
+    },
+    {
+      "packet_id": "EP061a45f3a6ba2dbacc10",
+      "kind": "evaluation",
+      "packet_sha256": "b61548b60b0bd95e54aee222f5a6f18f79257c58f62f2c1ae44e61edcd11094a"
+    },
+    {
+      "packet_id": "EP80db886b932ba18be90b",
+      "kind": "evaluation",
+      "packet_sha256": "6c86be218a3582bf05a6da942ed23928935567981736027c86e453c95343c2bd"
+    },
+    {
+      "packet_id": "EP95ce0c14549a9ca500e5",
+      "kind": "evaluation",
+      "packet_sha256": "f1c0808023da4f2e9be124f7d015adfe96ffddab830e28b7373fbbe231b03e69"
+    }
+  ],
+  "result_directory": "results/evaluation"
+}

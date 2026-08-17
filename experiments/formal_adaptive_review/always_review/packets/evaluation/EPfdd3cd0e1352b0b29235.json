@@ -1,0 +1,49 @@
+{
+  "packet_id": "EPfdd3cd0e1352b0b29235",
+  "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:cluster",
+        "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1109/access.2022.3156062"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:cluster",
+          "network": "bibliographic_coupling",
+          "object": 2,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1109/access.2022.3156062"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:label",
+          "network": "bibliographic_coupling",
+          "object": "Digital Twin Perspective…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1109/access.2022.3156062"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "4d7874200dc50322a7b28025d432603df049b2fc6e3d63dcada9e3646c2b5c7c"
+    },
+    "question": "Which detected cluster contains the labeled node 'Digital Twin Perspective…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":2,\"label\":\"Digital Twin Perspective…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1109/access.2022.3156062 has a display label 'Digital Twin Perspective…' and belongs to cluster 2. Therefore, the labeled node is in cluster 2.\",\"item_id\":\"digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:cluster",
+    "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:label"
+  ],
+  "content_sha256": "ceeff79a93cd4efb53462b3f6e6e4c85bf23096052a40f41f23685879125453c"
+}

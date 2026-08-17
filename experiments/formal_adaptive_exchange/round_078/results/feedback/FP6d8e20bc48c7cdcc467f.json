@@ -1,0 +1,12 @@
+{
+  "packet_id": "FP6d8e20bc48c7cdcc467f",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible graph evidence gives the node's display label as \"Microplastics in the env…\" and assigns that node to cluster 2, exactly matching the answer and explanation.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

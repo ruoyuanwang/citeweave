@@ -1,0 +1,49 @@
+{
+  "packet_id": "EP5e710fea151f4a3ecdf9",
+  "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:network_size:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "links": "integer",
+      "nodes": "integer"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:edge_count",
+        "bibliographic_coupling:fact:node_count"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:edge_count",
+          "network": "bibliographic_coupling",
+          "object": 208,
+          "object_type": "integer",
+          "predicate": "displayed_edge_count",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:node_count",
+          "network": "bibliographic_coupling",
+          "object": 72,
+          "object_type": "integer",
+          "predicate": "displayed_node_count",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "7b234f1be86ab3e635a0a8f460525afe8f2407413b08394262fd84d8c1763ac8"
+    },
+    "question": "How many nodes and links are displayed in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"links\":208,\"nodes\":72},\"explanation\":\"The context provides two facts: the displayed node count is 72 and the displayed edge count is 208 for the bibliographic coupling network. These directly answer the question about the number of nodes and links.\",\"item_id\":\"gene_editing_als_2004_2024:bibliographic_coupling:network_size\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:edge_count",
+    "bibliographic_coupling:fact:node_count"
+  ],
+  "content_sha256": "28851a55bae7a453959550771db6e98652ab42fe0351652fe74726484167f722"
+}

@@ -1,0 +1,352 @@
+schema_version: '1.0'
+status: query_judge_pending
+generated_at: '2026-08-06T06:05:43.462667+00:00'
+human_reference_registry_sha256: 280eedb52fcf76055d2343c646f63c4143f79bea7c11d6399b4dc533eb8461bf
+generator:
+  started_at: '2026-08-06T05:36:25.472803+00:00'
+  finished_at: '2026-08-06T05:36:32.843738+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  prompt_sha256: af74e2b823e619e40c20c545baf406a58fa55e8539e25cff8fc5008f87201e5a
+  request_sha256: 37550374f47e76c6fc8b1164915cb58caaa3691a0d70b1601d3accac01f35bdc
+  response_sha256: 9b78cb2c6e7396de00aac38e3ed431d926aca35f17ea28066caf5aab600b48a5
+  usage:
+    prompt_tokens: 551
+    completion_tokens: 479
+    total_tokens: 1030
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 551
+  response_id: 4593313c-8226-4dcf-a158-66190ac29e9d
+  response_archive: experiments/query_generation/9b78cb2c6e7396de00aac38e3ed431d926aca35f17ea28066caf5aab600b48a5.txt
+full_data_definition: All OpenAlex works matching the frozen Boolean search over title,
+  abstract, or full text and the complete natural-year interval are exhaustively cursor-paginated;
+  all unique OpenAlex work identities are retained in the analysis corpus.
+datasets:
+- id: gnn_drug_discovery_2017_2023
+  role: development
+  topic: Graph neural networks for drug discovery
+  human_reference_id: gnn_drug_discovery_2017_2023
+  source: openalex
+  title: 'Independent full-year OpenAlex Boolean census: Graph neural networks for
+    drug discovery'
+  keywords:
+  - graph neural networks
+  - drug discovery
+  query_mode: all
+  year_from: 2017
+  year_to: 2023
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Removed 'molecular property prediction' to avoid narrowing the
+    topic, allowing all GNN applications in drug discovery.
+  query_status: query_judge_pending
+  query_sha256: 2f7ee20a35ef40d378aca977d65d569c78fa8e0b2e8168ba4ed4a6b6ec616f6f
+- id: crispr_extracellular_vesicles_2015_2022
+  role: development
+  topic: CRISPR-related technologies associated with extracellular vesicles
+  human_reference_id: crispr_extracellular_vesicles_2015_2022
+  source: openalex
+  title: 'Independent full-year OpenAlex Boolean census: CRISPR-related technologies
+    associated with extracellular vesicles'
+  keywords:
+  - CRISPR
+  - extracellular vesicles
+  query_mode: all
+  year_from: 2015
+  year_to: 2022
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Removed 'gene editing' to avoid excluding CRISPR-related extracellular
+    vesicle work on delivery, detection, or other associated technologies.
+  query_status: query_judge_pending
+  query_sha256: 800644b1cd4aa4fc0a2f6a8d12858b9af975ee732549ea99c4a5ecd37301e2bc
+- id: machine_learning_climate_change_2008_2022
+  role: locked
+  topic: Machine learning applications in climate change research
+  human_reference_id: machine_learning_climate_change_2008_2022
+  source: openalex
+  title: 'Independent full-year OpenAlex Boolean census: Machine learning applications
+    in climate change research'
+  keywords:
+  - machine learning
+  - climate change
+  query_mode: all
+  year_from: 2008
+  year_to: 2022
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Removed 'climate modeling' to include all ML applications in climate
+    change research, such as impacts and adaptation.
+  query_status: query_judge_pending
+  query_sha256: c024c9665f0983228c993545fe09b947c27d89246b69bb0e89bd6e9b73aefb24
+- id: climate_change_risks_1990_2021
+  role: locked
+  topic: Climate change risks
+  human_reference_id: climate_change_risks_1990_2021
+  source: openalex
+  title: 'Independent full-year OpenAlex Boolean census: Climate change risks'
+  keywords:
+  - climate change risk assessment
+  query_mode: all
+  year_from: 1990
+  year_to: 2021
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Broadens beyond 'risk assessment' to capture diverse risk-related
+    studies by requiring 'climate change' and any risk-related term.
+  query_status: query_judge_pending
+  query_sha256: d773a635b8af228c2d151eb633550a724974d177b369c45ee940d77e97ea8652
+  search_expression: '"climate change" AND (risk OR risks OR vulnerability OR impact
+    OR threat OR hazard OR "risk assessment" OR "vulnerability assessment")'
+- id: digital_twins_healthcare_2012_2024
+  role: locked
+  topic: Digital twins in healthcare
+  human_reference_id: digital_twins_healthcare_2012_2024
+  source: openalex
+  title: 'Independent full-year OpenAlex Boolean census: Digital twins in healthcare'
+  keywords:
+  - digital twin
+  - healthcare
+  query_mode: all
+  year_from: 2012
+  year_to: 2023
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Removed 'personalized medicine' to encompass all healthcare applications
+    of digital twins.
+  query_status: query_judge_pending
+  query_sha256: 81b07e3e40492cf571016c3ecaaad8b86bd5148234ba1fd731ea3373a4b4394d
+- id: plant_heat_drought_2008_2021
+  role: locked
+  topic: Plant responses to high temperature and drought
+  human_reference_id: plant_heat_drought_2008_2021
+  source: openalex
+  title: 'Independent full-year OpenAlex Boolean census: Plant responses to high temperature
+    and drought'
+  keywords:
+  - heat stress
+  - drought stress
+  query_mode: all
+  year_from: 2008
+  year_to: 2021
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Ensures plant focus by requiring a plant term and both heat and
+    drought stress concepts.
+  query_status: query_judge_pending
+  query_sha256: 266404b2b416338b1f5bff407fd5aa41104085b9540f1bfaf4a1b545e4d1b9d7
+  search_expression: (plant OR plants OR crop OR crops OR vegetation) AND ("heat stress"
+    OR "high temperature" OR "heat tolerance" OR "heat shock") AND ("drought stress"
+    OR "water deficit" OR "drought tolerance" OR "water stress")
+- id: gene_editing_als_2004_2024
+  role: locked
+  topic: Gene editing and amyotrophic lateral sclerosis
+  human_reference_id: gene_editing_als_2004_2024
+  source: openalex
+  title: 'Independent full-year OpenAlex Boolean census: Gene editing and amyotrophic
+    lateral sclerosis'
+  keywords:
+  - gene editing
+  - amyotrophic lateral sclerosis
+  query_mode: all
+  year_from: 2004
+  year_to: 2023
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Removed 'CRISPR' to include all gene-editing techniques relevant
+    to ALS.
+  query_status: query_judge_pending
+  query_sha256: b2b40074cd4095bae61ab1959645373b379d7a34b66f0aba1e19c08b9a5a71f8
+- id: global_microplastics_2004_2019
+  role: locked
+  topic: Global microplastics research
+  human_reference_id: global_microplastics_2004_2019
+  source: openalex
+  title: 'Independent full-year OpenAlex Boolean census: Global microplastics research'
+  keywords:
+  - microplastics
+  query_mode: all
+  year_from: 2004
+  year_to: 2019
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Used only 'microplastics' as it is an unambiguous single concept,
+    removing restrictive terms like 'marine pollution'.
+  query_status: query_judge_pending
+  query_sha256: 1bad93d391d20ec3151dda9e6858e2879511698a412d85a6f40d12a765a32017
+revision_history:
+- round: 1
+  started_at: '2026-08-06T05:40:12.939394+00:00'
+  finished_at: '2026-08-06T05:40:18.392316+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: e60e3d1a7f17f3d1f57e980d2a0ac6d680c25d3cc0e3ab14715365492a781b31
+  judgment_sha256: ad199e82e6f3586ebe06824907486fd351f3042650c4499be5658e7762ebdf78
+  judge_packet_sha256: d4fac7d47e86a0e2f2ce93c0864176db05803c889318866271f93f5ccf85967a
+  revised_ids:
+  - climate_change_risks_1990_2021
+  - digital_twins_healthcare_2012_2024
+  - gene_editing_als_2004_2024
+  - global_microplastics_2004_2019
+  - gnn_drug_discovery_2017_2023
+  - machine_learning_climate_change_2008_2022
+  prompt_sha256: fe8ae1cd3ffe22bec308f6cb24111e7466accf21b366aaf16c53b783a9f89bd0
+  request_sha256: bc1b197cb1402ca1fe17a7293a8abe9aab64dc33288659d9db5cb61fbb9164c2
+  response_sha256: 3b583fef85fa4bf5a7c1be8ac1375db4e3d3c9e3d518d5dc955ebc9a5b82e1fe
+  response_archive: experiments/query_generation/3b583fef85fa4bf5a7c1be8ac1375db4e3d3c9e3d518d5dc955ebc9a5b82e1fe.txt
+  usage:
+    prompt_tokens: 690
+    completion_tokens: 377
+    total_tokens: 1067
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 690
+  response_id: c543a174-abda-490f-95c6-5bb85b414019
+- round: 2
+  started_at: '2026-08-06T05:43:32.370863+00:00'
+  finished_at: '2026-08-06T05:43:34.948246+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: 98bbfde753d68bac239120a62378651b0c45da61c9d5747563c7eca19d755367
+  judgment_sha256: 7690ed98bf8c10016e1086dbec9f9716cb50c3d0d0beca356bf5f2845401295a
+  judge_packet_sha256: df92b7a3c2e82c924edb8300a63116c637938517f20bf97e4f8630eab925a248
+  revised_ids:
+  - crispr_extracellular_vesicles_2015_2022
+  prompt_sha256: fe8ae1cd3ffe22bec308f6cb24111e7466accf21b366aaf16c53b783a9f89bd0
+  request_sha256: 82a479046e0e884e305c92bc92a146d880b6477243c9a58188d5d131ca92cad1
+  response_sha256: 8314b9a11497172a3fd18e8ab1fc7f594ba649f4365e1e5560a975f44787c942
+  response_archive: experiments/query_generation/8314b9a11497172a3fd18e8ab1fc7f594ba649f4365e1e5560a975f44787c942.txt
+  usage:
+    prompt_tokens: 347
+    completion_tokens: 78
+    total_tokens: 425
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 347
+  response_id: 2b76dc7e-6ea9-404e-9e94-07500b7bd0b1
+- round: 3
+  started_at: '2026-08-06T06:00:21.238497+00:00'
+  finished_at: '2026-08-06T06:00:24.687918+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: df5e178cc2b8026980224b9f04af2ec9c04a97ad03b77a3907f535a980c21e9e
+  judgment_sha256: 37c67da6341253b71a372abb741637987ce42431b789eea11c246d1981b4cdb8
+  judge_packet_sha256: fc4ee966522cac0860bb43c0ecf04bcaf82003dd97777022c0e6e590b9a854a6
+  revised_ids:
+  - plant_heat_drought_2008_2021
+  prompt_sha256: 6fc17496ab6d1db50c9cdb7ae54df59f9cff5d5882565561373f034335fab48e
+  request_sha256: 64e4bdfb8d9f92f80547586411ee7a1de6c246da7da4914e3c44907ce799208d
+  response_sha256: 1ba12b2f3c8378fca8e34b75edb58ce9542f6d3e7734f447e61d597228f7aa9a
+  response_archive: experiments/query_generation/1ba12b2f3c8378fca8e34b75edb58ce9542f6d3e7734f447e61d597228f7aa9a.txt
+  usage:
+    prompt_tokens: 364
+    completion_tokens: 77
+    total_tokens: 441
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 364
+  response_id: 2d631367-ba4e-4f84-aa80-6275ee17ce1f
+- round: 4
+  started_at: '2026-08-06T06:02:44.533613+00:00'
+  finished_at: '2026-08-06T06:02:48.305555+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: ba6d1b45b86bd9024bbab847a85d856196130cc77f644986d0a38b6cee7a72ab
+  judgment_sha256: 013226d5b5b0774dfef26b5a528098f48943892f3466dec64dd371e3d221f533
+  judge_packet_sha256: 46bfdde1f232313499b606fa9f286e517d675fb6e2d29b133fb93e39a0ab54f3
+  revised_ids:
+  - climate_change_risks_1990_2021
+  prompt_sha256: 6fc17496ab6d1db50c9cdb7ae54df59f9cff5d5882565561373f034335fab48e
+  request_sha256: 4467153f265da80f2f5fe6a4da48e9905bc06ca6f6b8e944f45e489dc2a635b6
+  response_sha256: 1c62c5e63da76fa43321a0728240cc7d540245a2a0de0113fdc18a039f127741
+  response_archive: experiments/query_generation/1c62c5e63da76fa43321a0728240cc7d540245a2a0de0113fdc18a039f127741.txt
+  usage:
+    prompt_tokens: 348
+    completion_tokens: 80
+    total_tokens: 428
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 348
+  response_id: ece294f1-e7ca-41bb-868b-9365cae6d235
+query_freeze_attestation:
+  attestation_version: 1
+  judged_at: '2026-08-06T05:44:40.324437+00:00'
+  judge_role: codex_query_judge
+  rubric_version: query-judge-v2
+  judge_prompt_sha256: 29ce1db17aa07a59add416520a8cd7fe91b63e7992913a468bc65afae7a3824c
+  judge_packet_sha256: a1edf09efa48a11f1a30b4502bb78b79fa6d92ce8df2a8838c498fe96d631921
+  judgment_sha256: dd81fdf112c2218d9f342cb220fa534d33daa0c02c54cc8d66305e1b234f6f4b
+  generator_response_sha256: 9b78cb2c6e7396de00aac38e3ed431d926aca35f17ea28066caf5aab600b48a5
+  human_reference_registry_sha256: 280eedb52fcf76055d2343c646f63c4143f79bea7c11d6399b4dc533eb8461bf
+  query_set_sha256: 4792bef079d7aa16256a26bd22ba38a09b538efb2b2eca0763e77f08d84b246c
+  accepted_ids:
+  - climate_change_risks_1990_2021
+  - crispr_extracellular_vesicles_2015_2022
+  - digital_twins_healthcare_2012_2024
+  - gene_editing_als_2004_2024
+  - global_microplastics_2004_2019
+  - gnn_drug_discovery_2017_2023
+  - machine_learning_climate_change_2008_2022
+  - plant_heat_drought_2008_2021
+source_transition:
+  from: crossref_query_bibliographic
+  to: openalex_boolean_search
+  reason: Empirical root-count validation showed that Crossref query.bibliographic
+    does not enforce the intended Boolean concept intersection.
+  input_registry_sha256: d3fb15e255171418a0aa5a268d7bc7a012409dea3338f03228f2da54a630ac65
+  rejection_audit_sha256: 2a3540bc62073aeb578102ab1a84d8201b80fac97a0c59bd622aa2273267f366
+  transitioned_at: '2026-08-06T05:58:14.060890+00:00'
+boolean_revision_history:
+- round: 1
+  started_at: '2026-08-06T06:05:38.694873+00:00'
+  finished_at: '2026-08-06T06:05:43.462667+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: a441c59b53c3ccdf5a6d8e998e9b3c0d9b46733932fa65d881af3de3e14dcc32
+  judgment_sha256: eac860cae162f3eced76f33fb7d9715711db221a910c6aea35f98a3468848b64
+  revised_ids:
+  - climate_change_risks_1990_2021
+  - plant_heat_drought_2008_2021
+  prompt_sha256: b84ecfd156cc9320b48dba0e0d87afc452a605677e2f5b01054a5ca5aaac3436
+  request_sha256: 88b16bfb12f7660aa20c52999c8dc74fe271c1974a92171b1a9bb591bcf6c589
+  response_sha256: b41edfa019c985847254e18b2242ca89f68af1c9b37b8eab1a31abf0ac22c93f
+  response_archive: experiments/query_generation/b41edfa019c985847254e18b2242ca89f68af1c9b37b8eab1a31abf0ac22c93f.txt
+  usage:
+    prompt_tokens: 384
+    completion_tokens: 208
+    total_tokens: 592
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 384
+  response_id: a83cadc7-fb00-4c48-b9e5-0b93672a36a2

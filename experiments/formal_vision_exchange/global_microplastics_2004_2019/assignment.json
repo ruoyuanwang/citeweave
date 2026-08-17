@@ -1,0 +1,112 @@
+{
+  "assignment_role": "independent_codex_visible_only_figure_evaluation",
+  "controller_metadata_in_scope": false,
+  "dataset_id": "global_microplastics_2004_2019",
+  "figure_manifest_sha256": "facfe58d6693b6442c804ea4a989aca83c279c15c6ece2d19a4c012e12839198",
+  "generator_role": "codex_visual_subagent",
+  "instructions": [
+    "Use only the PNG files explicitly listed in items. Do not inspect the workspace, packet source, benchmark, graph data, reports, gold answers, or outputs from any other condition.",
+    "Visually inspect each PNG and answer only its paired question. If the requested values are not established by the visible image, abstain with answer=null.",
+    "Return exactly one result for every item in the listed order. Do not add fields, commentary, Markdown, or modify any other file."
+  ],
+  "items": [
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_bibliographic_coupling.png",
+      "figure_sha256": "7014e395eb3fcd18a332f1df0bb26116e27a228e43470ba7618c01abe20e5531",
+      "item_id": "global_microplastics_2004_2019:bibliographic_coupling:network_size",
+      "question": "How many nodes and links are displayed in the bibliographic_coupling network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_citation.png",
+      "figure_sha256": "95a187a4b432d8b9e615e3ffc5c74b4f1c0ec03a25d07ca339b900b8c3955b35",
+      "item_id": "global_microplastics_2004_2019:citation:network_size",
+      "question": "How many nodes and links are displayed in the citation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_coauthorship.png",
+      "figure_sha256": "5784a61c578083d12b7008480809602e144cedc552892eed215900912d1aa14d",
+      "item_id": "global_microplastics_2004_2019:coauthorship:network_size",
+      "question": "How many nodes and links are displayed in the coauthorship network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_cocitation.png",
+      "figure_sha256": "2b6be36be0a89bb522f885fc32c8c2ca6d3b26af2b8dc2abb55e6b70a01cf541",
+      "item_id": "global_microplastics_2004_2019:cocitation:network_size",
+      "question": "How many nodes and links are displayed in the cocitation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_institution_collaboration.png",
+      "figure_sha256": "1a4a6433eebf0f7b5275012243d376b879f1b3526147f5620218ce5f269d1eb8",
+      "item_id": "global_microplastics_2004_2019:institution_collaboration:network_size",
+      "question": "How many nodes and links are displayed in the institution_collaboration network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_keyword_cooccurrence.png",
+      "figure_sha256": "2152f8e2c8abffe0c998f42532c6935680d13441f2bf1d978fea1d344e2a1895",
+      "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:network_size",
+      "question": "How many nodes and links are displayed in the keyword_cooccurrence network?",
+      "task_type": "network_size"
+    }
+  ],
+  "main_inference": false,
+  "may_modify_pipeline_or_source_artifacts": false,
+  "may_read_unlisted_workspace_files": false,
+  "prohibited_inputs": [
+    "flat structured context",
+    "gold_answer",
+    "graph JSON",
+    "human reference output",
+    "other condition output"
+  ],
+  "registry_sha256": "7c0ea6f10726e986793780ba5469879255f034eeefdb1c506af54cde9e07d3cd",
+  "return_path": "D:\\project\\bibagent\\experiments\\formal_vision_returns\\global_microplastics_2004_2019.json",
+  "schema_version": 1,
+  "source_packet_file_sha256": "11ec66d1db1069acfe0450fd98a8bd26d097da3b1c1b59e46a88fd218803995c",
+  "source_packet_sha256": "20e1c53289666c1b5da2f193098ff8840bda4f4719382432c3d7c05d7952d8f4",
+  "strict_output_schema": {
+    "dataset_id": "global_microplastics_2004_2019",
+    "generator_role": "codex_visual_subagent",
+    "packet_sha256": "20e1c53289666c1b5da2f193098ff8840bda4f4719382432c3d7c05d7952d8f4",
+    "results": [
+      {
+        "abstain": "<boolean>",
+        "answer": "<object matching answer_contract exactly, or null iff abstain>",
+        "explanation": "<brief visible-image basis, 1..1000 characters>",
+        "item_id": "<copy exact item_id in input order>"
+      }
+    ],
+    "schema_version": 1,
+    "visible_only": true
+  },
+  "visible_only": true,
+  "write_scope": "Only return_path may be created or replaced by the assigned visual subagent."
+}

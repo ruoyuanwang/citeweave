@@ -1,0 +1,8 @@
+{
+  "packet_id": "EP89259f134e0747c213cd",
+  "judge_id": "evaluation",
+  "decision": "fail",
+  "confidence": 1.0,
+  "reason": "The extracellular-vesicle/CRISPR bibliographic-coupling answer corrupts the required visible label: it returns “Pseudomonas aeruginosa:бн” instead of the supported display label “Pseudomonas aeruginosa:…”.",
+  "evidence_ids": ["bibliographic_coupling:fact:highest_occurrence", "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:label"]
+}

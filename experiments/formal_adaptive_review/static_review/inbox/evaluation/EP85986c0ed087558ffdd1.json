@@ -1,0 +1,15 @@
+{
+  "packet_id": "EP85986c0ed087558ffdd1",
+  "decision": "fail",
+  "confidence": 0.98,
+  "reason": "Many numerical and descriptive claims are supported, but several material interpretations exceed the visible evidence. E023 establishes the size and parameterization of a sparse citation network, not that its sparsity is caused by the field's nascency or short citation window. E067 records rendering parameters for a temporal overlay but does not establish that the thematic core is stable and intensifying. E015 and E017 support a skewed citation distribution but not the characterization of papers as highly influential or the claim that the pattern is typical. E022 and E025 describe network structures but do not by themselves establish shared intellectual foundations. These repeated causal and substantive overclaims prevent the candidate from being fully evidence-supported.",
+  "evidence_ids": [
+    "E015",
+    "E017",
+    "E022",
+    "E023",
+    "E025",
+    "E067"
+  ],
+  "judge_id": "evaluation"
+}

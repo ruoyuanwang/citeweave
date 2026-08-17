@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "dataset_id": "climate_change_risks_1990_2021",
+  "condition": "structured_one_shot",
+  "evidence_sha256": "2ca24703190ced83554a9cf5275e48820204c01ccf416b81b2bf4aaa83831d18",
+  "report_sha256": "daf5754165532685191a75a98fdd48b553e0dc7a04293e436595fd589820815e",
+  "call_count": 1,
+  "model": "deepseek-v4-pro",
+  "temperature": 0.1,
+  "seed": 42,
+  "report_language": "English",
+  "internal_review_used_as_experimental_evaluation": false
+}

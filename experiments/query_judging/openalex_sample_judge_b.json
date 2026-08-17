@@ -1,0 +1,486 @@
+{
+  "judge_id": "B",
+  "seed": 20260806,
+  "datasets": [
+    {
+      "id": "climate_change_risks_1990_2021",
+      "samples": [
+        {
+          "openalex_id": "https://openalex.org/W3089546236",
+          "label": "relevant",
+          "reason": "以沿海含水层脆弱性为核心，并评估气候变化极端事件可能加剧海水入侵的风险。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2397601142",
+          "label": "irrelevant",
+          "reason": "核心是AMOC计算方法和模型分辨率，未评估气候变化风险、影响或脆弱性。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3183201176",
+          "label": "irrelevant",
+          "reason": "研究湿地恢复后的植物群落，缺少气候变化及其风险维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3045398248",
+          "label": "irrelevant",
+          "reason": "研究降雨对颗粒物浓度的短期作用，未涉及气候变化风险。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2995361637",
+          "label": "irrelevant",
+          "reason": "主题是生物炭缓解气候变化和能源危机，缺少风险或影响评估这一关键维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2604662561",
+          "label": "relevant",
+          "reason": "核心讨论气候变化造成的食品安全新兴风险及食源性疾病传播影响。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2981048331",
+          "label": "borderline",
+          "reason": "小岛屿国家与气候脆弱性高度相关，但现有标题和摘要不足以确认风险评估是核心。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3126371409",
+          "label": "irrelevant",
+          "reason": "核心是疫情期间森林焚烧执法与环境权，气候变化仅为政策背景且无风险分析。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2107059579",
+          "label": "irrelevant",
+          "reason": "核心评估水土保持措施对径流的影响，气候仅作为观测变化的可能贡献因素。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3011758476",
+          "label": "irrelevant",
+          "reason": "研究珊瑚区微塑料表面生物膜，缺少气候变化风险主题。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2910322797",
+          "label": "borderline",
+          "reason": "海洋失氧可能是气候变化影响，但给出的内容未明确把气候变化风险作为核心。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4210360319",
+          "label": "irrelevant",
+          "reason": "研究医护人员一般灾害应急准备，未限定气候变化灾害或风险。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3017806755",
+          "label": "irrelevant",
+          "reason": "核心是生物质可再生能源岗位分类，缺少气候风险或影响研究。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3044280836",
+          "label": "irrelevant",
+          "reason": "研究荒漠微生物促进农业，未明确研究气候变化导致的风险。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2108462577",
+          "label": "irrelevant",
+          "reason": "研究古气候降水季节变化对植被的模拟效应，不是气候变化风险研究。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2983674174",
+          "label": "irrelevant",
+          "reason": "核心是马尾藻历史生物地理和分化，缺少气候风险维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W1980903571",
+          "label": "borderline",
+          "reason": "提供北美气候变化投影与不确定性，但并未直接评估具体风险、影响或脆弱性。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3131258452",
+          "label": "relevant",
+          "reason": "以气候变化下山地造林失败风险和树种适应性选择为核心。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W28165187",
+          "label": "relevant",
+          "reason": "摘要核心检验气候变暖驱动树种分布移动及其对森林生态功能的负面影响。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2807331041",
+          "label": "irrelevant",
+          "reason": "研究城市环境变量与健康指数，未涉及气候变化风险。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W7106294109",
+          "label": "irrelevant",
+          "reason": "主题为全球手工艺指数和数字化推广，与气候变化风险无关。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2905934948",
+          "label": "irrelevant",
+          "reason": "核心是海洋保护区内底层鱼类年龄结构，未呈现气候变化风险维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2050842412",
+          "label": "borderline",
+          "reason": "讨论增强海洋分层下食物网和生地化循环敏感性，但现有证据未明确气候变化风险是否为核心。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3133344225",
+          "label": "relevant",
+          "reason": "核心评估气候变化热胁迫与人为扰动共同造成的珊瑚礁影响和适应。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3202165589",
+          "label": "irrelevant",
+          "reason": "核心是苹果废弃物生产生物乙醇和酒糟，缺少气候风险分析。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2893595231",
+          "label": "irrelevant",
+          "reason": "研究社区能源脆弱性和能源正义，未涉及气候变化风险。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2339747233",
+          "label": "irrelevant",
+          "reason": "研究风机运行对局地地面气候的影响，不是气候变化造成的风险。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2508527382",
+          "label": "irrelevant",
+          "reason": "研究水稻黄斑病毒流行率，缺少气候变化及风险维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3184456034",
+          "label": "relevant",
+          "reason": "核心量化气候变化与人类活动对干旱区生物物理参数的影响。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W1482551774",
+          "label": "relevant",
+          "reason": "核心分析气候变化和水约束下耐旱玉米降低产量风险与适应效果。"
+        }
+      ],
+      "counts": {
+        "relevant": 7,
+        "borderline": 4,
+        "irrelevant": 19
+      }
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "samples": [
+        {
+          "openalex_id": "https://openalex.org/W3092491825",
+          "label": "irrelevant",
+          "reason": "核心是雾计算架构概念，缺少数字孪生与医疗场景。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4292481106",
+          "label": "irrelevant",
+          "reason": "研究COVID-19多状态数据的变量重要性，未涉及数字孪生。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4416625715",
+          "label": "irrelevant",
+          "reason": "是智慧城市后疫情治理论文的审稿报告，缺少医疗数字孪生主题。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4387403176",
+          "label": "irrelevant",
+          "reason": "核心是一般供应链韧性与风险，未涉及数字孪生医疗应用。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3120341479",
+          "label": "irrelevant",
+          "reason": "主题为数字化工艺设计和工匠4.0，缺少医疗场景。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3039874199",
+          "label": "irrelevant",
+          "reason": "虽以数字孪生支持高级服务交付为核心，但服务对象是一般产业系统而非医疗。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2613707697",
+          "label": "irrelevant",
+          "reason": "讨论信息物理系统的符号数值方法，缺少医疗数字孪生。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4389267284",
+          "label": "irrelevant",
+          "reason": "核心是元宇宙在人力资源开发中的应用，不是数字孪生医疗。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4376126415",
+          "label": "irrelevant",
+          "reason": "数字孪生用于滚动轴承寿命预测，明确缺少医疗维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4389312954",
+          "label": "irrelevant",
+          "reason": "研究元宇宙赋能高校心理健康教育，未涉及数字孪生。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4366782667",
+          "label": "irrelevant",
+          "reason": "核心是人工智能恶意软件检测和网络安全，与医疗数字孪生无关。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4207084812",
+          "label": "irrelevant",
+          "reason": "研究城市智慧工厂和可持续制造，缺少医疗场景。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4200118171",
+          "label": "irrelevant",
+          "reason": "核心是扩展现实系统的可审计性，未涉及医疗数字孪生。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4386200776",
+          "label": "irrelevant",
+          "reason": "研究教育领域的可解释人工智能工具，缺少数字孪生和医疗交集。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4387843347",
+          "label": "relevant",
+          "reason": "核心讨论心脏数字孪生如何模拟个体器官、预测病程并改善患者照护。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4381890421",
+          "label": "irrelevant",
+          "reason": "核心是电网信息物理系统仿真，明确不是医疗数字孪生。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4378619449",
+          "label": "irrelevant",
+          "reason": "研究CAD与虚拟现实建模体验，缺少数字孪生医疗应用。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4285144912",
+          "label": "irrelevant",
+          "reason": "主题是运输业数字技术导入，缺少医疗及数字孪生交集。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4383724004",
+          "label": "irrelevant",
+          "reason": "核心是中国预制食品产业与安全问题，未涉及数字孪生医疗。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4387579954",
+          "label": "irrelevant",
+          "reason": "研究支持制造业中小企业采用人工智能的平台服务，缺少医疗数字孪生。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4295942763",
+          "label": "irrelevant",
+          "reason": "研究疫情后能源贫困和贸易对能源可负担性的影响，与医疗数字孪生无关。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4378619577",
+          "label": "irrelevant",
+          "reason": "研究增强现实和超视频在职业教育中的应用，缺少数字孪生及医疗维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4307877630",
+          "label": "relevant",
+          "reason": "核心讨论儿童青少年慢性病管理数字孪生系统及其技术、伦理和法律挑战。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3037264881",
+          "label": "irrelevant",
+          "reason": "核心是生态问题求解和空间推理，缺少医疗数字孪生。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3196042097",
+          "label": "irrelevant",
+          "reason": "研究马来西亚智慧城市政策接受度，缺少数字孪生医疗场景。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4244048577",
+          "label": "irrelevant",
+          "reason": "主题为激光材料加工中的成像，缺少医疗数字孪生。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3159841217",
+          "label": "borderline",
+          "reason": "涉及疫苗生产建模这一健康相关场景，但现有摘要未明确数字孪生是否为核心方法。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4381380735",
+          "label": "irrelevant",
+          "reason": "研究交互式电子模块与数学数字交流，缺少数字孪生和医疗维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3210929748",
+          "label": "irrelevant",
+          "reason": "核心是移动界面和流固耦合的深度学习方法，未呈现医疗数字孪生应用。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4287178737",
+          "label": "irrelevant",
+          "reason": "讨论COVID-19对科技产业的影响，未涉及数字孪生医疗。"
+        }
+      ],
+      "counts": {
+        "relevant": 2,
+        "borderline": 1,
+        "irrelevant": 27
+      }
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "samples": [
+        {
+          "openalex_id": "https://openalex.org/W3044280836",
+          "label": "relevant",
+          "reason": "核心讨论荒漠植物在水分限制和高温波动等极端环境中的响应及微生物促生作用。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4200139107",
+          "label": "irrelevant",
+          "reason": "核心是大麦干旱耐受机制，缺少高温胁迫维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2979296317",
+          "label": "borderline",
+          "reason": "研究作物对降水和蒸散等气候异常的敏感性，但高温与干旱联合响应证据不足。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3170225388",
+          "label": "irrelevant",
+          "reason": "核心是气候变暖下高山物种辅助基因流，缺少干旱胁迫维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3159403296",
+          "label": "irrelevant",
+          "reason": "研究灌溉水平和播种量对小麦产量的作用，缺少高温响应。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2330499544",
+          "label": "irrelevant",
+          "reason": "核心是雾缓解低温光损伤，既非高温胁迫，也未研究干旱响应。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2532692438",
+          "label": "irrelevant",
+          "reason": "研究药用树种的植物化学和营养成分，缺少高温与干旱响应。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W7123562868",
+          "label": "irrelevant",
+          "reason": "研究玉米种子引发技术与生长产量，未呈现高温和干旱联合胁迫。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3004340349",
+          "label": "borderline",
+          "reason": "高温和干旱均被列为豆科生殖器官脱落因素，但它们不是论文唯一或明确的核心交集。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2118981672",
+          "label": "borderline",
+          "reason": "桑树高产育种与逆境适应相关，但现有摘要不足以确认高温和干旱响应均为核心。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W7125373231",
+          "label": "irrelevant",
+          "reason": "研究雨养小麦中生物炭和沸石的长期经济收益，缺少高温胁迫。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W1907807834",
+          "label": "irrelevant",
+          "reason": "研究白菜对高温的生长和光合响应，缺少干旱或水分亏缺维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4200259327",
+          "label": "borderline",
+          "reason": "研究马铃薯DREB基因家族与非生物胁迫，但摘要未确认同时聚焦高温和干旱。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W1975310998",
+          "label": "irrelevant",
+          "reason": "研究不同灌溉条件下棉花高通量表型，缺少高温胁迫维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2782457348",
+          "label": "borderline",
+          "reason": "研究小麦和水稻对多种非生物胁迫的RNA测序响应，但现有证据未明确高温与干旱交集。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3024428290",
+          "label": "irrelevant",
+          "reason": "评价杨树克隆的抗锈病和耐旱性，缺少高温胁迫。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3192546327",
+          "label": "irrelevant",
+          "reason": "核心是水稻干旱和盐胁迫耐受，缺少高温响应。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2898552692",
+          "label": "relevant",
+          "reason": "核心实验考察杂草种子对高温范围和水分胁迫等环境因子的萌发响应。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3003236443",
+          "label": "irrelevant",
+          "reason": "核心是ABA调控种子休眠与萌发，未研究高温和干旱胁迫交集。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2743630504",
+          "label": "irrelevant",
+          "reason": "泛论下一代测序在植物育种和逆境耐受中的应用，高温与干旱均非核心。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2038528095",
+          "label": "irrelevant",
+          "reason": "研究水稻免疫亲和蛋白在水分胁迫下的表达，缺少高温维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2947560283",
+          "label": "irrelevant",
+          "reason": "核心是小麦近缘种DREB1多样性和低温耐受，未研究高温与干旱交集。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W7149877556",
+          "label": "irrelevant",
+          "reason": "泛论CRISPR/dCas9在植物科学中的机制与应用，高温和干旱响应并非核心。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W1528459597",
+          "label": "irrelevant",
+          "reason": "研究灌溉对葡萄水分消耗、产量和果实组成的影响，缺少高温胁迫。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3085968088",
+          "label": "irrelevant",
+          "reason": "核心是遥感模型估算栎林冠层和叶片生化参数，未研究高温与干旱响应。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2608367047",
+          "label": "irrelevant",
+          "reason": "讨论表型研究中的因果与解释，缺少植物高温和干旱主题。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2945222476",
+          "label": "irrelevant",
+          "reason": "核心是甜瓜在水分胁迫下的生理响应，缺少高温胁迫。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W3209707787",
+          "label": "irrelevant",
+          "reason": "研究番茄极端节水栽培和用水效率，缺少高温响应。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W2891242420",
+          "label": "irrelevant",
+          "reason": "研究细菌接种对番茄高温胁迫响应的影响，缺少干旱维度。"
+        },
+        {
+          "openalex_id": "https://openalex.org/W4200545803",
+          "label": "irrelevant",
+          "reason": "研究松苗对重金属胁迫的生理响应，不是高温与干旱胁迫。"
+        }
+      ],
+      "counts": {
+        "relevant": 2,
+        "borderline": 5,
+        "irrelevant": 23
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "assignment_sha256": {
+    "evaluation": "2430f2c0e3d894d524520598bd842379260a2b7313f7f2bc89c954c502b9cbe1",
+    "feedback": "09d663e68b29a9ab9268d3db1f65d3cf956d88740cf27ab0e5ea2820a4be3a55"
+  },
+  "batch_manifest_sha256": "8573bb2d29faecb76494e882316fb293a530857d6a3e109b44aa7a5a524e36af",
+  "exact_coverage": true,
+  "items": [
+    {
+      "kind": "feedback",
+      "packet_id": "FPe754339cbe1bbe0049be",
+      "packet_sha256": "9c9fd6bfd3ecdc18057cae07b6d355eae9678510763b7516928454c83033d68f",
+      "result_path": "results/feedback/FPe754339cbe1bbe0049be.json",
+      "result_sha256": "7cb02b3ae653fa8b3a45b948ea03509bf0eddc97b420ad06d6091ceef1545741"
+    }
+  ],
+  "packet_and_result_schema_validated": true,
+  "schema_version": 1,
+  "status": "complete_results_validated"
+}

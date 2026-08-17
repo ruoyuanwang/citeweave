@@ -1,0 +1,12 @@
+{
+  "batch_manifest_sha256": "25b66c8c1e0574152d98a1a0d54d4485874428a9bb9ad326f029f27df3cf9d30",
+  "idempotent_replay": false,
+  "imported": {
+    "evaluation": 0,
+    "feedback": 3
+  },
+  "run_root": "D:\\project\\bibagent\\experiments\\formal_adaptive_review",
+  "schema_version": 1,
+  "status": "imported",
+  "validated_results_manifest_sha256": "31d07f988b24f7e8ec22b7ca19f3653bb78bcdfe0e455d40990bbf532cfb1a43"
+}

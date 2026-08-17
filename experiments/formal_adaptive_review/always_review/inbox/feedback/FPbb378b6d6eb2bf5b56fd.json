@@ -1,0 +1,13 @@
+{
+  "packet_id": "FPbb378b6d6eb2bf5b56fd",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible graph evidence identifies DOI 10.1007/s11481-019-09849-y as the highest-occurrence node, gives its display label as \"Next Generation Precisio…\", and records 325.0 occurrences, exactly matching the candidate.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y:label",
+    "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y:occurrences"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

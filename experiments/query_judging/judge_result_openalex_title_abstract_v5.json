@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v5",
+  "prompt_sha256": "6c0170257fbd79c395536663213033963c30b812eaf4ec5c3907aabeca49a8d9",
+  "packet_sha256": "2f61059444ced1ff3adfe7750924aff192f50142bf65f7c789526a3fe5996bbf",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "The query requires an explicit graph-neural-network phrase and a drug-discovery task, giving broad task coverage without relying on the ambiguous GNN acronym."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "accept",
+      "reason": "Both CRISPR-specific technology terminology and an extracellular-vesicle class are mandatory, so the query is inclusive while remaining topically constrained."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The mandatory conjunction between established machine-learning methods and explicit climate-change concepts is suitable for the broad applications topic."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "Requiring the exact climate-change phrase plus a risk, vulnerability, impact, threat, or hazard concept appropriately covers the deliberately broad risk topic."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "The exact digital-twin phrase is required alongside a healthcare, clinical, patient, or medical context, preventing generic engineering-only retrieval."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "The query independently requires plant context, heat stress, and drought or water-deficit stress, matching the combined-stressor topic precisely."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "accept",
+      "reason": "The gene-editing concept is mandatory, and the ALS acronym is protected by disease-specific terminology or recognized ALS-associated genes, addressing its obvious homonym risk."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "Microplastics is an unambiguous field term, and under the stated global-mapping rule a single title-and-abstract concept with no geographic restriction is appropriate."
+    }
+  ]
+}

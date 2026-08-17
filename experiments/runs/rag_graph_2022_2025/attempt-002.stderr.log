@@ -1,0 +1,15 @@
+Looks like you are using a tranform that doesn't support FancyArrowPatch, using ax.annotate instead. The arrows might strike through texts. Increasing shrinkA in arrowprops might help.
+Traceback (most recent call last):
+  File "D:\project\bibagent\scripts\acquire_experiment_datasets.py", line 199, in <module>
+    main()
+  File "D:\project\bibagent\scripts\acquire_experiment_datasets.py", line 190, in main
+    run_dataset(entry, force=args.force)
+  File "D:\project\bibagent\scripts\acquire_experiment_datasets.py", line 149, in run_dataset
+    result = run_project(
+             ^^^^^^^^^^^^
+  File "D:\project\bibagent\src\citeweave\workflow.py", line 615, in run_project
+    word_path = export_word_report(paths.root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\project\bibagent\src\citeweave\word_export.py", line 984, in export_word_report
+    raise ValueError(
+ValueError: Every figure must map to a results subsection; missing figure numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]

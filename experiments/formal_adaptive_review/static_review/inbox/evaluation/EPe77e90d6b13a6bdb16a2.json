@@ -1,0 +1,11 @@
+{
+  "packet_id": "EPe77e90d6b13a6bdb16a2",
+  "decision": "fail",
+  "confidence": 1.0,
+  "reason": "The visible evidence supports the stated label, but the candidate does not satisfy the answer contract: it returns the answer as a bare string rather than an object containing the required label field. This structural mismatch prevents the response from passing despite its evidence-grounded value.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"
+  ],
+  "judge_id": "evaluation"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "formal_results_used": false,
+  "experiment_mode": "development_calibration",
+  "topics": 2,
+  "cases_per_topic": 6,
+  "conditions": {
+    "always_review": {
+      "items": 12,
+      "review_requests": 12,
+      "final_quality_passed": 12,
+      "auto_accepts": 0,
+      "unsafe_auto_accepts": 0
+    },
+    "static_review": {
+      "items": 12,
+      "review_requests": 8,
+      "final_quality_passed": 12,
+      "auto_accepts": 4,
+      "unsafe_auto_accepts": 0
+    },
+    "adaptive_review": {
+      "items": 12,
+      "review_requests": 12,
+      "final_quality_passed": 12,
+      "auto_accepts": 0,
+      "unsafe_auto_accepts": 0
+    }
+  },
+  "interpretation": "The two development topics are the required two-confirmation warm-up, so the adaptive policy is not expected to reduce review during calibration. Review-rate reduction is evaluated only on the six subsequently locked formal topics.",
+  "human_proxy_scope": "Visible risk packet only; accept, reject, or one local edit of at most 500 characters.",
+  "evaluation_updates_online_memory": false,
+  "condition_blind_exchange": true,
+  "run_root": "development_adaptive_review",
+  "topic_counts_root": "development_adaptive_topic_counts"
+}

@@ -1,0 +1,20 @@
+{
+  "assignment_sha256": {
+    "evaluation": "2430f2c0e3d894d524520598bd842379260a2b7313f7f2bc89c954c502b9cbe1",
+    "feedback": "9e6fdc31ad883e260dc5d7a70cd868088fa13a3c0f2e964ca00e23956ef9227e"
+  },
+  "batch_manifest_sha256": "a29d5cb617252b2504a87e4f9a2f2dbef5015a225b15593d9b64ef211d32509c",
+  "exact_coverage": true,
+  "items": [
+    {
+      "kind": "feedback",
+      "packet_id": "FPfd41973acc15b1fe6bec",
+      "packet_sha256": "cc9e8a677e47a659851eb73c16ce7fea6c88987d63ee3af66d4c75966af37e4d",
+      "result_path": "results/feedback/FPfd41973acc15b1fe6bec.json",
+      "result_sha256": "fc8859987b2323be172a66f912887c37f9a17cadf0a96fd7f98d1674e7884841"
+    }
+  ],
+  "packet_and_result_schema_validated": true,
+  "schema_version": 1,
+  "status": "complete_results_validated"
+}

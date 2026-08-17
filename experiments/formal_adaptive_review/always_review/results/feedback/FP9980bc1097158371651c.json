@@ -1,0 +1,15 @@
+{
+  "packet_id": "FP9980bc1097158371651c",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible graph evidence identifies the strongest displayed connection as the pair labeled \"Emerging hiPSC Models fo…\" and \"Induced Pluripotent Stem…\", with edge weight 37.0, exactly matching the answer and explanation.",
+  "evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.3390/ijms22158196:label",
+    "bibliographic_coupling:node:doi:10.3390/molecules25082000:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

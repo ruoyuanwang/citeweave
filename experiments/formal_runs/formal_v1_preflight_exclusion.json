@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "excluded_before_formal_scoring",
+  "formal_results_used": false,
+  "run_id": "formal_v1_20260806",
+  "conditions": [
+    "no_rag",
+    "flat_structured",
+    "graph_rag"
+  ],
+  "datasets": [
+    "gnn_drug_discovery_2017_2023",
+    "crispr_extracellular_vesicles_2015_2022",
+    "machine_learning_climate_change_2008_2022"
+  ],
+  "reason": "DeepSeek V4 default thinking mode consumed the shared 512-token completion limit and caused condition-dependent truncated JSON. The formal rerun uses the identical frozen questions, contexts, model, and temperature with thinking explicitly disabled for every text condition.",
+  "replacement_run_id": "formal_v2_nonthinking_20260806"
+}

@@ -1,4 +1,9 @@
-from citeweave.transform import Canonicalizer, derive_keywords, normalize_doi
+from citeweave.transform import (
+    Canonicalizer,
+    _date_parts_crossref,
+    derive_keywords,
+    normalize_doi,
+)
 
 
 def test_normalize_doi():
@@ -23,3 +28,14 @@ def test_derived_keywords_when_source_keywords_missing(crossref_records):
     keywords = derive_keywords(tables.works, tables.keywords)
     assert not keywords.empty
     assert set(keywords["keyword_type"]) == {"derived_tfidf"}
+
+
+def test_crossref_year_prefers_published_date_over_later_print_issue():
+    item = {
+        "published": {"date-parts": [[2025, 12, 23]]},
+        "published-online": {"date-parts": [[2025, 12, 23]]},
+        "published-print": {"date-parts": [[2026, 2, 28]]},
+        "issued": {"date-parts": [[2025, 12, 23]]},
+    }
+
+    assert _date_parts_crossref(item) == (2025, "2025-12-23")

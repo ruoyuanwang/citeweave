@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "audit_packet_id": "APefad50beabd5c93667eb",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "citation:edge:0001:relation",
+        "citation:edge:0001:weight",
+        "citation:fact:strongest_connection",
+        "citation:node:doi:10.1109/comst.2023.3308717:label",
+        "citation:node:openalex:W3139024011:label"
+      ],
+      "entities": [
+        "citation:edge:0001",
+        "citation:node:doi:10.1109/comst.2023.3308717",
+        "citation:node:openalex:W3139024011"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "citation:edge:0001:relation"
+          ],
+          "nodes": [
+            "citation:node:doi:10.1109/comst.2023.3308717",
+            "citation:node:openalex:W3139024011"
+          ],
+          "path_id": "path:citation:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "citation:fact:strongest_connection"
+          ],
+          "nodes": [
+            "citation:node:doi:10.1109/comst.2023.3308717",
+            "citation:node:openalex:W3139024011"
+          ],
+          "path_id": "path:citation:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "citation:edge:0001:relation",
+          "network": "citation",
+          "object": "citation:node:openalex:W3139024011",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "citation:node:doi:10.1109/comst.2023.3308717"
+        },
+        {
+          "atom_id": "citation:edge:0001:weight",
+          "network": "citation",
+          "object": 1.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "citation:edge:0001"
+        },
+        {
+          "atom_id": "citation:fact:strongest_connection",
+          "network": "citation",
+          "object": "citation:node:openalex:W3139024011",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "citation:node:doi:10.1109/comst.2023.3308717"
+        },
+        {
+          "atom_id": "citation:node:doi:10.1109/comst.2023.3308717:label",
+          "network": "citation",
+          "object": "Networking Architecture…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "citation:node:doi:10.1109/comst.2023.3308717"
+        },
+        {
+          "atom_id": "citation:node:openalex:W3139024011:label",
+          "network": "citation",
+          "object": "Leveraging Digital Twin…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "citation:node:openalex:W3139024011"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "e91b2defd0c41604a12dcce392bda8f78f162d0206d589b2c1ef0ebdfa233908"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the citation network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"Networking Architecture…\",\"target_label\":\"Leveraging Digital Twin…\",\"weight\":1.0},\"explanation\":\"The context explicitly states that the strongest connection is between 'Networking Architecture…' and 'Leveraging Digital Twin…' with a weight of 1.0, as indicated by the 'citation:fact:strongest_connection' and 'citation:edge:0001:weight' relationships.\",\"item_id\":\"digital_twins_healthcare_2012_2024:citation:strongest_connection\"}",
+  "evaluation_decision": "pass",
+  "evaluation_confidence": 0.99,
+  "evaluation_reason": "The candidate returns the canonical citation-network pair and exact edge weight of 1.0.",
+  "evaluation_evidence_ids": [
+    "citation:edge:0001:relation",
+    "citation:edge:0001:weight",
+    "citation:fact:strongest_connection",
+    "citation:node:doi:10.1109/comst.2023.3308717:label",
+    "citation:node:openalex:W3139024011:label"
+  ],
+  "content_sha256": "b99cfcbfcdda70c02a26df2edbd2e6e9a92823ab639b19862686762ab1be6724"
+}

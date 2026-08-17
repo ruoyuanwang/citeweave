@@ -105,3 +105,34 @@ def test_journal_readiness_gate_rejects_shallow_manuscript(crossref_records):
     assert not quality["passed"]
     assert not quality["checks"]["characters_at_least_12000"]
     assert not quality["checks"]["method_moves_complete"]
+
+
+def test_english_terminal_punctuation_is_not_treated_as_truncation(crossref_records):
+    evidence = _bundle(crossref_records)
+    corpus = next(item for item in evidence.items if item.claim_type == "corpus_size")
+    text = (
+        "This complete English paragraph reports the frozen corpus size as "
+        f"{corpus.value} works and ends with standard English punctuation "
+        f"[{corpus.evidence_id}]."
+    )
+
+    result = validate_manuscript(text, evidence, strict_structure=False)
+
+    assert result["incomplete_paragraphs"] == []
+
+
+def test_english_section_contract_is_detected(crossref_records):
+    evidence = _bundle(crossref_records)
+    headings = [
+        "## Abstract",
+        "## 1 Introduction",
+        "## 2 Data and methods",
+        "## 3 Results",
+        "## 4 Discussion and limitations",
+        "## 5 Conclusion",
+    ]
+    text = "\n\n".join(f"{heading}\n\nComplete prose." for heading in headings)
+
+    result = validate_manuscript(text, evidence, strict_structure=False)
+
+    assert result["missing_sections"] == []

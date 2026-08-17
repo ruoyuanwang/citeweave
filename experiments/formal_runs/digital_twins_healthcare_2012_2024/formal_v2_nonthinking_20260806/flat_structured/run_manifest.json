@@ -1,0 +1,74 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "digital_twins_healthcare_2012_2024",
+  "condition": "flat_structured",
+  "prompt_version": "formal-graph-qa-v2-nonthinking",
+  "profile": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "modality": "text",
+    "capability_snapshot": "D:\\project\\bibagent\\experiments\\api_capabilities\\deepseek_models.json",
+    "response_format": "json_object",
+    "supports_json_schema": false,
+    "supports_seed": false,
+    "supports_data_uri": false
+  },
+  "capability_validation": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "snapshot_sha256": "bb06a7f1283e0b4c9375df86195f732ccaef2466ad685965a4512784af26e7c5",
+    "model_available": true,
+    "image_input_verified": null,
+    "passed": true,
+    "reasons": []
+  },
+  "comparison_design": {
+    "primary_text_panel": {
+      "profile_id": "deepseek-official-v4-pro-text",
+      "model": "deepseek-v4-pro",
+      "base_url": "https://api.deepseek.com",
+      "conditions": [
+        "no_rag",
+        "flat_structured",
+        "graph_rag"
+      ],
+      "strict_within_model_comparison": true
+    },
+    "figure_panel": null
+  },
+  "grounding_manifest_sha256": "f4027d29227abbce9d5cfa2c63c748c9c7a1731dfba82c1b8b0e110cd8a1af95",
+  "benchmark_sha256": "7a9c31d745af0308fb183665d7382005946decd2e8e0325fd698da3ec9893972",
+  "items": 29,
+  "item_ids": [
+    "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size",
+    "digital_twins_healthcare_2012_2024:bibliographic_coupling:highest_occurrence",
+    "digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership",
+    "digital_twins_healthcare_2012_2024:bibliographic_coupling:false_premise",
+    "digital_twins_healthcare_2012_2024:citation:network_size",
+    "digital_twins_healthcare_2012_2024:citation:highest_occurrence",
+    "digital_twins_healthcare_2012_2024:citation:strongest_connection",
+    "digital_twins_healthcare_2012_2024:citation:cluster_membership",
+    "digital_twins_healthcare_2012_2024:citation:false_premise",
+    "digital_twins_healthcare_2012_2024:coauthorship:network_size",
+    "digital_twins_healthcare_2012_2024:coauthorship:highest_occurrence",
+    "digital_twins_healthcare_2012_2024:coauthorship:strongest_connection",
+    "digital_twins_healthcare_2012_2024:coauthorship:cluster_membership",
+    "digital_twins_healthcare_2012_2024:coauthorship:false_premise",
+    "digital_twins_healthcare_2012_2024:cocitation:network_size",
+    "digital_twins_healthcare_2012_2024:cocitation:highest_occurrence",
+    "digital_twins_healthcare_2012_2024:cocitation:strongest_connection",
+    "digital_twins_healthcare_2012_2024:cocitation:cluster_membership",
+    "digital_twins_healthcare_2012_2024:cocitation:false_premise",
+    "digital_twins_healthcare_2012_2024:institution_collaboration:network_size",
+    "digital_twins_healthcare_2012_2024:institution_collaboration:highest_occurrence",
+    "digital_twins_healthcare_2012_2024:institution_collaboration:strongest_connection",
+    "digital_twins_healthcare_2012_2024:institution_collaboration:cluster_membership",
+    "digital_twins_healthcare_2012_2024:institution_collaboration:false_premise",
+    "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size",
+    "digital_twins_healthcare_2012_2024:keyword_cooccurrence:highest_occurrence",
+    "digital_twins_healthcare_2012_2024:keyword_cooccurrence:strongest_connection",
+    "digital_twins_healthcare_2012_2024:keyword_cooccurrence:cluster_membership",
+    "digital_twins_healthcare_2012_2024:keyword_cooccurrence:false_premise"
+  ]
+}

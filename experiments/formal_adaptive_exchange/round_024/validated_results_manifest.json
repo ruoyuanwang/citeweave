@@ -1,0 +1,34 @@
+{
+  "assignment_sha256": {
+    "evaluation": "0d41983cb974de37ee9a02b783463445e242c59e4024b6e9c9254642721e81a7",
+    "feedback": "0d0ced9b905f4bf294858e4caa43da3ccda9de98f1144a80283272a1f881e355"
+  },
+  "batch_manifest_sha256": "44d130ef80e22f5efa5b54f2ac571718c115bd5339d280ccd4f207f3e4ee455e",
+  "exact_coverage": true,
+  "items": [
+    {
+      "kind": "evaluation",
+      "packet_id": "EP507ddf045e7e94b9d1bd",
+      "packet_sha256": "5bdfa0620845b62be61f79c36b095c68f2477f3e210e2c82bad5c4b47a671284",
+      "result_path": "results/evaluation/EP507ddf045e7e94b9d1bd.json",
+      "result_sha256": "523331cfab3430ba492116de1210972f55b668931e869286001669bd2573b58c"
+    },
+    {
+      "kind": "evaluation",
+      "packet_id": "EP7b17214e044dea3e8376",
+      "packet_sha256": "f3b64c411cb9548946419c6c6572a1858838ed07397eef4ae90cd261feca8bcb",
+      "result_path": "results/evaluation/EP7b17214e044dea3e8376.json",
+      "result_sha256": "0d2ad1f377e99a9fb3afb84f830f0cd498a6a93cc1552ac6fbafd0a1a8c0f4be"
+    },
+    {
+      "kind": "evaluation",
+      "packet_id": "EPe6a4d5fed2712ef295f3",
+      "packet_sha256": "db25823cb4b7d00503975c33bee017e6cee52a4007a532c9efdebce8fd4bda6c",
+      "result_path": "results/evaluation/EPe6a4d5fed2712ef295f3.json",
+      "result_sha256": "846953675799951e3cea5e152ebcce00c9d4102695fcbda8cfc1322a28363cd9"
+    }
+  ],
+  "packet_and_result_schema_validated": true,
+  "schema_version": 1,
+  "status": "complete_results_validated"
+}

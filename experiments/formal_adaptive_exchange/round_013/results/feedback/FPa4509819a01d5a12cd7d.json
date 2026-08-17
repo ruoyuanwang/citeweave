@@ -1,0 +1,15 @@
+{
+  "packet_id": "FPa4509819a01d5a12cd7d",
+  "decision": "accept",
+  "confidence": 0.99,
+  "reason": "The visible evidence supports each stated limitation: possible final-year incompleteness, retrieval-date and citation-window dependence, the endpoint CAGR, and the 2021 year-over-year decline showing non-monotonic growth.",
+  "evidence_ids": [
+    "E005",
+    "E006",
+    "E007",
+    "E015",
+    "E016"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

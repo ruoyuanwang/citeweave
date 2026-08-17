@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "excluded_upstream_semantic_judge_error",
+  "formal_results_used": false,
+  "metrics_used": false,
+  "reason": "These development counts were derived from the excluded first baseline-original evaluation round and are preserved only for audit.",
+  "replacement": "../development_adaptive_topic_counts_v3"
+}

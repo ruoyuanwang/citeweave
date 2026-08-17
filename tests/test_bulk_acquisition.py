@@ -10,8 +10,9 @@ import pytest
 
 from citeweave.bulk_acquisition import bulk_acquire, harvest_lock, iter_staged_records
 from citeweave.connectors.base import BaseConnector
-from citeweave.exceptions import AcquisitionError
+from citeweave.exceptions import AcquisitionError, InvalidCursorError
 from citeweave.harvest_acceptance import verify_bulk_harvest
+from citeweave.io import save_config
 from citeweave.models import (
     AcquisitionPolicy,
     ProjectConfig,
@@ -31,10 +32,12 @@ class SyntheticCrossrefConnector(BaseConnector):
         *,
         records_per_day: int,
         constant_cursor: bool = False,
+        duplicate_ids: bool = False,
     ):
         super().__init__(raw_dir, max_retries=0)
         self.records_per_day = records_per_day
         self.constant_cursor = constant_cursor
+        self.duplicate_ids = duplicate_ids
         self.requested_cursors: list[str | None] = []
         self._scroll_offsets: dict[str, int] = {}
         self.mailto = None
@@ -72,7 +75,7 @@ class SyntheticCrossrefConnector(BaseConnector):
         prefix = f"{start:%Y%m%d}-{end:%Y%m%d}"
         items = [
             {
-                "DOI": f"10.9999/{prefix}.{index}",
+                "DOI": f"10.9999/{prefix}.{index // 2 if self.duplicate_ids else index}",
                 "title": [f"Synthetic work {prefix} {index}"],
                 "reference": [{"DOI": f"10.9999/ref.{index % 17}"}],
             }
@@ -94,6 +97,121 @@ class DummyConnector(BaseConnector):
 
     def acquire(self, protocol: SearchProtocol):  # pragma: no cover
         raise NotImplementedError
+
+
+class SyntheticOpenAlexDriftConnector(BaseConnector):
+    source_name = SourceName.openalex.value
+    endpoint = "https://synthetic.test/works"
+
+    def __init__(self, raw_dir: Path):
+        super().__init__(raw_dir, max_retries=0)
+        self.api_key = "test"
+
+    def acquire(self, protocol: SearchProtocol):  # pragma: no cover
+        raise NotImplementedError
+
+    def _request_json(
+        self,
+        url: str,
+        *,
+        params: dict[str, Any],
+        headers: dict[str, str] | None = None,
+    ) -> dict[str, Any]:
+        del url, headers
+        if int(params["per_page"]) == 1:
+            return {"meta": {"count": 3, "next_cursor": None}, "results": []}
+        return {
+            "meta": {"count": 3, "next_cursor": None},
+            "results": [
+                {"id": f"https://openalex.org/W{index}", "display_name": f"Work {index}"}
+                for index in range(4)
+            ],
+        }
+
+
+class SyntheticOpenAlexEarlyCountConnector(BaseConnector):
+    source_name = SourceName.openalex.value
+    endpoint = "https://synthetic.test/works"
+
+    def __init__(self, raw_dir: Path):
+        super().__init__(raw_dir, max_retries=0)
+        self.api_key = "test"
+        self.requested_cursors: list[str] = []
+
+    def acquire(self, protocol: SearchProtocol):  # pragma: no cover
+        raise NotImplementedError
+
+    def _request_json(
+        self,
+        url: str,
+        *,
+        params: dict[str, Any],
+        headers: dict[str, str] | None = None,
+    ) -> dict[str, Any]:
+        del url, headers
+        if int(params["per_page"]) == 1 and params["cursor"] == "*":
+            return {"meta": {"count": 1, "next_cursor": None}, "results": []}
+        cursor = str(params["cursor"])
+        self.requested_cursors.append(cursor)
+        if cursor == "*":
+            return {
+                "meta": {"count": 1, "next_cursor": "second-page"},
+                "results": [{"id": "https://openalex.org/W1", "display_name": "Work 1"}],
+            }
+        assert cursor == "second-page"
+        return {
+            "meta": {"count": 1, "next_cursor": None},
+            "results": [{"id": "https://openalex.org/W2", "display_name": "Work 2"}],
+        }
+
+
+class SyntheticOpenAlexExpiredCursorConnector(BaseConnector):
+    source_name = SourceName.openalex.value
+    endpoint = "https://synthetic.test/works"
+
+    def __init__(self, raw_dir: Path, *, reject_saved_once: bool):
+        super().__init__(raw_dir, max_retries=0)
+        self.api_key = "test"
+        self.reject_saved_once = reject_saved_once
+        self.requested_cursors: list[str] = []
+
+    def acquire(self, protocol: SearchProtocol):  # pragma: no cover
+        raise NotImplementedError
+
+    def _request_json(
+        self,
+        url: str,
+        *,
+        params: dict[str, Any],
+        headers: dict[str, str] | None = None,
+    ) -> dict[str, Any]:
+        del url, headers
+        if int(params["per_page"]) == 1:
+            return {"meta": {"count": 2, "next_cursor": None}, "results": []}
+        cursor = str(params["cursor"])
+        self.requested_cursors.append(cursor)
+        if cursor == "*":
+            return {
+                "meta": {"count": 2, "next_cursor": "saved-cursor"},
+                "results": [
+                    {
+                        "id": "https://openalex.org/W-new-1",
+                        "display_name": "New snapshot 1",
+                    }
+                ],
+            }
+        if self.reject_saved_once:
+            self.reject_saved_once = False
+            raise InvalidCursorError("explicit synthetic expired cursor")
+        return {
+            "meta": {"count": 2, "next_cursor": None},
+            "results": [
+                {
+                    "id": "https://openalex.org/W-new-2",
+                    "display_name": "New snapshot 2",
+                }
+            ],
+        }
 
 
 class SyntheticEuropePmcConnector(BaseConnector):
@@ -166,9 +284,11 @@ def _config(*, target: int = 25_000, page_size: int = 1_000) -> ProjectConfig:
 def test_bulk_harvest_streams_and_verifies_more_than_100k_records(tmp_path: Path):
     paths = ProjectPaths(tmp_path)
     paths.create()
+    config = _config()
+    save_config(paths.root / "project.yml", config)
     connector = SyntheticCrossrefConnector(paths.raw, records_per_day=300)
 
-    result = bulk_acquire(paths, _config(), connector)
+    result = bulk_acquire(paths, config, connector)
     records = sum(1 for _ in iter_staged_records(result.staged_path))
     verification = verify_bulk_harvest(tmp_path)
 
@@ -176,8 +296,156 @@ def test_bulk_harvest_streams_and_verifies_more_than_100k_records(tmp_path: Path
     assert result.manifest.expected_records == 109_800
     assert records == 109_800
     assert result.manifest.pages >= 100
+    assert verification["passed"], verification["checks"]
+    assert verification["passed_checks"] == verification["total_checks"] == 6
+
+
+def test_bulk_harvest_separates_raw_exhaustiveness_from_deduplication(tmp_path: Path):
+    paths = ProjectPaths(tmp_path)
+    paths.create()
+    config = _config(target=500_000)
+    save_config(paths.root / "project.yml", config)
+    connector = SyntheticCrossrefConnector(
+        paths.raw,
+        records_per_day=10,
+        duplicate_ids=True,
+    )
+
+    result = bulk_acquire(paths, config, connector)
+    verification = verify_bulk_harvest(tmp_path)
+
+    assert result.manifest.complete
+    assert result.manifest.received_records == result.manifest.expected_records == 3_660
+    assert result.manifest.unique_records == 1_830
+    assert result.manifest.duplicate_records == 1_830
+    assert result.manifest.unique_records + result.manifest.duplicate_records == 3_660
     assert verification["passed"]
-    assert verification["passed_checks"] == verification["total_checks"] == 5
+
+
+def test_openalex_uses_cursor_snapshot_count_when_index_drifts(tmp_path: Path):
+    paths = ProjectPaths(tmp_path)
+    paths.create()
+    config = ProjectConfig(
+        project_id="openalex-drift",
+        protocol=SearchProtocol(
+            title="OpenAlex drift test",
+            keywords=["bibliometric"],
+            search_scope="title_abstract",
+            year_from=2024,
+            year_to=2024,
+            source=SourceName.openalex,
+        ),
+        acquisition=AcquisitionPolicy(
+            mode="bulk",
+            target_slice_records=500_000,
+            page_size=100,
+            max_retries=0,
+        ),
+    )
+    save_config(paths.root / "project.yml", config)
+
+    result = bulk_acquire(paths, config, SyntheticOpenAlexDriftConnector(paths.raw))
+    verification = verify_bulk_harvest(tmp_path)
+
+    assert result.manifest.complete
+    assert result.manifest.expected_records == 3
+    assert result.manifest.received_records == 4
+    assert result.manifest.drift == 1
+    assert verification["passed"], verification["checks"]
+    assert any(
+        "OpenAlex cursor exhausted with count drift" in warning
+        for warning in result.manifest.warnings
+    )
+
+
+def test_openalex_exhausts_cursor_even_after_reaching_live_count(tmp_path: Path):
+    paths = ProjectPaths(tmp_path)
+    paths.create()
+    config = ProjectConfig(
+        project_id="openalex-cursor-authority",
+        protocol=SearchProtocol(
+            title="OpenAlex cursor authority test",
+            keywords=["bibliometric"],
+            search_scope="title_abstract",
+            year_from=2024,
+            year_to=2024,
+            source=SourceName.openalex,
+        ),
+        acquisition=AcquisitionPolicy(
+            mode="bulk",
+            target_slice_records=500_000,
+            page_size=100,
+            max_retries=0,
+        ),
+    )
+    save_config(paths.root / "project.yml", config)
+    connector = SyntheticOpenAlexEarlyCountConnector(paths.raw)
+
+    result = bulk_acquire(paths, config, connector)
+    verification = verify_bulk_harvest(tmp_path)
+
+    assert result.manifest.complete
+    assert result.manifest.expected_records == 1
+    assert result.manifest.received_records == 2
+    assert connector.requested_cursors == ["*", "second-page"]
+    assert verification["passed"], verification["checks"]
+
+
+def test_openalex_explicit_expired_cursor_restarts_only_failed_slice(tmp_path: Path):
+    paths = ProjectPaths(tmp_path)
+    paths.create()
+    config = ProjectConfig(
+        project_id="openalex-expired-cursor",
+        protocol=SearchProtocol(
+            title="OpenAlex expired cursor test",
+            keywords=["bibliometric"],
+            search_scope="title_abstract",
+            year_from=2024,
+            year_to=2024,
+            source=SourceName.openalex,
+        ),
+        acquisition=AcquisitionPolicy(
+            mode="bulk",
+            target_slice_records=500_000,
+            page_size=100,
+            max_retries=0,
+            max_slice_restarts=2,
+        ),
+    )
+    save_config(paths.root / "project.yml", config)
+    first = SyntheticOpenAlexExpiredCursorConnector(paths.raw, reject_saved_once=False)
+    partial = bulk_acquire(paths, config, first, page_budget=1)
+    assert not partial.manifest.complete
+    prior_raw_path = partial.raw_paths[0]
+    prior_raw_hash = partial.manifest.raw_sha256[0]
+
+    resumed = SyntheticOpenAlexExpiredCursorConnector(paths.raw, reject_saved_once=True)
+    complete = bulk_acquire(paths, config, resumed, resume=True)
+    verification = verify_bulk_harvest(tmp_path)
+    harvest = __import__("json").loads(
+        (paths.audit / "harvest_manifest.json").read_text(encoding="utf-8")
+    )
+    records = list(iter_staged_records(complete.staged_path))
+
+    assert complete.manifest.complete
+    assert resumed.requested_cursors == ["saved-cursor", "*", "saved-cursor"]
+    assert [item["id"] for item in records] == [
+        "https://openalex.org/W-new-1",
+        "https://openalex.org/W-new-2",
+    ]
+    assert prior_raw_path.exists()
+    restart = harvest["slices"][0]["restart_history"][0]
+    assert restart["reason"] == "openalex_explicit_invalid_or_expired_cursor"
+    assert restart["pages"][0]["raw_sha256"] == prior_raw_hash
+    assert restart["pages"][0]["raw_path"] == prior_raw_path.relative_to(paths.root).as_posix()
+    assert harvest["slices"][0]["restart_count"] == 1
+    assert harvest["slices"][0]["failure_count"] == 1
+    assert complete.manifest.failed_pages == 0
+    assert verification["passed"], verification["checks"]
+    raw_check = next(
+        item for item in verification["checks"] if item["name"] == "raw_page_integrity"
+    )
+    assert raw_check["detail"]["archived_pages_checked"] == 1
 
 
 def test_crossref_partial_harvest_restarts_only_incomplete_slice(tmp_path: Path):
@@ -273,6 +541,37 @@ def test_request_retries_429_and_server_error(monkeypatch, tmp_path: Path):
     assert payload == {"ok": True}
     assert connector.request_attempts == 3
     assert connector.retry_count == 2
+
+
+def test_openalex_connector_classifies_only_explicit_invalid_cursor(tmp_path: Path):
+    connector = SyntheticOpenAlexExpiredCursorConnector(
+        tmp_path,
+        reject_saved_once=False,
+    )
+
+    def invalid_cursor(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            400,
+            json={"error": "Invalid cursor", "message": "The cursor has expired."},
+            request=request,
+        )
+
+    connector.client.close()
+    connector.client = httpx.Client(transport=httpx.MockTransport(invalid_cursor))
+    with pytest.raises(InvalidCursorError):
+        BaseConnector._request_json(connector, connector.endpoint, params={"cursor": "old"})
+
+    def unrelated_bad_request(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            400,
+            json={"error": "Invalid filter", "message": "Unknown field."},
+            request=request,
+        )
+
+    connector.client.close()
+    connector.client = httpx.Client(transport=httpx.MockTransport(unrelated_bad_request))
+    with pytest.raises(AcquisitionError, match="request failed after retries"):
+        BaseConnector._request_json(connector, connector.endpoint, params={"cursor": "old"})
 
 
 def test_harvest_lock_rejects_concurrent_writer_and_recovers_stale_lock(tmp_path: Path):

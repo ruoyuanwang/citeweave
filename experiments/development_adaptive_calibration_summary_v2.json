@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "status": "accepted_development_calibration",
+  "formal_results_used": false,
+  "topics": 2,
+  "items": 12,
+  "baseline_original": {
+    "quality_errors": 1,
+    "quality_error_rate": 0.08333333333333333,
+    "quality_pass_rate": 0.9166666666666666,
+    "semantic_audit_passed": true
+  },
+  "post_review_conditions": {
+    "always_review": {
+      "review_requests": 12,
+      "review_request_rate": 1.0,
+      "final_quality_errors": 0,
+      "final_quality_pass_rate": 1.0,
+      "unsafe_auto_accepts": 0
+    },
+    "static_review": {
+      "review_requests": 8,
+      "review_request_rate": 0.6666666666666666,
+      "final_quality_errors": 0,
+      "final_quality_pass_rate": 1.0,
+      "unsafe_auto_accepts": 0
+    },
+    "adaptive_review": {
+      "review_requests": 12,
+      "review_request_rate": 1.0,
+      "final_quality_errors": 0,
+      "final_quality_pass_rate": 1.0,
+      "unsafe_auto_accepts": 0,
+      "interpretation": "Both development topics are the frozen two-confirmation warm-up; intervention reduction is evaluated only on the six locked topics."
+    }
+  },
+  "excluded_rounds": [
+    {
+      "path": "development_adaptive_original_evaluation",
+      "reason": "semantic packet-result mismatch"
+    },
+    {
+      "path": "development_adaptive_original_exchange/round_002",
+      "reason": "one result failed independent semantic audit"
+    }
+  ],
+  "provenance": [
+    {
+      "path": "development_adaptive_original_evaluation_v2/metrics.json",
+      "sha256": "01203ced8dc7d7a84c6220ac51f85f33df99e701510c8a5a76f2d90902c70ed8"
+    },
+    {
+      "path": "development_adaptive_original_evaluation_v2/audits/semantic_audit.json",
+      "sha256": "01396df15a2d7ba1b281f477d3f6954202f286aefcdb87e067850eb148fc6d6a"
+    },
+    {
+      "path": "development_adaptive_review/always_review/state.json",
+      "sha256": "78b41ca256a80d99b87902805eb6f95e083d34e1f5dcad340b7840ab834b3256"
+    },
+    {
+      "path": "development_adaptive_review/static_review/state.json",
+      "sha256": "d224326c7a11445c601f71ba6322f7c7e79e2d6516d7284881c55b7b0d2588ae"
+    },
+    {
+      "path": "development_adaptive_review/adaptive_review/state.json",
+      "sha256": "3640ac482f5c6fa2c719a9e296eb0e4989ba6fe826308a52596a75aef3260da8"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "packet_id": "FP8ab555e0902115d2cd43",
+  "decision": "revise",
+  "confidence": 1.0,
+  "reason": "E006 and E007 describe publication growth, while E019 describes source concentration. These descriptive metrics do not establish that the research domain is emerging or technology-driven.",
+  "evidence_ids": [
+    "E006",
+    "E007",
+    "E019"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "are consistent with an emerging, technology-driven research domain.",
+    "replacement_text": "describe publication growth and source concentration within this corpus, but do not establish that the domain is emerging or technology-driven [E006, E007, E019]."
+  }
+}

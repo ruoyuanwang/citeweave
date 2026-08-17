@@ -1,0 +1,38 @@
+{
+  "packet_id": "EP3cd9201787d3f9c05642",
+  "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:false_premise:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "abstain": "true"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:absent_target"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:absent_target",
+          "network": "bibliographic_coupling",
+          "object": false,
+          "object_type": "boolean",
+          "predicate": "contains_visible_label",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "4dc1c20ea265bfd424786d0da27cab7841e52ed8bf9b5feb536947ba1ff8ed0e"
+    },
+    "question": "Which cluster contains 'CiteWeave absent benchmark node' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":true,\"answer\":\"\",\"explanation\":\"The question asks for the cluster of 'CiteWeave absent benchmark node', but the context states that the network does not contain any visible label for this node (contains_visible_label is false). Because the queried label is not visible in the displayed network, no cluster membership for that label can be determined from the evidence.\",\"item_id\":\"gene_editing_als_2004_2024:bibliographic_coupling:false_premise\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "content_sha256": "965013f68f39813997400fe819d99e8e7c1b1a585007ca70f6f7933d560bfc7e"
+}

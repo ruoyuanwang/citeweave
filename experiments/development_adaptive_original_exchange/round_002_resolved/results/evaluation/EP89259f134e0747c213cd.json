@@ -1,0 +1,11 @@
+{
+  "packet_id": "EP89259f134e0747c213cd",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 0.99,
+  "reason": "The exact visible returned label \"Pseudomonas aeruginosa:…\" is identical to the supported display label \"Pseudomonas aeruginosa:…\" for the node identified by the canonical evidence as having the highest occurrence.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:label"
+  ]
+}

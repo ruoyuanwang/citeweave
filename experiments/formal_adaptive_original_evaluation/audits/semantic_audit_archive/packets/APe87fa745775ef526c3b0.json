@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "audit_packet_id": "APe87fa745775ef526c3b0",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+          "network": "bibliographic_coupling",
+          "object": 2,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label",
+          "network": "bibliographic_coupling",
+          "object": "Microplastics in the env…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "59e2ba206570035289b73933da7f26d74d3a31a65401d4485382917568e95adc"
+    },
+    "question": "Which detected cluster contains the labeled node 'Microplastics in the env…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":2,\"label\":\"Microplastics in the env…\"},\"explanation\":\"The node with DOI 10.1016/j.envpol.2019.113011 has the display label 'Microplastics in the env…' and is assigned to cluster 2 in the bibliographic_coupling network, as shown in the provided relationships.\",\"item_id\":\"global_microplastics_2004_2019:bibliographic_coupling:cluster_membership\"}",
+  "evaluation_decision": "pass",
+  "evaluation_confidence": 0.99,
+  "evaluation_reason": "The label and cluster 2 are exactly supported by the canonical node evidence.",
+  "evaluation_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"
+  ],
+  "content_sha256": "aadd72d2e593daf8cc685cf5e1e3541603e66ab7ada93a07e73cf1039025ab02"
+}

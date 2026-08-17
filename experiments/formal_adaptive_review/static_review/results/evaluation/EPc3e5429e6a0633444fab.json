@@ -1,0 +1,13 @@
+{
+  "packet_id": "EPc3e5429e6a0633444fab",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The candidate names the two exact visible labels identified by the strongest-connection relationship and reports weight 1, matching the visible edge weight and satisfying the answer contract.",
+  "evidence_ids": [
+    "citation:fact:strongest_connection",
+    "citation:edge:0001:weight",
+    "citation:node:doi:10.1109/comst.2023.3308717:label",
+    "citation:node:openalex:W3139024011:label"
+  ],
+  "judge_id": "evaluation"
+}

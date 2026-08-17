@@ -1,0 +1,2823 @@
+{
+  "condition": "no_graph",
+  "metadata": {
+    "dataset_id": "quantum_machine_learning_2019_2021",
+    "prompt_version": "graph-qa-v3",
+    "model": "qwen2.5-1.5b-q4km",
+    "base_url": "http://127.0.0.1:8091/v1",
+    "temperature": 0.0,
+    "max_tokens": 384,
+    "seed": 42,
+    "workers": 2,
+    "response_format": "json_schema",
+    "items": 30,
+    "elapsed_seconds": 111.74715819999983,
+    "raw_records": [
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G001",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G001\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\", \"G021\", \"G022\", \"G023\", \"G024\", \"G025\", \"G026\", \"G027\", \"G028\", \"G029\", \"G030\", \"G031\", \"G032\", \"G033\", \"G034\", \"G035\", \"G036\", \"G037\", \"G038\", \"G039\", \"G040\", \"G041\", \"G042\", \"G043\", \"G044\", \"G045\", \"G046\", \"G047\", \"G048\", \"G049\", \"G050\", \"G051\", \"G052\", \"G053\", \"G054\", \"G055\", \"G05"
+              }
+            }
+          ],
+          "created": 1785959941,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 214,
+            "total_tokens": 598,
+            "prompt_tokens_details": {
+              "cached_tokens": 167
+            }
+          },
+          "id": "chatcmpl-zhjHmpqz8cHIhxBxdV0vYKETvM1VN9Pg",
+          "timings": {
+            "cache_n": 167,
+            "prompt_n": 47,
+            "prompt_ms": 391.66,
+            "prompt_per_token_ms": 8.333191489361703,
+            "prompt_per_second": 120.00204258795894,
+            "predicted_n": 384,
+            "predicted_ms": 11603.906,
+            "predicted_per_token_ms": 30.218505208333337,
+            "predicted_per_second": 33.09230529788849
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G001",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\", \"G021\", \"G022\", \"G023\", \"G024\", \"G025\", \"G026\", \"G027\", \"G028\", \"G029\", \"G030\", \"G031\", \"G032\", \"G033\", \"G034\", \"G035\", \"G036\", \"G037\", \"G038\", \"G039\", \"G040\", \"G041\", \"G042\", \"G043\", \"G044\", \"G045\", \"G046\", \"G047\", \"G048\", \"G049\", \"G050\", \"G051\", \"G052\", \"G053\", \"G054\", \"G055\", \"G05"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G002",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G002\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G002\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the bibliographic_coupling network is 'quantum_machine_learning_2019_2021:G002'.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959932,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 103,
+            "prompt_tokens": 224,
+            "total_tokens": 327,
+            "prompt_tokens_details": {
+              "cached_tokens": 167
+            }
+          },
+          "id": "chatcmpl-mLJeoJwfvMVMzAfnN05ozQuKJcv8meSS",
+          "timings": {
+            "cache_n": 167,
+            "prompt_n": 57,
+            "prompt_ms": 391.415,
+            "prompt_per_token_ms": 6.866929824561404,
+            "prompt_per_second": 145.62548701506074,
+            "predicted_n": 103,
+            "predicted_ms": 2950.595,
+            "predicted_per_token_ms": 28.646553398058252,
+            "predicted_per_second": 34.90821342813907
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G002",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the bibliographic_coupling network is 'quantum_machine_learning_2019_2021:G002'."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G003",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G003\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G003\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"statement\": \"The bibliographic_coupling network is a cluster count of 3.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959938,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 194,
+            "prompt_tokens": 214,
+            "total_tokens": 408,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-CEuW11Q6M55On8fZLtzzKAaN2Tq01yDa",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 44,
+            "prompt_ms": 187.514,
+            "prompt_per_token_ms": 4.261681818181819,
+            "prompt_per_second": 234.64914619708392,
+            "predicted_n": 194,
+            "predicted_ms": 5729.23,
+            "predicted_per_token_ms": 29.532113402061853,
+            "predicted_per_second": 33.86144385894789
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G003",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "quantum_machine_learning_2019_2021:G003",
+            "quantum_machine_learning_2019_2021:G002",
+            "quantum_machine_learning_2019_2021:G001"
+          ],
+          "evidence_edges": [
+            "quantum_machine_learning_2019_2021:G002",
+            "quantum_machine_learning_2019_2021:G001"
+          ],
+          "statement": "The bibliographic_coupling network is a cluster count of 3."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G004",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G004\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G004\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019:G001\",\n    \"quantum_machine_learning_2021:G002\",\n    \"quantum_machine_learning_2019:G003\",\n    \"quantum_machine_learning_2021:G004\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019:G001\",\n    \"quantum_machine_learning_2021:G002\",\n    \"quantum_machine_learning_2019:G003\",\n    \"quantum_machine_learning_2021:G004\"\n  ],\n  \"statement\": \"The pair quantum_machine_learning_2019:G001 and quantum_machine_learning_2021:G002 has the strongest connection in the bibliographic_coupling network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959946,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 247,
+            "prompt_tokens": 225,
+            "total_tokens": 472,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-YM58SRPeI9dYBcIQWsg4hReBgpiOnLHG",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 55,
+            "prompt_ms": 237.355,
+            "prompt_per_token_ms": 4.315545454545455,
+            "prompt_per_second": 231.72041878199326,
+            "predicted_n": 247,
+            "predicted_ms": 7586.006,
+            "predicted_per_token_ms": 30.712574898785427,
+            "predicted_per_second": 32.559953155850394
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G004",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "quantum_machine_learning_2019:G001",
+            "quantum_machine_learning_2021:G002",
+            "quantum_machine_learning_2019:G003",
+            "quantum_machine_learning_2021:G004"
+          ],
+          "evidence_edges": [
+            "quantum_machine_learning_2019:G001",
+            "quantum_machine_learning_2021:G002",
+            "quantum_machine_learning_2019:G003",
+            "quantum_machine_learning_2021:G004"
+          ],
+          "statement": "The pair quantum_machine_learning_2019:G001 and quantum_machine_learning_2021:G002 has the strongest connection in the bibliographic_coupling network."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G005",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G005\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G005\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"statement\": \"The citation network has 5 nodes and 5 edges.\"\n}"
+              }
+            }
+          ],
+          "created": 1785959950,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 298,
+            "prompt_tokens": 211,
+            "total_tokens": 509,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-zKxqnHoFyoTSlZJiON950alqyVo3lvV4",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 41,
+            "prompt_ms": 193.981,
+            "prompt_per_token_ms": 4.731243902439024,
+            "prompt_per_second": 211.36090648053158,
+            "predicted_n": 298,
+            "predicted_ms": 9252.018,
+            "predicted_per_token_ms": 31.047040268456374,
+            "predicted_per_second": 32.20918938981744
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G005",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "quantum_machine_learning_2019_2021:G005",
+            "quantum_machine_learning_2019_2021:G004",
+            "quantum_machine_learning_2019_2021:G003",
+            "quantum_machine_learning_2019_2021:G002",
+            "quantum_machine_learning_2019_2021:G001"
+          ],
+          "evidence_edges": [
+            "quantum_machine_learning_2019_2021:G005",
+            "quantum_machine_learning_2019_2021:G004",
+            "quantum_machine_learning_2019_2021:G003",
+            "quantum_machine_learning_2019_2021:G002",
+            "quantum_machine_learning_2019_2021:G001"
+          ],
+          "statement": "The citation network has 5 nodes and 5 edges."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G006",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G006\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G006\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the citation network is 'quantum_machine_learning_2019_2021:G006'.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959949,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 100,
+            "prompt_tokens": 221,
+            "total_tokens": 321,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-ZjpH7AfbGPXnKKcE5yuVOpTuCdSxidV4",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 51,
+            "prompt_ms": 227.287,
+            "prompt_per_token_ms": 4.456607843137255,
+            "prompt_per_second": 224.38590856494213,
+            "predicted_n": 100,
+            "predicted_ms": 2858.353,
+            "predicted_per_token_ms": 28.58353,
+            "predicted_per_second": 34.98518202615282
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G006",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the citation network is 'quantum_machine_learning_2019_2021:G006'."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G007",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G007\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"statement\": \"The citation network is analyzed to detect clusters.\"\n"
+              }
+            }
+          ],
+          "created": 1785959960,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 211,
+            "total_tokens": 595,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-TAPFyE6WTK53sQeUfOm0ZmqDbb4c8vWf",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 41,
+            "prompt_ms": 195.353,
+            "prompt_per_token_ms": 4.764707317073171,
+            "prompt_per_second": 209.87648001310447,
+            "predicted_n": 384,
+            "predicted_ms": 11327.283,
+            "predicted_per_token_ms": 29.4981328125,
+            "predicted_per_second": 33.90045079654141
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G007",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"statement\": \"The citation network is analyzed to detect clusters.\"\n"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G008",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G008\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G008\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G008\",\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019_2021:G008\",\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021"
+              }
+            }
+          ],
+          "created": 1785959962,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 222,
+            "total_tokens": 606,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-6Yeu07jEBfvf82sIUHGvVJTcxjdch0e2",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 52,
+            "prompt_ms": 234.8,
+            "prompt_per_token_ms": 4.515384615384615,
+            "prompt_per_second": 221.46507666098807,
+            "predicted_n": 384,
+            "predicted_ms": 11294.664,
+            "predicted_per_token_ms": 29.413187500000003,
+            "predicted_per_second": 33.99835532956093
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G008",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G008\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G008\",\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019_2021:G008\",\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G009",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G009\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G009\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\", \"G021\", \"G022\", \"G023\", \"G024\", \"G025\", \"G026\", \"G027\", \"G028\", \"G029\", \"G030\", \"G031\", \"G032\", \"G033\", \"G034\", \"G035\", \"G036\", \"G037\", \"G038\", \"G039\", \"G040\", \"G041\", \"G042\", \"G043\", \"G044\", \"G045\", \"G046\", \"G047\", \"G048\", \"G049\", \"G050\", \"G051\", \"G052\", \"G053\", \"G054\", \"G055\", \"G05"
+              }
+            }
+          ],
+          "created": 1785959972,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 213,
+            "total_tokens": 597,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-laXbL1bZm0NZ1JLb7dbDmGbB2pNAHGZ0",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 43,
+            "prompt_ms": 200.738,
+            "prompt_per_token_ms": 4.668325581395349,
+            "prompt_per_second": 214.20956669888113,
+            "predicted_n": 384,
+            "predicted_ms": 11559.142,
+            "predicted_per_token_ms": 30.101932291666667,
+            "predicted_per_second": 33.22045875031209
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G009",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G009\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\", \"G021\", \"G022\", \"G023\", \"G024\", \"G025\", \"G026\", \"G027\", \"G028\", \"G029\", \"G030\", \"G031\", \"G032\", \"G033\", \"G034\", \"G035\", \"G036\", \"G037\", \"G038\", \"G039\", \"G040\", \"G041\", \"G042\", \"G043\", \"G044\", \"G045\", \"G046\", \"G047\", \"G048\", \"G049\", \"G050\", \"G051\", \"G052\", \"G053\", \"G054\", \"G055\", \"G05"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G010",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G010\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G010\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"quantum_machine_learning_2019_2021:G010\"],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the coauthorship network is quantum_machine_learning_2019_2021:G010.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959965,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 119,
+            "prompt_tokens": 223,
+            "total_tokens": 342,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-TaTYpCC3EC1V8tA8EbdjsQQ03ytPvmkD",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 54,
+            "prompt_ms": 243.769,
+            "prompt_per_token_ms": 4.514240740740741,
+            "prompt_per_second": 221.52119424537162,
+            "predicted_n": 119,
+            "predicted_ms": 3351.382,
+            "predicted_per_token_ms": 28.162873949579833,
+            "predicted_per_second": 35.507739792121576
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G010",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "quantum_machine_learning_2019_2021:G010"
+          ],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the coauthorship network is quantum_machine_learning_2019_2021:G010."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G011",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G011\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quant"
+              }
+            }
+          ],
+          "created": 1785959977,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 213,
+            "total_tokens": 597,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-SJ0InP9HqRJTrS84Rw6dQzuGIvBrhKqr",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 43,
+            "prompt_ms": 213.954,
+            "prompt_per_token_ms": 4.975674418604651,
+            "prompt_per_second": 200.97778027052541,
+            "predicted_n": 384,
+            "predicted_ms": 11443.897,
+            "predicted_per_token_ms": 29.801815104166668,
+            "predicted_per_second": 33.55500316019971
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G011",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quant"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G012",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G012\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G012\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quant"
+              }
+            }
+          ],
+          "created": 1785959984,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 224,
+            "total_tokens": 608,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-fjerlYncMonGINV2BGacPAweSEeJ7mS9",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 54,
+            "prompt_ms": 233.477,
+            "prompt_per_token_ms": 4.323648148148148,
+            "prompt_per_second": 231.28616523254968,
+            "predicted_n": 384,
+            "predicted_ms": 11344.31,
+            "predicted_per_token_ms": 29.542473958333332,
+            "predicted_per_second": 33.849568638374656
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G012",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G012\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quant"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G013",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G013\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019:G001\",\n    \"quantum_machine_learning_2021:G002\",\n    \"quantum_machine_learning_2019:G003\",\n    \"quantum_machine_learning_2021:G004\",\n    \"quantum_machine_learning_2019:G005\",\n    \"quantum_machine_learning_2021:G006\",\n    \"quantum_machine_learning_2019:G007\",\n    \"quantum_machine_learning_2021:G008\",\n    \"quantum_machine_learning_2019:G009\",\n    \"quantum_machine_learning_2021:G010\",\n    \"quantum_machine_learning_2019:G011\",\n    \"quantum_machine_learning_2021:G012\",\n    \"quantum_machine_learning_2019:G013\",\n    \"quantum_machine_learning_2021:G014\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G016\",\n    \"quantum_machine_learning_2019:G017\",\n    \"quantum_machine_learning_2021:G018\",\n    \"quantum_machine_learning_2019:G019\",\n    \"quantum_machine_learning_202"
+              }
+            }
+          ],
+          "created": 1785959989,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 212,
+            "total_tokens": 596,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-9GS2CNzX4p5KY8i7W3XvyZSN20JnqOxi",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 42,
+            "prompt_ms": 192.983,
+            "prompt_per_token_ms": 4.594833333333334,
+            "prompt_per_second": 217.63575029924914,
+            "predicted_n": 384,
+            "predicted_ms": 11651.718,
+            "predicted_per_token_ms": 30.343015625000003,
+            "predicted_per_second": 32.95651336566848
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G013",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019:G001\",\n    \"quantum_machine_learning_2021:G002\",\n    \"quantum_machine_learning_2019:G003\",\n    \"quantum_machine_learning_2021:G004\",\n    \"quantum_machine_learning_2019:G005\",\n    \"quantum_machine_learning_2021:G006\",\n    \"quantum_machine_learning_2019:G007\",\n    \"quantum_machine_learning_2021:G008\",\n    \"quantum_machine_learning_2019:G009\",\n    \"quantum_machine_learning_2021:G010\",\n    \"quantum_machine_learning_2019:G011\",\n    \"quantum_machine_learning_2021:G012\",\n    \"quantum_machine_learning_2019:G013\",\n    \"quantum_machine_learning_2021:G014\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G016\",\n    \"quantum_machine_learning_2019:G017\",\n    \"quantum_machine_learning_2021:G018\",\n    \"quantum_machine_learning_2019:G019\",\n    \"quantum_machine_learning_202"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G014",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G014\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G014\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the cocitation network is 'quantum_machine_learning_2019_2021:G014'.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959987,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 101,
+            "prompt_tokens": 222,
+            "total_tokens": 323,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-JhzbAZipfpY5JtBnq3xDnHFW4RLmYHp9",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 52,
+            "prompt_ms": 228.567,
+            "prompt_per_token_ms": 4.395519230769231,
+            "prompt_per_second": 227.504407897903,
+            "predicted_n": 101,
+            "predicted_ms": 2964.47,
+            "predicted_per_token_ms": 29.35118811881188,
+            "predicted_per_second": 34.070171059245
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G014",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the cocitation network is 'quantum_machine_learning_2019_2021:G014'."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G015",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G015\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quant"
+              }
+            }
+          ],
+          "created": 1785959999,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 212,
+            "total_tokens": 596,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-w5XYPQmDFhbHh6vbsOQ4ITvbmOJBzfX6",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 42,
+            "prompt_ms": 195.085,
+            "prompt_per_token_ms": 4.644880952380952,
+            "prompt_per_second": 215.29077068969934,
+            "predicted_n": 384,
+            "predicted_ms": 11582.224,
+            "predicted_per_token_ms": 30.162041666666667,
+            "predicted_per_second": 33.154254312470556
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G015",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quant"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G016",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G016\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_202"
+              }
+            }
+          ],
+          "created": 1785960001,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 223,
+            "total_tokens": 607,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-JUXDCZmwZxcbWp6a1ywg0zUf3wYVV84t",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 53,
+            "prompt_ms": 231.135,
+            "prompt_per_token_ms": 4.361037735849057,
+            "prompt_per_second": 229.30322106128455,
+            "predicted_n": 384,
+            "predicted_ms": 12116.04,
+            "predicted_per_token_ms": 31.552187500000002,
+            "predicted_per_second": 31.693523626531437
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G016",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_202"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G017",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G017\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G017\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"institution_collaboration:G017\"],\n  \"evidence_edges\": [\"institution_collaboration:G017\"],\n  \"statement\": \"The institution_collaboration network has 2 nodes and 2 edges.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960003,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 101,
+            "prompt_tokens": 214,
+            "total_tokens": 315,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-b9mkNGWRuFmPRa2UPQFRUUArLxSj8603",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 44,
+            "prompt_ms": 229.959,
+            "prompt_per_token_ms": 5.226340909090909,
+            "prompt_per_second": 191.33845598563224,
+            "predicted_n": 101,
+            "predicted_ms": 3888.941,
+            "predicted_per_token_ms": 38.50436633663366,
+            "predicted_per_second": 25.971080558949083
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G017",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "institution_collaboration:G017"
+          ],
+          "evidence_edges": [
+            "institution_collaboration:G017"
+          ],
+          "statement": "The institution_collaboration network has 2 nodes and 2 edges."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G018",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G018\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G018\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the institution_collaboration network is G018.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960004,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 86,
+            "prompt_tokens": 224,
+            "total_tokens": 310,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-hQ5OLx0DTZBHjyxnBcPdgcdGr2a4IWNG",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 54,
+            "prompt_ms": 284.94,
+            "prompt_per_token_ms": 5.276666666666666,
+            "prompt_per_second": 189.51358180669615,
+            "predicted_n": 86,
+            "predicted_ms": 2791.183,
+            "predicted_per_token_ms": 32.455616279069766,
+            "predicted_per_second": 30.811308323388324
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G018",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the institution_collaboration network is G018."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G019",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G019\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G019\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"institution_collaboration\",\n    \"institution_collaboration:G019\"\n  ],\n  \"evidence_edges\": [\n    \"institution_collaboration:G019:institution_collaboration\",\n    \"institution_collaboration:G019:institution_collaboration:G019\"\n  ],\n  \"statement\": \"The institution_collaboration network is analyzed for clusters.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960007,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 139,
+            "prompt_tokens": 214,
+            "total_tokens": 353,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-qQ8w17zE0O0VSYQFmm9ovSVGxix3eBej",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 44,
+            "prompt_ms": 204.15,
+            "prompt_per_token_ms": 4.639772727272727,
+            "prompt_per_second": 215.52779818760715,
+            "predicted_n": 139,
+            "predicted_ms": 4292.353,
+            "predicted_per_token_ms": 30.880237410071942,
+            "predicted_per_second": 32.38317072244524
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G019",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "institution_collaboration",
+            "institution_collaboration:G019"
+          ],
+          "evidence_edges": [
+            "institution_collaboration:G019:institution_collaboration",
+            "institution_collaboration:G019:institution_collaboration:G019"
+          ],
+          "statement": "The institution_collaboration network is analyzed for clusters."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G020",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G020\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G020\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G020\",\n    \"quantum_machine_learning_2019_2021:G021\",\n    \"quantum_machine_learning_2019_2021:G022\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G025\",\n    \"quantum_machine_learning_2019_2021:G026\",\n    \"quantum_machine_learning_2019_2021:G027\",\n    \"quantum_machine_learning_2019_2021:G028\",\n    \"quantum_machine_learning_2019_2021:G029\",\n    \"quantum_machine_learning_2019_2021:G030\",\n    \"quantum_machine_learning_2019_2021:G031\",\n    \"quantum_machine_learning_2019_2021:G032\",\n    \"quantum_machine_learning_2019_2021:G033\",\n    \"quantum_machine_learning_2019_2021:G034\",\n    \"quant"
+              }
+            }
+          ],
+          "created": 1785960016,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 225,
+            "total_tokens": 609,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-8pXlWIOBGw8R93YRALXRAoAnNg7LXkfl",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 56,
+            "prompt_ms": 248.152,
+            "prompt_per_token_ms": 4.431285714285714,
+            "prompt_per_second": 225.66813888262035,
+            "predicted_n": 384,
+            "predicted_ms": 11483.925,
+            "predicted_per_token_ms": 29.9060546875,
+            "predicted_per_second": 33.438044919311125
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G020",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G020\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G020\",\n    \"quantum_machine_learning_2019_2021:G021\",\n    \"quantum_machine_learning_2019_2021:G022\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G025\",\n    \"quantum_machine_learning_2019_2021:G026\",\n    \"quantum_machine_learning_2019_2021:G027\",\n    \"quantum_machine_learning_2019_2021:G028\",\n    \"quantum_machine_learning_2019_2021:G029\",\n    \"quantum_machine_learning_2019_2021:G030\",\n    \"quantum_machine_learning_2019_2021:G031\",\n    \"quantum_machine_learning_2019_2021:G032\",\n    \"quantum_machine_learning_2019_2021:G033\",\n    \"quantum_machine_learning_2019_2021:G034\",\n    \"quant"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G021",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G021\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G021\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\"],\n  \"evidence_edges\": [\"G001-G002\", \"G001-G003\", \"G001-G004\", \"G001-G005\", \"G001-G006\", \"G001-G007\", \"G001-G008\", \"G001-G009\", \"G001-G010\", \"G001-G011\", \"G001-G012\", \"G001-G013\", \"G001-G014\", \"G001-G015\", \"G001-G016\", \"G001-G017\", \"G001-G018\", \"G001-G019\", \"G001-G020\", \"G002-G003\", \"G002-G00"
+              }
+            }
+          ],
+          "created": 1785960019,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 214,
+            "total_tokens": 598,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-zY2g2bHiXaawn6ardxuctNRtSk8q8u52",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 45,
+            "prompt_ms": 212.174,
+            "prompt_per_token_ms": 4.7149777777777775,
+            "prompt_per_second": 212.09007701226352,
+            "predicted_n": 384,
+            "predicted_ms": 11448.556,
+            "predicted_per_token_ms": 29.813947916666667,
+            "predicted_per_second": 33.54134792195627
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G021",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G021\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\"],\n  \"evidence_edges\": [\"G001-G002\", \"G001-G003\", \"G001-G004\", \"G001-G005\", \"G001-G006\", \"G001-G007\", \"G001-G008\", \"G001-G009\", \"G001-G010\", \"G001-G011\", \"G001-G012\", \"G001-G013\", \"G001-G014\", \"G001-G015\", \"G001-G016\", \"G001-G017\", \"G001-G018\", \"G001-G019\", \"G001-G020\", \"G002-G003\", \"G002-G00"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G022",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G022\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G022\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"keyword_cooccurrence\"],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the keyword_cooccurrence network is 'quantum_machine_learning_2019_2021:G022'.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960020,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 108,
+            "prompt_tokens": 224,
+            "total_tokens": 332,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-YwGbKOT7eLvoQZncdPhx3whg89hEvSlm",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 54,
+            "prompt_ms": 239.504,
+            "prompt_per_token_ms": 4.435259259259259,
+            "prompt_per_second": 225.46596299017972,
+            "predicted_n": 108,
+            "predicted_ms": 3281.941,
+            "predicted_per_token_ms": 30.38834259259259,
+            "predicted_per_second": 32.90735573857056
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G022",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "keyword_cooccurrence"
+          ],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the keyword_cooccurrence network is 'quantum_machine_learning_2019_2021:G022'."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G023",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G023\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G023\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quant"
+              }
+            }
+          ],
+          "created": 1785960031,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 214,
+            "total_tokens": 598,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-ibVehdRta07Ca5j5pB59Bb5WvUl6xLaF",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 44,
+            "prompt_ms": 211.266,
+            "prompt_per_token_ms": 4.8015,
+            "prompt_per_second": 208.26824950536292,
+            "predicted_n": 384,
+            "predicted_ms": 11410.57,
+            "predicted_per_token_ms": 29.715026041666665,
+            "predicted_per_second": 33.65300769374361
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G023",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G023\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quant"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:G024",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:G024\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G024\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quant"
+              }
+            }
+          ],
+          "created": 1785960031,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 225,
+            "total_tokens": 609,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-g5eSM7s0W2aSlnYfxmjdq77lXRzdVIv8",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 55,
+            "prompt_ms": 230.641,
+            "prompt_per_token_ms": 4.193472727272727,
+            "prompt_per_second": 238.46584085223358,
+            "predicted_n": 384,
+            "predicted_ms": 11446.897,
+            "predicted_per_token_ms": 29.809627604166668,
+            "predicted_per_second": 33.54620907307893
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:G024",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G024\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quant"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:U:bibliographic_coupling",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:U:bibliographic_coupling\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:U:bibliographic_coupling\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960034,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 90,
+            "prompt_tokens": 225,
+            "total_tokens": 315,
+            "prompt_tokens_details": {
+              "cached_tokens": 167
+            }
+          },
+          "id": "chatcmpl-QuU49EtjSaGhYGtFHtsnWW1UVM3W6zzd",
+          "timings": {
+            "cache_n": 167,
+            "prompt_n": 58,
+            "prompt_ms": 256.352,
+            "prompt_per_token_ms": 4.419862068965517,
+            "prompt_per_second": 226.2514043190613,
+            "predicted_n": 90,
+            "predicted_ms": 2964.423,
+            "predicted_per_token_ms": 32.93803333333333,
+            "predicted_per_second": 30.360039710931947
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:U:bibliographic_coupling",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:U:citation",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:U:citation\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:U:citation\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The citation network contains nodes representing publications and their citations.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960034,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 219,
+            "total_tokens": 295,
+            "prompt_tokens_details": {
+              "cached_tokens": 167
+            }
+          },
+          "id": "chatcmpl-ck7sTv0tmaVwXdEjCKSWb3wMG8MSH9k1",
+          "timings": {
+            "cache_n": 167,
+            "prompt_n": 52,
+            "prompt_ms": 236.78,
+            "prompt_per_token_ms": 4.553461538461539,
+            "prompt_per_second": 219.61314300194272,
+            "predicted_n": 76,
+            "predicted_ms": 2144.282,
+            "predicted_per_token_ms": 28.214236842105265,
+            "predicted_per_second": 35.443099368459926
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:U:citation",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The citation network contains nodes representing publications and their citations."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:U:coauthorship",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:U:coauthorship\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:U:coauthorship\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the coauthorship network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960037,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 88,
+            "prompt_tokens": 223,
+            "total_tokens": 311,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-NVPgFgrOrCcs43d98VBPZqq76vaS0hO3",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 55,
+            "prompt_ms": 233.056,
+            "prompt_per_token_ms": 4.237381818181818,
+            "prompt_per_second": 235.99478236990248,
+            "predicted_n": 88,
+            "predicted_ms": 2658.073,
+            "predicted_per_token_ms": 30.205375,
+            "predicted_per_second": 33.106690448305976
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:U:coauthorship",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the coauthorship network."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:U:cocitation",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:U:cocitation\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:U:cocitation\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [\"CiteWeave absent benchmark node\"],\n  \"evidence_edges\": [],\n  \"statement\": \"Which cluster contains the node 'CiteWeave absent benchmark node' in the cocitation network?\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960037,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 94,
+            "prompt_tokens": 221,
+            "total_tokens": 315,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-27W3yynPRNltp3frwFTjAZFp7ZbNfjl6",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 53,
+            "prompt_ms": 221.464,
+            "prompt_per_token_ms": 4.178566037735849,
+            "prompt_per_second": 239.31654806198753,
+            "predicted_n": 94,
+            "predicted_ms": 2850.985,
+            "predicted_per_token_ms": 30.32962765957447,
+            "predicted_per_second": 32.97106087895937
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:U:cocitation",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [
+            "CiteWeave absent benchmark node"
+          ],
+          "evidence_edges": [],
+          "statement": "Which cluster contains the node 'CiteWeave absent benchmark node' in the cocitation network?"
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:U:institution_collaboration",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:U:institution_collaboration\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:U:institution_collaboration\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960040,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 90,
+            "prompt_tokens": 225,
+            "total_tokens": 315,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-3Ene20RTlQpIYkok64oF6KAousBo2EOy",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 56,
+            "prompt_ms": 237.622,
+            "prompt_per_token_ms": 4.243250000000001,
+            "prompt_per_second": 235.66841454074114,
+            "predicted_n": 90,
+            "predicted_ms": 2782.549,
+            "predicted_per_token_ms": 30.91721111111111,
+            "predicted_per_second": 32.344443889397816
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:U:institution_collaboration",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network."
+        }
+      },
+      {
+        "item_id": "quantum_machine_learning_2019_2021:U:keyword_cooccurrence",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: quantum_machine_learning_2019_2021:U:keyword_cooccurrence\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:U:keyword_cooccurrence\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the keyword_cooccurrence network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785960040,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 90,
+            "prompt_tokens": 225,
+            "total_tokens": 315,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-rptCQ49chRk88vlgJR0id2A2wAyFl9JD",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 57,
+            "prompt_ms": 236.937,
+            "prompt_per_token_ms": 4.156789473684211,
+            "prompt_per_second": 240.57027817521114,
+            "predicted_n": 90,
+            "predicted_ms": 2546.84,
+            "predicted_per_token_ms": 28.298222222222225,
+            "predicted_per_second": 35.3379089381351
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "quantum_machine_learning_2019_2021:U:keyword_cooccurrence",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the keyword_cooccurrence network."
+        }
+      }
+    ]
+  },
+  "benchmark_version": 1,
+  "items": 30,
+  "predictions_received": 30,
+  "metrics": {
+    "exact_answer_accuracy": 0.2,
+    "schema_valid_rate": 0.2,
+    "unsupported_claim_rate": 1.0,
+    "structured_unsupported_answer_rate": 1.0,
+    "atomic_statement_precision": 0.0,
+    "statement_claim_coverage": 0.4583333333333333,
+    "format_failure_rate": 0.8,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 0.0,
+    "evidence_recall": 0.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "abstention_f1": 1.0
+  },
+  "counts": {
+    "correct": 6,
+    "answered": 24,
+    "incorrect_answered": 24,
+    "statement_claims": 11,
+    "unsupported_statement_claims": 11,
+    "evidence_tp": 0,
+    "evidence_fp": 32,
+    "evidence_fn": 167,
+    "evidence_path_eligible_answers": 24,
+    "abstention": {
+      "tn": 24,
+      "tp": 6
+    }
+  },
+  "by_task": {
+    "cluster_count": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_weighted_degree": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_edge": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G001",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G001",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\", \"G021\", \"G022\", \"G023\", \"G024\", \"G025\", \"G026\", \"G027\", \"G028\", \"G029\", \"G030\", \"G031\", \"G032\", \"G033\", \"G034\", \"G035\", \"G036\", \"G037\", \"G038\", \"G039\", \"G040\", \"G041\", \"G042\", \"G043\", \"G044\", \"G045\", \"G046\", \"G047\", \"G048\", \"G049\", \"G050\", \"G051\", \"G052\", \"G053\", \"G054\", \"G055\", \"G05"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G002",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G002",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the bibliographic_coupling network is 'quantum_machine_learning_2019_2021:G002'."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G003",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G003",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "quantum_machine_learning_2019_2021:G003",
+          "quantum_machine_learning_2019_2021:G002",
+          "quantum_machine_learning_2019_2021:G001"
+        ],
+        "evidence_edges": [
+          "quantum_machine_learning_2019_2021:G002",
+          "quantum_machine_learning_2019_2021:G001"
+        ],
+        "statement": "The bibliographic_coupling network is a cluster count of 3."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G004",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G004",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "quantum_machine_learning_2019:G001",
+          "quantum_machine_learning_2021:G002",
+          "quantum_machine_learning_2019:G003",
+          "quantum_machine_learning_2021:G004"
+        ],
+        "evidence_edges": [
+          "quantum_machine_learning_2019:G001",
+          "quantum_machine_learning_2021:G002",
+          "quantum_machine_learning_2019:G003",
+          "quantum_machine_learning_2021:G004"
+        ],
+        "statement": "The pair quantum_machine_learning_2019:G001 and quantum_machine_learning_2021:G002 has the strongest connection in the bibliographic_coupling network."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G005",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G005",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "quantum_machine_learning_2019_2021:G005",
+          "quantum_machine_learning_2019_2021:G004",
+          "quantum_machine_learning_2019_2021:G003",
+          "quantum_machine_learning_2019_2021:G002",
+          "quantum_machine_learning_2019_2021:G001"
+        ],
+        "evidence_edges": [
+          "quantum_machine_learning_2019_2021:G005",
+          "quantum_machine_learning_2019_2021:G004",
+          "quantum_machine_learning_2019_2021:G003",
+          "quantum_machine_learning_2019_2021:G002",
+          "quantum_machine_learning_2019_2021:G001"
+        ],
+        "statement": "The citation network has 5 nodes and 5 edges."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G006",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G006",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the citation network is 'quantum_machine_learning_2019_2021:G006'."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G007",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G007",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"statement\": \"The citation network is analyzed to detect clusters.\"\n"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G008",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G008",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G008\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G008\",\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021:G002\",\n    \"quantum_machine_learning_2019_2021:G001\"\n  ],\n  \"evidence_edges\": [\n    \"quantum_machine_learning_2019_2021:G008\",\n    \"quantum_machine_learning_2019_2021:G007\",\n    \"quantum_machine_learning_2019_2021:G006\",\n    \"quantum_machine_learning_2019_2021:G005\",\n    \"quantum_machine_learning_2019_2021:G004\",\n    \"quantum_machine_learning_2019_2021:G003\",\n    \"quantum_machine_learning_2019_2021"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G009",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G009",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G009\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\", \"G021\", \"G022\", \"G023\", \"G024\", \"G025\", \"G026\", \"G027\", \"G028\", \"G029\", \"G030\", \"G031\", \"G032\", \"G033\", \"G034\", \"G035\", \"G036\", \"G037\", \"G038\", \"G039\", \"G040\", \"G041\", \"G042\", \"G043\", \"G044\", \"G045\", \"G046\", \"G047\", \"G048\", \"G049\", \"G050\", \"G051\", \"G052\", \"G053\", \"G054\", \"G055\", \"G05"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G010",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G010",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "quantum_machine_learning_2019_2021:G010"
+        ],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the coauthorship network is quantum_machine_learning_2019_2021:G010."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G011",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G011",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quantum_machine_learning_2019_2021:G011\",\n    \"quant"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G012",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G012",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G012\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quantum_machine_learning_2019_2021:G012\",\n    \"quant"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G013",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G013",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019:G001\",\n    \"quantum_machine_learning_2021:G002\",\n    \"quantum_machine_learning_2019:G003\",\n    \"quantum_machine_learning_2021:G004\",\n    \"quantum_machine_learning_2019:G005\",\n    \"quantum_machine_learning_2021:G006\",\n    \"quantum_machine_learning_2019:G007\",\n    \"quantum_machine_learning_2021:G008\",\n    \"quantum_machine_learning_2019:G009\",\n    \"quantum_machine_learning_2021:G010\",\n    \"quantum_machine_learning_2019:G011\",\n    \"quantum_machine_learning_2021:G012\",\n    \"quantum_machine_learning_2019:G013\",\n    \"quantum_machine_learning_2021:G014\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G016\",\n    \"quantum_machine_learning_2019:G017\",\n    \"quantum_machine_learning_2021:G018\",\n    \"quantum_machine_learning_2019:G019\",\n    \"quantum_machine_learning_202"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G014",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G014",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the cocitation network is 'quantum_machine_learning_2019_2021:G014'."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G015",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G015",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quantum_machine_learning_2019_2021:G015\",\n    \"quant"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G016",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G016",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G015\",\n    \"quantum_machine_learning_2021:G017\",\n    \"quantum_machine_learning_2019:G016\",\n    \"quantum_machine_learning_202"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G017",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G017",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "institution_collaboration:G017"
+        ],
+        "evidence_edges": [
+          "institution_collaboration:G017"
+        ],
+        "statement": "The institution_collaboration network has 2 nodes and 2 edges."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G018",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G018",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the institution_collaboration network is G018."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G019",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G019",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "institution_collaboration",
+          "institution_collaboration:G019"
+        ],
+        "evidence_edges": [
+          "institution_collaboration:G019:institution_collaboration",
+          "institution_collaboration:G019:institution_collaboration:G019"
+        ],
+        "statement": "The institution_collaboration network is analyzed for clusters."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G020",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G020",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G020\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G020\",\n    \"quantum_machine_learning_2019_2021:G021\",\n    \"quantum_machine_learning_2019_2021:G022\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G025\",\n    \"quantum_machine_learning_2019_2021:G026\",\n    \"quantum_machine_learning_2019_2021:G027\",\n    \"quantum_machine_learning_2019_2021:G028\",\n    \"quantum_machine_learning_2019_2021:G029\",\n    \"quantum_machine_learning_2019_2021:G030\",\n    \"quantum_machine_learning_2019_2021:G031\",\n    \"quantum_machine_learning_2019_2021:G032\",\n    \"quantum_machine_learning_2019_2021:G033\",\n    \"quantum_machine_learning_2019_2021:G034\",\n    \"quant"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G021",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G021",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G021\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"G001\", \"G002\", \"G003\", \"G004\", \"G005\", \"G006\", \"G007\", \"G008\", \"G009\", \"G010\", \"G011\", \"G012\", \"G013\", \"G014\", \"G015\", \"G016\", \"G017\", \"G018\", \"G019\", \"G020\"],\n  \"evidence_edges\": [\"G001-G002\", \"G001-G003\", \"G001-G004\", \"G001-G005\", \"G001-G006\", \"G001-G007\", \"G001-G008\", \"G001-G009\", \"G001-G010\", \"G001-G011\", \"G001-G012\", \"G001-G013\", \"G001-G014\", \"G001-G015\", \"G001-G016\", \"G001-G017\", \"G001-G018\", \"G001-G019\", \"G001-G020\", \"G002-G003\", \"G002-G00"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G022",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G022",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "keyword_cooccurrence"
+        ],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the keyword_cooccurrence network is 'quantum_machine_learning_2019_2021:G022'."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G023",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G023",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G023\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quantum_machine_learning_2019_2021:G023\",\n    \"quant"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G024",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G024",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"quantum_machine_learning_2019_2021:G024\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quantum_machine_learning_2019_2021:G024\",\n    \"quant"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:bibliographic_coupling",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:bibliographic_coupling",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:citation",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:citation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The citation network contains nodes representing publications and their citations."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:coauthorship",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:coauthorship",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the coauthorship network."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:cocitation",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:cocitation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "CiteWeave absent benchmark node"
+        ],
+        "evidence_edges": [],
+        "statement": "Which cluster contains the node 'CiteWeave absent benchmark node' in the cocitation network?"
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:institution_collaboration",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:institution_collaboration",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:keyword_cooccurrence",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:keyword_cooccurrence",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the keyword_cooccurrence network."
+      }
+    }
+  ]
+}

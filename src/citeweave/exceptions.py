@@ -10,6 +10,10 @@ class AcquisitionError(CiteWeaveError):
     """A source could not be acquired completely."""
 
 
+class InvalidCursorError(AcquisitionError):
+    """A source explicitly rejected a persisted pagination cursor."""
+
+
 class CompletenessError(AcquisitionError):
     """The acquired record count does not satisfy the source contract."""
 

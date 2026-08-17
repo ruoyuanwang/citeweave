@@ -1,0 +1,12 @@
+{
+  "packet_id": "FP514fc44f8d8cadfd3488",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible evidence gives the stated display label and assigns that node to cluster 4, matching the answer and explanation.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:cluster",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

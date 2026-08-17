@@ -1,0 +1,15 @@
+{
+  "packet_id": "FPcf6e9f3393afe3222269",
+  "decision": "revise",
+  "confidence": 1.0,
+  "reason": "The abstention is supported by the visible evidence, but the answer contract requires the boolean true and the candidate uses the string \"true\". A one-span edit corrects the type.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "\"abstain\":\"true\"",
+    "replacement_text": "\"abstain\":true"
+  }
+}

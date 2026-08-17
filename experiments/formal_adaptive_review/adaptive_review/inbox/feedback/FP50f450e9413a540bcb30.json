@@ -1,0 +1,15 @@
+{
+  "packet_id": "FP50f450e9413a540bcb30",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible evidence identifies the stated labeled pair as the strongest displayed connection and gives its weight as 38.0.",
+  "evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbab109:label",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbad400:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

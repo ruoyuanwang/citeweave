@@ -1,0 +1,832 @@
+{
+  "condition": "no_context_forced_answer_stress_test",
+  "metadata": {
+    "dataset_id": "quantum_machine_learning_2019_2021",
+    "purpose": "Deterministic metric stress test; not an LLM ablation result."
+  },
+  "benchmark_version": 1,
+  "items": 30,
+  "predictions_received": 30,
+  "metrics": {
+    "exact_answer_accuracy": 0.0,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 1.0,
+    "structured_unsupported_answer_rate": 1.0,
+    "atomic_statement_precision": 0.0,
+    "statement_claim_coverage": 1.25,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 0.0,
+    "evidence_recall": 0.0,
+    "abstention_precision": 0.0,
+    "abstention_recall": 0.0,
+    "abstention_f1": 0.0
+  },
+  "counts": {
+    "correct": 0,
+    "answered": 30,
+    "incorrect_answered": 30,
+    "statement_claims": 30,
+    "unsupported_statement_claims": 30,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 167,
+    "evidence_path_eligible_answers": 30,
+    "abstention": {
+      "tn": 24,
+      "fp": 6
+    }
+  },
+  "by_task": {
+    "cluster_count": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_weighted_degree": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_edge": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G001",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G001",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "edges": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G002",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G002",
+        "abstain": false,
+        "answer": {
+          "id": "unknown",
+          "weighted_degree": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G003",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G003",
+        "abstain": false,
+        "answer": {
+          "clusters": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G004",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G004",
+        "abstain": false,
+        "answer": {
+          "source": "unknown",
+          "target": "unknown",
+          "weight": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G005",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G005",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "edges": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G006",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G006",
+        "abstain": false,
+        "answer": {
+          "id": "unknown",
+          "weighted_degree": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G007",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G007",
+        "abstain": false,
+        "answer": {
+          "clusters": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G008",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G008",
+        "abstain": false,
+        "answer": {
+          "source": "unknown",
+          "target": "unknown",
+          "weight": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G009",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G009",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "edges": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G010",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G010",
+        "abstain": false,
+        "answer": {
+          "id": "unknown",
+          "weighted_degree": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G011",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G011",
+        "abstain": false,
+        "answer": {
+          "clusters": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G012",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G012",
+        "abstain": false,
+        "answer": {
+          "source": "unknown",
+          "target": "unknown",
+          "weight": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G013",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G013",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "edges": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G014",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G014",
+        "abstain": false,
+        "answer": {
+          "id": "unknown",
+          "weighted_degree": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G015",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G015",
+        "abstain": false,
+        "answer": {
+          "clusters": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G016",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G016",
+        "abstain": false,
+        "answer": {
+          "source": "unknown",
+          "target": "unknown",
+          "weight": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G017",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G017",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "edges": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G018",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G018",
+        "abstain": false,
+        "answer": {
+          "id": "unknown",
+          "weighted_degree": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G019",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G019",
+        "abstain": false,
+        "answer": {
+          "clusters": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G020",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G020",
+        "abstain": false,
+        "answer": {
+          "source": "unknown",
+          "target": "unknown",
+          "weight": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G021",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G021",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "edges": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G022",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G022",
+        "abstain": false,
+        "answer": {
+          "id": "unknown",
+          "weighted_degree": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G023",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G023",
+        "abstain": false,
+        "answer": {
+          "clusters": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:G024",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:G024",
+        "abstain": false,
+        "answer": {
+          "source": "unknown",
+          "target": "unknown",
+          "weight": 0
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:bibliographic_coupling",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:bibliographic_coupling",
+        "abstain": false,
+        "answer": {
+          "cluster": "unknown",
+          "node": "CiteWeave absent benchmark node"
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:citation",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:citation",
+        "abstain": false,
+        "answer": {
+          "cluster": "unknown",
+          "node": "CiteWeave absent benchmark node"
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:coauthorship",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:coauthorship",
+        "abstain": false,
+        "answer": {
+          "cluster": "unknown",
+          "node": "CiteWeave absent benchmark node"
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:cocitation",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:cocitation",
+        "abstain": false,
+        "answer": {
+          "cluster": "unknown",
+          "node": "CiteWeave absent benchmark node"
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:institution_collaboration",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:institution_collaboration",
+        "abstain": false,
+        "answer": {
+          "cluster": "unknown",
+          "node": "CiteWeave absent benchmark node"
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    },
+    {
+      "item_id": "quantum_machine_learning_2019_2021:U:keyword_cooccurrence",
+      "dataset_id": "quantum_machine_learning_2019_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "quantum_machine_learning_2019_2021:U:keyword_cooccurrence",
+        "abstain": false,
+        "answer": {
+          "cluster": "unknown",
+          "node": "CiteWeave absent benchmark node"
+        },
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "An answer was forced without graph context."
+      }
+    }
+  ]
+}

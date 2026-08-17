@@ -13,7 +13,7 @@ from typing import Any
 
 import httpx
 
-from ..exceptions import AcquisitionError
+from ..exceptions import AcquisitionError, InvalidCursorError
 from ..io import atomic_write_bytes, sha256_bytes
 from ..models import AcquisitionManifest, SearchProtocol
 
@@ -77,6 +77,14 @@ class BaseConnector(ABC):
                 self._pace()
                 self.request_attempts += 1
                 response = self.client.get(url, params=params, headers=headers)
+                if (
+                    response.status_code == 429
+                    and "insufficient budget" in response.text.casefold()
+                ):
+                    raise AcquisitionError(
+                        f"{self.source_name} API budget is exhausted; the harvest checkpoint "
+                        "is preserved and can be resumed after quota or credentials are restored."
+                    )
                 if response.status_code == 429 or response.status_code >= 500:
                     last_error = AcquisitionError(
                         f"HTTP {response.status_code}: {response.text[:300]}"
@@ -92,6 +100,36 @@ class BaseConnector(ABC):
                     self.retry_count += 1
                     time.sleep(delay)
                     continue
+                if (
+                    self.source_name.casefold() == "openalex"
+                    and response.status_code in {400, 410}
+                ):
+                    try:
+                        error_payload = response.json()
+                    except ValueError:
+                        error_payload = {}
+                    if isinstance(error_payload, dict):
+                        error_text = " ".join(
+                            str(error_payload.get(key) or "")
+                            for key in ("error", "message", "detail")
+                        )
+                    else:
+                        error_text = ""
+                    error_text = f"{error_text} {response.text[:500]}".casefold()
+                    explicit_invalid_cursor = "cursor" in error_text and any(
+                        marker in error_text
+                        for marker in (
+                            "invalid",
+                            "expired",
+                            "malformed",
+                            "not valid",
+                            "could not decode",
+                        )
+                    )
+                    if explicit_invalid_cursor:
+                        raise InvalidCursorError(
+                            "OpenAlex explicitly rejected the saved cursor as invalid or expired."
+                        )
                 response.raise_for_status()
                 return response.json()
             except (httpx.HTTPError, ValueError) as exc:

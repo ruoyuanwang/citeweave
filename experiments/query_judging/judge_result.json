@@ -1,0 +1,48 @@
+{
+  "decisions": [
+    {
+      "decision": "reject",
+      "id": "gnn_drug_discovery_2017_2023",
+      "reason": "Requiring molecular property prediction makes the all-mode query too narrow for the broader topic of GNNs in drug discovery."
+    },
+    {
+      "decision": "accept",
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "reason": "The phrases form an unambiguous, topically valid intersection of CRISPR, extracellular vesicles, and gene editing."
+    },
+    {
+      "decision": "reject",
+      "id": "machine_learning_climate_change_2008_2022",
+      "reason": "Requiring climate modeling excludes substantial climate-change applications such as impacts, adaptation, and mitigation."
+    },
+    {
+      "decision": "reject",
+      "id": "climate_change_risks_1990_2021",
+      "reason": "Requiring both risk assessment and vulnerability is too restrictive for the broad topic of climate-change risks."
+    },
+    {
+      "decision": "reject",
+      "id": "digital_twins_healthcare_2012_2024",
+      "reason": "Requiring personalized medicine excludes many valid healthcare digital-twin applications."
+    },
+    {
+      "decision": "accept",
+      "id": "plant_heat_drought_2008_2021",
+      "reason": "The phrases clearly target plant responses to the combined heat and drought stresses without an obvious homonym."
+    },
+    {
+      "decision": "reject",
+      "id": "gene_editing_als_2004_2024",
+      "reason": "Requiring CRISPR excludes non-CRISPR gene-editing approaches relevant to ALS."
+    },
+    {
+      "decision": "reject",
+      "id": "global_microplastics_2004_2019",
+      "reason": "Requiring marine pollution and environmental contamination excludes major non-marine and health-related microplastics research."
+    }
+  ],
+  "judge_role": "codex_query_judge",
+  "packet_sha256": "d4fac7d47e86a0e2f2ce93c0864176db05803c889318866271f93f5ccf85967a",
+  "prompt_sha256": "515dd247c02f9ca5ad9dacd18ce2f93afb1686dd67bdfdb3cab75bf390f43694",
+  "rubric_version": "query-judge-v1"
+}

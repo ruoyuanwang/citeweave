@@ -1,0 +1,143 @@
+{
+  "condition": "graph_rag",
+  "metadata": {
+    "dataset_id": "rag_graph_2022_2025",
+    "model": "qwen2.5-1.5b-q4km",
+    "base_url": "http://127.0.0.1:8091/v1",
+    "temperature": 0.0,
+    "items": 1,
+    "raw_records": [
+      {
+        "item_id": "rag_graph_2022_2025:G001",
+        "condition": "graph_rag",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G001\nQUESTION: How many nodes and edges are in the bibliographic_coupling network?\nGRAPH_CONTEXT:\n{\"retrieved_graph_facts\": [{\"fact_id\": \"G001\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"network_size\", \"statement\": \"The bibliographic coupling network contains 112 nodes and 3838 edges.\", \"value\": {\"nodes\": 112, \"edges\": 3838}, \"evidence_nodes\": [\"fact:G001\", \"network:bibliographic_coupling\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G002\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"highest_weighted_degree\", \"statement\": \"Graph Retrieval-Augmented Generation: A Survey has the highest weighted degree in the bibliographic coupling network.\", \"value\": {\"id\": \"doi:10.1145/3777378\", \"label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"weighted_degree\": 201.0, \"cluster\": 2}, \"evidence_nodes\": [\"fact:G002\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G003\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"cluster_count\", \"statement\": \"The bibliographic coupling network contains 5 detected clusters.\", \"value\": {\"clusters\": 5, \"cluster_ids\": [1, 2, 3, 4, 5]}, \"evidence_nodes\": [\"fact:G003\", \"network:bibliographic_coupling\", \"cluster:bibliographic_coupling:1\", \"cluster:bibliographic_coupling:2\", \"cluster:bibliographic_coupling:3\", \"cluster:bibliographic_coupling:4\", \"cluster:bibliographic_coupling:5\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G004\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"strongest_edge\", \"statement\": \"The strongest observed bibliographic coupling connection is between Graph Retrieval-Augmented Generation: A Survey and Review of Graph Retrieval-Augmented Generation Research, with weight 25.\", \"value\": {\"source\": \"doi:10.1145/3777378\", \"source_label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"target\": \"doi:10.12677/airr.2025.142040\", \"target_label\": \"Review of Graph Retrieval-Augmented Generation Research\", \"weight\": 25.0, \"association_strength\": 0.004528985507246377}, \"evidence_nodes\": [\"fact:G004\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\", \"work:doi:10.12677/airr.2025.142040\"], \"evidence_edges\": [\"edge:bibliographic_coupling:work:doi:10.1145/3777378|work:doi:10.12677/airr.2025.142040\"], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}]}"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"item_id\": \"rag_graph_2022_2025:G001\", \"abstain\": false, \"answer\": null, \"evidence_nodes\": [\"fact:G001\", \"network:bibliographic_coupling\"], \"evidence_edges\": [], \"statement\": \"The bibliographic coupling network contains 112 nodes and 3838 edges.\"}"
+              }
+            }
+          ],
+          "created": 1785958418,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 87,
+            "prompt_tokens": 966,
+            "total_tokens": 1053,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "id": "chatcmpl-KtrnKds22DaN1GIstQiplS8M0icM4O9t",
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 966,
+            "prompt_ms": 3009.994,
+            "prompt_per_token_ms": 3.1159358178053833,
+            "prompt_per_second": 320.93087228745304,
+            "predicted_n": 87,
+            "predicted_ms": 2486.468,
+            "predicted_per_token_ms": 28.580091954022986,
+            "predicted_per_second": 34.98939057329513
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G001",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "fact:G001",
+            "network:bibliographic_coupling"
+          ],
+          "evidence_edges": [],
+          "statement": "The bibliographic coupling network contains 112 nodes and 3838 edges."
+        }
+      }
+    ]
+  },
+  "benchmark_version": 1,
+  "items": 1,
+  "predictions_received": 1,
+  "metrics": {
+    "exact_answer_accuracy": 0.0,
+    "schema_valid_rate": 0.0,
+    "unsupported_claim_rate": 1.0,
+    "evidence_path_validity": 1.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 0.0,
+    "abstention_recall": 0.0,
+    "abstention_f1": 0.0
+  },
+  "counts": {
+    "correct": 0,
+    "answered": 1,
+    "incorrect_answered": 1,
+    "evidence_tp": 2,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 1,
+    "abstention": {
+      "tn": 1
+    }
+  },
+  "by_task": {
+    "network_size": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 1.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 1.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "rag_graph_2022_2025:G001",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": true,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G001",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "fact:G001",
+          "network:bibliographic_coupling"
+        ],
+        "evidence_edges": [],
+        "statement": "The bibliographic coupling network contains 112 nodes and 3838 edges."
+      }
+    }
+  ]
+}

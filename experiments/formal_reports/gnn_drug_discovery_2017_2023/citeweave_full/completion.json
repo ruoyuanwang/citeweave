@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "dataset_id": "gnn_drug_discovery_2017_2023",
+  "condition": "citeweave_full",
+  "evidence_sha256": "1693b0a2b9302f0456d9bdf2ed92ca83f16acf4abfc4da368eb404a4cfb6f288",
+  "report_sha256": "89fa0f030b7ae6386f0c06daf8468696342f53cba0cfc88672ee422a3134fc66",
+  "call_count": 4,
+  "model": "deepseek-v4-pro",
+  "temperature": 0.1,
+  "seed": 42,
+  "report_language": "English",
+  "internal_review_used_as_experimental_evaluation": false
+}

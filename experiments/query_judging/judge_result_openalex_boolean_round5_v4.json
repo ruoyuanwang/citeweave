@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v4",
+  "prompt_sha256": "abd049df349329135d89a32b7b3110cb9830ef1ec046e0fc4a7a35ddfdb75f07",
+  "packet_sha256": "aeffc02472a76f8d48b628654368491d8459ce39e01511f6a969036f28225b3c",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "The query uses explicit, unambiguous graph-neural-network phrases and a relevant, sufficiently broad drug-discovery concept block."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "accept",
+      "reason": "Distinctive CRISPR/Cas terms are combined with recognized extracellular-vesicle names, keeping the retrieval topically anchored."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The two required concept blocks cover established machine-learning methods and climate-change terminology without an obvious homonym."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "The exact climate-change anchor constrains the broad but topic-valid set of risk, vulnerability, impact, threat, and hazard terms."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "The distinctive digital-twin phrase is required alongside inclusive healthcare and clinical terms, yielding a focused source contract."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "Requiring a plant concept plus both heat and drought blocks accurately captures combined-stress research with no obvious homonym."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "reject",
+      "reason": "The quoted acronym \"ALS\" remains ambiguous, notably with acetolactate synthase in CRISPR and gene-editing literature, creating clear off-topic retrieval."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "Microplastics is an unambiguous field term, and the lack of a geographic filter correctly represents a global mapping topic."
+    }
+  ]
+}

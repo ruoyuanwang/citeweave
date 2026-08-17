@@ -239,6 +239,7 @@ def _run_metadata(
             "year_from": config.protocol.year_from,
             "year_to": config.protocol.year_to,
             "source": config.protocol.source.value,
+            "query_contract": config.protocol.model_dump(mode="json"),
         },
         "parameters": {
             "chunk_size": chunk_size,
@@ -1445,8 +1446,7 @@ def process_large_metadata(
                 old_parameters = existing_contract.get("parameters") or {}
                 new_parameters = run_contract["parameters"]
                 output_contract_changed = (
-                    old_protocol.get("year_from") != new_protocol["year_from"]
-                    or old_protocol.get("year_to") != new_protocol["year_to"]
+                    old_protocol != new_protocol
                     or old_parameters.get("candidate_pool_size")
                     != new_parameters["candidate_pool_size"]
                     or old_parameters.get("edge_row_limit") != new_parameters["edge_row_limit"]

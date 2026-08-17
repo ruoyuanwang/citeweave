@@ -1,0 +1,13 @@
+{
+  "idempotent_replay": false,
+  "imported": {
+    "all_consistent": true,
+    "archive_manifest_sha256": "0e5107136f17594aba532a7673dcc048d845ede4ad8122c12e8c5235a1c0cb61",
+    "packets": 48,
+    "semantic_audit_sha256": "304592a717936d60dd5793244f7b502877228427a1fafb51bc848d0c08b68bca"
+  },
+  "protocol_version": "adaptive-original-semantic-assignment-v1",
+  "schema_version": 1,
+  "status": "imported",
+  "validated_results_manifest_sha256": "a9328d69cd0bf5520705fdf50d7d13ab71ae93b7c4cc99d523486f62d2d0464b"
+}

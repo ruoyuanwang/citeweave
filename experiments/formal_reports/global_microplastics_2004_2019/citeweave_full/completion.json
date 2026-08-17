@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "dataset_id": "global_microplastics_2004_2019",
+  "condition": "citeweave_full",
+  "evidence_sha256": "bca91a8370a19ce560780e7d22ff9844fcb285c32037866b8dab6cdf76c26aba",
+  "report_sha256": "214925ce456d46383715049112dc89385a70d579ada304d514f5af15dcef4873",
+  "call_count": 4,
+  "model": "deepseek-v4-pro",
+  "temperature": 0.1,
+  "seed": 42,
+  "report_language": "English",
+  "internal_review_used_as_experimental_evaluation": false
+}

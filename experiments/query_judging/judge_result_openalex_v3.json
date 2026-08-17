@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v3",
+  "prompt_sha256": "85cc2c8f23f0456a25ec2f6a66c6ea854a914e35c3a888a184ca4781fc1624f0",
+  "packet_sha256": "fc4ee966522cac0860bb43c0ecf04bcaf82003dd97777022c0e6e590b9a854a6",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "The two phrases denote the central, unambiguous concepts and their conjunction is broad enough to cover GNN applications across drug discovery."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "accept",
+      "reason": "CRISPR and extracellular vesicles are unambiguous concepts whose conjunction directly and inclusively represents the stated association."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The two broad, unambiguous concepts directly cover machine-learning applications throughout climate-change research without imposing a narrower application."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "Although risk is broad, conjunction with climate change keeps the query topical while inclusively covering the requested range of climate risks."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "Digital twin and healthcare are clear concepts whose conjunction matches the topic without restricting it to one clinical application; the explicit 2012–2023 protocol range is valid."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "reject",
+      "reason": "Requiring the additional exact phrase plant response makes the three-way AND unnecessarily restrictive and can omit relevant plant heat-and-drought studies framed as physiology, tolerance, crops, or adaptation."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "accept",
+      "reason": "Gene editing and the fully spelled disease name are unambiguous and inclusive of multiple editing techniques; the explicit 2004–2023 protocol range is valid."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "Microplastics is an unambiguous field term, and for a global mapping topic the absence of a geographic filter is appropriately inclusive."
+    }
+  ]
+}

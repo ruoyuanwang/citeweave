@@ -1,0 +1,38 @@
+{
+  "packet_id": "EPd471f88634b40070107f",
+  "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:false_premise:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "abstain": "true"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:absent_target"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:absent_target",
+          "network": "bibliographic_coupling",
+          "object": false,
+          "object_type": "boolean",
+          "predicate": "contains_visible_label",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "4dc1c20ea265bfd424786d0da27cab7841e52ed8bf9b5feb536947ba1ff8ed0e"
+    },
+    "question": "Which cluster contains 'CiteWeave absent benchmark node' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":true,\"answer\":\"\",\"explanation\":\"The question asks about a node labeled 'CiteWeave absent benchmark node', but the context states that the requested label is not visible in the bibliographic coupling network (contains_visible_label is false). Since the node is not present in the network, the premise is false, and the question cannot be answered.\",\"item_id\":\"crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:false_premise\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "content_sha256": "f3cf34c5dd05d748e2bb7e12574bb41884f9a4704d235a48fc134d5a1b27f0e3"
+}

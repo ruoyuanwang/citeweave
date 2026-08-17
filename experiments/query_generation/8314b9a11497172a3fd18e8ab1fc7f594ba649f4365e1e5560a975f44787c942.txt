@@ -1,0 +1,9 @@
+{
+  "queries": [
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "keywords": ["CRISPR", "extracellular vesicles"],
+      "rationale": "Removed 'gene editing' to avoid excluding CRISPR-related extracellular vesicle work on delivery, detection, or other associated technologies."
+    }
+  ]
+}

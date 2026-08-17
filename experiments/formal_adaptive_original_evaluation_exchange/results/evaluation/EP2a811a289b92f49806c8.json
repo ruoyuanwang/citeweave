@@ -1,0 +1,1 @@
+{"packet_id":"EP2a811a289b92f49806c8","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The candidate reports exactly 72 displayed nodes and 230 displayed links in the required fields.","evidence_ids":["bibliographic_coupling:fact:edge_count","bibliographic_coupling:fact:node_count"]}

@@ -1,0 +1,504 @@
+schema_version: '1.0'
+status: frozen
+generated_at: '2026-08-06T06:41:02.605348+00:00'
+human_reference_registry_sha256: 280eedb52fcf76055d2343c646f63c4143f79bea7c11d6399b4dc533eb8461bf
+generator:
+  started_at: '2026-08-06T05:36:25.472803+00:00'
+  finished_at: '2026-08-06T05:36:32.843738+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  prompt_sha256: af74e2b823e619e40c20c545baf406a58fa55e8539e25cff8fc5008f87201e5a
+  request_sha256: 37550374f47e76c6fc8b1164915cb58caaa3691a0d70b1601d3accac01f35bdc
+  response_sha256: 9b78cb2c6e7396de00aac38e3ed431d926aca35f17ea28066caf5aab600b48a5
+  usage:
+    prompt_tokens: 551
+    completion_tokens: 479
+    total_tokens: 1030
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 551
+  response_id: 4593313c-8226-4dcf-a158-66190ac29e9d
+  response_archive: experiments/query_generation/9b78cb2c6e7396de00aac38e3ed431d926aca35f17ea28066caf5aab600b48a5.txt
+full_data_definition: All OpenAlex works matching the frozen Boolean expression in
+  bibliographic title or abstract metadata and the complete natural-year interval
+  are exhaustively cursor-paginated; all unique OpenAlex work identities are retained
+  in the analysis corpus.
+datasets:
+- id: gnn_drug_discovery_2017_2023
+  role: development
+  topic: Graph neural networks for drug discovery
+  human_reference_id: gnn_drug_discovery_2017_2023
+  source: openalex
+  title: 'Independent full-year OpenAlex title-and-abstract Boolean census: Graph
+    neural networks for drug discovery'
+  keywords:
+  - graph neural networks
+  - drug discovery
+  query_mode: all
+  year_from: 2017
+  year_to: 2023
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Removed the ambiguous acronym GNN while retaining all explicit
+    graph neural network variants and drug discovery terms to ensure precision without
+    losing recall.
+  query_status: frozen
+  search_expression: ("graph neural network" OR "graph convolutional network" OR "graph
+    attention network" OR "message passing neural network" OR "graph isomorphism network")
+    AND ("drug discovery" OR "drug design" OR "drug development" OR "drug repurposing"
+    OR "molecular property prediction" OR "virtual screening" OR "de novo drug design"
+    OR "lead optimization")
+  search_scope: title_abstract
+  query_sha256: 3a23b403ff34da07630cd45c6aa74de1791340f4ce88105e305019a36ce36f2c
+- id: crispr_extracellular_vesicles_2015_2022
+  role: development
+  topic: CRISPR-related technologies associated with extracellular vesicles
+  human_reference_id: crispr_extracellular_vesicles_2015_2022
+  source: openalex
+  title: 'Independent full-year OpenAlex title-and-abstract Boolean census: CRISPR-related
+    technologies associated with extracellular vesicles'
+  keywords:
+  - CRISPR
+  - extracellular vesicles
+  query_mode: all
+  year_from: 2015
+  year_to: 2022
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Replaced generic 'gene editing' and 'genome editing' with CRISPR-specific
+    terms to ensure only CRISPR-related technologies are retrieved.
+  query_status: frozen
+  search_expression: (CRISPR OR "clustered regularly interspaced short palindromic
+    repeats" OR Cas9 OR Cas12 OR Cas13 OR "CRISPR-Cas" OR "CRISPR/Cas" OR "CRISPR
+    associated" OR "CRISPR-based" OR "CRISPR-mediated") AND ("extracellular vesicle"
+    OR "extracellular vesicles" OR exosome OR "exosome-like" OR microvesicle OR "outer
+    membrane vesicle" OR "apoptotic body")
+  search_scope: title_abstract
+  query_sha256: 325826d30837052fa65682166b7f72d6b98a10e9eebaec278ef2727b14730c90
+- id: machine_learning_climate_change_2008_2022
+  role: locked
+  topic: Machine learning applications in climate change research
+  human_reference_id: machine_learning_climate_change_2008_2022
+  source: openalex
+  title: 'Independent full-year OpenAlex title-and-abstract Boolean census: Machine
+    learning applications in climate change research'
+  keywords:
+  - machine learning
+  - climate change
+  query_mode: all
+  year_from: 2008
+  year_to: 2022
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Broadens machine learning to include major subfields and climate
+    change to encompass related terms, improving recall without losing focus.
+  query_status: frozen
+  search_expression: ("machine learning" OR "deep learning" OR "artificial intelligence"
+    OR "neural network" OR "random forest" OR "support vector machine" OR "gradient
+    boosting" OR "reinforcement learning") AND ("climate change" OR "global warming"
+    OR "climate variability" OR "climate adaptation" OR "climate mitigation" OR "greenhouse
+    gas" OR "carbon emission" OR "climate model")
+  search_scope: title_abstract
+  query_sha256: 325b4d63c2dc393b9b7c95d2655e2965162d73ecd278ea19d0b27b7b407d9ac8
+- id: climate_change_risks_1990_2021
+  role: locked
+  topic: Climate change risks
+  human_reference_id: climate_change_risks_1990_2021
+  source: openalex
+  title: 'Independent full-year OpenAlex title-and-abstract Boolean census: Climate
+    change risks'
+  keywords:
+  - climate change risk assessment
+  query_mode: all
+  year_from: 1990
+  year_to: 2021
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Broadens beyond 'risk assessment' to capture diverse risk-related
+    studies by requiring 'climate change' and any risk-related term.
+  query_status: frozen
+  search_expression: '"climate change" AND (risk OR risks OR vulnerability OR impact
+    OR threat OR hazard OR "risk assessment" OR "vulnerability assessment")'
+  search_scope: title_abstract
+  query_sha256: 7bae754c4ac6979181e4f3351d9917a5a3c09b90f7148d17cf6c19cdbde41d74
+- id: digital_twins_healthcare_2012_2024
+  role: locked
+  topic: Digital twins in healthcare
+  human_reference_id: digital_twins_healthcare_2012_2024
+  source: openalex
+  title: 'Independent full-year OpenAlex title-and-abstract Boolean census: Digital
+    twins in healthcare'
+  keywords:
+  - digital twin
+  - healthcare
+  query_mode: all
+  year_from: 2012
+  year_to: 2023
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Adds common healthcare synonyms and related terms to capture the
+    full breadth of medical applications of digital twins.
+  query_status: frozen
+  search_expression: '"digital twin" AND (healthcare OR "health care" OR medical OR
+    clinical OR medicine OR patient OR hospital OR "personalized medicine" OR "precision
+    medicine")'
+  search_scope: title_abstract
+  query_sha256: f604e303c649b1fe051bdfe158de0dd13bdced2ba724149cb8fba6ab1a1f79db
+- id: plant_heat_drought_2008_2021
+  role: locked
+  topic: Plant responses to high temperature and drought
+  human_reference_id: plant_heat_drought_2008_2021
+  source: openalex
+  title: 'Independent full-year OpenAlex title-and-abstract Boolean census: Plant
+    responses to high temperature and drought'
+  keywords:
+  - heat stress
+  - drought stress
+  query_mode: all
+  year_from: 2008
+  year_to: 2021
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Ensures plant focus by requiring a plant term and both heat and
+    drought stress concepts.
+  query_status: frozen
+  search_expression: (plant OR plants OR crop OR crops OR vegetation) AND ("heat stress"
+    OR "high temperature" OR "heat tolerance" OR "heat shock") AND ("drought stress"
+    OR "water deficit" OR "drought tolerance" OR "water stress")
+  search_scope: title_abstract
+  query_sha256: f5e6fca85ef70de557847932ad9a7655af4626b04d3dcab0dc96a85a96cb56e3
+- id: gene_editing_als_2004_2024
+  role: locked
+  topic: Gene editing and amyotrophic lateral sclerosis
+  human_reference_id: gene_editing_als_2004_2024
+  source: openalex
+  title: 'Independent full-year OpenAlex title-and-abstract Boolean census: Gene editing
+    and amyotrophic lateral sclerosis'
+  keywords:
+  - gene editing
+  - amyotrophic lateral sclerosis
+  query_mode: all
+  year_from: 2004
+  year_to: 2023
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Disambiguates ALS by requiring co-occurrence with motor neuron
+    disease terms or known ALS genes when the acronym is used.
+  query_status: frozen
+  search_expression: ("gene editing" OR "genome editing" OR CRISPR OR "base editing"
+    OR "prime editing" OR "zinc finger nuclease" OR TALEN) AND ("amyotrophic lateral
+    sclerosis" OR "Lou Gehrig's disease" OR ("ALS" AND ("motor neuron" OR "neurodegenerative"
+    OR "SOD1" OR "TDP-43" OR "FUS" OR "C9orf72")))
+  search_scope: title_abstract
+  query_sha256: 5063a45311a308516d056b7c70493cb04ca296a740a3e77a548fe326a8e3c13a
+- id: global_microplastics_2004_2019
+  role: locked
+  topic: Global microplastics research
+  human_reference_id: global_microplastics_2004_2019
+  source: openalex
+  title: 'Independent full-year OpenAlex title-and-abstract Boolean census: Global
+    microplastics research'
+  keywords:
+  - microplastics
+  query_mode: all
+  year_from: 2004
+  year_to: 2019
+  document_types:
+  - article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Used only 'microplastics' as it is an unambiguous single concept,
+    removing restrictive terms like 'marine pollution'.
+  query_status: frozen
+  search_scope: title_abstract
+  query_sha256: c75cdb5df7bc4291e5feb8fe0ea3283fd023aa749c0c86fcf33c3e0200292a3c
+revision_history:
+- round: 1
+  started_at: '2026-08-06T05:40:12.939394+00:00'
+  finished_at: '2026-08-06T05:40:18.392316+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: e60e3d1a7f17f3d1f57e980d2a0ac6d680c25d3cc0e3ab14715365492a781b31
+  judgment_sha256: ad199e82e6f3586ebe06824907486fd351f3042650c4499be5658e7762ebdf78
+  judge_packet_sha256: d4fac7d47e86a0e2f2ce93c0864176db05803c889318866271f93f5ccf85967a
+  revised_ids:
+  - climate_change_risks_1990_2021
+  - digital_twins_healthcare_2012_2024
+  - gene_editing_als_2004_2024
+  - global_microplastics_2004_2019
+  - gnn_drug_discovery_2017_2023
+  - machine_learning_climate_change_2008_2022
+  prompt_sha256: fe8ae1cd3ffe22bec308f6cb24111e7466accf21b366aaf16c53b783a9f89bd0
+  request_sha256: bc1b197cb1402ca1fe17a7293a8abe9aab64dc33288659d9db5cb61fbb9164c2
+  response_sha256: 3b583fef85fa4bf5a7c1be8ac1375db4e3d3c9e3d518d5dc955ebc9a5b82e1fe
+  response_archive: experiments/query_generation/3b583fef85fa4bf5a7c1be8ac1375db4e3d3c9e3d518d5dc955ebc9a5b82e1fe.txt
+  usage:
+    prompt_tokens: 690
+    completion_tokens: 377
+    total_tokens: 1067
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 690
+  response_id: c543a174-abda-490f-95c6-5bb85b414019
+- round: 2
+  started_at: '2026-08-06T05:43:32.370863+00:00'
+  finished_at: '2026-08-06T05:43:34.948246+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: 98bbfde753d68bac239120a62378651b0c45da61c9d5747563c7eca19d755367
+  judgment_sha256: 7690ed98bf8c10016e1086dbec9f9716cb50c3d0d0beca356bf5f2845401295a
+  judge_packet_sha256: df92b7a3c2e82c924edb8300a63116c637938517f20bf97e4f8630eab925a248
+  revised_ids:
+  - crispr_extracellular_vesicles_2015_2022
+  prompt_sha256: fe8ae1cd3ffe22bec308f6cb24111e7466accf21b366aaf16c53b783a9f89bd0
+  request_sha256: 82a479046e0e884e305c92bc92a146d880b6477243c9a58188d5d131ca92cad1
+  response_sha256: 8314b9a11497172a3fd18e8ab1fc7f594ba649f4365e1e5560a975f44787c942
+  response_archive: experiments/query_generation/8314b9a11497172a3fd18e8ab1fc7f594ba649f4365e1e5560a975f44787c942.txt
+  usage:
+    prompt_tokens: 347
+    completion_tokens: 78
+    total_tokens: 425
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 347
+  response_id: 2b76dc7e-6ea9-404e-9e94-07500b7bd0b1
+- round: 3
+  started_at: '2026-08-06T06:00:21.238497+00:00'
+  finished_at: '2026-08-06T06:00:24.687918+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: df5e178cc2b8026980224b9f04af2ec9c04a97ad03b77a3907f535a980c21e9e
+  judgment_sha256: 37c67da6341253b71a372abb741637987ce42431b789eea11c246d1981b4cdb8
+  judge_packet_sha256: fc4ee966522cac0860bb43c0ecf04bcaf82003dd97777022c0e6e590b9a854a6
+  revised_ids:
+  - plant_heat_drought_2008_2021
+  prompt_sha256: 6fc17496ab6d1db50c9cdb7ae54df59f9cff5d5882565561373f034335fab48e
+  request_sha256: 64e4bdfb8d9f92f80547586411ee7a1de6c246da7da4914e3c44907ce799208d
+  response_sha256: 1ba12b2f3c8378fca8e34b75edb58ce9542f6d3e7734f447e61d597228f7aa9a
+  response_archive: experiments/query_generation/1ba12b2f3c8378fca8e34b75edb58ce9542f6d3e7734f447e61d597228f7aa9a.txt
+  usage:
+    prompt_tokens: 364
+    completion_tokens: 77
+    total_tokens: 441
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 364
+  response_id: 2d631367-ba4e-4f84-aa80-6275ee17ce1f
+- round: 4
+  started_at: '2026-08-06T06:02:44.533613+00:00'
+  finished_at: '2026-08-06T06:02:48.305555+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: ba6d1b45b86bd9024bbab847a85d856196130cc77f644986d0a38b6cee7a72ab
+  judgment_sha256: 013226d5b5b0774dfef26b5a528098f48943892f3466dec64dd371e3d221f533
+  judge_packet_sha256: 46bfdde1f232313499b606fa9f286e517d675fb6e2d29b133fb93e39a0ab54f3
+  revised_ids:
+  - climate_change_risks_1990_2021
+  prompt_sha256: 6fc17496ab6d1db50c9cdb7ae54df59f9cff5d5882565561373f034335fab48e
+  request_sha256: 4467153f265da80f2f5fe6a4da48e9905bc06ca6f6b8e944f45e489dc2a635b6
+  response_sha256: 1c62c5e63da76fa43321a0728240cc7d540245a2a0de0113fdc18a039f127741
+  response_archive: experiments/query_generation/1c62c5e63da76fa43321a0728240cc7d540245a2a0de0113fdc18a039f127741.txt
+  usage:
+    prompt_tokens: 348
+    completion_tokens: 80
+    total_tokens: 428
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 348
+  response_id: ece294f1-e7ca-41bb-868b-9365cae6d235
+source_transition:
+  from: openalex_default_fulltext_boolean_search
+  to: openalex_title_and_abstract_boolean_search
+  reason: Independent deterministic random-sample validation rejected default full-text
+    search because incidental mentions produced unacceptable topical imprecision in
+    all eight corpora.
+  input_registry_sha256: 7a4a5928bbdf9919fb0e9f7b14470f5fac14479a01a1395019f855d06cc3e055
+  rejection_audit_sha256: 156860c14dbc170b328fbff2ec327063fa1ab56de64563e417b94c402142ff42
+  transitioned_at: '2026-08-06T06:41:02.605348+00:00'
+boolean_revision_history:
+- round: 1
+  started_at: '2026-08-06T06:05:38.694873+00:00'
+  finished_at: '2026-08-06T06:05:43.462667+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: a441c59b53c3ccdf5a6d8e998e9b3c0d9b46733932fa65d881af3de3e14dcc32
+  judgment_sha256: eac860cae162f3eced76f33fb7d9715711db221a910c6aea35f98a3468848b64
+  revised_ids:
+  - climate_change_risks_1990_2021
+  - plant_heat_drought_2008_2021
+  prompt_sha256: b84ecfd156cc9320b48dba0e0d87afc452a605677e2f5b01054a5ca5aaac3436
+  request_sha256: 88b16bfb12f7660aa20c52999c8dc74fe271c1974a92171b1a9bb591bcf6c589
+  response_sha256: b41edfa019c985847254e18b2242ca89f68af1c9b37b8eab1a31abf0ac22c93f
+  response_archive: experiments/query_generation/b41edfa019c985847254e18b2242ca89f68af1c9b37b8eab1a31abf0ac22c93f.txt
+  usage:
+    prompt_tokens: 384
+    completion_tokens: 208
+    total_tokens: 592
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 384
+  response_id: a83cadc7-fb00-4c48-b9e5-0b93672a36a2
+- round: 2
+  started_at: '2026-08-06T06:08:04.780749+00:00'
+  finished_at: '2026-08-06T06:08:15.419415+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: 2ae489051159eb812c46c14f9261e6e69fded57bd5586082660456c63426a24c
+  judgment_sha256: 41305b430081c5c81b83011997ad21ba99b89e30a99c4aab25950facdd26cbb7
+  revised_ids:
+  - crispr_extracellular_vesicles_2015_2022
+  - digital_twins_healthcare_2012_2024
+  - gene_editing_als_2004_2024
+  - gnn_drug_discovery_2017_2023
+  - machine_learning_climate_change_2008_2022
+  prompt_sha256: b84ecfd156cc9320b48dba0e0d87afc452a605677e2f5b01054a5ca5aaac3436
+  request_sha256: 98e0b161d93e847222214be99026d8f46a2dbec4492191e90c7620c48fee5744
+  response_sha256: 16c3cad99c5a93dc7e981724fa08d7798c6b48de98e675d6c98f0f6d89187ef4
+  response_archive: experiments/query_generation/16c3cad99c5a93dc7e981724fa08d7798c6b48de98e675d6c98f0f6d89187ef4.txt
+  usage:
+    prompt_tokens: 664
+    completion_tokens: 653
+    total_tokens: 1317
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 664
+  response_id: 8cdf8423-bb95-4380-aa4a-4a6d1be6ea4a
+- round: 3
+  started_at: '2026-08-06T06:10:23.163007+00:00'
+  finished_at: '2026-08-06T06:10:27.927163+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: a1bc0bfd69a8562f0fbc805eda13764a2527393b39fefe480bdd09bd7ef5478f
+  judgment_sha256: e08b82a1c649d053ac182736a3a92a569895b9c91f9e350a29d1d4ad7b73bc3b
+  revised_ids:
+  - crispr_extracellular_vesicles_2015_2022
+  - gene_editing_als_2004_2024
+  prompt_sha256: b84ecfd156cc9320b48dba0e0d87afc452a605677e2f5b01054a5ca5aaac3436
+  request_sha256: 82a5c0cfc0aea5e2acb7769d67752153cb4dbd9b21fb41fa54d956b2287b50fc
+  response_sha256: 0103fd92bfcf5f358ac37a999ba2991d7f223eeb431e3f447cb2aace01a54aa6
+  response_archive: experiments/query_generation/0103fd92bfcf5f358ac37a999ba2991d7f223eeb431e3f447cb2aace01a54aa6.txt
+  usage:
+    prompt_tokens: 540
+    completion_tokens: 270
+    total_tokens: 810
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 540
+  response_id: 0b6a65ea-5f61-4cf4-968b-519874b2496f
+- round: 4
+  started_at: '2026-08-06T06:12:33.220904+00:00'
+  finished_at: '2026-08-06T06:12:36.876259+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: 8ca0519016a1422712c384b74e1a45bc9475f2e81ab2440693590c2a84fb332c
+  judgment_sha256: 6af75220e1112b51c394bef867d82c5df421b34e876f3fcfc2b5260ee06f1f66
+  revised_ids:
+  - gnn_drug_discovery_2017_2023
+  prompt_sha256: b84ecfd156cc9320b48dba0e0d87afc452a605677e2f5b01054a5ca5aaac3436
+  request_sha256: c6b3c36d1c4ef22786ec560a2736e9b38b0c232c3638cd3e4d610b927dfe38e8
+  response_sha256: 89e0b2547f14de1a1536a21d13e28561e9123424f9ed2766f4d37a33221eb9e5
+  response_archive: experiments/query_generation/89e0b2547f14de1a1536a21d13e28561e9123424f9ed2766f4d37a33221eb9e5.txt
+  usage:
+    prompt_tokens: 376
+    completion_tokens: 152
+    total_tokens: 528
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 376
+  response_id: a90892dc-56f4-4ae8-9878-6a81352dd4eb
+- round: 5
+  started_at: '2026-08-06T06:14:31.302032+00:00'
+  finished_at: '2026-08-06T06:14:36.233955+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: e06104b734ffd0016dcbcf9a71eb421b831939defe6cc4c7d49b01ad8bb4ac92
+  judgment_sha256: 42e05563930a72675d12c883fce0489996c0b177d96c1015fa12dbfc70cac6e3
+  revised_ids:
+  - crispr_extracellular_vesicles_2015_2022
+  - gene_editing_als_2004_2024
+  prompt_sha256: b84ecfd156cc9320b48dba0e0d87afc452a605677e2f5b01054a5ca5aaac3436
+  request_sha256: 21601a4c75273cc55c2b90f928cb25c3c1acc5081fe31f7a559650c65e71a389
+  response_sha256: 941e3624eb6d8550d05784b1c555e2e08fc2d09aadb797a76f5b539fffdc690e
+  response_archive: experiments/query_generation/941e3624eb6d8550d05784b1c555e2e08fc2d09aadb797a76f5b539fffdc690e.txt
+  usage:
+    prompt_tokens: 547
+    completion_tokens: 291
+    total_tokens: 838
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 547
+  response_id: 9ecf47c7-5f61-4356-be14-b30962f1c283
+- round: 6
+  started_at: '2026-08-06T06:16:16.418095+00:00'
+  finished_at: '2026-08-06T06:16:20.072045+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  input_registry_sha256: 693055c08aace132d01dcc6c3922e29284c0197f080ce8efc2e05079b9c7f36b
+  judgment_sha256: b4d2078f79eb2469dae190670827913ba5623224427ce3bd58a675dd71a8eabe
+  revised_ids:
+  - gene_editing_als_2004_2024
+  prompt_sha256: b84ecfd156cc9320b48dba0e0d87afc452a605677e2f5b01054a5ca5aaac3436
+  request_sha256: d026b17934c56d2a3a5bb88bf2e5314cb2879a66e57470fb5babef5668dbe41b
+  response_sha256: f4e7c5dd263842329f2b04ec14d5f93ed8c556f5e8456cb8a53af45c7fd94634
+  response_archive: experiments/query_generation/f4e7c5dd263842329f2b04ec14d5f93ed8c556f5e8456cb8a53af45c7fd94634.txt
+  usage:
+    prompt_tokens: 349
+    completion_tokens: 166
+    total_tokens: 515
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 349
+  response_id: 7a17c283-b0b6-4de2-ba7a-0d3fca155da7
+query_freeze_attestation:
+  attestation_version: 1
+  judged_at: '2026-08-06T06:42:28.528911+00:00'
+  judge_role: codex_query_judge
+  rubric_version: query-judge-v5
+  judge_prompt_sha256: 6c0170257fbd79c395536663213033963c30b812eaf4ec5c3907aabeca49a8d9
+  judge_packet_sha256: 2f61059444ced1ff3adfe7750924aff192f50142bf65f7c789526a3fe5996bbf
+  judgment_sha256: adb601707372a7133ee7e3ac40d2e70433ec537e7a0374a564fc98929986aea4
+  generator_response_sha256: 9b78cb2c6e7396de00aac38e3ed431d926aca35f17ea28066caf5aab600b48a5
+  human_reference_registry_sha256: 280eedb52fcf76055d2343c646f63c4143f79bea7c11d6399b4dc533eb8461bf
+  query_set_sha256: 7039abdc7680aba1b890d817178230c5521b9d04ed2d8e3c112e36eb2fc0899c
+  accepted_ids:
+  - climate_change_risks_1990_2021
+  - crispr_extracellular_vesicles_2015_2022
+  - digital_twins_healthcare_2012_2024
+  - gene_editing_als_2004_2024
+  - global_microplastics_2004_2019
+  - gnn_drug_discovery_2017_2023
+  - machine_learning_climate_change_2008_2022
+  - plant_heat_drought_2008_2021

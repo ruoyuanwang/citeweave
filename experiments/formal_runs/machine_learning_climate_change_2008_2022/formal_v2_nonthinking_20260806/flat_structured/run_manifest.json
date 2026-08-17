@@ -1,0 +1,75 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "machine_learning_climate_change_2008_2022",
+  "condition": "flat_structured",
+  "prompt_version": "formal-graph-qa-v2-nonthinking",
+  "profile": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "modality": "text",
+    "capability_snapshot": "D:\\project\\bibagent\\experiments\\api_capabilities\\deepseek_models.json",
+    "response_format": "json_object",
+    "supports_json_schema": false,
+    "supports_seed": false,
+    "supports_data_uri": false
+  },
+  "capability_validation": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "snapshot_sha256": "bb06a7f1283e0b4c9375df86195f732ccaef2466ad685965a4512784af26e7c5",
+    "model_available": true,
+    "image_input_verified": null,
+    "passed": true,
+    "reasons": []
+  },
+  "comparison_design": {
+    "primary_text_panel": {
+      "profile_id": "deepseek-official-v4-pro-text",
+      "model": "deepseek-v4-pro",
+      "base_url": "https://api.deepseek.com",
+      "conditions": [
+        "no_rag",
+        "flat_structured",
+        "graph_rag"
+      ],
+      "strict_within_model_comparison": true
+    },
+    "figure_panel": null
+  },
+  "grounding_manifest_sha256": "9ef8c8fcd1e1bb62235a88df849bee137b9e09e48fa8d7ef0e7d621a9dd9e82b",
+  "benchmark_sha256": "c5c1a09a0e1cef7440808926a80942ab71c4460008d21aee64385d2aa550a8c2",
+  "items": 30,
+  "item_ids": [
+    "machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size",
+    "machine_learning_climate_change_2008_2022:bibliographic_coupling:highest_occurrence",
+    "machine_learning_climate_change_2008_2022:bibliographic_coupling:strongest_connection",
+    "machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership",
+    "machine_learning_climate_change_2008_2022:bibliographic_coupling:false_premise",
+    "machine_learning_climate_change_2008_2022:citation:network_size",
+    "machine_learning_climate_change_2008_2022:citation:highest_occurrence",
+    "machine_learning_climate_change_2008_2022:citation:strongest_connection",
+    "machine_learning_climate_change_2008_2022:citation:cluster_membership",
+    "machine_learning_climate_change_2008_2022:citation:false_premise",
+    "machine_learning_climate_change_2008_2022:coauthorship:network_size",
+    "machine_learning_climate_change_2008_2022:coauthorship:highest_occurrence",
+    "machine_learning_climate_change_2008_2022:coauthorship:strongest_connection",
+    "machine_learning_climate_change_2008_2022:coauthorship:cluster_membership",
+    "machine_learning_climate_change_2008_2022:coauthorship:false_premise",
+    "machine_learning_climate_change_2008_2022:cocitation:network_size",
+    "machine_learning_climate_change_2008_2022:cocitation:highest_occurrence",
+    "machine_learning_climate_change_2008_2022:cocitation:strongest_connection",
+    "machine_learning_climate_change_2008_2022:cocitation:cluster_membership",
+    "machine_learning_climate_change_2008_2022:cocitation:false_premise",
+    "machine_learning_climate_change_2008_2022:institution_collaboration:network_size",
+    "machine_learning_climate_change_2008_2022:institution_collaboration:highest_occurrence",
+    "machine_learning_climate_change_2008_2022:institution_collaboration:strongest_connection",
+    "machine_learning_climate_change_2008_2022:institution_collaboration:cluster_membership",
+    "machine_learning_climate_change_2008_2022:institution_collaboration:false_premise",
+    "machine_learning_climate_change_2008_2022:keyword_cooccurrence:network_size",
+    "machine_learning_climate_change_2008_2022:keyword_cooccurrence:highest_occurrence",
+    "machine_learning_climate_change_2008_2022:keyword_cooccurrence:strongest_connection",
+    "machine_learning_climate_change_2008_2022:keyword_cooccurrence:cluster_membership",
+    "machine_learning_climate_change_2008_2022:keyword_cooccurrence:false_premise"
+  ]
+}

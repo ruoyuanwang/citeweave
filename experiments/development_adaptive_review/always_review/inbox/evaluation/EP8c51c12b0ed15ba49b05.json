@@ -1,0 +1,11 @@
+{
+  "packet_id": "EP8c51c12b0ed15ba49b05",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 0.99,
+  "reason": "The candidate exactly matches the canonical cluster-membership evidence and answer contract: the evidence-provided visible label belongs to cluster 4, with no unsupported additions.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:cluster",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label"
+  ]
+}

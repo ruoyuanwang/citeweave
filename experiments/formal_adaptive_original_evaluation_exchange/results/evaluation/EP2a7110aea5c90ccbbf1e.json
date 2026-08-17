@@ -1,0 +1,1 @@
+{"packet_id":"EP2a7110aea5c90ccbbf1e","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The true abstention and explanation are directly supported by the false contains-visible-label fact.","evidence_ids":["bibliographic_coupling:fact:absent_target"]}

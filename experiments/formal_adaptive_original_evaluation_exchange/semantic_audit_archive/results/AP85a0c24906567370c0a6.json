@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "AP85a0c24906567370c0a6",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The fail decision is defensible because the report contradicts the bound acquisition shortfall and adds unsupported causal or qualitative claims about growth, sophistication, geography, and missing-abstract effects."
+}

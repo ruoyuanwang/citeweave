@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "AP6dd5487c0b06681f3348",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The fail decision is defensible because the report adds provenance, importance, interdisciplinarity, and causal-acceleration claims that are not established by the bound descriptive source, keyword, and network evidence."
+}

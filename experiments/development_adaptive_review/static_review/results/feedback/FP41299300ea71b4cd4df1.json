@@ -1,0 +1,23 @@
+{
+  "packet_id": "FP41299300ea71b4cd4df1",
+  "judge_id": "feedback",
+  "decision": "revise",
+  "confidence": 0.91,
+  "reason": "The numerical and network descriptions are extensively evidence-mapped, but several interpretive labels and causal explanations are stronger than the visible descriptive evidence warrants. A short caveat preserves the report while clearly separating measured results from interpretation.",
+  "suggested_revision": {
+    "action": "append_caveat",
+    "target_text": null,
+    "replacement_text": "Interpretive labels such as “transformative,” “hot topic,” and “nascent,” and explanations attributing network sparsity to field maturity, go beyond the descriptive metadata and should be read as hypotheses rather than established findings."
+  },
+  "evidence_ids": [
+    "E006",
+    "E015",
+    "E017",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027"
+  ]
+}

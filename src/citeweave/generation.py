@@ -509,6 +509,15 @@ def validate_manuscript(
         if empirical_numbers and not EVIDENCE_CITATION_RE.search(cleaned_sentence):
             uncited_numeric_sentences.append(cleaned_sentence[:200])
     required_sections = ["摘要", "数据与方法", "结果", "讨论", "局限", "结论"]
+    if "## Abstract" in text:
+        required_sections = [
+            "## Abstract",
+            "## 1 Introduction",
+            "## 2 Data and methods",
+            "## 3 Results",
+            "## 4 Discussion and limitations",
+            "## 5 Conclusion",
+        ]
     missing_sections = [section for section in required_sections if section not in text]
     incomplete_paragraphs = _find_incomplete_paragraphs(text)
     quality = evaluate_manuscript_quality(text, evidence)
@@ -765,7 +774,7 @@ def _find_incomplete_paragraphs(text: str) -> list[str]:
         if (
             len(value) <= 100
             or value.startswith(("#", "|", "**关键词**"))
-            or value[-1] in "。！？；：）】]"
+            or value[-1] in "。！？；：）】].!?;:)}"
         ):
             continue
         incomplete.append(value[-240:])

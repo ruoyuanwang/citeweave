@@ -1,0 +1,28 @@
+[
+  {
+    "status": "complete",
+    "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+    "condition": "structured_one_shot",
+    "evidence_sha256": "622525b5ef646192447355895e5fcac77e964a2d1a1ed911368f150aac26ee59",
+    "report_sha256": "bcf2895153b6c12e984834ee3439e615c1973834b00172826460c7e1c0cf096d",
+    "call_count": 1,
+    "model": "deepseek-v4-pro",
+    "temperature": 0.1,
+    "seed": 42,
+    "report_language": "English",
+    "internal_review_used_as_experimental_evaluation": false
+  },
+  {
+    "status": "complete",
+    "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+    "condition": "citeweave_full",
+    "evidence_sha256": "622525b5ef646192447355895e5fcac77e964a2d1a1ed911368f150aac26ee59",
+    "report_sha256": "2e6f46eeb8fbcb57533348bb5a87f5b09c3f86f4edde2d591c0c9da44eac02d4",
+    "call_count": 4,
+    "model": "deepseek-v4-pro",
+    "temperature": 0.1,
+    "seed": 42,
+    "report_language": "English",
+    "internal_review_used_as_experimental_evaluation": false
+  }
+]

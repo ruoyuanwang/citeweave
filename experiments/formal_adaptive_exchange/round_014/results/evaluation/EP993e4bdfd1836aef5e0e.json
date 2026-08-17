@@ -1,0 +1,15 @@
+{
+  "packet_id": "EP993e4bdfd1836aef5e0e",
+  "decision": "fail",
+  "confidence": 0.99,
+  "reason": "The report contains a directly contradicted trend claim and several material overinterpretations. It says Biology and Gene show consistent annual increases, but E020 shows declines for both from 2018 to 2019 and from 2020 to 2021. It characterizes journals as high-impact and infers a trans-Pacific research axis from productivity rankings even though E009 and E013 explicitly limit those rankings to descriptive productivity. It also infers strong intra-institutional and intra-national clustering and emerging cross-cluster links from E023 and E025, although those records provide parameterized network summaries and warn against substantive inference. E026 supports node weights and clusters but not the broader claim that EV-mediated CRISPR delivery dominates the thematic structure. These errors prevent the candidate from being fully supported by the visible evidence.",
+  "evidence_ids": [
+    "E009",
+    "E013",
+    "E020",
+    "E023",
+    "E025",
+    "E026"
+  ],
+  "judge_id": "evaluation"
+}

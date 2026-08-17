@@ -1,0 +1,15 @@
+{
+  "packet_id": "FPf204f8795aa175bb59f1",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible evidence identifies Kan Ouyang and Yujie Liang as the strongest displayed connection and gives its weight as 4.0.",
+  "evidence_ids": [
+    "coauthorship:edge:0001:relation",
+    "coauthorship:edge:0001:weight",
+    "coauthorship:fact:strongest_connection",
+    "coauthorship:node:openalex-author:A5006982957:label",
+    "coauthorship:node:orcid:0000-0002-0860-4859:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

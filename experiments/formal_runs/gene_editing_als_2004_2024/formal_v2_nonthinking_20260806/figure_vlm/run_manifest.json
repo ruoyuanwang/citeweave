@@ -1,0 +1,19 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "gene_editing_als_2004_2024",
+  "condition": "figure_vlm",
+  "role": "cross_model_extension",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "packet_sha256": "b254b8de5b7c032d55f91389631acada126219257618426f87577a1849d9287a",
+  "output_sha256": "8b0717d20a3ef47de25e9a306e39a9b65acaf6e2fbe52af0d34ff3a4832be5a3",
+  "items": 5,
+  "item_ids": [
+    "gene_editing_als_2004_2024:bibliographic_coupling:network_size",
+    "gene_editing_als_2004_2024:coauthorship:network_size",
+    "gene_editing_als_2004_2024:cocitation:network_size",
+    "gene_editing_als_2004_2024:institution_collaboration:network_size",
+    "gene_editing_als_2004_2024:keyword_cooccurrence:network_size"
+  ]
+}

@@ -1,0 +1,1 @@
+{"packet_id":"EP285913fd81cad10119ba","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The candidate correctly abstains because the requested visible target is explicitly absent from the network.","evidence_ids":["bibliographic_coupling:fact:absent_target"]}

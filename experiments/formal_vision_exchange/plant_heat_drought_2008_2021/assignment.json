@@ -1,0 +1,112 @@
+{
+  "assignment_role": "independent_codex_visible_only_figure_evaluation",
+  "controller_metadata_in_scope": false,
+  "dataset_id": "plant_heat_drought_2008_2021",
+  "figure_manifest_sha256": "12c457bf11c2f11569a6c8f6415452640e7f711df12e23e8cb40fdb8bd1e3d24",
+  "generator_role": "codex_visual_subagent",
+  "instructions": [
+    "Use only the PNG files explicitly listed in items. Do not inspect the workspace, packet source, benchmark, graph data, reports, gold answers, or outputs from any other condition.",
+    "Visually inspect each PNG and answer only its paired question. If the requested values are not established by the visible image, abstain with answer=null.",
+    "Return exactly one result for every item in the listed order. Do not add fields, commentary, Markdown, or modify any other file."
+  ],
+  "items": [
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\plant_heat_drought_2008_2021\\figures\\network_bibliographic_coupling.png",
+      "figure_sha256": "e6ed79866f10efdaf2c883e6b62841b4517c30c97a5dee50f6d80e49b38fa6d1",
+      "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:network_size",
+      "question": "How many nodes and links are displayed in the bibliographic_coupling network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\plant_heat_drought_2008_2021\\figures\\network_citation.png",
+      "figure_sha256": "2c40ffeab80b3b8e17b4292fc58ead13a9e6ee5d4fd2cf2257d7d037734d5321",
+      "item_id": "plant_heat_drought_2008_2021:citation:network_size",
+      "question": "How many nodes and links are displayed in the citation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\plant_heat_drought_2008_2021\\figures\\network_coauthorship.png",
+      "figure_sha256": "f501e14ac8146aaa73e6a70bcdce6e2110b23a5b8865d1d0ed11a3dbd67a3298",
+      "item_id": "plant_heat_drought_2008_2021:coauthorship:network_size",
+      "question": "How many nodes and links are displayed in the coauthorship network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\plant_heat_drought_2008_2021\\figures\\network_cocitation.png",
+      "figure_sha256": "130f24cb462170adc3e8bb30fd3fa4a7b6dc614d143f4d7da856c4a80dd1d60a",
+      "item_id": "plant_heat_drought_2008_2021:cocitation:network_size",
+      "question": "How many nodes and links are displayed in the cocitation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\plant_heat_drought_2008_2021\\figures\\network_institution_collaboration.png",
+      "figure_sha256": "339409ceff1c512480ad305d3a884d35041eaecbed03e069af4f43b02af145c5",
+      "item_id": "plant_heat_drought_2008_2021:institution_collaboration:network_size",
+      "question": "How many nodes and links are displayed in the institution_collaboration network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\plant_heat_drought_2008_2021\\figures\\network_keyword_cooccurrence.png",
+      "figure_sha256": "df477203610b3cb35f7b8b4bc00f487b6bf2e94b22d31617055634b504aa6aa7",
+      "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:network_size",
+      "question": "How many nodes and links are displayed in the keyword_cooccurrence network?",
+      "task_type": "network_size"
+    }
+  ],
+  "main_inference": false,
+  "may_modify_pipeline_or_source_artifacts": false,
+  "may_read_unlisted_workspace_files": false,
+  "prohibited_inputs": [
+    "flat structured context",
+    "gold_answer",
+    "graph JSON",
+    "human reference output",
+    "other condition output"
+  ],
+  "registry_sha256": "7c0ea6f10726e986793780ba5469879255f034eeefdb1c506af54cde9e07d3cd",
+  "return_path": "D:\\project\\bibagent\\experiments\\formal_vision_returns\\plant_heat_drought_2008_2021.json",
+  "schema_version": 1,
+  "source_packet_file_sha256": "050880214ab94a2309e6a39a0cc82dd8ec2062bddf87a1d2019f7a331628cbd6",
+  "source_packet_sha256": "54adfb29cd2e5c4d9604a77cfb472c3c08247487cef02be26535b1bfd83ca851",
+  "strict_output_schema": {
+    "dataset_id": "plant_heat_drought_2008_2021",
+    "generator_role": "codex_visual_subagent",
+    "packet_sha256": "54adfb29cd2e5c4d9604a77cfb472c3c08247487cef02be26535b1bfd83ca851",
+    "results": [
+      {
+        "abstain": "<boolean>",
+        "answer": "<object matching answer_contract exactly, or null iff abstain>",
+        "explanation": "<brief visible-image basis, 1..1000 characters>",
+        "item_id": "<copy exact item_id in input order>"
+      }
+    ],
+    "schema_version": 1,
+    "visible_only": true
+  },
+  "visible_only": true,
+  "write_scope": "Only return_path may be created or replaced by the assigned visual subagent."
+}

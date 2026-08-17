@@ -1,0 +1,8 @@
+{
+  "packet_id": "EP061a45f3a6ba2dbacc10",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The extracellular-vesicle/CRISPR coauthorship answer correctly identifies Kan Ouyang and Yujie Liang as the strongest displayed pair and gives the supported connection weight of 4.0.",
+  "evidence_ids": ["coauthorship:fact:strongest_connection", "coauthorship:edge:0001:weight", "coauthorship:node:openalex-author:A5006982957:label", "coauthorship:node:orcid:0000-0002-0860-4859:label"]
+}

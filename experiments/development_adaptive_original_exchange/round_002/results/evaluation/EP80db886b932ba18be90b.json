@@ -1,0 +1,8 @@
+{
+  "packet_id": "EP80db886b932ba18be90b",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The extracellular-vesicle/CRISPR bibliographic-coupling answer correctly places the visible node “Gene Editing by Extracel…” in cluster 1, matching the supplied label and cluster evidence.",
+  "evidence_ids": ["bibliographic_coupling:node:doi:10.3390/ijms21197362:label", "bibliographic_coupling:node:doi:10.3390/ijms21197362:cluster"]
+}

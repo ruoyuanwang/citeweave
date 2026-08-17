@@ -1,0 +1,105 @@
+{
+  "packet_id": "EPbde9fc93c6f423cf64db",
+  "sample_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:strongest_connection:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "coauthorship:edge:0001:relation",
+        "coauthorship:edge:0001:weight",
+        "coauthorship:fact:strongest_connection",
+        "coauthorship:node:openalex-author:A5006982957:label",
+        "coauthorship:node:orcid:0000-0002-0860-4859:label"
+      ],
+      "entities": [
+        "coauthorship:edge:0001",
+        "coauthorship:node:openalex-author:A5006982957",
+        "coauthorship:node:orcid:0000-0002-0860-4859"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "coauthorship:edge:0001:relation"
+          ],
+          "nodes": [
+            "coauthorship:node:openalex-author:A5006982957",
+            "coauthorship:node:orcid:0000-0002-0860-4859"
+          ],
+          "path_id": "path:coauthorship:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "coauthorship:fact:strongest_connection"
+          ],
+          "nodes": [
+            "coauthorship:node:openalex-author:A5006982957",
+            "coauthorship:node:orcid:0000-0002-0860-4859"
+          ],
+          "path_id": "path:coauthorship:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "coauthorship:edge:0001:relation",
+          "network": "coauthorship",
+          "object": "coauthorship:node:orcid:0000-0002-0860-4859",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "coauthorship:node:openalex-author:A5006982957"
+        },
+        {
+          "atom_id": "coauthorship:edge:0001:weight",
+          "network": "coauthorship",
+          "object": 4.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "coauthorship:edge:0001"
+        },
+        {
+          "atom_id": "coauthorship:fact:strongest_connection",
+          "network": "coauthorship",
+          "object": "coauthorship:node:orcid:0000-0002-0860-4859",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "coauthorship:node:openalex-author:A5006982957"
+        },
+        {
+          "atom_id": "coauthorship:node:openalex-author:A5006982957:label",
+          "network": "coauthorship",
+          "object": "Kan Ouyang",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "coauthorship:node:openalex-author:A5006982957"
+        },
+        {
+          "atom_id": "coauthorship:node:orcid:0000-0002-0860-4859:label",
+          "network": "coauthorship",
+          "object": "Yujie Liang",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "coauthorship:node:orcid:0000-0002-0860-4859"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "7db60112b49746ff9e3f686d5cf7330527a86a5fdbd799be14360e715ea33abb"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the coauthorship network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"Kan Ouyang\",\"target_label\":\"Yujie Liang\",\"weight\":4.0},\"explanation\":\"The context explicitly states that the strongest connection is between Kan Ouyang and Yujie Liang, with a weight of 4.0, as indicated by the 'coauthorship:fact:strongest_connection' relationship and the edge weight.\",\"item_id\":\"crispr_extracellular_vesicles_2015_2022:coauthorship:strongest_connection\"}",
+  "allowed_evidence_ids": [
+    "coauthorship:edge:0001:relation",
+    "coauthorship:edge:0001:weight",
+    "coauthorship:fact:strongest_connection",
+    "coauthorship:node:openalex-author:A5006982957:label",
+    "coauthorship:node:orcid:0000-0002-0860-4859:label",
+    "path:coauthorship:edge:0001:relation",
+    "path:coauthorship:fact:strongest_connection"
+  ],
+  "content_sha256": "e490469668d4a4b5b4cc3f714b03025cf036668b6966d25cc72a029c3d0b7120"
+}

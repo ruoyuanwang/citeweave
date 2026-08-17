@@ -1,0 +1,1288 @@
+{
+  "schema_version": 1,
+  "judge_role": "codex_empirical_query_precision_judge",
+  "blind_to_outputs": true,
+  "source_probe_path": "D:\\project\\bibagent\\experiments\\query_judging\\openalex_title_abstract_empirical_probe.json",
+  "datasets": [
+    {
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "counts": {
+        "relevant": 20,
+        "borderline": 7,
+        "irrelevant": 3
+      },
+      "judgments": [
+        {
+          "work_id": "https://openalex.org/W3158002239",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4387934986",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4213426032",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4297227089",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W2995345309",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4386976834",
+          "label": "borderline",
+          "reason": "Drug/biomedical relevance or a graph method is present, but the metadata does not clearly establish both facets."
+        },
+        {
+          "work_id": "https://openalex.org/W4283459310",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4390317538",
+          "label": "irrelevant",
+          "reason": "The metadata does not show a substantive graph-neural drug-discovery focus."
+        },
+        {
+          "work_id": "https://openalex.org/W4389805301",
+          "label": "borderline",
+          "reason": "Drug/biomedical relevance or a graph method is present, but the metadata does not clearly establish both facets."
+        },
+        {
+          "work_id": "https://openalex.org/W4310222865",
+          "label": "borderline",
+          "reason": "Drug/biomedical relevance or a graph method is present, but the metadata does not clearly establish both facets."
+        },
+        {
+          "work_id": "https://openalex.org/W4389203344",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4220816536",
+          "label": "borderline",
+          "reason": "Drug/biomedical relevance or a graph method is present, but the metadata does not clearly establish both facets."
+        },
+        {
+          "work_id": "https://openalex.org/W3087390197",
+          "label": "irrelevant",
+          "reason": "The metadata does not show a substantive graph-neural drug-discovery focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3212664589",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4281922383",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4322732093",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4225695739",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4213235856",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4311054714",
+          "label": "borderline",
+          "reason": "Drug/biomedical relevance or a graph method is present, but the metadata does not clearly establish both facets."
+        },
+        {
+          "work_id": "https://openalex.org/W4387847047",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4390005328",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W2957050889",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4386041723",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W3185456481",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4387334953",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4282835253",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W4321996988",
+          "label": "borderline",
+          "reason": "Drug/biomedical relevance or a graph method is present, but the metadata does not clearly establish both facets."
+        },
+        {
+          "work_id": "https://openalex.org/W4221056338",
+          "label": "irrelevant",
+          "reason": "The metadata does not show a substantive graph-neural drug-discovery focus."
+        },
+        {
+          "work_id": "https://openalex.org/W4308187210",
+          "label": "relevant",
+          "reason": "Title/abstract directly connects a graph-neural method with a drug-discovery or drug-development task."
+        },
+        {
+          "work_id": "https://openalex.org/W3215476983",
+          "label": "borderline",
+          "reason": "Drug/biomedical relevance or a graph method is present, but the metadata does not clearly establish both facets."
+        }
+      ]
+    },
+    {
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "counts": {
+        "relevant": 12,
+        "borderline": 5,
+        "irrelevant": 13
+      },
+      "judgments": [
+        {
+          "work_id": "https://openalex.org/W2622799812",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W2761649749",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W2998321846",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W2903480993",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W2928170766",
+          "label": "borderline",
+          "reason": "Only one facet is clearly central; the CRISPR–extracellular-vesicle connection is indirect or uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4281556756",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W4308059660",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W4313398450",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W2802507063",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W3030089399",
+          "label": "borderline",
+          "reason": "Only one facet is clearly central; the CRISPR–extracellular-vesicle connection is indirect or uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4285110131",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W2894914844",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W4225120161",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W4312127107",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W2896075315",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W3137486934",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W3199883199",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W3087905712",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W3128005349",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W2982575646",
+          "label": "borderline",
+          "reason": "Only one facet is clearly central; the CRISPR–extracellular-vesicle connection is indirect or uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4300510835",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W2911858506",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W4206044626",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W2902282551",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W3152608233",
+          "label": "borderline",
+          "reason": "Only one facet is clearly central; the CRISPR–extracellular-vesicle connection is indirect or uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W3182877332",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W4214706521",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        },
+        {
+          "work_id": "https://openalex.org/W3043849273",
+          "label": "relevant",
+          "reason": "Title/abstract directly links CRISPR or genome editing with extracellular vesicles/exosomes."
+        },
+        {
+          "work_id": "https://openalex.org/W3133322288",
+          "label": "borderline",
+          "reason": "Only one facet is clearly central; the CRISPR–extracellular-vesicle connection is indirect or uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W2894898302",
+          "label": "irrelevant",
+          "reason": "The metadata concerns CRISPR or vesicles separately, without a substantive intersection."
+        }
+      ]
+    },
+    {
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "counts": {
+        "relevant": 9,
+        "borderline": 14,
+        "irrelevant": 7
+      },
+      "judgments": [
+        {
+          "work_id": "https://openalex.org/W3184456034",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W2955270041",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W2898879852",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W3162810055",
+          "label": "irrelevant",
+          "reason": "Climate change or machine learning is merely contextual, with no clear joint research focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3175814978",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W2149228247",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W4281681741",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W4313229433",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W4308003801",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W4283800985",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W3168820577",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W3119525280",
+          "label": "irrelevant",
+          "reason": "Climate change or machine learning is merely contextual, with no clear joint research focus."
+        },
+        {
+          "work_id": "https://openalex.org/W4301603459",
+          "label": "irrelevant",
+          "reason": "Climate change or machine learning is merely contextual, with no clear joint research focus."
+        },
+        {
+          "work_id": "https://openalex.org/W4286252286",
+          "label": "irrelevant",
+          "reason": "Climate change or machine learning is merely contextual, with no clear joint research focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3037430993",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W4404382323",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W2996259309",
+          "label": "irrelevant",
+          "reason": "Climate change or machine learning is merely contextual, with no clear joint research focus."
+        },
+        {
+          "work_id": "https://openalex.org/W2470898428",
+          "label": "irrelevant",
+          "reason": "Climate change or machine learning is merely contextual, with no clear joint research focus."
+        },
+        {
+          "work_id": "https://openalex.org/W4285392900",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W2006255177",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W4223552072",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W2800754400",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W4310442430",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W2743737418",
+          "label": "irrelevant",
+          "reason": "Climate change or machine learning is merely contextual, with no clear joint research focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3046056639",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W2768515657",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W3028834207",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W2945880527",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        },
+        {
+          "work_id": "https://openalex.org/W4313407333",
+          "label": "relevant",
+          "reason": "Title/abstract applies a machine-learning method to a climate-change question, impact, or projection."
+        },
+        {
+          "work_id": "https://openalex.org/W4313334409",
+          "label": "borderline",
+          "reason": "Machine learning and climate are both suggested, but their substantive analytical connection is indirect or unclear."
+        }
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "counts": {
+        "relevant": 17,
+        "borderline": 6,
+        "irrelevant": 7
+      },
+      "judgments": [
+        {
+          "work_id": "https://openalex.org/W3089546236",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W2995361637",
+          "label": "borderline",
+          "reason": "The work is climate-related, but risk/impact/adaptation is secondary or only indirectly supported."
+        },
+        {
+          "work_id": "https://openalex.org/W2604662561",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W3011758476",
+          "label": "irrelevant",
+          "reason": "Climate risk is incidental or absent from the work's apparent central focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3017806755",
+          "label": "irrelevant",
+          "reason": "Climate risk is incidental or absent from the work's apparent central focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3131258452",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W28165187",
+          "label": "irrelevant",
+          "reason": "Climate risk is incidental or absent from the work's apparent central focus."
+        },
+        {
+          "work_id": "https://openalex.org/W2905934948",
+          "label": "irrelevant",
+          "reason": "Climate risk is incidental or absent from the work's apparent central focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3133344225",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W3184456034",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W1482551774",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W2418982398",
+          "label": "borderline",
+          "reason": "The work is climate-related, but risk/impact/adaptation is secondary or only indirectly supported."
+        },
+        {
+          "work_id": "https://openalex.org/W3127317509",
+          "label": "borderline",
+          "reason": "The work is climate-related, but risk/impact/adaptation is secondary or only indirectly supported."
+        },
+        {
+          "work_id": "https://openalex.org/W2979296317",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W2802690323",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W3087425842",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W3015381718",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W3010375321",
+          "label": "borderline",
+          "reason": "The work is climate-related, but risk/impact/adaptation is secondary or only indirectly supported."
+        },
+        {
+          "work_id": "https://openalex.org/W2939444766",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W2364017024",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W2159332358",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W2291381144",
+          "label": "irrelevant",
+          "reason": "Climate risk is incidental or absent from the work's apparent central focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3107694141",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W2158608679",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W3137573251",
+          "label": "irrelevant",
+          "reason": "Climate risk is incidental or absent from the work's apparent central focus."
+        },
+        {
+          "work_id": "https://openalex.org/W2034877202",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W4200250400",
+          "label": "irrelevant",
+          "reason": "Climate risk is incidental or absent from the work's apparent central focus."
+        },
+        {
+          "work_id": "https://openalex.org/W7131975842",
+          "label": "borderline",
+          "reason": "The work is climate-related, but risk/impact/adaptation is secondary or only indirectly supported."
+        },
+        {
+          "work_id": "https://openalex.org/W3194937248",
+          "label": "relevant",
+          "reason": "Title/abstract substantively examines a climate-change risk, impact, vulnerability, adaptation, or resilience response."
+        },
+        {
+          "work_id": "https://openalex.org/W4200297278",
+          "label": "borderline",
+          "reason": "The work is climate-related, but risk/impact/adaptation is secondary or only indirectly supported."
+        }
+      ]
+    },
+    {
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "counts": {
+        "relevant": 15,
+        "borderline": 8,
+        "irrelevant": 7
+      },
+      "judgments": [
+        {
+          "work_id": "https://openalex.org/W4387843347",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4307877630",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4386280880",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W3214100756",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W3157282098",
+          "label": "borderline",
+          "reason": "A healthcare model or digital-twin concept is present, but their direct connection or centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4285066477",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4304092601",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4360983041",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4386825087",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4226090547",
+          "label": "borderline",
+          "reason": "A healthcare model or digital-twin concept is present, but their direct connection or centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4386781585",
+          "label": "irrelevant",
+          "reason": "The work is not substantively about digital twins in a healthcare or medical setting."
+        },
+        {
+          "work_id": "https://openalex.org/W4389436121",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W7117294328",
+          "label": "irrelevant",
+          "reason": "The work is not substantively about digital twins in a healthcare or medical setting."
+        },
+        {
+          "work_id": "https://openalex.org/W4388909877",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4387030842",
+          "label": "irrelevant",
+          "reason": "The work is not substantively about digital twins in a healthcare or medical setting."
+        },
+        {
+          "work_id": "https://openalex.org/W3204249062",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W3207034280",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W3040613403",
+          "label": "borderline",
+          "reason": "A healthcare model or digital-twin concept is present, but their direct connection or centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W3214588890",
+          "label": "irrelevant",
+          "reason": "The work is not substantively about digital twins in a healthcare or medical setting."
+        },
+        {
+          "work_id": "https://openalex.org/W3013665273",
+          "label": "irrelevant",
+          "reason": "The work is not substantively about digital twins in a healthcare or medical setting."
+        },
+        {
+          "work_id": "https://openalex.org/W4386495603",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4327809914",
+          "label": "irrelevant",
+          "reason": "The work is not substantively about digital twins in a healthcare or medical setting."
+        },
+        {
+          "work_id": "https://openalex.org/W4295046679",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4295951577",
+          "label": "borderline",
+          "reason": "A healthcare model or digital-twin concept is present, but their direct connection or centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4362678418",
+          "label": "borderline",
+          "reason": "A healthcare model or digital-twin concept is present, but their direct connection or centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4394842328",
+          "label": "borderline",
+          "reason": "A healthcare model or digital-twin concept is present, but their direct connection or centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4313214567",
+          "label": "borderline",
+          "reason": "A healthcare model or digital-twin concept is present, but their direct connection or centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4319736366",
+          "label": "relevant",
+          "reason": "Title/abstract directly applies or evaluates digital-twin technology in healthcare, medicine, or patient care."
+        },
+        {
+          "work_id": "https://openalex.org/W4386572626",
+          "label": "irrelevant",
+          "reason": "The work is not substantively about digital twins in a healthcare or medical setting."
+        },
+        {
+          "work_id": "https://openalex.org/W4386355924",
+          "label": "borderline",
+          "reason": "A healthcare model or digital-twin concept is present, but their direct connection or centrality is uncertain."
+        }
+      ]
+    },
+    {
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "counts": {
+        "relevant": 11,
+        "borderline": 16,
+        "irrelevant": 3
+      },
+      "judgments": [
+        {
+          "work_id": "https://openalex.org/W1980192605",
+          "label": "irrelevant",
+          "reason": "The metadata does not substantively address plant heat-and-drought stress."
+        },
+        {
+          "work_id": "https://openalex.org/W2744552328",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2001994886",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2349992986",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W4395020123",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W3000675609",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W2790050480",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2990926784",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W271423532",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W3212750538",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W1999030144",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W3205549233",
+          "label": "irrelevant",
+          "reason": "The metadata does not substantively address plant heat-and-drought stress."
+        },
+        {
+          "work_id": "https://openalex.org/W2888101694",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W4237957179",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2287713844",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2115204306",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W3210423821",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W3185321953",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W2103447958",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W2324402161",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W3170342956",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W1937840208",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2734627122",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2015197291",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2613305640",
+          "label": "irrelevant",
+          "reason": "The metadata does not substantively address plant heat-and-drought stress."
+        },
+        {
+          "work_id": "https://openalex.org/W2109485318",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        },
+        {
+          "work_id": "https://openalex.org/W2794571257",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W3106660984",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W3128802970",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies plant responses or tolerance to both heat and drought, often in combination."
+        },
+        {
+          "work_id": "https://openalex.org/W2569069626",
+          "label": "borderline",
+          "reason": "The plant study covers only one stress or broad abiotic stress, so the heat–drought intersection is incomplete."
+        }
+      ]
+    },
+    {
+      "dataset_id": "gene_editing_als_2004_2024",
+      "counts": {
+        "relevant": 7,
+        "borderline": 9,
+        "irrelevant": 14
+      },
+      "judgments": [
+        {
+          "work_id": "https://openalex.org/W4380576436",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W3003098361",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3203933728",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W3177131040",
+          "label": "relevant",
+          "reason": "Title/abstract directly uses or evaluates gene editing for ALS modeling, mechanism, or therapy."
+        },
+        {
+          "work_id": "https://openalex.org/W2803476128",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W4365791131",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3107500297",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W3011809905",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W2785267239",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W4310588932",
+          "label": "relevant",
+          "reason": "Title/abstract directly uses or evaluates gene editing for ALS modeling, mechanism, or therapy."
+        },
+        {
+          "work_id": "https://openalex.org/W4283725767",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W3188113104",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3014186646",
+          "label": "relevant",
+          "reason": "Title/abstract directly uses or evaluates gene editing for ALS modeling, mechanism, or therapy."
+        },
+        {
+          "work_id": "https://openalex.org/W4383373908",
+          "label": "relevant",
+          "reason": "Title/abstract directly uses or evaluates gene editing for ALS modeling, mechanism, or therapy."
+        },
+        {
+          "work_id": "https://openalex.org/W4388384742",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W3204532686",
+          "label": "relevant",
+          "reason": "Title/abstract directly uses or evaluates gene editing for ALS modeling, mechanism, or therapy."
+        },
+        {
+          "work_id": "https://openalex.org/W2327220838",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3185836147",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W2797519282",
+          "label": "relevant",
+          "reason": "Title/abstract directly uses or evaluates gene editing for ALS modeling, mechanism, or therapy."
+        },
+        {
+          "work_id": "https://openalex.org/W4308735856",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W4281759792",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4386209643",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4327550261",
+          "label": "borderline",
+          "reason": "ALS and genetic intervention are related, but explicit gene editing or its centrality is uncertain."
+        },
+        {
+          "work_id": "https://openalex.org/W4231975754",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W3013381491",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W2972017733",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W7136152670",
+          "label": "relevant",
+          "reason": "Title/abstract directly uses or evaluates gene editing for ALS modeling, mechanism, or therapy."
+        },
+        {
+          "work_id": "https://openalex.org/W4385852683",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W2900258644",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        },
+        {
+          "work_id": "https://openalex.org/W2579051931",
+          "label": "irrelevant",
+          "reason": "The work concerns ALS, genetics, or neurodegeneration without a substantive gene-editing focus."
+        }
+      ]
+    },
+    {
+      "dataset_id": "global_microplastics_2004_2019",
+      "counts": {
+        "relevant": 24,
+        "borderline": 2,
+        "irrelevant": 4
+      },
+      "judgments": [
+        {
+          "work_id": "https://openalex.org/W2909484550",
+          "label": "irrelevant",
+          "reason": "The apparent topic is not environmental microplastic pollution."
+        },
+        {
+          "work_id": "https://openalex.org/W3080521020",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2787921376",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2966973695",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2790774653",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W621532535",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2314540696",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2903437666",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2995351090",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2907599928",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2946202260",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W3198387464",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2895448096",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2765305810",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2997010089",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2054536143",
+          "label": "irrelevant",
+          "reason": "The apparent topic is not environmental microplastic pollution."
+        },
+        {
+          "work_id": "https://openalex.org/W4241878433",
+          "label": "borderline",
+          "reason": "Plastic pollution is relevant, but the microplastics focus is broad, indirect, or adjacent."
+        },
+        {
+          "work_id": "https://openalex.org/W2987640467",
+          "label": "borderline",
+          "reason": "Plastic pollution is relevant, but the microplastics focus is broad, indirect, or adjacent."
+        },
+        {
+          "work_id": "https://openalex.org/W2783503112",
+          "label": "irrelevant",
+          "reason": "The apparent topic is not environmental microplastic pollution."
+        },
+        {
+          "work_id": "https://openalex.org/W2733598286",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2735977812",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2806489069",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2917111661",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2626788639",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2898933860",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2807695907",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2092009824",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W3141952335",
+          "label": "irrelevant",
+          "reason": "The apparent topic is not environmental microplastic pollution."
+        },
+        {
+          "work_id": "https://openalex.org/W2762638481",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        },
+        {
+          "work_id": "https://openalex.org/W2900740505",
+          "label": "relevant",
+          "reason": "Title/abstract directly studies environmental microplastics, including occurrence, effects, detection, or analysis."
+        }
+      ]
+    }
+  ]
+}

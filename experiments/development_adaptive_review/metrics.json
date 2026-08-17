@@ -1,0 +1,44 @@
+{
+  "protocol_version": "formal-adaptive-v2-constrained-human-proxy",
+  "manifest_sha256": "f675ace5f040d9f8d09a3b578188e8890186526526eb8d83a9d9109f9d042eb9",
+  "metrics": {
+    "always_review": {
+      "items": 12,
+      "review_requests": 12,
+      "review_request_rate": 1.0,
+      "quality_passes": 12,
+      "final_quality_pass_rate": 1.0,
+      "auto_accepted_items": 0,
+      "unsafe_auto_accepts": 0,
+      "unsafe_auto_accept_rate": null,
+      "unsafe_auto_accept_rate_denominator": "auto_accepted_items",
+      "feedback_memory_records": 12
+    },
+    "static_review": {
+      "items": 12,
+      "review_requests": 8,
+      "review_request_rate": 0.6666666666666666,
+      "quality_passes": 12,
+      "final_quality_pass_rate": 1.0,
+      "auto_accepted_items": 4,
+      "unsafe_auto_accepts": 0,
+      "unsafe_auto_accept_rate": 0.0,
+      "unsafe_auto_accept_rate_denominator": "auto_accepted_items",
+      "feedback_memory_records": 8
+    },
+    "adaptive_review": {
+      "items": 12,
+      "review_requests": 12,
+      "review_request_rate": 1.0,
+      "quality_passes": 12,
+      "final_quality_pass_rate": 1.0,
+      "auto_accepted_items": 0,
+      "unsafe_auto_accepts": 0,
+      "unsafe_auto_accept_rate": null,
+      "unsafe_auto_accept_rate_denominator": "auto_accepted_items",
+      "feedback_memory_records": 12
+    }
+  },
+  "evaluation_feedback_leakage": false,
+  "computed_at": "2026-08-06T08:27:17.731428+00:00"
+}

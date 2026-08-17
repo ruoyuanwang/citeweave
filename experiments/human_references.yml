@@ -1,0 +1,165 @@
+schema_version: "1.0"
+frozen_at: "2026-08-06"
+independent_query_required: true
+same_query_or_database_required: false
+human_numeric_results_are_gold: false
+
+references:
+  - id: gnn_drug_discovery_2017_2023
+    role: development
+    topic: Graph neural networks for drug discovery
+    title: "Knowledge mapping of graph neural networks for drug discovery: a bibliometric and visualized analysis"
+    doi: "10.3389/fphar.2024.1393415"
+    pmcid: "PMC11116974"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11116974/"
+    reference_year_from: 2017
+    reference_year_to: 2023
+    reference_corpus_size: 652
+    analysis_types:
+      - performance_analysis
+      - coauthorship_analysis
+      - cocitation_analysis
+      - keyword_cooccurrence
+      - clustering
+      - thematic_trend_analysis
+    reference_only: true
+
+  - id: crispr_extracellular_vesicles_2015_2022
+    role: development
+    topic: CRISPR-related technologies associated with extracellular vesicles
+    title: "Global research trends in CRISPR-related technologies associated with extracellular vesicles from 2015 to 2022: a bibliometric, dynamic, and visualized study"
+    doi: "10.1186/s11658-023-00507-z"
+    pmcid: "PMC10693129"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10693129/"
+    reference_year_from: 2015
+    reference_year_to: 2022
+    reference_corpus_size: 219
+    analysis_types:
+      - performance_analysis
+      - collaboration_analysis
+      - keyword_cooccurrence
+      - clustering
+      - thematic_evolution
+      - citation_burst_analysis
+    reference_only: true
+
+  - id: machine_learning_climate_change_2008_2022
+    role: locked
+    topic: Machine learning applications in climate change research
+    title: "A research landscape bibliometric analysis on climate change for last decades: Evidence from applications of machine learning"
+    doi: "10.1016/j.heliyon.2023.e20297"
+    pmcid: "PMC10539970"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10539970/"
+    reference_year_from: 2008
+    reference_year_to: 2022
+    reference_corpus_size: 1907
+    analysis_types:
+      - performance_analysis
+      - coauthorship_analysis
+      - keyword_cooccurrence
+      - citation_analysis
+      - clustering
+      - thematic_trend_analysis
+    reference_only: true
+
+  - id: climate_change_risks_1990_2021
+    role: locked
+    topic: Climate change risks
+    title: "Feature extraction and classification of climate change risks: a bibliometric analysis"
+    doi: "10.1007/s10661-022-10074-z"
+    pmcid: "PMC9188839"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9188839/"
+    reference_year_from: 1990
+    reference_year_to: 2021
+    reference_corpus_size: 2027
+    analysis_types:
+      - coauthorship_analysis
+      - citation_analysis
+      - bibliographic_coupling
+      - cocitation_analysis
+      - keyword_cooccurrence
+      - clustering
+      - text_mining
+    reference_only: true
+
+  - id: digital_twins_healthcare_2012_2024
+    role: locked
+    topic: Digital twins in healthcare
+    title: "The Rise of Digital Twins in Healthcare: A Mapping of the Research Landscape"
+    doi: "10.7759/cureus.65358"
+    pmcid: "PMC11344555"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11344555/"
+    reference_year_from: 2012
+    reference_year_to: 2024
+    formal_year_from: 2012
+    formal_year_to: 2023
+    reference_corpus_size: 1663
+    analysis_types:
+      - performance_analysis
+      - coauthorship_analysis
+      - collaboration_analysis
+      - cocitation_analysis
+      - keyword_cooccurrence
+      - clustering
+    reference_only: true
+
+  - id: plant_heat_drought_2008_2021
+    role: locked
+    topic: Plant responses to high temperature and drought
+    title: "Plant responses to high temperature and drought: A bibliometrics analysis"
+    doi: "10.3389/fpls.2022.1052660"
+    pmcid: "PMC9681914"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9681914/"
+    reference_year_from: 2008
+    reference_year_to: 2021
+    reference_corpus_size: 3782
+    analysis_types:
+      - performance_analysis
+      - institutional_collaboration
+      - keyword_cooccurrence
+      - clustering
+      - thematic_trend_analysis
+      - citation_analysis
+    reference_only: true
+
+  - id: gene_editing_als_2004_2024
+    role: locked
+    topic: Gene editing and amyotrophic lateral sclerosis
+    title: "A bibliometric analysis of gene editing and amyotrophic lateral sclerosis (from 2004 to 2024)"
+    doi: "10.3389/fnins.2024.1499025"
+    pmcid: "PMC11629316"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11629316/"
+    reference_year_from: 2004
+    reference_year_to: 2024
+    formal_year_from: 2004
+    formal_year_to: 2023
+    reference_corpus_size: 1292
+    analysis_types:
+      - performance_analysis
+      - coauthorship_analysis
+      - citation_analysis
+      - cocitation_analysis
+      - keyword_cooccurrence
+      - clustering
+      - citation_burst_analysis
+    reference_only: true
+
+  - id: global_microplastics_2004_2019
+    role: locked
+    topic: Global microplastics research
+    title: "Bibliometric Profile of Global Microplastics Research from 2004 to 2019"
+    doi: "10.3390/ijerph17165639"
+    pmcid: "PMC7459863"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7459863/"
+    reference_year_from: 2004
+    reference_year_to: 2019
+    reference_corpus_size: 2637
+    analysis_types:
+      - performance_analysis
+      - country_collaboration
+      - coauthorship_analysis
+      - cocitation_analysis
+      - keyword_cooccurrence
+      - clustering
+      - research_hotspot_analysis
+    reference_only: true

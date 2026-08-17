@@ -1,0 +1,745 @@
+{
+  "benchmark_version": 1,
+  "items": 30,
+  "predictions_received": 30,
+  "metrics": {
+    "exact_answer_accuracy": 0.16666666666666666,
+    "schema_valid_rate": 0.9333333333333333,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 1.0,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.06666666666666665,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 0.8333333333333334,
+    "abstention_recall": 0.5,
+    "abstention_f1": 0.625
+  },
+  "counts": {
+    "correct": 5,
+    "answered": 20,
+    "incorrect_answered": 20,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 20,
+    "abstention": {
+      "tn": 19,
+      "tp": 5,
+      "fn": 5,
+      "fp": 1
+    }
+  },
+  "by_task": {
+    "cluster_membership": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_occurrence": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.8333333333333334,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_connection": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 0.8333333333333334,
+      "schema_valid_rate": 0.8333333333333334,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.6,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 1000,
+          "links": 5000
+        },
+        "explanation": "The bibliographic coupling network for machine learning and climate change (2008-2022) contains 1000 nodes and 5000 links as specified in the supplied material."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:highest_occurrence",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Rolnick D, 2022"
+        },
+        "explanation": "The node 'Rolnick D, 2022' has an occurrence value of 20, which is the highest among all labeled nodes in the bibliographic coupling network. Other nodes have lower occurrence values, such as 'Reichstein M, 2019' with 17 and 'Ham Y-G, 2019' with 14."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:strongest_connection",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Rolnick D, 2022",
+          "target_label": "Kaack LH, 2022",
+          "weight": 0.99
+        },
+        "explanation": "The bibliographic coupling network shows edges with weights, and the strongest displayed connection is between Rolnick D, 2022 and Kaack LH, 2022 with a weight of 0.99, as indicated by the thickest edge and the label on the edge."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Tackling Climate Change with Machine Learning",
+          "cluster": 1
+        },
+        "explanation": "The node labeled 'Tackling Climate Change with Machine Learning' is shown in the bibliographic coupling network as part of Cluster 1, which is colored red and includes other nodes like 'Machine learning for sustainable development' and 'Machine learning for climate science and Earth observation'."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:false_premise",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question refers to a 'CiteWeave absent benchmark node', but the supplied material does not mention any node with that label or provide a bibliographic coupling network. Therefore, it is impossible to determine which cluster contains it."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:citation:network_size",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:citation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "links": 0
+        },
+        "explanation": "The supplied material does not contain any information about a citation network, its nodes, or links, so the network size cannot be determined."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:citation:highest_occurrence",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "citation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:citation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "machine learning"
+        },
+        "explanation": "The node 'machine learning' has the highest occurrence with a value of 1, as indicated by its size and label in the citation network."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:citation:strongest_connection",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "citation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:citation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Rolnick D",
+          "target_label": "Kaack LH",
+          "weight": 5
+        },
+        "explanation": "The citation network shows a directed edge from Rolnick D to Kaack LH with a weight of 5, which is the highest weight among all displayed connections. Other edges have weights of 1 or 2, making this the strongest connection."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:citation:cluster_membership",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "citation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:citation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Deep learning in remote…",
+          "cluster": 1
+        },
+        "explanation": "The node labeled 'Deep learning in remote…' is visually located in the red cluster, which corresponds to cluster 1 in the legend."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:citation:false_premise",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:citation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The supplied material does not contain any information about a 'CiteWeave absent benchmark node' or a citation network with clusters, so it is impossible to determine which cluster it belongs to."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:coauthorship:network_size",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:coauthorship:network_size",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any information about a coauthorship network, its nodes, or links. No network data or bibliometric details are provided."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:coauthorship:highest_occurrence",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "coauthorship",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:coauthorship:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Monteleoni, Claire"
+        },
+        "explanation": "The coauthorship network shows Monteleoni, Claire with an occurrence value of 14, which is the highest among all labeled nodes. Other nodes have lower occurrence values, such as Huntingford, Chris with 12 and Jones, Chris D. with 11."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:coauthorship:strongest_connection",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "coauthorship",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:coauthorship:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Rolnick, David",
+          "target_label": "Donti, Priya L.",
+          "weight": 5
+        },
+        "explanation": "The coauthorship network shows edges with thickness proportional to the number of co-authored papers. The edge between Rolnick, David and Donti, Priya L. has a weight of 5, which is the highest among all displayed connections."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:coauthorship:cluster_membership",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "coauthorship",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:coauthorship:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Shamsuddin Shahid",
+          "cluster": 1
+        },
+        "explanation": "In the coauthorship network, the node labeled 'Shamsuddin Shahid' is visually located within the red cluster, which corresponds to cluster 1 based on the legend."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:coauthorship:false_premise",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:coauthorship:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question refers to a 'CiteWeave absent benchmark node', but the supplied material does not mention any such node or provide information about clusters in a coauthorship network. Therefore, it is impossible to determine which cluster contains this node, and we must abstain."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:cocitation:network_size",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "nodes": 50,
+        "links": 100,
+        "item_id": "machine_learning_climate_change_2008_2022:cocitation:network_size"
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:cocitation:highest_occurrence",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "cocitation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:cocitation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Reichstein M (2019)"
+        },
+        "explanation": "The node 'Reichstein M (2019)' has the highest occurrence value of 37, as indicated by its size and the legend mapping size to occurrence. No other node has a higher occurrence value."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:cocitation:strongest_connection",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "cocitation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:cocitation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Rolnick D, 2022",
+          "target_label": "Reichstein M, 2019",
+          "weight": 5
+        },
+        "explanation": "In the cocitation network, the edge between 'Rolnick D, 2022' and 'Reichstein M, 2019' has the highest displayed weight of 5, indicating the strongest connection among all labeled pairs."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:cocitation:cluster_membership",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "cocitation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:cocitation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W2911964244",
+          "cluster": 1
+        },
+        "explanation": "The node 'openalex:W2911964244' is listed in the cluster membership table under Cluster 1, which includes nodes such as 'openalex:W2911964244', 'openalex:W2911964244', and others. Therefore, it belongs to cluster 1."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:cocitation:false_premise",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:cocitation:false_premise",
+        "abstain": "true",
+        "answer": "",
+        "explanation": "The question asks about a 'CiteWeave absent benchmark node' in the cocitation network, but the supplied material does not mention any such node or provide a cocitation network. Therefore, the premise is false, and we must abstain."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:network_size",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:network_size",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any information about the institution_collaboration network, including the number of nodes and links."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:highest_occurrence",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "institution_collaboration",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:highest_occurrence",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any data or description of an institution_collaboration network, so it is impossible to determine which labeled node has the highest occurrence."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:strongest_connection",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "institution_collaboration",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Chinese Acad Sci",
+          "target_label": "Univ Chinese Acad Sci",
+          "weight": 0.001
+        },
+        "explanation": "The institution_collaboration network shows a link between Chinese Acad Sci and Univ Chinese Acad Sci with a weight of 0.001, which is the only visible connection in the provided material. No other edges are displayed, so this is the strongest connection by default."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:cluster_membership",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "institution_collaboration",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:cluster_membership",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not include any information about a bibliometric network, clusters, or the node labeled 'Chinese Academy of Scienc…'. Therefore, it is impossible to determine the cluster membership."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:false_premise",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The supplied material does not contain any information about a 'CiteWeave absent benchmark node' or an institution_collaboration network, so the premise is false and the question cannot be answered."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:network_size",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "links": 0
+        },
+        "explanation": "The supplied material does not contain any information about a keyword co-occurrence network, so no nodes or links are displayed."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:highest_occurrence",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "climate change"
+        },
+        "explanation": "The node 'climate change' has the largest size, indicating the highest occurrence, as node size is proportional to occurrence frequency in the keyword co-occurrence network."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:strongest_connection",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "climate change",
+          "target_label": "machine learning",
+          "weight": 100
+        },
+        "explanation": "The network shows a connection between 'climate change' and 'machine learning' with a weight of 100, which is the highest among all displayed edges. Other connections have lower weights, such as 'climate change' to 'adaptation' (weight 50) and 'machine learning' to 'deep learning' (weight 80). Therefore, this pair has the strongest displayed connection."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:cluster_membership",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:cluster_membership",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not include any information about a keyword co-occurrence network, its clusters, or a node labeled 'Environmental science'. Therefore, it is impossible to determine the cluster membership."
+      }
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:false_premise",
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The supplied material does not contain any information about a 'CiteWeave absent benchmark node' or a keyword co-occurrence network. Therefore, it is impossible to determine which cluster contains this node, and the premise is false."
+      }
+    }
+  ],
+  "formal_metadata": {
+    "dataset_id": "machine_learning_climate_change_2008_2022",
+    "condition": "no_rag",
+    "run_id": "formal_v2_nonthinking_20260806",
+    "run_manifest_sha256": "c75f817c7c449726f0c17e329c04b34bc4154847078ae1451fa71669ea2668f2",
+    "checkpoint_sha256": "ab54b6fa9f4886ff48ada877bab52d0f8612dd10adaa081d560cb194ba446df1",
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate",
+      "abstention_f1"
+    ]
+  }
+}

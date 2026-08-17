@@ -1,0 +1,60 @@
+{
+  "packet_id": "FP9272866c2ff989b92c95",
+  "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "abstain": "true"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:absent_target"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:absent_target",
+          "network": "bibliographic_coupling",
+          "object": false,
+          "object_type": "boolean",
+          "predicate": "contains_visible_label",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "4dc1c20ea265bfd424786d0da27cab7841e52ed8bf9b5feb536947ba1ff8ed0e"
+    },
+    "question": "Which cluster contains 'CiteWeave absent benchmark node' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":true,\"answer\":null,\"explanation\":\"The context states that the bibliographic coupling network does not contain a visible label for 'CiteWeave absent benchmark node', as indicated by the relationship 'contains_visible_label' being false. Therefore, the node is absent from the network, making the question unanswerable.\",\"item_id\":\"gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:unanswerable_false_premise",
+    "issue_signature": "graph:unanswerable_false_premise",
+    "severity": "medium",
+    "detector_score": 0.55,
+    "message": "The system flagged the quoted unanswerable_false_premise answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":true,\"answer\":null,\"explanation\":\"The context states that the bibliographic coupling network does not contain a visible label for 'CiteWeave absent benchmark node', as indicated by the relationship 'contains_visible_label' being false. Therefore, the node is absent from the network, making the question unanswerable.\",\"item_id\":\"gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "f1cb43e10d4fec74773edf04c84c786273f8a1c06d0d06af6134c064b10bb1d5"
+}

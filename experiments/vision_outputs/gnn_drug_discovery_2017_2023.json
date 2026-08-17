@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "packet_sha256": "d03e9591487e5bfbf0a1778286f05760ec7a5ab10edbc4219d9464282c7f14b9",
+  "dataset_id": "gnn_drug_discovery_2017_2023",
+  "generator_role": "codex_visual_subagent",
+  "visible_only": true,
+  "results": [
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 210
+      },
+      "explanation": "The visible figure subtitle states 72 nodes and 210 links."
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:citation:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 5,
+        "links": 3
+      },
+      "explanation": "The visible figure subtitle states 5 nodes and 3 links."
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:coauthorship:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 60,
+        "links": 127
+      },
+      "explanation": "The visible figure subtitle states 60 nodes and 127 links."
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:cocitation:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 194
+      },
+      "explanation": "The visible figure subtitle states 72 nodes and 194 links."
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 71,
+        "links": 138
+      },
+      "explanation": "The visible figure subtitle states 71 nodes and 138 links."
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 198
+      },
+      "explanation": "The visible figure subtitle states 72 nodes and 198 links."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "packet_id": "EP80db886b932ba18be90b",
+  "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.3390/ijms21197362:cluster",
+        "bibliographic_coupling:node:doi:10.3390/ijms21197362:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.3390/ijms21197362"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3390/ijms21197362:cluster",
+          "network": "bibliographic_coupling",
+          "object": 1,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.3390/ijms21197362"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3390/ijms21197362:label",
+          "network": "bibliographic_coupling",
+          "object": "Gene Editing by Extracel…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.3390/ijms21197362"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "11aeeb268cd7eac81742b5cc974d22e261c6845b588456520dc08937262cc317"
+    },
+    "question": "Which detected cluster contains the labeled node 'Gene Editing by Extracel…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":1,\"label\":\"Gene Editing by Extracel…\"},\"explanation\":\"The context provides a relationship where the node with label 'Gene Editing by Extracel…' has a cluster predicate with object 1. This directly indicates that the node belongs to cluster 1.\",\"item_id\":\"crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3390/ijms21197362:cluster",
+    "bibliographic_coupling:node:doi:10.3390/ijms21197362:label"
+  ],
+  "content_sha256": "a8150a45886326b52b9eb3bb2f41362d0d138d96e9e9d3594803651e6382ee5d"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "blind_exchange": true,
+  "condition_identity_visible": false,
+  "packets": [
+    {
+      "packet_id": "EP17d46e22230454dae929",
+      "kind": "evaluation",
+      "packet_sha256": "c9cd053a2da17c89843246d0da732d291c457eaf3e825d1911285e22dfc48bc7"
+    },
+    {
+      "packet_id": "EPde9a9dc8b1f72bed0b5c",
+      "kind": "evaluation",
+      "packet_sha256": "69caadaa7c7559b847580bacb356ac7e4d29e7ac5688655709751fc6785ffb09"
+    }
+  ],
+  "result_directories": {
+    "feedback": "results/feedback",
+    "evaluation": "results/evaluation"
+  }
+}

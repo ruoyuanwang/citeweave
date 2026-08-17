@@ -1,0 +1,12 @@
+{
+  "packet_id": "FPb7d0d88588e6364f79f3",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The candidate accurately reports the evidenced display label and integer cluster membership.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:label"
+  ],
+  "suggested_revision": null
+}

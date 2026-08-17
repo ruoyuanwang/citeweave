@@ -1,0 +1,13 @@
+{
+  "packet_id": "FP579400a5dc4b6605535e",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible evidence identifies the DOI node as the highest-occurrence node and gives the same display label as the answer.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:occurrences"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

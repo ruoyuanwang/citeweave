@@ -1,0 +1,11 @@
+{
+  "packet_id": "EP4a9c625084dcff8570dd",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 0.99,
+  "reason": "The returned visible label is exactly the node identified as having the highest occurrence.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label"
+  ]
+}

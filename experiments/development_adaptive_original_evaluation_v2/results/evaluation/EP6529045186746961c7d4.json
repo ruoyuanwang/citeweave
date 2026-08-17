@@ -1,0 +1,8 @@
+{
+  "packet_id": "EP6529045186746961c7d4",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 0.94,
+  "reason": "The graph-neural-networks-in-drug-discovery bibliometric report accurately presents the 456-work corpus and its 2023 peak of 190 works, with appropriate source and citation-window caveats; its substantive claims are supported by the supplied evidence.",
+  "evidence_ids": ["E001", "E002", "E005", "E015", "E023"]
+}

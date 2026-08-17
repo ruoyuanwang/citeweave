@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "AP04c8f7f7d6a2271daf1f",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The pass decision is consistent because both displayed endpoint labels and the strongest weight 65.0 match the canonical evidence."
+}

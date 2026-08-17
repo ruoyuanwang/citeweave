@@ -1,0 +1,72 @@
+version: 1
+reviewer_code: H-CODEX-01
+policy:
+  minimum_confirmations: 2
+  auto_accept_threshold: 0.95
+  audit_rate: 0.0
+quality_thresholds:
+  abstract_target: 0.70
+  abstract_hard_floor: 0.30
+  topic_relevance_floor: 0.90
+
+rounds:
+  - round_id: R1_graph_curated
+    dataset_id: rag_graph_2022_2025
+    run_record: experiments/runs/rag_graph_2022_2025/baseline.json
+  - round_id: R2_crispr
+    dataset_id: crispr_editing_2018_2020
+    run_record: experiments/runs/crispr_editing_2018_2020/baseline.json
+  - round_id: R3_quantum_candidate
+    dataset_id: quantum_machine_learning_2019_2021
+    run_record: experiments/runs/quantum_machine_learning_2019_2021/candidate-low-relevance-rejected.json
+    workspace: experiments/workspaces/quantum_machine_learning_2019_2021-low-relevance-rejected
+  - round_id: R4_quantum_corrected
+    dataset_id: quantum_machine_learning_2019_2021
+    run_record: experiments/runs/quantum_machine_learning_2019_2021/baseline.json
+  - round_id: R5_climate_locked
+    dataset_id: climate_adaptation_2018_2020
+    run_record: experiments/runs/climate_adaptation_2018_2020/baseline.json
+
+human_decisions:
+  R1_graph_curated:
+    structured_graph_claim_unverified:
+      decision: accept
+      review_seconds_total: 3.85
+      reason: "Accepted after batch verification that each answer matches its fact node, every cited node and edge exists, false-premise targets are absent, and no entity ID is double-prefixed."
+    abstract_coverage_below_target:
+      decision: accept
+      review_seconds: 11.4
+      reason: "Accepted for metadata-network analysis: topic relevance is 0.983, acquisition is complete, and the report explicitly limits network interpretation; abstract-dependent semantic claims remain out of scope."
+  R2_crispr:
+    structured_graph_claim_unverified:
+      decision: accept
+      review_seconds_total: 3.85
+      reason: "Accepted after batch verification that each answer matches its fact node, every cited node and edge exists, false-premise targets are absent, and duplicate titles are disambiguated with stable IDs."
+    abstract_coverage_below_target:
+      decision: accept
+      review_seconds: 9.8
+      reason: "Accepted for metadata-network analysis: topic relevance is 0.930, DOI/title coverage is complete, 194 works contain references, and abstract-dependent semantic claims remain out of scope."
+    truncated_registered_sample:
+      decision: accept
+      review_seconds: 11.1
+      reason: "Accepted as a registered 300-record benchmark sample, not a source census; no page failed, the raw page is hashed, and truncation is disclosed in the manuscript."
+  R3_quantum_candidate:
+    abstract_coverage_below_target:
+      decision: accept
+      review_seconds: 2.5
+      reason: "Accepted only after the separate relevance correction raised core-term coverage from 0.823 to 1.000; the uncorrected context was not eligible for automatic acceptance."
+    truncated_registered_sample:
+      decision: accept
+      review_seconds: 6.7
+      reason: "Accepted only as a sampling-property decision: the 300-record cap was registered, no page failed, and the frozen raw page is hashed. Topic relevance is evaluated by a separate gate."
+    topic_relevance_below_floor:
+      decision: correct
+      review_seconds: 6.0
+      reason: "Corrected because 0.823 core-term relevance is below the registered 0.900 floor."
+      correction:
+        action: deterministic_core_term_filter
+        terms: [quantum, learning]
+        eligible_before_cap: 405
+        selected: 300
+        corrected_all_terms_rate: 1.0
+        curated_sha256: d3e1e8ea89e8cc127b787e468d7ca4da429d5f83d80368cde236101b95eae0f9

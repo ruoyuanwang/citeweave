@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v4",
+  "prompt_sha256": "abd049df349329135d89a32b7b3110cb9830ef1ec046e0fc4a7a35ddfdb75f07",
+  "packet_sha256": "78fe9f27fb7f40bc28c60d51c7602ecc8c0dc8ba2dc742a22a53cebbe6c9d4c8",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "reject",
+      "reason": "The exact phrases cover both essential dimensions but omit common GNN terminology such as GNN, graph convolutional network, and related model names, causing substantial recall loss."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "reject",
+      "reason": "Both essential dimensions are present, but requiring the exact phrase \"extracellular vesicles\" misses a large body of relevant CRISPR work described only with terms such as exosome or EV."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "reject",
+      "reason": "The query is topically precise but not sufficiently inclusive because it omits obvious terminology such as deep learning or artificial intelligence and global warming, producing systematic recall loss."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "The Boolean expression has correct grouping, requires the climate-change dimension, and supplies a broad but still relevant set of risk, vulnerability, impact, threat, and hazard terms."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "reject",
+      "reason": "Requiring only \"healthcare\" omits common domain expressions such as health care, medical, clinical, and medicine, so the two essential dimensions are represented but recall is inadequate."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "The parentheses are correct and the expression independently requires plant context, heat stress, and drought or water-deficit stress, with useful synonyms for each essential dimension."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "reject",
+      "reason": "The query is precise but omits common equivalents for both dimensions, especially genome editing and ALS, so it will miss relevant records that do not spell out the two exact phrases."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "Microplastics is an unambiguous field term, and for a global mapping topic the absence of a geographic filter correctly implements global coverage without adding unrelated concepts."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "analysis_version": 2,
+  "paired_items": 29,
+  "graph_condition": "graph_rag",
+  "no_graph_condition": "no_graph",
+  "graph_metrics": {
+    "accuracy": 0.7241379310344828,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.34782608695652173,
+    "statement_claim_coverage": 1.0,
+    "format_failure_rate": 0.27586206896551724,
+    "evidence_path_validity": 0.8260869565217391
+  },
+  "no_graph_metrics": {
+    "accuracy": 0.20689655172413793,
+    "unsupported_claim_rate": 1.0,
+    "structured_unsupported_answer_rate": 1.0,
+    "statement_claim_coverage": 0.5652173913043478,
+    "format_failure_rate": 0.7931034482758621,
+    "evidence_path_validity": 0.0
+  },
+  "effects": {
+    "accuracy_difference": 0.5172413793103449,
+    "accuracy_difference_bootstrap_95_ci": [
+      0.3448275862068965,
+      0.6896551724137931
+    ],
+    "accuracy_difference_topic_stratified_bootstrap_95_ci": [
+      0.3448275862068965,
+      0.6896551724137931
+    ],
+    "unsupported_claim_rate_reduction": 1.0,
+    "unsupported_claim_rate_reduction_bootstrap_95_ci": [
+      1.0,
+      1.0
+    ],
+    "unsupported_claim_rate_reduction_topic_stratified_bootstrap_95_ci": [
+      1.0,
+      1.0
+    ]
+  },
+  "mcnemar_exact": {
+    "graph_only_correct": 15,
+    "no_graph_only_correct": 0,
+    "discordant_pairs": 15,
+    "two_sided_p_value": 6.103515625e-05
+  },
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 42,
+    "strata": [
+      "climate_adaptation_2018_2020"
+    ]
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "graph_accuracy": 0.8,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.6000000000000001
+    },
+    "citation": {
+      "items": 5,
+      "graph_accuracy": 0.6,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.39999999999999997
+    },
+    "coauthorship": {
+      "items": 5,
+      "graph_accuracy": 0.6,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.39999999999999997
+    },
+    "cocitation": {
+      "items": 5,
+      "graph_accuracy": 1.0,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.8
+    },
+    "institution_collaboration": {
+      "items": 4,
+      "graph_accuracy": 0.5,
+      "no_graph_accuracy": 0.25,
+      "accuracy_difference": 0.25
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "graph_accuracy": 0.8,
+      "no_graph_accuracy": 0.2,
+      "accuracy_difference": 0.6000000000000001
+    }
+  },
+  "dataset_id": "climate_adaptation_2018_2020",
+  "model": "qwen2.5-1.5b-q4km",
+  "graph_run": "experiments\\runs\\climate_adaptation_2018_2020\\llm_graph_rag_qwen2.5-1.5b-q4km.json",
+  "no_graph_run": "experiments\\runs\\climate_adaptation_2018_2020\\llm_no_graph_qwen2.5-1.5b-q4km.json"
+}

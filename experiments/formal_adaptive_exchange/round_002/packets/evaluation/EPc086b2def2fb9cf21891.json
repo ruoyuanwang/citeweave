@@ -1,0 +1,3183 @@
+{
+  "packet_id": "EPc086b2def2fb9cf21891",
+  "sample_id": "gnn_drug_discovery_2017_2023:report:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": [
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": null,
+      "claim_type": "corpus_size",
+      "evidence_id": "E001",
+      "method": "Count of canonical work_id after deterministic exact deduplication.",
+      "selector": {},
+      "statement": "The included corpus contains 456 unique works.",
+      "unit": null,
+      "value": 456
+    },
+    {
+      "artifact_path": "audit/acquisition_manifest.json",
+      "caveat": "Completeness is relative to the named source, query, time, and retrieval date.",
+      "claim_type": "acquisition_completeness",
+      "evidence_id": "E002",
+      "method": "Cursor pagination continued until the source returned no next cursor.",
+      "selector": {},
+      "statement": "The source reported 456 results and 456 unique source records were acquired.",
+      "unit": null,
+      "value": {
+        "acquired_unique": 456,
+        "complete": true,
+        "expected": 456,
+        "truncated": false
+      }
+    },
+    {
+      "artifact_path": "quality/field_coverage.parquet",
+      "caveat": "Field completeness measures metadata availability, not database recall or the substantive quality of the publications.",
+      "claim_type": "metadata_coverage",
+      "evidence_id": "E003",
+      "method": "Non-null canonical values divided by the canonical corpus size.",
+      "selector": {},
+      "statement": "Field completeness was measured after normalization for every canonical work.",
+      "unit": null,
+      "value": {
+        "abstract": {
+          "coverage_percent": 85.09,
+          "missing": 68,
+          "missing_percent": 14.91,
+          "present": 388
+        },
+        "cited_by_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 456
+        },
+        "document_type": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 456
+        },
+        "doi": {
+          "coverage_percent": 97.37,
+          "missing": 12,
+          "missing_percent": 2.63,
+          "present": 444
+        },
+        "language": {
+          "coverage_percent": 99.56,
+          "missing": 2,
+          "missing_percent": 0.44,
+          "present": 454
+        },
+        "publication_date": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 456
+        },
+        "publisher": {
+          "coverage_percent": 96.05,
+          "missing": 18,
+          "missing_percent": 3.95,
+          "present": 438
+        },
+        "reference_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 456
+        },
+        "source_id": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 456
+        },
+        "title": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 456
+        },
+        "year": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 456
+        }
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": null,
+      "claim_type": "time_span",
+      "evidence_id": "E004",
+      "method": "Minimum and maximum non-missing publication year.",
+      "selector": {},
+      "statement": "The corpus spans 2018–2023.",
+      "unit": null,
+      "value": {
+        "end": 2023,
+        "start": 2018
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_peak",
+      "evidence_id": "E005",
+      "method": "Maximum whole-counted works grouped by publication year.",
+      "selector": {},
+      "statement": "Annual output peaked in 2023 with 190 works.",
+      "unit": null,
+      "value": {
+        "publications": 190,
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "Endpoint CAGR does not establish a monotonic trend.",
+      "claim_type": "growth",
+      "evidence_id": "E006",
+      "method": "CAGR = (last/first)^(1/year difference)-1.",
+      "selector": {},
+      "statement": "Compound annual publication growth over the observed non-zero endpoints is 185.60%.",
+      "unit": null,
+      "value": 185.6
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_output_series",
+      "evidence_id": "E007",
+      "method": "Whole-counted canonical works grouped by non-missing publication year; year-over-year change is the current count minus the preceding count.",
+      "selector": {},
+      "statement": "Annual publication counts are available for every observed year.",
+      "unit": null,
+      "value": [
+        {
+          "publications": 1,
+          "year": 2018,
+          "year_over_year_change": null
+        },
+        {
+          "publications": 12,
+          "year": 2019,
+          "year_over_year_change": 11
+        },
+        {
+          "publications": 41,
+          "year": 2020,
+          "year_over_year_change": 29
+        },
+        {
+          "publications": 75,
+          "year": 2021,
+          "year_over_year_change": 34
+        },
+        {
+          "publications": 137,
+          "year": 2022,
+          "year_over_year_change": 62
+        },
+        {
+          "publications": 190,
+          "year": 2023,
+          "year_over_year_change": 53
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": null,
+      "claim_type": "top_source",
+      "evidence_id": "E008",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Briefings in Bioinformatics ranks first with 45 publications.",
+      "unit": null,
+      "value": {
+        "name": "Briefings in Bioinformatics",
+        "publications": 45
+      }
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_source_ranking",
+      "evidence_id": "E009",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top source records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Briefings in Bioinformatics",
+          "publications": 45
+        },
+        {
+          "name": "Journal of Chemical Information and Modeling",
+          "publications": 40
+        },
+        {
+          "name": "Bioinformatics",
+          "publications": 29
+        },
+        {
+          "name": "IEEE Transactions on Computational Biology and Bioinformatics",
+          "publications": 19
+        },
+        {
+          "name": "Journal of Cheminformatics",
+          "publications": 15
+        },
+        {
+          "name": "BMC Bioinformatics",
+          "publications": 13
+        },
+        {
+          "name": "ACS Omega",
+          "publications": 9
+        },
+        {
+          "name": "Molecules",
+          "publications": 8
+        },
+        {
+          "name": "Computers in Biology and Medicine",
+          "publications": 7
+        },
+        {
+          "name": "Frontiers in Genetics",
+          "publications": 7
+        },
+        {
+          "name": "International Journal of Molecular Sciences",
+          "publications": 7
+        },
+        {
+          "name": "Nature Machine Intelligence",
+          "publications": 7
+        },
+        {
+          "name": "Biomolecules",
+          "publications": 6
+        },
+        {
+          "name": "Computational Biology and Chemistry",
+          "publications": 6
+        },
+        {
+          "name": "Frontiers in Pharmacology",
+          "publications": 6
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": null,
+      "claim_type": "top_author",
+      "evidence_id": "E010",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Thin Nguyen ranks first with 19 publications.",
+      "unit": null,
+      "value": {
+        "name": "Thin Nguyen",
+        "publications": 19
+      }
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_author_ranking",
+      "evidence_id": "E011",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top author records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Thin Nguyen",
+          "publications": 19
+        },
+        {
+          "name": "Dongsheng Cao",
+          "publications": 11
+        },
+        {
+          "name": "Tingjun Hou",
+          "publications": 11
+        },
+        {
+          "name": "Chang‐Yu Hsieh",
+          "publications": 9
+        },
+        {
+          "name": "Mingyue Zheng",
+          "publications": 8
+        },
+        {
+          "name": "Bo-Wei Zhao",
+          "publications": 7
+        },
+        {
+          "name": "Calvin Yu‐Chian Chen",
+          "publications": 7
+        },
+        {
+          "name": "Dingyan Wang",
+          "publications": 6
+        },
+        {
+          "name": "Hualiang Jiang",
+          "publications": 6
+        },
+        {
+          "name": "Jiawei Luo",
+          "publications": 6
+        },
+        {
+          "name": "Zhenhua Wu",
+          "publications": 6
+        },
+        {
+          "name": "Zhu‐Hong You",
+          "publications": 6
+        },
+        {
+          "name": "Lun Hu",
+          "publications": 5
+        },
+        {
+          "name": "Wen Zhang",
+          "publications": 5
+        },
+        {
+          "name": "Xiangxiang Zeng",
+          "publications": 5
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": null,
+      "claim_type": "top_institution",
+      "evidence_id": "E012",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Chinese Academy of Sciences ranks first with 24 publications.",
+      "unit": null,
+      "value": {
+        "name": "Chinese Academy of Sciences",
+        "publications": 24
+      }
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_institution_ranking",
+      "evidence_id": "E013",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top institution records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Chinese Academy of Sciences",
+          "publications": 24
+        },
+        {
+          "name": "Central South University",
+          "publications": 22
+        },
+        {
+          "name": "Hunan University",
+          "publications": 19
+        },
+        {
+          "name": "Zhejiang University",
+          "publications": 18
+        },
+        {
+          "name": "Sun Yat-sen University",
+          "publications": 15
+        },
+        {
+          "name": "Tsinghua University",
+          "publications": 14
+        },
+        {
+          "name": "University of Chinese Academy of Sciences",
+          "publications": 14
+        },
+        {
+          "name": "Shanghai Jiao Tong University",
+          "publications": 13
+        },
+        {
+          "name": "Zhejiang Lab",
+          "publications": 11
+        },
+        {
+          "name": "Northwestern Polytechnical University",
+          "publications": 9
+        },
+        {
+          "name": "East China University of Science and Technology",
+          "publications": 8
+        },
+        {
+          "name": "Fudan University",
+          "publications": 8
+        },
+        {
+          "name": "Harbin Institute of Technology",
+          "publications": 8
+        },
+        {
+          "name": "Nankai University",
+          "publications": 8
+        },
+        {
+          "name": "Nanyang Technological University",
+          "publications": 8
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/document_types.parquet",
+      "caveat": "Document-type labels inherit source classification practices.",
+      "claim_type": "document_type_distribution",
+      "evidence_id": "E014",
+      "method": "Whole-counted canonical works grouped by source-supplied document type.",
+      "selector": {},
+      "statement": "Document types were counted across the complete canonical corpus.",
+      "unit": null,
+      "value": {
+        "review_and_systematic_review_documents": 0,
+        "types": [
+          {
+            "document_type": "article",
+            "publications": 456,
+            "share_percent": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent.",
+      "claim_type": "citation_summary",
+      "evidence_id": "E015",
+      "method": "Citation-count field supplied by the selected source at retrieval time.",
+      "selector": {},
+      "statement": "Mean citations are 59.82 and the median is 24.00.",
+      "unit": null,
+      "value": {
+        "mean": 59.82,
+        "median": 24.0
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "Recent works have had less time to accumulate citations.",
+      "claim_type": "zero_citation_share",
+      "evidence_id": "E016",
+      "method": "Count and percentage of canonical works with cited_by_count equal to zero.",
+      "selector": {},
+      "statement": "22 works have zero source-reported citations, representing 4.82% of the corpus.",
+      "unit": null,
+      "value": {
+        "share_percent": 4.82,
+        "zero_cited": 22
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent; papers have unequal citation windows.",
+      "claim_type": "citation_distribution_detail",
+      "evidence_id": "E017",
+      "method": "Descriptive statistics of the source-supplied cited-by count.",
+      "selector": {},
+      "statement": "Citation-distribution statistics include central tendency, upper quantiles, maximum, and zero-cited count.",
+      "unit": null,
+      "value": [
+        {
+          "metric": "mean",
+          "value": 59.8157894737
+        },
+        {
+          "metric": "median",
+          "value": 24.0
+        },
+        {
+          "metric": "p75",
+          "percentile": 75,
+          "value": 58.0
+        },
+        {
+          "metric": "p90",
+          "percentile": 90,
+          "value": 113.5
+        },
+        {
+          "metric": "p95",
+          "percentile": 95,
+          "value": 227.25
+        },
+        {
+          "metric": "p98",
+          "percentile": 98,
+          "value": 429.7
+        },
+        {
+          "metric": "maximum",
+          "value": 1210.0
+        },
+        {
+          "metric": "zero_cited",
+          "value": 22.0
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_cited_documents.parquet",
+      "caveat": "Raw citation counts favor older publications and do not by themselves measure quality.",
+      "claim_type": "top_cited_documents",
+      "evidence_id": "E018",
+      "method": "Descending source-reported citation count, with publication year as tie-breaker.",
+      "selector": {},
+      "statement": "The most-cited included documents are retained with title, year, DOI, and source-reported citation count.",
+      "unit": null,
+      "value": [
+        {
+          "cited_by_count": 1210,
+          "doi": "10.1093/bioinformatics/btaa921",
+          "title": "GraphDTA: predicting drug–target binding affinity with graph neural networks",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 1056,
+          "doi": "10.1021/acs.jmedchem.9b00959",
+          "title": "Pushing the Boundaries of Molecular Representation for Drug Discovery with the Graph Attention Mechanism",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 842,
+          "doi": "10.1038/s42256-022-00447-x",
+          "title": "Molecular contrastive learning of representations via graph neural networks",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 725,
+          "doi": "10.1093/bioinformatics/bty535",
+          "title": "Compound–protein interaction prediction with end-to-end learning of neural networks for graphs and sequences",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 636,
+          "doi": "10.1186/s13321-020-00479-8",
+          "title": "Could graph neural networks learn better molecular representation for drug discovery? A comparison study of descriptor-based and graph-based models",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 588,
+          "doi": "10.1038/s42256-021-00438-4",
+          "title": "Geometry-enhanced molecular representation learning for property prediction",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 530,
+          "doi": "10.1016/j.ddtec.2020.11.009",
+          "title": "A compact review of molecular property prediction with graph neural networks",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 499,
+          "doi": "10.1038/s42256-022-00580-7",
+          "title": "Large-scale chemical language representations capture molecular structure and properties",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 437,
+          "doi": "10.1038/s41586-023-06887-8",
+          "title": "Discovery of a structural class of antibiotics with explainable deep learning",
+          "year": 2023
+        },
+        {
+          "cited_by_count": 430,
+          "doi": "10.1093/bib/bbz042",
+          "title": "Graph convolutional networks for computational drug development and discovery",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 427,
+          "doi": "10.1021/acs.jcim.9b00387",
+          "title": "Predicting Drug–Target Interaction Using a Novel Graph Neural Network with 3D Structure-Embedded Graph Representation",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 406,
+          "doi": "10.1093/bib/bbaa243",
+          "title": "Predicting drug–disease associations through layer attention graph convolutional network",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 401,
+          "doi": "10.3389/fgene.2021.690049",
+          "title": "Graph Neural Networks and Their Current Applications in Bioinformatics",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 386,
+          "doi": "10.1039/d0ra02297g",
+          "title": "Drug–target affinity prediction using graph neural network and contact maps",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 339,
+          "doi": "10.1093/bib/bbaa044",
+          "title": "Identifying drug–target interactions based on graph convolutional network and deep neural network",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/bradford_sources.parquet",
+      "caveat": "Records without a source name are excluded from Bradford zoning.",
+      "claim_type": "bradford_zone_distribution",
+      "evidence_id": "E019",
+      "method": "Sources ranked by output and divided by cumulative document thirds.",
+      "selector": {},
+      "statement": "Bradford zones summarize source concentration among records with known source names.",
+      "unit": null,
+      "value": {
+        "rounded_document_range": {
+          "lower": 100,
+          "rounding_unit": 50,
+          "upper": 200
+        },
+        "zones": [
+          {
+            "documents": 148.0,
+            "sources": 5,
+            "zone": 1
+          },
+          {
+            "documents": 154.0,
+            "sources": 30,
+            "zone": 2
+          },
+          {
+            "documents": 151.0,
+            "sources": 120,
+            "zone": 3
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/keyword_trends.parquet",
+      "caveat": "Keyword frequencies depend on source metadata, synonym normalization, and the incomplete final year.",
+      "claim_type": "keyword_temporal_dynamics",
+      "evidence_id": "E020",
+      "method": "Unique works per normalized keyword and publication year.",
+      "selector": {},
+      "statement": "Year-by-year document counts are available for the globally most frequent keywords.",
+      "unit": null,
+      "value": [
+        {
+          "documents": 1,
+          "global_documents": 437,
+          "keyword": "Computer science",
+          "year": 2018
+        },
+        {
+          "documents": 11,
+          "global_documents": 437,
+          "keyword": "Computer science",
+          "year": 2019
+        },
+        {
+          "documents": 39,
+          "global_documents": 437,
+          "keyword": "Computer science",
+          "year": 2020
+        },
+        {
+          "documents": 72,
+          "global_documents": 437,
+          "keyword": "Computer science",
+          "year": 2021
+        },
+        {
+          "documents": 132,
+          "global_documents": 437,
+          "keyword": "Computer science",
+          "year": 2022
+        },
+        {
+          "documents": 182,
+          "global_documents": 437,
+          "keyword": "Computer science",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 393,
+          "keyword": "Artificial intelligence",
+          "year": 2018
+        },
+        {
+          "documents": 11,
+          "global_documents": 393,
+          "keyword": "Artificial intelligence",
+          "year": 2019
+        },
+        {
+          "documents": 33,
+          "global_documents": 393,
+          "keyword": "Artificial intelligence",
+          "year": 2020
+        },
+        {
+          "documents": 64,
+          "global_documents": 393,
+          "keyword": "Artificial intelligence",
+          "year": 2021
+        },
+        {
+          "documents": 119,
+          "global_documents": 393,
+          "keyword": "Artificial intelligence",
+          "year": 2022
+        },
+        {
+          "documents": 165,
+          "global_documents": 393,
+          "keyword": "Artificial intelligence",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 326,
+          "keyword": "Machine learning",
+          "year": 2018
+        },
+        {
+          "documents": 11,
+          "global_documents": 326,
+          "keyword": "Machine learning",
+          "year": 2019
+        },
+        {
+          "documents": 27,
+          "global_documents": 326,
+          "keyword": "Machine learning",
+          "year": 2020
+        },
+        {
+          "documents": 50,
+          "global_documents": 326,
+          "keyword": "Machine learning",
+          "year": 2021
+        },
+        {
+          "documents": 99,
+          "global_documents": 326,
+          "keyword": "Machine learning",
+          "year": 2022
+        },
+        {
+          "documents": 138,
+          "global_documents": 326,
+          "keyword": "Machine learning",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 321,
+          "keyword": "Graph",
+          "year": 2018
+        },
+        {
+          "documents": 11,
+          "global_documents": 321,
+          "keyword": "Graph",
+          "year": 2019
+        },
+        {
+          "documents": 26,
+          "global_documents": 321,
+          "keyword": "Graph",
+          "year": 2020
+        },
+        {
+          "documents": 50,
+          "global_documents": 321,
+          "keyword": "Graph",
+          "year": 2021
+        },
+        {
+          "documents": 88,
+          "global_documents": 321,
+          "keyword": "Graph",
+          "year": 2022
+        },
+        {
+          "documents": 145,
+          "global_documents": 321,
+          "keyword": "Graph",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 315,
+          "keyword": "Theoretical computer science",
+          "year": 2018
+        },
+        {
+          "documents": 11,
+          "global_documents": 315,
+          "keyword": "Theoretical computer science",
+          "year": 2019
+        },
+        {
+          "documents": 26,
+          "global_documents": 315,
+          "keyword": "Theoretical computer science",
+          "year": 2020
+        },
+        {
+          "documents": 51,
+          "global_documents": 315,
+          "keyword": "Theoretical computer science",
+          "year": 2021
+        },
+        {
+          "documents": 87,
+          "global_documents": 315,
+          "keyword": "Theoretical computer science",
+          "year": 2022
+        },
+        {
+          "documents": 139,
+          "global_documents": 315,
+          "keyword": "Theoretical computer science",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 194,
+          "keyword": "Artificial neural network",
+          "year": 2018
+        },
+        {
+          "documents": 3,
+          "global_documents": 194,
+          "keyword": "Artificial neural network",
+          "year": 2019
+        },
+        {
+          "documents": 14,
+          "global_documents": 194,
+          "keyword": "Artificial neural network",
+          "year": 2020
+        },
+        {
+          "documents": 32,
+          "global_documents": 194,
+          "keyword": "Artificial neural network",
+          "year": 2021
+        },
+        {
+          "documents": 68,
+          "global_documents": 194,
+          "keyword": "Artificial neural network",
+          "year": 2022
+        },
+        {
+          "documents": 76,
+          "global_documents": 194,
+          "keyword": "Artificial neural network",
+          "year": 2023
+        },
+        {
+          "documents": 4,
+          "global_documents": 177,
+          "keyword": "Biology",
+          "year": 2019
+        },
+        {
+          "documents": 16,
+          "global_documents": 177,
+          "keyword": "Biology",
+          "year": 2020
+        },
+        {
+          "documents": 25,
+          "global_documents": 177,
+          "keyword": "Biology",
+          "year": 2021
+        },
+        {
+          "documents": 64,
+          "global_documents": 177,
+          "keyword": "Biology",
+          "year": 2022
+        },
+        {
+          "documents": 68,
+          "global_documents": 177,
+          "keyword": "Biology",
+          "year": 2023
+        },
+        {
+          "documents": 7,
+          "global_documents": 131,
+          "keyword": "Drug discovery",
+          "year": 2019
+        },
+        {
+          "documents": 11,
+          "global_documents": 131,
+          "keyword": "Drug discovery",
+          "year": 2020
+        },
+        {
+          "documents": 17,
+          "global_documents": 131,
+          "keyword": "Drug discovery",
+          "year": 2021
+        },
+        {
+          "documents": 39,
+          "global_documents": 131,
+          "keyword": "Drug discovery",
+          "year": 2022
+        },
+        {
+          "documents": 57,
+          "global_documents": 131,
+          "keyword": "Drug discovery",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 129,
+          "keyword": "Data mining",
+          "year": 2018
+        },
+        {
+          "documents": 1,
+          "global_documents": 129,
+          "keyword": "Data mining",
+          "year": 2019
+        },
+        {
+          "documents": 7,
+          "global_documents": 129,
+          "keyword": "Data mining",
+          "year": 2020
+        },
+        {
+          "documents": 25,
+          "global_documents": 129,
+          "keyword": "Data mining",
+          "year": 2021
+        },
+        {
+          "documents": 43,
+          "global_documents": 129,
+          "keyword": "Data mining",
+          "year": 2022
+        },
+        {
+          "documents": 52,
+          "global_documents": 129,
+          "keyword": "Data mining",
+          "year": 2023
+        },
+        {
+          "documents": 3,
+          "global_documents": 125,
+          "keyword": "Bioinformatics",
+          "year": 2019
+        },
+        {
+          "documents": 14,
+          "global_documents": 125,
+          "keyword": "Bioinformatics",
+          "year": 2020
+        },
+        {
+          "documents": 17,
+          "global_documents": 125,
+          "keyword": "Bioinformatics",
+          "year": 2021
+        },
+        {
+          "documents": 40,
+          "global_documents": 125,
+          "keyword": "Bioinformatics",
+          "year": 2022
+        },
+        {
+          "documents": 51,
+          "global_documents": 125,
+          "keyword": "Bioinformatics",
+          "year": 2023
+        },
+        {
+          "documents": 5,
+          "global_documents": 120,
+          "keyword": "Chemistry",
+          "year": 2019
+        },
+        {
+          "documents": 8,
+          "global_documents": 120,
+          "keyword": "Chemistry",
+          "year": 2020
+        },
+        {
+          "documents": 16,
+          "global_documents": 120,
+          "keyword": "Chemistry",
+          "year": 2021
+        },
+        {
+          "documents": 38,
+          "global_documents": 120,
+          "keyword": "Chemistry",
+          "year": 2022
+        },
+        {
+          "documents": 53,
+          "global_documents": 120,
+          "keyword": "Chemistry",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 109,
+          "keyword": "Computational biology",
+          "year": 2019
+        },
+        {
+          "documents": 12,
+          "global_documents": 109,
+          "keyword": "Computational biology",
+          "year": 2020
+        },
+        {
+          "documents": 17,
+          "global_documents": 109,
+          "keyword": "Computational biology",
+          "year": 2021
+        },
+        {
+          "documents": 39,
+          "global_documents": 109,
+          "keyword": "Computational biology",
+          "year": 2022
+        },
+        {
+          "documents": 40,
+          "global_documents": 109,
+          "keyword": "Computational biology",
+          "year": 2023
+        },
+        {
+          "documents": 2,
+          "global_documents": 103,
+          "keyword": "Drug",
+          "year": 2019
+        },
+        {
+          "documents": 8,
+          "global_documents": 103,
+          "keyword": "Drug",
+          "year": 2020
+        },
+        {
+          "documents": 23,
+          "global_documents": 103,
+          "keyword": "Drug",
+          "year": 2021
+        },
+        {
+          "documents": 25,
+          "global_documents": 103,
+          "keyword": "Drug",
+          "year": 2022
+        },
+        {
+          "documents": 45,
+          "global_documents": 103,
+          "keyword": "Drug",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 93,
+          "keyword": "Deep learning",
+          "year": 2018
+        },
+        {
+          "documents": 5,
+          "global_documents": 93,
+          "keyword": "Deep learning",
+          "year": 2019
+        },
+        {
+          "documents": 8,
+          "global_documents": 93,
+          "keyword": "Deep learning",
+          "year": 2020
+        },
+        {
+          "documents": 17,
+          "global_documents": 93,
+          "keyword": "Deep learning",
+          "year": 2021
+        },
+        {
+          "documents": 30,
+          "global_documents": 93,
+          "keyword": "Deep learning",
+          "year": 2022
+        },
+        {
+          "documents": 32,
+          "global_documents": 93,
+          "keyword": "Deep learning",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 84,
+          "keyword": "Medicine",
+          "year": 2019
+        },
+        {
+          "documents": 6,
+          "global_documents": 84,
+          "keyword": "Medicine",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/three_field.parquet",
+      "caveat": "The map is a filtered descriptive view, not a causal pathway.",
+      "claim_type": "three_field_relations",
+      "evidence_id": "E021",
+      "method": "Whole-counted links among leading authors, sources, and keywords.",
+      "selector": {},
+      "statement": "Leading author–source–keyword combinations are retained for relational interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "author": "Wen Zhang",
+          "documents": 5,
+          "keyword": "Artificial intelligence",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Wen Zhang",
+          "documents": 5,
+          "keyword": "Graph",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Wen Zhang",
+          "documents": 5,
+          "keyword": "Machine learning",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Wen Zhang",
+          "documents": 5,
+          "keyword": "Theoretical computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Wen Zhang",
+          "documents": 5,
+          "keyword": "Computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Jiawei Luo",
+          "documents": 4,
+          "keyword": "Computer science",
+          "source": "Bioinformatics"
+        },
+        {
+          "author": "Tingjun Hou",
+          "documents": 4,
+          "keyword": "Graph",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Tingjun Hou",
+          "documents": 4,
+          "keyword": "Computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Tingjun Hou",
+          "documents": 4,
+          "keyword": "Artificial intelligence",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Jiawei Luo",
+          "documents": 4,
+          "keyword": "Machine learning",
+          "source": "Bioinformatics"
+        },
+        {
+          "author": "Tingjun Hou",
+          "documents": 4,
+          "keyword": "Theoretical computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Jiawei Luo",
+          "documents": 4,
+          "keyword": "Artificial intelligence",
+          "source": "Bioinformatics"
+        },
+        {
+          "author": "Dongsheng Cao",
+          "documents": 4,
+          "keyword": "Graph",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Dongsheng Cao",
+          "documents": 4,
+          "keyword": "Computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Dongsheng Cao",
+          "documents": 4,
+          "keyword": "Theoretical computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Dongsheng Cao",
+          "documents": 4,
+          "keyword": "Artificial intelligence",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Xiangxiang Zeng",
+          "documents": 3,
+          "keyword": "Graph",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Thin Nguyen",
+          "documents": 3,
+          "keyword": "Machine learning",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Thin Nguyen",
+          "documents": 3,
+          "keyword": "Theoretical computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Tingjun Hou",
+          "documents": 3,
+          "keyword": "Machine learning",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Wen Zhang",
+          "documents": 3,
+          "keyword": "Artificial neural network",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Xiangxiang Zeng",
+          "documents": 3,
+          "keyword": "Artificial intelligence",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Xiangxiang Zeng",
+          "documents": 3,
+          "keyword": "Computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Xiangxiang Zeng",
+          "documents": 3,
+          "keyword": "Theoretical computer science",
+          "source": "Briefings in Bioinformatics"
+        },
+        {
+          "author": "Yahui Long",
+          "documents": 3,
+          "keyword": "Artificial intelligence",
+          "source": "Bioinformatics"
+        },
+        {
+          "author": "Yahui Long",
+          "documents": 3,
+          "keyword": "Computer science",
+          "source": "Bioinformatics"
+        },
+        {
+          "author": "Yahui Long",
+          "documents": 3,
+          "keyword": "Graph",
+          "source": "Bioinformatics"
+        },
+        {
+          "author": "Yahui Long",
+          "documents": 3,
+          "keyword": "Machine learning",
+          "source": "Bioinformatics"
+        },
+        {
+          "author": "Yahui Long",
+          "documents": 3,
+          "keyword": "Theoretical computer science",
+          "source": "Bioinformatics"
+        },
+        {
+          "author": "Thin Nguyen",
+          "documents": 3,
+          "keyword": "Drug discovery",
+          "source": "Briefings in Bioinformatics"
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/network_bibliographic_coupling_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "bibliographic_coupling_structure",
+      "evidence_id": "E022",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The bibliographic coupling candidate network contains 72 nodes and 210 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 4,
+        "edges": 210,
+        "network_parameters": {
+          "candidate_edges": 19555,
+          "candidate_nodes_with_links": 430,
+          "candidate_pool": 430,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 210,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 430,
+          "full_candidate_edge_count": 19555,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.08174534085542967,
+            "mean_edge_length": 0.3572146522488757,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1658.0,
+            "weighted_edge_length": 0.012938852389004421,
+            "within_between_distance_ratio": 0.1698191861799382
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 14,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          }
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "BatmanNet: bi-branch masked graph transformer autoencoder for molecular representation",
+            "occurrences": 112,
+            "weighted_degree": 1322.0
+          },
+          {
+            "cluster": 4,
+            "label": "Graph Neural Networks and Their Current Applications in Bioinformatics",
+            "occurrences": 201,
+            "weighted_degree": 1247.0
+          },
+          {
+            "cluster": 1,
+            "label": "Graph neural networks for automated de novo drug design",
+            "occurrences": 132,
+            "weighted_degree": 1050.0
+          },
+          {
+            "cluster": 4,
+            "label": "Biological network analysis with deep learning",
+            "occurrences": 163,
+            "weighted_degree": 1032.0
+          },
+          {
+            "cluster": 2,
+            "label": "Graph neural network approaches for drug-target interactions",
+            "occurrences": 112,
+            "weighted_degree": 1026.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_citation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "citation_structure",
+      "evidence_id": "E023",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The citation candidate network contains 5 nodes and 3 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 2,
+        "edges": 3,
+        "network_parameters": {
+          "candidate_edges": 3,
+          "candidate_nodes_with_links": 5,
+          "candidate_pool": 5,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 2,
+          "displayed_edges": 3,
+          "displayed_nodes": 5,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 5,
+          "full_candidate_edge_count": 3,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.14725540078635288,
+            "mean_edge_length": 0.7051949476758628,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 2448.0,
+            "weighted_edge_length": 0.010514413260088035,
+            "within_between_distance_ratio": 0.3382708004749057
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 5,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "GraphDTA: Predicting drug–target binding affinity with graph neural networks",
+            "occurrences": 72,
+            "weighted_degree": 2.0
+          },
+          {
+            "cluster": 1,
+            "label": "Graph Neural Networks and Their Current Applications in Bioinformatics",
+            "occurrences": 401,
+            "weighted_degree": 1.0
+          },
+          {
+            "cluster": 2,
+            "label": "An effective self-supervised framework for learning expressive molecular global representations to drug discovery",
+            "occurrences": 153,
+            "weighted_degree": 1.0
+          },
+          {
+            "cluster": 2,
+            "label": "Self-Supervised Graph Transformer on Large-Scale Molecular Data",
+            "occurrences": 27,
+            "weighted_degree": 1.0
+          },
+          {
+            "cluster": 1,
+            "label": "GEFA: Early Fusion Approach in Drug-Target Affinity Prediction",
+            "occurrences": 5,
+            "weighted_degree": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_coauthorship_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "coauthorship_structure",
+      "evidence_id": "E024",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The coauthorship candidate network contains 60 nodes and 127 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 127,
+        "network_parameters": {
+          "candidate_edges": 792,
+          "candidate_nodes_with_links": 295,
+          "candidate_pool": 295,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 127,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 304,
+          "full_candidate_edge_count": 792,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.046122399745041225,
+            "mean_edge_length": 0.11428676520337913,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1051.0,
+            "weighted_edge_length": 0.04040806148487227,
+            "within_between_distance_ratio": 0.0
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 60,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "Tingjun Hou",
+            "occurrences": 11,
+            "weighted_degree": 66.0
+          },
+          {
+            "cluster": 2,
+            "label": "Dongsheng Cao",
+            "occurrences": 11,
+            "weighted_degree": 63.0
+          },
+          {
+            "cluster": 2,
+            "label": "Chang‐Yu Hsieh",
+            "occurrences": 9,
+            "weighted_degree": 57.0
+          },
+          {
+            "cluster": 1,
+            "label": "Mingyue Zheng",
+            "occurrences": 8,
+            "weighted_degree": 52.0
+          },
+          {
+            "cluster": 1,
+            "label": "Dingyan Wang",
+            "occurrences": 6,
+            "weighted_degree": 43.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_cocitation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "cocitation_structure",
+      "evidence_id": "E025",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The cocitation candidate network contains 72 nodes and 194 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 5,
+        "edges": 194,
+        "network_parameters": {
+          "candidate_edges": 34962,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 194,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 34962,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.10501539973889593,
+            "mean_edge_length": 0.32738893777084216,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 333.0,
+            "weighted_edge_length": 0.030061160071240132,
+            "within_between_distance_ratio": 0.1952826425970456
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 7,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "openalex:W2594183968",
+            "occurrences": 111,
+            "weighted_degree": 2364.0
+          },
+          {
+            "cluster": 1,
+            "label": "openalex:W2966357564",
+            "occurrences": 101,
+            "weighted_degree": 2005.0
+          },
+          {
+            "cluster": 1,
+            "label": "openalex:W1988037271",
+            "occurrences": 95,
+            "weighted_degree": 1872.0
+          },
+          {
+            "cluster": 4,
+            "label": "openalex:W2290847742",
+            "occurrences": 83,
+            "weighted_degree": 1843.0
+          },
+          {
+            "cluster": 4,
+            "label": "openalex:W3100157108",
+            "occurrences": 77,
+            "weighted_degree": 1743.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_institution_collaboration_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "institution_collaboration_structure",
+      "evidence_id": "E026",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The institution collaboration candidate network contains 71 nodes and 138 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 138,
+        "network_parameters": {
+          "candidate_edges": 472,
+          "candidate_nodes_with_links": 196,
+          "candidate_pool": 196,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 138,
+          "displayed_nodes": 71,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 210,
+          "full_candidate_edge_count": 472,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.26095821568026734,
+            "mean_edge_length": 0.2526349812051937,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 3166.0,
+            "weighted_edge_length": 0.05207454074841341,
+            "within_between_distance_ratio": 0.6541730862386473
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 71,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "Chinese Academy of Sciences",
+            "occurrences": 24,
+            "weighted_degree": 74.0
+          },
+          {
+            "cluster": 1,
+            "label": "University of Chinese Academy of Sciences",
+            "occurrences": 14,
+            "weighted_degree": 50.0
+          },
+          {
+            "cluster": 6,
+            "label": "Zhejiang University",
+            "occurrences": 18,
+            "weighted_degree": 49.0
+          },
+          {
+            "cluster": 2,
+            "label": "Central South University",
+            "occurrences": 22,
+            "weighted_degree": 41.0
+          },
+          {
+            "cluster": 12,
+            "label": "Hunan University",
+            "occurrences": 19,
+            "weighted_degree": 35.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_keyword_cooccurrence_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "keyword_cooccurrence_structure",
+      "evidence_id": "E027",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The keyword cooccurrence candidate network contains 72 nodes and 198 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 7,
+        "edges": 198,
+        "network_parameters": {
+          "candidate_edges": 3528,
+          "candidate_nodes_with_links": 133,
+          "candidate_pool": 133,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 198,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 133,
+          "full_candidate_edge_count": 3528,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.1609876016775919,
+            "mean_edge_length": 0.4094761721527213,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1245.0,
+            "weighted_edge_length": 0.035001150850154004,
+            "within_between_distance_ratio": 0.35170880739933946
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "Computer science",
+            "occurrences": 437,
+            "weighted_degree": 4311.0
+          },
+          {
+            "cluster": 1,
+            "label": "Artificial intelligence",
+            "occurrences": 393,
+            "weighted_degree": 3973.0
+          },
+          {
+            "cluster": 1,
+            "label": "Machine learning",
+            "occurrences": 326,
+            "weighted_degree": 3433.0
+          },
+          {
+            "cluster": 1,
+            "label": "Graph",
+            "occurrences": 321,
+            "weighted_degree": 3291.0
+          },
+          {
+            "cluster": 1,
+            "label": "Theoretical computer science",
+            "occurrences": 315,
+            "weighted_degree": 3265.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E028",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: GraphDTA: predicting drug–target binding affinity with graph neural networks",
+      "unit": null,
+      "value": {
+        "abstract": "SUMMARY: The development of new drugs is costly, time consuming and often accompanied with safety issues. Drug repurposing can avoid the expensive and lengthy process of drug development by finding new uses for already approved drugs. In order to repurpose drugs effectively, it is useful to know which proteins are targeted by which drugs. Computational models that estimate the interaction strength of new drug-target pairs have the potential to expedite drug repurposing. Several models have been proposed for this task. However, these models represent the drugs as strings, which is not a natural way to represent molecules. We propose a new model called GraphDTA that represents drugs as graphs and uses graph neural networks to predict drug-target affinity. We show that graph neural networks not only predict drug-target affinity better than non-deep learning models, but also outperform competing deep learning methods. Our results confirm that deep learning models are appropriate for drug-target binding affinity prediction, and that representing drugs as graphs can lead to further improvements. AVAILABILITY OF IMPLEMENTATION: The proposed models are implemented in Python. Related data, pre-trained models and source code are publicly available at https://github.com/thinng/GraphDTA. All scripts and data needed to reproduce the post hoc statistical analysis are available from https://doi.org/10.5281/zenodo.3603523. SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics online.",
+        "authors": [
+          "Thin Nguyen",
+          "Hang Le",
+          "Thomas P. Quinn"
+        ],
+        "doi": "10.1093/bioinformatics/btaa921",
+        "source": "Bioinformatics",
+        "title": "GraphDTA: predicting drug–target binding affinity with graph neural networks",
+        "work_id": "doi:10.1093/bioinformatics/btaa921",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E029",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Pushing the Boundaries of Molecular Representation for Drug Discovery with the Graph Attention Mechanism",
+      "unit": null,
+      "value": {
+        "abstract": "Hunting for chemicals with favorable pharmacological, toxicological, and pharmacokinetic properties remains a formidable challenge for drug discovery. Deep learning provides us with powerful tools to build predictive models that are appropriate for the rising amounts of data, but the gap between what these neural networks learn and what human beings can comprehend is growing. Moreover, this gap may induce distrust and restrict deep learning applications in practice. Here, we introduce a new graph neural network architecture called Attentive FP for molecular representation that uses a graph attention mechanism to learn from relevant drug discovery data sets. We demonstrate that Attentive FP achieves state-of-the-art predictive performances on a variety of data sets and that what it learns is interpretable. The feature visualization for Attentive FP suggests that it automatically learns nonlocal intramolecular interactions from specified tasks, which can help us gain chemical insights directly from data beyond human perception.",
+        "authors": [
+          "Zhaoping Xiong",
+          "Dingyan Wang",
+          "Xiaohong Liu"
+        ],
+        "doi": "10.1021/acs.jmedchem.9b00959",
+        "source": "Journal of Medicinal Chemistry",
+        "title": "Pushing the Boundaries of Molecular Representation for Drug Discovery with the Graph Attention Mechanism",
+        "work_id": "doi:10.1021/acs.jmedchem.9b00959",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E030",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Compound–protein interaction prediction with end-to-end learning of neural networks for graphs and sequences",
+      "unit": null,
+      "value": {
+        "abstract": "Motivation: In bioinformatics, machine learning-based methods that predict the compound-protein interactions (CPIs) play an important role in the virtual screening for drug discovery. Recently, end-to-end representation learning for discrete symbolic data (e.g. words in natural language processing) using deep neural networks has demonstrated excellent performance on various difficult problems. For the CPI problem, data are provided as discrete symbolic data, i.e. compounds are represented as graphs where the vertices are atoms, the edges are chemical bonds, and proteins are sequences in which the characters are amino acids. In this study, we investigate the use of end-to-end representation learning for compounds and proteins, integrate the representations, and develop a new CPI prediction approach by combining a graph neural network (GNN) for compounds and a convolutional neural network (CNN) for proteins. Results: Our experiments using three CPI datasets demonstrated that the proposed end-to-end approach achieves competitive or higher performance as compared to various existing CPI prediction methods. In addition, the proposed approach significantly outperformed existing methods on an unbalanced dataset. This suggests that data-driven representations of compounds and proteins obtained by end-to-end GNNs and CNNs are more robust than traditional chemical and biological features obtained from databases. Although analyzing deep learning models is difficult due to their black-box nature, we address this issue using a neural attention mechanism, which allows us to consider which subsequences in a protein are more important for a drug compound when predicting its interaction. The neural attention mechanism also provides effective visualization, which makes it easier to analyze a model even when modeling is performed using real-valued representations instead of discrete features. Availability and implementation: https://github.com/masashitsubaki. Supplementary information: Supplementary data are available at Bioinformatics online.",
+        "authors": [
+          "Masashi Tsubaki",
+          "Kentaro Tomii",
+          "Jun Sese"
+        ],
+        "doi": "10.1093/bioinformatics/bty535",
+        "source": "Bioinformatics",
+        "title": "Compound–protein interaction prediction with end-to-end learning of neural networks for graphs and sequences",
+        "work_id": "doi:10.1093/bioinformatics/bty535",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E031",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Could graph neural networks learn better molecular representation for drug discovery? A comparison study of descriptor-based and graph-based models",
+      "unit": null,
+      "value": {
+        "abstract": "Graph neural networks (GNN) has been considered as an attractive modelling method for molecular property prediction, and numerous studies have shown that GNN could yield more promising results than traditional descriptor-based methods. In this study, based on 11 public datasets covering various property endpoints, the predictive capacity and computational efficiency of the prediction models developed by eight machine learning (ML) algorithms, including four descriptor-based models (SVM, XGBoost, RF and DNN) and four graph-based models (GCN, GAT, MPNN and Attentive FP), were extensively tested and compared. The results demonstrate that on average the descriptor-based models outperform the graph-based models in terms of prediction accuracy and computational efficiency. SVM generally achieves the best predictions for the regression tasks. Both RF and XGBoost can achieve reliable predictions for the classification tasks, and some of the graph-based models, such as Attentive FP and GCN, can yield outstanding performance for a fraction of larger or multi-task datasets. In terms of computational cost, XGBoost and RF are the two most efficient algorithms and only need a few seconds to train a model even for a large dataset. The model interpretations by the SHAP method can effectively explore the established domain knowledge for the descriptor-based models. Finally, we explored use of these models for virtual screening (VS) towards HIV and demonstrated that different ML algorithms offer diverse VS profiles. All in all, we believe that the off-the-shelf descriptor-based models still can be directly employed to accurately predict various chemical endpoints with excellent computability and interpretability.",
+        "authors": [
+          "Dejun Jiang",
+          "Zhenhua Wu",
+          "Chang‐Yu Hsieh",
+          "Guangyong Chen",
+          "Ben Liao"
+        ],
+        "doi": "10.1186/s13321-020-00479-8",
+        "source": "Journal of Cheminformatics",
+        "title": "Could graph neural networks learn better molecular representation for drug discovery? A comparison study of descriptor-based and graph-based models",
+        "work_id": "doi:10.1186/s13321-020-00479-8",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E032",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Geometry-enhanced molecular representation learning for property prediction",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract Effective molecular representation learning is of great importance to facilitate molecular property prediction. Recent advances for molecular representation learning have shown great promise in applying graph neural networks to model molecules. Moreover, a few recent studies design self-supervised learning methods for molecular representation to address insufficient labelled molecules; however, these self-supervised frameworks treat the molecules as topological graphs without fully utilizing the molecular geometry information. The molecular geometry, also known as the three-dimensional spatial structure of a molecule, is critical for determining molecular properties. To this end, we propose a novel geometry-enhanced molecular representation learning method (GEM). The proposed GEM has a specially designed geometry-based graph neural network architecture as well as several dedicated geometry-level self-supervised learning strategies to learn the molecular geometry knowledge. We compare GEM with various state-of-the-art baselines on different benchmarks and show that it can considerably outperform them all, demonstrating the superiority of the proposed method.",
+        "authors": [
+          "Xiaomin Fang",
+          "Lihang Liu",
+          "Jieqiong Lei",
+          "Donglong He",
+          "Shanzhuo Zhang",
+          "Jingbo Zhou",
+          "Fan Wang",
+          "Hua Wu"
+        ],
+        "doi": "10.1038/s42256-021-00438-4",
+        "source": "Nature Machine Intelligence",
+        "title": "Geometry-enhanced molecular representation learning for property prediction",
+        "work_id": "doi:10.1038/s42256-021-00438-4",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E033",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: A compact review of molecular property prediction with graph neural networks",
+      "unit": null,
+      "value": {
+        "abstract": "As graph neural networks are becoming more and more powerful and useful in the field of drug discovery, many pharmaceutical companies are getting interested in utilizing these methods for their own in-house frameworks. This is especially compelling for tasks such as the prediction of molecular properties which is often one of the most crucial tasks in computer-aided drug discovery workflows. The immense hype surrounding these kinds of algorithms has led to the development of many different types of promising architectures and in this review we try to structure this highly dynamic field of AI-research by collecting and classifying 80 GNNs that have been used to predict more than 20 molecular properties using 48 different datasets.",
+        "authors": [
+          "Oliver Wieder",
+          "Stefan M. Kohlbacher",
+          "Mélaine A. Kuenemann",
+          "Arthur Garon",
+          "Ducrot Pierre",
+          "Thomas Seidel",
+          "Thierry Langer"
+        ],
+        "doi": "10.1016/j.ddtec.2020.11.009",
+        "source": "Drug Discovery Today Technologies",
+        "title": "A compact review of molecular property prediction with graph neural networks",
+        "work_id": "doi:10.1016/j.ddtec.2020.11.009",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E034",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Graph convolutional networks for computational drug development and discovery",
+      "unit": null,
+      "value": {
+        "abstract": "Despite the fact that deep learning has achieved remarkable success in various domains over the past decade, its application in molecular informatics and drug discovery is still limited. Recent advances in adapting deep architectures to structured data have opened a new paradigm for pharmaceutical research. In this survey, we provide a systematic review on the emerging field of graph convolutional networks and their applications in drug discovery and molecular informatics. Typically we are interested in why and how graph convolution networks can help in drug-related tasks. We elaborate the existing applications through four perspectives: molecular property and activity prediction, interaction prediction, synthesis prediction and de novo drug design. We briefly introduce the theoretical foundations behind graph convolutional networks and illustrate various architectures based on different formulations. Then we summarize the representative applications in drug-related problems. We also discuss the current challenges and future possibilities of applying graph convolutional networks to drug discovery.",
+        "authors": [
+          "Mengying Sun",
+          "Sendong Zhao",
+          "Coryandar Gilvary",
+          "Olivier Elemento",
+          "Jiayu Zhou",
+          "Fei Wang"
+        ],
+        "doi": "10.1093/bib/bbz042",
+        "source": "Briefings in Bioinformatics",
+        "title": "Graph convolutional networks for computational drug development and discovery",
+        "work_id": "doi:10.1093/bib/bbz042",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E035",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Predicting Drug–Target Interaction Using a Novel Graph Neural Network with 3D Structure-Embedded Graph Representation",
+      "unit": null,
+      "value": {
+        "abstract": "We propose a novel deep learning approach for predicting drug-target interaction using a graph neural network. We introduce a distance-aware graph attention algorithm to differentiate various types of intermolecular interactions. Furthermore, we extract the graph feature of intermolecular interactions directly from the 3D structural information on the protein-ligand binding pose. Thus, the model can learn key features for accurate predictions of drug-target interaction rather than just memorize certain patterns of ligand molecules. As a result, our model shows better performance than docking and other deep learning methods for both virtual screening (AUROC of 0.968 for the DUD-E test set) and pose prediction (AUROC of 0.935 for the PDBbind test set). In addition, it can reproduce the natural population distribution of active molecules and inactive molecules.",
+        "authors": [
+          "Jaechang Lim",
+          "Seongok Ryu",
+          "Kyubyong Park",
+          "Yo Joong Choe",
+          "Jiyeon Ham",
+          "Woo Youn Kim"
+        ],
+        "doi": "10.1021/acs.jcim.9b00387",
+        "source": "Journal of Chemical Information and Modeling",
+        "title": "Predicting Drug–Target Interaction Using a Novel Graph Neural Network with 3D Structure-Embedded Graph Representation",
+        "work_id": "doi:10.1021/acs.jcim.9b00387",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E036",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Predicting drug–disease associations through layer attention graph convolutional network",
+      "unit": null,
+      "value": {
+        "abstract": "BACKGROUND: Determining drug-disease associations is an integral part in the process of drug development. However, the identification of drug-disease associations through wet experiments is costly and inefficient. Hence, the development of efficient and high-accuracy computational methods for predicting drug-disease associations is of great significance. RESULTS: In this paper, we propose a novel computational method named as layer attention graph convolutional network (LAGCN) for the drug-disease association prediction. Specifically, LAGCN first integrates the known drug-disease associations, drug-drug similarities and disease-disease similarities into a heterogeneous network, and applies the graph convolution operation to the network to learn the embeddings of drugs and diseases. Second, LAGCN combines the embeddings from multiple graph convolution layers using an attention mechanism. Third, the unobserved drug-disease associations are scored based on the integrated embeddings. Evaluated by 5-fold cross-validations, LAGCN achieves an area under the precision-recall curve of 0.3168 and an area under the receiver-operating characteristic curve of 0.8750, which are better than the results of existing state-of-the-art prediction methods and baseline methods. The case study shows that LAGCN can discover novel associations that are not curated in our dataset. CONCLUSION: LAGCN is a useful tool for predicting drug-disease associations. This study reveals that embeddings from different convolution layers can reflect the proximities of different orders, and combining the embeddings by the attention mechanism can improve the prediction performances.",
+        "authors": [
+          "Zhouxin Yu",
+          "Feng Huang",
+          "Xiaohan Zhao",
+          "Wenjie Xiao",
+          "Wen Zhang"
+        ],
+        "doi": "10.1093/bib/bbaa243",
+        "source": "Briefings in Bioinformatics",
+        "title": "Predicting drug–disease associations through layer attention graph convolutional network",
+        "work_id": "doi:10.1093/bib/bbaa243",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E037",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Graph Neural Networks and Their Current Applications in Bioinformatics",
+      "unit": null,
+      "value": {
+        "abstract": "Graph neural networks (GNNs), as a branch of deep learning in non-Euclidean space, perform particularly well in various tasks that process graph structure data. With the rapid accumulation of biological network data, GNNs have also become an important tool in bioinformatics. In this research, a systematic survey of GNNs and their advances in bioinformatics is presented from multiple perspectives. We first introduce some commonly used GNN models and their basic principles. Then, three representative tasks are proposed based on the three levels of structural information that can be learned by GNNs: node classification, link prediction, and graph generation. Meanwhile, according to the specific applications for various omics data, we categorize and discuss the related studies in three aspects: disease prediction, drug discovery, and biomedical imaging. Based on the analysis, we provide an outlook on the shortcomings of current studies and point out their developing prospect. Although GNNs have achieved excellent results in many biological tasks at present, they still face challenges in terms of low-quality data processing, methodology, and interpretability and have a long road ahead. We believe that GNNs are potentially an excellent method that solves various biological problems in bioinformatics research.",
+        "authors": [
+          "Xiaomeng Zhang",
+          "Liang Li",
+          "Lin Liu",
+          "Mingjing Tang"
+        ],
+        "doi": "10.3389/fgene.2021.690049",
+        "source": "Frontiers in Genetics",
+        "title": "Graph Neural Networks and Their Current Applications in Bioinformatics",
+        "work_id": "doi:10.3389/fgene.2021.690049",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E038",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Drug–target affinity prediction using graph neural network and contact maps",
+      "unit": null,
+      "value": {
+        "abstract": "Computer-aided drug design uses high-performance computers to simulate the tasks in drug design, which is a promising research area. Drug-target affinity (DTA) prediction is the most important step of computer-aided drug design, which could speed up drug development and reduce resource consumption. With the development of deep learning, the introduction of deep learning to DTA prediction and improving the accuracy have become a focus of research. In this paper, utilizing the structural information of molecules and proteins, two graphs of drug molecules and proteins are built up respectively. Graph neural networks are introduced to obtain their representations, and a method called DGraphDTA is proposed for DTA prediction. Specifically, the protein graph is constructed based on the contact map output from the prediction method, which could predict the structural characteristics of the protein according to its sequence. It can be seen from the test of various metrics on benchmark datasets that the method proposed in this paper has strong robustness and generalizability.",
+        "authors": [
+          "Mingjian Jiang",
+          "Zhen Li",
+          "Shugang Zhang",
+          "Shuang Wang"
+        ],
+        "doi": "10.1039/d0ra02297g",
+        "source": "RSC Advances",
+        "title": "Drug–target affinity prediction using graph neural network and contact maps",
+        "work_id": "doi:10.1039/d0ra02297g",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E039",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Identifying drug–target interactions based on graph convolutional network and deep neural network",
+      "unit": null,
+      "value": {
+        "abstract": "Identification of new drug-target interactions (DTIs) is an important but a time-consuming and costly step in drug discovery. In recent years, to mitigate these drawbacks, researchers have sought to identify DTIs using computational approaches. However, most existing methods construct drug networks and target networks separately, and then predict novel DTIs based on known associations between the drugs and targets without accounting for associations between drug-protein pairs (DPPs). To incorporate the associations between DPPs into DTI modeling, we built a DPP network based on multiple drugs and proteins in which DPPs are the nodes and the associations between DPPs are the edges of the network. We then propose a novel learning-based framework, 'graph convolutional network (GCN)-DTI', for DTI identification. The model first uses a graph convolutional network to learn the features for each DPP. Second, using the feature representation as an input, it uses a deep neural network to predict the final label. The results of our analysis show that the proposed framework outperforms some state-of-the-art approaches by a large margin.",
+        "authors": [
+          "Tianyi Zhao",
+          "Yang Hu",
+          "Linda R. Valsdottir",
+          "Tianyi Zang",
+          "Jiajie Peng"
+        ],
+        "doi": "10.1093/bib/bbaa044",
+        "source": "Briefings in Bioinformatics",
+        "title": "Identifying drug–target interactions based on graph convolutional network and deep neural network",
+        "work_id": "doi:10.1093/bib/bbaa044",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E040",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: AI in drug discovery and its clinical relevance",
+      "unit": null,
+      "value": {
+        "abstract": "The COVID-19 pandemic has emphasized the need for novel drug discovery process. However, the journey from conceptualizing a drug to its eventual implementation in clinical settings is a long, complex, and expensive process, with many potential points of failure. Over the past decade, a vast growth in medical information has coincided with advances in computational hardware (cloud computing, GPUs, and TPUs) and the rise of deep learning. Medical data generated from large molecular screening profiles, personal health or pathology records, and public health organizations could benefit from analysis by Artificial Intelligence (AI) approaches to speed up and prevent failures in the drug discovery pipeline. We present applications of AI at various stages of drug discovery pipelines, including the inherently computational approaches of de novo design and prediction of a drug's likely properties. Open-source databases and AI-based software tools that facilitate drug design are discussed along with their associated problems of molecule representation, data collection, complexity, labeling, and disparities among labels. How contemporary AI methods, such as graph neural networks, reinforcement learning, and generated models, along with structure-based methods, (i.e., molecular dynamics simulations and molecular docking) can contribute to drug discovery applications and analysis of drug responses is also explored. Finally, recent developments and investments in AI-based start-up companies for biotechnology, drug design and their current progress, hopes and promotions are discussed in this article.",
+        "authors": [
+          "Rizwan Qureshi",
+          "Muhammad Irfan",
+          "Taimoor Muzaffar Gondal",
+          "Sheheryar Khan",
+          "Jia Wu",
+          "Muhammad Usman Hadi",
+          "John V. Heymach"
+        ],
+        "doi": "10.1016/j.heliyon.2023.e17575",
+        "source": "Heliyon",
+        "title": "AI in drug discovery and its clinical relevance",
+        "work_id": "doi:10.1016/j.heliyon.2023.e17575",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E041",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Predicting locations of cryptic pockets from single protein structures using the PocketMiner graph neural network",
+      "unit": null,
+      "value": {
+        "abstract": "Cryptic pockets expand the scope of drug discovery by enabling targeting of proteins currently considered undruggable because they lack pockets in their ground state structures. However, identifying cryptic pockets is labor-intensive and slow. The ability to accurately and rapidly predict if and where cryptic pockets are likely to form from a structure would greatly accelerate the search for druggable pockets. Here, we present PocketMiner, a graph neural network trained to predict where pockets are likely to open in molecular dynamics simulations. Applying PocketMiner to single structures from a newly curated dataset of 39 experimentally confirmed cryptic pockets demonstrates that it accurately identifies cryptic pockets (ROC-AUC: 0.87) >1,000-fold faster than existing methods. We apply PocketMiner across the human proteome and show that predicted pockets open in simulations, suggesting that over half of proteins thought to lack pockets based on available structures likely contain cryptic pockets, vastly expanding the potentially druggable proteome.",
+        "authors": [
+          "Artur Meller",
+          "Michael D. Ward",
+          "Jonathan Borowsky",
+          "Meghana Kshirsagar",
+          "Jeffrey M. Lotthammer",
+          "Felipe Oviedo",
+          "Juan Lavista Ferres",
+          "Gregory R. Bowman"
+        ],
+        "doi": "10.1038/s41467-023-36699-3",
+        "source": "Nature Communications",
+        "title": "Predicting locations of cryptic pockets from single protein structures using the PocketMiner graph neural network",
+        "work_id": "doi:10.1038/s41467-023-36699-3",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E042",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Chemistry-intuitive explanation of graph neural networks for molecular property prediction with substructure masking",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract Graph neural networks (GNNs) have been widely used in molecular property prediction, but explaining their black-box predictions is still a challenge. Most existing explanation methods for GNNs in chemistry focus on attributing model predictions to individual nodes, edges or fragments that are not necessarily derived from a chemically meaningful segmentation of molecules. To address this challenge, we propose a method named substructure mask explanation (SME). SME is based on well-established molecular segmentation methods and provides an interpretation that aligns with the understanding of chemists. We apply SME to elucidate how GNNs learn to predict aqueous solubility, genotoxicity, cardiotoxicity and blood–brain barrier permeation for small molecules. SME provides interpretation that is consistent with the understanding of chemists, alerts them to unreliable performance, and guides them in structural optimization for target properties. Hence, we believe that SME empowers chemists to confidently mine structure-activity relationship (SAR) from reliable GNNs through a transparent inspection on how GNNs pick up useful signals when learning from data.",
+        "authors": [
+          "Zhenhua Wu",
+          "Jike Wang",
+          "Hongyan Du",
+          "Dejun Jiang",
+          "Yu Kang",
+          "Dan Li",
+          "Peichen Pan"
+        ],
+        "doi": "10.1038/s41467-023-38192-3",
+        "source": "Nature Communications",
+        "title": "Chemistry-intuitive explanation of graph neural networks for molecular property prediction with substructure masking",
+        "work_id": "doi:10.1038/s41467-023-38192-3",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E043",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Hierarchical Molecular Graph Self-Supervised Learning for property prediction",
+      "unit": null,
+      "value": {
+        "abstract": "Molecular graph representation learning has shown considerable strength in molecular analysis and drug discovery. Due to the difficulty of obtaining molecular property labels, pre-training models based on self-supervised learning has become increasingly popular in molecular representation learning. Notably, Graph Neural Networks (GNN) are employed as the backbones to encode implicit representations of molecules in most existing works. However, vanilla GNN encoders ignore chemical structural information and functions implied in molecular motifs, and obtaining the graph-level representation via the READOUT function hinders the interaction of graph and node representations. In this paper, we propose Hierarchical Molecular Graph Self-supervised Learning (HiMol), which introduces a pre-training framework to learn molecule representation for property prediction. First, we present a Hierarchical Molecular Graph Neural Network (HMGNN), which encodes motif structure and extracts node-motif-graph hierarchical molecular representations. Then, we introduce Multi-level Self-supervised Pre-training (MSP), in which corresponding multi-level generative and predictive tasks are designed as self-supervised signals of HiMol model. Finally, superior molecular property prediction results on both classification and regression tasks demonstrate the effectiveness of HiMol. Moreover, the visualization performance in the downstream dataset shows that the molecule representations learned by HiMol can capture chemical semantic information and properties.",
+        "authors": [
+          "Xuan Zang",
+          "Xianbing Zhao",
+          "Buzhou Tang"
+        ],
+        "doi": "10.1038/s42004-023-00825-5",
+        "source": "Communications Chemistry",
+        "title": "Hierarchical Molecular Graph Self-Supervised Learning for property prediction",
+        "work_id": "doi:10.1038/s42004-023-00825-5",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E044",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: A knowledge-guided pre-training framework for improving molecular representation learning",
+      "unit": null,
+      "value": {
+        "abstract": "Learning effective molecular feature representation to facilitate molecular property prediction is of great significance for drug discovery. Recently, there has been a surge of interest in pre-training graph neural networks (GNNs) via self-supervised learning techniques to overcome the challenge of data scarcity in molecular property prediction. However, current self-supervised learning-based methods suffer from two main obstacles: the lack of a well-defined self-supervised learning strategy and the limited capacity of GNNs. Here, we propose Knowledge-guided Pre-training of Graph Transformer (KPGT), a self-supervised learning framework to alleviate the aforementioned issues and provide generalizable and robust molecular representations. The KPGT framework integrates a graph transformer specifically designed for molecular graphs and a knowledge-guided pre-training strategy, to fully capture both structural and semantic knowledge of molecules. Through extensive computational tests on 63 datasets, KPGT exhibits superior performance in predicting molecular properties across various domains. Moreover, the practical applicability of KPGT in drug discovery has been validated by identifying potential inhibitors of two antitumor targets: hematopoietic progenitor kinase 1 (HPK1) and fibroblast growth factor receptor 1 (FGFR1). Overall, KPGT can provide a powerful and useful tool for advancing the artificial intelligence (AI)-aided drug discovery process.",
+        "authors": [
+          "Han Li",
+          "Ruotian Zhang",
+          "Yaosen Min",
+          "Dacheng Ma",
+          "Dan Zhao",
+          "Jianyang Zeng"
+        ],
+        "doi": "10.1038/s41467-023-43214-1",
+        "source": "Nature Communications",
+        "title": "A knowledge-guided pre-training framework for improving molecular representation learning",
+        "work_id": "doi:10.1038/s41467-023-43214-1",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E045",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: PLANET: A Multi-objective Graph Neural Network Model for Protein–Ligand Binding Affinity Prediction",
+      "unit": null,
+      "value": {
+        "abstract": "Predicting protein-ligand binding affinity is a central issue in drug design. Various deep learning models have been published in recent years, where many of them rely on 3D protein-ligand complex structures as input and tend to focus on the single task of reproducing binding affinity. In this study, we have developed a graph neural network model called PLANET (Protein-Ligand Affinity prediction NETwork). This model takes the graph-represented 3D structure of the binding pocket on the target protein and the 2D chemical structure of the ligand molecule as input. It was trained through a multi-objective process with three related tasks, including deriving the protein-ligand binding affinity, protein-ligand contact map, and ligand distance matrix. Besides the protein-ligand complexes with known binding affinity data retrieved from the PDBbind database, a large number of non-binder decoys were also added to the training data for deriving the final model of PLANET. When tested on the CASF-2016 benchmark, PLANET exhibited a scoring power comparable to the best result yielded by other deep learning models as well as a reasonable ranking power and docking power. In virtual screening trials conducted on the DUD-E benchmark, PLANET's performance was notably better than several deep learning and machine learning models. As on the LIT-PCBA benchmark, PLANET achieved comparable accuracy as the conventional docking program Glide, but it only spent less than 1% of Glide's computation time to finish the same job because PLANET did not need exhaustive conformational sampling. Considering the decent accuracy and efficiency of PLANET in binding affinity prediction, it may become a useful tool for conducting large-scale virtual screening.",
+        "authors": [
+          "Xiangying Zhang",
+          "Haotian Gao",
+          "Haojie Wang",
+          "Zhihang Chen",
+          "Zhe Zhang",
+          "Xinchong Chen",
+          "Yan Li",
+          "Yifei Qi"
+        ],
+        "doi": "10.1021/acs.jcim.3c00253",
+        "source": "Journal of Chemical Information and Modeling",
+        "title": "PLANET: A Multi-objective Graph Neural Network Model for Protein–Ligand Binding Affinity Prediction",
+        "work_id": "doi:10.1021/acs.jcim.3c00253",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E046",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: iGRLDTI: an improved graph representation learning method for predicting drug–target interactions over heterogeneous biological information network",
+      "unit": null,
+      "value": {
+        "abstract": "MOTIVATION: The task of predicting drug-target interactions (DTIs) plays a significant role in facilitating the development of novel drug discovery. Compared with laboratory-based approaches, computational methods proposed for DTI prediction are preferred due to their high-efficiency and low-cost advantages. Recently, much attention has been attracted to apply different graph neural network (GNN) models to discover underlying DTIs from heterogeneous biological information network (HBIN). Although GNN-based prediction methods achieve better performance, they are prone to encounter the over-smoothing simulation when learning the latent representations of drugs and targets with their rich neighborhood information in HBIN, and thereby reduce the discriminative ability in DTI prediction. RESULTS: In this work, an improved graph representation learning method, namely iGRLDTI, is proposed to address the above issue by better capturing more discriminative representations of drugs and targets in a latent feature space. Specifically, iGRLDTI first constructs an HBIN by integrating the biological knowledge of drugs and targets with their interactions. After that, it adopts a node-dependent local smoothing strategy to adaptively decide the propagation depth of each biomolecule in HBIN, thus significantly alleviating over-smoothing by enhancing the discriminative ability of feature representations of drugs and targets. Finally, a Gradient Boosting Decision Tree classifier is used by iGRLDTI to predict novel DTIs. Experimental results demonstrate that iGRLDTI yields better performance that several state-of-the-art computational methods on the benchmark dataset. Besides, our case study indicates that iGRLDTI can successfully identify novel DTIs with more distinguishable features of drugs and targets. AVAILABILITY AND IMPLEMENTATION: Python codes and dataset are available at https://github.com/stevejobws/iGRLDTI/.",
+        "authors": [
+          "Bo-Wei Zhao",
+          "Xiaorui Su",
+          "Pengwei Hu"
+        ],
+        "doi": "10.1093/bioinformatics/btad451",
+        "source": "Bioinformatics",
+        "title": "iGRLDTI: an improved graph representation learning method for predicting drug–target interactions over heterogeneous biological information network",
+        "work_id": "doi:10.1093/bioinformatics/btad451",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E047",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Geometric Interaction Graph Neural Network for Predicting Protein–Ligand Binding Affinities from 3D Structures (GIGN)",
+      "unit": null,
+      "value": {
+        "abstract": "Predicting protein-ligand binding affinities (PLAs) is a core problem in drug discovery. Recent advances have shown great potential in applying machine learning (ML) for PLA prediction. However, most of them omit the 3D structures of complexes and physical interactions between proteins and ligands, which are considered essential to understanding the binding mechanism. This paper proposes a geometric interaction graph neural network (GIGN) that incorporates 3D structures and physical interactions for predicting protein-ligand binding affinities. Specifically, we design a heterogeneous interaction layer that unifies covalent and noncovalent interactions into the message passing phase to learn node representations more effectively. The heterogeneous interaction layer also follows fundamental biological laws, including invariance to translations and rotations of the complexes, thus avoiding expensive data augmentation strategies. GIGN achieves state-of-the-art performance on three external test sets. Moreover, by visualizing learned representations of protein-ligand complexes, we show that the predictions of GIGN are biologically meaningful.",
+        "authors": [
+          "Ziduo Yang",
+          "Weihe Zhong",
+          "Qiujie Lv",
+          "Tiejun Dong",
+          "Calvin Yu‐Chian Chen"
+        ],
+        "doi": "10.1021/acs.jpclett.2c03906",
+        "source": "The Journal of Physical Chemistry Letters",
+        "title": "Geometric Interaction Graph Neural Network for Predicting Protein–Ligand Binding Affinities from 3D Structures (GIGN)",
+        "work_id": "doi:10.1021/acs.jpclett.2c03906",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E048",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Drug repositioning based on weighted local information augmented graph neural network",
+      "unit": null,
+      "value": {
+        "abstract": "Drug repositioning, the strategy of redirecting existing drugs to new therapeutic purposes, is pivotal in accelerating drug discovery. While many studies have engaged in modeling complex drug-disease associations, they often overlook the relevance between different node embeddings. Consequently, we propose a novel weighted local information augmented graph neural network model, termed DRAGNN, for drug repositioning. Specifically, DRAGNN firstly incorporates a graph attention mechanism to dynamically allocate attention coefficients to drug and disease heterogeneous nodes, enhancing the effectiveness of target node information collection. To prevent excessive embedding of information in a limited vector space, we omit self-node information aggregation, thereby emphasizing valuable heterogeneous and homogeneous information. Additionally, average pooling in neighbor information aggregation is introduced to enhance local information while maintaining simplicity. A multi-layer perceptron is then employed to generate the final association predictions. The model's effectiveness for drug repositioning is supported by a 10-times 10-fold cross-validation on three benchmark datasets. Further validation is provided through analysis of the predicted associations using multiple authoritative data sources, molecular docking experiments and drug-disease network analysis, laying a solid foundation for future drug discovery.",
+        "authors": [
+          "Yajie Meng",
+          "Yi Wang",
+          "Junlin Xu",
+          "Changcheng Lu",
+          "Xianfang Tang",
+          "Tao Peng",
+          "Bengong Zhang",
+          "Geng Tian"
+        ],
+        "doi": "10.1093/bib/bbad431",
+        "source": "Briefings in Bioinformatics",
+        "title": "Drug repositioning based on weighted local information augmented graph neural network",
+        "work_id": "doi:10.1093/bib/bbad431",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E049",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Fusing Higher and Lower-Order Biological Information for Drug Repositioning via Graph Representation Learning",
+      "unit": null,
+      "value": {
+        "abstract": "Drug repositioning is a promising drug development technique to identify new indications for existing drugs. However, existing computational models only make use of lower-order biological information at the level of individual drugs, diseases and their associations, but few of them can take into account higher-order connectivity patterns presented in biological heterogeneous information networks (HINs). In this work, we propose a novel graph representation learning model, namely FuHLDR, for drug repositioning by fusing higher and lower-order biological information. Specifically, given a HIN, FuHLDR first learns the representations of drugs and diseases at a lower-order level by considering their biological attributes and drug-disease associations (DDAs) through a graph convolutional network model. Then, a meta-path-based strategy is designed to obtain their higher-order representations involving the associations among drugs, proteins and diseases. Their integrated representations are thus determined by fusing higher and lower-order representations, and finally a Random Vector Functional Link Network is employed by FuHLDR to identify novel DDAs. Experimental results on two benchmark datasets demonstrate that FuHLDR performs better than several state-of-the-art drug repositioning models. Furthermore, our case studies on Alzheimer's disease and Breast neoplasms indicate that the rich higher-order biological information gains new insight into drug repositioning with improved accuracy.",
+        "authors": [
+          "Bo-Wei Zhao",
+          "Lei Wang",
+          "Pengwei Hu",
+          "Leon Wong",
+          "Xiaorui Su"
+        ],
+        "doi": "10.1109/tetc.2023.3239949",
+        "source": "IEEE Transactions on Emerging Topics in Computing",
+        "title": "Fusing Higher and Lower-Order Biological Information for Drug Repositioning via Graph Representation Learning",
+        "work_id": "doi:10.1109/tetc.2023.3239949",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E050",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Meta Learning With Graph Attention Networks for Low-Data Drug Discovery",
+      "unit": null,
+      "value": {
+        "abstract": "Finding candidate molecules with favorable pharmacological activity, low toxicity, and proper pharmacokinetic properties is an important task in drug discovery. Deep neural networks have made impressive progress in accelerating and improving drug discovery. However, these techniques rely on a large amount of label data to form accurate predictions of molecular properties. At each stage of the drug discovery pipeline, usually, only a few biological data of candidate molecules and derivatives are available, indicating that the application of deep neural networks for low-data drug discovery is still a formidable challenge. Here, we propose a meta learning architecture with graph attention network, Meta-GAT, to predict molecular properties in low-data drug discovery. The GAT captures the local effects of atomic groups at the atom level through the triple attentional mechanism and implicitly captures the interactions between different atomic groups at the molecular level. GAT is used to perceive molecular chemical environment and connectivity, thereby effectively reducing sample complexity. Meta-GAT further develops a meta learning strategy based on bilevel optimization, which transfers meta knowledge from other attribute prediction tasks to low-data target tasks. In summary, our work demonstrates how meta learning can reduce the amount of data required to make meaningful predictions of molecules in low-data scenarios. Meta learning is likely to become the new learning paradigm in low-data drug discovery. The source code is publicly available at: https://github.com/lol88/Meta-GAT.",
+        "authors": [
+          "Qiujie Lv",
+          "Guanxing Chen",
+          "Ziduo Yang",
+          "Weihe Zhong",
+          "Calvin Yu‐Chian Chen"
+        ],
+        "doi": "10.1109/tnnls.2023.3250324",
+        "source": "IEEE Transactions on Neural Networks and Learning Systems",
+        "title": "Meta Learning With Graph Attention Networks for Low-Data Drug Discovery",
+        "work_id": "doi:10.1109/tnnls.2023.3250324",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E051",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: A dual graph neural network for drug–drug interactions prediction based on molecular structure and interactions",
+      "unit": null,
+      "value": {
+        "abstract": "Expressive molecular representation plays critical roles in researching drug design, while effective methods are beneficial to learning molecular representations and solving related problems in drug discovery, especially for drug-drug interactions (DDIs) prediction. Recently, a lot of work has been put forward using graph neural networks (GNNs) to forecast DDIs and learn molecular representations. However, under the current GNNs structure, the majority of approaches learn drug molecular representation from one-dimensional string or two-dimensional molecular graph structure, while the interaction information between chemical substructure remains rarely explored, and it is neglected to identify key substructures that contribute significantly to the DDIs prediction. Therefore, we proposed a dual graph neural network named DGNN-DDI to learn drug molecular features by using molecular structure and interactions. Specifically, we first designed a directed message passing neural network with substructure attention mechanism (SA-DMPNN) to adaptively extract substructures. Second, in order to improve the final features, we separated the drug-drug interactions into pairwise interactions between each drug's unique substructures. Then, the features are adopted to predict interaction probability of a DDI tuple. We evaluated DGNN-DDI on real-world dataset. Compared to state-of-the-art methods, the model improved DDIs prediction performance. We also conducted case study on existing drugs aiming to predict drug combinations that may be effective for the novel coronavirus disease 2019 (COVID-19). Moreover, the visual interpretation results proved that the DGNN-DDI was sensitive to the structure information of drugs and able to detect the key substructures for DDIs. These advantages demonstrated that the proposed method enhanced the performance and interpretation capability of DDI prediction modeling.",
+        "authors": [
+          "Mei Ma",
+          "Xiujuan Lei"
+        ],
+        "doi": "10.1371/journal.pcbi.1010812",
+        "source": "PLoS Computational Biology",
+        "title": "A dual graph neural network for drug–drug interactions prediction based on molecular structure and interactions",
+        "work_id": "doi:10.1371/journal.pcbi.1010812",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "figures/annual_publications.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E052",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 1 (annual_publications) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "peak_documents": 190,
+          "peak_year": 2023,
+          "years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ]
+        },
+        "figure_name": "annual_publications",
+        "figure_number": 1
+      }
+    },
+    {
+      "artifact_path": "figures/top_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E053",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 2 (top_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Briefings in Bioinformatics",
+          "top_value": 45
+        },
+        "figure_name": "top_sources",
+        "figure_number": 2
+      }
+    },
+    {
+      "artifact_path": "figures/top_authors.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E054",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 3 (top_authors) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Thin Nguyen",
+          "top_value": 19
+        },
+        "figure_name": "top_authors",
+        "figure_number": 3
+      }
+    },
+    {
+      "artifact_path": "figures/top_institutions.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E055",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 4 (top_institutions) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Chinese Academy of Sciences",
+          "top_value": 24
+        },
+        "figure_name": "top_institutions",
+        "figure_number": 4
+      }
+    },
+    {
+      "artifact_path": "figures/document_types.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E056",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 5 (document_types) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed_categories": 1,
+          "total_documents": 456
+        },
+        "figure_name": "document_types",
+        "figure_number": 5
+      }
+    },
+    {
+      "artifact_path": "figures/citation_distribution.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E057",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 6 (citation_distribution) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "display_cap_p98": 429.69999999999993,
+          "documents": 456,
+          "maximum": 1210,
+          "mean": 59.81578947368421,
+          "median": 24.0,
+          "zero_cited": 22
+        },
+        "figure_name": "citation_distribution",
+        "figure_number": 6
+      }
+    },
+    {
+      "artifact_path": "figures/top_cited_documents.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E058",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 7 (top_cited_documents) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "GraphDTA: predicting drug–target binding affinity wit…",
+          "top_value": 1210
+        },
+        "figure_name": "top_cited_documents",
+        "figure_number": 7
+      }
+    },
+    {
+      "artifact_path": "figures/bradford_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E059",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 8 (bradford_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "sources": 155,
+          "zone_1_sources": 5
+        },
+        "figure_name": "bradford_sources",
+        "figure_number": 8
+      }
+    },
+    {
+      "artifact_path": "figures/keyword_trends.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E060",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 9 (keyword_trends) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "keywords": 15,
+          "years": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ]
+        },
+        "figure_name": "keyword_trends",
+        "figure_number": 9
+      }
+    },
+    {
+      "artifact_path": "figures/network_coauthorship.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E061",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 10 (network_coauthorship) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 792,
+          "candidate_nodes_with_links": 295,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 127,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 304,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 16,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.046122399745041225,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.11428676520337913,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "overlap_ratio": 0.0,
+          "selected_seed": 1051.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.04040806148487227,
+          "within_between_distance_ratio": 0.0
+        },
+        "figure_name": "network_coauthorship",
+        "figure_number": 10
+      }
+    },
+    {
+      "artifact_path": "figures/network_institution_collaboration.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E062",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 11 (network_institution_collaboration) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 472,
+          "candidate_nodes_with_links": 196,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 138,
+          "displayed_nodes": 71,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 210,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.26095821568026734,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.2526349812051937,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 3166.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.05207454074841341,
+          "within_between_distance_ratio": 0.6541730862386473
+        },
+        "figure_name": "network_institution_collaboration",
+        "figure_number": 11
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_cooccurrence.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E063",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 12 (network_keyword_cooccurrence) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 3528,
+          "candidate_nodes_with_links": 133,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 198,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 133,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.1609876016775919,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.4094761721527213,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 1245.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.035001150850154004,
+          "within_between_distance_ratio": 0.35170880739933946
+        },
+        "figure_name": "network_keyword_cooccurrence",
+        "figure_number": 12
+      }
+    },
+    {
+      "artifact_path": "figures/network_cocitation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E064",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 13 (network_cocitation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 34962,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 194,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.10501539973889593,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.32738893777084216,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 7,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 333.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.030061160071240132,
+          "within_between_distance_ratio": 0.1952826425970456
+        },
+        "figure_name": "network_cocitation",
+        "figure_number": 13
+      }
+    },
+    {
+      "artifact_path": "figures/network_citation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E065",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 14 (network_citation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 3,
+          "candidate_nodes_with_links": 5,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 2,
+          "displayed_edges": 3,
+          "displayed_nodes": 5,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 5,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 5,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.14725540078635288,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.7051949476758628,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 2448.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.010514413260088035,
+          "within_between_distance_ratio": 0.3382708004749057
+        },
+        "figure_name": "network_citation",
+        "figure_number": 14
+      }
+    },
+    {
+      "artifact_path": "figures/network_bibliographic_coupling.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E066",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 15 (network_bibliographic_coupling) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 19555,
+          "candidate_nodes_with_links": 430,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 210,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 430,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.08174534085542967,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.3572146522488757,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 14,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 1658.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          },
+          "weighted_edge_length": 0.012938852389004421,
+          "within_between_distance_ratio": 0.1698191861799382
+        },
+        "figure_name": "network_bibliographic_coupling",
+        "figure_number": 15
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_overlay.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E067",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 16 (network_keyword_overlay) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 3528,
+          "candidate_nodes_with_links": 133,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 198,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 133,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "year_max": 2022.6666666666667,
+          "year_min": 2021.1538461538462
+        },
+        "figure_name": "network_keyword_overlay",
+        "figure_number": 16
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_density.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E068",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 17 (network_keyword_density) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 3528,
+          "candidate_nodes_with_links": 133,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "density_grid": [
+            260,
+            190
+          ],
+          "density_weight": "log(1 + occurrence), gamma 0.62",
+          "displayed_clusters": 7,
+          "displayed_edges": 198,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 133,
+          "gaussian_sigma": 8,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "figure_name": "network_keyword_density",
+        "figure_number": 17
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E069",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+      "unit": null,
+      "value": {
+        "citation": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+        "doi": "10.1016/j.jbusres.2021.04.070",
+        "role": "bibliometric workflow and interpretation guideline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E070",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+      "unit": null,
+      "value": {
+        "citation": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+        "doi": "10.1016/j.joi.2017.08.007",
+        "role": "science-mapping analysis baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E071",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+      "unit": null,
+      "value": {
+        "citation": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+        "doi": "10.1007/s11192-009-0146-3",
+        "role": "bibliometric network visualization baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E072",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+      "unit": null,
+      "value": {
+        "citation": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+        "doi": "10.1088/1742-5468/2008/10/P10008",
+        "role": "Louvain community-detection method"
+      }
+    }
+  ],
+  "anonymous_candidate": "# Graph Neural Networks in Drug Discovery: A Bibliometric Portrait of a Rapidly Expanding Research Frontier (2018–2023)\n\n## Structured Abstract\n**Background:** Graph neural networks (GNNs) have emerged as a transformative computational paradigm in drug discovery, yet a systematic quantitative overview of the field’s structure and evolution is lacking.\n**Objective:** This report provides a reproducible bibliometric analysis of the GNN-in-drug-discovery literature, mapping its growth, key contributors, thematic concentrations, and intellectual structure.\n**Methods:** A corpus of 456 unique works was acquired from a single bibliographic source via cursor pagination until exhaustion [E001, E002]. Metadata completeness was assessed across 11 fields [E003]. Descriptive, trend, and network analyses were performed using whole counting, Bradford zoning, and candidate-first association-strength mapping with Louvain community detection [E019, E022–E027, E072].\n**Results:** The corpus spans 2018–2023, with annual output peaking at 190 works in 2023 and a compound annual growth rate of 185.60% [E004, E005, E006]. The most prolific source is *Briefings in Bioinformatics* (45 publications) and the most prolific author is Thin Nguyen (19 publications) [E008, E010]. The citation distribution is highly skewed (mean 59.82, median 24.00), with 4.82% of works uncited [E015, E016]. Thematic networks reveal a dense core centered on “Computer science,” “Artificial intelligence,” and “Machine learning” [E027].\n**Conclusion:** The GNN-in-drug-discovery domain exhibits rapid growth, concentrated productivity in a few journals and institutions, and a strongly interconnected conceptual vocabulary, while citation-based networks remain sparse due to the field’s nascency.\n\n## 1. Introduction\n### 1.1 Background\nGraph neural networks provide a natural framework for representing molecular structures and biological interaction networks, leading to their rapid adoption in computational drug discovery. Works such as GraphDTA and Attentive FP report state-of-the-art performance in their abstracts for drug–target affinity prediction and molecular property prediction [E028, E029].\n\n### 1.2 Rationale & Objective\nDespite the proliferation of primary research, a data-driven overview of the field’s bibliometric landscape is absent. This report aims to quantify the growth, productivity, impact, and intellectual structure of the GNN-in-drug-discovery literature using reproducible bibliometric methods [E069, E070].\n\n### 1.3 Research Questions\n- **RQ1:** What are the volume, growth trajectory, and temporal span of the literature? [E004, E006, E007]\n- **RQ2:** Which sources, authors, and institutions are most productive? [E008–E013]\n- **RQ3:** What is the citation impact and its distribution? [E015–E018]\n- **RQ4:** What are the dominant thematic concentrations and their evolution? [E020, E027]\n- **RQ5:** What is the collaborative and intellectual structure as revealed by coauthorship, cocitation, and bibliographic coupling networks? [E022, E024, E025]\n\n## 2. Methods\n### 2.1 Data Acquisition and Corpus Assembly\nA single bibliographic source was queried. Cursor pagination continued until the source returned no next cursor, yielding 456 unique source records that matched the source-reported expected count of 456, confirming acquisition completeness [E002]. Deterministic exact deduplication produced a canonical corpus of 456 unique works [E001].\n\n### 2.2 Metadata Quality Assessment\nField completeness was measured as the percentage of non-null canonical values. Coverage was 100% for title, publication date, year, document type, source ID, cited-by count, and reference count. Language coverage was 99.56%, DOI coverage was 97.37%, publisher coverage was 96.05%, and abstract coverage was 85.09% [E003].\n\n### 2.3 Analytical Procedures\n- **Descriptive statistics:** Annual output was whole-counted by publication year [E007]. Productivity rankings for sources, authors, and institutions were generated via whole counting [E009, E011, E013]. Citation impact was summarized using mean, median, and upper quantiles [E017].\n- **Concentration analysis:** Bradford’s law of scattering was applied to sources with known names, dividing them into three zones by cumulative document thirds [E019].\n- **Network analyses:** Six networks were constructed using a candidate-first association-strength approach. Candidate-first association-strength mapping selects nodes by occurrence threshold, then normalizes co-occurrence counts by the product of node weights (c_ij / (w_i * w_j)). Communities were detected via the Louvain algorithm, with small clusters merged [E022–E027, E072]. Networks were visualized using VOS-style and ForceAtlas2 layouts, with edge reduction via maximum-spanning forest plus strongest edges per node [E061–E066].\n- **Thematic analysis:** Keyword temporal dynamics were tracked by counting unique works per normalized keyword and publication year [E020]. A three-field plot mapped leading author–source–keyword combinations [E021].\n\n### 2.4 Reproducibility\nAll analyses are deterministic and parameterized. Figures were rendered from versioned analysis outputs with saved parameters and source tables [E052–E068]. Methodological references are curated and DOI-verified [E069–E072].\n\n## 3. Results\n### 3.1 Corpus Overview and Growth\nThe corpus spans six years, from 2018 to 2023 [E004]. Annual output grew from 1 publication in 2018 to 190 in 2023, with consistent year-over-year increases [E007]. The compound annual growth rate over this period is 185.60%. This endpoint-based CAGR describes the overall trajectory but does not establish monotonic year-over-year growth [E006]. The final year, 2023, represents the observed peak, though it may be incomplete depending on retrieval date [E005].\n\n### 3.2 Document Types\nAll 456 works carry the source-supplied document type “article.” The source classification does not distinguish reviews from original articles; therefore the proportion of review content cannot be determined from this metadata field alone [E014]. This is visualized in Figure 5 [E056].\n\n### 3.3 Most Productive Sources, Authors, and Institutions\n- **Sources:** *Briefings in Bioinformatics* ranks first with 45 publications, followed by *Journal of Chemical Information and Modeling* (40) and *Bioinformatics* (29) [E008, E009]. Figure 2 displays the top 15 sources [E053].\n- **Authors:** Thin Nguyen leads with 19 publications, followed by Dongsheng Cao and Tingjun Hou (11 each) [E010, E011]. Figure 3 displays the top 15 authors [E054].\n- **Institutions:** The Chinese Academy of Sciences ranks first with 24 publications, followed by Central South University (22) and Hunan University (19) [E012, E013]. Figure 4 displays the top 15 institutions [E055].\n- **Concentration:** Bradford zoning reveals a concentrated core: Zone 1 comprises only 5 sources that account for 148 documents, while Zone 3 contains 120 sources for 151 documents. Document counts per zone are rounded to the nearest 50 [E019]. This is visualized in Figure 8 [E059].\n\n### 3.4 Citation Impact\n- **Distribution:** The citation distribution is right-skewed. The mean citation count is 59.82, while the median is 24.00 [E015]. The 90th percentile is 113.5 citations, and the maximum is 1,210 [E017]. These values are source- and retrieval-date-dependent and should not be treated as stable bibliometric indicators [E015, E017]. Figure 6 visualizes the distribution capped at the 98th percentile [E057].\n- **Zero citation:** 22 works (4.82%) have zero source-reported citations [E016].\n- **Top-cited documents:** The most-cited work is “GraphDTA: predicting drug–target binding affinity with graph neural networks” (2020) with 1,210 citations, followed by “Pushing the Boundaries of Molecular Representation for Drug Discovery with the Graph Attention Mechanism” (2019) with 1,056 citations [E018]. Figure 7 lists the top 15 documents [E058].\n\n### 3.5 Thematic Landscape\n- **Keyword trends:** The most globally frequent keywords are “Computer science” (437 documents), “Artificial intelligence” (393), and “Machine learning” (326). All show consistent year-over-year increases in document count, though the magnitude of increase varies [E020]. Figure 9 tracks the top 15 keywords over time [E060].\n- **Three-field plot:** The most frequent author–source–keyword combinations involve Wen Zhang and *Briefings in Bioinformatics*, with five documents each across the keywords “Artificial intelligence,” “Graph,” “Machine learning,” “Theoretical computer science,” and “Computer science” [E021].\n- **Keyword co-occurrence network:** The network contains 72 displayed nodes and 198 edges, organized into 7 clusters [E027]. The core cluster is anchored by “Computer science,” “Artificial intelligence,” “Machine learning,” “Graph,” and “Theoretical computer science” [E027]. This structure is contingent on the minimum occurrence threshold (5) and edge-reduction parameters [E027]. Figure 12 visualizes the network [E063], Figure 16 provides a temporal overlay [E067], and Figure 17 shows a density map [E068].\n\n### 3.6 Network Structures\n- **Coauthorship:** The network displays 60 nodes and 127 edges across 10 clusters [E024]. Tingjun Hou and Dongsheng Cao are central nodes in one cluster, while Mingyue Zheng anchors another [E024]. Figure 10 visualizes the network [E061].\n- **Institution collaboration:** The network contains 71 nodes and 138 edges in 10 clusters [E026]. The Chinese Academy of Sciences and the University of Chinese Academy of Sciences form a prominent dyad [E026]. Figure 11 visualizes the network [E062].\n- **Bibliographic coupling:** The network comprises 72 nodes and 210 edges in 4 clusters, constructed from 430 documents that met the inclusion criteria (minimum 5 references, minimum 2 shared references) [E022]. Top nodes by weighted degree include works on molecular representation and bioinformatics applications [E022]. Figure 15 visualizes the network [E066].\n- **Cocitation:** The network displays 72 nodes and 194 edges in 5 clusters. Top nodes are identified by OpenAlex IDs; resolution to bibliographic metadata requires external lookup [E025]. Figure 13 visualizes the network [E064].\n- **Citation network:** The direct citation network, constructed with a minimum occurrence threshold of 5, contains only 5 nodes and 3 edges in 2 clusters. This sparsity reflects both the short citation window and the thresholding of the candidate pool [E023]. Figure 14 visualizes the network [E065].\n\n## 4. Discussion\n### 4.1 Interpretation of Growth and Productivity\nThe observed endpoint CAGR is 185.60%; this measure does not establish a monotonic trend or, by itself, a “hot topic” phase [E006]. Bradford zoning places 5 sources in Zone 1, and the Chinese Academy of Sciences ranks first with 24 publications; these descriptive rankings do not by themselves establish that the field is nascent or that venues and institutions are dominant [E008, E012, E019].\n\n### 4.2 Interpretation of Citation Impact\nThe skewed citation distribution, with a mean (59.82) substantially exceeding the median (24.00), is typical of bibliometric data and reflects a few highly influential papers [E015, E017]. The 4.82% uncited rate may reflect the recency of the corpus, as newer works have had limited time to accumulate citations [E016]. The top-cited documents are methodological papers introducing novel architectures (e.g., GraphDTA, Attentive FP), underscoring the field’s method-driven character [E018, E028, E029].\n\n### 4.3 Interpretation of Thematic and Network Structure\nThe keyword co-occurrence network reveals a conceptual core around computer science, AI, and machine learning, with “Graph” as a central bridging term [E027]. The temporal overlay suggests this core has been stable and intensifying [E067]. The sparse direct citation network (5 nodes, 3 edges) is an expected artifact of the short citation window (2018–2023) and the minimum occurrence threshold, which together limit the accumulation of within-corpus citations [E023]. In contrast, the richer bibliographic coupling and cocitation networks indicate shared intellectual foundations, even if direct citation links are not yet visible [E022, E025]. The coauthorship and institution collaboration networks reveal distinct research clusters, often centered around key productive authors and their institutions [E024, E026].\n\n## 5. Limitations\n- **Database and retrieval bias:** All findings are contingent on the single bibliographic source used, its coverage, and the retrieval date. Citation counts are source- and retrieval-date-dependent [E015, E017].\n- **Citation window:** The corpus spans 2018–2023, meaning recent works, especially those from 2023, have had minimal time to accumulate citations. This directly limits the size and interpretability of the citation network [E023, E016].\n- **Metadata dependence:** Analyses of keywords, document types, and abstracts rely on source-supplied metadata quality and classification practices. Abstract coverage is 85.09%; 68 works lack abstracts, limiting content-based analyses for those records. Keyword frequencies depend on source indexing and normalization [E003, E014, E020].\n- **Network parameterization:** Network structures are a function of the chosen thresholds (e.g., minimum occurrence), normalization (association strength), and edge-reduction algorithms. Different parameters would yield different maps [E022–E027].\n- **Content depth:** All content inferences are based on titles and abstracts, not full-text analysis. Claims about substantive findings of cited works are limited to what is reported in the abstract [E028–E051].\n- **Productivity vs. quality:** Whole-count productivity rankings for authors, sources, and institutions are descriptive and must not be interpreted as measures of research quality or causal influence [E009, E011, E013].\n\n## 6. Conclusion\nThis bibliometric analysis reveals a research domain—graph neural networks in drug discovery—characterized by explosive growth, concentrated productivity, and a tightly woven thematic core. The field is methodologically driven, as evidenced by its most-cited works and dominant keywords. While citation-based networks remain embryonic due to the short time window, coauthorship and bibliographic coupling networks already delineate a structured community. This report provides a reproducible, evidence-mapped baseline for researchers, policymakers, and funders to understand the landscape and evolution of this rapidly advancing frontier.\n",
+  "allowed_evidence_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027",
+    "E028",
+    "E029",
+    "E030",
+    "E031",
+    "E032",
+    "E033",
+    "E034",
+    "E035",
+    "E036",
+    "E037",
+    "E038",
+    "E039",
+    "E040",
+    "E041",
+    "E042",
+    "E043",
+    "E044",
+    "E045",
+    "E046",
+    "E047",
+    "E048",
+    "E049",
+    "E050",
+    "E051",
+    "E052",
+    "E053",
+    "E054",
+    "E055",
+    "E056",
+    "E057",
+    "E058",
+    "E059",
+    "E060",
+    "E061",
+    "E062",
+    "E063",
+    "E064",
+    "E065",
+    "E066",
+    "E067",
+    "E068",
+    "E069",
+    "E070",
+    "E071",
+    "E072",
+    "doi:10.1016/j.ddtec.2020.11.009",
+    "doi:10.1016/j.heliyon.2023.e17575",
+    "doi:10.1021/acs.jcim.3c00253",
+    "doi:10.1021/acs.jcim.9b00387",
+    "doi:10.1021/acs.jmedchem.9b00959",
+    "doi:10.1021/acs.jpclett.2c03906",
+    "doi:10.1038/s41467-023-36699-3",
+    "doi:10.1038/s41467-023-38192-3",
+    "doi:10.1038/s41467-023-43214-1",
+    "doi:10.1038/s42004-023-00825-5",
+    "doi:10.1038/s42256-021-00438-4",
+    "doi:10.1039/d0ra02297g",
+    "doi:10.1093/bib/bbaa044",
+    "doi:10.1093/bib/bbaa243",
+    "doi:10.1093/bib/bbad431",
+    "doi:10.1093/bib/bbz042",
+    "doi:10.1093/bioinformatics/btaa921",
+    "doi:10.1093/bioinformatics/btad451",
+    "doi:10.1093/bioinformatics/bty535",
+    "doi:10.1109/tetc.2023.3239949",
+    "doi:10.1109/tnnls.2023.3250324",
+    "doi:10.1186/s13321-020-00479-8",
+    "doi:10.1371/journal.pcbi.1010812",
+    "doi:10.3389/fgene.2021.690049"
+  ],
+  "content_sha256": "7c61cfeadf9275de9d6581add01502b09cf8ad4a40455a8ca8c6dcd28babdfd2"
+}

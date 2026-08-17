@@ -1,0 +1,11 @@
+{
+  "packet_id": "EP8ecd64b1b3d76a571ace",
+  "judge_id": "evaluation",
+  "decision": "fail",
+  "confidence": 0.99,
+  "reason": "The report incorrectly claims consistent annual increases for Biology and Gene and repeatedly characterizes growth as sustained, despite documented declines in both keyword series and total output.",
+  "evidence_ids": [
+    "E007",
+    "E020"
+  ]
+}

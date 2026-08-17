@@ -1,0 +1,3134 @@
+[
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP170f4b705125a81edea8",
+    "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPa00034782ceda3f4a561",
+    "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1e3d8646da21baea7553",
+    "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP9a18e4c8cb7e20c4c2b4",
+    "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPb2b26771f2b5b22e2550",
+    "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP6ea3d52ddba62f7d02a8",
+    "sample_id": "machine_learning_climate_change_2008_2022:citation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPed83f28f8fa83eb57af2",
+    "sample_id": "machine_learning_climate_change_2008_2022:citation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPbf01873f49a6e911fb55",
+    "sample_id": "machine_learning_climate_change_2008_2022:citation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP0d26e76574718f8289ff",
+    "sample_id": "machine_learning_climate_change_2008_2022:citation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP0df11dfa5aa3811f7485",
+    "sample_id": "machine_learning_climate_change_2008_2022:citation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP82ff66417f56f6ebbdae",
+    "sample_id": "machine_learning_climate_change_2008_2022:coauthorship:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP05a1c0b888b8275d8222",
+    "sample_id": "machine_learning_climate_change_2008_2022:coauthorship:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP79532b373d954a0254c6",
+    "sample_id": "machine_learning_climate_change_2008_2022:coauthorship:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP038f77ced651d72d532f",
+    "sample_id": "machine_learning_climate_change_2008_2022:coauthorship:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPf9bb2b17154b51936603",
+    "sample_id": "machine_learning_climate_change_2008_2022:coauthorship:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP4cb37c73bafbdde09574",
+    "sample_id": "machine_learning_climate_change_2008_2022:cocitation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP709d37c5616a4ad0899e",
+    "sample_id": "machine_learning_climate_change_2008_2022:cocitation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP7d7f83cb670c306ad73e",
+    "sample_id": "machine_learning_climate_change_2008_2022:cocitation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP728908a7126dd328930b",
+    "sample_id": "machine_learning_climate_change_2008_2022:cocitation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP83cd76415cb969647d0e",
+    "sample_id": "machine_learning_climate_change_2008_2022:cocitation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPa3b9059fc756e250f39a",
+    "sample_id": "machine_learning_climate_change_2008_2022:institution_collaboration:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP9a87b9b601066ea46872",
+    "sample_id": "machine_learning_climate_change_2008_2022:institution_collaboration:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1ead9b7ae30c5566e9fc",
+    "sample_id": "machine_learning_climate_change_2008_2022:institution_collaboration:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP24814c16fef8a32857f0",
+    "sample_id": "machine_learning_climate_change_2008_2022:institution_collaboration:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP23e0fa043acf46b5f2f0",
+    "sample_id": "machine_learning_climate_change_2008_2022:institution_collaboration:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP17d45f3ebe0b9181aba9",
+    "sample_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPa62395f4825e82b8958f",
+    "sample_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP2c09a8c07773186aeff8",
+    "sample_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP9bf381cf5f5c77ad9f16",
+    "sample_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPbf661ca9798d7ec1af81",
+    "sample_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1354c547cbe1bbb1036c",
+    "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP6ef243c4a9bc6243ad74",
+    "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP8bbb22faca47cc0bb120",
+    "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPbfbd8c044fcec543021a",
+    "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP637176ce55cac2d4e29f",
+    "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP936c45e4f1d4ddb1cdf3",
+    "sample_id": "climate_change_risks_1990_2021:citation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP083059a1d7f6ba27d8e9",
+    "sample_id": "climate_change_risks_1990_2021:citation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP496a1b61042ca0b27098",
+    "sample_id": "climate_change_risks_1990_2021:citation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP711cd06df53dfd6017b3",
+    "sample_id": "climate_change_risks_1990_2021:citation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPf079574e8c30b93f2504",
+    "sample_id": "climate_change_risks_1990_2021:citation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP87a1454b1741c4531292",
+    "sample_id": "climate_change_risks_1990_2021:coauthorship:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1521ce7b38470aff6dc2",
+    "sample_id": "climate_change_risks_1990_2021:coauthorship:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP4cadbfc32fd5d00b3779",
+    "sample_id": "climate_change_risks_1990_2021:coauthorship:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP11de45cba776d8ea8826",
+    "sample_id": "climate_change_risks_1990_2021:coauthorship:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP5b1289b2fec130f7c932",
+    "sample_id": "climate_change_risks_1990_2021:coauthorship:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP25bc5aa4175fa27b249f",
+    "sample_id": "climate_change_risks_1990_2021:cocitation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP88521f232c8a0c497e27",
+    "sample_id": "climate_change_risks_1990_2021:cocitation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP15e424837d87c9ebae9e",
+    "sample_id": "climate_change_risks_1990_2021:cocitation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPe09979843d67dd70f691",
+    "sample_id": "climate_change_risks_1990_2021:cocitation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP41b0919d27ad5e9e64d6",
+    "sample_id": "climate_change_risks_1990_2021:cocitation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPd2fd43fdbafeffbf122e",
+    "sample_id": "climate_change_risks_1990_2021:institution_collaboration:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPaec5cb78ecd65b42a678",
+    "sample_id": "climate_change_risks_1990_2021:institution_collaboration:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPe3daf4f6ff2011a15762",
+    "sample_id": "climate_change_risks_1990_2021:institution_collaboration:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1e78fe22339ca37fde60",
+    "sample_id": "climate_change_risks_1990_2021:institution_collaboration:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP4a7c676e16a5db6ba952",
+    "sample_id": "climate_change_risks_1990_2021:institution_collaboration:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP032ec35f6211559061b1",
+    "sample_id": "climate_change_risks_1990_2021:keyword_cooccurrence:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP4d8e8c56fb62730bf7ce",
+    "sample_id": "climate_change_risks_1990_2021:keyword_cooccurrence:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1c6331b277c676a135bb",
+    "sample_id": "climate_change_risks_1990_2021:keyword_cooccurrence:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP5acdf5764ec7cb3fee57",
+    "sample_id": "climate_change_risks_1990_2021:keyword_cooccurrence:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP63d4e9231cdf50d7ab26",
+    "sample_id": "climate_change_risks_1990_2021:keyword_cooccurrence:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP3fb7ad85ddd866a47ec0",
+    "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPa60df127015bde87e773",
+    "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP2cec89daaf0921d18f52",
+    "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPf42961c202721a37ecaa",
+    "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP7a7f5c894547cfdbfbb6",
+    "sample_id": "digital_twins_healthcare_2012_2024:citation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP7a131402e596fbf0bc90",
+    "sample_id": "digital_twins_healthcare_2012_2024:citation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPc5ac92e8ca5cce3117e9",
+    "sample_id": "digital_twins_healthcare_2012_2024:citation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP638de27770e82828658d",
+    "sample_id": "digital_twins_healthcare_2012_2024:citation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPe087c872a9acd75a4c44",
+    "sample_id": "digital_twins_healthcare_2012_2024:citation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP14eb0f7b6ed970902c67",
+    "sample_id": "digital_twins_healthcare_2012_2024:coauthorship:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPe51e63a8cf8a2303c801",
+    "sample_id": "digital_twins_healthcare_2012_2024:coauthorship:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPb75f4d5bbc5a9fd08a8c",
+    "sample_id": "digital_twins_healthcare_2012_2024:coauthorship:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP7c00adada6994eed7e87",
+    "sample_id": "digital_twins_healthcare_2012_2024:coauthorship:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP6b1a54b5e3f96b7b0664",
+    "sample_id": "digital_twins_healthcare_2012_2024:coauthorship:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPab62fb8676834e10b1b2",
+    "sample_id": "digital_twins_healthcare_2012_2024:cocitation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP9c364120cd20f6a2a30a",
+    "sample_id": "digital_twins_healthcare_2012_2024:cocitation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPd5153fe25f8337bdc50f",
+    "sample_id": "digital_twins_healthcare_2012_2024:cocitation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP317a73b009316f287036",
+    "sample_id": "digital_twins_healthcare_2012_2024:cocitation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP11890d8c2ed384e4cf8a",
+    "sample_id": "digital_twins_healthcare_2012_2024:cocitation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP49d31c4fc22375657847",
+    "sample_id": "digital_twins_healthcare_2012_2024:institution_collaboration:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1dc177acf13d31a0e61d",
+    "sample_id": "digital_twins_healthcare_2012_2024:institution_collaboration:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPd94b699f9a156524a835",
+    "sample_id": "digital_twins_healthcare_2012_2024:institution_collaboration:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP7c3d0a5ecd18680e32ac",
+    "sample_id": "digital_twins_healthcare_2012_2024:institution_collaboration:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPe38990c7708e8980ceab",
+    "sample_id": "digital_twins_healthcare_2012_2024:institution_collaboration:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPd84e10ff28b5957bcec4",
+    "sample_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP9ceb8498b092c1597c23",
+    "sample_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPb7137239712755b5dd84",
+    "sample_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPe09527ff45982364af3e",
+    "sample_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPe2b0877adba13b81033b",
+    "sample_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPdce690937e972b25b492",
+    "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP63042d1e1327d954b95d",
+    "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPa80721fbb28b80b64255",
+    "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPb8b5fbce8d24fda7dab9",
+    "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP1fada292b8eeddb550ae",
+    "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPafa2d9bf7695bcedb669",
+    "sample_id": "plant_heat_drought_2008_2021:citation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP8fd726af961d07c7d6ec",
+    "sample_id": "plant_heat_drought_2008_2021:citation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPc2061ac9855db85e72fa",
+    "sample_id": "plant_heat_drought_2008_2021:citation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP5958b8771a39017ca0fb",
+    "sample_id": "plant_heat_drought_2008_2021:citation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP07acaef48f50aec40d4a",
+    "sample_id": "plant_heat_drought_2008_2021:citation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP01fb179ade9e06448238",
+    "sample_id": "plant_heat_drought_2008_2021:coauthorship:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP39a2d45585d70aed13cb",
+    "sample_id": "plant_heat_drought_2008_2021:coauthorship:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPfc1716f8f63da1db7218",
+    "sample_id": "plant_heat_drought_2008_2021:coauthorship:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP1bfabe8b06bf5a55dc2a",
+    "sample_id": "plant_heat_drought_2008_2021:coauthorship:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP212e00059816ca700c61",
+    "sample_id": "plant_heat_drought_2008_2021:coauthorship:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP218e87f608b6e13c4f75",
+    "sample_id": "plant_heat_drought_2008_2021:cocitation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP10dd18a6fe09c1957b1b",
+    "sample_id": "plant_heat_drought_2008_2021:cocitation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP473d65543425fe39c02c",
+    "sample_id": "plant_heat_drought_2008_2021:cocitation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP9b9d2eeb65af4bda6747",
+    "sample_id": "plant_heat_drought_2008_2021:cocitation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP8b756d28163f1c594acd",
+    "sample_id": "plant_heat_drought_2008_2021:cocitation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP5cf86d25446b1c5e2eee",
+    "sample_id": "plant_heat_drought_2008_2021:institution_collaboration:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPcdf5778dfa6cf8ffa182",
+    "sample_id": "plant_heat_drought_2008_2021:institution_collaboration:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP38e3235b5ee96104029f",
+    "sample_id": "plant_heat_drought_2008_2021:institution_collaboration:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP7128c42c8948b4ab5dec",
+    "sample_id": "plant_heat_drought_2008_2021:institution_collaboration:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP0e6c2131b38737634ee2",
+    "sample_id": "plant_heat_drought_2008_2021:institution_collaboration:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPa2abd810199dcecd89e2",
+    "sample_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPd435cf1030c63cc40834",
+    "sample_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP6f8dc4cbf8aaaebe8655",
+    "sample_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP525586a62bf7fdbd1f6d",
+    "sample_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPe6f6dcc8af04f06312ec",
+    "sample_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP2a12bd55e43b8ec0db7e",
+    "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP852fd7a4d4cfc07637d9",
+    "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP7ba6b6b8e27944aa6c3e",
+    "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPd61c540b32a5d55d3621",
+    "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP23a0d5bd9205d132259d",
+    "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPe8cb5fa57ed5aeef647a",
+    "sample_id": "gene_editing_als_2004_2024:coauthorship:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP161aec75646fa65e1194",
+    "sample_id": "gene_editing_als_2004_2024:coauthorship:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP9eb09db0a1200333a056",
+    "sample_id": "gene_editing_als_2004_2024:coauthorship:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPb8dbeae7425fe0650b83",
+    "sample_id": "gene_editing_als_2004_2024:coauthorship:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP99621be6cd3895123548",
+    "sample_id": "gene_editing_als_2004_2024:coauthorship:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPdd021e32e8310b814cc0",
+    "sample_id": "gene_editing_als_2004_2024:cocitation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPf342e40a82db5565b90d",
+    "sample_id": "gene_editing_als_2004_2024:cocitation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP434bb940e689ec6033f0",
+    "sample_id": "gene_editing_als_2004_2024:cocitation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPe2f539b5607799f7a166",
+    "sample_id": "gene_editing_als_2004_2024:cocitation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP9977d6f44e0f2f3daea4",
+    "sample_id": "gene_editing_als_2004_2024:cocitation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP91468c7c00ec3ca1273b",
+    "sample_id": "gene_editing_als_2004_2024:institution_collaboration:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPad22ac1ffe319f8cf3cc",
+    "sample_id": "gene_editing_als_2004_2024:institution_collaboration:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPfb7841855fb80759b0e1",
+    "sample_id": "gene_editing_als_2004_2024:institution_collaboration:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP8686027557b86ce65108",
+    "sample_id": "gene_editing_als_2004_2024:institution_collaboration:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP43b78cb81e64a5abdd99",
+    "sample_id": "gene_editing_als_2004_2024:institution_collaboration:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPd31e5fc12f522bbf0e47",
+    "sample_id": "gene_editing_als_2004_2024:keyword_cooccurrence:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP895052ce602ed242e153",
+    "sample_id": "gene_editing_als_2004_2024:keyword_cooccurrence:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP41a8b828d700eb0424c1",
+    "sample_id": "gene_editing_als_2004_2024:keyword_cooccurrence:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPe0b9253ff6cbec3b3743",
+    "sample_id": "gene_editing_als_2004_2024:keyword_cooccurrence:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPbf497bb96d08d6e408e3",
+    "sample_id": "gene_editing_als_2004_2024:keyword_cooccurrence:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPa7d32e83e99a86c7ee99",
+    "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPb1aca3e25e0b90085695",
+    "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP325ce5019b5d71a93983",
+    "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP5c6a663ae6b16d3c518c",
+    "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPf4d1b22c59a254731796",
+    "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPdc327d1e3ea4c352b383",
+    "sample_id": "global_microplastics_2004_2019:citation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP6a79ac0f79744d2d258b",
+    "sample_id": "global_microplastics_2004_2019:citation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP29e51390aa421934d983",
+    "sample_id": "global_microplastics_2004_2019:citation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1608b756884188d1510b",
+    "sample_id": "global_microplastics_2004_2019:citation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP92c880510b6501e5a74f",
+    "sample_id": "global_microplastics_2004_2019:citation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPeefcd265883a3b92fe71",
+    "sample_id": "global_microplastics_2004_2019:coauthorship:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP997e40449afa1a27f73a",
+    "sample_id": "global_microplastics_2004_2019:coauthorship:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP4952ecdbe02544cac0dc",
+    "sample_id": "global_microplastics_2004_2019:coauthorship:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP0ca5fde9cb4f685607c7",
+    "sample_id": "global_microplastics_2004_2019:coauthorship:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPe61c0c19fb172d42b2a4",
+    "sample_id": "global_microplastics_2004_2019:coauthorship:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPb00260e3d3b2cd67be22",
+    "sample_id": "global_microplastics_2004_2019:cocitation:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPce8c0e9f91840a7405aa",
+    "sample_id": "global_microplastics_2004_2019:cocitation:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPc24c49e483aa351f446f",
+    "sample_id": "global_microplastics_2004_2019:cocitation:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP95a00116a8e68373eaf4",
+    "sample_id": "global_microplastics_2004_2019:cocitation:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPe0a9755d2b62f0172caa",
+    "sample_id": "global_microplastics_2004_2019:cocitation:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP7f848bb040383119f98d",
+    "sample_id": "global_microplastics_2004_2019:institution_collaboration:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPef333f21a3d17edfc0e6",
+    "sample_id": "global_microplastics_2004_2019:institution_collaboration:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP1148661ef4b9e0c87470",
+    "sample_id": "global_microplastics_2004_2019:institution_collaboration:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP83848ea026779cf8d673",
+    "sample_id": "global_microplastics_2004_2019:institution_collaboration:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP2242edee252ca401bd04",
+    "sample_id": "global_microplastics_2004_2019:institution_collaboration:false_premise"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JPe6455b3fde521e6b41ee",
+    "sample_id": "global_microplastics_2004_2019:keyword_cooccurrence:network_size"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JP46ff5a2ce6f93c4df0aa",
+    "sample_id": "global_microplastics_2004_2019:keyword_cooccurrence:highest_occurrence"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP61bea67c1c19904a14d0",
+    "sample_id": "global_microplastics_2004_2019:keyword_cooccurrence:strongest_connection"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_a": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      },
+      "eval_b": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      }
+    },
+    "packet_id": "JP1d84156f5c52cffcbf85",
+    "sample_id": "global_microplastics_2004_2019:keyword_cooccurrence:cluster_membership"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_a": {
+        "A": "graph_rag",
+        "B": "flat_structured"
+      },
+      "eval_b": {
+        "A": "flat_structured",
+        "B": "graph_rag"
+      }
+    },
+    "packet_id": "JPa6e65eb4f3e3b093eb19",
+    "sample_id": "global_microplastics_2004_2019:keyword_cooccurrence:false_premise"
+  }
+]

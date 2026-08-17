@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "protocol_version": "adaptive-original-evaluation-v1",
+  "manifest_sha256": "a8891c54c6deb354ea5adf9634559ff8675da63edc5965f672fc5b32648d9d30",
+  "result_manifest_sha256": "582d03b4e49e2900c9ed29692962f6b6c805b24056a838738211318b0a907731",
+  "condition": "baseline_original",
+  "items": 12,
+  "quality_passed": 9,
+  "quality_errors": 3,
+  "quality_pass_rate": 0.75,
+  "quality_error_rate": 0.25,
+  "evaluation_feedback_leakage": false,
+  "judge_modified_artifacts": false,
+  "topics": {
+    "gnn_drug_discovery_2017_2023": {
+      "topic_id": "gnn_drug_discovery_2017_2023",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 5,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 1,
+        "quality_errors": 1,
+        "final_quality_pass_rate": 0.8333333333333334,
+        "quality_error_rate": 0.16666666666666666
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 5,
+          "quality_errors": 0,
+          "quality_error_rate": 0.0
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    },
+    "crispr_extracellular_vesicles_2015_2022": {
+      "topic_id": "crispr_extracellular_vesicles_2015_2022",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 4,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 2,
+        "quality_errors": 2,
+        "final_quality_pass_rate": 0.6666666666666666,
+        "quality_error_rate": 0.3333333333333333
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 4,
+          "quality_errors": 1,
+          "quality_error_rate": 0.2
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    }
+  },
+  "computed_at": "2026-08-06T08:57:36.250203+00:00"
+}

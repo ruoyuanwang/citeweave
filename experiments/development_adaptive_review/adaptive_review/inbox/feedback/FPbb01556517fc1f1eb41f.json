@@ -1,0 +1,11 @@
+{
+  "packet_id": "FPbb01556517fc1f1eb41f",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 0.99,
+  "reason": "The candidate correctly abstains because the visible relationship explicitly states that the requested label is absent from the network.",
+  "suggested_revision": null,
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ]
+}

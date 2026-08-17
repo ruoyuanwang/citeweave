@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "dataset_id": "plant_heat_drought_2008_2021",
+  "condition": "citeweave_full",
+  "evidence_sha256": "40228e3f0fdd74f7617c79b508072acc95043b730f9cd1ce233e0887036bd1ba",
+  "report_sha256": "dc8461264dee69fad8ca60a836b30d800e8a46c9b20387a1c9c579491d78547b",
+  "call_count": 4,
+  "model": "deepseek-v4-pro",
+  "temperature": 0.1,
+  "seed": 42,
+  "report_language": "English",
+  "internal_review_used_as_experimental_evaluation": false
+}

@@ -1,0 +1,9 @@
+{
+  "queries": [
+    {
+      "id": "climate_change_risks_1990_2021",
+      "keywords": ["climate change risk assessment"],
+      "rationale": "Replaced the generic word 'risk' with the specific phrase 'risk assessment' to ensure records are about evaluating climate change risks, not just any co-occurrence."
+    }
+  ]
+}

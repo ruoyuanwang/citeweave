@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v4",
+  "prompt_sha256": "abd049df349329135d89a32b7b3110cb9830ef1ec046e0fc4a7a35ddfdb75f07",
+  "packet_sha256": "237cf7fc7b61f6edc6337fb8f8f06bbc705dc0a590b3c92d0f214598d96ca269",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "Balanced Boolean groups require both the graph-neural-network and drug-discovery dimensions; the model and application synonyms are inclusive, and GNN is sufficiently disambiguated by the paired drug context."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "reject",
+      "reason": "Although both essential dimensions are required and parentheses are sound, the bare acronym EV is an obvious homonym, especially for electric vehicle, and makes the query unsafe from unrelated cross-domain matches."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The Boolean structure correctly requires both machine-learning and climate-change dimensions, with broad but topically valid method and climate synonyms and no unsafe bare abbreviation."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "The query unambiguously requires climate change plus a well-parenthesized risk, vulnerability, impact, threat, or hazard dimension; the breadth is appropriate for the broad risks topic."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "The query requires the digital-twin concept and a parenthesized healthcare dimension, uses relevant medical synonyms without ambiguous acronyms, and the explicit 2012-2023 range is judged independently of the id year."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "Three balanced Boolean groups require the plant, heat, and drought dimensions simultaneously, with suitable response and tolerance synonyms and no obvious homonym risk."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "reject",
+      "reason": "The dimensions and parentheses are otherwise sound, but bare ALS is an obvious multi-domain homonym, including advanced life support, so the query is not safely unambiguous as written."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "With query_mode all, the sole concept is the unambiguous field term microplastics; a single term and no geographic restriction are appropriate for a global field-mapping topic."
+    }
+  ]
+}

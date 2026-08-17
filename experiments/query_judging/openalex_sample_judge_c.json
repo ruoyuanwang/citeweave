@@ -1,0 +1,326 @@
+{
+  "judge_id": "C",
+  "seed": 20260806,
+  "datasets": [
+    {
+      "id": "gene_editing_als_2004_2024",
+      "samples": [
+        {
+          "openalex_id": "https://openalex.org/W4386832465",
+          "label": "borderline",
+          "reason": "C9orf72 ALS and neuronal pathology are central, but the supplied title and abstract excerpt do not establish gene editing as a core component."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4385077102",
+          "label": "borderline",
+          "reason": "The work centrally studies ALS motor neurons, while gene editing is not evidenced as a central method or objective in the supplied metadata."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3213685179",
+          "label": "irrelevant",
+          "reason": "This review concerns tau-pathology frontotemporal dementia and iPSC models, not the intersection of gene editing with ALS."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4281260474",
+          "label": "irrelevant",
+          "reason": "CRISPR is discussed for ATTR amyloidosis within hereditary neuropathies, but ALS is not the disease focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3095446841",
+          "label": "borderline",
+          "reason": "ALS proteostasis and protein aggregation are central, but gene editing is not shown to be a core subject in the supplied evidence."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3191169025",
+          "label": "irrelevant",
+          "reason": "The article focuses on precision nutrition across age-related neurodegenerative diseases; ALS is only one listed disease and gene editing is not central."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2408978054",
+          "label": "irrelevant",
+          "reason": "The study is about antibiotic and cadmium co-exposure in sea urchin embryos, with neither ALS nor gene editing as a topic."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4327663261",
+          "label": "borderline",
+          "reason": "CRISPR therapy is the central subject, but the supplied metadata does not show ALS as a substantive disease focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4380576436",
+          "label": "borderline",
+          "reason": "The work centrally develops an ALS organoid model, but its proteomics focus does not establish gene editing as a core dimension."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3094078064",
+          "label": "irrelevant",
+          "reason": "The study concerns SPATA33-mediated germline mitophagy in testis, not ALS or ALS-directed gene editing."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4225900419",
+          "label": "irrelevant",
+          "reason": "The work studies hepatic PRMT1 in diet-induced steatosis and lacks the ALS disease dimension."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2746118007",
+          "label": "irrelevant",
+          "reason": "It examines SOD1 acylation and mitochondrial respiration, but the supplied evidence does not make ALS or gene editing a core topic."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4380789479",
+          "label": "irrelevant",
+          "reason": "This is a broad 3Rs and animal-research ethics article, with no demonstrated core focus on ALS gene editing."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4229023715",
+          "label": "irrelevant",
+          "reason": "The article focuses on mitochondrial DNA integrity and cybrid models in Parkinson's disease, not ALS."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4223656865",
+          "label": "irrelevant",
+          "reason": "The subject is endogenous RNA editing in glioma, not genome editing in ALS."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2889772711",
+          "label": "borderline",
+          "reason": "ALS disease modeling with transgenic FUS zebrafish is substantive, but the supplied evidence does not establish gene editing itself as the core intervention."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4220693883",
+          "label": "irrelevant",
+          "reason": "The review addresses HDAC1/2 in memory and cognitive impairment, without a core ALS gene-editing intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4292370349",
+          "label": "irrelevant",
+          "reason": "This is a general review of mitochondrial research methods and lacks both an ALS focus and a gene-editing focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3024743006",
+          "label": "borderline",
+          "reason": "TDP-43 pathology in ALS and FTLD is central, but the intervention is HDAC1 inhibition rather than established gene editing."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3105171546",
+          "label": "irrelevant",
+          "reason": "The study develops a ceramide metabolic probe for Alzheimer's disease mice, not ALS gene editing."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2811123412",
+          "label": "irrelevant",
+          "reason": "The work is genome-scale computational prediction of R-loops and does not centrally address ALS or gene editing."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4307370901",
+          "label": "irrelevant",
+          "reason": "This review focuses on DDX3X regulation of mRNA translation and does not establish an ALS gene-editing focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2347104320",
+          "label": "irrelevant",
+          "reason": "The article studies RNA polymerase II cluster dynamics and mRNA output, with no ALS disease dimension."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2808172171",
+          "label": "irrelevant",
+          "reason": "The work concerns UCHL3, TDP1 proteostasis, and chromosomal break repair, not TDP-43 ALS or ALS gene editing."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3019308918",
+          "label": "irrelevant",
+          "reason": "The article reviews endocannabinoid biomarkers in psychiatry and lacks an ALS-focused gene-editing theme."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4210808000",
+          "label": "irrelevant",
+          "reason": "The focus is 3D brain cultures for developmental neurotoxicity testing, not ALS-directed gene editing."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2596267980",
+          "label": "irrelevant",
+          "reason": "The article concerns delivery of splice-switching antisense therapies, a distinct modality, and does not show ALS as a core focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2132169488",
+          "label": "irrelevant",
+          "reason": "The review covers zebrafish models of autophagy in neurological disease broadly, without a core ALS gene-editing intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4286252640",
+          "label": "borderline",
+          "reason": "TDP-43 nuclear localization is directly relevant to ALS biology, but gene editing is not established as a core subject in the supplied metadata."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3006460301",
+          "label": "irrelevant",
+          "reason": "The work concerns insulin-producing cell transplantation for diabetes in veterinary practice, not ALS or gene editing."
+        }
+      ],
+      "counts": {
+        "relevant": 0,
+        "borderline": 8,
+        "irrelevant": 22
+      }
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "samples": [
+        {
+          "openalex_id": "https://openalex.org/W2909484550",
+          "label": "borderline",
+          "reason": "Microplastic accumulation motivates the development of biodegradable fertilizer coatings, but the core study is polymer coating design rather than microplastics research."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2949637342",
+          "label": "borderline",
+          "reason": "The article addresses the circular plastics economy broadly; microplastics are related to the policy context but are not shown as the central subject."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3080521020",
+          "label": "relevant",
+          "reason": "The core task is detecting microplastic particles in microscopic images with deep learning."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2787921376",
+          "label": "relevant",
+          "reason": "The article is explicitly a debate about the environmental risks and evidence surrounding microplastics."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2966973695",
+          "label": "relevant",
+          "reason": "The study develops purification, quantification, and Micro-FTIR characterization methods specifically for microplastic fibers."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2790774653",
+          "label": "relevant",
+          "reason": "The work directly compares microplastic pollution across mudflats and sandy beaches."
+        },
+        {
+          "openalex_id": "https://openalex.org/W1927958151",
+          "label": "irrelevant",
+          "reason": "The taphonomy discussion concerns shells, garbage, and tsunami debris, without a specific microplastics focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W621532535",
+          "label": "relevant",
+          "reason": "The study directly investigates accumulation of floating microplastics behind the Three Gorges Dam."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2314540696",
+          "label": "relevant",
+          "reason": "The review explicitly covers tracking and classification of marine debris with special reference to microplastics."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2903437666",
+          "label": "relevant",
+          "reason": "Source tracking of microplastics in freshwater is the direct research objective."
+        },
+        {
+          "openalex_id": "https://openalex.org/W36063614",
+          "label": "irrelevant",
+          "reason": "The supplied record concerns gerontological services in its title and ammonia exposure in fish in its abstract, with no microplastics dimension."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2995351090",
+          "label": "relevant",
+          "reason": "The study analyzes spatial and seasonal characteristics of microplastics on a sandy beach."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2907599928",
+          "label": "relevant",
+          "reason": "The response directly evaluates claims about microplastic uptake and related health effects."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2946202260",
+          "label": "relevant",
+          "reason": "Identification and quantification of microplastics using Nile Red staining is the central methodological topic."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2408978054",
+          "label": "irrelevant",
+          "reason": "The experiment studies antibiotics and cadmium in sea urchin embryos, not microplastics."
+        },
+        {
+          "openalex_id": "https://openalex.org/W36739021",
+          "label": "irrelevant",
+          "reason": "The title is about digital media and the mismatched abstract concerns enzymatic PET degradation; neither establishes a microplastics study."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2786214712",
+          "label": "borderline",
+          "reason": "The core experiment tests biodegradation of polyester blends in seawater, which is relevant to plastic pollution but does not specifically study microplastic particles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2978839937",
+          "label": "irrelevant",
+          "reason": "The study purifies and characterizes a bacterial dehalogenase and contains no microplastics research dimension."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3198387464",
+          "label": "relevant",
+          "reason": "The article directly assesses FT-IR spectroscopy for investigating microplastics in environmental and consumer-product samples."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2895448096",
+          "label": "relevant",
+          "reason": "Microplastics in marine sediments are the central environmental measurement target."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2911075392",
+          "label": "irrelevant",
+          "reason": "The work concerns phosphorus recovery from dewatered sludge and lacks a microplastics focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2904008475",
+          "label": "irrelevant",
+          "reason": "The article sets research directions for white shark biology and does not address microplastics."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2765305810",
+          "label": "relevant",
+          "reason": "The experiment directly tests the biological effect of microplastics on regeneration in a polychaete."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2997010089",
+          "label": "relevant",
+          "reason": "The review directly addresses mobility of microplastics in subsurface environments."
+        },
+        {
+          "openalex_id": "https://openalex.org/W1974372127",
+          "label": "irrelevant",
+          "reason": "The study examines nanoscratching deformation of sapphire, unrelated to microplastics."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2054536143",
+          "label": "irrelevant",
+          "reason": "The work studies occurrence and partitioning of brominated flame retardants, not microplastics."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4241878433",
+          "label": "borderline",
+          "reason": "This is a broad annual review of emerging pollutants in wastewater; microplastics may be covered, but they are not the central focus in the supplied evidence."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2987640467",
+          "label": "borderline",
+          "reason": "The biological-effects study is centered on polystyrene nanoplastics, an adjacent particle-size class rather than microplastics proper."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2783503112",
+          "label": "irrelevant",
+          "reason": "The article presents thermal analytical methods for bulk polymer degradation and decomposition, not microplastics."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2121834757",
+          "label": "irrelevant",
+          "reason": "The case studies concern industrial remanufacturing practices in Japan, unrelated to microplastics."
+        }
+      ],
+      "counts": {
+        "relevant": 14,
+        "borderline": 5,
+        "irrelevant": 11
+      }
+    }
+  ]
+}

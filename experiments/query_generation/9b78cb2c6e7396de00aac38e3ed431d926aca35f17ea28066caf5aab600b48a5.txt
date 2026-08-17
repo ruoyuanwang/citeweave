@@ -1,0 +1,44 @@
+{
+  "queries": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "keywords": ["graph neural networks", "drug discovery", "molecular property prediction"],
+      "rationale": "Focuses on the core application of GNNs in predicting molecular properties for drug discovery."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "keywords": ["CRISPR", "extracellular vesicles", "gene editing"],
+      "rationale": "Captures the intersection of CRISPR technologies and extracellular vesicles in gene editing contexts."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "keywords": ["machine learning", "climate change", "climate modeling"],
+      "rationale": "Targets machine learning methods applied to climate modeling and change analysis."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "keywords": ["climate change", "risk assessment", "vulnerability"],
+      "rationale": "Addresses risk assessment and vulnerability aspects of climate change."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "keywords": ["digital twin", "healthcare", "personalized medicine"],
+      "rationale": "Emphasizes digital twin applications in personalized healthcare and medicine."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "keywords": ["heat stress", "drought stress", "plant response"],
+      "rationale": "Combines the two abiotic stresses and plant physiological responses."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "keywords": ["gene editing", "amyotrophic lateral sclerosis", "CRISPR"],
+      "rationale": "Links gene editing techniques, particularly CRISPR, to ALS research."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "keywords": ["microplastics", "marine pollution", "environmental contamination"],
+      "rationale": "Covers global microplastics research focusing on marine and environmental pollution."
+    }
+  ]
+}

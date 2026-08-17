@@ -1,0 +1,12 @@
+{
+  "packet_id": "FPf0e025b8ddbc79ec7f69",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The candidate accurately reports the evidenced displayed network size of 72 nodes and 230 links.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:edge_count",
+    "bibliographic_coupling:fact:node_count"
+  ],
+  "suggested_revision": null
+}

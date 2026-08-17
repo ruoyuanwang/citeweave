@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "AP95d1025826b77e9f97ea",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The fail decision is consistent: the candidate recognizes the absent target but encodes abstain as the string \"true\" rather than the required boolean true."
+}

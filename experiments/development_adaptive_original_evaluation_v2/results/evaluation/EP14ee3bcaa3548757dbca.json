@@ -1,0 +1,8 @@
+{
+  "packet_id": "EP14ee3bcaa3548757dbca",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The bibliographic-coupling false-premise answer appropriately abstains because “CiteWeave absent benchmark node” is not a visible label in the network, as the supplied absence fact confirms.",
+  "evidence_ids": ["bibliographic_coupling:fact:absent_target"]
+}

@@ -1,0 +1,16 @@
+{
+  "packet_id": "FP52da7d8dea3eef811994",
+  "decision": "revise",
+  "confidence": 0.96,
+  "reason": "The visible evidence supports the unusually large gap in author publication counts, but it does not establish either genuine hyper-prolific output or a name-disambiguation problem. The replacement retains the descriptive result and its stated interpretation limit.",
+  "evidence_ids": [
+    "E010",
+    "E011"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "This extreme concentration may reflect genuine hyper-prolific output, but could also indicate name-disambiguation limitations in the source metadata; author-level findings should be interpreted with this uncertainty in mind.",
+    "replacement_text": "The top-author count is highly concentrated (275 publications for the first-ranked author versus 33 for the second); because productivity is descriptive, author-level findings should not be treated as research quality or causal influence [E010, E011]."
+  }
+}

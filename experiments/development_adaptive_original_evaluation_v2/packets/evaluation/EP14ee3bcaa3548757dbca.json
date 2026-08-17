@@ -1,0 +1,38 @@
+{
+  "packet_id": "EP14ee3bcaa3548757dbca",
+  "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "abstain": "true"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:absent_target"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:absent_target",
+          "network": "bibliographic_coupling",
+          "object": false,
+          "object_type": "boolean",
+          "predicate": "contains_visible_label",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "4dc1c20ea265bfd424786d0da27cab7841e52ed8bf9b5feb536947ba1ff8ed0e"
+    },
+    "question": "Which cluster contains 'CiteWeave absent benchmark node' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":true,\"answer\":null,\"explanation\":\"The context states that the bibliographic coupling network does not contain a visible label for 'CiteWeave absent benchmark node', as indicated by the relationship 'contains_visible_label' being false. Therefore, the node is absent from the network, making the question unanswerable.\",\"item_id\":\"gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "content_sha256": "843b9d5f5bc1ffe3d0fa6f7a4a4274aebf4b23736f070f3c487121f19fe44b21"
+}

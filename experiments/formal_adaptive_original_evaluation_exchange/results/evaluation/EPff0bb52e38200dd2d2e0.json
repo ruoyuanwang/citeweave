@@ -1,0 +1,1 @@
+{"packet_id":"EPff0bb52e38200dd2d2e0","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The label and cluster 2 are exactly supported by the canonical node evidence.","evidence_ids":["bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster","bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"]}

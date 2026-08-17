@@ -1,0 +1,81 @@
+{
+  "packet_id": "FPd112752d8ba64467d98c",
+  "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:highest_occurrence:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:highest_occurrence",
+        "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:label",
+        "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:occurrences"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1",
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:highest_occurrence",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1",
+          "object_type": "entity",
+          "predicate": "highest_occurrence_node",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:label",
+          "network": "bibliographic_coupling",
+          "object": "Pseudomonas aeruginosa:…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:occurrences",
+          "network": "bibliographic_coupling",
+          "object": 483.0,
+          "object_type": "number",
+          "predicate": "occurrences",
+          "subject": "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "5c29e1331e504451ff18f15cbabaa870f5480df8f949372da3123dd3189a581a"
+    },
+    "question": "Which labeled node has the highest occurrence in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"label\":\"Pseudomonas aeruginosa:…\"},\"explanation\":\"The context states that the node with DOI 10.1038/s41392-022-01056-1 has the highest occurrence in the bibliographic_coupling network, and its display label is 'Pseudomonas aeruginosa:…'.\",\"item_id\":\"crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:highest_occurrence\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:label",
+    "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:occurrences"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:highest_occurrence",
+    "issue_signature": "graph:highest_occurrence",
+    "severity": "low",
+    "detector_score": 0.3,
+    "message": "The system flagged the quoted highest_occurrence answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"label\":\"Pseudomonas aeruginosa:…\"},\"explanation\":\"The context states that the node with DOI 10.1038/s41392-022-01056-1 has the highest occurrence in the bibliographic_coupling network, and its display label is 'Pseudomonas aeruginosa:…'.\",\"item_id\":\"crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:highest_occurrence\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "7178b2da8c2ec4af72930938afaf59b341afd79e956725b6fc060d51c1baf400"
+}

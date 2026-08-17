@@ -1,0 +1,70 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "gene_editing_als_2004_2024",
+  "condition": "graph_rag",
+  "prompt_version": "formal-graph-qa-v2-nonthinking",
+  "profile": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "modality": "text",
+    "capability_snapshot": "D:\\project\\bibagent\\experiments\\api_capabilities\\deepseek_models.json",
+    "response_format": "json_object",
+    "supports_json_schema": false,
+    "supports_seed": false,
+    "supports_data_uri": false
+  },
+  "capability_validation": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "snapshot_sha256": "bb06a7f1283e0b4c9375df86195f732ccaef2466ad685965a4512784af26e7c5",
+    "model_available": true,
+    "image_input_verified": null,
+    "passed": true,
+    "reasons": []
+  },
+  "comparison_design": {
+    "primary_text_panel": {
+      "profile_id": "deepseek-official-v4-pro-text",
+      "model": "deepseek-v4-pro",
+      "base_url": "https://api.deepseek.com",
+      "conditions": [
+        "no_rag",
+        "flat_structured",
+        "graph_rag"
+      ],
+      "strict_within_model_comparison": true
+    },
+    "figure_panel": null
+  },
+  "grounding_manifest_sha256": "ea6d0449b3cb227b7b96f9411b8aa6a88378ba4028c5ede796fe97461f426059",
+  "benchmark_sha256": "e57cbaf48432845bf5b35bfc1a25daa1d69e3f34026f8d62c16752cdda30cc6f",
+  "items": 25,
+  "item_ids": [
+    "gene_editing_als_2004_2024:bibliographic_coupling:network_size",
+    "gene_editing_als_2004_2024:bibliographic_coupling:highest_occurrence",
+    "gene_editing_als_2004_2024:bibliographic_coupling:strongest_connection",
+    "gene_editing_als_2004_2024:bibliographic_coupling:cluster_membership",
+    "gene_editing_als_2004_2024:bibliographic_coupling:false_premise",
+    "gene_editing_als_2004_2024:coauthorship:network_size",
+    "gene_editing_als_2004_2024:coauthorship:highest_occurrence",
+    "gene_editing_als_2004_2024:coauthorship:strongest_connection",
+    "gene_editing_als_2004_2024:coauthorship:cluster_membership",
+    "gene_editing_als_2004_2024:coauthorship:false_premise",
+    "gene_editing_als_2004_2024:cocitation:network_size",
+    "gene_editing_als_2004_2024:cocitation:highest_occurrence",
+    "gene_editing_als_2004_2024:cocitation:strongest_connection",
+    "gene_editing_als_2004_2024:cocitation:cluster_membership",
+    "gene_editing_als_2004_2024:cocitation:false_premise",
+    "gene_editing_als_2004_2024:institution_collaboration:network_size",
+    "gene_editing_als_2004_2024:institution_collaboration:highest_occurrence",
+    "gene_editing_als_2004_2024:institution_collaboration:strongest_connection",
+    "gene_editing_als_2004_2024:institution_collaboration:cluster_membership",
+    "gene_editing_als_2004_2024:institution_collaboration:false_premise",
+    "gene_editing_als_2004_2024:keyword_cooccurrence:network_size",
+    "gene_editing_als_2004_2024:keyword_cooccurrence:highest_occurrence",
+    "gene_editing_als_2004_2024:keyword_cooccurrence:strongest_connection",
+    "gene_editing_als_2004_2024:keyword_cooccurrence:cluster_membership",
+    "gene_editing_als_2004_2024:keyword_cooccurrence:false_premise"
+  ]
+}

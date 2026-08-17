@@ -1,0 +1,15 @@
+{
+  "packet_id": "EPfcc959f711b860424fee",
+  "decision": "fail",
+  "confidence": 0.99,
+  "reason": "Several material claims exceed or contradict the visible evidence. E001 states only that deterministic exact deduplication produced 151,562 works; it does not support the asserted normalized-DOI and title/first-author fallback procedure. E002 does not visibly identify the source as OpenAlex, so that source attribution is unsupported. Most importantly, E010, E028, and E041 show the author string AGB Poore in source-supplied metadata, but they do not establish that it is a known metadata artifact or that it cannot correspond to a real researcher; excluding it substantively on that basis requires evidence not present in the packet. The claim that the three leading keyword series have increasing annual counts is also overstated: E020 contains multiple year-to-year declines for Climate change, Geography, and Environmental science. These unsupported methodological and identity assertions prevent the report from being fully evidence-grounded.",
+  "evidence_ids": [
+    "E001",
+    "E002",
+    "E010",
+    "E020",
+    "E028",
+    "E041"
+  ],
+  "judge_id": "evaluation"
+}

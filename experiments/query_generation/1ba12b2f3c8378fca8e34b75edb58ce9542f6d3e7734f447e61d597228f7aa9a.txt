@@ -1,0 +1,9 @@
+{
+  "queries": [
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "keywords": ["heat stress", "drought stress"],
+      "rationale": "Removed the overly restrictive 'plant response' phrase to allow broader plant-related studies on heat and drought, as suggested by the judge."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "excluded_before_formal_analysis",
+  "dataset_id": "gnn_drug_discovery_2017_2023",
+  "query_fingerprint": "0dce5c5eb5076c789df83d7dbf6dfae480be151368413849f6791a3bab631b15",
+  "root_expected_records": 687834,
+  "received_at_initial_stop_request": 134680,
+  "maximum_checkpoint_received_after_orphan_process_discovery": 435850,
+  "orphan_process_terminated": true,
+  "archived_workspaces": [
+    "experiments/rejected_crossref_workspaces/gnn_drug_discovery_2017_2023",
+    "experiments/rejected_crossref_workspaces/gnn_drug_discovery_2017_2023_post_termination_residual"
+  ],
+  "reason": "Crossref query.bibliographic is fuzzy citation-resolution search and does not enforce the intended Boolean intersection; the root count is not a credible topical census.",
+  "formal_results_used": false,
+  "source_documentation": [
+    "https://www.crossref.org/labs/resolving-citations-we-dont-need-no-stinkin-parser/",
+    "https://api.crossref.org/swagger-ui/index.html"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "topic_id": "crispr_extracellular_vesicles_2015_2022",
+  "conditions": {
+    "always_review": {
+      "items": 6,
+      "review_requests": 6,
+      "final_quality_passed": 6,
+      "auto_accepts": 0,
+      "unsafe_auto_accepts": 0
+    },
+    "static_review": {
+      "items": 6,
+      "review_requests": 4,
+      "final_quality_passed": 6,
+      "auto_accepts": 2,
+      "unsafe_auto_accepts": 0
+    },
+    "adaptive_review": {
+      "items": 6,
+      "review_requests": 6,
+      "final_quality_passed": 6,
+      "auto_accepts": 0,
+      "unsafe_auto_accepts": 0
+    }
+  }
+}

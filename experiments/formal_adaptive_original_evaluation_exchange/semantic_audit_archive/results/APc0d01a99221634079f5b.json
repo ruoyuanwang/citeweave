@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "APc0d01a99221634079f5b",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The pass decision is consistent because the candidate's visible label and cluster 1 match the bound display-label and cluster relationships."
+}

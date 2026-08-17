@@ -1,0 +1,71 @@
+{
+  "packet_id": "FP866fff10523259954a58",
+  "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1145/3485128:cluster",
+        "bibliographic_coupling:node:doi:10.1145/3485128:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1145/3485128"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1145/3485128:cluster",
+          "network": "bibliographic_coupling",
+          "object": 4,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1145/3485128"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1145/3485128:label",
+          "network": "bibliographic_coupling",
+          "object": "Tackling Climate Change…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1145/3485128"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "b3198f9c8fbe660ae941b6f67a310726340b2d887d832f59c36425439a08cdff"
+    },
+    "question": "Which detected cluster contains the labeled node 'Tackling Climate Change…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":4,\"label\":\"Tackling Climate Change…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1145/3485128 has a display label 'Tackling Climate Change…' and is assigned to cluster 4. Therefore, the labeled node belongs to cluster 4.\",\"item_id\":\"machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1145/3485128:cluster",
+    "bibliographic_coupling:node:doi:10.1145/3485128:label"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:cluster_membership",
+    "issue_signature": "graph:cluster_membership",
+    "severity": "medium",
+    "detector_score": 0.6,
+    "message": "The system flagged the quoted cluster_membership answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"cluster\":4,\"label\":\"Tackling Climate Change…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1145/3485128 has a display label 'Tackling Climate Change…' and is assigned to cluster 4. Therefore, the labeled node belongs to cluster 4.\",\"item_id\":\"machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "385acc871586a7c37659c222744125858cd5fd7969af65f3f9e2faef58bca2a6"
+}

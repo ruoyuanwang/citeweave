@@ -209,6 +209,7 @@ def _descriptive_figures(
             "source_productivity.parquet",
             "source_name",
             "documents",
+            "documents DESC, citations DESC, source_id",
             "Most productive sources",
             "Full-corpus journal and venue output",
             "top_sources",
@@ -217,6 +218,7 @@ def _descriptive_figures(
             "author_productivity.parquet",
             "author_name",
             "documents",
+            "documents DESC, citations DESC, author_id",
             "Most productive authors",
             "Whole-counted publications; missing author names excluded from ranking",
             "top_authors",
@@ -225,14 +227,21 @@ def _descriptive_figures(
             "institution_productivity.parquet",
             "institution_name",
             "documents",
+            "documents DESC, institution_id",
             "Most productive institutions",
             "Documents with at least one affiliated author",
             "top_institutions",
         ),
     ]
-    for filename, label, value, title, subtitle, name in specifications:
+    for filename, label, value, order, title, subtitle, name in specifications:
         frame = connection.execute(
-            f"SELECT * FROM read_parquet('{_path_sql(visual / filename)}')"
+            f"""
+            SELECT *
+            FROM read_parquet('{_path_sql(visual / filename)}')
+            WHERE {label} IS NOT NULL AND trim({label}) <> ''
+            ORDER BY {order}
+            LIMIT 15
+            """
         ).df()
         figures.append(
             _bar(
@@ -449,37 +458,85 @@ def _descriptive_figures(
     return [figure for figure in figures if figure is not None]
 
 
-def _node_tables(
+def _linked_node_table(
     connection: duckdb.DuckDBPyConnection,
     canonical: Path,
     visual: Path,
-) -> dict[str, pd.DataFrame]:
-    tables = {
-        "coauthorship": connection.execute(
+    *,
+    network: str,
+    edge_path: Path,
+) -> pd.DataFrame:
+    """Load only nodes incident to the already-bounded sparse edge table.
+
+    ``select_network`` immediately discards every unlinked node, so applying the
+    same semi-join in DuckDB preserves the exact selected network while keeping
+    large author, work, and cited-reference dimensions out of pandas memory.
+    """
+    linked = f"""
+        WITH linked_ids AS (
+          SELECT source_id AS id FROM read_parquet('{_path_sql(edge_path)}')
+          UNION
+          SELECT target_id AS id FROM read_parquet('{_path_sql(edge_path)}')
+        )
+    """
+    if network == "coauthorship":
+        return connection.execute(
             f"""
+            {linked}
             SELECT author_id AS id, coalesce(author_name, author_id) AS label,
                    documents AS occurrences, citations
-            FROM read_parquet('{_path_sql(visual / "author_productivity.parquet")}')
+            FROM read_parquet(
+              '{_path_sql(visual / "author_productivity.parquet")}',
+              file_row_number = true
+            )
+            JOIN linked_ids ON linked_ids.id = author_id
             WHERE author_name IS NOT NULL AND trim(author_name) <> ''
+            ORDER BY file_row_number
             """
-        ).df(),
-        "institution_collaboration": connection.execute(
+        ).df()
+    if network == "institution_collaboration":
+        return connection.execute(
             f"""
+            {linked}
             SELECT institution_id AS id, institution_name AS label,
                    documents AS occurrences, country_code
-            FROM read_parquet('{_path_sql(visual / "institution_productivity.parquet")}')
+            FROM read_parquet(
+              '{_path_sql(visual / "institution_productivity.parquet")}',
+              file_row_number = true
+            )
+            JOIN linked_ids ON linked_ids.id = institution_id
             WHERE institution_name IS NOT NULL AND trim(institution_name) <> ''
+            ORDER BY file_row_number
             """
-        ).df(),
-        "keyword_cooccurrence": connection.execute(
+        ).df()
+    if network == "keyword_cooccurrence":
+        return connection.execute(
             f"""
+            {linked},
+            keyword_year AS (
+              SELECT k.keyword AS id, avg(w.year) AS average_year
+              FROM read_parquet('{_path_sql(canonical / "keywords.parquet")}') k
+              JOIN linked_ids ON linked_ids.id = k.keyword
+              JOIN read_parquet('{_path_sql(canonical / "works.parquet")}') w USING(work_id)
+              WHERE w.year IS NOT NULL
+              GROUP BY k.keyword
+            )
             SELECT keyword AS id, keyword AS label, occurrences, keyword_type
-            FROM read_parquet('{_path_sql(visual / "keyword_occurrences.parquet")}')
+                   , keyword_year.average_year
+            FROM read_parquet(
+              '{_path_sql(visual / "keyword_occurrences.parquet")}',
+              file_row_number = true
+            )
+            JOIN linked_ids ON linked_ids.id = keyword
+            LEFT JOIN keyword_year ON keyword_year.id = keyword
             WHERE keyword IS NOT NULL AND trim(keyword) <> ''
+            ORDER BY file_row_number
             """
-        ).df(),
-        "cocitation": connection.execute(
+        ).df()
+    if network == "cocitation":
+        return connection.execute(
             f"""
+            {linked}
             SELECT cited_work_id AS id,
                    coalesce(
                      CASE WHEN cited_author IS NOT NULL AND trim(cited_author) <> ''
@@ -490,31 +547,31 @@ def _node_tables(
                      cited_work_id
                    ) AS label,
                    local_citations AS occurrences, cited_year AS year
-            FROM read_parquet('{_path_sql(visual / "reference_impact.parquet")}')
+            FROM read_parquet(
+              '{_path_sql(visual / "reference_impact.parquet")}',
+              file_row_number = true
+            )
+            JOIN linked_ids ON linked_ids.id = cited_work_id
             WHERE cited_work_id NOT LIKE 'reference:%'
+            ORDER BY file_row_number
             """
-        ).df(),
-        "citation": connection.execute(
+        ).df()
+    if network == "citation":
+        return connection.execute(
             f"""
+            {linked}
             SELECT work_id AS id, title AS label,
                    greatest(coalesce(cited_by_count, 0), 1) AS occurrences, year
-            FROM read_parquet('{_path_sql(canonical / "works.parquet")}')
+            FROM read_parquet(
+              '{_path_sql(canonical / "works.parquet")}',
+              file_row_number = true
+            )
+            JOIN linked_ids ON linked_ids.id = work_id
             WHERE title IS NOT NULL AND trim(title) <> ''
+            ORDER BY file_row_number
             """
-        ).df(),
-    }
-    keyword_year = connection.execute(
-        f"""
-        SELECT k.keyword AS id, avg(w.year) AS average_year
-        FROM read_parquet('{_path_sql(canonical / "keywords.parquet")}') k
-        JOIN read_parquet('{_path_sql(canonical / "works.parquet")}') w USING(work_id)
-        WHERE w.year IS NOT NULL GROUP BY k.keyword
-        """
-    ).df()
-    tables["keyword_cooccurrence"] = tables["keyword_cooccurrence"].merge(
-        keyword_year, on="id", how="left"
-    )
-    return tables
+        ).df()
+    raise ValueError(f"Unsupported network node table: {network}")
 
 
 def _bibliographic_coupling(
@@ -928,7 +985,6 @@ def render_large_project(
         "cocitation": "cocitation_edges.parquet",
         "citation": "direct_citation_edges.parquet",
     }
-    node_tables = _node_tables(connection, canonical, visual)
     network_records: dict[str, Any] = {}
     selected_networks: dict[str, SelectedNetwork] = {}
     for index, (name, filename) in enumerate(edge_files.items()):
@@ -936,9 +992,16 @@ def render_large_project(
         if not edge_path.exists():
             continue
         edges = connection.execute(f"SELECT * FROM read_parquet('{_path_sql(edge_path)}')").df()
+        nodes = _linked_node_table(
+            connection,
+            canonical,
+            visual,
+            network=name,
+            edge_path=edge_path,
+        )
         selected = select_network(
             name,
-            node_tables[name],
+            nodes,
             edges,
             policy,
             seed=config.random_seed + 97 * index,

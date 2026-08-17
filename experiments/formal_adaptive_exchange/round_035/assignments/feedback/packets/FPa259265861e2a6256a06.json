@@ -1,0 +1,127 @@
+{
+  "packet_id": "FPa259265861e2a6256a06",
+  "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:strongest_connection:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:edge:0001:relation",
+        "bibliographic_coupling:edge:0001:weight",
+        "bibliographic_coupling:fact:strongest_connection",
+        "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label",
+        "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:edge:0001",
+        "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021",
+        "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "bibliographic_coupling:edge:0001:relation"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021",
+            "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015"
+          ],
+          "path_id": "path:bibliographic_coupling:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "bibliographic_coupling:fact:strongest_connection"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021",
+            "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015"
+          ],
+          "path_id": "path:bibliographic_coupling:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:relation",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021"
+        },
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:weight",
+          "network": "bibliographic_coupling",
+          "object": 91.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "bibliographic_coupling:edge:0001"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:strongest_connection",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label",
+          "network": "bibliographic_coupling",
+          "object": "Atmospheric composition…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015:label",
+          "network": "bibliographic_coupling",
+          "object": "Tropospheric ozone and i…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "a27bd1a51bc41b102459aba5292fe91e5335615e8c1ac39bfd62b52841b2eeae"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the bibliographic_coupling network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"Atmospheric composition…\",\"target_label\":\"Tropospheric ozone and i…\",\"weight\":91.0},\"explanation\":\"The fact 'strongest_connection' explicitly states that the node with label 'Atmospheric composition…' has the strongest connection to the node with label 'Tropospheric ozone and i…'. The weight of the edge between them is given as 91.0.\",\"item_id\":\"climate_change_risks_1990_2021:bibliographic_coupling:strongest_connection\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label",
+    "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015:label",
+    "path:bibliographic_coupling:edge:0001:relation",
+    "path:bibliographic_coupling:fact:strongest_connection"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:strongest_connection",
+    "issue_signature": "graph:strongest_connection",
+    "severity": "high",
+    "detector_score": 0.7,
+    "message": "The system flagged the quoted strongest_connection answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"source_label\":\"Atmospheric composition…\",\"target_label\":\"Tropospheric ozone and i…\",\"weight\":91.0},\"explanation\":\"The fact 'strongest_connection' explicitly states that the node with label 'Atmospheric composition…' has the strongest connection to the node with label 'Tropospheric ozone and i…'. The weight of the edge between them is given as 91.0.\",\"item_id\":\"climate_change_risks_1990_2021:bibliographic_coupling:strongest_connection\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "94995c87e4fb92fec3df6c041460091fa717392c5ef3d47b463c58d6b559818c"
+}

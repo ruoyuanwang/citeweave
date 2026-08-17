@@ -1,0 +1,489 @@
+{
+  "judge_id": "A",
+  "seed": 20260806,
+  "datasets": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "samples": [
+        {
+          "openalex_id": "https://openalex.org/W4300865367",
+          "label": "irrelevant",
+          "reason": "Drug-target prediction is central, but the described model is a random forest using molecular fingerprints, not a graph neural network."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3158002239",
+          "label": "relevant",
+          "reason": "Directly applies a graph attention network to drug-target interaction prediction for drug discovery and repositioning."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4313530229",
+          "label": "irrelevant",
+          "reason": "The title and topic concern protein mutation effects, with no visible drug-discovery or graph-neural-network focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4387934986",
+          "label": "relevant",
+          "reason": "Explicitly studies graph neural networks for few-shot molecular property prediction as a drug-discovery task."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4415730314",
+          "label": "irrelevant",
+          "reason": "Graph neural networks are central, but the application is general disease knowledge discovery rather than drug discovery."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4389131280",
+          "label": "relevant",
+          "reason": "Uses graph neural networks and molecular/protein graphs to predict drug-target interactions."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3174677382",
+          "label": "borderline",
+          "reason": "Uses message-passing neural networks for molecular solvation, but the application spans materials and industrial chemicals and is not primarily drug discovery."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4378417455",
+          "label": "irrelevant",
+          "reason": "The visible evidence concerns taste prediction for molecules and does not establish either a graph neural network or drug-discovery focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3147983081",
+          "label": "relevant",
+          "reason": "Develops a learned graph model for de novo molecular generation and evaluates it on drug-discovery data and benchmarks."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4206496183",
+          "label": "borderline",
+          "reason": "Early prediction of drug-induced nephrotoxicity is drug-development relevant, but the excerpt does not establish use of a graph neural network."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3171186158",
+          "label": "borderline",
+          "reason": "The work uses AI to identify antiviral inhibitors, but the visible evidence does not show that its AI model is a graph neural network."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4387139847",
+          "label": "borderline",
+          "reason": "Molecular-graph optimization by deep reinforcement learning is directly useful to drug discovery, but a graph neural network is not clearly identified."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4213426032",
+          "label": "relevant",
+          "reason": "Directly evaluates a graph-based deep neural network for protein-drug binding-affinity prediction in drug-discovery screening."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4309941180",
+          "label": "borderline",
+          "reason": "AI prediction of kinase-inhibitor therapeutic effects is drug-discovery related, but the excerpt does not clearly identify a graph neural architecture."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4380786758",
+          "label": "relevant",
+          "reason": "Explicitly proposes a GNN for drug-target binding-affinity prediction and drug screening."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4311931044",
+          "label": "irrelevant",
+          "reason": "It uses maximum common subgraph features and conventional fingerprints for mutagenicity, not a graph neural network."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4310267471",
+          "label": "irrelevant",
+          "reason": "The title and topic indicate general graph learning, with no evidence of a drug-discovery application."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4388288877",
+          "label": "irrelevant",
+          "reason": "The study concerns wildfire susceptibility models and is unrelated to molecular graph learning or drug discovery."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4297227089",
+          "label": "relevant",
+          "reason": "Directly applies graph neural networks to scalable virtual screening using protein-pocket features."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4312094131",
+          "label": "borderline",
+          "reason": "Drug-target affinity prediction is central, but the visible description does not establish that SAM-DTA uses a graph neural network."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3203538342",
+          "label": "irrelevant",
+          "reason": "This is a general machine-learning survey of the Gumbel-max trick, not drug discovery or graph neural networks."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4322724557",
+          "label": "borderline",
+          "reason": "Kinase-inhibitor prediction is relevant to drug discovery, but the described comparison of multiple ML models does not establish a GNN focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4321617258",
+          "label": "irrelevant",
+          "reason": "Network pharmacology and docking for cinnamon are central; the excerpt provides no evidence of a graph neural network."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2995345309",
+          "label": "relevant",
+          "reason": "Explicitly uses multitask graph convolutional networks to predict physicochemical ADMET endpoints in drug-discovery projects."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4389442006",
+          "label": "irrelevant",
+          "reason": "The work studies interpretable deep learning for materials properties and lacks a drug-discovery focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4389767551",
+          "label": "borderline",
+          "reason": "Uses a message-passing neural network in pharmaceutical formulation, but excipient selection is downstream formulation rather than core drug discovery."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4387440466",
+          "label": "borderline",
+          "reason": "Drug-target affinity prediction is central, but the paper focuses on feature processing and the excerpt does not demonstrate a GNN contribution."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4389459324",
+          "label": "irrelevant",
+          "reason": "The application is telecommunications network digital replicas, unrelated to drugs or molecular graph neural networks."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4364353366",
+          "label": "irrelevant",
+          "reason": "GraphBepi uses a graph-based model for B-cell epitope and vaccine research, not drug discovery."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3176005660",
+          "label": "borderline",
+          "reason": "This broad review is centrally about computational COVID-19 drug discovery, but graph neural networks are not established as its core focus."
+        }
+      ],
+      "counts": {
+        "relevant": 8,
+        "borderline": 10,
+        "irrelevant": 12,
+        "total": 30
+      }
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "samples": [
+        {
+          "openalex_id": "https://openalex.org/W2622799812",
+          "label": "irrelevant",
+          "reason": "CRISPR is used to edit a subunit of the intracellular RNA exosome complex; this is not an extracellular vesicle study."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2808190659",
+          "label": "irrelevant",
+          "reason": "The work analyzes porcine endometrial transcriptomes and the visible evidence does not show CRISPR-associated extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3015742158",
+          "label": "irrelevant",
+          "reason": "The review concerns protein nanocompartments broadly, with no visible core intersection of CRISPR and extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4308436019",
+          "label": "irrelevant",
+          "reason": "The study concerns integrin signaling and neuroendocrine differentiation in prostate cancer, not CRISPR-associated extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3120337440",
+          "label": "irrelevant",
+          "reason": "The focus is an ALYREF-MYC regulatory loop in glioblastoma, with no visible extracellular-vesicle and CRISPR intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3187937142",
+          "label": "irrelevant",
+          "reason": "This is a broad review of an oncogenic lncRNA and does not center on CRISPR technology associated with extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4308768993",
+          "label": "irrelevant",
+          "reason": "The review covers mesenchymal glioblastoma biology, without visible evidence that CRISPR and extracellular vesicles form the study's core."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3183690105",
+          "label": "irrelevant",
+          "reason": "The subject is protein-vaccine production platforms broadly, not CRISPR-associated extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3213685179",
+          "label": "irrelevant",
+          "reason": "The work concerns stem-cell models of frontotemporal dementia and does not establish an extracellular-vesicle CRISPR focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3093643713",
+          "label": "borderline",
+          "reason": "Extracellular-vesicle cargo delivery is central, but the excerpt does not explicitly establish CRISPR cargo or CRISPR engineering as a core focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3080614661",
+          "label": "borderline",
+          "reason": "Exosomes as oligonucleotide drug-delivery systems are central, but a specific CRISPR association is not explicit in the visible evidence."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4297457205",
+          "label": "irrelevant",
+          "reason": "It studies intracellular endolysosomal fusion and vesicle biogenesis, not extracellular vesicles associated with CRISPR."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4285094593",
+          "label": "irrelevant",
+          "reason": "The review addresses circular RNAs in gastric-cancer metastasis and resistance, without a core CRISPR-extracellular-vesicle intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4214624594",
+          "label": "irrelevant",
+          "reason": "The focus is innate immune checkpoint signaling in myeloid cells, not CRISPR-related extracellular-vesicle technology."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3165487035",
+          "label": "irrelevant",
+          "reason": "This plant-pathogen review concerns Xanthomonas disease dynamics and does not center on CRISPR and extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3200762094",
+          "label": "irrelevant",
+          "reason": "The article broadly reviews antitumor nanocarriers, with no visible core use of CRISPR-associated extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2915010679",
+          "label": "irrelevant",
+          "reason": "The work reviews non-coding RNA in cardiovascular biology rather than CRISPR technology associated with extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2979308736",
+          "label": "irrelevant",
+          "reason": "The review concerns intracellular Chlamydia-host interactions and provides no CRISPR-extracellular-vesicle focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3000025218",
+          "label": "irrelevant",
+          "reason": "The title, topic, and excerpt concern science education and contain no relevant biological topic intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4206442147",
+          "label": "irrelevant",
+          "reason": "CRISPR is used to generate a connexin-deficient hearing model, but the study does not concern extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4225752762",
+          "label": "irrelevant",
+          "reason": "The review covers nanotechnology in transplantation broadly, with no visible core intersection of CRISPR and extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2613919986",
+          "label": "irrelevant",
+          "reason": "The visible evidence concerns volatile-compound monitoring in microbes, not CRISPR or extracellular vesicle technology."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4313251552",
+          "label": "irrelevant",
+          "reason": "The study uses genetic deletion to examine adipose autophagy and intracellular vesicle trafficking, not extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4292370349",
+          "label": "irrelevant",
+          "reason": "This review covers mitochondrial research methods and does not establish CRISPR-associated extracellular vesicles as a core subject."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4210454131",
+          "label": "irrelevant",
+          "reason": "The study evaluates neuroprotective signaling after hypoxic-ischemic injury, unrelated to the target CRISPR-vesicle intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2805856240",
+          "label": "irrelevant",
+          "reason": "The work repurposes sertraline for lung cancer and does not center on CRISPR-related extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3165558577",
+          "label": "irrelevant",
+          "reason": "This is a review of Fusarium species and mycotoxin production, unrelated to CRISPR-associated extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4320017215",
+          "label": "borderline",
+          "reason": "CRISPR/Cas9 cancer therapy is central, but extracellular vesicles are not explicit as a central delivery or engineering platform."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3112047397",
+          "label": "irrelevant",
+          "reason": "The review concerns circular-RNA metabolism and protein interactions, not CRISPR-associated extracellular vesicles."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3203875357",
+          "label": "irrelevant",
+          "reason": "The opinion concerns mitochondrial dysfunction in polycystic kidney disease, with no visible target-topic intersection."
+        }
+      ],
+      "counts": {
+        "relevant": 0,
+        "borderline": 3,
+        "irrelevant": 27,
+        "total": 30
+      }
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "samples": [
+        {
+          "openalex_id": "https://openalex.org/W3210311531",
+          "label": "irrelevant",
+          "reason": "The paper concerns ICT-supported logistics process improvement, not machine learning applied to climate-change research."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2108462577",
+          "label": "irrelevant",
+          "reason": "The study simulates paleo-precipitation effects on African vegetation, but the visible evidence does not show machine learning or a climate-change application."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3184456034",
+          "label": "borderline",
+          "reason": "Climate-change attribution in an arid region is central, but the excerpt does not clearly establish machine learning as the analytical method."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3124776021",
+          "label": "irrelevant",
+          "reason": "This is mathematical work on model reduction for stochastic dynamics, with no climate-change research application."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3011235146",
+          "label": "irrelevant",
+          "reason": "The paper evaluates commercial flights as an aerial-imagery platform and does not center on machine learning for climate change."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3010853366",
+          "label": "relevant",
+          "reason": "Uses a support vector machine to statistically downscale GCM rainfall under multiple climate-change concentration pathways."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3147457262",
+          "label": "borderline",
+          "reason": "A random forest improves elevation data for flood simulation, but climate change is only an indirect hazard context rather than an explicit research focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4221022043",
+          "label": "irrelevant",
+          "reason": "The article concerns ethics and governance of One Health surveillance, not machine learning in climate-change research."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2998833617",
+          "label": "irrelevant",
+          "reason": "The study analyzes virtual-water transfers in electricity grids, with no clear machine-learning or climate-change research intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4285186549",
+          "label": "borderline",
+          "reason": "Deep learning is central to ocean-eddy trajectory prediction, but the paper does not explicitly frame the application as climate-change research."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2955270041",
+          "label": "relevant",
+          "reason": "Applies ELM and least-squares SVM models to river-ice thickness in a basin, within a climate-change and permafrost research topic."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3211309907",
+          "label": "irrelevant",
+          "reason": "The work discusses AI nationalism and Polish geopolitics, not climate-change applications of machine learning."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4200250400",
+          "label": "irrelevant",
+          "reason": "The Plant Cell Atlas concerns single-cell and imaging technologies, without a climate-change machine-learning application."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2898879852",
+          "label": "relevant",
+          "reason": "Directly uses pedology-informed machine learning to map climate-sensitive soil carbon stocks and improve climate-feedback estimates."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3184440096",
+          "label": "irrelevant",
+          "reason": "The study compares vehicle inspection outcomes with fleet age and has no machine-learning climate-change focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2312743013",
+          "label": "irrelevant",
+          "reason": "The paper develops nonlinear optimization for power-system supply planning, not machine learning applied to climate change."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3162810055",
+          "label": "borderline",
+          "reason": "Climate-driven wildlife range shifts are central, but the excerpt provides no evidence that machine learning is a core method."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3160241143",
+          "label": "irrelevant",
+          "reason": "The study compares imaging and spectroscopy for plant drought response without a clear machine-learning or climate-change focus."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4200611095",
+          "label": "irrelevant",
+          "reason": "It predicts household air-pollution exposure from cooking fuels, not climate-change phenomena or responses."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3000080835",
+          "label": "borderline",
+          "reason": "Remote-sensing species-distribution models are closely related to climate-change biodiversity research, but machine learning is not explicit in the visible evidence."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3212031580",
+          "label": "irrelevant",
+          "reason": "This is a broad survey of AI and machine learning in transportation, without a climate-change research application."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3177541758",
+          "label": "irrelevant",
+          "reason": "Deep learning for weakly labeled remote-sensing classification is central, but no climate-change application is identified."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2909124356",
+          "label": "irrelevant",
+          "reason": "The paper surveys student environmental behavior; 'learning' is educational rather than machine learning, and climate change is not central."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2128699729",
+          "label": "borderline",
+          "reason": "Soil carbon stocks under climate and land-use change are central, but the described spatial modeling is not clearly machine learning."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2913823228",
+          "label": "irrelevant",
+          "reason": "The article concerns resident dissatisfaction with urban environmental quality, not machine learning or climate-change research."
+        },
+        {
+          "openalex_id": "https://openalex.org/W4360983292",
+          "label": "irrelevant",
+          "reason": "Artificial neural networks are used for crop classification, but the study does not explicitly address climate change."
+        },
+        {
+          "openalex_id": "https://openalex.org/W2981662600",
+          "label": "irrelevant",
+          "reason": "The subject is demand signaling in a refurbishing supply chain, with no visible climate-change machine-learning intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3083242999",
+          "label": "irrelevant",
+          "reason": "This short commentary is in solar and space plasma dynamics and provides no evidence of the target topic intersection."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3175814978",
+          "label": "relevant",
+          "reason": "The title and abstract explicitly frame a machine-learning analysis of climate-change impacts on cultivation and cropping patterns."
+        },
+        {
+          "openalex_id": "https://openalex.org/W3162062054",
+          "label": "borderline",
+          "reason": "Forest-range dynamics are climate-relevant, but neither climate change nor machine learning is clearly established as a core dimension in the excerpt."
+        }
+      ],
+      "counts": {
+        "relevant": 4,
+        "borderline": 7,
+        "irrelevant": 19,
+        "total": 30
+      }
+    }
+  ]
+}

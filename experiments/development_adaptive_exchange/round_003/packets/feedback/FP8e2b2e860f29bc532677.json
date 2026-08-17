@@ -1,0 +1,68 @@
+{
+  "packet_id": "FP8e2b2e860f29bc532677",
+  "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v2",
+  "canonical_evidence": {
+    "answer_contract": {
+      "links": "integer",
+      "nodes": "integer"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:edge_count",
+        "bibliographic_coupling:fact:node_count"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:edge_count",
+          "network": "bibliographic_coupling",
+          "object": 210,
+          "object_type": "integer",
+          "predicate": "displayed_edge_count",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:node_count",
+          "network": "bibliographic_coupling",
+          "object": 72,
+          "object_type": "integer",
+          "predicate": "displayed_node_count",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "3e40cbb7f5ae1c0393937a6a60a092351c48b72a8c37b20b8721d6d7b5a3059c"
+    },
+    "question": "How many nodes and links are displayed in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"links\":210,\"nodes\":72},\"explanation\":\"The context provides two facts: the displayed node count is 72 and the displayed edge count is 210 for the bibliographic coupling network. These directly answer the question about the number of nodes and links.\",\"item_id\":\"gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:edge_count",
+    "bibliographic_coupling:fact:node_count"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:network_size",
+    "issue_signature": "graph:network_size",
+    "severity": "low",
+    "detector_score": 0.15,
+    "message": "The system flagged this candidate for focused review."
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters."
+  ],
+  "content_sha256": "bc58f81d6073d9bfb332ac370b4241a997214ce6ad4fb525f9449500885effc8"
+}

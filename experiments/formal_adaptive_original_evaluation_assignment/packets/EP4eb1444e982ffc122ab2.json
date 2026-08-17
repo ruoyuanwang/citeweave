@@ -1,0 +1,49 @@
+{
+  "packet_id": "EP4eb1444e982ffc122ab2",
+  "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:network_size:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "links": "integer",
+      "nodes": "integer"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:edge_count",
+        "bibliographic_coupling:fact:node_count"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:edge_count",
+          "network": "bibliographic_coupling",
+          "object": 219,
+          "object_type": "integer",
+          "predicate": "displayed_edge_count",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:node_count",
+          "network": "bibliographic_coupling",
+          "object": 72,
+          "object_type": "integer",
+          "predicate": "displayed_node_count",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "a3bae679ad5abed8ee29bf0021ef969d6604f36cb8d05062f349c920a1aff73c"
+    },
+    "question": "How many nodes and links are displayed in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"links\":219,\"nodes\":72},\"explanation\":\"The context provides two facts: the displayed node count is 72 and the displayed edge count is 219 for the bibliographic coupling network. These directly answer the question about the number of nodes and links.\",\"item_id\":\"plant_heat_drought_2008_2021:bibliographic_coupling:network_size\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:edge_count",
+    "bibliographic_coupling:fact:node_count"
+  ],
+  "content_sha256": "b6fe27ff8963a6968b4898ac00ba2a26a14c8671ebf367c581b75a7826d68f1e"
+}

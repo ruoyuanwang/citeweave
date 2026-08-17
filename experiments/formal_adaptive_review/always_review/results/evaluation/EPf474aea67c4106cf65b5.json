@@ -1,0 +1,14 @@
+{
+  "packet_id": "EPf474aea67c4106cf65b5",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The candidate returns the exact visible source and target labels for the pair explicitly identified as the strongest displayed connection, together with the matching weight of 38.0, and conforms to the answer contract.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbab109:label",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbad400:label"
+  ],
+  "judge_id": "evaluation"
+}

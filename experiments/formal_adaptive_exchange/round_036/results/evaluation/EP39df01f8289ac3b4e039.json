@@ -1,0 +1,11 @@
+{
+  "packet_id": "EP39df01f8289ac3b4e039",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The candidate answers 72 nodes and 197 links, exactly matching the visible displayed_node_count and displayed_edge_count relationships, and it conforms to the answer contract.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:node_count",
+    "bibliographic_coupling:fact:edge_count"
+  ],
+  "judge_id": "evaluation"
+}

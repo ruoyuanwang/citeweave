@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "dataset_id": "machine_learning_climate_change_2008_2022",
+  "condition": "citeweave_full",
+  "evidence_sha256": "3eea00286c152a59e08480d1a574fa0e23b0e70dc092f65748f2a7448280b470",
+  "model": "deepseek-v4-pro",
+  "base_url": "https://api.deepseek.com",
+  "temperature": 0.1,
+  "seed": 42,
+  "max_tokens": 8000,
+  "report_language": "English",
+  "internal_review_policy": "Revision-only artifact. It must not be reused as an experimental evaluation.",
+  "external_evaluation_policy": "Use a separately instantiated external Judge with independent prompts and traces."
+}

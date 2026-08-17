@@ -1,0 +1,391 @@
+{
+  "analysis_version": 1,
+  "model": "qwen2.5-1.5b-q4km",
+  "datasets": [
+    "crispr_editing_2018_2020",
+    "quantum_machine_learning_2019_2021",
+    "climate_adaptation_2018_2020"
+  ],
+  "development_prompt_topic_excluded": "rag_graph_2022_2025",
+  "pooled": {
+    "analysis_version": 2,
+    "paired_items": 89,
+    "graph_condition": "graph_rag",
+    "no_graph_condition": "no_graph",
+    "graph_metrics": {
+      "accuracy": 0.7303370786516854,
+      "unsupported_claim_rate": 0.0,
+      "structured_unsupported_answer_rate": 0.3380281690140845,
+      "statement_claim_coverage": 0.9859154929577465,
+      "format_failure_rate": 0.2696629213483146,
+      "evidence_path_validity": 0.8450704225352113
+    },
+    "no_graph_metrics": {
+      "accuracy": 0.20224719101123595,
+      "unsupported_claim_rate": 1.0,
+      "structured_unsupported_answer_rate": 1.0,
+      "statement_claim_coverage": 0.5774647887323944,
+      "format_failure_rate": 0.797752808988764,
+      "evidence_path_validity": 0.0
+    },
+    "effects": {
+      "accuracy_difference": 0.5280898876404494,
+      "accuracy_difference_bootstrap_95_ci": [
+        0.4269662921348314,
+        0.6292134831460674
+      ],
+      "accuracy_difference_topic_stratified_bootstrap_95_ci": [
+        0.42696629213483145,
+        0.6292134831460674
+      ],
+      "unsupported_claim_rate_reduction": 1.0,
+      "unsupported_claim_rate_reduction_bootstrap_95_ci": [
+        1.0,
+        1.0
+      ],
+      "unsupported_claim_rate_reduction_topic_stratified_bootstrap_95_ci": [
+        1.0,
+        1.0
+      ]
+    },
+    "mcnemar_exact": {
+      "graph_only_correct": 47,
+      "no_graph_only_correct": 0,
+      "discordant_pairs": 47,
+      "two_sided_p_value": 1.4210854715202004e-14
+    },
+    "bootstrap": {
+      "samples": 10000,
+      "seed": 42,
+      "strata": [
+        "climate_adaptation_2018_2020",
+        "crispr_editing_2018_2020",
+        "quantum_machine_learning_2019_2021"
+      ]
+    },
+    "by_network": {
+      "bibliographic_coupling": {
+        "items": 15,
+        "graph_accuracy": 0.8,
+        "no_graph_accuracy": 0.2,
+        "accuracy_difference": 0.6000000000000001
+      },
+      "citation": {
+        "items": 15,
+        "graph_accuracy": 0.4666666666666667,
+        "no_graph_accuracy": 0.2,
+        "accuracy_difference": 0.26666666666666666
+      },
+      "coauthorship": {
+        "items": 15,
+        "graph_accuracy": 0.5333333333333333,
+        "no_graph_accuracy": 0.2,
+        "accuracy_difference": 0.3333333333333333
+      },
+      "cocitation": {
+        "items": 15,
+        "graph_accuracy": 0.9333333333333333,
+        "no_graph_accuracy": 0.2,
+        "accuracy_difference": 0.7333333333333334
+      },
+      "institution_collaboration": {
+        "items": 14,
+        "graph_accuracy": 0.7142857142857143,
+        "no_graph_accuracy": 0.21428571428571427,
+        "accuracy_difference": 0.5
+      },
+      "keyword_cooccurrence": {
+        "items": 15,
+        "graph_accuracy": 0.9333333333333333,
+        "no_graph_accuracy": 0.2,
+        "accuracy_difference": 0.7333333333333334
+      }
+    }
+  },
+  "by_dataset": {
+    "crispr_editing_2018_2020": {
+      "analysis_version": 2,
+      "paired_items": 30,
+      "graph_condition": "graph_rag",
+      "no_graph_condition": "no_graph",
+      "graph_metrics": {
+        "accuracy": 0.7,
+        "unsupported_claim_rate": 0.0,
+        "structured_unsupported_answer_rate": 0.375,
+        "statement_claim_coverage": 1.0,
+        "format_failure_rate": 0.3,
+        "evidence_path_validity": 0.9583333333333334
+      },
+      "no_graph_metrics": {
+        "accuracy": 0.2,
+        "unsupported_claim_rate": 1.0,
+        "structured_unsupported_answer_rate": 1.0,
+        "statement_claim_coverage": 0.7083333333333334,
+        "format_failure_rate": 0.8,
+        "evidence_path_validity": 0.0
+      },
+      "effects": {
+        "accuracy_difference": 0.49999999999999994,
+        "accuracy_difference_bootstrap_95_ci": [
+          0.30000000000000004,
+          0.6666666666666667
+        ],
+        "accuracy_difference_topic_stratified_bootstrap_95_ci": [
+          0.3333333333333333,
+          0.6666666666666667
+        ],
+        "unsupported_claim_rate_reduction": 1.0,
+        "unsupported_claim_rate_reduction_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "unsupported_claim_rate_reduction_topic_stratified_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "mcnemar_exact": {
+        "graph_only_correct": 15,
+        "no_graph_only_correct": 0,
+        "discordant_pairs": 15,
+        "two_sided_p_value": 6.103515625e-05
+      },
+      "bootstrap": {
+        "samples": 10000,
+        "seed": 42,
+        "strata": [
+          "crispr_editing_2018_2020"
+        ]
+      },
+      "by_network": {
+        "bibliographic_coupling": {
+          "items": 5,
+          "graph_accuracy": 0.6,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.39999999999999997
+        },
+        "citation": {
+          "items": 5,
+          "graph_accuracy": 0.4,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.2
+        },
+        "coauthorship": {
+          "items": 5,
+          "graph_accuracy": 0.6,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.39999999999999997
+        },
+        "cocitation": {
+          "items": 5,
+          "graph_accuracy": 1.0,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.8
+        },
+        "institution_collaboration": {
+          "items": 5,
+          "graph_accuracy": 0.6,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.39999999999999997
+        },
+        "keyword_cooccurrence": {
+          "items": 5,
+          "graph_accuracy": 1.0,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.8
+        }
+      }
+    },
+    "quantum_machine_learning_2019_2021": {
+      "analysis_version": 2,
+      "paired_items": 30,
+      "graph_condition": "graph_rag",
+      "no_graph_condition": "no_graph",
+      "graph_metrics": {
+        "accuracy": 0.7666666666666667,
+        "unsupported_claim_rate": 0.0,
+        "structured_unsupported_answer_rate": 0.2916666666666667,
+        "statement_claim_coverage": 0.9583333333333334,
+        "format_failure_rate": 0.23333333333333334,
+        "evidence_path_validity": 0.75
+      },
+      "no_graph_metrics": {
+        "accuracy": 0.2,
+        "unsupported_claim_rate": 1.0,
+        "structured_unsupported_answer_rate": 1.0,
+        "statement_claim_coverage": 0.4583333333333333,
+        "format_failure_rate": 0.8,
+        "evidence_path_validity": 0.0
+      },
+      "effects": {
+        "accuracy_difference": 0.5666666666666667,
+        "accuracy_difference_bootstrap_95_ci": [
+          0.39999999999999997,
+          0.7333333333333334
+        ],
+        "accuracy_difference_topic_stratified_bootstrap_95_ci": [
+          0.39999999999999997,
+          0.7333333333333334
+        ],
+        "unsupported_claim_rate_reduction": 1.0,
+        "unsupported_claim_rate_reduction_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "unsupported_claim_rate_reduction_topic_stratified_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "mcnemar_exact": {
+        "graph_only_correct": 17,
+        "no_graph_only_correct": 0,
+        "discordant_pairs": 17,
+        "two_sided_p_value": 1.52587890625e-05
+      },
+      "bootstrap": {
+        "samples": 10000,
+        "seed": 42,
+        "strata": [
+          "quantum_machine_learning_2019_2021"
+        ]
+      },
+      "by_network": {
+        "bibliographic_coupling": {
+          "items": 5,
+          "graph_accuracy": 1.0,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.8
+        },
+        "citation": {
+          "items": 5,
+          "graph_accuracy": 0.4,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.2
+        },
+        "coauthorship": {
+          "items": 5,
+          "graph_accuracy": 0.4,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.2
+        },
+        "cocitation": {
+          "items": 5,
+          "graph_accuracy": 0.8,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.6000000000000001
+        },
+        "institution_collaboration": {
+          "items": 5,
+          "graph_accuracy": 1.0,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.8
+        },
+        "keyword_cooccurrence": {
+          "items": 5,
+          "graph_accuracy": 1.0,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.8
+        }
+      }
+    },
+    "climate_adaptation_2018_2020": {
+      "analysis_version": 2,
+      "paired_items": 29,
+      "graph_condition": "graph_rag",
+      "no_graph_condition": "no_graph",
+      "graph_metrics": {
+        "accuracy": 0.7241379310344828,
+        "unsupported_claim_rate": 0.0,
+        "structured_unsupported_answer_rate": 0.34782608695652173,
+        "statement_claim_coverage": 1.0,
+        "format_failure_rate": 0.27586206896551724,
+        "evidence_path_validity": 0.8260869565217391
+      },
+      "no_graph_metrics": {
+        "accuracy": 0.20689655172413793,
+        "unsupported_claim_rate": 1.0,
+        "structured_unsupported_answer_rate": 1.0,
+        "statement_claim_coverage": 0.5652173913043478,
+        "format_failure_rate": 0.7931034482758621,
+        "evidence_path_validity": 0.0
+      },
+      "effects": {
+        "accuracy_difference": 0.5172413793103449,
+        "accuracy_difference_bootstrap_95_ci": [
+          0.3448275862068965,
+          0.6896551724137931
+        ],
+        "accuracy_difference_topic_stratified_bootstrap_95_ci": [
+          0.3448275862068965,
+          0.6896551724137931
+        ],
+        "unsupported_claim_rate_reduction": 1.0,
+        "unsupported_claim_rate_reduction_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "unsupported_claim_rate_reduction_topic_stratified_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "mcnemar_exact": {
+        "graph_only_correct": 15,
+        "no_graph_only_correct": 0,
+        "discordant_pairs": 15,
+        "two_sided_p_value": 6.103515625e-05
+      },
+      "bootstrap": {
+        "samples": 10000,
+        "seed": 42,
+        "strata": [
+          "climate_adaptation_2018_2020"
+        ]
+      },
+      "by_network": {
+        "bibliographic_coupling": {
+          "items": 5,
+          "graph_accuracy": 0.8,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.6000000000000001
+        },
+        "citation": {
+          "items": 5,
+          "graph_accuracy": 0.6,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.39999999999999997
+        },
+        "coauthorship": {
+          "items": 5,
+          "graph_accuracy": 0.6,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.39999999999999997
+        },
+        "cocitation": {
+          "items": 5,
+          "graph_accuracy": 1.0,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.8
+        },
+        "institution_collaboration": {
+          "items": 4,
+          "graph_accuracy": 0.5,
+          "no_graph_accuracy": 0.25,
+          "accuracy_difference": 0.25
+        },
+        "keyword_cooccurrence": {
+          "items": 5,
+          "graph_accuracy": 0.8,
+          "no_graph_accuracy": 0.2,
+          "accuracy_difference": 0.6000000000000001
+        }
+      }
+    }
+  },
+  "holm_adjusted_topic_p_values": {
+    "quantum_machine_learning_2019_2021": 4.57763671875e-05,
+    "crispr_editing_2018_2020": 0.0001220703125,
+    "climate_adaptation_2018_2020": 0.0001220703125
+  }
+}

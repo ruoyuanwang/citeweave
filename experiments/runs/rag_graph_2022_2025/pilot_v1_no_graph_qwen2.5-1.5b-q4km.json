@@ -1,0 +1,499 @@
+{
+  "condition": "no_graph",
+  "metadata": {
+    "dataset_id": "rag_graph_2022_2025",
+    "model": "qwen2.5-1.5b-q4km",
+    "base_url": "http://127.0.0.1:8091/v1",
+    "temperature": 0.0,
+    "max_tokens": 192,
+    "seed": 42,
+    "workers": 2,
+    "items": 5,
+    "elapsed_seconds": 8.37813310000638,
+    "raw_records": [
+      {
+        "item_id": "rag_graph_2022_2025:G001",
+        "condition": "no_graph",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G001\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "```json\n{\n  \"item_id\": \"rag_graph_2022_2025:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The bibliographic_coupling network has 2022 nodes and 2025 edges.\"\n}\n```"
+              }
+            }
+          ],
+          "created": 1785958616,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 85,
+            "prompt_tokens": 164,
+            "total_tokens": 249,
+            "prompt_tokens_details": {
+              "cached_tokens": 120
+            }
+          },
+          "id": "chatcmpl-HeZ4c8ykGQpcb5vQb4GHgYUPVTPfqlMG",
+          "timings": {
+            "cache_n": 120,
+            "prompt_n": 44,
+            "prompt_ms": 408.34,
+            "prompt_per_token_ms": 9.280454545454544,
+            "prompt_per_second": 107.7533428025665,
+            "predicted_n": 85,
+            "predicted_ms": 2596.274,
+            "predicted_per_token_ms": 30.5444,
+            "predicted_per_second": 32.739225520881085
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G001",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The bibliographic_coupling network has 2022 nodes and 2025 edges."
+        }
+      },
+      {
+        "item_id": "rag_graph_2022_2025:G002",
+        "condition": "no_graph",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G002\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "```json\n{\n  \"item_id\": \"rag_graph_2022_2025:G002\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the bibliographic_coupling network is G002.\"\n}\n```"
+              }
+            }
+          ],
+          "created": 1785958616,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 84,
+            "prompt_tokens": 174,
+            "total_tokens": 258,
+            "prompt_tokens_details": {
+              "cached_tokens": 120
+            }
+          },
+          "id": "chatcmpl-x8DYDy2zYskLBWXU3iOzPmxam4uwwB36",
+          "timings": {
+            "cache_n": 120,
+            "prompt_n": 54,
+            "prompt_ms": 408.781,
+            "prompt_per_token_ms": 7.570018518518519,
+            "prompt_per_second": 132.10007314429976,
+            "predicted_n": 84,
+            "predicted_ms": 2567.082,
+            "predicted_per_token_ms": 30.560499999999998,
+            "predicted_per_second": 32.72197771633317
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G002",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the bibliographic_coupling network is G002."
+        }
+      },
+      {
+        "item_id": "rag_graph_2022_2025:G003",
+        "condition": "no_graph",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G003\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "```json\n{\n  \"item_id\": \"rag_graph_2022_2025:G003\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The bibliographic_coupling network is analyzed to identify clusters of bibliographic couplings.\"\n}\n```"
+              }
+            }
+          ],
+          "created": 1785958619,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 81,
+            "prompt_tokens": 164,
+            "total_tokens": 245,
+            "prompt_tokens_details": {
+              "cached_tokens": 120
+            }
+          },
+          "id": "chatcmpl-rYNdV8CWvV3IDPZJeXKDh6UK4oAotnYu",
+          "timings": {
+            "cache_n": 120,
+            "prompt_n": 44,
+            "prompt_ms": 163.464,
+            "prompt_per_token_ms": 3.715090909090909,
+            "prompt_per_second": 269.1724171683062,
+            "predicted_n": 81,
+            "predicted_ms": 2567.58,
+            "predicted_per_token_ms": 31.69851851851852,
+            "predicted_per_second": 31.547215666113615
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G003",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The bibliographic_coupling network is analyzed to identify clusters of bibliographic couplings."
+        }
+      },
+      {
+        "item_id": "rag_graph_2022_2025:G004",
+        "condition": "no_graph",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G004\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "```json\n{\n  \"item_id\": \"rag_graph_2022_2025:G004\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The strongest connection in the bibliographic_coupling network is between the items with the highest number of citations.\"\n}\n```"
+              }
+            }
+          ],
+          "created": 1785958619,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 85,
+            "prompt_tokens": 175,
+            "total_tokens": 260,
+            "prompt_tokens_details": {
+              "cached_tokens": 120
+            }
+          },
+          "id": "chatcmpl-If2fZ5J3C2Ed2JiVKSujKok9skGmHRom",
+          "timings": {
+            "cache_n": 120,
+            "prompt_n": 55,
+            "prompt_ms": 233.249,
+            "prompt_per_token_ms": 4.240890909090909,
+            "prompt_per_second": 235.79951039447116,
+            "predicted_n": 85,
+            "predicted_ms": 2625.858,
+            "predicted_per_token_ms": 30.89244705882353,
+            "predicted_per_second": 32.37037189368199
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G004",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The strongest connection in the bibliographic_coupling network is between the items with the highest number of citations."
+        }
+      },
+      {
+        "item_id": "rag_graph_2022_2025:G005",
+        "condition": "no_graph",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G005\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "```json\n{\n  \"item_id\": \"rag_graph_2022_2025:G005\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The citation network has 10 nodes and 15 edges.\"\n}\n```"
+              }
+            }
+          ],
+          "created": 1785958621,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 78,
+            "prompt_tokens": 161,
+            "total_tokens": 239,
+            "prompt_tokens_details": {
+              "cached_tokens": 120
+            }
+          },
+          "id": "chatcmpl-UXJy4agNFMfGahMvHyucqDirbsWT74hD",
+          "timings": {
+            "cache_n": 120,
+            "prompt_n": 41,
+            "prompt_ms": 178.331,
+            "prompt_per_token_ms": 4.349536585365853,
+            "prompt_per_second": 229.9095502184141,
+            "predicted_n": 78,
+            "predicted_ms": 2113.625,
+            "predicted_per_token_ms": 27.09775641025641,
+            "predicted_per_second": 36.903424211958125
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G005",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The citation network has 10 nodes and 15 edges."
+        }
+      }
+    ]
+  },
+  "benchmark_version": 1,
+  "items": 5,
+  "predictions_received": 5,
+  "metrics": {
+    "exact_answer_accuracy": 0.0,
+    "schema_valid_rate": 0.0,
+    "unsupported_claim_rate": 1.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 0.0,
+    "evidence_recall": 0.0,
+    "abstention_precision": 0.0,
+    "abstention_recall": 0.0,
+    "abstention_f1": 0.0
+  },
+  "counts": {
+    "correct": 0,
+    "answered": 5,
+    "incorrect_answered": 5,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 19,
+    "evidence_path_eligible_answers": 5,
+    "abstention": {
+      "tn": 5
+    }
+  },
+  "by_task": {
+    "cluster_count": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_weighted_degree": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 2,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_edge": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 4,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "rag_graph_2022_2025:G001",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G001",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The bibliographic_coupling network has 2022 nodes and 2025 edges."
+      }
+    },
+    {
+      "item_id": "rag_graph_2022_2025:G002",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G002",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the bibliographic_coupling network is G002."
+      }
+    },
+    {
+      "item_id": "rag_graph_2022_2025:G003",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G003",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The bibliographic_coupling network is analyzed to identify clusters of bibliographic couplings."
+      }
+    },
+    {
+      "item_id": "rag_graph_2022_2025:G004",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G004",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The strongest connection in the bibliographic_coupling network is between the items with the highest number of citations."
+      }
+    },
+    {
+      "item_id": "rag_graph_2022_2025:G005",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G005",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The citation network has 10 nodes and 15 edges."
+      }
+    }
+  ]
+}

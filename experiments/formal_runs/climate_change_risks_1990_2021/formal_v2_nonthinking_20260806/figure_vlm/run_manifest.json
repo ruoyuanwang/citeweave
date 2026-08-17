@@ -1,0 +1,20 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "climate_change_risks_1990_2021",
+  "condition": "figure_vlm",
+  "role": "cross_model_extension",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "packet_sha256": "378544bac34fded762f1b1dbcbcd6c208030b6862109987497c25861a0843118",
+  "output_sha256": "9b1e49ababaf9ddcfbab963fde104b20d027a35bcf12827757d7e8cb2a3d809f",
+  "items": 6,
+  "item_ids": [
+    "climate_change_risks_1990_2021:bibliographic_coupling:network_size",
+    "climate_change_risks_1990_2021:citation:network_size",
+    "climate_change_risks_1990_2021:coauthorship:network_size",
+    "climate_change_risks_1990_2021:cocitation:network_size",
+    "climate_change_risks_1990_2021:institution_collaboration:network_size",
+    "climate_change_risks_1990_2021:keyword_cooccurrence:network_size"
+  ]
+}

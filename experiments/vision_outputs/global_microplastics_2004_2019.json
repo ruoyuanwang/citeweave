@@ -1,0 +1,63 @@
+{
+  "dataset_id": "global_microplastics_2004_2019",
+  "generator_role": "codex_visual_subagent",
+  "packet_sha256": "20e1c53289666c1b5da2f193098ff8840bda4f4719382432c3d7c05d7952d8f4",
+  "results": [
+    {
+      "abstain": false,
+      "answer": {
+        "links": 228,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle states “72 nodes · 228 links.”",
+      "item_id": "global_microplastics_2004_2019:bibliographic_coupling:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 81,
+        "nodes": 60
+      },
+      "explanation": "The visible subtitle states “60 nodes · 81 links.”",
+      "item_id": "global_microplastics_2004_2019:citation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 121,
+        "nodes": 59
+      },
+      "explanation": "The visible subtitle states “59 nodes · 121 links.”",
+      "item_id": "global_microplastics_2004_2019:coauthorship:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 205,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle states “72 nodes · 205 links.”",
+      "item_id": "global_microplastics_2004_2019:cocitation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 176,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle states “72 nodes · 176 links.”",
+      "item_id": "global_microplastics_2004_2019:institution_collaboration:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 202,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle states “72 nodes · 202 links.”",
+      "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:network_size"
+    }
+  ],
+  "schema_version": 1,
+  "visible_only": true
+}

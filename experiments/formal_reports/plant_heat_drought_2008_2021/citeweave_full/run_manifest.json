@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "dataset_id": "plant_heat_drought_2008_2021",
+  "condition": "citeweave_full",
+  "evidence_sha256": "40228e3f0fdd74f7617c79b508072acc95043b730f9cd1ce233e0887036bd1ba",
+  "model": "deepseek-v4-pro",
+  "base_url": "https://api.deepseek.com",
+  "temperature": 0.1,
+  "seed": 42,
+  "max_tokens": 8000,
+  "report_language": "English",
+  "internal_review_policy": "Revision-only artifact. It must not be reused as an experimental evaluation.",
+  "external_evaluation_policy": "Use a separately instantiated external Judge with independent prompts and traces."
+}

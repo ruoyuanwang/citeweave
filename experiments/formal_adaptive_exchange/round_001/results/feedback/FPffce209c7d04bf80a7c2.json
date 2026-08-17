@@ -1,0 +1,23 @@
+{
+  "packet_id": "FPffce209c7d04bf80a7c2",
+  "decision": "revise",
+  "confidence": 0.95,
+  "reason": "The numeric growth, Bradford-zone count, and leading institution are supported, but the visible evidence does not establish a “hot topic” phase, rapid methodological advance, a nascent field, or dominance. A local replacement keeps the supported descriptive findings and adds the evidence limitations.",
+  "evidence_ids": [
+    "E006",
+    "E008",
+    "E012",
+    "E018",
+    "E019",
+    "E028",
+    "E029",
+    "E030",
+    "E031"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "The rapid growth (CAGR 185.60%) indicates that GNNs in drug discovery are in a “hot topic” phase, consistent with the rapid methodological advances documented in the top-cited works [E006, E018, E028–E031]. The concentration of output in a few journals (Zone 1: 5 sources) and institutions (Chinese Academy of Sciences leads) suggests a nascent field with dominant publishing venues and research hubs [E008, E012, E019].",
+    "replacement_text": "The observed endpoint CAGR is 185.60%; this measure does not establish a monotonic trend or, by itself, a “hot topic” phase [E006]. Bradford zoning places 5 sources in Zone 1, and the Chinese Academy of Sciences ranks first with 24 publications; these descriptive rankings do not by themselves establish that the field is nascent or that venues and institutions are dominant [E008, E012, E019]."
+  }
+}

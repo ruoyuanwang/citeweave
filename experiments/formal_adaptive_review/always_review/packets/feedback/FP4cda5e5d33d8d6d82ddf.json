@@ -1,0 +1,71 @@
+{
+  "packet_id": "FP4cda5e5d33d8d6d82ddf",
+  "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "links": "integer",
+      "nodes": "integer"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:edge_count",
+        "bibliographic_coupling:fact:node_count"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:edge_count",
+          "network": "bibliographic_coupling",
+          "object": 197,
+          "object_type": "integer",
+          "predicate": "displayed_edge_count",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:node_count",
+          "network": "bibliographic_coupling",
+          "object": 72,
+          "object_type": "integer",
+          "predicate": "displayed_node_count",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "c6ddd98a15d6f52f50af70a1cbe2b6a3a98cfc66e6d8bc2f9c359778fd555d61"
+    },
+    "question": "How many nodes and links are displayed in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"links\":197,\"nodes\":72},\"explanation\":\"The context provides two facts: the displayed node count is 72 and the displayed edge count is 197 for the bibliographic coupling network. These directly answer the question about nodes and links.\",\"item_id\":\"climate_change_risks_1990_2021:bibliographic_coupling:network_size\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:edge_count",
+    "bibliographic_coupling:fact:node_count"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:network_size",
+    "issue_signature": "graph:network_size",
+    "severity": "low",
+    "detector_score": 0.15,
+    "message": "The system flagged the quoted network_size answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"links\":197,\"nodes\":72},\"explanation\":\"The context provides two facts: the displayed node count is 72 and the displayed edge count is 197 for the bibliographic coupling network. These directly answer the question about nodes and links.\",\"item_id\":\"climate_change_risks_1990_2021:bibliographic_coupling:network_size\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "ffdc00fc60e74c5f80dbed3648475d3864fa9f7cd1ce6f9eb3942e34d3bc7696"
+}

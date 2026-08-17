@@ -1,0 +1,210 @@
+{
+  "experiment_protocol_version": "0.1",
+  "dataset_id": "climate_adaptation_2018_2020",
+  "role": "locked_test",
+  "started_at": "2026-08-05 18:49:55.829867+00:00",
+  "status": "complete",
+  "git": {
+    "commit": "5f8c16c0ee5cb5574112b7910e07d1d7f6a8dc74",
+    "status": "M .gitignore\n M src/citeweave/connectors/crossref.py\n M src/citeweave/connectors/import_file.py\n M src/citeweave/generation.py\n M src/citeweave/models.py\n M src/citeweave/transform.py\n M src/citeweave/workflow.py\n M tests/test_evidence.py\n M tests/test_import_file.py\n M tests/test_transform.py\n?? .venv/\n?? docs/GENERATION_OPTIMIZATION_PLAN.md\n?? docs/MASTER_PLAN.md\n?? docs/TEXT_GENERATION_BENCHMARK.md\n?? docs/references/\n?? experiments/\n?? runs/\n?? scripts/\n?? src/citeweave/__pycache__/\n?? src/citeweave/adaptive_review.py\n?? src/citeweave/connectors/__pycache__/\n?? src/citeweave/experiment_benchmark.py\n?? src/citeweave/experiment_validation.py\n?? src/citeweave/graph_grounding.py\n?? tests/__pycache__/\n?? tests/test_adaptive_review.py\n?? tests/test_connectors.py\n?? tests/test_experiment_benchmark.py\n?? tests/test_graph_grounding.py\n?? tmp/"
+  },
+  "registry_entry": {
+    "id": "climate_adaptation_2018_2020",
+    "role": "locked_test",
+    "source": "crossref",
+    "title": "Climate change adaptation research",
+    "keywords": [
+      "climate change adaptation"
+    ],
+    "query_mode": "phrase",
+    "year_from": 2018,
+    "year_to": 2020,
+    "document_types": [
+      "journal-article"
+    ],
+    "max_records": 300,
+    "include_references": true,
+    "relevance_terms": [
+      "climate",
+      "adaptation"
+    ]
+  },
+  "workspace": "D:\\project\\bibagent\\experiments\\workspaces\\climate_adaptation_2018_2020",
+  "finished_at": "2026-08-05 18:50:28.341780+00:00",
+  "result": {
+    "project_root": "D:\\project\\bibagent\\experiments\\workspaces\\climate_adaptation_2018_2020",
+    "documents": 300,
+    "figures": 16,
+    "evidence_items": 68,
+    "graph_grounding": {
+      "schema_version": 2,
+      "nodes": 12990,
+      "edges": 48303,
+      "facts": 23,
+      "qa_items": 29
+    },
+    "generation_model": "deterministic-template",
+    "generation_validation": {
+      "valid": true,
+      "used_evidence_ids": [
+        "E001",
+        "E002",
+        "E004",
+        "E005",
+        "E006",
+        "E008",
+        "E010",
+        "E012",
+        "E015",
+        "E016",
+        "E020",
+        "E022",
+        "E023",
+        "E024",
+        "E025",
+        "E026",
+        "E027",
+        "E049",
+        "E050",
+        "E051",
+        "E052",
+        "E053",
+        "E054",
+        "E055",
+        "E056",
+        "E057",
+        "E058",
+        "E059",
+        "E060",
+        "E061",
+        "E062",
+        "E063",
+        "E064"
+      ],
+      "evidence_coverage": 0.4852941176470588,
+      "invalid_evidence_ids": [],
+      "malformed_evidence_tokens": [],
+      "unsupported_numbers": [],
+      "uncited_or_unapproved_dois": [],
+      "uncited_numeric_sentences": [],
+      "incomplete_paragraphs": [],
+      "missing_sections": [
+        "摘要",
+        "数据与方法",
+        "结果",
+        "讨论",
+        "局限",
+        "结论"
+      ],
+      "minimum_content_pass": true,
+      "journal_readiness": {
+        "passed": false,
+        "checks": {
+          "characters_at_least_12000": false,
+          "substantive_paragraphs_at_least_18": true,
+          "subsections_at_least_15": false,
+          "figure_mentions_at_least_12": false,
+          "evidence_items_at_least_20": true,
+          "references_at_least_8": false,
+          "introduction_at_least_1500": false,
+          "methods_at_least_2000": false,
+          "results_at_least_4500": false,
+          "discussion_at_least_2200": false,
+          "research_questions_present": false,
+          "method_moves_complete": false,
+          "discussion_moves_complete": false
+        },
+        "characters": 4742,
+        "substantive_paragraphs": 36,
+        "subsections": 5,
+        "figure_mentions": [],
+        "unique_evidence_items": 33,
+        "reference_entries": 0,
+        "section_characters": {
+          "introduction": 0,
+          "methods": 0,
+          "results": 0,
+          "discussion": 0
+        },
+        "method_moves": {
+          "data_source": false,
+          "query": false,
+          "completeness": false,
+          "normalization": false,
+          "counting": false,
+          "threshold": false,
+          "clustering": false,
+          "visual_filter": false,
+          "reproducibility": false
+        },
+        "discussion_moves": {
+          "principal_findings": false,
+          "prior_work_comparison": false,
+          "cross_result_synthesis": false,
+          "implications": false,
+          "future_agenda": false,
+          "evidence_boundary": false
+        }
+      },
+      "paragraphs": 48,
+      "characters": 4742,
+      "mode": "deterministic_template"
+    },
+    "report": "D:\\project\\bibagent\\experiments\\workspaces\\climate_adaptation_2018_2020\\report\\index.html",
+    "word_report": "D:\\project\\bibagent\\experiments\\workspaces\\climate_adaptation_2018_2020\\report\\manuscript.docx",
+    "acquisition_complete": false
+  },
+  "snapshot": {
+    "acquisition_manifest": {
+      "source": "crossref",
+      "query": {
+        "query.bibliographic": "climate change adaptation",
+        "filter": "from-pub-date:2018-01-01,until-pub-date:2020-12-31,type:journal-article",
+        "rows": 1000,
+        "cursor": "*"
+      },
+      "started_at": "2026-08-05T18:49:56.232519Z",
+      "finished_at": "2026-08-05T18:49:58.938515Z",
+      "expected_records": 127958,
+      "received_records": 1000,
+      "unique_records": 300,
+      "duplicate_records": 0,
+      "pages": 1,
+      "failed_pages": 0,
+      "complete": false,
+      "truncated": true,
+      "drift": -127658,
+      "raw_sha256": [
+        "b704eae563efbc48ef0306d6fe3311be6d23a926a04e582ef46854f10902860f"
+      ],
+      "warnings": [
+        "Acquisition stopped at protocol.max_records."
+      ]
+    },
+    "works": 300,
+    "english_title_coverage": 1.0,
+    "abstract_coverage": 0.37333333333333335,
+    "doi_coverage": 1.0,
+    "topic_relevance": {
+      "terms": [
+        "climate",
+        "adaptation"
+      ],
+      "term_coverage": {
+        "climate": 0.98,
+        "adaptation": 0.9933333333333333
+      },
+      "all_terms_count": 292,
+      "all_terms_rate": 0.9733333333333334
+    },
+    "raw_files": [
+      {
+        "path": "raw/crossref-page-000001-b704eae563ef.json",
+        "bytes": 14818026,
+        "sha256": "b704eae563efbc48ef0306d6fe3311be6d23a926a04e582ef46854f10902860f"
+      }
+    ],
+    "canonical_works_sha256": "91adf29966a7a43c58e4f2d5df94b6c37efbea7e397d0276244702ca72bc7f55",
+    "graph_qa_sha256": "0e64db5332a3b7b9aa91386aa22b1828c4877c70b26e910c1bd95e19c6cb9443"
+  }
+}

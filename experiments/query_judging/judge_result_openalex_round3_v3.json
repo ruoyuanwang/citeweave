@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v3",
+  "prompt_sha256": "85cc2c8f23f0456a25ec2f6a66c6ea854a914e35c3a888a184ca4781fc1624f0",
+  "packet_sha256": "7a2767b101322c8fadbbc52e4d05cc8c290d3f2b0f0c16db7c6580068edeb5db",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "The two canonical, unambiguous concept phrases directly cover GNN work in drug discovery without restricting it to one application such as property prediction."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "accept",
+      "reason": "CRISPR and extracellular vesicles are clear, complementary concepts, and their conjunction appropriately covers associated delivery, detection, and editing research."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The canonical phrases are unambiguous and broad enough to cover machine-learning applications across climate-change modeling, impacts, mitigation, and adaptation."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "reject",
+      "reason": "The exact phrase \"climate change risk assessment\" is substantially narrower than climate change risks and excludes risk studies using forms such as climate risk, risks of climate change, vulnerability, or non-assessment analyses."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "Digital twin and healthcare are clear concepts whose conjunction covers the stated application domain without limiting it to personalized medicine; the explicit 2023 end year is valid under the protocol."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "reject",
+      "reason": "The query contains no plant concept, so co-occurrence of heat stress and drought stress can retrieve non-plant physiological or environmental research and does not reliably enforce the stated plant-response scope."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "accept",
+      "reason": "Gene editing and amyotrophic lateral sclerosis are unambiguous concepts, and omitting CRISPR keeps the query inclusive of other editing techniques; the explicit 2023 end year is valid under the protocol."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "Microplastics is an unambiguous field term, and for a global field-wide mapping topic the single concept correctly imposes no geographic or application restriction."
+    }
+  ]
+}

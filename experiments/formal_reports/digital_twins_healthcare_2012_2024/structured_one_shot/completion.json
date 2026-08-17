@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "dataset_id": "digital_twins_healthcare_2012_2024",
+  "condition": "structured_one_shot",
+  "evidence_sha256": "5ee578d978e6476086c056aedbaa10536b81f141c9c97429583b5f33f5ac458e",
+  "report_sha256": "c6293b4874e0c2b7a7deb3d4ea8bc2d2b69fb3c5ef90249dfff7f2410930b42b",
+  "call_count": 1,
+  "model": "deepseek-v4-pro",
+  "temperature": 0.1,
+  "seed": 42,
+  "report_language": "English",
+  "internal_review_used_as_experimental_evaluation": false
+}

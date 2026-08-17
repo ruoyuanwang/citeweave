@@ -1,0 +1,42 @@
+{
+  "curation_version": 1,
+  "created_at": "2026-08-05 18:53:01.084248+00:00",
+  "source": "crossref",
+  "selection_order": "Crossref relevance order preserved",
+  "rule": {
+    "fields": [
+      "title",
+      "abstract",
+      "subject"
+    ],
+    "case_sensitive": false,
+    "must_contain_all_terms": [
+      "quantum",
+      "learning"
+    ],
+    "year_from": 2019,
+    "year_to": 2021,
+    "max_records": 300
+  },
+  "raw_pages": [
+    {
+      "path": "experiments\\workspaces\\quantum_machine_learning_2019_2021\\raw\\crossref-page-000001-c1a5078e58a1.json",
+      "sha256": "c1a5078e58a1c5735b52d8e8ec4784f82dfe3d76a9807cc09b16bc817942bbd1"
+    }
+  ],
+  "counts": {
+    "source_records": 1000,
+    "unique_seen": 1000,
+    "eligible_before_cap": 405,
+    "selected": 300,
+    "excluded": {
+      "duplicate": 0,
+      "year": 0,
+      "relevance": 595
+    }
+  },
+  "output": {
+    "path": "experiments\\data\\quantum_machine_learning_2019_2021.crossref.jsonl",
+    "sha256": "d3e1e8ea89e8cc127b787e468d7ca4da429d5f83d80368cde236101b95eae0f9"
+  }
+}

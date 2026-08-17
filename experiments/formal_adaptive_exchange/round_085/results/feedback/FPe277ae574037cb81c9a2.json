@@ -1,0 +1,16 @@
+{
+  "packet_id": "FPe277ae574037cb81c9a2",
+  "decision": "revise",
+  "confidence": 1.0,
+  "reason": "E006 and E007 support substantial growth in publication output, including a 29.35% endpoint CAGR and sharply higher annual counts from 2014 onward. They do not identify heightened environmental awareness or policy interest as causes, and the wording should refer specifically to publication output rather than infer the state or drivers of the field.",
+  "evidence_ids": [
+    "E006",
+    "E007"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "suggest a field in a rapid expansion phase, likely driven by heightened environmental awareness and policy interest.",
+    "replacement_text": "show substantial growth in publication output over the observed period; these data do not identify the causes of that growth."
+  }
+}

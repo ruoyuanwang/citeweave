@@ -1,0 +1,12 @@
+{
+  "packet_id": "EP452e73b8029c8e6d24e0",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The candidate returns the exact visible display label for the node explicitly identified as having the highest occurrence, and the answer conforms to the visible-string contract.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1145/3485128:label",
+    "bibliographic_coupling:node:doi:10.1145/3485128:occurrences"
+  ],
+  "judge_id": "evaluation"
+}

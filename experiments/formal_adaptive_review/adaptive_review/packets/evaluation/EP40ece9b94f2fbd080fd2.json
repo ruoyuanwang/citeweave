@@ -1,0 +1,3111 @@
+{
+  "packet_id": "EP40ece9b94f2fbd080fd2",
+  "sample_id": "gene_editing_als_2004_2024:report:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": [
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": null,
+      "claim_type": "corpus_size",
+      "evidence_id": "E001",
+      "method": "Count of canonical work_id after deterministic exact deduplication.",
+      "selector": {},
+      "statement": "The included corpus contains 211 unique works.",
+      "unit": null,
+      "value": 211
+    },
+    {
+      "artifact_path": "audit/acquisition_manifest.json",
+      "caveat": "Completeness is relative to the named source, query, time, and retrieval date.",
+      "claim_type": "acquisition_completeness",
+      "evidence_id": "E002",
+      "method": "Cursor pagination continued until the source returned no next cursor.",
+      "selector": {},
+      "statement": "The source reported 211 results and 211 unique source records were acquired.",
+      "unit": null,
+      "value": {
+        "acquired_unique": 211,
+        "complete": true,
+        "expected": 211,
+        "truncated": false
+      }
+    },
+    {
+      "artifact_path": "quality/field_coverage.parquet",
+      "caveat": "Field completeness measures metadata availability, not database recall or the substantive quality of the publications.",
+      "claim_type": "metadata_coverage",
+      "evidence_id": "E003",
+      "method": "Non-null canonical values divided by the canonical corpus size.",
+      "selector": {},
+      "statement": "Field completeness was measured after normalization for every canonical work.",
+      "unit": null,
+      "value": {
+        "abstract": {
+          "coverage_percent": 80.57,
+          "missing": 41,
+          "missing_percent": 19.43,
+          "present": 170
+        },
+        "cited_by_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 211
+        },
+        "document_type": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 211
+        },
+        "doi": {
+          "coverage_percent": 99.05,
+          "missing": 2,
+          "missing_percent": 0.95,
+          "present": 209
+        },
+        "language": {
+          "coverage_percent": 99.05,
+          "missing": 2,
+          "missing_percent": 0.95,
+          "present": 209
+        },
+        "publication_date": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 211
+        },
+        "publisher": {
+          "coverage_percent": 96.21,
+          "missing": 8,
+          "missing_percent": 3.79,
+          "present": 203
+        },
+        "reference_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 211
+        },
+        "source_id": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 211
+        },
+        "title": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 211
+        },
+        "year": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 211
+        }
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": null,
+      "claim_type": "time_span",
+      "evidence_id": "E004",
+      "method": "Minimum and maximum non-missing publication year.",
+      "selector": {},
+      "statement": "The corpus spans 2010–2023.",
+      "unit": null,
+      "value": {
+        "end": 2023,
+        "start": 2010
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_peak",
+      "evidence_id": "E005",
+      "method": "Maximum whole-counted works grouped by publication year.",
+      "selector": {},
+      "statement": "Annual output peaked in 2022 with 36 works.",
+      "unit": null,
+      "value": {
+        "publications": 36,
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "Endpoint CAGR does not establish a monotonic trend.",
+      "claim_type": "growth",
+      "evidence_id": "E006",
+      "method": "CAGR = (last/first)^(1/year difference)-1.",
+      "selector": {},
+      "statement": "Compound annual publication growth over the observed non-zero endpoints is 29.90%.",
+      "unit": null,
+      "value": 29.9
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_output_series",
+      "evidence_id": "E007",
+      "method": "Whole-counted canonical works grouped by non-missing publication year; year-over-year change is the current count minus the preceding count.",
+      "selector": {},
+      "statement": "Annual publication counts are available for every observed year.",
+      "unit": null,
+      "value": [
+        {
+          "publications": 1,
+          "year": 2010,
+          "year_over_year_change": null
+        },
+        {
+          "publications": 1,
+          "year": 2011,
+          "year_over_year_change": 0
+        },
+        {
+          "publications": 1,
+          "year": 2012,
+          "year_over_year_change": 0
+        },
+        {
+          "publications": 2,
+          "year": 2013,
+          "year_over_year_change": 1
+        },
+        {
+          "publications": 3,
+          "year": 2014,
+          "year_over_year_change": 1
+        },
+        {
+          "publications": 10,
+          "year": 2015,
+          "year_over_year_change": 7
+        },
+        {
+          "publications": 16,
+          "year": 2016,
+          "year_over_year_change": 6
+        },
+        {
+          "publications": 11,
+          "year": 2017,
+          "year_over_year_change": -5
+        },
+        {
+          "publications": 24,
+          "year": 2018,
+          "year_over_year_change": 13
+        },
+        {
+          "publications": 28,
+          "year": 2019,
+          "year_over_year_change": 4
+        },
+        {
+          "publications": 22,
+          "year": 2020,
+          "year_over_year_change": -6
+        },
+        {
+          "publications": 26,
+          "year": 2021,
+          "year_over_year_change": 4
+        },
+        {
+          "publications": 36,
+          "year": 2022,
+          "year_over_year_change": 10
+        },
+        {
+          "publications": 30,
+          "year": 2023,
+          "year_over_year_change": -6
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": null,
+      "claim_type": "top_source",
+      "evidence_id": "E008",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Neural Regeneration Research ranks first with 13 publications.",
+      "unit": null,
+      "value": {
+        "name": "Neural Regeneration Research",
+        "publications": 13
+      }
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_source_ranking",
+      "evidence_id": "E009",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top source records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Neural Regeneration Research",
+          "publications": 13
+        },
+        {
+          "name": "International Journal of Molecular Sciences",
+          "publications": 9
+        },
+        {
+          "name": "Nature Communications",
+          "publications": 8
+        },
+        {
+          "name": "Alzheimer s & Dementia",
+          "publications": 5
+        },
+        {
+          "name": "Cell Reports",
+          "publications": 5
+        },
+        {
+          "name": "Molecular Neurodegeneration",
+          "publications": 4
+        },
+        {
+          "name": "Molecular Therapy",
+          "publications": 4
+        },
+        {
+          "name": "Scientific Reports",
+          "publications": 4
+        },
+        {
+          "name": "Acta Neuropathologica",
+          "publications": 3
+        },
+        {
+          "name": "Frontiers in Cell and Developmental Biology",
+          "publications": 3
+        },
+        {
+          "name": "Gene Therapy",
+          "publications": 3
+        },
+        {
+          "name": "Molecular Neurobiology",
+          "publications": 3
+        },
+        {
+          "name": "Neurobiology of Disease",
+          "publications": 3
+        },
+        {
+          "name": "Protein & Cell",
+          "publications": 3
+        },
+        {
+          "name": "Stem Cell Research",
+          "publications": 3
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": null,
+      "claim_type": "top_author",
+      "evidence_id": "E010",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Ludo Van Den Bosch ranks first with 7 publications.",
+      "unit": null,
+      "value": {
+        "name": "Ludo Van Den Bosch",
+        "publications": 7
+      }
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_author_ranking",
+      "evidence_id": "E011",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top author records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Ludo Van Den Bosch",
+          "publications": 7
+        },
+        {
+          "name": "Siddharthan Chandran",
+          "publications": 7
+        },
+        {
+          "name": "Philip Van Damme",
+          "publications": 6
+        },
+        {
+          "name": "Ammar Al-Chalabi",
+          "publications": 5
+        },
+        {
+          "name": "Bhuvaneish T. Selvaraj",
+          "publications": 5
+        },
+        {
+          "name": "Fen‐Biao Gao",
+          "publications": 5
+        },
+        {
+          "name": "Giles E. Hardingham",
+          "publications": 5
+        },
+        {
+          "name": "Wenting Guo",
+          "publications": 5
+        },
+        {
+          "name": "Aaron D. Gitler",
+          "publications": 4
+        },
+        {
+          "name": "Arpan R. Mehta",
+          "publications": 4
+        },
+        {
+          "name": "Chunyan Li",
+          "publications": 4
+        },
+        {
+          "name": "Gopinath Krishnan",
+          "publications": 4
+        },
+        {
+          "name": "Julien Couthouis",
+          "publications": 4
+        },
+        {
+          "name": "Karen Burr",
+          "publications": 4
+        },
+        {
+          "name": "Leonard Petrucelli",
+          "publications": 4
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": null,
+      "claim_type": "top_institution",
+      "evidence_id": "E012",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "University of Massachusetts Chan Medical School ranks first with 13 publications.",
+      "unit": null,
+      "value": {
+        "name": "University of Massachusetts Chan Medical School",
+        "publications": 13
+      }
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_institution_ranking",
+      "evidence_id": "E013",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top institution records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "University of Massachusetts Chan Medical School",
+          "publications": 13
+        },
+        {
+          "name": "Johns Hopkins University",
+          "publications": 8
+        },
+        {
+          "name": "King's College London",
+          "publications": 8
+        },
+        {
+          "name": "Stanford University",
+          "publications": 8
+        },
+        {
+          "name": "University of Edinburgh",
+          "publications": 8
+        },
+        {
+          "name": "Johns Hopkins Medicine",
+          "publications": 7
+        },
+        {
+          "name": "Mayo Clinic in Florida",
+          "publications": 7
+        },
+        {
+          "name": "UK Dementia Research Institute",
+          "publications": 7
+        },
+        {
+          "name": "VIB-KU Leuven Center for Brain & Disease Research",
+          "publications": 7
+        },
+        {
+          "name": "Allen Institute for Brain Science",
+          "publications": 6
+        },
+        {
+          "name": "Harvard University",
+          "publications": 6
+        },
+        {
+          "name": "University College London",
+          "publications": 6
+        },
+        {
+          "name": "University of Chinese Academy of Sciences",
+          "publications": 6
+        },
+        {
+          "name": "Biogen (United States)",
+          "publications": 5
+        },
+        {
+          "name": "Institute for Stem Cell Biology and Regenerative Medicine",
+          "publications": 5
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/document_types.parquet",
+      "caveat": "Document-type labels inherit source classification practices.",
+      "claim_type": "document_type_distribution",
+      "evidence_id": "E014",
+      "method": "Whole-counted canonical works grouped by source-supplied document type.",
+      "selector": {},
+      "statement": "Document types were counted across the complete canonical corpus.",
+      "unit": null,
+      "value": {
+        "review_and_systematic_review_documents": 0,
+        "types": [
+          {
+            "document_type": "article",
+            "publications": 211,
+            "share_percent": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent.",
+      "claim_type": "citation_summary",
+      "evidence_id": "E015",
+      "method": "Citation-count field supplied by the selected source at retrieval time.",
+      "selector": {},
+      "statement": "Mean citations are 46.20 and the median is 21.00.",
+      "unit": null,
+      "value": {
+        "mean": 46.2,
+        "median": 21.0
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "Recent works have had less time to accumulate citations.",
+      "claim_type": "zero_citation_share",
+      "evidence_id": "E016",
+      "method": "Count and percentage of canonical works with cited_by_count equal to zero.",
+      "selector": {},
+      "statement": "26 works have zero source-reported citations, representing 12.32% of the corpus.",
+      "unit": null,
+      "value": {
+        "share_percent": 12.32,
+        "zero_cited": 26
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent; papers have unequal citation windows.",
+      "claim_type": "citation_distribution_detail",
+      "evidence_id": "E017",
+      "method": "Descriptive statistics of the source-supplied cited-by count.",
+      "selector": {},
+      "statement": "Citation-distribution statistics include central tendency, upper quantiles, maximum, and zero-cited count.",
+      "unit": null,
+      "value": [
+        {
+          "metric": "mean",
+          "value": 46.2037914692
+        },
+        {
+          "metric": "median",
+          "value": 21.0
+        },
+        {
+          "metric": "p75",
+          "percentile": 75,
+          "value": 60.0
+        },
+        {
+          "metric": "p90",
+          "percentile": 90,
+          "value": 133.0
+        },
+        {
+          "metric": "p95",
+          "percentile": 95,
+          "value": 178.5
+        },
+        {
+          "metric": "p98",
+          "percentile": 98,
+          "value": 251.4
+        },
+        {
+          "metric": "maximum",
+          "value": 386.0
+        },
+        {
+          "metric": "zero_cited",
+          "value": 26.0
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_cited_documents.parquet",
+      "caveat": "Raw citation counts favor older publications and do not by themselves measure quality.",
+      "claim_type": "top_cited_documents",
+      "evidence_id": "E018",
+      "method": "Descending source-reported citation count, with publication year as tie-breaker.",
+      "selector": {},
+      "statement": "The most-cited included documents are retained with title, year, DOI, and source-reported citation count.",
+      "unit": null,
+      "value": [
+        {
+          "cited_by_count": 386,
+          "doi": "10.1038/s41467-017-00911-y",
+          "title": "HDAC6 inhibition reverses axonal transport defects in motor neurons derived from FUS-ALS patients",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 297,
+          "doi": "10.1186/s40478-016-0324-5",
+          "title": "The ALS/FTLD associated protein C9orf72 associates with SMCR8 and WDR41 to regulate the autophagy-lysosome pathway",
+          "year": 2016
+        },
+        {
+          "cited_by_count": 258,
+          "doi": "10.1016/j.cell.2017.07.010",
+          "title": "Elimination of Toxic Microsatellite Repeat Expansion RNA by RNA-Targeting Cas9",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 256,
+          "doi": "10.1126/science.abq5622",
+          "title": "Mechanism of STMN2 cryptic splice-polyadenylation and its correction for TDP-43 proteinopathies",
+          "year": 2023
+        },
+        {
+          "cited_by_count": 254,
+          "doi": "10.1016/j.ymthe.2020.01.005",
+          "title": "Treatment of a Mouse Model of ALS by In Vivo Base Editing",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 241,
+          "doi": "10.1038/s41588-018-0070-7",
+          "title": "CRISPR–Cas9 screens in human cells and primary neurons identify modifiers of C9ORF72 dipeptide-repeat-protein toxicity",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 223,
+          "doi": "10.1038/s41467-018-06111-6",
+          "title": "Mutant FUS causes DNA ligation defects to inhibit oxidative damage repair in Amyotrophic Lateral Sclerosis",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 208,
+          "doi": "10.1038/s41467-017-02729-0",
+          "title": "C9ORF72 repeat expansion causes vulnerability of motor neurons to Ca2+-permeable AMPA receptor-mediated excitotoxicity",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 194,
+          "doi": "10.1091/mbc.e16-01-0003",
+          "title": "C9orf72 binds SMCR8, localizes to lysosomes, and regulates mTORC1 signaling",
+          "year": 2016
+        },
+        {
+          "cited_by_count": 184,
+          "doi": "10.1126/sciadv.aar3952",
+          "title": "In vivo genome editing improves motor function and extends survival in a mouse model of ALS",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 180,
+          "doi": "10.1016/j.ymthe.2021.04.008",
+          "title": "Gene therapy for ALS: A review",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 177,
+          "doi": "10.1038/mt.2016.12",
+          "title": "Human Mesenchymal Stem Cells Genetically Engineered to Overexpress Brain-derived Neurotrophic Factor Improve Outcomes in Huntington's Disease Mouse Models",
+          "year": 2016
+        },
+        {
+          "cited_by_count": 163,
+          "doi": "10.7554/elife.48363",
+          "title": "Implementation of an antibody characterization procedure and application to the major ALS/FTD disease gene C9ORF72",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 153,
+          "doi": "10.1186/s40478-019-0658-x",
+          "title": "ALS-linked FUS mutations confer loss and gain of function in the nucleus by promoting excessive formation of dysfunctional paraspeckles",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 153,
+          "doi": "10.1371/journal.pbio.2007044",
+          "title": "CRISPR screening using an expanded toolkit of autophagy reporters identifies TMEM41B as a novel autophagy factor",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/bradford_sources.parquet",
+      "caveat": "Records without a source name are excluded from Bradford zoning.",
+      "claim_type": "bradford_zone_distribution",
+      "evidence_id": "E019",
+      "method": "Sources ranked by output and divided by cumulative document thirds.",
+      "selector": {},
+      "statement": "Bradford zones summarize source concentration among records with known source names.",
+      "unit": null,
+      "value": {
+        "rounded_document_range": {
+          "lower": 50,
+          "rounding_unit": 50,
+          "upper": 100
+        },
+        "zones": [
+          {
+            "documents": 70.0,
+            "sources": 14,
+            "zone": 1
+          },
+          {
+            "documents": 69.0,
+            "sources": 44,
+            "zone": 2
+          },
+          {
+            "documents": 69.0,
+            "sources": 69,
+            "zone": 3
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/keyword_trends.parquet",
+      "caveat": "Keyword frequencies depend on source metadata, synonym normalization, and the incomplete final year.",
+      "claim_type": "keyword_temporal_dynamics",
+      "evidence_id": "E020",
+      "method": "Unique works per normalized keyword and publication year.",
+      "selector": {},
+      "statement": "Year-by-year document counts are available for the globally most frequent keywords.",
+      "unit": null,
+      "value": [
+        {
+          "documents": 1,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2010
+        },
+        {
+          "documents": 1,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2011
+        },
+        {
+          "documents": 1,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2012
+        },
+        {
+          "documents": 2,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2013
+        },
+        {
+          "documents": 3,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2014
+        },
+        {
+          "documents": 9,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2015
+        },
+        {
+          "documents": 14,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2016
+        },
+        {
+          "documents": 11,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2017
+        },
+        {
+          "documents": 23,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2018
+        },
+        {
+          "documents": 24,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2019
+        },
+        {
+          "documents": 22,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2020
+        },
+        {
+          "documents": 25,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2021
+        },
+        {
+          "documents": 33,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2022
+        },
+        {
+          "documents": 26,
+          "global_documents": 195,
+          "keyword": "Biology",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2010
+        },
+        {
+          "documents": 1,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2011
+        },
+        {
+          "documents": 1,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2013
+        },
+        {
+          "documents": 2,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2014
+        },
+        {
+          "documents": 7,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2015
+        },
+        {
+          "documents": 11,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2016
+        },
+        {
+          "documents": 8,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2017
+        },
+        {
+          "documents": 21,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2018
+        },
+        {
+          "documents": 20,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2019
+        },
+        {
+          "documents": 17,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2020
+        },
+        {
+          "documents": 21,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2021
+        },
+        {
+          "documents": 27,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2022
+        },
+        {
+          "documents": 19,
+          "global_documents": 156,
+          "keyword": "Genetics",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2010
+        },
+        {
+          "documents": 1,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2011
+        },
+        {
+          "documents": 1,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2013
+        },
+        {
+          "documents": 2,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2014
+        },
+        {
+          "documents": 9,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2015
+        },
+        {
+          "documents": 11,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2016
+        },
+        {
+          "documents": 9,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2017
+        },
+        {
+          "documents": 21,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2018
+        },
+        {
+          "documents": 22,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2019
+        },
+        {
+          "documents": 16,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2020
+        },
+        {
+          "documents": 18,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2021
+        },
+        {
+          "documents": 23,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2022
+        },
+        {
+          "documents": 18,
+          "global_documents": 152,
+          "keyword": "Gene",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2010
+        },
+        {
+          "documents": 1,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2014
+        },
+        {
+          "documents": 6,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2015
+        },
+        {
+          "documents": 8,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2016
+        },
+        {
+          "documents": 8,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2017
+        },
+        {
+          "documents": 18,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2018
+        },
+        {
+          "documents": 14,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2019
+        },
+        {
+          "documents": 18,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2020
+        },
+        {
+          "documents": 18,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2021
+        },
+        {
+          "documents": 25,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2022
+        },
+        {
+          "documents": 24,
+          "global_documents": 141,
+          "keyword": "Medicine",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2010
+        },
+        {
+          "documents": 1,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2014
+        },
+        {
+          "documents": 5,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2015
+        },
+        {
+          "documents": 7,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2016
+        },
+        {
+          "documents": 5,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2017
+        },
+        {
+          "documents": 14,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2018
+        },
+        {
+          "documents": 7,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2019
+        },
+        {
+          "documents": 13,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2020
+        },
+        {
+          "documents": 16,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2021
+        },
+        {
+          "documents": 17,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2022
+        },
+        {
+          "documents": 18,
+          "global_documents": 104,
+          "keyword": "Disease",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2010
+        },
+        {
+          "documents": 6,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2015
+        },
+        {
+          "documents": 7,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2016
+        },
+        {
+          "documents": 6,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2017
+        },
+        {
+          "documents": 12,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2018
+        },
+        {
+          "documents": 9,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2019
+        },
+        {
+          "documents": 10,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2020
+        },
+        {
+          "documents": 15,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2021
+        },
+        {
+          "documents": 20,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2022
+        },
+        {
+          "documents": 16,
+          "global_documents": 102,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 99,
+          "keyword": "Neuroscience",
+          "year": 2011
+        },
+        {
+          "documents": 2,
+          "global_documents": 99,
+          "keyword": "Neuroscience",
+          "year": 2014
+        },
+        {
+          "documents": 4,
+          "global_documents": 99,
+          "keyword": "Neuroscience",
+          "year": 2015
+        },
+        {
+          "documents": 3,
+          "global_documents": 99,
+          "keyword": "Neuroscience",
+          "year": 2016
+        },
+        {
+          "documents": 6,
+          "global_documents": 99,
+          "keyword": "Neuroscience",
+          "year": 2017
+        },
+        {
+          "documents": 14,
+          "global_documents": 99,
+          "keyword": "Neuroscience",
+          "year": 2018
+        },
+        {
+          "documents": 11,
+          "global_documents": 99,
+          "keyword": "Neuroscience",
+          "year": 2019
+        },
+        {
+          "documents": 12,
+          "global_documents": 99,
+          "keyword": "Neuroscience",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/three_field.parquet",
+      "caveat": "The map is a filtered descriptive view, not a causal pathway.",
+      "claim_type": "three_field_relations",
+      "evidence_id": "E021",
+      "method": "Whole-counted links among leading authors, sources, and keywords.",
+      "selector": {},
+      "statement": "Leading author–source–keyword combinations are retained for relational interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "author": "Ludo Van Den Bosch",
+          "documents": 3,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Ludo Van Den Bosch",
+          "documents": 3,
+          "keyword": "Cell biology",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Ludo Van Den Bosch",
+          "documents": 3,
+          "keyword": "Gene",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Ludo Van Den Bosch",
+          "documents": 3,
+          "keyword": "Medicine",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Wenting Guo",
+          "documents": 3,
+          "keyword": "Amyotrophic lateral sclerosis",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Wenting Guo",
+          "documents": 3,
+          "keyword": "Biology",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Wenting Guo",
+          "documents": 3,
+          "keyword": "Cell biology",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Wenting Guo",
+          "documents": 3,
+          "keyword": "Gene",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Wenting Guo",
+          "documents": 3,
+          "keyword": "Medicine",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Ludo Van Den Bosch",
+          "documents": 3,
+          "keyword": "Biology",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Gene",
+          "source": "Molecular Neurodegeneration"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "C9orf72",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Biology",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Trinucleotide repeat expansion",
+          "source": "Molecular Neurodegeneration"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Genetics",
+          "source": "Molecular Neurodegeneration"
+        },
+        {
+          "author": "Philip Van Damme",
+          "documents": 2,
+          "keyword": "Induced pluripotent stem cell",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Computational biology",
+          "source": "Molecular Neurodegeneration"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "C9orf72",
+          "source": "Molecular Neurodegeneration"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Biology",
+          "source": "Molecular Neurodegeneration"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Genetics",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Philip Van Damme",
+          "documents": 2,
+          "keyword": "Gene",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Gene",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Thomas Gaj",
+          "documents": 2,
+          "keyword": "Gene",
+          "source": "Science Advances"
+        },
+        {
+          "author": "Tania F. Gendron",
+          "documents": 2,
+          "keyword": "Trinucleotide repeat expansion",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Thomas Gaj",
+          "documents": 2,
+          "keyword": "Biology",
+          "source": "Science Advances"
+        },
+        {
+          "author": "Thomas Gaj",
+          "documents": 2,
+          "keyword": "Computational biology",
+          "source": "Science Advances"
+        },
+        {
+          "author": "Philip Van Damme",
+          "documents": 2,
+          "keyword": "Cell biology",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Thomas Gaj",
+          "documents": 2,
+          "keyword": "Genetics",
+          "source": "Science Advances"
+        },
+        {
+          "author": "Thomas Gaj",
+          "documents": 2,
+          "keyword": "Neuroscience",
+          "source": "Science Advances"
+        },
+        {
+          "author": "Wenting Guo",
+          "documents": 2,
+          "keyword": "Disease",
+          "source": "Nature Communications"
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/network_bibliographic_coupling_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "bibliographic_coupling_structure",
+      "evidence_id": "E022",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The bibliographic coupling candidate network contains 72 nodes and 208 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 6,
+        "edges": 208,
+        "network_parameters": {
+          "candidate_edges": 2409,
+          "candidate_nodes_with_links": 159,
+          "candidate_pool": 159,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 6,
+          "displayed_edges": 208,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 159,
+          "full_candidate_edge_count": 2409,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.2590308519928034,
+            "mean_edge_length": 0.248901923348473,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 649.0,
+            "weighted_edge_length": 0.007558718054931688,
+            "within_between_distance_ratio": 0.7967567925681602
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "sparse_construction": {
+            "candidate_documents": 173,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 35,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          }
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Gene therapy for ALS: A review",
+            "occurrences": 167,
+            "weighted_degree": 651.0
+          },
+          {
+            "cluster": 2,
+            "label": "Gene Therapy in Amyotrophic Lateral Sclerosis",
+            "occurrences": 149,
+            "weighted_degree": 600.0
+          },
+          {
+            "cluster": 2,
+            "label": "Mouse models of ALS: Past, present and future",
+            "occurrences": 133,
+            "weighted_degree": 469.0
+          },
+          {
+            "cluster": 3,
+            "label": "Stem Cell Models and Gene Targeting for Human Motor Neuron Diseases",
+            "occurrences": 152,
+            "weighted_degree": 399.0
+          },
+          {
+            "cluster": 1,
+            "label": "Mutant C9orf72 human iPSC‐derived astrocytes cause non‐cell autonomous motor neuron pathophysiology",
+            "occurrences": 87,
+            "weighted_degree": 397.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_coauthorship_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "coauthorship_structure",
+      "evidence_id": "E023",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The coauthorship candidate network contains 60 nodes and 141 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 141,
+        "network_parameters": {
+          "candidate_edges": 579,
+          "candidate_nodes_with_links": 130,
+          "candidate_pool": 130,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 141,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 133,
+          "full_candidate_edge_count": 579,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.0579126847859049,
+            "mean_edge_length": 0.11833348097078358,
+            "overlap_ratio": 0.0,
+            "selected_seed": 42.0,
+            "weighted_edge_length": 0.051996010737365726,
+            "within_between_distance_ratio": 0.0
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 60,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Siddharthan Chandran",
+            "occurrences": 7,
+            "weighted_degree": 55.0
+          },
+          {
+            "cluster": 1,
+            "label": "Ludo Van Den Bosch",
+            "occurrences": 7,
+            "weighted_degree": 46.0
+          },
+          {
+            "cluster": 1,
+            "label": "Philip Van Damme",
+            "occurrences": 6,
+            "weighted_degree": 43.0
+          },
+          {
+            "cluster": 1,
+            "label": "Wenting Guo",
+            "occurrences": 5,
+            "weighted_degree": 40.0
+          },
+          {
+            "cluster": 3,
+            "label": "Bhuvaneish T. Selvaraj",
+            "occurrences": 5,
+            "weighted_degree": 39.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_cocitation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "cocitation_structure",
+      "evidence_id": "E024",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The cocitation candidate network contains 72 nodes and 204 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 5,
+        "edges": 204,
+        "network_parameters": {
+          "candidate_edges": 22746,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 204,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 22746,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.15713401344809225,
+            "mean_edge_length": 0.47589408332763966,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 333.0,
+            "weighted_edge_length": 0.08862734767663905,
+            "within_between_distance_ratio": 0.14903987201690405
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 3,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 4,
+            "label": "openalex:W2154945114",
+            "occurrences": 33,
+            "weighted_degree": 853.0
+          },
+          {
+            "cluster": 4,
+            "label": "openalex:W2150523249",
+            "occurrences": 32,
+            "weighted_degree": 829.0
+          },
+          {
+            "cluster": 3,
+            "label": "openalex:W2064815984",
+            "occurrences": 27,
+            "weighted_degree": 703.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2003618511",
+            "occurrences": 33,
+            "weighted_degree": 683.0
+          },
+          {
+            "cluster": 1,
+            "label": "openalex:W2096386031",
+            "occurrences": 24,
+            "weighted_degree": 651.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_institution_collaboration_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "institution_collaboration_structure",
+      "evidence_id": "E025",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The institution collaboration candidate network contains 71 nodes and 168 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 168,
+        "network_parameters": {
+          "candidate_edges": 393,
+          "candidate_nodes_with_links": 98,
+          "candidate_pool": 98,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 168,
+          "displayed_nodes": 71,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 99,
+          "full_candidate_edge_count": 393,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.37183427074013126,
+            "mean_edge_length": 0.30122422247259534,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1148.0,
+            "weighted_edge_length": 0.11040071784476278,
+            "within_between_distance_ratio": 0.821241139239129
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 71,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "University of Edinburgh",
+            "occurrences": 8,
+            "weighted_degree": 42.0
+          },
+          {
+            "cluster": 2,
+            "label": "UK Dementia Research Institute",
+            "occurrences": 7,
+            "weighted_degree": 37.0
+          },
+          {
+            "cluster": 4,
+            "label": "Stanford University",
+            "occurrences": 8,
+            "weighted_degree": 36.0
+          },
+          {
+            "cluster": 1,
+            "label": "VIB-KU Leuven Center for Brain & Disease Research",
+            "occurrences": 7,
+            "weighted_degree": 35.0
+          },
+          {
+            "cluster": 2,
+            "label": "King's College London",
+            "occurrences": 8,
+            "weighted_degree": 33.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_keyword_cooccurrence_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "keyword_cooccurrence_structure",
+      "evidence_id": "E026",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The keyword cooccurrence candidate network contains 72 nodes and 192 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 6,
+        "edges": 192,
+        "network_parameters": {
+          "candidate_edges": 1730,
+          "candidate_nodes_with_links": 79,
+          "candidate_pool": 79,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 6,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 79,
+          "full_candidate_edge_count": 1730,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.13700217360100272,
+            "mean_edge_length": 0.3528408878219193,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 236.0,
+            "weighted_edge_length": 0.04615709573917965,
+            "within_between_distance_ratio": 0.2440101115690904
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Biology",
+            "occurrences": 195,
+            "weighted_degree": 1902.0
+          },
+          {
+            "cluster": 3,
+            "label": "Genetics",
+            "occurrences": 156,
+            "weighted_degree": 1655.0
+          },
+          {
+            "cluster": 3,
+            "label": "Gene",
+            "occurrences": 152,
+            "weighted_degree": 1640.0
+          },
+          {
+            "cluster": 2,
+            "label": "Medicine",
+            "occurrences": 141,
+            "weighted_degree": 1452.0
+          },
+          {
+            "cluster": 2,
+            "label": "Amyotrophic lateral sclerosis",
+            "occurrences": 102,
+            "weighted_degree": 1231.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E027",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: HDAC6 inhibition reverses axonal transport defects in motor neurons derived from FUS-ALS patients",
+      "unit": null,
+      "value": {
+        "abstract": "Amyotrophic lateral sclerosis (ALS) is a rapidly progressive neurodegenerative disorder due to selective loss of motor neurons (MNs). Mutations in the fused in sarcoma (FUS) gene can cause both juvenile and late onset ALS. We generated and characterized induced pluripotent stem cells (iPSCs) from ALS patients with different FUS mutations, as well as from healthy controls. Patient-derived MNs show typical cytoplasmic FUS pathology, hypoexcitability, as well as progressive axonal transport defects. Axonal transport defects are rescued by CRISPR/Cas9-mediated genetic correction of the FUS mutation in patient-derived iPSCs. Moreover, these defects are reproduced by expressing mutant FUS in human embryonic stem cells (hESCs), whereas knockdown of endogenous FUS has no effect, confirming that these pathological changes are mutant FUS dependent. Pharmacological inhibition as well as genetic silencing of histone deacetylase 6 (HDAC6) increase α-tubulin acetylation, endoplasmic reticulum (ER)-mitochondrial overlay, and restore the axonal transport defects in patient-derived MNs.Amyotrophic lateral sclerosis (ALS) leads to selective loss of motor neurons. Using motor neurons derived from induced pluripotent stem cells from patients with ALS and FUS mutations, the authors demonstrate that axonal transport deficits that are observed in these cells can be rescued by HDAC6 inhibition.",
+        "authors": [
+          "Wenting Guo",
+          "Maximilian Naujock",
+          "Laura Fumagalli",
+          "Tijs Vandoorne",
+          "Pieter Baatsen",
+          "Ruben Boon"
+        ],
+        "doi": "10.1038/s41467-017-00911-y",
+        "source": "Nature Communications",
+        "title": "HDAC6 inhibition reverses axonal transport defects in motor neurons derived from FUS-ALS patients",
+        "work_id": "doi:10.1038/s41467-017-00911-y",
+        "year": 2017
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E028",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The ALS/FTLD associated protein C9orf72 associates with SMCR8 and WDR41 to regulate the autophagy-lysosome pathway",
+      "unit": null,
+      "value": {
+        "abstract": "Hexanucleotide repeat expansion in the C9orf72 gene is a leading cause of frontotemporal lobar degeneration (FTLD) with amyotrophic lateral sclerosis (ALS). Reduced expression of C9orf72 has been proposed as a possible disease mechanism. However, the cellular function of C9orf72 remains to be characterized. Here we report the identification of two binding partners of C9orf72: SMCR8 and WDR41. We show that WDR41 interacts with the C9orf72/SMCR8 heterodimer and WDR41 is tightly associated with the Golgi complex. We further demonstrate that C9orf72/SMCR8/WDR41 associates with the FIP200/Ulk1 complex, which is essential for autophagy initiation. C9orf72 deficient mice, generated using the CRISPR/Cas9 system, show severe inflammation in multiple organs, including lymph node, spleen and liver. Lymph node enlargement and severe splenomegaly are accompanied with macrophage infiltration. Increased levels of autophagy and lysosomal proteins and autophagy defects were detected in both the spleen and liver of C9orf72 deficient mice, supporting an in vivo role of C9orf72 in regulating the autophagy/lysosome pathway. In summary, our study elucidates potential physiological functions of C9orf72 and disease mechanisms of ALS/FTLD.",
+        "authors": [
+          "Peter M. Sullivan",
+          "Xiaolai Zhou",
+          "Adam M. Robins",
+          "Daniel H. Paushter",
+          "Dong-Sung Kim",
+          "Marcus B. Smolka",
+          "Fenghua Hu"
+        ],
+        "doi": "10.1186/s40478-016-0324-5",
+        "source": "Acta Neuropathologica Communications",
+        "title": "The ALS/FTLD associated protein C9orf72 associates with SMCR8 and WDR41 to regulate the autophagy-lysosome pathway",
+        "work_id": "doi:10.1186/s40478-016-0324-5",
+        "year": 2016
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E029",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Mechanism of STMN2 cryptic splice-polyadenylation and its correction for TDP-43 proteinopathies",
+      "unit": null,
+      "value": {
+        "abstract": "Loss of nuclear TDP-43 is a hallmark of neurodegeneration in TDP-43 proteinopathies, including amyotrophic lateral sclerosis (ALS) and frontotemporal dementia (FTD). TDP-43 mislocalization results in cryptic splicing and polyadenylation of pre–messenger RNAs (pre-mRNAs) encoding stathmin-2 (also known as SCG10), a protein that is required for axonal regeneration. We found that TDP-43 binding to a GU-rich region sterically blocked recognition of the cryptic 3′ splice site in STMN2 pre-mRNA. Targeting dCasRx or antisense oligonucleotides (ASOs) suppressed cryptic splicing, which restored axonal regeneration and stathmin-2–dependent lysosome trafficking in TDP-43–deficient human motor neurons. In mice that were gene-edited to contain human STMN2 cryptic splice-polyadenylation sequences, ASO injection into cerebral spinal fluid successfully corrected Stmn2 pre-mRNA misprocessing and restored stathmin-2 expression levels independently of TDP-43 binding.",
+        "authors": [
+          "Michael W. Baughn",
+          "Ze’ev Melamed",
+          "Jone López‐Erauskin",
+          "Melinda S. Beccari"
+        ],
+        "doi": "10.1126/science.abq5622",
+        "source": "Science",
+        "title": "Mechanism of STMN2 cryptic splice-polyadenylation and its correction for TDP-43 proteinopathies",
+        "work_id": "doi:10.1126/science.abq5622",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E030",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Treatment of a Mouse Model of ALS by In Vivo Base Editing",
+      "unit": null,
+      "value": {
+        "abstract": "Amyotrophic lateral sclerosis (ALS) is a debilitating and fatal disorder that can be caused by mutations in the superoxide dismutase 1 (SOD1) gene. Although ALS is currently incurable, CRISPR base editors hold the potential to treat the disease through their ability to create nonsense mutations that can permanently disable the expression of the mutant SOD1 gene. However, the restrictive carrying capacity of adeno-associated virus (AAV) vectors has limited their therapeutic application. In this study, we establish an intein-mediated trans-splicing system that enables in vivo delivery of cytidine base editors (CBEs) consisting of the widely used Cas9 protein from Streptococcus pyogenes. We show that intrathecal injection of dual AAV particles encoding a split-intein CBE engineered to trans-splice and introduce a nonsense-coding substitution into a mutant SOD1 gene prolonged survival and markedly slowed the progression of disease in the G93A-SOD1 mouse model of ALS. Adult animals treated by this split-intein CRISPR base editor had a reduced rate of muscle atrophy, decreased muscle denervation, improved neuromuscular function, and up to 40% fewer SOD1 immunoreactive inclusions at end-stage mice compared to control mice. This work expands the capabilities of single-base editors and demonstrates their potential for gene therapy.",
+        "authors": [
+          "Colin K.W. Lim",
+          "Michael Gapinske",
+          "Alexandra K. Brooks",
+          "Wendy S. Woods",
+          "Jackson E. Powell",
+          "M. Alejandra Zeballos C.",
+          "Jackson Winter",
+          "Pablo Pérez‐Piñera"
+        ],
+        "doi": "10.1016/j.ymthe.2020.01.005",
+        "source": "Molecular Therapy",
+        "title": "Treatment of a Mouse Model of ALS by In Vivo Base Editing",
+        "work_id": "doi:10.1016/j.ymthe.2020.01.005",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E031",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Mutant FUS causes DNA ligation defects to inhibit oxidative damage repair in Amyotrophic Lateral Sclerosis",
+      "unit": null,
+      "value": {
+        "abstract": "Genome damage and defective repair are etiologically linked to neurodegeneration. However, the specific mechanisms involved remain enigmatic. Here, we identify defects in DNA nick ligation and oxidative damage repair in a subset of amyotrophic lateral sclerosis (ALS) patients. These defects are caused by mutations in the RNA/DNA-binding protein FUS. In healthy neurons, FUS protects the genome by facilitating PARP1-dependent recruitment of XRCC1/DNA Ligase IIIα (LigIII) to oxidized genome sites and activating LigIII via direct interaction. We discover that loss of nuclear FUS caused DNA nick ligation defects in motor neurons due to reduced recruitment of XRCC1/LigIII to DNA strand breaks. Moreover, DNA ligation defects in ALS patient-derived iPSC lines carrying FUS mutations and in motor neurons generated therefrom are rescued by CRISPR/Cas9-mediated correction of mutation. Our findings uncovered a pathway of defective DNA ligation in FUS-linked ALS and suggest that LigIII-targeted therapies may prevent or slow down disease progression.",
+        "authors": [
+          "Haibo Wang",
+          "Wenting Guo",
+          "Joy Mitra",
+          "Pavana M. Hegde",
+          "Tijs Vandoorne",
+          "Bradley Eckelmann",
+          "Sankar Mitra"
+        ],
+        "doi": "10.1038/s41467-018-06111-6",
+        "source": "Nature Communications",
+        "title": "Mutant FUS causes DNA ligation defects to inhibit oxidative damage repair in Amyotrophic Lateral Sclerosis",
+        "work_id": "doi:10.1038/s41467-018-06111-6",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E032",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: C9ORF72 repeat expansion causes vulnerability of motor neurons to Ca2+-permeable AMPA receptor-mediated excitotoxicity",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract Mutations in C9ORF72 are the most common cause of familial amyotrophic lateral sclerosis (ALS). Here, through a combination of RNA-Seq and electrophysiological studies on induced pluripotent stem cell (iPSC)-derived motor neurons (MNs), we show that increased expression of GluA1 AMPA receptor (AMPAR) subunit occurs in MNs with C9ORF72 mutations that leads to increased Ca 2+ -permeable AMPAR expression and results in enhanced selective MN vulnerability to excitotoxicity. These deficits are not found in iPSC-derived cortical neurons and are abolished by CRISPR/Cas9-mediated correction of the C9ORF72 repeat expansion in MNs. We also demonstrate that MN-specific dysregulation of AMPAR expression is also present in C9ORF72 patient post-mortem material. We therefore present multiple lines of evidence for the specific upregulation of GluA1 subunits in human mutant C9ORF72 MNs that could lead to a potential pathogenic excitotoxic mechanism in ALS.",
+        "authors": [
+          "Bhuvaneish T. Selvaraj",
+          "Matthew R. Livesey",
+          "Chen Zhao",
+          "Jenna M. Gregory",
+          "Owain T. James",
+          "Elaine Cleary"
+        ],
+        "doi": "10.1038/s41467-017-02729-0",
+        "source": "Nature Communications",
+        "title": "C9ORF72 repeat expansion causes vulnerability of motor neurons to Ca2+-permeable AMPA receptor-mediated excitotoxicity",
+        "work_id": "doi:10.1038/s41467-017-02729-0",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E033",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: C9orf72 binds SMCR8, localizes to lysosomes, and regulates mTORC1 signaling",
+      "unit": null,
+      "value": {
+        "abstract": "Hexanucleotide expansion in an intron of the C9orf72 gene causes amyotrophic lateral sclerosis and frontotemporal dementia. However, beyond bioinformatics predictions that suggested structural similarity to folliculin, the Birt-Hogg-Dubé syndrome tumor suppressor, little is known about the normal functions of the C9orf72 protein. To address this problem, we used genome-editing strategies to investigate C9orf72 interactions, subcellular localization, and knockout (KO) phenotypes. We found that C9orf72 robustly interacts with SMCR8 (a protein of previously unknown function). We also observed that C9orf72 localizes to lysosomes and that such localization is negatively regulated by amino acid availability. Analysis of C9orf72 KO, SMCR8 KO, and double-KO cell lines revealed phenotypes that are consistent with a function for C9orf72 at lysosomes. These include abnormally swollen lysosomes in the absence of C9orf72 and impaired responses of mTORC1 signaling to changes in amino acid availability (a lysosome-dependent process) after depletion of either C9orf72 or SMCR8. Collectively these results identify strong physical and functional interactions between C9orf72 and SMCR8 and support a lysosomal site of action for this protein complex.",
+        "authors": [
+          "Joseph Amick",
+          "Agnes Roczniak-Ferguson",
+          "Shawn M. Ferguson"
+        ],
+        "doi": "10.1091/mbc.e16-01-0003",
+        "source": "Molecular Biology of the Cell",
+        "title": "C9orf72 binds SMCR8, localizes to lysosomes, and regulates mTORC1 signaling",
+        "work_id": "doi:10.1091/mbc.e16-01-0003",
+        "year": 2016
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E034",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: In vivo genome editing improves motor function and extends survival in a mouse model of ALS",
+      "unit": null,
+      "value": {
+        "abstract": "Amyotrophic lateral sclerosis (ALS) is a fatal and incurable neurodegenerative disease characterized by the progressive loss of motor neurons in the spinal cord and brain. In particular, autosomal dominant mutations in the superoxide dismutase 1 (SOD1) gene are responsible for ~20% of all familial ALS cases. The clustered regularly interspaced short palindromic repeats (CRISPR)-CRISPR-associated (Cas9) genome editing system holds the potential to treat autosomal dominant disorders by facilitating the introduction of frameshift-induced mutations that can disable mutant gene function. We demonstrate that CRISPR-Cas9 can be harnessed to disrupt mutant SOD1 expression in the G93A-SOD1 mouse model of ALS following in vivo delivery using an adeno-associated virus vector. Genome editing reduced mutant SOD1 protein by >2.5-fold in the lumbar and thoracic spinal cord, resulting in improved motor function and reduced muscle atrophy. Crucially, ALS mice treated by CRISPR-mediated genome editing had ~50% more motor neurons at end stage and displayed a ~37% delay in disease onset and a ~25% increase in survival compared to control animals. Thus, this study illustrates the potential for CRISPR-Cas9 to treat SOD1-linked forms of ALS and other central nervous system disorders caused by autosomal dominant mutations.",
+        "authors": [
+          "Thomas Gaj",
+          "David S. Ojala",
+          "Freja K. Ekman",
+          "Leah C. Byrne",
+          "Prajit Limsirichai",
+          "David V. Schaffer"
+        ],
+        "doi": "10.1126/sciadv.aar3952",
+        "source": "Science Advances",
+        "title": "In vivo genome editing improves motor function and extends survival in a mouse model of ALS",
+        "work_id": "doi:10.1126/sciadv.aar3952",
+        "year": 2017
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E035",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Human Mesenchymal Stem Cells Genetically Engineered to Overexpress Brain-derived Neurotrophic Factor Improve Outcomes in Huntington's Disease Mouse Models",
+      "unit": null,
+      "value": {
+        "abstract": "Huntington's disease (HD) is a fatal degenerative autosomal dominant neuropsychiatric disease that causes neuronal death and is characterized by progressive striatal and then widespread brain atrophy. Brain-derived neurotrophic factor (BDNF) is a lead candidate for the treatment of HD, as it has been shown to prevent cell death and to stimulate the growth and migration of new neurons in the brain in transgenic mouse models. BDNF levels are reduced in HD postmortem human brain. Previous studies have shown efficacy of mesenchymal stem/stromal cells (MSC)/BDNF using murine MSCs, and the present study used human MSCs to advance the therapeutic potential of the MSC/BDNF platform for clinical application. Double-blinded studies were performed to examine the effects of intrastriatally transplanted human MSC/BDNF on disease progression in two strains of immune-suppressed HD transgenic mice: YAC128 and R6/2. MSC/BDNF treatment decreased striatal atrophy in YAC128 mice. MSC/BDNF treatment also significantly reduced anxiety as measured in the open-field assay. Both MSC and MSC/BDNF treatments induced a significant increase in neurogenesis-like activity in R6/2 mice. MSC/BDNF treatment also increased the mean lifespan of the R6/2 mice. Our genetically modified MSC/BDNF cells set a precedent for stem cell-based neurotherapeutics and could potentially be modified for other neurodegenerative disorders such as amyotrophic lateral sclerosis, Alzheimer's disease, and some forms of Parkinson's disease. These cells provide a platform delivery system for future studies involving corrective gene-editing strategies.",
+        "authors": [
+          "Kari Pollock",
+          "Heather Dahlenburg",
+          "Haley Nelson",
+          "Kyle D. Fink"
+        ],
+        "doi": "10.1038/mt.2016.12",
+        "source": "Molecular Therapy",
+        "title": "Human Mesenchymal Stem Cells Genetically Engineered to Overexpress Brain-derived Neurotrophic Factor Improve Outcomes in Huntington's Disease Mouse Models",
+        "work_id": "doi:10.1038/mt.2016.12",
+        "year": 2016
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E036",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Implementation of an antibody characterization procedure and application to the major ALS/FTD disease gene C9ORF72",
+      "unit": null,
+      "value": {
+        "abstract": "Antibodies are a key resource in biomedical research yet there are no community-accepted standards to rigorously characterize their quality. Here we develop a procedure to validate pre-existing antibodies. Human cell lines with high expression of a target, determined through a proteomics database, are modified with CRISPR/Cas9 to knockout (KO) the corresponding gene. Commercial antibodies against the target are purchased and tested by immunoblot comparing parental and KO. Validated antibodies are used to definitively identify the most highly expressing cell lines, new KOs are generated if needed, and the lines are screened by immunoprecipitation and immunofluorescence. Selected antibodies are used for more intensive procedures such as immunohistochemistry. The pipeline is easy to implement and scalable. Application to the major ALS disease gene C9ORF72 identified high-quality antibodies revealing C9ORF72 localization to phagosomes/lysosomes. Antibodies that do not recognize C9ORF72 have been used in highly cited papers, raising concern over previously reported C9ORF72 properties.",
+        "authors": [
+          "Carl Laflamme",
+          "Paul M. McKeever",
+          "Rahul Kumar",
+          "Julie Schwartz",
+          "Mahshad Kolahdouzan",
+          "Carol X Chen"
+        ],
+        "doi": "10.7554/elife.48363",
+        "source": "eLife",
+        "title": "Implementation of an antibody characterization procedure and application to the major ALS/FTD disease gene C9ORF72",
+        "work_id": "doi:10.7554/elife.48363",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E037",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: ALS-linked FUS mutations confer loss and gain of function in the nucleus by promoting excessive formation of dysfunctional paraspeckles",
+      "unit": null,
+      "value": {
+        "abstract": "Mutations in the FUS gene cause amyotrophic lateral sclerosis (ALS-FUS). Mutant FUS is known to confer cytoplasmic gain of function but its effects in the nucleus are less understood. FUS is an essential component of paraspeckles, subnuclear bodies assembled on a lncRNA NEAT1. Paraspeckles may play a protective role specifically in degenerating spinal motor neurons. However it is still unknown how endogenous levels of mutant FUS would affect NEAT1/paraspeckles. Using novel cell lines with the FUS gene modified by CRISPR/Cas9 and human patient fibroblasts, we found that endogenous levels of mutant FUS cause accumulation of NEAT1 isoforms and paraspeckles. However, despite only mild cytoplasmic mislocalisation of FUS, paraspeckle integrity is compromised in these cells, as confirmed by reduced interaction of mutant FUS with core paraspeckle proteins NONO and SFPQ and increased NEAT1 extractability. This results in NEAT1 localisation outside paraspeckles, especially prominent under conditions of paraspeckle-inducing stress. Consistently, paraspeckle-dependent microRNA production, a readout for functionality of paraspeckles, is impaired in cells expressing mutant FUS. In line with the cellular data, we observed paraspeckle hyper-assembly in spinal neurons of ALS-FUS patients. Therefore, despite largely preserving its nuclear localisation, mutant FUS leads to loss (dysfunctional paraspeckles) and gain (excess of free NEAT1) of function in the nucleus. Perturbed fine structure and functionality of paraspeckles accompanied by accumulation of non-paraspeckle NEAT1 may contribute to the disease severity in ALS-FUS.",
+        "authors": [
+          "Haiyan An",
+          "Lucy Skelt",
+          "Antonietta Notaro",
+          "J. Robin Highley",
+          "Archa H. Fox",
+          "Vincenzo La Bella",
+          "Vladimir L. Buchman"
+        ],
+        "doi": "10.1186/s40478-019-0658-x",
+        "source": "Acta Neuropathologica Communications",
+        "title": "ALS-linked FUS mutations confer loss and gain of function in the nucleus by promoting excessive formation of dysfunctional paraspeckles",
+        "work_id": "doi:10.1186/s40478-019-0658-x",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E038",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: CRISPR screening using an expanded toolkit of autophagy reporters identifies TMEM41B as a novel autophagy factor",
+      "unit": null,
+      "value": {
+        "abstract": "The power of forward genetics in yeast is the foundation on which the field of autophagy research firmly stands. Complementary work on autophagy in higher eukaryotes has revealed both the deep conservation of this process, as well as novel mechanisms by which autophagy is regulated in the context of development, immunity, and neuronal homeostasis. The recent emergence of new clustered regularly interspaced palindromic repeats/CRISPR-associated protein 9 (CRISPR/Cas9)-based technologies has begun facilitating efforts to define novel autophagy factors and pathways by forward genetic screening in mammalian cells. Here, we set out to develop an expanded toolkit of autophagy reporters amenable to CRISPR/Cas9 screening. Genome-wide screening of our reporters in mammalian cells recovered virtually all known autophagy-related (ATG) factors as well as previously uncharacterized factors, including vacuolar protein sorting 37 homolog A (VPS37A), transmembrane protein 251 (TMEM251), amyotrophic lateral sclerosis 2 (ALS2), and TMEM41B. To validate this data set, we used quantitative microscopy and biochemical analyses to show that 1 novel hit, TMEM41B, is required for phagophore maturation. TMEM41B is an integral endoplasmic reticulum (ER) membrane protein distantly related to the established autophagy factor vacuole membrane protein 1 (VMP1), and our data show that these two factors play related, albeit not fully overlapping, roles in autophagosome biogenesis. In sum, our work uncovers new ATG factors, reveals a malleable network of autophagy receptor genetic interactions, and provides a valuable resource (http://crispr.deniclab.com) for further mining of novel autophagy mechanisms.",
+        "authors": [
+          "Christopher J. Shoemaker",
+          "T.Q. Huang",
+          "N. Weir",
+          "Nicole J. Polyakov",
+          "Sebastian W. Schultz",
+          "Vladimir Denic"
+        ],
+        "doi": "10.1371/journal.pbio.2007044",
+        "source": "PLoS Biology",
+        "title": "CRISPR screening using an expanded toolkit of autophagy reporters identifies TMEM41B as a novel autophagy factor",
+        "work_id": "doi:10.1371/journal.pbio.2007044",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E039",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: ALS mutant FUS proteins are recruited into stress granules in induced Pluripotent Stem Cells (iPSCs) derived motoneurons",
+      "unit": null,
+      "value": {
+        "abstract": "Patient-derived induced pluripotent stem cells (iPSCs) provide an opportunity to study human diseases mainly in those cases for which no suitable model systems are available. Here, we have taken advantage of in vitro iPSCs derived from patients affected by amyotrophic lateral sclerosis (ALS) and carrying mutations in the RNA-binding protein FUS to study the cellular behavior of the mutant proteins in the appropriate genetic background. Moreover, the ability to differentiate iPSCs into spinal cord neural cells provides an in vitro model mimicking the physiological conditions. iPSCs were derived from FUS(R514S) and FUS(R521C) patient fibroblasts, whereas in the case of the severe FUS(P525L) mutation, in which fibroblasts were not available, a heterozygous and a homozygous iPSC line were raised by TALEN-directed mutagenesis. We show that aberrant localization and recruitment of FUS into stress granules (SGs) is a prerogative of the FUS mutant proteins and occurs only upon induction of stress in both undifferentiated iPSCs and spinal cord neural cells. Moreover, we show that the incorporation into SGs is proportional to the amount of cytoplasmic FUS, strongly correlating with the cytoplasmic delocalization phenotype of the different mutants. Therefore, the available iPSCs represent a very powerful system for understanding the correlation between FUS mutations, the molecular mechanisms of SG formation and ALS ethiopathogenesis.",
+        "authors": [
+          "Jessica Lenzi",
+          "Riccardo De Santis",
+          "Valeria de Turris",
+          "Mariangela Morlando",
+          "Pietro Laneve",
+          "Andrea Calvo"
+        ],
+        "doi": "10.1242/dmm.020099",
+        "source": "Disease Models & Mechanisms",
+        "title": "ALS mutant FUS proteins are recruited into stress granules in induced Pluripotent Stem Cells (iPSCs) derived motoneurons",
+        "work_id": "doi:10.1242/dmm.020099",
+        "year": 2015
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E040",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Unraveling Molecular and Genetic Insights into Neurodegenerative Diseases: Advances in Understanding Alzheimer’s, Parkinson’s, and Huntington’s Diseases and Amyotrophic Lateral Sclerosis",
+      "unit": null,
+      "value": {
+        "abstract": "Neurodegenerative diseases are, according to recent studies, one of the main causes of disability and death worldwide. Interest in molecular genetics has started to experience exponential growth thanks to numerous advancements in technology, shifts in the understanding of the disease as a phenomenon, and the change in the perspective regarding gene editing and the advantages of this action. The aim of this paper is to analyze the newest approaches in genetics and molecular sciences regarding four of the most important neurodegenerative disorders: Alzheimer's disease, Parkinson's disease, Huntington's disease, and amyotrophic lateral sclerosis. We intend through this review to focus on the newest treatment, diagnosis, and predictions regarding this large group of diseases, in order to obtain a more accurate analysis and to identify the emerging signs that could lead to a better outcome in order to increase both the quality and the life span of the patient. Moreover, this review could provide evidence of future possible novel therapies that target the specific genes and that could be useful to be taken into consideration when the classical approaches fail to shed light.",
+        "authors": [
+          "Alexandru Vlad Ciurea",
+          "Aurel George Mohan",
+          "Răzvan-Adrian Covache-Busuioc",
+          "Horia Petre Costin",
+          "Luca-Andrei Glavan",
+          "Antonio-Daniel Corlatescu"
+        ],
+        "doi": "10.3390/ijms241310809",
+        "source": "International Journal of Molecular Sciences",
+        "title": "Unraveling Molecular and Genetic Insights into Neurodegenerative Diseases: Advances in Understanding Alzheimer’s, Parkinson’s, and Huntington’s Diseases and Amyotrophic Lateral Sclerosis",
+        "work_id": "doi:10.3390/ijms241310809",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E041",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: FUS-ALS hiPSC-derived astrocytes impair human motor units through both gain-of-toxicity and loss-of-support mechanisms",
+      "unit": null,
+      "value": {
+        "abstract": "BACKGROUND: Astrocytes play a crucial, yet not fully elucidated role in the selective motor neuron pathology in amyotrophic lateral sclerosis (ALS). Among other responsibilities, astrocytes provide important neuronal homeostatic support, however this function is highly compromised in ALS. The establishment of fully human coculture systems can be used to further study the underlying mechanisms of the dysfunctional intercellular interplay, and has the potential to provide a platform for revealing novel therapeutic entry points. METHODS: In this study, we characterised human induced pluripotent stem cell (hiPSC)-derived astrocytes from FUS-ALS patients, and incorporated these cells into a human motor unit microfluidics model to investigate the astrocytic effect on hiPSC-derived motor neuron network and functional neuromuscular junctions (NMJs) using immunocytochemistry and live-cell recordings. FUS-ALS cocultures were systematically compared to their CRISPR-Cas9 gene-edited isogenic control systems. RESULTS: We observed a dysregulation of astrocyte homeostasis, which resulted in a FUS-ALS-mediated increase in reactivity and secretion of inflammatory cytokines. Upon coculture with motor neurons and myotubes, we detected a cytotoxic effect on motor neuron-neurite outgrowth, NMJ formation and functionality, which was improved or fully rescued by isogenic control astrocytes. We demonstrate that ALS astrocytes have both a gain-of-toxicity and loss-of-support function involving the WNT/β-catenin pathway, ultimately contributing to the disruption of motor neuron homeostasis, intercellular networks and NMJs. CONCLUSIONS: Our findings shine light on a complex, yet highly important role of astrocytes in ALS, and provides further insight in to their pathological mechanisms.",
+        "authors": [
+          "Katarina Stoklund Dittlau",
+          "Lisanne Terrie",
+          "Pieter Baatsen",
+          "Axelle Kerstens"
+        ],
+        "doi": "10.1186/s13024-022-00591-3",
+        "source": "Molecular Neurodegeneration",
+        "title": "FUS-ALS hiPSC-derived astrocytes impair human motor units through both gain-of-toxicity and loss-of-support mechanisms",
+        "work_id": "doi:10.1186/s13024-022-00591-3",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E042",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Aggregation-prone TDP-43 sequesters and drives pathological transitions of free nuclear TDP-43",
+      "unit": null,
+      "value": {
+        "abstract": "Aggregation of the RNA-binding protein, TDP-43, is the unifying hallmark of amyotrophic lateral sclerosis and frontotemporal dementia. TDP-43-related neurodegeneration involves multiple changes to normal physiological TDP-43, which undergoes nuclear depletion, cytoplasmic mislocalisation, post-translational modification, and aberrant liquid-liquid phase separation, preceding inclusion formation. Along with toxic cytoplasmic aggregation, concurrent depletion and dysfunction of normal nuclear TDP-43 in cells with TDP-43 pathology is likely a key potentiator of neurodegeneration, but is not well understood. To define processes driving TDP-43 dysfunction, we used CRISPR/Cas9-mediated fluorescent tagging to investigate how disease-associated stressors and pathological TDP-43 alter abundance, localisation, self-assembly, aggregation, solubility, and mobility dynamics of normal nuclear TDP-43 over time in live cells. Oxidative stress stimulated liquid-liquid phase separation of endogenous TDP-43 into droplet-like puncta, or spherical shell-like anisosomes. Further, nuclear RNA-binding-ablated or acetylation-mimicking TDP-43 readily sequestered and depleted free normal nuclear TDP-43 into dynamic anisosomes, in which recruited endogenous TDP-43 proteins remained soluble and highly mobile. Large, phosphorylated inclusions formed by nuclear or cytoplasmic aggregation-prone TDP-43 mutants also caused sequestration, but rendered endogenous TDP-43 immobile and insoluble, indicating pathological transition. These findings suggest that RNA-binding deficiency and post-translational modifications including acetylation exacerbate TDP-43 aggregation and dysfunction by driving sequestration, mislocalisation, and depletion of normal nuclear TDP-43 in neurodegenerative diseases.",
+        "authors": [
+          "Sean S. Keating",
+          "Adekunle T. Bademosi",
+          "Rebecca San Gil",
+          "Adam K. Walker"
+        ],
+        "doi": "10.1007/s00018-023-04739-2",
+        "source": "Cellular and Molecular Life Sciences",
+        "title": "Aggregation-prone TDP-43 sequesters and drives pathological transitions of free nuclear TDP-43",
+        "work_id": "doi:10.1007/s00018-023-04739-2",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E043",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: CRISPR/Cas9 genome editing for neurodegenerative diseases",
+      "unit": null,
+      "value": {
+        "abstract": "approaches. Gene editing tools, such as zinc finger nucleases, transcription activator-like effector nucleases, and CRISPR-Cas-associated nucleases, can be employed for gene therapy purposes. Among these tools, CRISPR-Cas-based gene editing stands out because of its ability to introduce heritable genome changes by designing short guide RNAs. This review aims to provide an overview of CRISPR-Cas technology and summarizes the latest research on the application of CRISPR/Cas9 genome editing technology for the treatment of the most prevalent neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, Amyotrophic lateral sclerosis, and Spinocerebellar ataxia.",
+        "authors": [
+          "Jafar Nouri Nojadeh",
+          "Nur Seren Bildiren Eryilmaz",
+          "Berrin İmge Ergüder"
+        ],
+        "doi": "10.17179/excli2023-6155",
+        "source": "PubMed",
+        "title": "CRISPR/Cas9 genome editing for neurodegenerative diseases",
+        "work_id": "doi:10.17179/excli2023-6155",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E044",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Mitigating a TDP-43 proteinopathy by targeting ataxin-2 using RNA-targeting CRISPR effector proteins",
+      "unit": null,
+      "value": {
+        "abstract": "The TDP-43 proteinopathies, which include amyotrophic lateral sclerosis and frontotemporal dementia, are a devastating group of neurodegenerative disorders that are characterized by the mislocalization and aggregation of TDP-43. Here we demonstrate that RNA-targeting CRISPR effector proteins, a programmable class of gene silencing agents that includes the Cas13 family of enzymes and Cas7-11, can be used to mitigate TDP-43 pathology when programmed to target ataxin-2, a modifier of TDP-43-associated toxicity. In addition to inhibiting the aggregation and transit of TDP-43 to stress granules, we find that the in vivo delivery of an ataxin-2-targeting Cas13 system to a mouse model of TDP-43 proteinopathy improved functional deficits, extended survival, and reduced the severity of neuropathological hallmarks. Further, we benchmark RNA-targeting CRISPR platforms against ataxin-2 and find that high-fidelity forms of Cas13 possess improved transcriptome-wide specificity compared to Cas7-11 and a first-generation effector. Our results demonstrate the potential of CRISPR technology for TDP-43 proteinopathies.",
+        "authors": [
+          "M. Alejandra Zeballos C.",
+          "Hayden J. Moore",
+          "Tyler Smith",
+          "Jackson E. Powell",
+          "Najah S. Ahsan",
+          "Sijia Zhang",
+          "Thomas Gaj"
+        ],
+        "doi": "10.1038/s41467-023-42147-z",
+        "source": "Nature Communications",
+        "title": "Mitigating a TDP-43 proteinopathy by targeting ataxin-2 using RNA-targeting CRISPR effector proteins",
+        "work_id": "doi:10.1038/s41467-023-42147-z",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E045",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Swimming against ALS: How to model disease in zebrafish for pathophysiological and behavioral studies",
+      "unit": null,
+      "value": {
+        "abstract": "Amyotrophic Lateral Sclerosis (ALS) is a neurodegenerative disease that leads to progressive disability and motor impairment. Existing therapies provide modest improvements in patient survival, raising a need for new treatments for ALS. Zebrafish is a promising model animal for translational and fundamental research in ALS - it is an experimentally tractable vertebrate, with high homology to humans and an ample experimental toolbox. These advantages allow high-throughput study of behavioral and pathophysiological phenotypes. The last decade saw an increased interest in modelling ALS in zebrafish, leading to the current abundance and variety of available methods and models. Additionally, the rise of gene editing techniques and toxin combination studies has created novel opportunities for ALS studies in zebrafish. In this review, we address the relevance of zebrafish as a model animal for ALS studies, the strategies for model induction and key phenotypical evaluation. Furthermore, we discuss established and emerging zebrafish models of ALS, analyzing their validity, including their potential for drug testing, and highlighting research opportunities in this area.",
+        "authors": [
+          "Nuno A. S. Oliveira",
+          "Brígida R. Pinho",
+          "Jorge M.A. Oliveira"
+        ],
+        "doi": "10.1016/j.neubiorev.2023.105138",
+        "source": "Neuroscience & Biobehavioral Reviews",
+        "title": "Swimming against ALS: How to model disease in zebrafish for pathophysiological and behavioral studies",
+        "work_id": "doi:10.1016/j.neubiorev.2023.105138",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E046",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: A scalable human iPSC-based neuromuscular disease model on suspended biobased elastomer nanofiber scaffolds",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract Many devastating neuromuscular diseases currently lack effective treatments. This is in part due to a lack of drug discovery platforms capable of assessing complex human neuromuscular disease phenotypes in a scalable manner. A major obstacle has been generating scaffolds to stabilise mature contractile myofibers in a multi-well assay format amenable to high content image (HCI) analysis. This study describes the development of a scalable human induced pluripotent stem cell (iPSC)-neuromuscular disease model, whereby suspended elastomer nanofibers support long-term stability, alignment, maturation, and repeated contractions of iPSC-myofibers, innervated by iPSC-motor neurons in 96-well assay plates. In this platform, optogenetic stimulation of the motor neurons elicits robust myofiber-contractions, providing a functional readout of neuromuscular transmission. Additionally, HCI analysis provides rapid and automated quantification of axonal outgrowth, myofiber morphology, and neuromuscular synapse number and morphology. By incorporating amyotrophic lateral sclerosis (ALS)-related TDP-43 G298S mutant motor neurons and CRISPR-corrected controls, key neuromuscular disease phenotypes are recapitulated, including weaker myofiber contractions, reduced axonal outgrowth, and reduced number of neuromuscular synapses. Treatment with a candidate ALS drug, the receptor-interacting protein kinase-1 (RIPK1)-inhibitor necrostatin-1, rescues these phenotypes in a dose-dependent manner, highlighting the potential of this platform to screen novel treatments for neuromuscular diseases.",
+        "authors": [
+          "Aimee Cheesbrough",
+          "Peter Harley",
+          "Federica Riccio",
+          "Lei Wu"
+        ],
+        "doi": "10.1088/1758-5090/acf39e",
+        "source": "Biofabrication",
+        "title": "A scalable human iPSC-based neuromuscular disease model on suspended biobased elastomer nanofiber scaffolds",
+        "work_id": "doi:10.1088/1758-5090/acf39e",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E047",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Specific vulnerability of iPSC-derived motor neurons with TDP-43 gene mutation to oxidative stress",
+      "unit": null,
+      "value": {
+        "abstract": "Amyotrophic lateral sclerosis (ALS) is a disease that affects motor neurons and has a poor prognosis. We focused on TAR DNA-binding protein 43 kDa (TDP-43), which is a common component of neuronal inclusions in many ALS patients. To analyze the contribution of TDP-43 mutations to ALS in human cells, we first introduced TDP-43 mutations into healthy human iPSCs using CRISPR/Cas9 gene editing technology, induced the differentiation of these cells into motor and sensory neurons, and analyzed factors that are assumed to be altered in or associated with ALS (cell morphology, TDP-43 localization and aggregate formation, cell death, TDP-43 splicing function, etc.). We aimed to clarify the pathological alterations caused solely by TDP-43 mutation, i.e., the changes in human iPSC-derived neurons with TDP-43 mutation compared with those with the same genetic background except TDP-43 mutation. Oxidative stress induced by hydrogen peroxide administration caused the death of TDP-43 mutant-expressing motor neurons but not in sensory neurons, indicating the specific vulnerability of human iPSC-derived motor neurons with TDP-43 mutation to oxidative stress. In our model, we observed aggregate formation in a small fraction of TDP-43 mutant-expressing motor neurons, suggesting that aggregate formation seems to be related to ALS pathology but not the direct cause of cell death. This study provides basic knowledge for elucidating the pathogenesis of ALS and developing treatments for the disease.",
+        "authors": [
+          "Asako Onda-Ohto",
+          "Minami Hasegawa-Ogawa",
+          "Hiromasa Matsuno",
+          "Tomotaka Shiraishi",
+          "Keiko Bono",
+          "Hiromi Hiraki",
+          "Yumi Kanegae",
+          "Yasuyuki Iguchi"
+        ],
+        "doi": "10.1186/s13041-023-01050-w",
+        "source": "Molecular Brain",
+        "title": "Specific vulnerability of iPSC-derived motor neurons with TDP-43 gene mutation to oxidative stress",
+        "work_id": "doi:10.1186/s13041-023-01050-w",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E048",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: CRISPR/Cas9: implication for modeling and therapy of amyotrophic lateral sclerosis",
+      "unit": null,
+      "value": {
+        "abstract": "Amyotrophic lateral sclerosis (ALS) is a deadly neurological disease with a complicated and variable pathophysiology yet to be fully understood. There is currently no effective treatment available to either slow or terminate it. However, recent advances in ALS genomics have linked genes to phenotypes, encouraging the creation of novel therapeutic approaches and giving researchers more tools to create efficient animal models. Genetically engineered rodent models replicating ALS disease pathology have a high predictive value for translational research. This review addresses the history of the evolution of gene editing tools, the most recent ALS disease models, and the application of CRISPR/Cas9 against ALS disease.",
+        "authors": [
+          "Yajun Shi",
+          "Yan Zhao",
+          "Likui Lu"
+        ],
+        "doi": "10.3389/fnins.2023.1223777",
+        "source": "Frontiers in Neuroscience",
+        "title": "CRISPR/Cas9: implication for modeling and therapy of amyotrophic lateral sclerosis",
+        "work_id": "doi:10.3389/fnins.2023.1223777",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E049",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Impaired motor unit recovery and maintenance in a knock-in mouse model of ALS-associated Kif5a variant",
+      "unit": null,
+      "value": {
+        "abstract": "Kinesin family member 5A (KIF5A) is an essential, neuron-specific microtubule-associated motor protein responsible for the anterograde axonal transport of various cellular cargos. Loss of function variants in the N-terminal, microtubule-binding domain are associated with hereditary spastic paraplegia and hereditary motor neuropathy. These variants result in a loss of the ability of the mutant protein to process along microtubules. Contrastingly, gain of function splice-site variants in the C-terminal, cargo-binding domain of KIF5A are associated with amyotrophic lateral sclerosis (ALS), a neurodegenerative disease involving death of upper and lower motor neurons, ultimately leading to degradation of the motor unit (MU; an alpha motor neuron and all the myofibers it innervates) and death. These ALS-associated variants result in loss of autoinhibition, increased procession of the mutant protein along microtubules, and altered cargo binding. To study the molecular and cellular consequences of ALS-associated variants in vivo, we introduced the murine homolog of an ALS-associated KIF5A variant into C57BL/6 mice using CRISPR-Cas9 gene editing which produced mutant Kif5a mRNA and protein in neuronal tissues of heterozygous (Kif5a+/c.3005+1G>A; HET) and homozygous (Kif5a c.3005+1G>A/c.3005+1G>A; HOM) mice. HET and HOM mice appeared normal in behavioral and electrophysiological (compound muscle action potential [CMAP] and MU number estimation [MUNE]) outcome measures at one year of age. When subjected to sciatic nerve injury, HET and HOM mice have delayed and incomplete recovery of the MUNE compared to wildtype (WT) mice suggesting an impairment in MU repair. Moreover, aged mutant Kif5a mice (aged two years) had reduced MUNE independent of injury, and exacerbation of the delayed and incomplete recovery after injury compared to aged WT mice. These data suggest that ALS-associated variants may result in an impairment of the MU to respond to biological challenges such as injury and aging, leading to a failure of MU repair and maintenance. In this report, we present the behavioral, electrophysiological and pathological characterization of mice harboring an ALS-associated Kif5a variant to understand the functional consequences of KIF5A C-terminal variants in vivo.",
+        "authors": [
+          "Kelly Rich",
+          "Megan G. Pino",
+          "Mehmet E. Yalvaç",
+          "Ashley Fox",
+          "Hallie Harris",
+          "Maria Balch",
+          "W. David Arnold"
+        ],
+        "doi": "10.1016/j.nbd.2023.106148",
+        "source": "Neurobiology of Disease",
+        "title": "Impaired motor unit recovery and maintenance in a knock-in mouse model of ALS-associated Kif5a variant",
+        "work_id": "doi:10.1016/j.nbd.2023.106148",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E050",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Proteome architecture of human-induced pluripotent stem cell-derived three-dimensional organoids as a tool for early diagnosis of neuronal disorders",
+      "unit": null,
+      "value": {
+        "abstract": "BACKGROUND AND OBJECTIVES: Induced pluripotent stem cells (iPSCs) derived three-dimensional (3D) model for rare neurodegenerative disorders such as amyotrophic lateral sclerosis (ALS) is emerging as a novel alternative to human diseased tissue to explore the disease etiology and potential drug discovery. In the interest of the same, we have generated a TDP-43-mutated human iPSCs (hiPSCs) derived 3D organoid model of ALS disease. The high-resolution mass spectrometry (MS)-based proteomic approach is used to explore the differential mechanism under disease conditions and the suitability of a 3D model to study the disease. MATERIALS AND METHODS: The hiPSCs cell line was procured from a commercial source, grown, and characterized following standard protocols. The mutation in hiPSCs was accomplished using CRISPR/Cas-9 technology and predesigned gRNA. The two groups of organoids were produced by normal and mutated hiPSCs and subjected to the whole proteomic profiling by high-resolution MS in two biological replicates with three technical replicas of each. RESULTS: The proteomic analysis of normal and mutated organoids revealed the proteins associated with pathways of neurodegenerative disorders, proteasomes, autophagy, and hypoxia-inducible factor-1 signaling. Differential proteomic analysis revealed that the mutation in TDP-43 gene caused proteomic deregulation, which impaired protein quality mechanisms. Furthermore, this impairment may contribute to the generation of stress conditions that may ultimately lead to the development of ALS pathology. CONCLUSION: The developed 3D model represents the majority of candidate proteins and associated biological mechanisms altered in ALS disease. The study also offers novel protein targets that may uncloud the precise disease pathological mechanism and be considered for future diagnostic and therapeutic purposes for various neurodegenerative disorders.",
+        "authors": [
+          "Ammar Al-Chalabi",
+          "Arvind K. Srivastava",
+          "Ankur Kumar Srivastava"
+        ],
+        "doi": "10.4103/ijp.ijp_56_23",
+        "source": "Indian Journal of Pharmacology",
+        "title": "Proteome architecture of human-induced pluripotent stem cell-derived three-dimensional organoids as a tool for early diagnosis of neuronal disorders",
+        "work_id": "doi:10.4103/ijp.ijp_56_23",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "figures/annual_publications.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E051",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 1 (annual_publications) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "peak_documents": 36,
+          "peak_year": 2022,
+          "years": [
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ]
+        },
+        "figure_name": "annual_publications",
+        "figure_number": 1
+      }
+    },
+    {
+      "artifact_path": "figures/top_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E052",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 2 (top_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Neural Regeneration Research",
+          "top_value": 13
+        },
+        "figure_name": "top_sources",
+        "figure_number": 2
+      }
+    },
+    {
+      "artifact_path": "figures/top_authors.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E053",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 3 (top_authors) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Siddharthan Chandran",
+          "top_value": 7
+        },
+        "figure_name": "top_authors",
+        "figure_number": 3
+      }
+    },
+    {
+      "artifact_path": "figures/top_institutions.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E054",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 4 (top_institutions) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "University of Massachusetts Chan Medical School",
+          "top_value": 13
+        },
+        "figure_name": "top_institutions",
+        "figure_number": 4
+      }
+    },
+    {
+      "artifact_path": "figures/document_types.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E055",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 5 (document_types) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed_categories": 1,
+          "total_documents": 211
+        },
+        "figure_name": "document_types",
+        "figure_number": 5
+      }
+    },
+    {
+      "artifact_path": "figures/citation_distribution.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E056",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 6 (citation_distribution) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "display_cap_p98": 251.39999999999978,
+          "documents": 211,
+          "maximum": 386,
+          "mean": 46.203791469194314,
+          "median": 21.0,
+          "zero_cited": 26
+        },
+        "figure_name": "citation_distribution",
+        "figure_number": 6
+      }
+    },
+    {
+      "artifact_path": "figures/top_cited_documents.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E057",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 7 (top_cited_documents) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "HDAC6 inhibition reverses axonal transport defects in…",
+          "top_value": 386
+        },
+        "figure_name": "top_cited_documents",
+        "figure_number": 7
+      }
+    },
+    {
+      "artifact_path": "figures/bradford_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E058",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 8 (bradford_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "sources": 127,
+          "zone_1_sources": 14
+        },
+        "figure_name": "bradford_sources",
+        "figure_number": 8
+      }
+    },
+    {
+      "artifact_path": "figures/keyword_trends.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E059",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 9 (keyword_trends) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "keywords": 15,
+          "years": [
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ]
+        },
+        "figure_name": "keyword_trends",
+        "figure_number": 9
+      }
+    },
+    {
+      "artifact_path": "figures/network_coauthorship.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E060",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 10 (network_coauthorship) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 579,
+          "candidate_nodes_with_links": 130,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 141,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 133,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 16,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.0579126847859049,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.11833348097078358,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "overlap_ratio": 0.0,
+          "selected_seed": 42.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.051996010737365726,
+          "within_between_distance_ratio": 0.0
+        },
+        "figure_name": "network_coauthorship",
+        "figure_number": 10
+      }
+    },
+    {
+      "artifact_path": "figures/network_institution_collaboration.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E061",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 11 (network_institution_collaboration) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 393,
+          "candidate_nodes_with_links": 98,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 168,
+          "displayed_nodes": 71,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 99,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.37183427074013126,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.30122422247259534,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 1148.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.11040071784476278,
+          "within_between_distance_ratio": 0.821241139239129
+        },
+        "figure_name": "network_institution_collaboration",
+        "figure_number": 11
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_cooccurrence.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E062",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 12 (network_keyword_cooccurrence) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 1730,
+          "candidate_nodes_with_links": 79,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 6,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 79,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.13700217360100272,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.3528408878219193,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 236.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.04615709573917965,
+          "within_between_distance_ratio": 0.2440101115690904
+        },
+        "figure_name": "network_keyword_cooccurrence",
+        "figure_number": 12
+      }
+    },
+    {
+      "artifact_path": "figures/network_cocitation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E063",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 13 (network_cocitation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 22746,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 204,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.15713401344809225,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.47589408332763966,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 3,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 333.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.08862734767663905,
+          "within_between_distance_ratio": 0.14903987201690405
+        },
+        "figure_name": "network_cocitation",
+        "figure_number": 13
+      }
+    },
+    {
+      "artifact_path": "figures/network_bibliographic_coupling.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E064",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 14 (network_bibliographic_coupling) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 2409,
+          "candidate_nodes_with_links": 159,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 6,
+          "displayed_edges": 208,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 159,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.2590308519928034,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.248901923348473,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 649.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "sparse_construction": {
+            "candidate_documents": 173,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 35,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          },
+          "weighted_edge_length": 0.007558718054931688,
+          "within_between_distance_ratio": 0.7967567925681602
+        },
+        "figure_name": "network_bibliographic_coupling",
+        "figure_number": 14
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_overlay.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E065",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 15 (network_keyword_overlay) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 1730,
+          "candidate_nodes_with_links": 79,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 6,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 79,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "year_max": 2021.8,
+          "year_min": 2016.2
+        },
+        "figure_name": "network_keyword_overlay",
+        "figure_number": 15
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_density.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E066",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 16 (network_keyword_density) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 1730,
+          "candidate_nodes_with_links": 79,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "density_grid": [
+            260,
+            190
+          ],
+          "density_weight": "log(1 + occurrence), gamma 0.62",
+          "displayed_clusters": 6,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 79,
+          "gaussian_sigma": 8,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "figure_name": "network_keyword_density",
+        "figure_number": 16
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E067",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+      "unit": null,
+      "value": {
+        "citation": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+        "doi": "10.1016/j.jbusres.2021.04.070",
+        "role": "bibliometric workflow and interpretation guideline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E068",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+      "unit": null,
+      "value": {
+        "citation": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+        "doi": "10.1016/j.joi.2017.08.007",
+        "role": "science-mapping analysis baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E069",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+      "unit": null,
+      "value": {
+        "citation": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+        "doi": "10.1007/s11192-009-0146-3",
+        "role": "bibliometric network visualization baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E070",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+      "unit": null,
+      "value": {
+        "citation": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+        "doi": "10.1088/1742-5468/2008/10/P10008",
+        "role": "Louvain community-detection method"
+      }
+    }
+  ],
+  "anonymous_candidate": "# A Bibliometric Analysis of Gene-Editing and Disease-Modeling Research in Amyotrophic Lateral Sclerosis (2010–2023)\n\n**Structured Abstract**\n*Background*: Amyotrophic lateral sclerosis (ALS) research has increasingly employed gene-editing and disease-modeling techniques. A quantitative synthesis of this literature is lacking.\n*Objective*: To characterize the growth, productivity, impact, and intellectual structure of the corpus.\n*Methods*: A reproducible bibliometric workflow was applied to a deduplicated corpus of 211 works [E001] retrieved from a single source [E002]. Analyses included performance indicators, science mapping, and network analysis.\n*Results*: The corpus spans 2010–2023 [E004]. Annual output peaked at 36 works in 2022 [E005], with a compound annual growth rate (CAGR) over the observed endpoints of 29.90%, though this metric does not imply monotonic growth; year-over-year declines occurred in 2017, 2020, and 2023 [E006, E007]. The most productive source was *Neural Regeneration Research* (n=13) [E008]. The most productive authors were Ludo Van Den Bosch and Siddharthan Chandran (n=7 each) [E010, E011]. The most productive institution was the University of Massachusetts Chan Medical School (n=13) [E012]. Mean citations were 46.20 and the median was 21.00 [E015]. Six thematic clusters were identified in the displayed keyword co-occurrence network [E026].\n*Conclusion*: The field shows rapid, non-monotonic growth concentrated in a core of journals, authors, and institutions. Network analyses reveal a structured research landscape.\n\n**1. Introduction**\n*1.1 Background*: ALS is a devastating neurodegenerative disorder. Recent research has focused on genetic mechanisms, with gene-editing technologies like CRISPR/Cas9 and advanced disease models (e.g., iPSCs) becoming central tools. A bibliometric perspective is needed to map this evolving landscape.\n*1.2 Rationale & Objectives*: This report provides a comprehensive, reproducible bibliometric analysis of the ALS gene-editing and disease-modeling literature. The objectives are to (1) describe the corpus’s growth and composition, (2) identify key contributors (sources, authors, institutions), (3) assess citation impact, and (4) map the conceptual and social structure of the research.\n\n**2. Methods**\n*2.1 Search Strategy & Data Collection*: A systematic search was conducted on a single bibliographic source. The acquisition was complete, with 211 unique records retrieved matching the source’s reported count of 211 [E002].\n*2.2 Corpus Definition & Deduplication*: The final analysis corpus was defined after deterministic exact deduplication, resulting in 211 unique works [E001].\n*2.3 Data Cleaning & Normalization*: Metadata fields were normalized. Field completeness was assessed; for example, abstracts were present for 80.57% of works, while DOIs were present for 99.05% [E003]. This missingness may bias keyword co-occurrence and thematic mapping, as 41 works contribute no abstract-derived terms [E003].\n*2.4 Analysis Framework*: The analysis followed established bibliometric guidelines [E067]. Performance analyses included publication counts, productivity rankings, and citation metrics. Science mapping included Bradford’s law, keyword trend analysis, and network analyses (co-authorship, institutional collaboration, keyword co-occurrence, bibliographic coupling, co-citation) using association strength normalization and Louvain community detection [E070], consistent with standard tools [E068, E069].\n\n**3. Results**\n*3.1 Corpus Overview and Growth*: The corpus comprises 211 documents [E001], all classified as articles [E014]. The publication timeline spans from 2010 to 2023 [E004]. Annual output grew from 1 work in 2010 to a peak of 36 works in 2022 [E005, E007]. Output declined in 2017 (-5 works), 2020 (-6), and 2023 (-6) [E007], indicating non-monotonic growth. The compound annual growth rate (CAGR) over the observed endpoints is 29.90%, though this metric does not imply monotonic growth [E006]. Figure 1 illustrates this trend [E051].\n*3.2 Key Contributors*:\n    *3.2.1 Most Productive Sources*: The 211 works are distributed across various sources. *Neural Regeneration Research* is the most prolific, with 13 publications [E008, E009]. Figure 2 shows the top 15 sources [E052]. Bradford’s law analysis reveals a core Zone 1 of 14 journals contributing 70 documents [E019]; zone boundaries are approximate (document rounding unit: 50) [E019], as visualized in Figure 8 [E058].\n    *3.2.2 Most Productive Authors*: Ludo Van Den Bosch and Siddharthan Chandran are the most productive authors, each with 7 publications [E010, E011]. Figure 3 displays the top 15 authors [E053].\n    *3.2.3 Most Productive Institutions*: The University of Massachusetts Chan Medical School leads with 13 publications [E012, E013]. Figure 4 shows the top 15 institutions [E054].\n*3.3 Citation Impact*: The mean citation count is 46.20, and the median is 21.00 [E015]. The mean exceeds the median, and the 90th percentile is 133 citations versus a maximum of 386 [E017], confirming a strong positive skew. A total of 26 works (12.32%) have zero citations [E016], noting that 2023 works have had minimal citation accumulation time [E016]. Figure 6 visualizes the citation distribution [E056]. The most-cited document is “HDAC6 inhibition reverses axonal transport defects in motor neurons derived from FUS-ALS patients” (2017) with 386 citations [E018, E027]. Figure 7 lists the top 15 cited documents [E057].\n*3.4 Conceptual and Social Structure*:\n    *3.4.1 Keyword Analysis*: The most frequent keywords include “Biology” (n=195), “Genetics” (n=156), and “Amyotrophic lateral sclerosis” (n=102) [E020]. The most frequent keywords are high-level disciplinary terms (e.g., “Biology” in 92.4% of works), reflecting source-indexing practices rather than specific research themes [E020]. Temporal trends for these keywords are shown in Figure 9 [E059].\n    *3.4.2 Network Analysis*: After candidate selection and edge reduction, the displayed keyword co-occurrence network (Figure 12) contains 72 nodes and 192 edges (from a candidate pool of 79 linked nodes and 1,730 edges), forming 6 clusters [E026, E062]. The displayed co-authorship network (Figure 10) contains 60 nodes and 141 edges (from a candidate pool of 130 linked nodes and 579 edges), forming 10 clusters [E023, E060]. The displayed institution collaboration network (Figure 11) contains 71 nodes and 168 edges (from a candidate pool of 98 linked nodes and 393 edges), forming 10 clusters [E025, E061]. The displayed bibliographic coupling network (Figure 14) contains 72 nodes and 208 edges (from a candidate pool of 159 linked nodes and 2,409 edges), forming 6 clusters [E022, E064]. The displayed co-citation network (Figure 13) contains 72 nodes and 204 edges (from a candidate pool of 432 linked nodes and 22,746 edges), forming 5 clusters [E024, E063]. A three-field plot (Figure not numbered) illustrates relationships between top authors, sources, and keywords; for example, Ludo Van Den Bosch and Wenting Guo each link to *Nature Communications* via “Amyotrophic lateral sclerosis” and “Cell biology” keywords [E021].\n\n**4. Discussion**\n*4.1 Principal Findings*: The analysis reveals a rapidly growing field, with a 29.90% CAGR [E006] and a peak in 2022 [E005]. The research output is concentrated, with a Bradford Zone 1 of 14 journals [E019] and a leading institution, the University of Massachusetts Chan Medical School [E012]. The citation distribution is highly skewed, with a few highly cited works [E017, E018] and a notable share of uncited works [E016].\n*4.2 Interpretation of Network Structures*: Under the chosen parameters (minimum occurrence thresholds, association strength normalization, Louvain clustering, and edge reduction to a maximum-spanning forest plus strongest edges per node), the displayed keyword co-occurrence network’s 6 clusters [E026] suggest a thematically diverse field. The displayed co-authorship network’s 10 clusters [E023] indicate a fragmented social structure with multiple research groups. The displayed institution collaboration network similarly shows 10 clusters [E025], suggesting collaboration is often localized within institutional or geographic groups. Cluster count and membership are parameter-sensitive.\n*4.3 Comparison with Existing Literature*: The observed growth pattern and concentration metrics describe endpoint publication growth and source concentration within this corpus, without establishing that the domain is emerging or technology-driven [E006, E019]. The prominence of *Neural Regeneration Research* (n=13) [E008] and authors such as Ludo Van Den Bosch [E010] highlights key dissemination channels and thought leaders.\n\n**5. Limitations**\n*5.1 Data Source and Coverage*: The analysis is based on a single bibliographic source and is limited by its coverage and indexing policies. Metadata completeness varies; for instance, 19.43% of works lack an abstract [E003].\n*5.2 Citation Window*: Citation counts are source- and retrieval-date-dependent [E015]. Recent works, such as those from 2023, have had less time to accumulate citations, which may bias impact metrics [E016].\n*5.3 Methodological Constraints*: Network analyses are descriptive and parameter-dependent. Centrality measures do not imply causal or substantive importance [E022, E023, E024, E025, E026]. Document-type labels inherit source classification practices; all 211 works are classified as articles, with no reviews or conference papers represented [E014]. Keyword frequencies depend on source metadata and synonym normalization [E020].\n\n**6. Conclusion**\nThis bibliometric analysis maps the landscape of ALS gene-editing and disease-modeling research from 2010 to 2023. The field is characterized by rapid, non-monotonic growth, concentrated productivity in a core set of journals, authors, and institutions, and a highly skewed citation distribution. The intellectual structure, as revealed by network analysis, is organized into distinct thematic and collaborative clusters. These findings provide a quantitative baseline for researchers, funders, and policymakers to understand the field’s evolution and key contributors.\n",
+  "allowed_evidence_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027",
+    "E028",
+    "E029",
+    "E030",
+    "E031",
+    "E032",
+    "E033",
+    "E034",
+    "E035",
+    "E036",
+    "E037",
+    "E038",
+    "E039",
+    "E040",
+    "E041",
+    "E042",
+    "E043",
+    "E044",
+    "E045",
+    "E046",
+    "E047",
+    "E048",
+    "E049",
+    "E050",
+    "E051",
+    "E052",
+    "E053",
+    "E054",
+    "E055",
+    "E056",
+    "E057",
+    "E058",
+    "E059",
+    "E060",
+    "E061",
+    "E062",
+    "E063",
+    "E064",
+    "E065",
+    "E066",
+    "E067",
+    "E068",
+    "E069",
+    "E070",
+    "doi:10.1007/s00018-023-04739-2",
+    "doi:10.1016/j.nbd.2023.106148",
+    "doi:10.1016/j.neubiorev.2023.105138",
+    "doi:10.1016/j.ymthe.2020.01.005",
+    "doi:10.1038/mt.2016.12",
+    "doi:10.1038/s41467-017-00911-y",
+    "doi:10.1038/s41467-017-02729-0",
+    "doi:10.1038/s41467-018-06111-6",
+    "doi:10.1038/s41467-023-42147-z",
+    "doi:10.1088/1758-5090/acf39e",
+    "doi:10.1091/mbc.e16-01-0003",
+    "doi:10.1126/sciadv.aar3952",
+    "doi:10.1126/science.abq5622",
+    "doi:10.1186/s13024-022-00591-3",
+    "doi:10.1186/s13041-023-01050-w",
+    "doi:10.1186/s40478-016-0324-5",
+    "doi:10.1186/s40478-019-0658-x",
+    "doi:10.1242/dmm.020099",
+    "doi:10.1371/journal.pbio.2007044",
+    "doi:10.17179/excli2023-6155",
+    "doi:10.3389/fnins.2023.1223777",
+    "doi:10.3390/ijms241310809",
+    "doi:10.4103/ijp.ijp_56_23",
+    "doi:10.7554/elife.48363"
+  ],
+  "content_sha256": "9cfba7d8fce9e8cdc5fa4278fc37b622965f010f06bfd8d0efa6287ddfddd768"
+}

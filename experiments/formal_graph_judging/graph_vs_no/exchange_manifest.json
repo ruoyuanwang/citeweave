@@ -1,0 +1,28 @@
+{
+  "adjudicator_used": true,
+  "comparison": "graph_vs_no",
+  "domain": "graph",
+  "formal_locked_topics": [
+    "machine_learning_climate_change_2008_2022",
+    "climate_change_risks_1990_2021",
+    "digital_twins_healthcare_2012_2024",
+    "plant_heat_drought_2008_2021",
+    "gene_editing_als_2004_2024",
+    "global_microplastics_2004_2019"
+  ],
+  "independent_judges": [
+    "eval_a",
+    "eval_b"
+  ],
+  "judges_may_modify_pipeline_or_source_artifacts": false,
+  "schema_version": 1,
+  "source_sha256": {
+    "eval_a_packets": "e51fe57841fc681f58e47e1f03b684a2d7d3ba2657f069895741a6d34d2b35fd",
+    "eval_b_packets": "8b859fdd111ed2717c9a5922403f66b6b1d2d7f8e3cb4557afa3c560ffb36eed",
+    "judge_a": "420943539ceaacf4b82eef0a2caabfa600a47b590320612fb2e98877313b2fba",
+    "judge_b": "64542ad9e00208bd14bd07539352f7292ba632ef067d033e72b5d07e9b35f5ec",
+    "scoring_manifest": "1f387a31f605cb1728ee6fafe2d52fca0df364d5e24e2025be78f4c2fe82fdf8",
+    "secret_blind_map": "d31265a1be1cd3bd3900772b5b035f421ee5da8ca9bd83b3a1573f30ebc6f9f6"
+  },
+  "task_id": "GT01"
+}

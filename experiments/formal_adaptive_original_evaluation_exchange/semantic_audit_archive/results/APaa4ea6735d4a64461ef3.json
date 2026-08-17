@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "APaa4ea6735d4a64461ef3",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The pass decision is consistent because the candidate reproduces the canonical displayed pair and strongest weight of 37.0."
+}

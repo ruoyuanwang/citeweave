@@ -1,0 +1,11 @@
+{
+  "packet_id": "EPf58bd01ffc584ffe2808",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The candidate identifies the exact visible label attached to the node explicitly designated as the highest-occurrence node, satisfying the answer contract.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1063/5.0086789:label"
+  ],
+  "judge_id": "evaluation"
+}

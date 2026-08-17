@@ -1,0 +1,11 @@
+{
+  "packet_id": "FPa8383ec653f5b57b2dc6",
+  "decision": "accept",
+  "confidence": 0.98,
+  "reason": "The visible evidence states that the requested label is not present, so abstaining and declining to assign a cluster are supported.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

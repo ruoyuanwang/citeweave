@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "auditor_role": "independent_resolved_evaluation_auditor",
+  "packets": 12,
+  "all_consistent": true,
+  "items": [
+    {
+      "packet_id": "EP061a45f3a6ba2dbacc10",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result addresses this exact extracellular-vesicle/CRISPR coauthorship candidate: Kan Ouyang and Yujie Liang are the canonical strongest pair with weight 4.0. The pass is defensible and all cited fact, weight, and label IDs are allowed."
+    },
+    {
+      "packet_id": "EP14ee3bcaa3548757dbca",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result correctly evaluates the GNN bibliographic-coupling false-premise candidate. Canonical evidence says the requested CiteWeave label is absent, so abstention and the pass decision are defensible; the cited absence fact is allowed."
+    },
+    {
+      "packet_id": "EP1785d1bcaa8541e45de7",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result is aligned to the GNN bibliographic-coupling network-size candidate and canonical counts of 72 nodes and 210 links. The pass is defensible and both cited count IDs are allowed."
+    },
+    {
+      "packet_id": "EP1a09fde961cd61ae1d4a",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result evaluates the exact GNN highest-occurrence candidate. The returned visible label matches the canonical label of the node designated highest-occurrence, making the pass defensible; both cited IDs are allowed."
+    },
+    {
+      "packet_id": "EP1a7fd5a119de8d769475",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The failure reason is specific to the extracellular-vesicle/CRISPR report and identifies a material unsupported monotonic-trend claim. Canonical E020 shows Biology declining 32 to 30 and 46 to 45, and Gene declining 21 to 18 and 32 to 31, so fail is defensible; E020 is allowed."
+    },
+    {
+      "packet_id": "EP6529045186746961c7d4",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result is aligned to the GNN-in-drug-discovery report. Its cited 456-work corpus, 2023 peak of 190, source/retrieval caveats, and short citation-network context agree with canonical evidence, and no material contradiction was found; the pass is defensible and all cited IDs are allowed."
+    },
+    {
+      "packet_id": "EP6610fd551c266ee997c3",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result addresses the exact GNN bibliographic-coupling strongest-connection candidate. The two displayed labels and weight 38.0 match the canonical strongest edge, so pass is defensible; all cited strongest-connection, weight, and label IDs are allowed."
+    },
+    {
+      "packet_id": "EP6f096a00bfbf01e1e979",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result is aligned to the extracellular-vesicle/CRISPR bibliographic-coupling network-size candidate and canonical counts of 72 nodes and 211 links. The pass is defensible and both cited count IDs are allowed."
+    },
+    {
+      "packet_id": "EP80db886b932ba18be90b",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result evaluates the exact extracellular-vesicle/CRISPR cluster-membership candidate. The displayed Gene Editing label is canonically assigned to cluster 1, so pass is defensible; the cited label and cluster IDs are allowed."
+    },
+    {
+      "packet_id": "EP89259f134e0747c213cd",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result is aligned to the extracellular-vesicle/CRISPR highest-occurrence candidate. Its exact returned Pseudomonas aeruginosa visible label matches the canonical label for the designated highest-occurrence node, so pass is defensible; both cited IDs are allowed."
+    },
+    {
+      "packet_id": "EP95ce0c14549a9ca500e5",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result correctly evaluates the extracellular-vesicle/CRISPR bibliographic-coupling false-premise candidate. Canonical evidence establishes that the requested CiteWeave label is absent, making abstention and pass defensible; the cited absence fact is allowed."
+    },
+    {
+      "packet_id": "EPc93d67d3a14c8b63469e",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "The result evaluates the exact GNN bibliographic-coupling cluster-membership candidate. The displayed Graph Neural Networks label is canonically assigned to cluster 4, so pass is defensible; the cited label and cluster IDs are allowed."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "packet_id": "EPe429714f9629bd909fe4",
+  "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:cluster",
+        "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:cluster",
+          "network": "bibliographic_coupling",
+          "object": 3,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:label",
+          "network": "bibliographic_coupling",
+          "object": "Gene therapy for ALS: A…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "91b92feffaab8be5113353edaac17eaeec5c685142f637fb3cff372e8372c948"
+    },
+    "question": "Which detected cluster contains the labeled node 'Gene therapy for ALS: A…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":3,\"label\":\"Gene therapy for ALS: A…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1016/j.ymthe.2021.04.008 has a display label 'Gene therapy for ALS: A…' and is assigned to cluster 3. This directly answers the question.\",\"item_id\":\"gene_editing_als_2004_2024:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:label"
+  ],
+  "content_sha256": "b86f88b7aa61cd0ddeed0334864285dee7c71bfdfa0e42fb3b662dfda15935df"
+}

@@ -1,0 +1,13 @@
+{
+  "packet_id": "FP4da8a28a3cf943fd73be",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible evidence identifies the DOI node as the highest-occurrence node and gives the same display label as the answer.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1145/3485128:label",
+    "bibliographic_coupling:node:doi:10.1145/3485128:occurrences"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

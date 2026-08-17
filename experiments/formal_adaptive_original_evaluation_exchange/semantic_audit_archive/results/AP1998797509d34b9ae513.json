@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "AP1998797509d34b9ae513",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The pass decision is consistent because the candidate's source label, target label, and weight 38.0 agree with the bound strongest-connection subgraph."
+}

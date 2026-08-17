@@ -1,0 +1,9 @@
+{
+  "protocol_version": 1,
+  "rubric_version": "graph-judge-calibration-v1",
+  "seed": 42,
+  "evidence_mode": "shared",
+  "packets": 53,
+  "created_at": "2026-08-06T07:23:27.934869+00:00",
+  "input": "experiments\\development_graph_judging_inputs\\graph_vs_no.jsonl"
+}

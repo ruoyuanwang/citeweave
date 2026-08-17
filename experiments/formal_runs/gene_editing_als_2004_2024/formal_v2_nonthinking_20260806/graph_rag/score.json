@@ -1,0 +1,648 @@
+{
+  "benchmark_version": 1,
+  "items": 25,
+  "predictions_received": 25,
+  "metrics": {
+    "exact_answer_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.0,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "abstention_f1": 1.0
+  },
+  "counts": {
+    "correct": 25,
+    "answered": 20,
+    "incorrect_answered": 0,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 20,
+    "abstention": {
+      "tn": 20,
+      "tp": 5
+    }
+  },
+  "by_task": {
+    "cluster_membership": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_occurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_connection": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:network_size",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 208
+        },
+        "explanation": "The context provides two facts: the displayed node count is 72 and the displayed edge count is 208 for the bibliographic coupling network. These directly answer the question about the number of nodes and links."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:highest_occurrence",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Next Generation Precisio…"
+        },
+        "explanation": "The context states that the node with DOI 10.1007/s11481-019-09849-y has the highest occurrence in the bibliographic_coupling network, with 325.0 occurrences. Its display label is 'Next Generation Precisio…'."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:strongest_connection",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Emerging hiPSC Models fo…",
+          "target_label": "Induced Pluripotent Stem…",
+          "weight": 37.0
+        },
+        "explanation": "The fact 'bibliographic_coupling:fact:strongest_connection' explicitly states that the strongest connection is between the two nodes, and the edge weight is given as 37.0. The display labels for the nodes are 'Emerging hiPSC Models fo…' and 'Induced Pluripotent Stem…'."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:cluster_membership",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Gene therapy for ALS: A…",
+          "cluster": 3
+        },
+        "explanation": "The context provides a relationship where the node with DOI 10.1016/j.ymthe.2021.04.008 has a display label 'Gene therapy for ALS: A…' and is assigned to cluster 3. This directly answers the question."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:false_premise",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:bibliographic_coupling:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question asks for the cluster of 'CiteWeave absent benchmark node', but the context states that the network does not contain any visible label for this node (contains_visible_label is false). Since the node is absent from the network, it cannot be assigned to any cluster, making the premise false."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:coauthorship:network_size",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:coauthorship:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 60,
+          "links": 141
+        },
+        "explanation": "The context provides explicit facts: the displayed node count is 60 and the displayed edge count is 141 for the coauthorship network."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:coauthorship:highest_occurrence",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "coauthorship",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:coauthorship:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Ludo Van Den Bosch"
+        },
+        "explanation": "The context states that the node with ORCID 0000-0003-0104-4067 has the highest occurrence in the coauthorship network, and its display label is 'Ludo Van Den Bosch'."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:coauthorship:strongest_connection",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "coauthorship",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:coauthorship:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Siddharthan Chandran",
+          "target_label": "Bhuvaneish T. Selvaraj",
+          "weight": 5.0
+        },
+        "explanation": "The fact 'coauthorship:fact:strongest_connection' explicitly states that Siddharthan Chandran has the strongest connection to Bhuvaneish T. Selvaraj. The edge weight between them is given as 5.0 in 'coauthorship:edge:0001:weight'."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:coauthorship:cluster_membership",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "coauthorship",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:coauthorship:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Siddharthan Chandran",
+          "cluster": 3
+        },
+        "explanation": "The context includes a relationship where the node with ORCID 0000-0001-6827-1593 has a cluster value of 3 and a display label 'Siddharthan Chandran'. Therefore, the node labeled 'Siddharthan Chandran' belongs to cluster 3."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:coauthorship:false_premise",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:coauthorship:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The context states that the coauthorship network does not contain any visible label for the target node, meaning 'CiteWeave absent benchmark node' is not present in the network. Therefore, the question is based on a false premise and cannot be answered."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:cocitation:network_size",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:cocitation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 204
+        },
+        "explanation": "The context provides a displayed_node_count of 72 and a displayed_edge_count of 204 for the cocitation network, directly answering the question."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:cocitation:highest_occurrence",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "cocitation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:cocitation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W2003618511"
+        },
+        "explanation": "The context states that the highest occurrence node in the cocitation network is 'cocitation:node:openalex:W2003618511', with a display label of 'openalex:W2003618511' and 33 occurrences."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:cocitation:strongest_connection",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "cocitation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:cocitation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "openalex:W2150523249",
+          "target_label": "openalex:W2154945114",
+          "weight": 27.0
+        },
+        "explanation": "The fact 'cocitation:fact:strongest_connection' explicitly states that the strongest connection is between openalex:W2150523249 and openalex:W2154945114. The edge weight for this connection is given as 27.0 in 'cocitation:edge:0001:weight'. Both labels are visible as 'openalex:W2150523249' and 'openalex:W2154945114'."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:cocitation:cluster_membership",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "cocitation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:cocitation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W2154945114",
+          "cluster": 4
+        },
+        "explanation": "The context includes a relationship with atom_id 'cocitation:node:openalex:W2154945114:cluster' where the subject is 'cocitation:node:openalex:W2154945114', the predicate is 'cluster', and the object is 4. This directly indicates that the node 'openalex:W2154945114' belongs to cluster 4."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:cocitation:false_premise",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:cocitation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the cocitation network does not contain a visible label for 'CiteWeave absent benchmark node', meaning the node is not present in the network. Since the question asks which cluster contains this absent node, it is based on a false premise, and the material does not establish an answer."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:institution_collaboration:network_size",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:institution_collaboration:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 71,
+          "links": 168
+        },
+        "explanation": "The context provides two facts: the displayed node count is 71 and the displayed edge count is 168 for the institution_collaboration network. These directly answer the question about the number of nodes and links."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:institution_collaboration:highest_occurrence",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "institution_collaboration",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:institution_collaboration:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "University of Massachuset…"
+        },
+        "explanation": "The context states that the highest occurrence node in the institution_collaboration network is institution_collaboration:node:ror:0464eyp60, which has the display label 'University of Massachuset…' and 13.0 occurrences."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:institution_collaboration:strongest_connection",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "institution_collaboration",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:institution_collaboration:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Johns Hopkins University",
+          "target_label": "Johns Hopkins Medicine",
+          "weight": 7.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that Johns Hopkins University has the strongest connection to Johns Hopkins Medicine. The edge weight for this connection is given as 7.0. Both labels are directly provided in the context."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:institution_collaboration:cluster_membership",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "institution_collaboration",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:institution_collaboration:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "University of Edinburgh",
+          "cluster": 2
+        },
+        "explanation": "The context includes a relationship where the node with ROR ID ror:01nrxwf90 has a cluster value of 2 and a display label 'University of Edinburgh'. Therefore, the node 'University of Edinburgh' belongs to cluster 2."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:institution_collaboration:false_premise",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:institution_collaboration:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the institution_collaboration network does not contain a visible label for 'CiteWeave absent benchmark node', meaning the node is not present in the network. Therefore, the question is based on a false premise, and we must abstain."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:network_size",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 192
+        },
+        "explanation": "The context provides two facts: the displayed node count is 72 and the displayed edge count is 192 for the keyword_cooccurrence network. Therefore, the network has 72 nodes and 192 links."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:highest_occurrence",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Biology"
+        },
+        "explanation": "The context states that the node 'keyword_cooccurrence:node:Biology' has the highest occurrence in the keyword_cooccurrence network, with a display label of 'Biology' and an occurrence value of 195.0."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:strongest_connection",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Biology",
+          "target_label": "Genetics",
+          "weight": 156.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that Biology has the strongest connection to Genetics, and the edge weight for this connection is given as 156.0."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:cluster_membership",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Biology",
+          "cluster": 3
+        },
+        "explanation": "The context provides a relationship where the node 'keyword_cooccurrence:node:Biology' has a 'cluster' predicate with an integer value of 3. This directly indicates that the node labeled 'Biology' belongs to cluster 3."
+      }
+    },
+    {
+      "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:false_premise",
+      "dataset_id": "gene_editing_als_2004_2024",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gene_editing_als_2004_2024:keyword_cooccurrence:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the keyword_cooccurrence network does not contain any visible label for 'CiteWeave absent benchmark node', as indicated by the relationship with object false. Therefore, the premise is false, and the question cannot be answered."
+      }
+    }
+  ],
+  "formal_metadata": {
+    "dataset_id": "gene_editing_als_2004_2024",
+    "condition": "graph_rag",
+    "run_id": "formal_v2_nonthinking_20260806",
+    "run_manifest_sha256": "32115325ceafced560fcaeffe84aeb2df35c0e41d7124f0addcdd17db64a97c4",
+    "checkpoint_sha256": "bbd30deecadd3b38005de8f9895cf9bf39156f4df0e0ec8ba4ac1b8c2f7ee8bb",
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate",
+      "abstention_f1"
+    ]
+  }
+}

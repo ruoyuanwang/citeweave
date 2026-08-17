@@ -197,7 +197,10 @@ def normalize_keyword(value: Any) -> str | None:
 
 
 def _date_parts_crossref(item: dict[str, Any]) -> tuple[int | None, str | None]:
-    for key in ("published-print", "published-online", "published", "issued", "created"):
+    # Crossref's publication-date filters follow the work's published/issued
+    # date.  Prefer that date over a later print issue date so canonical years
+    # remain inside the registered acquisition window for online-first works.
+    for key in ("published", "issued", "published-online", "published-print", "created"):
         obj = item.get(key)
         if not obj:
             continue

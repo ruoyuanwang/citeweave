@@ -1,0 +1,63 @@
+{
+  "dataset_id": "climate_change_risks_1990_2021",
+  "generator_role": "codex_visual_subagent",
+  "packet_sha256": "88f40e1b26fec56493d3ded977da49b7cced27d3ab8324bfbad440d64fbe6531",
+  "results": [
+    {
+      "abstain": false,
+      "answer": {
+        "links": 197,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle reads “72 nodes · 197 links.”",
+      "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 55,
+        "nodes": 60
+      },
+      "explanation": "The visible subtitle reads “60 nodes · 55 links.”",
+      "item_id": "climate_change_risks_1990_2021:citation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 149,
+        "nodes": 60
+      },
+      "explanation": "The visible subtitle reads “60 nodes · 149 links.”",
+      "item_id": "climate_change_risks_1990_2021:coauthorship:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 192,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle reads “72 nodes · 192 links.”",
+      "item_id": "climate_change_risks_1990_2021:cocitation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 192,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle reads “72 nodes · 192 links.”",
+      "item_id": "climate_change_risks_1990_2021:institution_collaboration:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 196,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle reads “72 nodes · 196 links.”",
+      "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:network_size"
+    }
+  ],
+  "schema_version": 1,
+  "visible_only": true
+}

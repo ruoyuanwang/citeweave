@@ -1,0 +1,1 @@
+{"packet_id":"EP787935550b74a261093b","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The boolean abstention is the supported response because the target visible label is absent.","evidence_ids":["bibliographic_coupling:fact:absent_target"]}

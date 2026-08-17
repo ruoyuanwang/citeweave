@@ -1,0 +1,105 @@
+{
+  "packet_id": "EP1cc1a1fe1fd42d9ebfcf",
+  "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:strongest_connection:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:edge:0001:relation",
+        "bibliographic_coupling:edge:0001:weight",
+        "bibliographic_coupling:fact:strongest_connection",
+        "bibliographic_coupling:node:doi:10.1093/bib/bbab109:label",
+        "bibliographic_coupling:node:doi:10.1093/bib/bbad400:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:edge:0001",
+        "bibliographic_coupling:node:doi:10.1093/bib/bbab109",
+        "bibliographic_coupling:node:doi:10.1093/bib/bbad400"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "bibliographic_coupling:edge:0001:relation"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1093/bib/bbab109",
+            "bibliographic_coupling:node:doi:10.1093/bib/bbad400"
+          ],
+          "path_id": "path:bibliographic_coupling:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "bibliographic_coupling:fact:strongest_connection"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1093/bib/bbab109",
+            "bibliographic_coupling:node:doi:10.1093/bib/bbad400"
+          ],
+          "path_id": "path:bibliographic_coupling:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:relation",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1093/bib/bbad400",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "bibliographic_coupling:node:doi:10.1093/bib/bbab109"
+        },
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:weight",
+          "network": "bibliographic_coupling",
+          "object": 38.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "bibliographic_coupling:edge:0001"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:strongest_connection",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1093/bib/bbad400",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "bibliographic_coupling:node:doi:10.1093/bib/bbab109"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1093/bib/bbab109:label",
+          "network": "bibliographic_coupling",
+          "object": "An effective self-superv…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1093/bib/bbab109"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1093/bib/bbad400:label",
+          "network": "bibliographic_coupling",
+          "object": "BatmanNet: bi-branch mas…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1093/bib/bbad400"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "161dd2a976e32b0e336b999f7593a589c1452c7b10d91fcda08b8634b1772496"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the bibliographic_coupling network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"An effective self-superv…\",\"target_label\":\"BatmanNet: bi-branch mas…\",\"weight\":38.0},\"explanation\":\"The fact 'strongest_connection' explicitly states that the node with label 'An effective self-superv…' has the strongest connection to the node with label 'BatmanNet: bi-branch mas…'. The weight of this connection is given as 38.0 in the edge weight relationship.\",\"item_id\":\"gnn_drug_discovery_2017_2023:bibliographic_coupling:strongest_connection\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbab109:label",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbad400:label",
+    "path:bibliographic_coupling:edge:0001:relation",
+    "path:bibliographic_coupling:fact:strongest_connection"
+  ],
+  "content_sha256": "d194b2bd2d2b4dce7a7959a98858962ed8490e53c8a86ca08810d6ce3768e89b"
+}

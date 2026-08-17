@@ -1,0 +1,94 @@
+{
+  "contains_condition_identities": false,
+  "controller_metadata_in_scope": false,
+  "judge_id": "eval_b",
+  "may_modify_pipeline_or_source_artifacts": false,
+  "output_format": "One JSON object per input packet, in input order, as JSONL.",
+  "result_schema": {
+    "candidates": [
+      {
+        "claims": [
+          {
+            "claim": "one material claim",
+            "evidence_ids": [
+              "visible evidence IDs; required when supported"
+            ],
+            "verdict": "supported|contradicted|not_in_evidence"
+          }
+        ],
+        "completeness_score": "integer 1..5",
+        "slot": "A"
+      },
+      {
+        "claims": "same structure as slot A",
+        "completeness_score": "integer 1..5",
+        "slot": "B"
+      }
+    ],
+    "judge_id": "the assigned judge_id",
+    "packet_id": "copy exactly from the packet",
+    "preference": "A|B|tie",
+    "rationale": "concise evidence-bounded rationale"
+  },
+  "role": "independent_blind_evaluation_only",
+  "rubric": [
+    "Use only the anonymous candidates and canonical evidence visible in each packet; do not browse, call APIs, use hidden files, or use outside knowledge.",
+    "For each candidate, enumerate its material factual, numeric, relational, methodological, and interpretive claims at a consistent claim granularity.",
+    "Mark each claim supported, contradicted, or not_in_evidence. Every supported claim must cite one or more evidence IDs visible for that candidate; never invent an evidence ID.",
+    "For paired-evidence packets, assess each candidate only against its own paired evidence and never treat cross-corpus count differences as errors.",
+    "Assign completeness_score from 1 to 5 for how fully and cautiously the candidate answers the question within the visible evidence.",
+    "Choose A, B, or tie by evidence-bounded factuality, completeness, explanation, caution, and usefulness—not by presumed system identity or writing style."
+  ],
+  "schema_version": 1,
+  "tasks": [
+    {
+      "domain": "report",
+      "output_file": "D:\\project\\bibagent\\experiments\\formal_judge_returns\\eval_b\\RT01\\judgments.jsonl",
+      "packet_count": 6,
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_judging_ready\\packets\\eval_b\\report\\RT01\\packets.jsonl",
+      "packet_sha256": "f6ac294de0c10ca9dd34370d0f5e8e0aad5d4e0e53ac7adf8f8f533ba3f1347b",
+      "task_id": "RT01"
+    },
+    {
+      "domain": "report",
+      "output_file": "D:\\project\\bibagent\\experiments\\formal_judge_returns\\eval_b\\RT02\\judgments.jsonl",
+      "packet_count": 6,
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_judging_ready\\packets\\eval_b\\report\\RT02\\packets.jsonl",
+      "packet_sha256": "208b019e3d7d04152585567f91c71a61c12204aa7d25652f2034a395d0cde6dd",
+      "task_id": "RT02"
+    },
+    {
+      "domain": "report",
+      "output_file": "D:\\project\\bibagent\\experiments\\formal_judge_returns\\eval_b\\RT03\\judgments.jsonl",
+      "packet_count": 6,
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_judging_ready\\packets\\eval_b\\report\\RT03\\packets.jsonl",
+      "packet_sha256": "77af15f8030dc684d2f13740f205a86ff018fd8469bb90ce6b09ab8f35012c1e",
+      "task_id": "RT03"
+    },
+    {
+      "domain": "graph",
+      "output_file": "D:\\project\\bibagent\\experiments\\formal_judge_returns\\eval_b\\GT01\\judgments.jsonl",
+      "packet_count": 174,
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_judging_ready\\packets\\eval_b\\graph\\GT01\\packets.jsonl",
+      "packet_sha256": "8b859fdd111ed2717c9a5922403f66b6b1d2d7f8e3cb4557afa3c560ffb36eed",
+      "task_id": "GT01"
+    },
+    {
+      "domain": "graph",
+      "output_file": "D:\\project\\bibagent\\experiments\\formal_judge_returns\\eval_b\\GT02\\judgments.jsonl",
+      "packet_count": 174,
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_judging_ready\\packets\\eval_b\\graph\\GT02\\packets.jsonl",
+      "packet_sha256": "f6c45176677942f1d41eccfd8590bea90cad7fe92ad60b8a678e7da8580d5f70",
+      "task_id": "GT02"
+    },
+    {
+      "domain": "graph",
+      "output_file": "D:\\project\\bibagent\\experiments\\formal_judge_returns\\eval_b\\GT03\\judgments.jsonl",
+      "packet_count": 35,
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_judging_ready\\packets\\eval_b\\graph\\GT03\\packets.jsonl",
+      "packet_sha256": "374ff9fe9ab37d8af236efc84c49de8f1a808bc5ae7f3c9edc617a6be68b4728",
+      "task_id": "GT03"
+    }
+  ],
+  "write_scope": "Only the six output_file paths listed below."
+}

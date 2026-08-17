@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "audit_packet_id": "APec6cb75dbae192393f83",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:cluster",
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:cluster",
+          "network": "bibliographic_coupling",
+          "object": 3,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label",
+          "network": "bibliographic_coupling",
+          "object": "Drought and heat stress-…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "8c50f652a2c0243dbef515dd37b289b03c3e0153580d1fb762cd3be0d54aec6f"
+    },
+    "question": "Which detected cluster contains the labeled node 'Drought and heat stress-…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":3,\"label\":\"Drought and heat stress-…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1007/s00122-019-03331-2 has a cluster value of 3 and a display label 'Drought and heat stress-…'. Therefore, the labeled node belongs to cluster 3.\",\"item_id\":\"plant_heat_drought_2008_2021:bibliographic_coupling:cluster_membership\"}",
+  "evaluation_decision": "pass",
+  "evaluation_confidence": 0.99,
+  "evaluation_reason": "The visible label and cluster 3 exactly match the canonical node evidence.",
+  "evaluation_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:cluster",
+    "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label"
+  ],
+  "content_sha256": "67012e0cc6def8ca9993d6a0c239efe9475df14b79f98f0b7c1d5026ffc5d2ae"
+}

@@ -1,0 +1,15 @@
+{
+  "packet_id": "EP32cde425c0345c69a319",
+  "decision": "fail",
+  "confidence": 0.98,
+  "reason": "Although most reported counts match the visible evidence, several material conclusions exceed it. E002 supports pagination exhaustion and reports 7,686 acquired unique records against 7,717 expected, but does not support the report's broader characterization of the single-source search as comprehensive. E016 notes only that recent works have had less time to accumulate citations; it does not establish that the 2022 cohort heavily caused the observed zero-citation share. E018 reports citation counts and explicitly warns that they do not measure quality, so describing the top work as a high-impact methodological resource is unsupported. E006 supports endpoint CAGR but not the causal claim that growth was driven by climate urgency and maturation of machine learning. E024 and E026 provide parameterized network structures but do not support claims that communities reflect specific methodological or geographic expertise. These repeated causal and substantive overclaims prevent the candidate from being fully evidence-supported.",
+  "evidence_ids": [
+    "E002",
+    "E006",
+    "E016",
+    "E018",
+    "E024",
+    "E026"
+  ],
+  "judge_id": "evaluation"
+}

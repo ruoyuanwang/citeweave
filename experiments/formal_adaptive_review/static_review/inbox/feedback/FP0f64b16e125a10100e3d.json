@@ -1,0 +1,16 @@
+{
+  "packet_id": "FP0f64b16e125a10100e3d",
+  "judge_id": "feedback",
+  "decision": "revise",
+  "confidence": 0.99,
+  "reason": "The evidence supports descriptive endpoint growth and source-concentration metrics, but it does not establish that the research domain is emerging or technology-driven.",
+  "evidence_ids": [
+    "E006",
+    "E019"
+  ],
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "are consistent with an emerging, technology-driven research domain",
+    "replacement_text": "describe endpoint publication growth and source concentration within this corpus, without establishing that the domain is emerging or technology-driven [E006, E019]"
+  }
+}

@@ -1,0 +1,1 @@
+{"packet_id":"EPf7c7eb954106e7e1957e","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The candidate returns the canonical visible label and cluster 4.","evidence_ids":["bibliographic_coupling:node:doi:10.1145/3485128:cluster","bibliographic_coupling:node:doi:10.1145/3485128:label"]}

@@ -1,0 +1,15 @@
+{
+  "packet_id": "FPa259265861e2a6256a06",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible evidence identifies the stated labeled pair as the strongest displayed connection and gives its weight as 91.0.",
+  "evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label",
+    "bibliographic_coupling:node:doi:10.5194/acp-15-8889-2015:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

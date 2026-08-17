@@ -1,0 +1,603 @@
+{
+  "benchmark_version": 1,
+  "items": 24,
+  "predictions_received": 24,
+  "metrics": {
+    "exact_answer_accuracy": 0.25,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.9090909090909091,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 0.38461538461538464,
+    "abstention_f1": 0.5555555555555556
+  },
+  "counts": {
+    "correct": 6,
+    "answered": 11,
+    "incorrect_answered": 10,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 11,
+    "abstention": {
+      "tn": 11,
+      "tp": 5,
+      "fn": 8
+    }
+  },
+  "by_task": {
+    "cluster_membership": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_occurrence": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_connection": {
+      "items": 4,
+      "accuracy": 0.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 4,
+      "accuracy": 0.5,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:network_size",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 50,
+          "links": 120
+        },
+        "explanation": "The supplied material indicates that the bibliographic coupling network contains 50 nodes and 120 links."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:highest_occurrence",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "CRISPR/Cas9"
+        },
+        "explanation": "In the bibliographic coupling network, the node labeled 'CRISPR/Cas9' appears most frequently among the visible labels, with a count of 5 occurrences, compared to other nodes like 'extracellular vesicles' (4) and 'exosomes' (3)."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:cluster_membership",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Gene Editing by Extracel…",
+          "cluster": 1
+        },
+        "explanation": "The node labeled 'Gene Editing by Extracel…' is visible in the network and belongs to the cluster colored red, which corresponds to cluster 1 as indicated by the legend."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:false_premise",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The supplied material does not contain any bibliographic coupling network or mention of 'CiteWeave absent benchmark node', so it is impossible to determine which cluster it belongs to."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:network_size",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:network_size",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any information about a coauthorship network, its nodes, or links, so the answer cannot be determined."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:highest_occurrence",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "coauthorship",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:highest_occurrence",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any data about a coauthorship network, such as node labels or occurrence counts, so it is impossible to determine which labeled node has the highest occurrence."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:strongest_connection",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "coauthorship",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Zhang, Yu",
+          "target_label": "Wang, Wei",
+          "weight": 15
+        },
+        "explanation": "The coauthorship network shows a connection between Zhang, Yu and Wang, Wei with a weight of 15, which is the highest among all displayed connections."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:cluster_membership",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "coauthorship",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:cluster_membership",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not include any information about a coauthorship network, clusters, or the node 'Xiaohui Chen', so the cluster membership cannot be determined."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:false_premise",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The question asks about a node labeled 'CiteWeave absent benchmark node', but the supplied material does not contain any information about such a node or a coauthorship network. Since the premise is false and the material cannot establish the answer, we abstain."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:network_size",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:network_size",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any information about a cocitation network, its nodes, or links, so the answer cannot be determined."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:highest_occurrence",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "cocitation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Extracellular Vesicles"
+        },
+        "explanation": "The node 'Extracellular Vesicles' has the highest occurrence value of 1,000, which is greater than all other labeled nodes in the cocitation network."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:strongest_connection",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "cocitation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Alvarez-Erviti L, 2011",
+          "target_label": "Valadi H, 2007",
+          "weight": 15
+        },
+        "explanation": "The cocitation network shows a link between Alvarez-Erviti L, 2011 and Valadi H, 2007 with a displayed weight of 15, which is the highest among all visible connections."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:cluster_membership",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "cocitation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W2900756811",
+          "cluster": 1
+        },
+        "explanation": "The node 'openalex:W2900756811' is listed in the cluster membership data under cluster 1, as shown in the provided material."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:false_premise",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The question asks about a 'CiteWeave absent benchmark node' in a cocitation network, but the supplied material does not contain any information about such a node or any cocitation network clusters. Therefore, it is impossible to answer based on the provided material."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:network_size",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:network_size",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any information about a bibliometric network, its nodes, or links, so the network size cannot be determined."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:highest_occurrence",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "institution_collaboration",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:highest_occurrence",
+        "abstain": true,
+        "answer": null,
+        "explanation": "No material was supplied for the bibliometric network question, so it is impossible to determine which labeled node has the highest occurrence in the institution_collaboration network."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:strongest_connection",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "institution_collaboration",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:strongest_connection",
+        "abstain": true,
+        "answer": null,
+        "explanation": "No material was supplied for the bibliometric network question, so it is impossible to determine the strongest connection or its weight."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:cluster_membership",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "institution_collaboration",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Harvard University",
+          "cluster": 1
+        },
+        "explanation": "In the institution_collaboration network, the node labeled 'Harvard University' is visually located within the cluster colored in red, which corresponds to cluster 1 as indicated by the legend."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:false_premise",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any information about a 'CiteWeave absent benchmark node' or an institution_collaboration network, so the premise is false and the question cannot be answered."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:network_size",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:network_size",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material does not contain any information about a keyword co-occurrence network, its nodes, or links, so the answer cannot be determined."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:highest_occurrence",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "extracellular vesicles"
+        },
+        "explanation": "The node 'extracellular vesicles' has the largest size and is centrally located, indicating the highest occurrence. Its label is clearly visible in the network."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:strongest_connection",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "extracellular vesicles",
+          "target_label": "exosomes",
+          "weight": 50
+        },
+        "explanation": "The network visualization shows a link between 'extracellular vesicles' and 'exosomes' with a displayed weight of 50, which is the highest among all visible connections. Other links have lower weights, such as 25 between 'extracellular vesicles' and 'drug delivery'. Therefore, this pair has the strongest connection."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:cluster_membership",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Biology",
+          "cluster": 1
+        },
+        "explanation": "In the keyword co-occurrence network, the node labeled 'Biology' is assigned to cluster 1, as indicated by the cluster membership data provided in the material."
+      }
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:false_premise",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The supplied material does not contain any information about a 'CiteWeave absent benchmark node' or a keyword co-occurrence network, so it is impossible to determine which cluster it belongs to."
+      }
+    }
+  ],
+  "formal_metadata": {
+    "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+    "condition": "no_rag",
+    "run_id": "formal_v2_nonthinking_20260806",
+    "run_manifest_sha256": "bdb896d0bcb057e9a3dcf0c2a0ed16094c0b43dc0dcdbf2c294431ff2b35a67c",
+    "checkpoint_sha256": "e632d18abdb5cecd146452f2de4c36f83671ea3b6c2d551229825d2591c16f76",
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate",
+      "abstention_f1"
+    ]
+  }
+}

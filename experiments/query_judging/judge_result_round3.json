@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v2",
+  "prompt_sha256": "29ce1db17aa07a59add416520a8cd7fe91b63e7992913a468bc65afae7a3824c",
+  "packet_sha256": "df92b7a3c2e82c924edb8300a63116c637938517f20bf97e4f8630eab925a248",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "The two unambiguous phrases directly capture GNN work in drug discovery without restricting it to a particular application, and the explicit years are valid."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "reject",
+      "reason": "Requiring \"gene editing\" unnecessarily narrows the stated topic and can exclude CRISPR-related extracellular-vesicle work involving delivery, detection, or other associated technologies."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The phrases are unambiguous and jointly cover machine-learning applications across climate-change research without imposing an application-specific restriction."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "The combination is topically direct and broad enough to cover varied climate-change risks while remaining more specific than a generic climate-change query."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "The two phrases clearly identify digital-twin applications in healthcare without an undue subfield constraint; the explicit 2012–2023 protocol window is valid."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "The phrases jointly and unambiguously represent plant responses under both heat and drought stress, and the explicit year range is valid."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "accept",
+      "reason": "The query directly captures gene-editing research associated with ALS without limiting the technique to CRISPR; the explicit 2004–2023 protocol window is valid."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "\"Microplastics\" is an unambiguous field term suitable for a global mapping topic, where no geographic phrase or filter is required, and the years are valid."
+    }
+  ]
+}

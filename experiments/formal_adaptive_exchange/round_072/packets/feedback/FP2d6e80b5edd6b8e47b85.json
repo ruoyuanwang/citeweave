@@ -1,0 +1,3272 @@
+{
+  "packet_id": "FP2d6e80b5edd6b8e47b85",
+  "sample_id": "global_microplastics_2004_2019:report:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": [
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": null,
+      "claim_type": "corpus_size",
+      "evidence_id": "E001",
+      "method": "Count of canonical work_id after deterministic exact deduplication.",
+      "selector": {},
+      "statement": "The included corpus contains 3973 unique works.",
+      "unit": null,
+      "value": 3973
+    },
+    {
+      "artifact_path": "audit/acquisition_manifest.json",
+      "caveat": "Completeness is relative to the named source, query, time, and retrieval date.",
+      "claim_type": "acquisition_completeness",
+      "evidence_id": "E002",
+      "method": "Cursor pagination continued until the source returned no next cursor.",
+      "selector": {},
+      "statement": "The source reported 4002 results and 3995 unique source records were acquired.",
+      "unit": null,
+      "value": {
+        "acquired_unique": 3995,
+        "complete": true,
+        "expected": 4002,
+        "truncated": false
+      }
+    },
+    {
+      "artifact_path": "quality/field_coverage.parquet",
+      "caveat": "Field completeness measures metadata availability, not database recall or the substantive quality of the publications.",
+      "claim_type": "metadata_coverage",
+      "evidence_id": "E003",
+      "method": "Non-null canonical values divided by the canonical corpus size.",
+      "selector": {},
+      "statement": "Field completeness was measured after normalization for every canonical work.",
+      "unit": null,
+      "value": {
+        "abstract": {
+          "coverage_percent": 43.32,
+          "missing": 2252,
+          "missing_percent": 56.68,
+          "present": 1721
+        },
+        "cited_by_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 3973
+        },
+        "document_type": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 3973
+        },
+        "doi": {
+          "coverage_percent": 80.67,
+          "missing": 768,
+          "missing_percent": 19.33,
+          "present": 3205
+        },
+        "language": {
+          "coverage_percent": 99.6,
+          "missing": 16,
+          "missing_percent": 0.4,
+          "present": 3957
+        },
+        "publication_date": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 3973
+        },
+        "publisher": {
+          "coverage_percent": 83.77,
+          "missing": 645,
+          "missing_percent": 16.23,
+          "present": 3328
+        },
+        "reference_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 3973
+        },
+        "source_id": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 3973
+        },
+        "title": {
+          "coverage_percent": 99.9,
+          "missing": 4,
+          "missing_percent": 0.1,
+          "present": 3969
+        },
+        "year": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 3973
+        }
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": null,
+      "claim_type": "time_span",
+      "evidence_id": "E004",
+      "method": "Minimum and maximum non-missing publication year.",
+      "selector": {},
+      "statement": "The corpus spans 2004–2019.",
+      "unit": null,
+      "value": {
+        "end": 2019,
+        "start": 2004
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_peak",
+      "evidence_id": "E005",
+      "method": "Maximum whole-counted works grouped by publication year.",
+      "selector": {},
+      "statement": "Annual output peaked in 2019 with 1329 works.",
+      "unit": null,
+      "value": {
+        "publications": 1329,
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "Endpoint CAGR does not establish a monotonic trend.",
+      "claim_type": "growth",
+      "evidence_id": "E006",
+      "method": "CAGR = (last/first)^(1/year difference)-1.",
+      "selector": {},
+      "statement": "Compound annual publication growth over the observed non-zero endpoints is 29.35%.",
+      "unit": null,
+      "value": 29.35
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_output_series",
+      "evidence_id": "E007",
+      "method": "Whole-counted canonical works grouped by non-missing publication year; year-over-year change is the current count minus the preceding count.",
+      "selector": {},
+      "statement": "Annual publication counts are available for every observed year.",
+      "unit": null,
+      "value": [
+        {
+          "publications": 28,
+          "year": 2004,
+          "year_over_year_change": null
+        },
+        {
+          "publications": 31,
+          "year": 2005,
+          "year_over_year_change": 3
+        },
+        {
+          "publications": 47,
+          "year": 2006,
+          "year_over_year_change": 16
+        },
+        {
+          "publications": 50,
+          "year": 2007,
+          "year_over_year_change": 3
+        },
+        {
+          "publications": 37,
+          "year": 2008,
+          "year_over_year_change": -13
+        },
+        {
+          "publications": 51,
+          "year": 2009,
+          "year_over_year_change": 14
+        },
+        {
+          "publications": 56,
+          "year": 2010,
+          "year_over_year_change": 5
+        },
+        {
+          "publications": 48,
+          "year": 2011,
+          "year_over_year_change": -8
+        },
+        {
+          "publications": 75,
+          "year": 2012,
+          "year_over_year_change": 27
+        },
+        {
+          "publications": 93,
+          "year": 2013,
+          "year_over_year_change": 18
+        },
+        {
+          "publications": 133,
+          "year": 2014,
+          "year_over_year_change": 40
+        },
+        {
+          "publications": 208,
+          "year": 2015,
+          "year_over_year_change": 75
+        },
+        {
+          "publications": 330,
+          "year": 2016,
+          "year_over_year_change": 122
+        },
+        {
+          "publications": 446,
+          "year": 2017,
+          "year_over_year_change": 116
+        },
+        {
+          "publications": 1011,
+          "year": 2018,
+          "year_over_year_change": 565
+        },
+        {
+          "publications": 1329,
+          "year": 2019,
+          "year_over_year_change": 318
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": null,
+      "claim_type": "top_source",
+      "evidence_id": "E008",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Marine Pollution Bulletin ranks first with 395 publications.",
+      "unit": null,
+      "value": {
+        "name": "Marine Pollution Bulletin",
+        "publications": 395
+      }
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_source_ranking",
+      "evidence_id": "E009",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top source records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Marine Pollution Bulletin",
+          "publications": 395
+        },
+        {
+          "name": "Environmental Pollution",
+          "publications": 323
+        },
+        {
+          "name": "The Science of The Total Environment",
+          "publications": 243
+        },
+        {
+          "name": "Dialnet (Universidad de la Rioja)",
+          "publications": 231
+        },
+        {
+          "name": "Environmental Science & Technology",
+          "publications": 142
+        },
+        {
+          "name": "Chemosphere",
+          "publications": 88
+        },
+        {
+          "name": "Environmental Science and Pollution Research",
+          "publications": 55
+        },
+        {
+          "name": "Water Research",
+          "publications": 55
+        },
+        {
+          "name": "Scientific Reports",
+          "publications": 48
+        },
+        {
+          "name": "Journal of Hazardous Materials",
+          "publications": 34
+        },
+        {
+          "name": "TrAC Trends in Analytical Chemistry",
+          "publications": 30
+        },
+        {
+          "name": "Ecotoxicology and Environmental Safety",
+          "publications": 29
+        },
+        {
+          "name": "Physics of the Solid State",
+          "publications": 28
+        },
+        {
+          "name": "Environmental Toxicology and Chemistry",
+          "publications": 27
+        },
+        {
+          "name": "Analytical Methods",
+          "publications": 26
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": null,
+      "claim_type": "top_author",
+      "evidence_id": "E010",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Dario Mendez-Cuadro ranks first with 127 publications.",
+      "unit": null,
+      "value": {
+        "name": "Dario Mendez-Cuadro",
+        "publications": 127
+      }
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_author_ranking",
+      "evidence_id": "E011",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top author records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Dario Mendez-Cuadro",
+          "publications": 127
+        },
+        {
+          "name": "Albert A. Koelmans",
+          "publications": 47
+        },
+        {
+          "name": "Richard C. Thompson",
+          "publications": 45
+        },
+        {
+          "name": "Huahong Shi",
+          "publications": 42
+        },
+        {
+          "name": "Tamara S. Galloway",
+          "publications": 35
+        },
+        {
+          "name": "B. K. Kardashev",
+          "publications": 29
+        },
+        {
+          "name": "Gunnar Gerdts",
+          "publications": 29
+        },
+        {
+          "name": "Won Joon Shim",
+          "publications": 28
+        },
+        {
+          "name": "Ulrike Braun",
+          "publications": 26
+        },
+        {
+          "name": "Amy Lusher",
+          "publications": 23
+        },
+        {
+          "name": "Lúcia Guilhermino",
+          "publications": 23
+        },
+        {
+          "name": "María Cristina Fossi",
+          "publications": 22
+        },
+        {
+          "name": "Matthew Cole",
+          "publications": 22
+        },
+        {
+          "name": "Paula Sobral",
+          "publications": 22
+        },
+        {
+          "name": "Armando C. Duarte",
+          "publications": 21
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": null,
+      "claim_type": "top_institution",
+      "evidence_id": "E012",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Chinese Academy of Sciences ranks first with 109 publications.",
+      "unit": null,
+      "value": {
+        "name": "Chinese Academy of Sciences",
+        "publications": 109
+      }
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_institution_ranking",
+      "evidence_id": "E013",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top institution records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Chinese Academy of Sciences",
+          "publications": 109
+        },
+        {
+          "name": "Centre National de la Recherche Scientifique",
+          "publications": 91
+        },
+        {
+          "name": "East China Normal University",
+          "publications": 69
+        },
+        {
+          "name": "University of Chinese Academy of Sciences",
+          "publications": 63
+        },
+        {
+          "name": "Wageningen University & Research",
+          "publications": 59
+        },
+        {
+          "name": "University of Plymouth",
+          "publications": 58
+        },
+        {
+          "name": "Ifremer",
+          "publications": 50
+        },
+        {
+          "name": "University of Exeter",
+          "publications": 48
+        },
+        {
+          "name": "Russian Academy of Sciences",
+          "publications": 45
+        },
+        {
+          "name": "State Key Laboratory of Pollution Control and Resource Reuse",
+          "publications": 41
+        },
+        {
+          "name": "University of Aveiro",
+          "publications": 38
+        },
+        {
+          "name": "Plymouth Marine Laboratory",
+          "publications": 36
+        },
+        {
+          "name": "Universidade do Porto",
+          "publications": 36
+        },
+        {
+          "name": "Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung",
+          "publications": 33
+        },
+        {
+          "name": "Instituto Español de Oceanografía",
+          "publications": 32
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/document_types.parquet",
+      "caveat": "Document-type labels inherit source classification practices.",
+      "claim_type": "document_type_distribution",
+      "evidence_id": "E014",
+      "method": "Whole-counted canonical works grouped by source-supplied document type.",
+      "selector": {},
+      "statement": "Document types were counted across the complete canonical corpus.",
+      "unit": null,
+      "value": {
+        "review_and_systematic_review_documents": 0,
+        "types": [
+          {
+            "document_type": "article",
+            "publications": 3973,
+            "share_percent": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent.",
+      "claim_type": "citation_summary",
+      "evidence_id": "E015",
+      "method": "Citation-count field supplied by the selected source at retrieval time.",
+      "selector": {},
+      "statement": "Mean citations are 201.34 and the median is 61.00.",
+      "unit": null,
+      "value": {
+        "mean": 201.34,
+        "median": 61.0
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "Recent works have had less time to accumulate citations.",
+      "claim_type": "zero_citation_share",
+      "evidence_id": "E016",
+      "method": "Count and percentage of canonical works with cited_by_count equal to zero.",
+      "selector": {},
+      "statement": "905 works have zero source-reported citations, representing 22.78% of the corpus.",
+      "unit": null,
+      "value": {
+        "share_percent": 22.78,
+        "zero_cited": 905
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent; papers have unequal citation windows.",
+      "claim_type": "citation_distribution_detail",
+      "evidence_id": "E017",
+      "method": "Descriptive statistics of the source-supplied cited-by count.",
+      "selector": {},
+      "statement": "Citation-distribution statistics include central tendency, upper quantiles, maximum, and zero-cited count.",
+      "unit": null,
+      "value": [
+        {
+          "metric": "mean",
+          "value": 201.3418071986
+        },
+        {
+          "metric": "median",
+          "value": 61.0
+        },
+        {
+          "metric": "p75",
+          "percentile": 75,
+          "value": 239.0
+        },
+        {
+          "metric": "p90",
+          "percentile": 90,
+          "value": 553.0
+        },
+        {
+          "metric": "p95",
+          "percentile": 95,
+          "value": 833.0
+        },
+        {
+          "metric": "p98",
+          "percentile": 98,
+          "value": 1366.28
+        },
+        {
+          "metric": "maximum",
+          "value": 7932.0
+        },
+        {
+          "metric": "zero_cited",
+          "value": 905.0
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_cited_documents.parquet",
+      "caveat": "Raw citation counts favor older publications and do not by themselves measure quality.",
+      "claim_type": "top_cited_documents",
+      "evidence_id": "E018",
+      "method": "Descending source-reported citation count, with publication year as tie-breaker.",
+      "selector": {},
+      "statement": "The most-cited included documents are retained with title, year, DOI, and source-reported citation count.",
+      "unit": null,
+      "value": [
+        {
+          "cited_by_count": 7932,
+          "doi": "10.1016/j.marpolbul.2011.05.030",
+          "title": "Microplastics in the marine environment",
+          "year": 2011
+        },
+        {
+          "cited_by_count": 5961,
+          "doi": "10.1016/j.marpolbul.2011.09.025",
+          "title": "Microplastics as contaminants in the marine environment: A review",
+          "year": 2011
+        },
+        {
+          "cited_by_count": 5335,
+          "doi": "10.1021/es2031505",
+          "title": "Microplastics in the Marine Environment: A Review of the Methods Used for Identification and Quantification",
+          "year": 2012
+        },
+        {
+          "cited_by_count": 4692,
+          "doi": "10.1021/es201811s",
+          "title": "Accumulation of Microplastic on Shorelines Woldwide: Sources and Sinks",
+          "year": 2011
+        },
+        {
+          "cited_by_count": 4666,
+          "doi": "10.1371/journal.pone.0111913",
+          "title": "Plastic Pollution in the World's Oceans: More than 5 Trillion Plastic Pieces Weighing over 250,000 Tons Afloat at Sea",
+          "year": 2014
+        },
+        {
+          "cited_by_count": 4448,
+          "doi": "10.1016/j.envpol.2013.02.031",
+          "title": "The physical impacts of microplastics on marine organisms: A review",
+          "year": 2013
+        },
+        {
+          "cited_by_count": 3675,
+          "doi": "10.1016/j.scitotenv.2017.01.190",
+          "title": "Microplastics in freshwater and terrestrial environments: Evaluating the current understanding to identify the knowledge gaps and future research priorities",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 3542,
+          "doi": "10.1111/brv.12480",
+          "title": "Emerging threats and persistent conservation challenges for freshwater biodiversity",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 3309,
+          "doi": "10.1021/acs.est.7b00423",
+          "title": "Plastic and Human Health: A Micro Issue?",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 3102,
+          "doi": "10.1073/pnas.1314705111",
+          "title": "Plastic debris in the open ocean",
+          "year": 2014
+        },
+        {
+          "cited_by_count": 2716,
+          "doi": "10.1021/es400663f",
+          "title": "Microplastic Ingestion by Zooplankton",
+          "year": 2013
+        },
+        {
+          "cited_by_count": 2649,
+          "doi": "10.1021/acs.est.9b01517",
+          "title": "Human Consumption of Microplastics",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 2627,
+          "doi": "10.1021/acs.est.7b05559",
+          "title": "Microplastics and Nanoplastics in Aquatic Environments: Aggregation, Deposition, and Enhanced Contaminant Transport",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 2626,
+          "doi": "10.1016/j.watres.2015.02.012",
+          "title": "Microplastics in freshwater systems: A review of the emerging threats, identification of knowledge gaps and prioritisation of research needs",
+          "year": 2015
+        },
+        {
+          "cited_by_count": 2618,
+          "doi": "10.1016/j.envint.2017.02.013",
+          "title": "Distribution and importance of microplastics in the marine environment: A review of the sources, fate, effects, and potential solutions",
+          "year": 2017
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/bradford_sources.parquet",
+      "caveat": "Records without a source name are excluded from Bradford zoning.",
+      "claim_type": "bradford_zone_distribution",
+      "evidence_id": "E019",
+      "method": "Sources ranked by output and divided by cumulative document thirds.",
+      "selector": {},
+      "statement": "Bradford zones summarize source concentration among records with known source names.",
+      "unit": null,
+      "value": {
+        "rounded_document_range": {
+          "lower": 1150,
+          "rounding_unit": 50,
+          "upper": 1300
+        },
+        "zones": [
+          {
+            "documents": 1192.0,
+            "sources": 4,
+            "zone": 1
+          },
+          {
+            "documents": 1266.0,
+            "sources": 87,
+            "zone": 2
+          },
+          {
+            "documents": 1231.0,
+            "sources": 894,
+            "zone": 3
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/keyword_trends.parquet",
+      "caveat": "Keyword frequencies depend on source metadata, synonym normalization, and the incomplete final year.",
+      "claim_type": "keyword_temporal_dynamics",
+      "evidence_id": "E020",
+      "method": "Unique works per normalized keyword and publication year.",
+      "selector": {},
+      "statement": "Year-by-year document counts are available for the globally most frequent keywords.",
+      "unit": null,
+      "value": [
+        {
+          "documents": 3,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2004
+        },
+        {
+          "documents": 2,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2005
+        },
+        {
+          "documents": 6,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2006
+        },
+        {
+          "documents": 6,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2007
+        },
+        {
+          "documents": 10,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2008
+        },
+        {
+          "documents": 6,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2009
+        },
+        {
+          "documents": 8,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2010
+        },
+        {
+          "documents": 17,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2011
+        },
+        {
+          "documents": 28,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2012
+        },
+        {
+          "documents": 37,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2013
+        },
+        {
+          "documents": 71,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2014
+        },
+        {
+          "documents": 143,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2015
+        },
+        {
+          "documents": 258,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2016
+        },
+        {
+          "documents": 341,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2017
+        },
+        {
+          "documents": 810,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2018
+        },
+        {
+          "documents": 1024,
+          "global_documents": 2770,
+          "keyword": "Microplastics",
+          "year": 2019
+        },
+        {
+          "documents": 4,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2004
+        },
+        {
+          "documents": 1,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2005
+        },
+        {
+          "documents": 6,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2006
+        },
+        {
+          "documents": 6,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2007
+        },
+        {
+          "documents": 6,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2008
+        },
+        {
+          "documents": 5,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2009
+        },
+        {
+          "documents": 7,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2010
+        },
+        {
+          "documents": 16,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2011
+        },
+        {
+          "documents": 21,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2012
+        },
+        {
+          "documents": 35,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2013
+        },
+        {
+          "documents": 61,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2014
+        },
+        {
+          "documents": 137,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2015
+        },
+        {
+          "documents": 227,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2016
+        },
+        {
+          "documents": 287,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2017
+        },
+        {
+          "documents": 722,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2018
+        },
+        {
+          "documents": 857,
+          "global_documents": 2398,
+          "keyword": "Environmental science",
+          "year": 2019
+        },
+        {
+          "documents": 2,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2004
+        },
+        {
+          "documents": 1,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2005
+        },
+        {
+          "documents": 9,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2006
+        },
+        {
+          "documents": 5,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2007
+        },
+        {
+          "documents": 9,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2008
+        },
+        {
+          "documents": 6,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2009
+        },
+        {
+          "documents": 8,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2010
+        },
+        {
+          "documents": 13,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2011
+        },
+        {
+          "documents": 35,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2012
+        },
+        {
+          "documents": 33,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2013
+        },
+        {
+          "documents": 63,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2014
+        },
+        {
+          "documents": 129,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2015
+        },
+        {
+          "documents": 197,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2016
+        },
+        {
+          "documents": 279,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2017
+        },
+        {
+          "documents": 625,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2018
+        },
+        {
+          "documents": 798,
+          "global_documents": 2212,
+          "keyword": "Biology",
+          "year": 2019
+        },
+        {
+          "documents": 2,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2004
+        },
+        {
+          "documents": 1,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2005
+        },
+        {
+          "documents": 5,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2006
+        },
+        {
+          "documents": 6,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2007
+        },
+        {
+          "documents": 9,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2008
+        },
+        {
+          "documents": 5,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2009
+        },
+        {
+          "documents": 7,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2010
+        },
+        {
+          "documents": 12,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2011
+        },
+        {
+          "documents": 27,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2012
+        },
+        {
+          "documents": 35,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2013
+        },
+        {
+          "documents": 56,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2014
+        },
+        {
+          "documents": 117,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2015
+        },
+        {
+          "documents": 180,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2016
+        },
+        {
+          "documents": 261,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2017
+        },
+        {
+          "documents": 592,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2018
+        },
+        {
+          "documents": 755,
+          "global_documents": 2070,
+          "keyword": "Ecology",
+          "year": 2019
+        },
+        {
+          "documents": 6,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2004
+        },
+        {
+          "documents": 3,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2005
+        },
+        {
+          "documents": 6,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2006
+        },
+        {
+          "documents": 14,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2007
+        },
+        {
+          "documents": 6,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2008
+        },
+        {
+          "documents": 8,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2009
+        },
+        {
+          "documents": 10,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2010
+        },
+        {
+          "documents": 10,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2011
+        },
+        {
+          "documents": 16,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2012
+        },
+        {
+          "documents": 28,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2013
+        },
+        {
+          "documents": 37,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2014
+        },
+        {
+          "documents": 73,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2015
+        },
+        {
+          "documents": 152,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2016
+        },
+        {
+          "documents": 222,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2017
+        },
+        {
+          "documents": 465,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2018
+        },
+        {
+          "documents": 697,
+          "global_documents": 1753,
+          "keyword": "Chemistry",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/three_field.parquet",
+      "caveat": "The map is a filtered descriptive view, not a causal pathway.",
+      "claim_type": "three_field_relations",
+      "evidence_id": "E021",
+      "method": "Whole-counted links among leading authors, sources, and keywords.",
+      "selector": {},
+      "statement": "Leading author–source–keyword combinations are retained for relational interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "author": "B. K. Kardashev",
+          "documents": 16,
+          "keyword": "Materials science",
+          "source": "Physics of the Solid State"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 16,
+          "keyword": "Microplastics",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "B. K. Kardashev",
+          "documents": 15,
+          "keyword": "Composite material",
+          "source": "Physics of the Solid State"
+        },
+        {
+          "author": "Huahong Shi",
+          "documents": 15,
+          "keyword": "Microplastics",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 14,
+          "keyword": "Microplastics",
+          "source": "Marine Pollution Bulletin"
+        },
+        {
+          "author": "Huahong Shi",
+          "documents": 14,
+          "keyword": "Ecology",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 13,
+          "keyword": "Environmental science",
+          "source": "Marine Pollution Bulletin"
+        },
+        {
+          "author": "Huahong Shi",
+          "documents": 13,
+          "keyword": "Environmental science",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Huahong Shi",
+          "documents": 13,
+          "keyword": "Biology",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Richard C. Thompson",
+          "documents": 13,
+          "keyword": "Microplastics",
+          "source": "Marine Pollution Bulletin"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 13,
+          "keyword": "Ecology",
+          "source": "Marine Pollution Bulletin"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 13,
+          "keyword": "Biology",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Albert A. Koelmans",
+          "documents": 13,
+          "keyword": "Chemistry",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Albert A. Koelmans",
+          "documents": 12,
+          "keyword": "Biology",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Albert A. Koelmans",
+          "documents": 12,
+          "keyword": "Ecology",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Albert A. Koelmans",
+          "documents": 12,
+          "keyword": "Environmental chemistry",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 12,
+          "keyword": "Biology",
+          "source": "Marine Pollution Bulletin"
+        },
+        {
+          "author": "Tamara S. Galloway",
+          "documents": 12,
+          "keyword": "Biology",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Tamara S. Galloway",
+          "documents": 12,
+          "keyword": "Ecology",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 11,
+          "keyword": "Environmental chemistry",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Tamara S. Galloway",
+          "documents": 11,
+          "keyword": "Microplastics",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Huahong Shi",
+          "documents": 11,
+          "keyword": "Pollution",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Albert A. Koelmans",
+          "documents": 11,
+          "keyword": "Microplastics",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 11,
+          "keyword": "Chemistry",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Albert A. Koelmans",
+          "documents": 11,
+          "keyword": "Environmental science",
+          "source": "Environmental Science & Technology"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 10,
+          "keyword": "Ecology",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 10,
+          "keyword": "Geology",
+          "source": "Marine Pollution Bulletin"
+        },
+        {
+          "author": "Dario Mendez-Cuadro",
+          "documents": 10,
+          "keyword": "Oceanography",
+          "source": "Marine Pollution Bulletin"
+        },
+        {
+          "author": "Huahong Shi",
+          "documents": 10,
+          "keyword": "Environmental chemistry",
+          "source": "Environmental Pollution"
+        },
+        {
+          "author": "Huahong Shi",
+          "documents": 10,
+          "keyword": "Fishery",
+          "source": "Environmental Pollution"
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/network_bibliographic_coupling_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "bibliographic_coupling_structure",
+      "evidence_id": "E022",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The bibliographic coupling candidate network contains 72 nodes and 228 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 4,
+        "edges": 228,
+        "network_parameters": {
+          "candidate_edges": 44910,
+          "candidate_nodes_with_links": 430,
+          "candidate_pool": 430,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 228,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 430,
+          "full_candidate_edge_count": 44910,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.0944486125455432,
+            "mean_edge_length": 0.5575127681951447,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 649.0,
+            "weighted_edge_length": 0.019635755215393645,
+            "within_between_distance_ratio": 0.1564573964013077
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          }
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "Microplastics in the environment: A critical review of current understanding and identification of future research needs",
+            "occurrences": 351,
+            "weighted_degree": 5228.0
+          },
+          {
+            "cluster": 4,
+            "label": "Environmental occurrences, fate, and impacts of microplastics",
+            "occurrences": 192,
+            "weighted_degree": 4658.0
+          },
+          {
+            "cluster": 1,
+            "label": "Microplastics in the aquatic and terrestrial environment: sources (with a specific focus on personal care products), fate and effects",
+            "occurrences": 170,
+            "weighted_degree": 4487.0
+          },
+          {
+            "cluster": 2,
+            "label": "Worldwide distribution and abundance of microplastic: How dire is the situation?",
+            "occurrences": 215,
+            "weighted_degree": 4275.0
+          },
+          {
+            "cluster": 2,
+            "label": "Microplastics in freshwater and terrestrial environments: Evaluating the current understanding to identify the knowledge gaps and future research priorities",
+            "occurrences": 184,
+            "weighted_degree": 3996.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_citation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "citation_structure",
+      "evidence_id": "E023",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The citation candidate network contains 60 nodes and 81 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 4,
+        "edges": 81,
+        "network_parameters": {
+          "candidate_edges": 415,
+          "candidate_nodes_with_links": 368,
+          "candidate_pool": 368,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 81,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 415,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.2118021142547583,
+            "mean_edge_length": 0.5209151595011465,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 2448.0,
+            "weighted_edge_length": 0.0008432059058415941,
+            "within_between_distance_ratio": 0.6163771679128647
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 95,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 60,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "Accumulations of microplastic on shorelines worldwide: sources and sinks",
+            "occurrences": 615,
+            "weighted_degree": 221.0
+          },
+          {
+            "cluster": 2,
+            "label": "Sources, fate and effects of microplastics in the marine environment: part 2 of a global assessment",
+            "occurrences": 590,
+            "weighted_degree": 151.0
+          },
+          {
+            "cluster": 4,
+            "label": "Synthetic fibers as microplastics in the marine environment: A review from textile perspective with a focus on domestic washings",
+            "occurrences": 785,
+            "weighted_degree": 3.0
+          },
+          {
+            "cluster": 2,
+            "label": "The plastic in microplastics: A review",
+            "occurrences": 2326,
+            "weighted_degree": 2.0
+          },
+          {
+            "cluster": 2,
+            "label": "Release of synthetic microplastic plastic fibres from domestic washing machines: Effects of fabric type and washing conditions",
+            "occurrences": 1650,
+            "weighted_degree": 2.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_coauthorship_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "coauthorship_structure",
+      "evidence_id": "E024",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The coauthorship candidate network contains 59 nodes and 121 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 121,
+        "network_parameters": {
+          "candidate_edges": 1517,
+          "candidate_nodes_with_links": 427,
+          "candidate_pool": 427,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 121,
+          "displayed_nodes": 59,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 1517,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.0687798481561952,
+            "mean_edge_length": 0.46321604143840456,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1051.0,
+            "weighted_edge_length": 0.04561904608427498,
+            "within_between_distance_ratio": 0.0
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 59,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Huahong Shi",
+            "occurrences": 42,
+            "weighted_degree": 133.0
+          },
+          {
+            "cluster": 8,
+            "label": "Tamara S. Galloway",
+            "occurrences": 35,
+            "weighted_degree": 89.0
+          },
+          {
+            "cluster": 2,
+            "label": "Ika Paul-Pont",
+            "occurrences": 17,
+            "weighted_degree": 83.0
+          },
+          {
+            "cluster": 2,
+            "label": "Arnaud Huvet",
+            "occurrences": 19,
+            "weighted_degree": 82.0
+          },
+          {
+            "cluster": 2,
+            "label": "Philippe Soudant",
+            "occurrences": 19,
+            "weighted_degree": 79.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_cocitation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "cocitation_structure",
+      "evidence_id": "E025",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The cocitation candidate network contains 72 nodes and 205 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 4,
+        "edges": 205,
+        "network_parameters": {
+          "candidate_edges": 88715,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 205,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 88715,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.09476215377569153,
+            "mean_edge_length": 0.4213331298276964,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 2351.0,
+            "weighted_edge_length": 0.013342338084649259,
+            "within_between_distance_ratio": 0.20117719733219153
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 52,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "openalex:W2164526292",
+            "occurrences": 880,
+            "weighted_degree": 25955.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2014173070",
+            "occurrences": 723,
+            "weighted_degree": 23306.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2133892291",
+            "occurrences": 768,
+            "weighted_degree": 23150.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2005404508",
+            "occurrences": 729,
+            "weighted_degree": 22520.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2003022112",
+            "occurrences": 719,
+            "weighted_degree": 22403.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_institution_collaboration_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "institution_collaboration_structure",
+      "evidence_id": "E026",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The institution collaboration candidate network contains 72 nodes and 176 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 176,
+        "network_parameters": {
+          "candidate_edges": 2295,
+          "candidate_nodes_with_links": 428,
+          "candidate_pool": 428,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 176,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 2295,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.11707998776227913,
+            "mean_edge_length": 0.2952798165573129,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 139.0,
+            "weighted_edge_length": 0.022917811982779493,
+            "within_between_distance_ratio": 0.26466061650544664
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "Centre National de la Recherche Scientifique",
+            "occurrences": 91,
+            "weighted_degree": 354.0
+          },
+          {
+            "cluster": 2,
+            "label": "Chinese Academy of Sciences",
+            "occurrences": 109,
+            "weighted_degree": 302.0
+          },
+          {
+            "cluster": 1,
+            "label": "Ifremer",
+            "occurrences": 50,
+            "weighted_degree": 221.0
+          },
+          {
+            "cluster": 2,
+            "label": "University of Chinese Academy of Sciences",
+            "occurrences": 63,
+            "weighted_degree": 195.0
+          },
+          {
+            "cluster": 1,
+            "label": "Institut de Recherche pour le Développement",
+            "occurrences": 27,
+            "weighted_degree": 165.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_keyword_cooccurrence_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "keyword_cooccurrence_structure",
+      "evidence_id": "E027",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The keyword cooccurrence candidate network contains 72 nodes and 202 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 7,
+        "edges": 202,
+        "network_parameters": {
+          "candidate_edges": 20690,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 202,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 20690,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.12458208360211018,
+            "mean_edge_length": 0.2320917044590999,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 2254.0,
+            "weighted_edge_length": 0.008012506970234904,
+            "within_between_distance_ratio": 0.34988330469640094
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 11,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 4,
+            "label": "Microplastics",
+            "occurrences": 2770,
+            "weighted_degree": 27868.0
+          },
+          {
+            "cluster": 4,
+            "label": "Environmental science",
+            "occurrences": 2398,
+            "weighted_degree": 23896.0
+          },
+          {
+            "cluster": 4,
+            "label": "Biology",
+            "occurrences": 2212,
+            "weighted_degree": 22395.0
+          },
+          {
+            "cluster": 4,
+            "label": "Ecology",
+            "occurrences": 2070,
+            "weighted_degree": 21825.0
+          },
+          {
+            "cluster": 3,
+            "label": "Chemistry",
+            "occurrences": 1753,
+            "weighted_degree": 18599.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E028",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Microplastics in the Marine Environment: A Review of the Methods Used for Identification and Quantification",
+      "unit": null,
+      "value": {
+        "abstract": "This review of 68 studies compares the methodologies used for the identification and quantification of microplastics from the marine environment. Three main sampling strategies were identified: selective, volume-reduced, and bulk sampling. Most sediment samples came from sandy beaches at the high tide line, and most seawater samples were taken at the sea surface using neuston nets. Four steps were distinguished during sample processing: density separation, filtration, sieving, and visual sorting of microplastics. Visual sorting was one of the most commonly used methods for the identification of microplastics (using type, shape, degradation stage, and color as criteria). Chemical and physical characteristics (e.g., specific density) were also used. The most reliable method to identify the chemical composition of microplastics is by infrared spectroscopy. Most studies reported that plastic fragments were polyethylene and polypropylene polymers. Units commonly used for abundance estimates are \"items per m(2)\" for sediment and sea surface studies and \"items per m(3)\" for water column studies. Mesh size of sieves and filters used during sampling or sample processing influence abundance estimates. Most studies reported two main size ranges of microplastics: (i) 500 μm-5 mm, which are retained by a 500 μm sieve/net, and (ii) 1-500 μm, or fractions thereof that are retained on filters. We recommend that future programs of monitoring continue to distinguish these size fractions, but we suggest standardized sampling procedures which allow the spatiotemporal comparison of microplastic abundance across marine environments.",
+        "authors": [
+          "Valeria Hidalgo‐Ruz",
+          "Lars Gutow",
+          "Richard C. Thompson",
+          "Martín Thiel"
+        ],
+        "doi": "10.1021/es2031505",
+        "source": "Environmental Science & Technology",
+        "title": "Microplastics in the Marine Environment: A Review of the Methods Used for Identification and Quantification",
+        "work_id": "doi:10.1021/es2031505",
+        "year": 2012
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E029",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Accumulation of Microplastic on Shorelines Woldwide: Sources and Sinks",
+      "unit": null,
+      "value": {
+        "abstract": "Plastic debris 1900 fibers per wash. This suggests that a large proportion of microplastic fibers found in the marine environment may be derived from sewage as a consequence of washing of clothes. As the human population grows and people use more synthetic textiles, contamination of habitats and animals by microplastic is likely to increase.",
+        "authors": [
+          "Mark A. Oakley Browne",
+          "Phillip Crump",
+          "S. J. Niven",
+          "Emma L. Teuten",
+          "Andrew Tonkin",
+          "Tamara S. Galloway"
+        ],
+        "doi": "10.1021/es201811s",
+        "source": "Environmental Science & Technology",
+        "title": "Accumulation of Microplastic on Shorelines Woldwide: Sources and Sinks",
+        "work_id": "doi:10.1021/es201811s",
+        "year": 2011
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E030",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Plastic Pollution in the World's Oceans: More than 5 Trillion Plastic Pieces Weighing over 250,000 Tons Afloat at Sea",
+      "unit": null,
+      "value": {
+        "abstract": "Plastic pollution is ubiquitous throughout the marine environment, yet estimates of the global abundance and weight of floating plastics have lacked data, particularly from the Southern Hemisphere and remote regions. Here we report an estimate of the total number of plastic particles and their weight floating in the world's oceans from 24 expeditions (2007-2013) across all five sub-tropical gyres, costal Australia, Bay of Bengal and the Mediterranean Sea conducting surface net tows (N = 680) and visual survey transects of large plastic debris (N = 891). Using an oceanographic model of floating debris dispersal calibrated by our data, and correcting for wind-driven vertical mixing, we estimate a minimum of 5.25 trillion particles weighing 268,940 tons. When comparing between four size classes, two microplastic 4.75 mm, a tremendous loss of microplastics is observed from the sea surface compared to expected rates of fragmentation, suggesting there are mechanisms at play that remove <4.75 mm plastic particles from the ocean surface.",
+        "authors": [
+          "Marcus Eriksen",
+          "Laurent Lebreton",
+          "Henry S. Carson",
+          "Martín Thiel",
+          "Charles J. Moore",
+          "Jose C. Borerro"
+        ],
+        "doi": "10.1371/journal.pone.0111913",
+        "source": "PLoS ONE",
+        "title": "Plastic Pollution in the World's Oceans: More than 5 Trillion Plastic Pieces Weighing over 250,000 Tons Afloat at Sea",
+        "work_id": "doi:10.1371/journal.pone.0111913",
+        "year": 2014
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E031",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Emerging threats and persistent conservation challenges for freshwater biodiversity",
+      "unit": null,
+      "value": {
+        "abstract": "In the 12 years since Dudgeon et al. (2006) reviewed major pressures on freshwater ecosystems, the biodiversity crisis in the world's lakes, reservoirs, rivers, streams and wetlands has deepened. While lakes, reservoirs and rivers cover only 2.3% of the Earth's surface, these ecosystems host at least 9.5% of the Earth's described animal species. Furthermore, using the World Wide Fund for Nature's Living Planet Index, freshwater population declines (83% between 1970 and 2014) continue to outpace contemporaneous declines in marine or terrestrial systems. The Anthropocene has brought multiple new and varied threats that disproportionately impact freshwater systems. We document 12 emerging threats to freshwater biodiversity that are either entirely new since 2006 or have since intensified: (i) changing climates; (ii) e-commerce and invasions; (iii) infectious diseases; (iv) harmful algal blooms; (v) expanding hydropower; (vi) emerging contaminants; (vii) engineered nanomaterials; (viii) microplastic pollution; (ix) light and noise; (x) freshwater salinisation; (xi) declining calcium; and (xii) cumulative stressors. Effects are evidenced for amphibians, fishes, invertebrates, microbes, plants, turtles and waterbirds, with potential for ecosystem-level changes through bottom-up and top-down processes. In our highly uncertain future, the net effects of these threats raise serious concerns for freshwater ecosystems. However, we also highlight opportunities for conservation gains as a result of novel management tools (e.g. environmental flows, environmental DNA) and specific conservation-oriented actions (e.g. dam removal, habitat protection policies, managed relocation of species) that have been met with varying levels of success. Moving forward, we advocate hybrid approaches that manage fresh waters as crucial ecosystems for human life support as well as essential hotspots of biodiversity and ecological function. Efforts to reverse global trends in freshwater degradation now depend on bridging an immense gap between the aspirations of conservation biologists and the accelerating rate of species endangerment.",
+        "authors": [
+          "Andrea J. Reid",
+          "Andrew K. Carlson",
+          "Irena F. Creed",
+          "Erika J. Eliason",
+          "Peter Gell",
+          "Pieter T. J. Johnson",
+          "Karen A. Kidd",
+          "Tyson J. MacCormack"
+        ],
+        "doi": "10.1111/brv.12480",
+        "source": "Biological reviews/Biological reviews of the Cambridge Philosophical Society",
+        "title": "Emerging threats and persistent conservation challenges for freshwater biodiversity",
+        "work_id": "doi:10.1111/brv.12480",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E032",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Plastic and Human Health: A Micro Issue?",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics are a pollutant of environmental concern. Their presence in food destined for human consumption and in air samples has been reported. Thus, microplastic exposure via diet or inhalation could occur, the human health effects of which are unknown. The current review article draws upon cross-disciplinary scientific literature to discuss and evaluate the potential human health impacts of microplastics and outlines urgent areas for future research. Key literature up to September 2016 relating to accumulation, particle toxicity, and chemical and microbial contaminants was critically examined. Although microplastics and human health is an emerging field, complementary existing fields indicate potential particle, chemical and microbial hazards. If inhaled or ingested, microplastics may accumulate and exert localized particle toxicity by inducing or enhancing an immune response. Chemical toxicity could occur due to the localized leaching of component monomers, endogenous additives, and adsorbed environmental pollutants. Chronic exposure is anticipated to be of greater concern due to the accumulative effect that could occur. This is expected to be dose-dependent, and a robust evidence-base of exposure levels is currently lacking. Although there is potential for microplastics to impact human health, assessing current exposure levels and burdens is key. This information will guide future research into the potential mechanisms of toxicity and hence therein possible health effects.",
+        "authors": [
+          "Stephanie Wright",
+          "Frank J. Kelly"
+        ],
+        "doi": "10.1021/acs.est.7b00423",
+        "source": "Environmental Science & Technology",
+        "title": "Plastic and Human Health: A Micro Issue?",
+        "work_id": "doi:10.1021/acs.est.7b00423",
+        "year": 2017
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E033",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Plastic debris in the open ocean",
+      "unit": null,
+      "value": {
+        "abstract": "There is a rising concern regarding the accumulation of floating plastic debris in the open ocean. However, the magnitude and the fate of this pollution are still open questions. Using data from the Malaspina 2010 circumnavigation, regional surveys, and previously published reports, we show a worldwide distribution of plastic on the surface of the open ocean, mostly accumulating in the convergence zones of each of the five subtropical gyres with comparable density. However, the global load of plastic on the open ocean surface was estimated to be on the order of tens of thousands of tons, far less than expected. Our observations of the size distribution of floating plastic debris point at important size-selective sinks removing millimeter-sized fragments of floating plastic on a large scale. This sink may involve a combination of fast nano-fragmentation of the microplastic into particles of microns or smaller, their transference to the ocean interior by food webs and ballasting processes, and processes yet to be discovered. Resolving the fate of the missing plastic debris is of fundamental importance to determine the nature and significance of the impacts of plastic pollution in the ocean.",
+        "authors": [
+          "Andrés Cózar",
+          "Fidel Echevarrı́a",
+          "J. Ignacio González-Gordillo",
+          "Xabier Irigoien",
+          "Bárbara Úbeda",
+          "Santiago Hernández‐León",
+          "Álvaro T. Palma"
+        ],
+        "doi": "10.1073/pnas.1314705111",
+        "source": "Proceedings of the National Academy of Sciences",
+        "title": "Plastic debris in the open ocean",
+        "work_id": "doi:10.1073/pnas.1314705111",
+        "year": 2014
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E034",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Microplastic Ingestion by Zooplankton",
+      "unit": null,
+      "value": {
+        "abstract": "Small plastic detritus, termed \"microplastics\", are a widespread and ubiquitous contaminant of marine ecosystems across the globe. Ingestion of microplastics by marine biota, including mussels, worms, fish, and seabirds, has been widely reported, but despite their vital ecological role in marine food-webs, the impact of microplastics on zooplankton remains under-researched. Here, we show that microplastics are ingested by, and may impact upon, zooplankton. We used bioimaging techniques to document ingestion, egestion, and adherence of microplastics in a range of zooplankton common to the northeast Atlantic, and employed feeding rate studies to determine the impact of plastic detritus on algal ingestion rates in copepods. Using fluorescence and coherent anti-Stokes Raman scattering (CARS) microscopy we identified that thirteen zooplankton taxa had the capacity to ingest 1.7-30.6 μm polystyrene beads, with uptake varying by taxa, life-stage and bead-size. Post-ingestion, copepods egested faecal pellets laden with microplastics. We further observed microplastics adhered to the external carapace and appendages of exposed zooplankton. Exposure of the copepod Centropages typicus to natural assemblages of algae with and without microplastics showed that 7.3 μm microplastics (>4000 mL(-1)) significantly decreased algal feeding. Our findings imply that marine microplastic debris can negatively impact upon zooplankton function and health.",
+        "authors": [
+          "Matthew Cole",
+          "Dario Mendez-Cuadro",
+          "Elaine S. Fileman",
+          "Claudia Halsband",
+          "Rhys M. Goodhead",
+          "Julian Moger"
+        ],
+        "doi": "10.1021/es400663f",
+        "source": "Environmental Science & Technology",
+        "title": "Microplastic Ingestion by Zooplankton",
+        "work_id": "doi:10.1021/es400663f",
+        "year": 2013
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E035",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Human Consumption of Microplastics",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics are ubiquitous across ecosystems, yet the exposure risk to humans is unresolved. Focusing on the American diet, we evaluated the number of microplastic particles in commonly consumed foods in relation to their recommended daily intake. The potential for microplastic inhalation and how the source of drinking water may affect microplastic consumption were also explored. Our analysis used 402 data points from 26 studies, which represents over 3600 processed samples. Evaluating approximately 15% of Americans' caloric intake, we estimate that annual microplastics consumption ranges from 39000 to 52000 particles depending on age and sex. These estimates increase to 74000 and 121000 when inhalation is considered. Additionally, individuals who meet their recommended water intake through only bottled sources may be ingesting an additional 90000 microplastics annually, compared to 4000 microplastics for those who consume only tap water. These estimates are subject to large amounts of variation; however, given methodological and data limitations, these values are likely underestimates.",
+        "authors": [
+          "Kieran Cox",
+          "Garth A. Covernton",
+          "Hailey L. Davies",
+          "John F. Dower",
+          "Francis Juanes",
+          "Sarah E. Dudas"
+        ],
+        "doi": "10.1021/acs.est.9b01517",
+        "source": "Environmental Science & Technology",
+        "title": "Human Consumption of Microplastics",
+        "work_id": "doi:10.1021/acs.est.9b01517",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E036",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Microplastics and Nanoplastics in Aquatic Environments: Aggregation, Deposition, and Enhanced Contaminant Transport",
+      "unit": null,
+      "value": {
+        "abstract": "Plastic litter is widely acknowledged as a global environmental threat, and poor management and disposal lead to increasing levels in the environment. Of recent concern is the degradation of plastics from macro- to micro- and even to nanosized particles smaller than 100 nm in size. At the nanoscale, plastics are difficult to detect and can be transported in air, soil, and water compartments. While the impact of plastic debris on marine and fresh waters and organisms has been studied, the loads, transformations, transport, and fate of plastics in terrestrial and subsurface environments are largely overlooked. In this Critical Review, we first present estimated loads of plastics in different environmental compartments. We also provide a critical review of the current knowledge vis-à-vis nanoplastic (NP) and microplastic (MP) aggregation, deposition, and contaminant cotransport in the environment. Important factors that affect aggregation and deposition in natural subsurface environments are identified and critically analyzed. Factors affecting contaminant sorption onto plastic debris are discussed, and we show how polyethylene generally exhibits a greater sorption capacity than other plastic types. Finally, we highlight key knowledge gaps that need to be addressed to improve our ability to predict the risks associated with these ubiquitous contaminants in the environment by understanding their mobility, aggregation behavior and their potential to enhance the transport of other pollutants.",
+        "authors": [
+          "Olubukola S. Alimi",
+          "Jeffrey M. Farner",
+          "Laura M. Hernandez",
+          "Nathalie Tufenkji"
+        ],
+        "doi": "10.1021/acs.est.7b05559",
+        "source": "Environmental Science & Technology",
+        "title": "Microplastics and Nanoplastics in Aquatic Environments: Aggregation, Deposition, and Enhanced Contaminant Transport",
+        "work_id": "doi:10.1021/acs.est.7b05559",
+        "year": 2017
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E037",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Microplastics in freshwaters and drinking water: Critical review and assessment of data quality",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics have recently been detected in drinking water as well as in drinking water sources. This presence has triggered discussions on possible implications for human health. However, there have been questions regarding the quality of these occurrence studies since there are no standard sampling, extraction and identification methods for microplastics. Accordingly, we assessed the quality of fifty studies researching microplastics in drinking water and in its major freshwater sources. This includes an assessment of microplastic occurrence data from river and lake water, groundwater, tap water and bottled drinking water. Studies of occurrence in wastewater were also reviewed. We review and propose best practices to sample, extract and detect microplastics and provide a quantitative quality assessment of studies reporting microplastic concentrations. Further, we summarize the findings related to microplastic concentrations, polymer types and particle shapes. Microplastics are frequently present in freshwaters and drinking water, and number concentrations spanned ten orders of magnitude (1 × 10−2 to 108 #/m3) across individual samples and water types. However, only four out of 50 studies received positive scores for all proposed quality criteria, implying there is a significant need to improve quality assurance of microplastic sampling and analysis in water samples. The order in globally detected polymers in these studies is PE ≈ PP > PS > PVC > PET, which probably reflects the global plastic demand and a higher tendency for PVC and PET to settle as a result of their higher densities. Fragments, fibres, film, foam and pellets were the most frequently reported shapes. We conclude that more high quality data is needed on the occurrence of microplastics in drinking water, to better understand potential exposure and to inform human health risk assessments.",
+        "authors": [
+          "Albert A. Koelmans",
+          "Nur Hazimah Mohamed Nor",
+          "Enya Hermsen",
+          "Merel Kooi",
+          "Svenja M. Mintenig",
+          "Jennifer De France"
+        ],
+        "doi": "10.1016/j.watres.2019.02.054",
+        "source": "Water Research",
+        "title": "Microplastics in freshwaters and drinking water: Critical review and assessment of data quality",
+        "work_id": "doi:10.1016/j.watres.2019.02.054",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E038",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Microplastics as an emerging threat to terrestrial ecosystems",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics (plastics <5 mm, including nanoplastics which are <0.1 μm) originate from the fragmentation of large plastic litter or from direct environmental emission. Their potential impacts in terrestrial ecosystems remain largely unexplored despite numerous reported effects on marine organisms. Most plastics arriving in the oceans were produced, used, and often disposed on land. Hence, it is within terrestrial systems that microplastics might first interact with biota eliciting ecologically relevant impacts. This article introduces the pervasive microplastic contamination as a potential agent of global change in terrestrial systems, highlights the physical and chemical nature of the respective observed effects, and discusses the broad toxicity of nanoplastics derived from plastic breakdown. Making relevant links to the fate of microplastics in aquatic continental systems, we here present new insights into the mechanisms of impacts on terrestrial geochemistry, the biophysical environment, and ecotoxicology. Broad changes in continental environments are possible even in particle-rich habitats such as soils. Furthermore, there is a growing body of evidence indicating that microplastics interact with terrestrial organisms that mediate essential ecosystem services and functions, such as soil dwelling invertebrates, terrestrial fungi, and plant-pollinators. Therefore, research is needed to clarify the terrestrial fate and effects of microplastics. We suggest that due to the widespread presence, environmental persistence, and various interactions with continental biota, microplastic pollution might represent an emerging global change threat to terrestrial ecosystems.",
+        "authors": [
+          "Anderson Abel de Souza Machado",
+          "Werner Kloas",
+          "Christiane Zarfl",
+          "Stefan Hempel"
+        ],
+        "doi": "10.1111/gcb.14020",
+        "source": "Global Change Biology",
+        "title": "Microplastics as an emerging threat to terrestrial ecosystems",
+        "work_id": "doi:10.1111/gcb.14020",
+        "year": 2017
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E039",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Ingested Microscopic Plastic Translocates to the Circulatory System of the Mussel, Mytilus edulis (L.)",
+      "unit": null,
+      "value": {
+        "abstract": "Plastics debris is accumulating in the environment and is fragmenting into smaller pieces; as it does, the potential for ingestion by animals increases. The consequences of macroplastic debris for wildlife are well documented, however the impacts of microplastic (< 1 mm) are poorly understood. The mussel, Mytilus edulis, was used to investigate ingestion, translocation, and accumulation of this debris. Initial experiments showed that upon ingestion, microplastic accumulated in the gut. Mussels were subsequently exposed to treatments containing seawater and microplastic (3.0 or 9.6 microm). After transfer to clean conditions, microplastic was tracked in the hemolymph. Particles translocated from the gut to the circulatory system within 3 days and persisted for over 48 days. Abundance of microplastic was greatest after 12 days and declined thereafter. Smaller particles were more abundant than larger particles and our data indicate as plastic fragments into smaller particles, the potential for accumulation in the tissues of an organism increases. The short-term pulse exposure used here did not result in significant biological effects. However, plastics are exceedingly durable and so further work using a wider range of organisms, polymers, and periods of exposure will be required to establish the biological consequences of this debris.",
+        "authors": [
+          "Mark A. Oakley Browne",
+          "Awantha Dissanayake",
+          "Tamara S. Galloway",
+          "David M. Lowe"
+        ],
+        "doi": "10.1021/es800249a",
+        "source": "Environmental Science & Technology",
+        "title": "Ingested Microscopic Plastic Translocates to the Circulatory System of the Mussel, Mytilus edulis (L.)",
+        "work_id": "doi:10.1021/es800249a",
+        "year": 2008
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E040",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Uptake and Accumulation of Polystyrene Microplastics in Zebrafish ( Danio rerio ) and Toxic Effects in Liver",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics have become emerging contaminants, causing widespread concern about their potential toxic effects. In this study, the uptake and tissue accumulation of polystyrene microplastics (PS-MPs) in zebrafish were detected, and the toxic effects in liver were investigated. The results showed that after 7 days of exposure, 5 μm diameter MPs accumulated in fish gills, liver, and gut, while 20 μm diameter MPs accumulated only in fish gills and gut. Histopathological analysis showed that both 5 μm and 70 nm PS-MPs caused inflammation and lipid accumulation in fish liver. PS-MPs also induced significantly increased activities of superoxide dismutase and catalase, indicating that oxidative stress was induced after treatment with MPs. In addition, metabolomic analysis suggested that exposure to MPs induced alterations of metabolic profiles in fish liver and disturbed the lipid and energy metabolism. These findings provide new insights into the toxic effects of MPs on fish.",
+        "authors": [
+          "Yifeng Lu",
+          "Yan Zhang",
+          "Yongfeng Deng",
+          "Wei Jiang"
+        ],
+        "doi": "10.1021/acs.est.6b00183",
+        "source": "Environmental Science & Technology",
+        "title": "Uptake and Accumulation of Polystyrene Microplastics in Zebrafish ( Danio rerio ) and Toxic Effects in Liver",
+        "work_id": "doi:10.1021/acs.est.6b00183",
+        "year": 2016
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E041",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Microplastics Can Change Soil Properties and Affect Plant Performance",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics can affect biophysical properties of the soil. However, little is known about the cascade of events in fundamental levels of terrestrial ecosystems, i.e., starting with the changes in soil abiotic properties and propagating across the various components of soil-plant interactions, including soil microbial communities and plant traits. We investigated here the effects of six different microplastics (polyester fibers, polyamide beads, and four fragment types: polyethylene, polyester terephthalate, polypropylene, and polystyrene) on a broad suite of proxies for soil health and performance of spring onion ( Allium fistulosum). Significant changes were observed in plant biomass, tissue elemental composition, root traits, and soil microbial activities. These plant and soil responses to microplastic exposure were used to propose a causal model for the mechanism of the effects. Impacts were dependent on particle type, i.e., microplastics with a shape similar to other natural soil particles elicited smaller differences from control. Changes in soil structure and water dynamics may explain the observed results in which polyester fibers and polyamide beads triggered the most pronounced impacts on plant traits and function. The findings reported here imply that the pervasive microplastic contamination in soil may have consequences for plant performance and thus for agroecosystems and terrestrial biodiversity.",
+        "authors": [
+          "Anderson Abel de Souza Machado",
+          "Chung Wai Lau",
+          "Werner Kloas"
+        ],
+        "doi": "10.1021/acs.est.9b01339",
+        "source": "Environmental Science & Technology",
+        "title": "Microplastics Can Change Soil Properties and Affect Plant Performance",
+        "work_id": "doi:10.1021/acs.est.9b01339",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E042",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Wastewater Treatment Works (WwTW) as a Source of Microplastics in the Aquatic Environment",
+      "unit": null,
+      "value": {
+        "abstract": "Municipal effluent discharged from wastewater treatment works (WwTW) is suspected to be a significant contributor of microplastics (MP) to the environment as many personal care products contain plastic microbeads. A secondary WwTW (population equivalent 650 000) was sampled for microplastics at different stages of the treatment process to ascertain at what stage in the treatment process the MP are being removed. The influent contained on average 15.70 (±5.23) MP·L(-1). This was reduced to 0.25 (±0.04) MP·L(-1) in the final effluent, a decrease of 98.41%. Despite this large reduction we calculate that this WwTW is releasing 65 million microplastics into the receiving water every day. A significant proportion of the microplastic accumulated in and was removed during the grease removal stage (19.67 (±4.51) MP/2.5 g), it was only in the grease that the much publicised microbeads were found. This study shows that despite the efficient removal rates of MP achieved by this modern treatment plant when dealing with such a large volume of effluent even a modest amount of microplastics being released per liter of effluent could result in significant amounts of microplastics entering the environment. This is the first study to describe in detail the fate of microplastics during the wastewater treatment process.",
+        "authors": [
+          "Fionn Murphy",
+          "Ciaran Ewins",
+          "Frederic Carbonnier",
+          "Brian Quinn"
+        ],
+        "doi": "10.1021/acs.est.5b05416",
+        "source": "Environmental Science & Technology",
+        "title": "Wastewater Treatment Works (WwTW) as a Source of Microplastics in the Aquatic Environment",
+        "work_id": "doi:10.1021/acs.est.5b05416",
+        "year": 2016
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E043",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Microplastics in wastewater treatment plants: Detection, occurrence and removal",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics have aroused increasing concern as they pose threats to aquatic species as well as human beings. They do not only contribute to accumulation of plastics in the environment, but due to absorption they can also contribute to spreading of micropollutants in the environment. Studies indicated that wastewater treatment plants (WWTPs) play an important role in releasing microplastics to the environment. Therefore, effective detection of the microplastics and understanding their occurrence and fate in WWTPs are of great importance towards microplastics control. In this review, the up-to-date status on the detection, occurrence and removal of microplastics in WWTPs are comprehensively reviewed. Specifically, the different techniques used for collecting microplastics from both wastewater and sewage sludge, and their pretreatment and characterization methods are reviewed and analyzed. The key aspects regarding microplastics occurrence in WWTPs, such as concentrations, total discharges, materials, shapes and sizes are summarized and compared. Microplastics removal in different treatment stages and their retention in sewage sludge are explored. The development of potential microplastics-targeted treatment technologies is also presented. Although previous researches in microplastics have undoubtedly improved our level of understanding, it is clear that much remains to be learned about microplastics in WWTPs, as many unanswered questions and thereby concerns still remain; some of these important future research areas are outlined. The key challenges appear to be to harmonize detection methods as well as microplastics mitigation from wastewater and sewage sludge.",
+        "authors": [
+          "Jing Sun",
+          "Xiaohu Dai",
+          "Qilin Wang",
+          "Mark C.M. van Loosdrecht"
+        ],
+        "doi": "10.1016/j.watres.2018.12.050",
+        "source": "Water Research",
+        "title": "Microplastics in wastewater treatment plants: Detection, occurrence and removal",
+        "work_id": "doi:10.1016/j.watres.2018.12.050",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E044",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Detection of Various Microplastics in Human Stool",
+      "unit": null,
+      "value": {
+        "abstract": "Background: Microplastics are ubiquitous in natural environments. Ingestion of microplastics has been described in marine organisms, whereby particles may enter the food chain. Objective: To examine human feces for the presence of microplastics to determine whether humans involuntarily ingest them. Design: Prospective case series in which participants completed a food diary and sampled stool according to step-by-step instructions. Setting: Europe and Asia. Participants: Eight healthy volunteers aged 33 to 65 years. Measurements: After chemical digestion, Fourier-transform infrared microspectroscopy was used to analyze the presence and shape of 10 common types of microplastic in stool samples. Results: All 8 stool samples tested positive for microplastics. A median of 20 microplastics (50 to 500 μm in size) per 10 g of human stool were identified. Overall, 9 plastic types were detected, with polypropylene and polyethylene terephthalate being the most abundant. Limitations: There were few participants, and each provided only 1 sample. The origin and fate of microplastics in the gastrointestinal tract were not investigated. Conclusion: Various microplastics were detected in human stool, suggesting inadvertent ingestion from different sources. Further research on the extent of microplastic intake and the potential effect on human health is needed. Primary Funding Source: None.",
+        "authors": [
+          "Philipp Schwabl",
+          "Sebastian Köppel",
+          "Philipp Königshofer",
+          "Theresa Bucsics",
+          "Michael Trauner",
+          "Thomas Reiberger",
+          "B. Liebmann"
+        ],
+        "doi": "10.7326/m19-0618",
+        "source": "Annals of Internal Medicine",
+        "title": "Detection of Various Microplastics in Human Stool",
+        "work_id": "doi:10.7326/m19-0618",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E045",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Effects of Microplastics in Soil Ecosystems: Above and Below Ground",
+      "unit": null,
+      "value": {
+        "abstract": "Environmental contamination by microplastics is now considered an emerging threat to biodiversity and ecosystem functioning. Soil ecosystems, particularly agricultural land, have been recognized as a major sink of microplastics, but the impacts of microplastics on soil ecosystems (e.g., above and below ground) remain largely unknown. In this study, different types of microplastics [biodegradable polylactic acid (PLA)], conventional high-density polyethylene (HDPE), and microplastic clothing fibers were added to soil containing the endogeic Aporrectodea rosea (rosy-tipped earthworm) and planted with Lolium perenne (perennial ryegrass) to assess the biophysical soil response in a mesocosm experiment. When exposed to fibers or PLA microplastics, fewer seeds germinated. There was also a reduction in shoot height with PLA. The biomass of A. rosea exposed to HDPE was significantly reduced compared to control samples. Furthermore, with HDPE present there was a decrease in soil pH. The size distribution of water-stable soil aggregates was altered when microplastics were present, suggesting potential alterations of soil stability. This study provides evidence that microplastics manufactured of HDPE and PLA, and synthetic fibers can affect the development of L. perenne, health of A. rosea and basic, but crucial soil properties, with potential further impacts on soil ecosystem functioning.",
+        "authors": [
+          "Bas Boots",
+          "Connor William Russell",
+          "Dannielle S. Green"
+        ],
+        "doi": "10.1021/acs.est.9b03304",
+        "source": "Environmental Science & Technology",
+        "title": "Effects of Microplastics in Soil Ecosystems: Above and Below Ground",
+        "work_id": "doi:10.1021/acs.est.9b03304",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E046",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Evidence of microplastic accumulation in agricultural soils from sewage sludge disposal",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics are emerging as a steadily increasing environmental threat. Wastewater treatment plants efficiently remove microplastics from sewage, trapping the particles in the sludge and preventing their entrance into aquatic environments. Treatment plants are essentially taking the microplastics out of the waste water and concentrating them in the sludge, however. It has become common practice to use this sludge on agricultural soils as a fertilizer. The aim of the current research was to evaluate the microplastic contamination of soils by this practice, assessing the implications of successive sludge applications by looking at the total count of microplastic particles in soil samples. Thirty-one agricultural fields with different sludge application records and similar edaphoclimatic conditions were evaluated. Field records of sludge application covered a ten year period. For all fields, historical disposal events used the same amount of sludge (40 ton ha−1 dry weight). Extraction of microplastics was done by flotation and particles were then counted and classified with the help of a microscope. Seven sludge samples were collected in the fields that underwent sludge applications during the study period. Soils where 1, 2, 3, 4, and 5 applications of sludge had been performed had a median of 1.1, 1.6, 1.7, 2.3, and 3.5 particles g−1 dry soil, respectively. There were statistical differences in the microplastic contents related to the number of applications that a field had undergone (1, 2, 3 < 4, 5). Microplastic content in sludge ranged from 18 to 41 particles g−1, with a median of 34 particles g−1. The majority of the observed microplastics were fibers (90% in sludge, and 97% in soil). Our results indicate that microplastic counts increase over time where successive sludge applications are performed. Microplastics observed in soil samples stress the relevance of sludge as a driver of soil microplastic contamination.",
+        "authors": [
+          "Fabio Corradini",
+          "Pablo Meza",
+          "Raúl Eguiluz",
+          "Francisco Casado",
+          "Esperanza Huerta Lwanga",
+          "Violette Geissen"
+        ],
+        "doi": "10.1016/j.scitotenv.2019.03.368",
+        "source": "The Science of The Total Environment",
+        "title": "Evidence of microplastic accumulation in agricultural soils from sewage sludge disposal",
+        "work_id": "doi:10.1016/j.scitotenv.2019.03.368",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E047",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: White and wonderful? Microplastics prevail in snow from the Alps to the Arctic",
+      "unit": null,
+      "value": {
+        "abstract": ") but still substantial. Polymer composition varied strongly, but varnish, rubber, polyethylene, and polyamide dominated overall. Most particles were in the smallest size range indicating large numbers of particles below the detection limit of 11 μm. Our data highlight that atmospheric transport and deposition can be notable pathways for MPs meriting more research.",
+        "authors": [
+          "Melanie Bergmann",
+          "Sophia Mützel",
+          "Sebastian Primpke",
+          "Mine Banu Tekman",
+          "Jürg Trachsel",
+          "Gunnar Gerdts"
+        ],
+        "doi": "10.1126/sciadv.aax1157",
+        "source": "Science Advances",
+        "title": "White and wonderful? Microplastics prevail in snow from the Alps to the Arctic",
+        "work_id": "doi:10.1126/sciadv.aax1157",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E048",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Rethinking microplastics as a diverse contaminant suite",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics are not microplastics are not microplastics, just like pesticides are not pesticides are not pesticides. “Microplastics,” like other classes of chemical contaminants, is a catch-all term for a variety of unique chemical compounds. Yet, many scientific publications, policy reports, and media articles present microplastics as if they are simply a single compound or type of material. Such simple communications have consequences, leading to simplified studies and protocols that may be inadequate to inform us of the sources and fate of microplastics, as well as their biological and ecological implications. For example, studying the fate and effects of one plastic type with a specific shape and size does not tell us the fate and effects of microplastics in general. Moreover, not recognizing the diversity of materials in a microplastics sample may overlook the complexity necessary to inform robust quality analysis and quality control (QA/QC) needed in sampling and analytical measurement techniques. For instance, some methods are better at recovering specific sizes, shapes, or types of microplastics. Simplifying microplastics as a single compound has also led to confusion around the need for new policies and strategies to reduce future emissions of microplastics. For example, some policymakers and scientists are under the impression that banning microbeads from rinse-off personal care products has eliminated future releases of microplastics in general to the environment. In reality, such bans eliminate only one source of the diverse and complex emerging global contaminant suite that is “microplastics.” This can be compared to banning one specific use of a pesticide (e.g., in the home), leaving the market full of other applications of diverse pesticides that need to continue to be assessed for environmental persistence, bioavailability, and toxicity. In our Focus article, we make the case that it is necessary to rethink microplastics (plastic particles <5 mm in size) and consider them a suite or class of contaminants, in the same way we do for pesticides, trace metals, or flame retardants. Microplastics are diverse; they come from many different product types; incorporate a broad range of sizes, colors, and morphologies; are composed of various polymers; and include a broad array of chemical additives (Figure 1 and Textboxes 1 and 2). This diversity is important to consider, and thinking of them like we do other classes of contaminants may help us advance methods for sampling and analysis and help us better understand the sources from which they enter the environment; their fate in water, sediment, and organisms; their toxicity; and relevant policies for mitigation. Just like pesticides are made of diverse molecules, have varying molecular structures, and can be used for a variety of applications (e.g., fungicides, herbicides), microplastics are made from diverse molecules, have varying molecular structures, and come from products with various applications (e.g., tires, textiles, and packaging). What is unique to pesticides and other chemical contaminants is that microplastics are particles, comprising different sizes, shapes, and colors. Microplastic particles are not simply “microplastic” but a diverse suite of contaminants that we refer to as “microplastics.” As a contaminant class, microplastics come from a large diversity of product types and are generally classified as either primary or secondary. Primary microplastics are manufactured to be <5 mm in size. They include preproduction pellets used to make plastic products and microbeads used as abrasives for industrial purposes or in personal care products. Secondary microplastics are small pieces of plastic which are not produced intentionally but instead are the result of the breakup and fragmentation of larger plastic items via biological, physical, and chemical processes. Secondary microplastics can form during product use (e.g., microfibers shed from clothing during washing or tire wear particles) or once released into the environment (e.g., via fragmentation). Fragmentation is mediated by the polymer type and environmental conditions, which can be highly variable (Sivan 2011; Gewert et al. 2015). Microplastics can be a by-product of many plastic products, including construction materials, agricultural materials, furniture, clothing, and food packaging (Figure 1). Microplastics encompass a broad range of sizes. Most often, they are defined as any plastic particle <5 mm in one dimension as defined by the National Oceanographic and Atmospheric Association (Figure 1). Others argue for size categorization that matches the metric system (e.g., 1–999 μm are microplastics). However, there is generally no lower limit, and nano-sized plastics (<0.1 μm) are often included in this definition. The way that discrete sizes and ranges of size are reported among researchers varies. For example, researchers may use multiple grades of sieves to size-fractionate samples, and thus their categorization is defined by the sizes of their sieves used during sample preparation. Defining how microplastics are described in relation to size is a prevalent topic of discussion among researchers in the field. Historically, researchers predominantly sampled microplastics using manta trawls with a 333-μm mesh net, but methods are evolving toward using smaller mesh sizes or collecting bulk water (Barrows et al. 2017). In addition, researchers are beginning to expand their analytical techniques to incorporate those that can detect and identify smaller and smaller microparticles. As a result, the sizes of microplastics reported in the literature are becoming more diverse, incorporating a broader range that is dictated by the lower limit defined by our sampling or analytical methodologies. Microplastics come in many shapes and colors. The shape of a microplastic is often used to assign it to a common category, which helps inform the source (Helm 2017). Generally, researchers use somewhere between 4 and 7 different categories defined by shape or morphology, which include fiber, fiber bundle, fragment, sphere (or bead), pellet, film, and foam (Figure 1). To help with source apportionment, we know that certain shapes are generally shed from different products. This provides clues related to where microplastics in nature may originate. For example, fibers and fiber bundles tend to shed from clothing, upholstery, or carpet; pellets are generally associated with industrial feedstock; spheres may be microbeads from personal care products or industrial scrubbers; and foam often comes from expanded polystyrene foam products such as insulation or food packaging. Detailed descriptions and images of each of these shapes can be found in Textbox 1. Microplastics are composed of a diverse suite of polymer types just like pesticides are composed of a diverse suite of molecular structures. All plastic polymers consist of repeating monomers, which form the backbone of the polymer. This backbone structure is the fundamental difference between polymer types, informing a plastic's physical and chemical properties (Textbox 2). The most produced and consumed polymer types are polypropylene, low-density polyethylene (LDPE), high-density polyethylene (HDPE), polyvinyl chloride (PVC), polyurethane, polyethylene terephthalate (PET; also known as polyester), and polystyrene (PlasticsEurope 2017). This diversity of polymers is necessary to fulfill the many applications of plastics. For example, LDPE is too flimsy to be used in water bottles, and thus PET is used instead. Also, LDPE is often used in single-use shopping bags, food packaging, and film. In addition to bottles, PET is produced in fiber form to make synthetic clothing. Although the polymers listed in the previous paragraph are the most commonly used, countless others exist. Plastics are divided into 2 families: thermoplastics and thermosets. Thermoplastics can be melted when heated and hardened when cooled. They include many of the plastics described in the previous paragraph (PET, polypropylene, polystyrene, LDPE, HDPE, polyurethane, PVC) and others, such as acrylonitrile butadiene styrene, polymethyl methacrylate, polyoxymethylene, polybutylene terephthalate, polycarbonate, polyamides, elastomers, styrene-acrylonitrile, polyether ether ketone, fluoropolymers, and polyarylsulfone. Thermoset plastics undergo a chemical change when heated. They include polyurethane, epoxy resins, acrylic, urea-formaldehyde, vinyl esters, and phenolic resins. Thus, microplastics are not comprised of one material; instead, they come from a complex group of hundreds of chemically unique substances. For some applications, chemical contaminants like pesticides or flame retardants are used in mixtures of various different chemical congeners. For microplastics, they are always found in the environment as a mixture or diverse suite of chemicals. Although plastic is often described as an inert material because of its bulky molecular structure, every piece of plastic contains a complex chemical cocktail of monomers, oligomers, and additives. In addition, chemical additives are added to the polymers during production, sometimes accounting for a large proportion of the overall weight (e.g., phthalates, which are used to alter the properties of plastics, can comprise up to 50% of a PVC product's total weight). There are several categories of additives, including plasticizers, colorants, reinforcements or fillers, flame retardants, and stabilizers. Plasticizers, such as phthalates, alter plastic from a hard, glassy material into a soft, rubbery material. Colorants are used to color the plastic product. Reinforcements or fillers enhance the mechanical properties of plastic, such as the strength of the material. Flame retardants are used for specific applications, such as building materials and electronics. Stabilizers increase the longevity and stability of an end product. When found in nature, the complex mixture of chemicals associated with microplastics also includes sorbed pollutants. Microplastics accumulate organic chemicals and trace metals from the surrounding environment (Rochman 2015). For example, microplastics are known to sorb persistent organic pollutants, such as polycyclic aromatic hydrocarbons, polychlorinated biphenyls, and DDT, as well as trace metals (e.g., copper and lead). The type and amount of chemicals a piece of plastic accumulates depends on the physical and chemical properties of the polymer, such as diffusivity, crystallinity, hydrophobicity, and surface area (Rochman 2015). The complexity of chemical classes, like pesticides or flame retardants, informs how we measure and manage them. Likewise, the immense diversity in microplastic types, morphologies, sizes, color, and chemical mixtures should inform how we measure microplastics and how we use data to inform policy. The methods used to monitor microplastics in the environment should be developed with careful consideration of this diversity. For example, different methods will perform better for capturing or analyzing certain sizes or densities of microplastics. Diversity should also be considered when studies are designed to test hypotheses about the sources, fate, and effects on organisms and ecosystems. Finally, these differences are important to consider when making decisions relevant to mitigation. Some strategies will be very effective for some microplastics but less relevant to others. Rethinking microplastics as a contaminant suite, like other contaminant suites, to include the diversity described in the present report will inform Methods for sampling, quantifying, and reporting. Microplastics are increasingly being added to government lists as priority contaminants to monitor because of their ubiquity in the environment and concerns regarding negative impacts. As monitoring strategies are designed for microplastics, researchers and environmental managers can take lessons from best practices for other contaminant suites to determine the best practices for sampling, quantifying, and reporting microplastics in environmental studies. The field of environmental chemistry has been establishing protocols and best practices for monitoring and evaluating concentrations of contaminants in the environment for decades. These best practices reduce procedural contamination, increase recovery, and have good QA/QC that provide robust and trustworthy results. We recommend common analytical practices for chemicals that should be considered during sample collection, sample preparation, sample analysis, and data reporting for microplastics (Figure 2). To quantify chemicals in the environment, care should be taken to reduce procedural or cross-contamination during sampling, preparation, and analysis. To reduce procedural and cross-contamination of microplastics in samples (e.g., from dust or clothing worn during sampling), appropriate (e.g., glass) and precleaned (e.g., rinsed 3 times with filtered water) storage containers should be used during sample collection as a criterion for good QA/QC. During sample preparation (e.g., extraction, cleanup), clean techniques should also be required to reduce cross-contamination and procedural contamination. These include washing tools between samples, covering samples with aluminum foil as often as possible to protect from dust, and cleaning the working space prior to use. Researchers should also consider personal protective equipment (gloves, natural fiber laboratory coats, etc.), air filters that remove dust (e.g., high-efficiency particulate air filters), and clean rooms or cabinets. Training and proficiency testing of laboratory personnel are also important to ensure sample quality and limit contamination during sample handling. To account for any procedural and cross-contamination and to measure the effectiveness of the sample extraction and/or cleanup, field blanks, laboratory blanks, and spike recoveries should be included, as they are for chemical analysis. Before using an extraction and cleanup method, a spike-and-recovery exercise should be performed to quantify the recovery of different sizes and types of microplastics with the methods that will be used. Importantly, researchers should collect field and laboratory blanks to account for procedural contamination during sampling and laboratory protocols. The levels in the blank can be subtracted from environmental samples or at least reported in the results section. When subtracted, they can be subtracted by color/category or color/chemical identifier, in the same way chemicals are subtracted by congener when analyzing flame retardants or pesticides. The establishment of universal criteria for identifying diverse microplastics to material type and for reporting data is needed. For small size ranges (i.e., <1 mm) and some morphologies (e.g., fiber), visual identification becomes less accurate and a chemical identifier is necessary to tell if something is truly plastic (Lenz et al. 2015). Comprehensive libraries of reference materials for microplastics, encompassing pure polymers, plastic products, and environmental samples, for common analytical methods, such as Raman spectroscopy and Fourier-transform infrared spectroscopy, will help make chemical characterization of polymers standardized, faster, and more accurate. When reporting microplastics in samples, it is important to report the count, shape, color, size, and material type (if possible). It would also be prudent to report results from recovery tests and the limit of detection related to particle size or mass determined by extraction and analysis methods. Microplastics enter the environment via diverse sources and pathways (Figure 3), as described previously. Because microplastics are small and often the weathered remnants of their original product, it can be difficult to trace them back to their source. Still, it is useful to try to source-apportion them (i.e., trace microplastics back to their original products) by examining their size, color, shape, and polymer type (Helm 2017). These features of microplastics can serve as clues for determining what product they came from. For example, the spherical shape of microbeads identified as polyethylene via spectroscopy generally infers an origination from personal care products. Microplastics with a cylindrical or oval shape, which are roughly 3 to 5 mm in size, are generally industrial pellets. Finally, colorful polyester microfibers likely originated from synthetic clothing or other textiles. These differences across microplastic particles may also help determine how and from where microplastics entered the environment. For example, storm water runoff includes litter, abrasion from car tires, and road paint. Wastewater effluent includes microbeads from personal care products and microfibers from textiles. Agricultural runoff may incorporate microplastics degraded from greenhouse films, plastic mulch, irrigation systems, and planters. Other sources include industrial spills and runoff from industrial processes, from and Thus, microplastics to incorporate their diversity will help identify sources, which is to mitigation. The fate of microplastics in the environment has no and they have in The size, shape, and color of microplastics are important that inform their fate in the environment and in (Figure The related to polymer will inform the fate of a microplastic particle in and in the In systems, plastics, such as PET or are to and are likely more common in plastics such as polyethylene or polypropylene, which are to In the plastics are less likely to be up by and thus should less Other such as the shape, size, or of a may also alter the fate of microplastics in the environment. The size of a microplastic particle may inform how microplastics are and where they end Because microplastics comprise various sizes, they can be by from the to large and For certain sizes microplastics are to be to the and enter and other in organisms et al. 2017). As the size of microplastics the for of the is to This or may or in food in addition to shape, may also the in For example, fibers may the and be in the for a of Finally, the color may an to microplastics or Some that microplastics with specific are by some researchers to microplastics will have a negative or on The relevant literature provides of this et al. In many to microplastics has been found to an or However, in other biological effects from microplastics are not This may be a result of the diversity of physical and chemical of the microplastics to which organisms are being The to which microplastics to an likely depends on polymer size, shape, and associated chemical This is not by laboratory studies using different of these Some polymer types are to be more others on their or chemical additives et al. Some polymers may be or on their chemical (e.g., others are to be more inert (e.g., microplastics with surface area to or have a which may to the of chemicals that may be to organisms that microplastics (Rochman 2015). There is some that that the physical of microplastics, such as size, may toxicity. microplastics (e.g., are of for because of their to between the and of organisms et al. 2017). we have a of effects are to the chemical or physical of the particles more The diversity of microplastics, with the of it difficult to the effects of microplastics on studies a range of negative or effects et al. it is often the case that laboratory studies organisms to microplastic spheres and at This is an that is not of the diversity of microplastics of may the complex nature of microplastics, to other contaminant classes, can make it difficult to laboratory studies that relevant However, careful consideration can be made with to the shape, and size of plastic being used, in addition to its chemical designed laboratory the effects of specific classes of microplastics will just as we should not be what are the effects of pesticides in we should not be what are the effects of in general. we should be about the effects of a range of types, shapes, and sizes of microplastics, just like we do for specific chemical of pesticides. the range of sources of microplastic it is not that have been to microplastic at Although strategies relevant to plastic are relevant to microplastics large plastics up into small there are some that can be designed to microplastics. For microplastics in personal care products, many (e.g., the and the have to microbeads used in rinse-off products. For preproduction there is a for to emissions of their pellets or and a in to control of plastic pellets into the environment. to plastic for large plastic and to some sources of microplastics, the of microplastic is The diversity of sources, morphologies, and chemical mixtures is an important consideration when to emissions of microplastics to the environment or to effective strategies to some of the sources of microplastics, such as the of microfibers from textiles, the of industrial and tire wear particles from road specific and there is no to microplastic and diverse strategies should be considered that are relevant to specific types, sources, and For example, microfibers are among the most common types of microplastics found in environmental samples, and we know washing clothing is one source. As filters on washing may be a simple to the of microfibers into the environment. In addition, tire wear particles are to be a large of microplastics in storm water runoff that to the environment. or added to storm we may reduce the amount of tire wear particles that are that consider the diversity of microplastics to inform sources, we can inform of the most relevant sources of microplastics on which to As we we the complexity of microplastics. They are They come from a of comprise different sizes, shapes, colors, and types of and include a mixture of diverse chemicals. They nature via diverse pathways and and in different We a change in our from one contaminant “microplastic” to a diverse suite of contaminants “microplastics.” we to truly understand microplastics the way we have come to understand pesticides and flame retardants, we this diversity in our monitoring methods of analysis, of and our with policymakers and the and strategies to microplastics are that microplastics are not microplastics are not microplastics. The diversity of microplastics is an important consideration when to emissions to our global and ecosystems. We the for us the of to the We also for in We the and and the for hundreds of environmental samples to our laboratory that the diversity of this complex emerging The no of",
+        "authors": [
+          "Chelsea M. Rochman",
+          "Cole B. Brookson",
+          "Jacqueline Bikker",
+          "Natasha Djuric",
+          "Arielle Earn",
+          "Kennedy Bucci",
+          "Samantha N. Athey",
+          "A. K. Huntington"
+        ],
+        "doi": "10.1002/etc.4371",
+        "source": "Environmental Toxicology and Chemistry",
+        "title": "Rethinking microplastics as a diverse contaminant suite",
+        "work_id": "doi:10.1002/etc.4371",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E049",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Atmospheric microplastic deposition in an urban environment and an evaluation of transport",
+      "unit": null,
+      "value": {
+        "abstract": "Microplastics are a global environmental issue contaminating aquatic and terrestrial environments. They have been reported in atmospheric deposition, and indoor and outdoor air, raising concern for public health due to the potential for exposure. Moreover, the atmosphere presents a new vehicle for microplastics to enter the wider environment, yet our knowledge of the quantities, characteristics and pathways of airborne microplastics is sparse. Here we show microplastics in atmospheric deposition in a major population centre, central London. Microplastics were found in all samples, with deposition rates ranging from 575 to 1008 microplastics/m2/d. They were found in various shapes, of which fibrous microplastics accounted for the great majority (92%). Across all samples, 15 different petrochemical-based polymers were identified. Bivariate polar plots indicated dependency on wind, with different source areas for fibrous and non-fibrous airborne microplastics. This is the first evidence of airborne microplastics in London and confirms the need to include airborne pathways when consolidating microplastic impacts on the wider environment and human health.",
+        "authors": [
+          "Stephanie Wright",
+          "Jannis Ulke",
+          "Anna Font",
+          "K. L. Andrew Chan",
+          "Frank J. Kelly"
+        ],
+        "doi": "10.1016/j.envint.2019.105411",
+        "source": "Environment International",
+        "title": "Atmospheric microplastic deposition in an urban environment and an evaluation of transport",
+        "work_id": "doi:10.1016/j.envint.2019.105411",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E050",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Plastic Teabags Release Billions of Microparticles and Nanoparticles into Tea",
+      "unit": null,
+      "value": {
+        "abstract": "The increasing presence of micro- and nano-sized plastics in the environment and food chain is of growing concern. Although mindful consumers are promoting the reduction of single-use plastics, some manufacturers are creating new plastic packaging to replace traditional paper uses, such as plastic teabags. The objective of this study was to determine whether plastic teabags could release microplastics and/or nanoplastics during a typical steeping process. We show that steeping a single plastic teabag at brewing temperature (95 °C) releases approximately 11.6 billion microplastics and 3.1 billion nanoplastics into a single cup of the beverage. The composition of the released particles is matched to the original teabags (nylon and polyethylene terephthalate) using Fourier-transform infrared spectroscopy (FTIR) and X-ray photoelectron spectroscopy (XPS). The levels of nylon and polyethylene terephthalate particles released from the teabag packaging are several orders of magnitude higher than plastic loads previously reported in other foods. An initial acute invertebrate toxicity assessment shows that exposure to only the particles released from the teabags caused dose-dependent behavioral and developmental effects.",
+        "authors": [
+          "Laura M. Hernandez",
+          "Elvis Genbo Xu",
+          "Hans C. E. Larsson",
+          "Rui Tahara",
+          "Vimal B. Maisuria",
+          "Nathalie Tufenkji"
+        ],
+        "doi": "10.1021/acs.est.9b02540",
+        "source": "Environmental Science & Technology",
+        "title": "Plastic Teabags Release Billions of Microparticles and Nanoparticles into Tea",
+        "work_id": "doi:10.1021/acs.est.9b02540",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E051",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: New Insights into the Aging Behavior of Microplastics Accelerated by Advanced Oxidation Processes",
+      "unit": null,
+      "value": {
+        "abstract": "In the environment, microplastics are subjected to multiple aging processes; however, information regarding the impact of aging on the environmental behavior of microplastics is still lacking. This study investigated the alteration properties of polystyrene and high-density polyethylene microplastics by heat-activated K 2 S 2 O 8 and Fenton treatments to improve the understanding of their long-term natural aging in aquatic environments. Our results indicated that the O/C ratio was an alternative parameter to the carbonyl index (CI) to quantitatively describe the surface alteration properties of microplastics. The correlation model of the O/C ratio or CI versus alteration time was developed and compared by natural alteration of microplastics in freshwater samples. Moreover, the regression equation of the equilibrium adsorption capacity of altered microplastics versus the O/C ratio and average size was proposed. This study is the first effort in differentiating the relationships between the alteration properties and alteration time/adsorption capacity of microplastics, which would be helpful for predicting the weathering degree and accumulation of hydrophilic antibiotics onto aged microplastics in aquatic environments. This research develops promising strategies to accelerate the aging reactions using advanced oxidation processes, which would provide further information to assess the microplastic pollution in actual environments.",
+        "authors": [
+          "Peng Liu",
+          "Li Qian",
+          "Hanyu Wang",
+          "Xin Zhan"
+        ],
+        "doi": "10.1021/acs.est.9b00493",
+        "source": "Environmental Science & Technology",
+        "title": "New Insights into the Aging Behavior of Microplastics Accelerated by Advanced Oxidation Processes",
+        "work_id": "doi:10.1021/acs.est.9b00493",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "figures/annual_publications.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E052",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 1 (annual_publications) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "peak_documents": 1329,
+          "peak_year": 2019,
+          "years": [
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ]
+        },
+        "figure_name": "annual_publications",
+        "figure_number": 1
+      }
+    },
+    {
+      "artifact_path": "figures/top_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E053",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 2 (top_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Marine Pollution Bulletin",
+          "top_value": 395
+        },
+        "figure_name": "top_sources",
+        "figure_number": 2
+      }
+    },
+    {
+      "artifact_path": "figures/top_authors.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E054",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 3 (top_authors) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Dario Mendez-Cuadro",
+          "top_value": 127
+        },
+        "figure_name": "top_authors",
+        "figure_number": 3
+      }
+    },
+    {
+      "artifact_path": "figures/top_institutions.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E055",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 4 (top_institutions) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Chinese Academy of Sciences",
+          "top_value": 109
+        },
+        "figure_name": "top_institutions",
+        "figure_number": 4
+      }
+    },
+    {
+      "artifact_path": "figures/document_types.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E056",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 5 (document_types) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed_categories": 1,
+          "total_documents": 3973
+        },
+        "figure_name": "document_types",
+        "figure_number": 5
+      }
+    },
+    {
+      "artifact_path": "figures/citation_distribution.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E057",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 6 (citation_distribution) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "display_cap_p98": 1366.279999999998,
+          "documents": 3973,
+          "maximum": 7932,
+          "mean": 201.3418071985905,
+          "median": 61.0,
+          "zero_cited": 905
+        },
+        "figure_name": "citation_distribution",
+        "figure_number": 6
+      }
+    },
+    {
+      "artifact_path": "figures/top_cited_documents.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E058",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 7 (top_cited_documents) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Microplastics in the marine environment (2011)",
+          "top_value": 7932
+        },
+        "figure_name": "top_cited_documents",
+        "figure_number": 7
+      }
+    },
+    {
+      "artifact_path": "figures/bradford_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E059",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 8 (bradford_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "sources": 985,
+          "zone_1_sources": 4
+        },
+        "figure_name": "bradford_sources",
+        "figure_number": 8
+      }
+    },
+    {
+      "artifact_path": "figures/keyword_trends.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E060",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 9 (keyword_trends) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "keywords": 15,
+          "years": [
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ]
+        },
+        "figure_name": "keyword_trends",
+        "figure_number": 9
+      }
+    },
+    {
+      "artifact_path": "figures/network_coauthorship.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E061",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 10 (network_coauthorship) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 1517,
+          "candidate_nodes_with_links": 427,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 121,
+          "displayed_nodes": 59,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 16,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.0687798481561952,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.46321604143840456,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "overlap_ratio": 0.0,
+          "selected_seed": 1051.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.04561904608427498,
+          "within_between_distance_ratio": 0.0
+        },
+        "figure_name": "network_coauthorship",
+        "figure_number": 10
+      }
+    },
+    {
+      "artifact_path": "figures/network_institution_collaboration.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E062",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 11 (network_institution_collaboration) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 2295,
+          "candidate_nodes_with_links": 428,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 176,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.11707998776227913,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.2952798165573129,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 139.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.022917811982779493,
+          "within_between_distance_ratio": 0.26466061650544664
+        },
+        "figure_name": "network_institution_collaboration",
+        "figure_number": 11
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_cooccurrence.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E063",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 12 (network_keyword_cooccurrence) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 20690,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 202,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.12458208360211018,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.2320917044590999,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 11,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 2254.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.008012506970234904,
+          "within_between_distance_ratio": 0.34988330469640094
+        },
+        "figure_name": "network_keyword_cooccurrence",
+        "figure_number": 12
+      }
+    },
+    {
+      "artifact_path": "figures/network_cocitation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E064",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 13 (network_cocitation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 88715,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 205,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.09476215377569153,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.4213331298276964,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 52,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 2351.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.013342338084649259,
+          "within_between_distance_ratio": 0.20117719733219153
+        },
+        "figure_name": "network_cocitation",
+        "figure_number": 13
+      }
+    },
+    {
+      "artifact_path": "figures/network_citation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E065",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 14 (network_citation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 415,
+          "candidate_nodes_with_links": 368,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 81,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.2118021142547583,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.5209151595011465,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 95,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 2448.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.0008432059058415941,
+          "within_between_distance_ratio": 0.6163771679128647
+        },
+        "figure_name": "network_citation",
+        "figure_number": 14
+      }
+    },
+    {
+      "artifact_path": "figures/network_bibliographic_coupling.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E066",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 15 (network_bibliographic_coupling) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 44910,
+          "candidate_nodes_with_links": 430,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 228,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 430,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.0944486125455432,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.5575127681951447,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 649.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          },
+          "weighted_edge_length": 0.019635755215393645,
+          "within_between_distance_ratio": 0.1564573964013077
+        },
+        "figure_name": "network_bibliographic_coupling",
+        "figure_number": 15
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_overlay.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E067",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 16 (network_keyword_overlay) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 20690,
+          "candidate_nodes_with_links": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 202,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 11,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "year_max": 2017.887323943662,
+          "year_min": 2011.9540229885058
+        },
+        "figure_name": "network_keyword_overlay",
+        "figure_number": 16
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_density.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E068",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 17 (network_keyword_density) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 20690,
+          "candidate_nodes_with_links": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "density_grid": [
+            260,
+            190
+          ],
+          "density_weight": "log(1 + occurrence), gamma 0.62",
+          "displayed_clusters": 7,
+          "displayed_edges": 202,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "gaussian_sigma": 8,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 11,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "figure_name": "network_keyword_density",
+        "figure_number": 17
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E069",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+      "unit": null,
+      "value": {
+        "citation": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+        "doi": "10.1016/j.jbusres.2021.04.070",
+        "role": "bibliometric workflow and interpretation guideline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E070",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+      "unit": null,
+      "value": {
+        "citation": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+        "doi": "10.1016/j.joi.2017.08.007",
+        "role": "science-mapping analysis baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E071",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+      "unit": null,
+      "value": {
+        "citation": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+        "doi": "10.1007/s11192-009-0146-3",
+        "role": "bibliometric network visualization baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E072",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+      "unit": null,
+      "value": {
+        "citation": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+        "doi": "10.1088/1742-5468/2008/10/P10008",
+        "role": "Louvain community-detection method"
+      }
+    }
+  ],
+  "anonymous_candidate": "Discussion\n*Interpretation of growth*: The 29.35% CAGR [E006] and the surge from 2014 onward [E007] suggest a field in a rapid expansion phase, likely driven by heightened environmental awareness and policy interest.",
+  "allowed_evidence_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027",
+    "E028",
+    "E029",
+    "E030",
+    "E031",
+    "E032",
+    "E033",
+    "E034",
+    "E035",
+    "E036",
+    "E037",
+    "E038",
+    "E039",
+    "E040",
+    "E041",
+    "E042",
+    "E043",
+    "E044",
+    "E045",
+    "E046",
+    "E047",
+    "E048",
+    "E049",
+    "E050",
+    "E051",
+    "E052",
+    "E053",
+    "E054",
+    "E055",
+    "E056",
+    "E057",
+    "E058",
+    "E059",
+    "E060",
+    "E061",
+    "E062",
+    "E063",
+    "E064",
+    "E065",
+    "E066",
+    "E067",
+    "E068",
+    "E069",
+    "E070",
+    "E071",
+    "E072",
+    "doi:10.1002/etc.4371",
+    "doi:10.1016/j.envint.2019.105411",
+    "doi:10.1016/j.scitotenv.2019.03.368",
+    "doi:10.1016/j.watres.2018.12.050",
+    "doi:10.1016/j.watres.2019.02.054",
+    "doi:10.1021/acs.est.5b05416",
+    "doi:10.1021/acs.est.6b00183",
+    "doi:10.1021/acs.est.7b00423",
+    "doi:10.1021/acs.est.7b05559",
+    "doi:10.1021/acs.est.9b00493",
+    "doi:10.1021/acs.est.9b01339",
+    "doi:10.1021/acs.est.9b01517",
+    "doi:10.1021/acs.est.9b02540",
+    "doi:10.1021/acs.est.9b03304",
+    "doi:10.1021/es201811s",
+    "doi:10.1021/es2031505",
+    "doi:10.1021/es400663f",
+    "doi:10.1021/es800249a",
+    "doi:10.1073/pnas.1314705111",
+    "doi:10.1111/brv.12480",
+    "doi:10.1111/gcb.14020",
+    "doi:10.1126/sciadv.aax1157",
+    "doi:10.1371/journal.pone.0111913",
+    "doi:10.7326/m19-0618"
+  ],
+  "risk_notice": {
+    "stage": "report_finalization",
+    "issue_signature": "report_claim_grounding",
+    "severity": "high",
+    "detector_score": 0.65,
+    "message": "The system flagged the quoted report span for claim-grounding review. Assess and, if necessary, edit only that span against the visible evidence.",
+    "flagged_text": "Discussion\n*Interpretation of growth*: The 29.35% CAGR [E006] and the surge from 2014 onward [E007] suggest a field in a rapid expansion phase, likely driven by heightened environmental awareness and policy interest."
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "c783f7ac926150a13fb2a612a78abe7886022521b30b741e70e9a3a3c8c66a2c"
+}

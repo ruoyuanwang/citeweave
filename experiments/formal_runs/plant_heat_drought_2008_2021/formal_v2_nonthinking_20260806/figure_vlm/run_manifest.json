@@ -1,0 +1,20 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "plant_heat_drought_2008_2021",
+  "condition": "figure_vlm",
+  "role": "cross_model_extension",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "packet_sha256": "050880214ab94a2309e6a39a0cc82dd8ec2062bddf87a1d2019f7a331628cbd6",
+  "output_sha256": "5ace01b081a1a3486fc748b005eb53f73e52b051ab5fcf0d0b11a3a249463783",
+  "items": 6,
+  "item_ids": [
+    "plant_heat_drought_2008_2021:bibliographic_coupling:network_size",
+    "plant_heat_drought_2008_2021:citation:network_size",
+    "plant_heat_drought_2008_2021:coauthorship:network_size",
+    "plant_heat_drought_2008_2021:cocitation:network_size",
+    "plant_heat_drought_2008_2021:institution_collaboration:network_size",
+    "plant_heat_drought_2008_2021:keyword_cooccurrence:network_size"
+  ]
+}

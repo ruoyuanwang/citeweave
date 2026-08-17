@@ -1,0 +1,64 @@
+schema_version: "1.0"
+protocol_id: formal-adaptive-v3-scoped-human-proxy
+purpose: >
+  Codex subagents simulate human intervention only inside the formal
+  Always/Static/Adaptive Review experiment.
+role_separation:
+  observational_judges:
+    roles:
+      - query_judge
+      - empirical_query_precision_judge
+      - evaluation_judge
+      - adjudication_judge
+    may_modify_pipeline: false
+    may_modify_artifacts: false
+  human_proxy:
+    active_only_when:
+      - current run is the human-machine interaction experiment
+      - condition requests feedback review
+      - system has emitted a visible risk notice
+    visible_information:
+      - anonymous excerpt containing only the exact system-flagged span
+      - system risk notice
+      - one exact system-flagged text span of at most 500 characters
+      - frozen evidence supplied in the review packet
+      - allowed evidence identifiers
+    hidden_information:
+      - condition name
+      - other experimental outputs
+      - human-reference results
+      - retrieval logs and hidden ground truth
+      - policy memory outside the current visible packet
+    permitted_actions:
+      - accept
+      - reject
+      - replace one exact visible span
+      - delete one exact visible span
+      - append one short caveat
+    task_scope:
+      - address only the risk already identified in the visible risk notice
+      - replacement or deletion targets must lie inside the exact flagged text span
+      - do not independently search the artifact for additional problems
+      - do not change any unflagged part of the artifact
+      - when visible evidence is insufficient, reject or add a caveat rather than infer a fact
+    edit_constraints:
+      maximum_edits_per_intervention: 1
+      maximum_target_characters: 500
+      maximum_replacement_characters: 500
+      exact_target_occurrences_required: 1
+    prohibited_capabilities:
+      - external retrieval or browsing
+      - API or tool calls
+      - rerunning bibliometric analysis
+      - changing code, query, corpus, or evidence
+      - viewing hidden truth or other conditions
+      - rewriting the complete report
+      - introducing facts absent from visible evidence
+      - using model knowledge or model-scale synthesis beyond the visible review card
+memory:
+  source: validated human-proxy feedback decisions only (accept/revise/reject)
+  evaluation_judgments_enter_memory: false
+primary_outcomes:
+  - review_request_rate
+  - final_quality_pass_rate
+  - unsafe_auto_accept_rate

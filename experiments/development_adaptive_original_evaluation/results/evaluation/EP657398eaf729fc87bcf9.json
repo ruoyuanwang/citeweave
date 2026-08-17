@@ -1,0 +1,10 @@
+{
+  "packet_id": "EP657398eaf729fc87bcf9",
+  "judge_id": "evaluation",
+  "decision": "fail",
+  "confidence": 0.95,
+  "reason": "Although abstention is correct, the explanation materially overstates the evidence as showing that the network has no visible labels at all; it only establishes that the requested target label is absent.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ]
+}

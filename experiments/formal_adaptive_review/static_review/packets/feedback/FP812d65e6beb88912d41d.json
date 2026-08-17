@@ -1,0 +1,127 @@
+{
+  "packet_id": "FP812d65e6beb88912d41d",
+  "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:strongest_connection:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:edge:0001:relation",
+        "bibliographic_coupling:edge:0001:weight",
+        "bibliographic_coupling:fact:strongest_connection",
+        "bibliographic_coupling:node:doi:10.1071/fp13340:label",
+        "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:edge:0001",
+        "bibliographic_coupling:node:doi:10.1071/fp13340",
+        "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "bibliographic_coupling:edge:0001:relation"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1071/fp13340",
+            "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776"
+          ],
+          "path_id": "path:bibliographic_coupling:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "bibliographic_coupling:fact:strongest_connection"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1071/fp13340",
+            "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776"
+          ],
+          "path_id": "path:bibliographic_coupling:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:relation",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "bibliographic_coupling:node:doi:10.1071/fp13340"
+        },
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:weight",
+          "network": "bibliographic_coupling",
+          "object": 65.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "bibliographic_coupling:edge:0001"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:strongest_connection",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "bibliographic_coupling:node:doi:10.1071/fp13340"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1071/fp13340:label",
+          "network": "bibliographic_coupling",
+          "object": "Individual and combined…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1071/fp13340"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776:label",
+          "network": "bibliographic_coupling",
+          "object": "Effects of Drought, Heat…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "17e8c323a5ea4cfe919f22b117cd9767519d426633458056d7e77a14ee8fb102"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the bibliographic_coupling network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"Individual and combined…\",\"target_label\":\"Effects of Drought, Heat…\",\"weight\":65.0},\"explanation\":\"The fact 'strongest_connection' explicitly states that the node with label 'Individual and combined…' has the strongest connection to the node with label 'Effects of Drought, Heat…'. The weight of this connection is given as 65.0 in the edge weight relationship.\",\"item_id\":\"plant_heat_drought_2008_2021:bibliographic_coupling:strongest_connection\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1071/fp13340:label",
+    "bibliographic_coupling:node:doi:10.3389/fpls.2017.01776:label",
+    "path:bibliographic_coupling:edge:0001:relation",
+    "path:bibliographic_coupling:fact:strongest_connection"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:strongest_connection",
+    "issue_signature": "graph:strongest_connection",
+    "severity": "high",
+    "detector_score": 0.7,
+    "message": "The system flagged the quoted strongest_connection answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"source_label\":\"Individual and combined…\",\"target_label\":\"Effects of Drought, Heat…\",\"weight\":65.0},\"explanation\":\"The fact 'strongest_connection' explicitly states that the node with label 'Individual and combined…' has the strongest connection to the node with label 'Effects of Drought, Heat…'. The weight of this connection is given as 65.0 in the edge weight relationship.\",\"item_id\":\"plant_heat_drought_2008_2021:bibliographic_coupling:strongest_connection\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "b2cf32830d6f392fbb518dd5ea1e9ef75ac3007fe62cbcac5756784898ca9a44"
+}

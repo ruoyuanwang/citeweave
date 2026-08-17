@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "topics": 2,
+  "maximum_words": 4000,
+  "matched_word_counts": {
+    "gnn_drug_discovery_2017_2023:citeweave_full": 2001,
+    "gnn_drug_discovery_2017_2023:structured_one_shot": 3269,
+    "crispr_extracellular_vesicles_2015_2022:citeweave_full": 1827,
+    "crispr_extracellular_vesicles_2015_2022:structured_one_shot": 2714
+  },
+  "comparisons": {
+    "one_shot_vs_full": {
+      "evidence_mode": "shared"
+    },
+    "full_vs_human": {
+      "evidence_mode": "paired"
+    },
+    "one_shot_vs_human": {
+      "evidence_mode": "paired"
+    }
+  }
+}

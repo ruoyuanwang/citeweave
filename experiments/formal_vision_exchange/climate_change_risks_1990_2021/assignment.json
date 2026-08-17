@@ -1,0 +1,112 @@
+{
+  "assignment_role": "independent_codex_visible_only_figure_evaluation",
+  "controller_metadata_in_scope": false,
+  "dataset_id": "climate_change_risks_1990_2021",
+  "figure_manifest_sha256": "0ec6965b68137a088f4d18cb7c2eefd9da94ecf8eaef22015496dfffe0fde733",
+  "generator_role": "codex_visual_subagent",
+  "instructions": [
+    "Use only the PNG files explicitly listed in items. Do not inspect the workspace, packet source, benchmark, graph data, reports, gold answers, or outputs from any other condition.",
+    "Visually inspect each PNG and answer only its paired question. If the requested values are not established by the visible image, abstain with answer=null.",
+    "Return exactly one result for every item in the listed order. Do not add fields, commentary, Markdown, or modify any other file."
+  ],
+  "items": [
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_bibliographic_coupling.png",
+      "figure_sha256": "d839dac0234ca20f61bec3f93666e24612f2d13b1584c79ec74a94b82e443fec",
+      "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size",
+      "question": "How many nodes and links are displayed in the bibliographic_coupling network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_citation.png",
+      "figure_sha256": "9aa8697a51e916e72b6b15885e171673894c7d00cc9d33ceee0f68141a1b1e10",
+      "item_id": "climate_change_risks_1990_2021:citation:network_size",
+      "question": "How many nodes and links are displayed in the citation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_coauthorship.png",
+      "figure_sha256": "d06e4484f1fd4f41d82102d860990a8b8d030df79c5b99495f616f211d54865d",
+      "item_id": "climate_change_risks_1990_2021:coauthorship:network_size",
+      "question": "How many nodes and links are displayed in the coauthorship network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_cocitation.png",
+      "figure_sha256": "a332ced4991014d4bdcfcd139d8aef98cdc12e2917d7238ded28d471aa34fe55",
+      "item_id": "climate_change_risks_1990_2021:cocitation:network_size",
+      "question": "How many nodes and links are displayed in the cocitation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_institution_collaboration.png",
+      "figure_sha256": "0f3f0fb7d42d323f608a65dc263eae990238b7afa93d52df358ac53533474637",
+      "item_id": "climate_change_risks_1990_2021:institution_collaboration:network_size",
+      "question": "How many nodes and links are displayed in the institution_collaboration network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\climate_change_risks_1990_2021\\figures\\network_keyword_cooccurrence.png",
+      "figure_sha256": "cfe59fea5ae6b546113bbb4935d0c4bc1d3f6603ef043e485cf3325873768eb7",
+      "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:network_size",
+      "question": "How many nodes and links are displayed in the keyword_cooccurrence network?",
+      "task_type": "network_size"
+    }
+  ],
+  "main_inference": false,
+  "may_modify_pipeline_or_source_artifacts": false,
+  "may_read_unlisted_workspace_files": false,
+  "prohibited_inputs": [
+    "flat structured context",
+    "gold_answer",
+    "graph JSON",
+    "human reference output",
+    "other condition output"
+  ],
+  "registry_sha256": "7c0ea6f10726e986793780ba5469879255f034eeefdb1c506af54cde9e07d3cd",
+  "return_path": "D:\\project\\bibagent\\experiments\\formal_vision_returns\\climate_change_risks_1990_2021.json",
+  "schema_version": 1,
+  "source_packet_file_sha256": "378544bac34fded762f1b1dbcbcd6c208030b6862109987497c25861a0843118",
+  "source_packet_sha256": "88f40e1b26fec56493d3ded977da49b7cced27d3ab8324bfbad440d64fbe6531",
+  "strict_output_schema": {
+    "dataset_id": "climate_change_risks_1990_2021",
+    "generator_role": "codex_visual_subagent",
+    "packet_sha256": "88f40e1b26fec56493d3ded977da49b7cced27d3ab8324bfbad440d64fbe6531",
+    "results": [
+      {
+        "abstain": "<boolean>",
+        "answer": "<object matching answer_contract exactly, or null iff abstain>",
+        "explanation": "<brief visible-image basis, 1..1000 characters>",
+        "item_id": "<copy exact item_id in input order>"
+      }
+    ],
+    "schema_version": 1,
+    "visible_only": true
+  },
+  "visible_only": true,
+  "write_scope": "Only return_path may be created or replaced by the assigned visual subagent."
+}

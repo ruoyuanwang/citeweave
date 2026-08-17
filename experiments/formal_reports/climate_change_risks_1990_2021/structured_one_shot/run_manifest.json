@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "dataset_id": "climate_change_risks_1990_2021",
+  "condition": "structured_one_shot",
+  "evidence_sha256": "2ca24703190ced83554a9cf5275e48820204c01ccf416b81b2bf4aaa83831d18",
+  "model": "deepseek-v4-pro",
+  "base_url": "https://api.deepseek.com",
+  "temperature": 0.1,
+  "seed": 42,
+  "max_tokens": 8000,
+  "report_language": "English",
+  "internal_review_policy": "Revision-only artifact. It must not be reused as an experimental evaluation.",
+  "external_evaluation_policy": "Use a separately instantiated external Judge with independent prompts and traces."
+}

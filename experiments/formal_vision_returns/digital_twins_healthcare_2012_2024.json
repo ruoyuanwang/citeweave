@@ -1,0 +1,63 @@
+{
+  "dataset_id": "digital_twins_healthcare_2012_2024",
+  "generator_role": "codex_visual_subagent",
+  "packet_sha256": "8ee6268c595366711426fcb66bc2e1a87b75787eb6112fc8c90e28a1f71802e9",
+  "results": [
+    {
+      "abstain": false,
+      "answer": {
+        "links": 230,
+        "nodes": 72
+      },
+      "explanation": "The subtitle visibly states “72 nodes · 230 links.”",
+      "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 4,
+        "nodes": 5
+      },
+      "explanation": "The subtitle visibly states “5 nodes · 4 links.”",
+      "item_id": "digital_twins_healthcare_2012_2024:citation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 128,
+        "nodes": 59
+      },
+      "explanation": "The subtitle visibly states “59 nodes · 128 links.”",
+      "item_id": "digital_twins_healthcare_2012_2024:coauthorship:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 203,
+        "nodes": 72
+      },
+      "explanation": "The subtitle visibly states “72 nodes · 203 links.”",
+      "item_id": "digital_twins_healthcare_2012_2024:cocitation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 153,
+        "nodes": 72
+      },
+      "explanation": "The subtitle visibly states “72 nodes · 153 links.”",
+      "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 188,
+        "nodes": 72
+      },
+      "explanation": "The subtitle visibly states “72 nodes · 188 links.”",
+      "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size"
+    }
+  ],
+  "schema_version": 1,
+  "visible_only": true
+}

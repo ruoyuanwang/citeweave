@@ -1,0 +1,16 @@
+{
+  "packet_id": "EP3d04c950c4de42c89e18",
+  "decision": "fail",
+  "confidence": 0.99,
+  "reason": "Several substantive interpretations exceed the visible evidence. E009 establishes only that Zenodo is a source label with 16 publications; it does not establish that it is a general-purpose repository or that the included records are preprints rather than peer-reviewed publications. E006 and E007 describe endpoint CAGR and annual counts, but do not support the claim that expansion was likely driven by convergence of IoT, AI, and healthcare; calling the trend accelerating is also overstated because the absolute annual increase falls from 120 in 2022 to 118 in 2023. E015 and E017 establish a right-skewed citation distribution but not that this pattern is typical of scientific fields or that particular works are seminal. Finally, E020 and E027 separately show keyword trends and a parameterized co-occurrence network, but do not establish a strong and growing integration of AI and data-science methodologies into healthcare applications. These unsupported repository-status, causal, comparative, and thematic claims prevent the report from being fully evidence-grounded.",
+  "evidence_ids": [
+    "E006",
+    "E007",
+    "E009",
+    "E015",
+    "E017",
+    "E020",
+    "E027"
+  ],
+  "judge_id": "evaluation"
+}

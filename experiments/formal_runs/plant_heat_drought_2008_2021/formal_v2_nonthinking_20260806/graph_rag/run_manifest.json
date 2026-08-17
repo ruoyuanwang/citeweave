@@ -1,0 +1,75 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "plant_heat_drought_2008_2021",
+  "condition": "graph_rag",
+  "prompt_version": "formal-graph-qa-v2-nonthinking",
+  "profile": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "modality": "text",
+    "capability_snapshot": "D:\\project\\bibagent\\experiments\\api_capabilities\\deepseek_models.json",
+    "response_format": "json_object",
+    "supports_json_schema": false,
+    "supports_seed": false,
+    "supports_data_uri": false
+  },
+  "capability_validation": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "snapshot_sha256": "bb06a7f1283e0b4c9375df86195f732ccaef2466ad685965a4512784af26e7c5",
+    "model_available": true,
+    "image_input_verified": null,
+    "passed": true,
+    "reasons": []
+  },
+  "comparison_design": {
+    "primary_text_panel": {
+      "profile_id": "deepseek-official-v4-pro-text",
+      "model": "deepseek-v4-pro",
+      "base_url": "https://api.deepseek.com",
+      "conditions": [
+        "no_rag",
+        "flat_structured",
+        "graph_rag"
+      ],
+      "strict_within_model_comparison": true
+    },
+    "figure_panel": null
+  },
+  "grounding_manifest_sha256": "973844abce7a7bd032332a1e698cdfc07745442a6940bdeac27004174d7abc67",
+  "benchmark_sha256": "0027926733f5b0a121a27dc2e38596417353c5bee819a2e480aad271690282b2",
+  "items": 30,
+  "item_ids": [
+    "plant_heat_drought_2008_2021:bibliographic_coupling:network_size",
+    "plant_heat_drought_2008_2021:bibliographic_coupling:highest_occurrence",
+    "plant_heat_drought_2008_2021:bibliographic_coupling:strongest_connection",
+    "plant_heat_drought_2008_2021:bibliographic_coupling:cluster_membership",
+    "plant_heat_drought_2008_2021:bibliographic_coupling:false_premise",
+    "plant_heat_drought_2008_2021:citation:network_size",
+    "plant_heat_drought_2008_2021:citation:highest_occurrence",
+    "plant_heat_drought_2008_2021:citation:strongest_connection",
+    "plant_heat_drought_2008_2021:citation:cluster_membership",
+    "plant_heat_drought_2008_2021:citation:false_premise",
+    "plant_heat_drought_2008_2021:coauthorship:network_size",
+    "plant_heat_drought_2008_2021:coauthorship:highest_occurrence",
+    "plant_heat_drought_2008_2021:coauthorship:strongest_connection",
+    "plant_heat_drought_2008_2021:coauthorship:cluster_membership",
+    "plant_heat_drought_2008_2021:coauthorship:false_premise",
+    "plant_heat_drought_2008_2021:cocitation:network_size",
+    "plant_heat_drought_2008_2021:cocitation:highest_occurrence",
+    "plant_heat_drought_2008_2021:cocitation:strongest_connection",
+    "plant_heat_drought_2008_2021:cocitation:cluster_membership",
+    "plant_heat_drought_2008_2021:cocitation:false_premise",
+    "plant_heat_drought_2008_2021:institution_collaboration:network_size",
+    "plant_heat_drought_2008_2021:institution_collaboration:highest_occurrence",
+    "plant_heat_drought_2008_2021:institution_collaboration:strongest_connection",
+    "plant_heat_drought_2008_2021:institution_collaboration:cluster_membership",
+    "plant_heat_drought_2008_2021:institution_collaboration:false_premise",
+    "plant_heat_drought_2008_2021:keyword_cooccurrence:network_size",
+    "plant_heat_drought_2008_2021:keyword_cooccurrence:highest_occurrence",
+    "plant_heat_drought_2008_2021:keyword_cooccurrence:strongest_connection",
+    "plant_heat_drought_2008_2021:keyword_cooccurrence:cluster_membership",
+    "plant_heat_drought_2008_2021:keyword_cooccurrence:false_premise"
+  ]
+}

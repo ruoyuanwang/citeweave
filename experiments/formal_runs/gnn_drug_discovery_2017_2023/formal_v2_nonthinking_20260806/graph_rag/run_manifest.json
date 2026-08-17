@@ -1,0 +1,74 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "gnn_drug_discovery_2017_2023",
+  "condition": "graph_rag",
+  "prompt_version": "formal-graph-qa-v2-nonthinking",
+  "profile": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "modality": "text",
+    "capability_snapshot": "D:\\project\\bibagent\\experiments\\api_capabilities\\deepseek_models.json",
+    "response_format": "json_object",
+    "supports_json_schema": false,
+    "supports_seed": false,
+    "supports_data_uri": false
+  },
+  "capability_validation": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "snapshot_sha256": "bb06a7f1283e0b4c9375df86195f732ccaef2466ad685965a4512784af26e7c5",
+    "model_available": true,
+    "image_input_verified": null,
+    "passed": true,
+    "reasons": []
+  },
+  "comparison_design": {
+    "primary_text_panel": {
+      "profile_id": "deepseek-official-v4-pro-text",
+      "model": "deepseek-v4-pro",
+      "base_url": "https://api.deepseek.com",
+      "conditions": [
+        "no_rag",
+        "flat_structured",
+        "graph_rag"
+      ],
+      "strict_within_model_comparison": true
+    },
+    "figure_panel": null
+  },
+  "grounding_manifest_sha256": "85f5e8beeaf888eacba364b93bfa817610ef319b0f35b04bdd03da474aa17a89",
+  "benchmark_sha256": "c4c2c6d59a65bb1151eeeea58007f24560542336ad680b6ebbce8b913a3da028",
+  "items": 29,
+  "item_ids": [
+    "gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size",
+    "gnn_drug_discovery_2017_2023:bibliographic_coupling:highest_occurrence",
+    "gnn_drug_discovery_2017_2023:bibliographic_coupling:strongest_connection",
+    "gnn_drug_discovery_2017_2023:bibliographic_coupling:cluster_membership",
+    "gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise",
+    "gnn_drug_discovery_2017_2023:citation:network_size",
+    "gnn_drug_discovery_2017_2023:citation:highest_occurrence",
+    "gnn_drug_discovery_2017_2023:citation:strongest_connection",
+    "gnn_drug_discovery_2017_2023:citation:cluster_membership",
+    "gnn_drug_discovery_2017_2023:citation:false_premise",
+    "gnn_drug_discovery_2017_2023:coauthorship:network_size",
+    "gnn_drug_discovery_2017_2023:coauthorship:strongest_connection",
+    "gnn_drug_discovery_2017_2023:coauthorship:cluster_membership",
+    "gnn_drug_discovery_2017_2023:coauthorship:false_premise",
+    "gnn_drug_discovery_2017_2023:cocitation:network_size",
+    "gnn_drug_discovery_2017_2023:cocitation:highest_occurrence",
+    "gnn_drug_discovery_2017_2023:cocitation:strongest_connection",
+    "gnn_drug_discovery_2017_2023:cocitation:cluster_membership",
+    "gnn_drug_discovery_2017_2023:cocitation:false_premise",
+    "gnn_drug_discovery_2017_2023:institution_collaboration:network_size",
+    "gnn_drug_discovery_2017_2023:institution_collaboration:highest_occurrence",
+    "gnn_drug_discovery_2017_2023:institution_collaboration:strongest_connection",
+    "gnn_drug_discovery_2017_2023:institution_collaboration:cluster_membership",
+    "gnn_drug_discovery_2017_2023:institution_collaboration:false_premise",
+    "gnn_drug_discovery_2017_2023:keyword_cooccurrence:network_size",
+    "gnn_drug_discovery_2017_2023:keyword_cooccurrence:highest_occurrence",
+    "gnn_drug_discovery_2017_2023:keyword_cooccurrence:strongest_connection",
+    "gnn_drug_discovery_2017_2023:keyword_cooccurrence:cluster_membership",
+    "gnn_drug_discovery_2017_2023:keyword_cooccurrence:false_premise"
+  ]
+}

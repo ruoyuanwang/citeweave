@@ -1,0 +1,71 @@
+{
+  "packet_id": "FPaf30183011e093e2dc36",
+  "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+          "network": "bibliographic_coupling",
+          "object": 2,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label",
+          "network": "bibliographic_coupling",
+          "object": "Microplastics in the env…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "59e2ba206570035289b73933da7f26d74d3a31a65401d4485382917568e95adc"
+    },
+    "question": "Which detected cluster contains the labeled node 'Microplastics in the env…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":2,\"label\":\"Microplastics in the env…\"},\"explanation\":\"The node with DOI 10.1016/j.envpol.2019.113011 has the display label 'Microplastics in the env…' and is assigned to cluster 2 in the bibliographic_coupling network, as shown in the provided relationships.\",\"item_id\":\"global_microplastics_2004_2019:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:cluster_membership",
+    "issue_signature": "graph:cluster_membership",
+    "severity": "medium",
+    "detector_score": 0.6,
+    "message": "The system flagged the quoted cluster_membership answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"cluster\":2,\"label\":\"Microplastics in the env…\"},\"explanation\":\"The node with DOI 10.1016/j.envpol.2019.113011 has the display label 'Microplastics in the env…' and is assigned to cluster 2 in the bibliographic_coupling network, as shown in the provided relationships.\",\"item_id\":\"global_microplastics_2004_2019:bibliographic_coupling:cluster_membership\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "30daceddcd6485e9abb9f0d5f21cbe535953184d1555c009bdb0a3b77e6a2aef"
+}

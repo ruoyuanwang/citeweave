@@ -1,0 +1,7 @@
+schema_version: "1.0"
+purpose: Judge-rubric calibration subset only
+references:
+  - id: gnn_drug_discovery_2017_2023
+    role: development
+  - id: crispr_extracellular_vesicles_2015_2022
+    role: development

@@ -58,6 +58,14 @@ class EvidenceBundle:
         return json.dumps(rows, ensure_ascii=False, indent=2, default=str)
 
 
+@dataclass(frozen=True)
+class EvidenceCorpusStats:
+    """Full-corpus counts computed out of core for scalable evidence preparation."""
+
+    documents: int
+    zero_cited: int
+
+
 def _frame_records(
     frame: pd.DataFrame,
     *,
@@ -77,6 +85,8 @@ def build_evidence(
     analyses: AnalysisBundle,
     figures: list[FigureArtifact],
     quality: QualityReport | None = None,
+    *,
+    corpus_stats: EvidenceCorpusStats | None = None,
 ) -> EvidenceBundle:
     items: list[EvidenceItem] = []
 
@@ -282,18 +292,26 @@ def build_evidence(
         "Citation-count field supplied by the selected source at retrieval time.",
         caveat="Citation counts are source- and retrieval-date-dependent.",
     )
-    zero_cited = int(
-        (pd.to_numeric(tables.works["cited_by_count"], errors="coerce").fillna(0) == 0).sum()
+    document_count = corpus_stats.documents if corpus_stats else len(tables.works)
+    zero_cited = (
+        corpus_stats.zero_cited
+        if corpus_stats
+        else int(
+            (
+                pd.to_numeric(tables.works["cited_by_count"], errors="coerce").fillna(0)
+                == 0
+            ).sum()
+        )
     )
     add(
         "zero_citation_share",
         (
             f"{zero_cited} works have zero source-reported citations, representing "
-            f"{zero_cited / len(tables.works) * 100:.2f}% of the corpus."
+            f"{zero_cited / document_count * 100:.2f}% of the corpus."
         ),
         {
             "zero_cited": zero_cited,
-            "share_percent": round(zero_cited / len(tables.works) * 100, 2),
+            "share_percent": round(zero_cited / document_count * 100, 2),
         },
         "canonical/works.parquet",
         "Count and percentage of canonical works with cited_by_count equal to zero.",
@@ -341,11 +359,16 @@ def build_evidence(
             ),
         )
     if not analyses.bradford_sources.empty:
-        zone_summary = (
-            analyses.bradford_sources.groupby("zone", dropna=False)
-            .agg(sources=("source_id", "nunique"), documents=("publications", "sum"))
-            .reset_index()
-        )
+        if {"sources", "documents"}.issubset(analyses.bradford_sources.columns):
+            zone_summary = analyses.bradford_sources[
+                ["zone", "sources", "documents"]
+            ].copy()
+        else:
+            zone_summary = (
+                analyses.bradford_sources.groupby("zone", dropna=False)
+                .agg(sources=("source_id", "nunique"), documents=("publications", "sum"))
+                .reset_index()
+            )
         zone_records = _frame_records(zone_summary)
         zone_documents = [int(row["documents"]) for row in zone_records]
         add(
@@ -551,7 +574,7 @@ def build_evidence(
         graph.add_node(node_id, kind="raw_page", sha256=digest)
         graph.add_edge("raw_snapshot", node_id, relation="contains")
     graph.add_node("normalization_run", kind="transformation_run")
-    graph.add_node("canonical_corpus", kind="corpus", works=len(tables.works))
+    graph.add_node("canonical_corpus", kind="corpus", works=document_count)
     graph.add_node("analysis_run", kind="analysis_run")
     graph.add_edge("raw_snapshot", "normalization_run", relation="input_to")
     graph.add_edge("normalization_run", "canonical_corpus", relation="produced")

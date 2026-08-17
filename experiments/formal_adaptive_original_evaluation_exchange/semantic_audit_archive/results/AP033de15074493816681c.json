@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "AP033de15074493816681c",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The pass decision is consistent because the candidate returns the displayed label of the node identified by the highest-occurrence fact."
+}

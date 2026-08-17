@@ -1,0 +1,1799 @@
+[
+  {
+    "dataset_id": "machine_learning_climate_change_2008_2022",
+    "workspace": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022",
+    "harvest": {
+      "project_root": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022",
+      "complete": true,
+      "expected_records": 7717,
+      "received_records": 7720,
+      "unique_records": 7686,
+      "pages": 78,
+      "raw_files": 78,
+      "staged_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\staged\\source_records.jsonl.gz",
+      "manifest": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\audit\\harvest_manifest.json"
+    },
+    "harvest_acceptance": {
+      "project_root": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022",
+      "passed": true,
+      "passed_checks": 6,
+      "total_checks": 6,
+      "checks": [
+        {
+          "name": "protocol_fingerprint",
+          "passed": true,
+          "detail": {
+            "project_config": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\project.yml",
+            "config_present": true,
+            "manifest_fingerprint": "0ce12cc82d7a78faadd05b18ded21932e3214337ee4b669d5ff5ee0e274253a2",
+            "computed_fingerprint": "0ce12cc82d7a78faadd05b18ded21932e3214337ee4b669d5ff5ee0e274253a2"
+          }
+        },
+        {
+          "name": "full_period_non_overlapping_contiguous_slices",
+          "passed": true,
+          "detail": {
+            "slices": 1,
+            "first": "2008-01-01",
+            "last": "2022-12-31",
+            "expected_first": "2008-01-01",
+            "expected_last": "2022-12-31",
+            "errors": []
+          }
+        },
+        {
+          "name": "slice_completeness",
+          "passed": true,
+          "detail": {
+            "incomplete": [],
+            "count_errors": []
+          }
+        },
+        {
+          "name": "raw_page_integrity",
+          "passed": true,
+          "detail": {
+            "checked_pages": 78,
+            "raw_records": 7720,
+            "raw_unique": 7686,
+            "raw_duplicates": 34,
+            "errors": []
+          }
+        },
+        {
+          "name": "staged_corpus_integrity",
+          "passed": true,
+          "detail": {
+            "path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\staged\\source_records.jsonl.gz",
+            "lines": 7686,
+            "unique_ids": 7686,
+            "expected_lines": 7686,
+            "profile": {
+              "records": 7686,
+              "with_doi": 7211,
+              "with_title": 7685,
+              "with_authors": 7617,
+              "with_abstract": 5698,
+              "with_references": 6568,
+              "reference_links": 379729
+            },
+            "error": null
+          }
+        },
+        {
+          "name": "aggregate_completeness",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "root_expected": 7717,
+            "planned_expected": 7717,
+            "cursor_snapshot_expected": 7717,
+            "received": 7720,
+            "unique": 7686,
+            "duplicates": 34
+          }
+        }
+      ]
+    },
+    "processing": {
+      "project_root": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022",
+      "resumed": false,
+      "already_complete": false,
+      "manifest": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\audit\\processing_manifest.json",
+      "records_processed": 7686,
+      "batches_completed": 8,
+      "elapsed_seconds": 28.487,
+      "quality": {
+        "version": 1,
+        "created_at": "2026-08-06T07:02:38.844308+00:00",
+        "passed": true,
+        "input_records": 7686,
+        "canonical_records": 7675,
+        "duplicates_removed": 11,
+        "scope_filter": {
+          "protocol_year_from": 2008,
+          "protocol_year_to": 2022,
+          "out_of_scope_in_canonical": 0,
+          "excluded_source_records": 0,
+          "included_source_records": 7686,
+          "input_records_accounted": 7686,
+          "excluded_records_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\quality\\excluded_records.parquet"
+        },
+        "table_rows": {
+          "works": 7675,
+          "authors": 27834,
+          "institutions": 5591,
+          "authorships": 44739,
+          "sources": 2342,
+          "keywords": 102651,
+          "topics": 21659,
+          "references": 378922,
+          "provenance": 7686,
+          "duplicates": 11
+        },
+        "field_coverage": {
+          "doi": {
+            "present": 7202,
+            "ratio": 0.938371
+          },
+          "title": {
+            "present": 7674,
+            "ratio": 0.99987
+          },
+          "abstract": {
+            "present": 5689,
+            "ratio": 0.741238
+          },
+          "year": {
+            "present": 7675,
+            "ratio": 1.0
+          },
+          "publication_date": {
+            "present": 7675,
+            "ratio": 1.0
+          },
+          "document_type": {
+            "present": 7675,
+            "ratio": 1.0
+          },
+          "language": {
+            "present": 7587,
+            "ratio": 0.988534
+          },
+          "source_id": {
+            "present": 7675,
+            "ratio": 1.0
+          },
+          "publisher": {
+            "present": 6757,
+            "ratio": 0.880391
+          },
+          "cited_by_count": {
+            "present": 7675,
+            "ratio": 1.0
+          },
+          "reference_count": {
+            "present": 7675,
+            "ratio": 1.0
+          }
+        },
+        "year_bounds": {
+          "minimum": 2008,
+          "maximum": 2022
+        },
+        "foreign_key_orphans": {
+          "authorship_work": 0,
+          "authorship_author": 0,
+          "authorship_institution": 0,
+          "keyword_work": 0,
+          "topic_work": 0,
+          "reference_citing_work": 0,
+          "provenance_work": 0,
+          "work_source": 0
+        },
+        "primary_key_uniqueness": {
+          "works": {
+            "rows": 7675,
+            "distinct_ids": 7675
+          },
+          "authors": {
+            "rows": 27834,
+            "distinct_ids": 27834
+          },
+          "institutions": {
+            "rows": 5591,
+            "distinct_ids": 5591
+          },
+          "sources": {
+            "rows": 2342,
+            "distinct_ids": 2342
+          }
+        },
+        "rules": {
+          "doi": "lowercase DOI, resolver prefix removed, invalid DOI stored as null",
+          "text": "HTML removed, Unicode NFKC normalized, whitespace collapsed",
+          "deduplication": "exact normalized DOI; otherwise exact normalized title of at least 20 characters + year; short or missing titles are not auto-merged; winner selected by metadata completeness with deterministic tie-break",
+          "author_identity": "ORCID first; otherwise source identifier where available; Crossref fallback uses normalized name + primary normalized affiliation",
+          "relationships": "all loser work identifiers remapped to the retained work",
+          "year_scope": "canonical publication year must fall inside the protocol range; other source records are retained in the exclusion ledger",
+          "statistics": "all rows, no sampling",
+          "networks": "full occurrence counts followed by bounded candidate-first expansion"
+        },
+        "paths": {
+          "canonical": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\canonical",
+          "visualization": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\canonical\\visualization"
+        },
+        "keyword_derivation": {
+          "applied": false,
+          "reason": "source_keyword_coverage_sufficient",
+          "source_coverage": 1.0,
+          "derived_rows": 0
+        }
+      },
+      "visualization_rows": {
+        "annual_output": 15,
+        "document_types": 1,
+        "languages": 19,
+        "source_productivity": 2342,
+        "author_productivity": 27834,
+        "institution_productivity": 5591,
+        "keyword_occurrences": 5905,
+        "topic_occurrences": 1459,
+        "reference_impact": 255262,
+        "coauthor_edges": 1106,
+        "institution_collaboration_edges": 11305,
+        "keyword_cooccurrence_edges": 50118,
+        "cocitation_edges": 40267,
+        "direct_citation_edges": 134
+      }
+    },
+    "processing_acceptance": {
+      "project_root": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022",
+      "passed": true,
+      "passed_checks": 6,
+      "total_checks": 6,
+      "checks": [
+        {
+          "name": "processing_complete",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "records": 7686,
+            "batches": 8
+          }
+        },
+        {
+          "name": "input_count_contract",
+          "passed": true,
+          "detail": {
+            "processed": 7686,
+            "harvest_unique": 7686
+          }
+        },
+        {
+          "name": "canonical_file_integrity",
+          "passed": true,
+          "detail": {
+            "missing": [],
+            "hash_errors": []
+          }
+        },
+        {
+          "name": "primary_and_foreign_key_integrity",
+          "passed": true,
+          "detail": {
+            "uniqueness": {},
+            "foreign_key_orphans": {
+              "authorship_work": 0,
+              "authorship_author": 0,
+              "keyword_work": 0,
+              "reference_citing_work": 0,
+              "provenance_work": 0
+            }
+          }
+        },
+        {
+          "name": "processing_quality_gate",
+          "passed": true,
+          "detail": {
+            "version": 1,
+            "created_at": "2026-08-06T07:02:38.844308+00:00",
+            "passed": true,
+            "input_records": 7686,
+            "canonical_records": 7675,
+            "duplicates_removed": 11,
+            "scope_filter": {
+              "protocol_year_from": 2008,
+              "protocol_year_to": 2022,
+              "out_of_scope_in_canonical": 0,
+              "excluded_source_records": 0,
+              "included_source_records": 7686,
+              "input_records_accounted": 7686,
+              "excluded_records_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\quality\\excluded_records.parquet"
+            },
+            "table_rows": {
+              "works": 7675,
+              "authors": 27834,
+              "institutions": 5591,
+              "authorships": 44739,
+              "sources": 2342,
+              "keywords": 102651,
+              "topics": 21659,
+              "references": 378922,
+              "provenance": 7686,
+              "duplicates": 11
+            },
+            "field_coverage": {
+              "doi": {
+                "present": 7202,
+                "ratio": 0.938371
+              },
+              "title": {
+                "present": 7674,
+                "ratio": 0.99987
+              },
+              "abstract": {
+                "present": 5689,
+                "ratio": 0.741238
+              },
+              "year": {
+                "present": 7675,
+                "ratio": 1.0
+              },
+              "publication_date": {
+                "present": 7675,
+                "ratio": 1.0
+              },
+              "document_type": {
+                "present": 7675,
+                "ratio": 1.0
+              },
+              "language": {
+                "present": 7587,
+                "ratio": 0.988534
+              },
+              "source_id": {
+                "present": 7675,
+                "ratio": 1.0
+              },
+              "publisher": {
+                "present": 6757,
+                "ratio": 0.880391
+              },
+              "cited_by_count": {
+                "present": 7675,
+                "ratio": 1.0
+              },
+              "reference_count": {
+                "present": 7675,
+                "ratio": 1.0
+              }
+            },
+            "year_bounds": {
+              "minimum": 2008,
+              "maximum": 2022
+            },
+            "foreign_key_orphans": {
+              "authorship_work": 0,
+              "authorship_author": 0,
+              "authorship_institution": 0,
+              "keyword_work": 0,
+              "topic_work": 0,
+              "reference_citing_work": 0,
+              "provenance_work": 0,
+              "work_source": 0
+            },
+            "primary_key_uniqueness": {
+              "works": {
+                "rows": 7675,
+                "distinct_ids": 7675
+              },
+              "authors": {
+                "rows": 27834,
+                "distinct_ids": 27834
+              },
+              "institutions": {
+                "rows": 5591,
+                "distinct_ids": 5591
+              },
+              "sources": {
+                "rows": 2342,
+                "distinct_ids": 2342
+              }
+            },
+            "rules": {
+              "doi": "lowercase DOI, resolver prefix removed, invalid DOI stored as null",
+              "text": "HTML removed, Unicode NFKC normalized, whitespace collapsed",
+              "deduplication": "exact normalized DOI; otherwise exact normalized title of at least 20 characters + year; short or missing titles are not auto-merged; winner selected by metadata completeness with deterministic tie-break",
+              "author_identity": "ORCID first; otherwise source identifier where available; Crossref fallback uses normalized name + primary normalized affiliation",
+              "relationships": "all loser work identifiers remapped to the retained work",
+              "year_scope": "canonical publication year must fall inside the protocol range; other source records are retained in the exclusion ledger",
+              "statistics": "all rows, no sampling",
+              "networks": "full occurrence counts followed by bounded candidate-first expansion"
+            },
+            "paths": {
+              "canonical": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\canonical",
+              "visualization": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\canonical\\visualization"
+            },
+            "keyword_derivation": {
+              "applied": false,
+              "reason": "source_keyword_coverage_sufficient",
+              "source_coverage": 1.0,
+              "derived_rows": 0
+            }
+          }
+        },
+        {
+          "name": "visualization_ready_contract",
+          "passed": true,
+          "detail": {
+            "missing": [],
+            "integrity_errors": [],
+            "processing_contract_matches": true,
+            "rows": {
+              "annual_output": 15,
+              "document_types": 1,
+              "languages": 19,
+              "source_productivity": 2342,
+              "author_productivity": 27834,
+              "institution_productivity": 5591,
+              "keyword_occurrences": 5905,
+              "topic_occurrences": 1459,
+              "reference_impact": 255262,
+              "coauthor_edges": 1106,
+              "institution_collaboration_edges": 11305,
+              "keyword_cooccurrence_edges": 50118,
+              "cocitation_edges": 40267,
+              "direct_citation_edges": 134
+            }
+          }
+        }
+      ],
+      "independent_profile": {
+        "table_rows": {
+          "works": 7675,
+          "authors": 27834,
+          "institutions": 5591,
+          "authorships": 44739,
+          "sources": 2342,
+          "keywords": 102651,
+          "topics": 21659,
+          "references": 378922,
+          "provenance": 7686,
+          "duplicates": 11
+        }
+      }
+    },
+    "visualization": {
+      "version": 1,
+      "project": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022",
+      "elapsed_seconds": 23.879,
+      "policy": {
+        "mode": "auto",
+        "max_display_nodes": 72,
+        "label_budget": 22,
+        "candidate_multiplier": 6,
+        "max_candidate_nodes": 640,
+        "max_edges_per_node": 4,
+        "max_display_clusters": 10,
+        "layout_restarts": 4,
+        "layout_iterations": 700,
+        "layout_algorithm": "vos",
+        "min_cluster_size": 3,
+        "counting_method": "full",
+        "dpi": 240
+      },
+      "scalability": {
+        "canonical_relations_loaded_as_full_pandas_tables": false,
+        "full_adjacency_matrix_materialized": false,
+        "descriptive_statistics": "DuckDB scans full Parquet corpus",
+        "network_maps": "candidate-first sparse edges; displayed graph is bounded"
+      },
+      "networks": {
+        "coauthorship": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 3,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 412,
+          "candidate_edges": 870,
+          "displayed_nodes": 60,
+          "displayed_edges": 120,
+          "displayed_clusters": 10,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.28336510777078533,
+          "weighted_edge_length": 0.04013168020179551,
+          "within_between_distance_ratio": 0.0,
+          "layout_score": 0.054299935590334775,
+          "selected_seed": 3069.0
+        },
+        "institution_collaboration": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 9,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 432,
+          "candidate_edges": 8146,
+          "displayed_nodes": 72,
+          "displayed_edges": 205,
+          "displayed_clusters": 10,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.40011848766665015,
+          "weighted_edge_length": 0.01979355046558157,
+          "within_between_distance_ratio": 0.36951184770537304,
+          "layout_score": 0.15065302916052598,
+          "selected_seed": 1148.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        },
+        "keyword_cooccurrence": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 29,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 432,
+          "candidate_edges": 34217,
+          "displayed_nodes": 72,
+          "displayed_edges": 192,
+          "displayed_clusters": 7,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.3110459264748991,
+          "weighted_edge_length": 0.006529920372654644,
+          "within_between_distance_ratio": 0.1955436612335206,
+          "layout_score": 0.08074531506645577,
+          "selected_seed": 3263.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        },
+        "cocitation": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 21,
+          "eligible_items": 432,
+          "candidate_nodes_with_links": 432,
+          "candidate_edges": 24819,
+          "displayed_nodes": 72,
+          "displayed_edges": 199,
+          "displayed_clusters": 4,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.2895636291456927,
+          "weighted_edge_length": 0.010218656505589884,
+          "within_between_distance_ratio": 0.18678127550165077,
+          "layout_score": 0.08073122061336975,
+          "selected_seed": 1342.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        },
+        "citation": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 1,
+          "eligible_items": 146,
+          "candidate_nodes_with_links": 146,
+          "candidate_edges": 134,
+          "displayed_nodes": 60,
+          "displayed_edges": 59,
+          "displayed_clusters": 10,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.22987854129772303,
+          "weighted_edge_length": 0.0022064617265050586,
+          "within_between_distance_ratio": 0.34722476850038153,
+          "layout_score": 0.11786781934150567,
+          "selected_seed": 430.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        },
+        "bibliographic_coupling": {
+          "status": "rendered",
+          "method": "candidate-first association-strength map",
+          "matrix_materialized": false,
+          "counting_method": "full",
+          "minimum_occurrence": 21,
+          "eligible_items": 412,
+          "candidate_nodes_with_links": 412,
+          "candidate_edges": 3080,
+          "displayed_nodes": 72,
+          "displayed_edges": 193,
+          "displayed_clusters": 8,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_restarts": 4,
+          "layout_iterations": 700,
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2,
+            "maximum_reference_document_frequency": 87,
+            "matrix_materialized": false,
+            "construction": "candidate documents first, then sparse shared-reference self-join"
+          },
+          "overlap_ratio": 0.0,
+          "mean_edge_length": 0.32696975211784135,
+          "weighted_edge_length": 0.004213052256443666,
+          "within_between_distance_ratio": 0.29053486113298704,
+          "layout_score": 0.10772199820223184,
+          "selected_seed": 3676.0,
+          "optimizer_iterations": 500.0,
+          "optimizer_converged": 1.0
+        }
+      },
+      "figures": [
+        {
+          "name": "annual_publications",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\annual_publications.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\annual_publications.svg",
+          "png_sha256": "dfac80b232d92533952dd30c37391f0bd3a53a9944d53952f98081670a1094b6",
+          "svg_sha256": "b81f2dde761c72e45ba841e5d70e5f8e81a01e5b05a5c34b0e0748aec4740093",
+          "width_px": 2760,
+          "height_px": 1488,
+          "facts": {
+            "years": [
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "peak_year": 2022,
+            "peak_documents": 2470
+          }
+        },
+        {
+          "name": "top_sources",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\top_sources.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\top_sources.svg",
+          "png_sha256": "18c10b0c42660440451a864bdbf45eaa66785ab5a291b810c570e27106ecac6f",
+          "svg_sha256": "963dc5ae5b849303e2047e17ea4f96e2adb6370723dc67f35c0a4289764f0f89",
+          "width_px": 2688,
+          "height_px": 1824,
+          "facts": {
+            "displayed": 15,
+            "top_label": "Remote Sensing",
+            "top_value": 319
+          }
+        },
+        {
+          "name": "top_authors",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\top_authors.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\top_authors.svg",
+          "png_sha256": "abea62eb999eac70d533664caa63a00d0b9b7ebbb9098bc1daba9c1bae98ff4a",
+          "svg_sha256": "79535f5a6b8749b3d4233fd6a27f591aec56958d988c1ddb2976dac798c1a2a2",
+          "width_px": 2688,
+          "height_px": 1824,
+          "facts": {
+            "displayed": 15,
+            "top_label": "Fengxian Yan",
+            "top_value": 275
+          }
+        },
+        {
+          "name": "top_institutions",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\top_institutions.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\top_institutions.svg",
+          "png_sha256": "4cc8bd39b489a6644229af66b5f8659567f0013bd8bb1a06959b08b1bbb89d12",
+          "svg_sha256": "36c2409d30d9050b61863307945854c26702de62dbdb718379a689b94265d796",
+          "width_px": 2688,
+          "height_px": 1824,
+          "facts": {
+            "displayed": 15,
+            "top_label": "Chinese Academy of Sciences",
+            "top_value": 366
+          }
+        },
+        {
+          "name": "document_types",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\document_types.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\document_types.svg",
+          "png_sha256": "4fa57f594de1403d40a3bddbec5dca54db2bbbc0e995cdbf5bdf99038fa468ff",
+          "svg_sha256": "d716b82ee9b22baca92fc28508eb057bb8dc4b41b19a4aad1a4487b1e192d6f7",
+          "width_px": 2520,
+          "height_px": 1488,
+          "facts": {
+            "displayed_categories": 1,
+            "total_documents": 7675
+          }
+        },
+        {
+          "name": "citation_distribution",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\citation_distribution.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\citation_distribution.svg",
+          "png_sha256": "6736615ab559e696c294c2e9281cda73c9aea9fe83e12f3e0bfbbb31c02e1442",
+          "svg_sha256": "1af42f6e0de9103df3ee70392d99c19182b31c51f46599f85379beb4f4174274",
+          "width_px": 2592,
+          "height_px": 1488,
+          "facts": {
+            "documents": 7675,
+            "mean": 44.94827361563518,
+            "median": 20.0,
+            "maximum": 3369,
+            "zero_cited": 911,
+            "display_cap_p98": 257.0
+          }
+        },
+        {
+          "name": "top_cited_documents",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\top_cited_documents.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\top_cited_documents.svg",
+          "png_sha256": "8419549dd5a2ecfd3e07746b93931a69ade8be239aa7254586f6d34d33a55e01",
+          "svg_sha256": "5ec2b7d0f4c2fb4cc8fb034cfd1011aded3e4176cbe53250f44d34edd64af4a3",
+          "width_px": 2688,
+          "height_px": 1824,
+          "facts": {
+            "displayed": 15,
+            "top_label": "The 30 m annual land cover dataset and its dynamics i¡­",
+            "top_value": 3369
+          }
+        },
+        {
+          "name": "bradford_sources",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\bradford_sources.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\bradford_sources.svg",
+          "png_sha256": "9267540fb26fbea5d9fb1fecbe92567b7da3b6896abea2478fe7a63bca4d112d",
+          "svg_sha256": "e9e8190293692aeeca111d0f516c3aa23410f7736833de865d6e11151784a579",
+          "width_px": 2592,
+          "height_px": 1512,
+          "facts": {
+            "sources": 2341,
+            "zone_1_sources": 40
+          }
+        },
+        {
+          "name": "keyword_trends",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\keyword_trends.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\keyword_trends.svg",
+          "png_sha256": "1c694b3ff4aba547033336ac353e56592a8f2aaf15394b1219b03892945b358f",
+          "svg_sha256": "047e33a62a154de3e01d5cc7911f0ee1c29ec890e2f764f950accdc2190f74be",
+          "width_px": 2832,
+          "height_px": 1848,
+          "facts": {
+            "keywords": 15,
+            "years": [
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ]
+          }
+        },
+        {
+          "name": "network_coauthorship",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_coauthorship.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_coauthorship.svg",
+          "png_sha256": "098aec1a92cf77f9fe57438dc445c7893e5beed92c910ae47ae23597d987fb15",
+          "svg_sha256": "6dc13ba96d9497bd680a202f59d3a07d9ddd03377463ccf3417a8383a70ae863",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 3,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 412,
+            "candidate_edges": 870,
+            "displayed_nodes": 60,
+            "displayed_edges": 120,
+            "displayed_clusters": 10,
+            "maximum_display_clusters": 10,
+            "maximum_display_nodes": 60,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.28336510777078533,
+            "weighted_edge_length": 0.04013168020179551,
+            "within_between_distance_ratio": 0.0,
+            "layout_score": 0.054299935590334775,
+            "selected_seed": 3069.0,
+            "labels": 16,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_institution_collaboration",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_institution_collaboration.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_institution_collaboration.svg",
+          "png_sha256": "c0802d580750137186e847725a6ec8b88fd4fe095baf21236734eff7c76cc71d",
+          "svg_sha256": "8dd20fae31fae82ee65f57dcc0bdd89b61907028f91bc447a5b154d6a6895138",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 9,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 8146,
+            "displayed_nodes": 72,
+            "displayed_edges": 205,
+            "displayed_clusters": 10,
+            "maximum_display_clusters": 10,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.40011848766665015,
+            "weighted_edge_length": 0.01979355046558157,
+            "within_between_distance_ratio": 0.36951184770537304,
+            "layout_score": 0.15065302916052598,
+            "selected_seed": 1148.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 18,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_keyword_cooccurrence",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_keyword_cooccurrence.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_keyword_cooccurrence.svg",
+          "png_sha256": "93885f17c19350e28c1b816e86dc7bed6728582994f226db07db55698fac3c97",
+          "svg_sha256": "189b4411229393de729daa2385e194346f1b9f979599524256579aa4e245b037",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 29,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 34217,
+            "displayed_nodes": 72,
+            "displayed_edges": 192,
+            "displayed_clusters": 7,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.3110459264748991,
+            "weighted_edge_length": 0.006529920372654644,
+            "within_between_distance_ratio": 0.1955436612335206,
+            "layout_score": 0.08074531506645577,
+            "selected_seed": 3263.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 20,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_cocitation",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_cocitation.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_cocitation.svg",
+          "png_sha256": "fa83b3d0b5d4d0d095ad26dce7f314172b3a062a3e4755e819e6b2091e1d68b9",
+          "svg_sha256": "bd42d06c6c9fe7e6b0d6336faace0e8ce086b5838db546a346b9e0b0d24eda06",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 21,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 24819,
+            "displayed_nodes": 72,
+            "displayed_edges": 199,
+            "displayed_clusters": 4,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.2895636291456927,
+            "weighted_edge_length": 0.010218656505589884,
+            "within_between_distance_ratio": 0.18678127550165077,
+            "layout_score": 0.08073122061336975,
+            "selected_seed": 1342.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 12,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_citation",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_citation.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_citation.svg",
+          "png_sha256": "21481d20830ae004026ad6ce8b8ae03cadad356636072036445065db036774fe",
+          "svg_sha256": "827803fb101b4bdb9b2638f94201d78477d35151f1c7da628ae579a8c97c77f8",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 1,
+            "eligible_items": 146,
+            "candidate_nodes_with_links": 146,
+            "candidate_edges": 134,
+            "displayed_nodes": 60,
+            "displayed_edges": 59,
+            "displayed_clusters": 10,
+            "maximum_display_clusters": 10,
+            "maximum_display_nodes": 60,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.22987854129772303,
+            "weighted_edge_length": 0.0022064617265050586,
+            "within_between_distance_ratio": 0.34722476850038153,
+            "layout_score": 0.11786781934150567,
+            "selected_seed": 430.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 12,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_bibliographic_coupling",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_bibliographic_coupling.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_bibliographic_coupling.svg",
+          "png_sha256": "98a45b4d86abe200fb8dd4260db134f92a15ee784d22d59dcaa08d5d9b94aef6",
+          "svg_sha256": "a44686cb828963a0b2b07f8333d7d3944795229c78237e4bc12f9c04fb327267",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 21,
+            "eligible_items": 412,
+            "candidate_nodes_with_links": 412,
+            "candidate_edges": 3080,
+            "displayed_nodes": 72,
+            "displayed_edges": 193,
+            "displayed_clusters": 8,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "sparse_construction": {
+              "candidate_documents": 432,
+              "minimum_references_per_document": 5,
+              "minimum_shared_references": 2,
+              "maximum_reference_document_frequency": 87,
+              "matrix_materialized": false,
+              "construction": "candidate documents first, then sparse shared-reference self-join"
+            },
+            "overlap_ratio": 0.0,
+            "mean_edge_length": 0.32696975211784135,
+            "weighted_edge_length": 0.004213052256443666,
+            "within_between_distance_ratio": 0.29053486113298704,
+            "layout_score": 0.10772199820223184,
+            "selected_seed": 3676.0,
+            "optimizer_iterations": 500.0,
+            "optimizer_converged": 1.0,
+            "labels": 12,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0,
+            "size_encoding": "winsorized square-root occurrence",
+            "color_encoding": "Louvain community"
+          }
+        },
+        {
+          "name": "network_keyword_overlay",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_keyword_overlay.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_keyword_overlay.svg",
+          "png_sha256": "788dd0abc6818d583a9e75e9b89831c717ce6dd0110625aa274b2ed36fb11667",
+          "svg_sha256": "507036f426ec7499909428e0216927a58c4c86aa3754a0b0ae0aea82a1be2504",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 29,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 34217,
+            "displayed_nodes": 72,
+            "displayed_edges": 192,
+            "displayed_clusters": 7,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "year_min": 2017.6144578313254,
+            "year_max": 2020.9078498293516,
+            "labels": 20,
+            "label_overlap_pairs": 1,
+            "label_overlap_area_px2": 64.74
+          }
+        },
+        {
+          "name": "network_keyword_density",
+          "png": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_keyword_density.png",
+          "svg": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022\\figures\\network_keyword_density.svg",
+          "png_sha256": "dbdde99a7e11d253a72a702025320f73e378f6b4c3ff07e75ed8eaa80f9a39b1",
+          "svg_sha256": "4b551af3d68c9ecd81c7c954896a4d08fff939e8fad991a56d5508547dc9737e",
+          "width_px": 3216,
+          "height_px": 2112,
+          "facts": {
+            "method": "candidate-first association-strength map",
+            "matrix_materialized": false,
+            "counting_method": "full",
+            "minimum_occurrence": 29,
+            "eligible_items": 432,
+            "candidate_nodes_with_links": 432,
+            "candidate_edges": 34217,
+            "displayed_nodes": 72,
+            "displayed_edges": 192,
+            "displayed_clusters": 7,
+            "maximum_display_clusters": 8,
+            "maximum_display_nodes": 72,
+            "maximum_edges_per_node": 4,
+            "normalization": "association strength: c_ij / (w_i * w_j)",
+            "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+            "community_detection": "Louvain on association strength; small clusters merged",
+            "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+            "layout_restarts": 4,
+            "layout_iterations": 700,
+            "density_grid": [
+              260,
+              190
+            ],
+            "gaussian_sigma": 8,
+            "density_weight": "log(1 + occurrence), gamma 0.62",
+            "labels": 18,
+            "label_overlap_pairs": 0,
+            "label_overlap_area_px2": 0.0
+          }
+        }
+      ],
+      "figure_count": 17
+    },
+    "visualization_acceptance": {
+      "passed": true,
+      "checks": {
+        "manifest_exists": true,
+        "minimum_figure_count": true,
+        "png_svg_pairs_valid": true,
+        "no_blank_figures": true,
+        "expected_networks_rendered": true,
+        "all_networks_bounded": true,
+        "all_networks_sparse": true,
+        "network_methods_exported": true,
+        "layout_overlap_bounded": true
+      },
+      "figure_count": 17,
+      "rendered_networks": [
+        "bibliographic_coupling",
+        "citation",
+        "coauthorship",
+        "cocitation",
+        "institution_collaboration",
+        "keyword_cooccurrence"
+      ],
+      "expected_networks": [
+        "bibliographic_coupling",
+        "citation",
+        "coauthorship",
+        "cocitation",
+        "institution_collaboration",
+        "keyword_cooccurrence"
+      ],
+      "images": [
+        {
+          "name": "annual_publications",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9379
+        },
+        {
+          "name": "top_sources",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9449
+        },
+        {
+          "name": "top_authors",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9403
+        },
+        {
+          "name": "top_institutions",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.944
+        },
+        {
+          "name": "document_types",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.93
+        },
+        {
+          "name": "citation_distribution",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9372
+        },
+        {
+          "name": "top_cited_documents",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.944
+        },
+        {
+          "name": "bradford_sources",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9373
+        },
+        {
+          "name": "keyword_trends",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9424
+        },
+        {
+          "name": "network_coauthorship",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8728
+        },
+        {
+          "name": "network_institution_collaboration",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8866
+        },
+        {
+          "name": "network_keyword_cooccurrence",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8715
+        },
+        {
+          "name": "network_cocitation",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.897
+        },
+        {
+          "name": "network_citation",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8859
+        },
+        {
+          "name": "network_bibliographic_coupling",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8967
+        },
+        {
+          "name": "network_keyword_overlay",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.8874
+        },
+        {
+          "name": "network_keyword_density",
+          "png_exists": true,
+          "svg_exists": true,
+          "png_hash_matches": true,
+          "svg_hash_matches": true,
+          "minimum_dimensions": true,
+          "content_occupancy": 0.9465
+        }
+      ],
+      "networks": {
+        "coauthorship": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "institution_collaboration": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "keyword_cooccurrence": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "cocitation": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "citation": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        },
+        "bibliographic_coupling": {
+          "method_disclosed": true,
+          "data_exported": true,
+          "node_cap_respected": true,
+          "matrix_not_materialized": true,
+          "normalization_disclosed": true,
+          "layout_disclosed": true,
+          "layout_overlap_ratio": 0.0
+        }
+      },
+      "note": "VLM review is deliberately external to this automated acceptance stage."
+    },
+    "evidence": {
+      "version": 1,
+      "passed": true,
+      "project": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022",
+      "evidence_items": 72,
+      "evidence_sha256": "3eea00286c152a59e08480d1a574fa0e23b0e70dc092f65748f2a7448280b470",
+      "graph": {
+        "schema_version": 2,
+        "nodes": 477,
+        "edges": 1875,
+        "facts": 24,
+        "qa_items": 30
+      },
+      "graph_qa_available": true,
+      "scalability": {
+        "full_canonical_relations_loaded_into_pandas": false,
+        "duckdb_full_corpus_scans": true,
+        "bounded_abstract_works": 24,
+        "bounded_network_views": [
+          "bibliographic_coupling",
+          "citation",
+          "coauthorship",
+          "cocitation",
+          "institution_collaboration",
+          "keyword_cooccurrence"
+        ]
+      },
+      "elapsed_seconds": 0.858
+    },
+    "evidence_acceptance": {
+      "passed": true,
+      "checks": {
+        "manifest_exists": true,
+        "evidence_exists": true,
+        "graph_facts_exists": true,
+        "evidence_nonempty": true,
+        "evidence_hash_matches": true,
+        "unique_evidence_ids": true,
+        "evidence_artifacts_exist": true,
+        "graph_qa_exists": true
+      },
+      "passed_checks": 8,
+      "total_checks": 8
+    },
+    "formal_graph_experiment": {
+      "version": 1,
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "workspace": "D:\\project\\bibagent\\experiments\\formal_workspaces\\machine_learning_climate_change_2008_2022",
+      "source": "bounded selected networks used by formal visualizations",
+      "canonical_atoms_sha256": "63c9c0a70841bb8b1ee5d3d43c298e736c910192d3edb04da6c8fe6cafdf0770",
+      "canonical_atoms_file_sha256": "4f57c35a454725cd3e1514dee30ceaffa32260f3cc2e5354275a807481080e60",
+      "benchmark_sha256": "c5c1a09a0e1cef7440808926a80942ab71c4460008d21aee64385d2aa550a8c2",
+      "figure_manifest_sha256": "f4fa971af690a02dd2015024a47ff2ccf1025aebcfa23afedbf3864cf26ca896",
+      "bounded_graph_qa_sha256": "d8756cb7294be1c46e994c2b613e3ef55656dc69a2356c136cb37f760e94289d",
+      "bounded_graph_facts_sha256": "2699bbe422fff6f40311835ac51b65b6d643fc242690cb5663cdfb97a23613ae",
+      "questions": 30,
+      "figure_eligible_questions": 6,
+      "conditions": [
+        "no_rag",
+        "flat_structured",
+        "graph_rag",
+        "figure_vlm"
+      ],
+      "figure_vlm_comparison_role": "cross_model_extension",
+      "figure_contract": "Answers use only labels and numbers visibly represented in the image; canonical node and evidence ids are not required.",
+      "contexts": [
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size",
+          "semantic_atom_sha256": "3b4b02750cbd91b560ccadf612e3214b949db447d269d3ed4a533fb7ac08bfc6",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__network_size.flat.json",
+          "flat_sha256": "b684ba829e16c289b56d313d7ec9210a7fec381be62ead8c5e19fc95438fc73e",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__network_size.graph.json",
+          "graph_sha256": "533c16e29297306f2fe4c67289473430b77855661495a85194beb178985805ba",
+          "flat_characters": 640,
+          "graph_characters": 700
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:highest_occurrence",
+          "semantic_atom_sha256": "1a9566560069b87fc5637309db0d5217d0c915bf02a43b15f6b7662514209b20",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__highest_occurrence.flat.json",
+          "flat_sha256": "cae659dc0fb8bc5bf077171c0d1b6fbd5825caa62778cfaee5b7c414758b6748",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__highest_occurrence.graph.json",
+          "graph_sha256": "f3c59fd384472e12123ad4be9bd8ad0731520755b50929bc5c850798512e28c6",
+          "flat_characters": 1061,
+          "graph_characters": 1171
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:strongest_connection",
+          "semantic_atom_sha256": "224be0859cd5cf860a443bec43d711888667386f73f3cdc6e64f06626abc052d",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__strongest_connection.flat.json",
+          "flat_sha256": "eb6bdbc70ddf3c5585e43fc43ea515ca6d795a95e8e7948f291743401d8eed5f",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__strongest_connection.graph.json",
+          "graph_sha256": "eb4636bd2ed9ad2a87d86a022eb87a54ca48f283a37c14dd72808a45a930367f",
+          "flat_characters": 1686,
+          "graph_characters": 2344
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership",
+          "semantic_atom_sha256": "b3198f9c8fbe660ae941b6f67a310726340b2d887d832f59c36425439a08cdff",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__cluster_membership.flat.json",
+          "flat_sha256": "dcbcadf5260019f5f59eaad0a4cb886989d26d0aa9fb85f25f21ba1c9655852d",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__cluster_membership.graph.json",
+          "graph_sha256": "6ac3a1f9624fcb28927813e3969d1b207527a1ed8bdc7b09f359e9f7bcda7b66",
+          "flat_characters": 738,
+          "graph_characters": 815
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:false_premise",
+          "semantic_atom_sha256": "4dc1c20ea265bfd424786d0da27cab7841e52ed8bf9b5feb536947ba1ff8ed0e",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__false_premise.flat.json",
+          "flat_sha256": "acd8b01fa732abc7a12af1d96dc3ff7a23a94750d6354f33e2c09d2acac58750",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__false_premise.graph.json",
+          "graph_sha256": "05b515dfd1f49d58cca43e02da60f491ab8785d453f3174b8756962a7265a235",
+          "flat_characters": 407,
+          "graph_characters": 467
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:citation:network_size",
+          "semantic_atom_sha256": "7b824112b06d0ce9719e96f90f6e8baaa3022cc2fe0bbf1f5b7fbae1714a54de",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__network_size.flat.json",
+          "flat_sha256": "6cfc553949628d8178e3e8f34d6e87b32c57069cb720d04d980def3cf4e163e8",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__network_size.graph.json",
+          "graph_sha256": "c10825c87c42ce7bcdda7be24ccf425e643553b407deec02a677d1a1c87507b3",
+          "flat_characters": 527,
+          "graph_characters": 573
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:citation:highest_occurrence",
+          "semantic_atom_sha256": "9e212ca7c61bc8d2c7fb51e8beea3818a30244c2e583154fc9cf4359e1b5b282",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__highest_occurrence.flat.json",
+          "flat_sha256": "e7af2052254e8c6c4430450f386445e294d18c1ad9d1341eac20e3eb6fdf9192",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__highest_occurrence.graph.json",
+          "graph_sha256": "52df794b8f013589447134eafcd8d2976b18ffadde8a4f4fc36883655404a143",
+          "flat_characters": 887,
+          "graph_characters": 970
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:citation:strongest_connection",
+          "semantic_atom_sha256": "0815de5bfac731e57cdca5c71e560b333fc46732f63da5c61072f4769bd70dc9",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__strongest_connection.flat.json",
+          "flat_sha256": "3abe6953bfe57adeaa5637e06679b1bf762688dc5815d020a0200e0cf6a86f6f",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__strongest_connection.graph.json",
+          "graph_sha256": "7ae9f87760ad9e3b0a31d73dab1a6b0959b657509d6caa69da51d754852139a9",
+          "flat_characters": 1337,
+          "graph_characters": 1817
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:citation:cluster_membership",
+          "semantic_atom_sha256": "b58d63a9101ad8216e6981c647bf23f8c9673e768ea72adae5cd95567287c9a3",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__cluster_membership.flat.json",
+          "flat_sha256": "6d16db34aa6d1fbbac7009c9c4b711612b3e7961802e7a83e29593add94d884c",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__cluster_membership.graph.json",
+          "graph_sha256": "ce09441ff3a3317a059f28100cbb2dc92b32b15ae3c28132b2276fb447ed7b2e",
+          "flat_characters": 633,
+          "graph_characters": 697
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:citation:false_premise",
+          "semantic_atom_sha256": "918158202357c30951ec2f3caac0edd45d85f21a92abf85be4ec355dde0d881a",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__false_premise.flat.json",
+          "flat_sha256": "f4ad4de2ada9df2781eae2d9496b60f0eb667a703d09f3946661f3213c51a002",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__false_premise.graph.json",
+          "graph_sha256": "44f4c16b58755c4a0c0391f193e51e82ca3be5d6a819e30c1010e4a69f16b6ef",
+          "flat_characters": 351,
+          "graph_characters": 397
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:coauthorship:network_size",
+          "semantic_atom_sha256": "fa65829fe80d08eca50128841e82e8072b5cd04f7a64473ea77964cb43e07f63",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__network_size.flat.json",
+          "flat_sha256": "e3f27e45abfa11e61465e46a4de564e37dd81b1b6c8a5ec68af831b937675f67",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__network_size.graph.json",
+          "graph_sha256": "4ab2ee37f457b1a4473cffd8543907e56d8aca4614009cf0c64dbcdedead68cd",
+          "flat_characters": 560,
+          "graph_characters": 610
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:coauthorship:highest_occurrence",
+          "semantic_atom_sha256": "0157723ef9118d8e7f8cb84775f4e82ecc327d322f0dbb7fcac272522ae9c0f9",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__highest_occurrence.flat.json",
+          "flat_sha256": "28647d0f1846384c4b8832f41e5be6cc1a9a465eeebac03154269e921252bd2d",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__highest_occurrence.graph.json",
+          "graph_sha256": "53f7be9c6f73387f9edc661f43ccb9282c816f3b7895f93f9f3e343629583db5",
+          "flat_characters": 926,
+          "graph_characters": 1017
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:coauthorship:strongest_connection",
+          "semantic_atom_sha256": "5392e7183a69b189027667bfd3461eb174b7b3439e61171d20ef8bbcde814c17",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__strongest_connection.flat.json",
+          "flat_sha256": "55657de4ec051c8ba50779649caf7be56da1b0f4025c691c1884bf88e8e5579c",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__strongest_connection.graph.json",
+          "graph_sha256": "815fa75ad33bb2a15909c1e5186d8af511e04c8801b744cfb4edc2f5d79017d8",
+          "flat_characters": 1450,
+          "graph_characters": 2001
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:coauthorship:cluster_membership",
+          "semantic_atom_sha256": "4d315c05705ad1814c6d2c81420a88f3f9276be1a4a4bf02012e8a493081e19e",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__cluster_membership.flat.json",
+          "flat_sha256": "9824163dcc1f1f559e7f3e781560f88a4c22a29a76a286adf24a48b5f21b6e75",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__cluster_membership.graph.json",
+          "graph_sha256": "11b9fea787adbbc5c13ec629c95275ba79e1aa7e2d39bae7bcc6289c4f511a46",
+          "flat_characters": 687,
+          "graph_characters": 760
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:coauthorship:false_premise",
+          "semantic_atom_sha256": "3cf65859aa5240fb7fa452319c0f8daa5c6f5b100a7c54a221ebf32921fef887",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__false_premise.flat.json",
+          "flat_sha256": "7f4292e300db30aefad649927cd68ffd6c14ccad276a2542fff9a24c645e8790",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__false_premise.graph.json",
+          "graph_sha256": "ec6322b3f190cf6be6a1054d826f04ab67f45cf11286d843f6bbe037ce7a1597",
+          "flat_characters": 367,
+          "graph_characters": 417
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:cocitation:network_size",
+          "semantic_atom_sha256": "324f718266e26461e012b84fd4d34061b87ecfb42c8dd0321144eab56a7b892a",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__network_size.flat.json",
+          "flat_sha256": "394079fdb8b61379f7fdd71734bcac128e0dc56f709951a034f89855ea0a95d7",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__network_size.graph.json",
+          "graph_sha256": "a3a3bdbae62f9af21df811a37ed56c0e86b50a97ccfd52692d344688b134f1bb",
+          "flat_characters": 544,
+          "graph_characters": 592
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:cocitation:highest_occurrence",
+          "semantic_atom_sha256": "b3d0ec9930469fc2af982c8080a147ce5e856b51894e03359b0ee5391953cac2",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__highest_occurrence.flat.json",
+          "flat_sha256": "64a4c6078b91ec7281de00a023fa9b0262a395a9ed3ba3fc2103177b4c264d73",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__highest_occurrence.graph.json",
+          "graph_sha256": "641da446c7e753ae57f587b774edc4a879fd35f3aad897cda39effc512aa4d95",
+          "flat_characters": 909,
+          "graph_characters": 996
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:cocitation:strongest_connection",
+          "semantic_atom_sha256": "2bb3af986ce8890181852679f2e296b038dfc7b37812203fb8e3b1b8768f352f",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__strongest_connection.flat.json",
+          "flat_sha256": "2f297208b1af668e78fbd37bbeabddfbecf8f8436cd338c96963dba3480b4155",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__strongest_connection.graph.json",
+          "graph_sha256": "d403c1e4dc1189d4fa2870b46de6fea5f8405fdc5bc844e36bf68a7fe6985b44",
+          "flat_characters": 1363,
+          "graph_characters": 1859
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:cocitation:cluster_membership",
+          "semantic_atom_sha256": "6d06c1036ca6e457fb98d23fbc23129d1bec103723ef93952948ff12199a55e5",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__cluster_membership.flat.json",
+          "flat_sha256": "6321db4d78e6b55e0dce558ae43be44ff91a3cacf5279069a57a89db78202549",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__cluster_membership.graph.json",
+          "graph_sha256": "0bbf6f366e58fd7c238336b303be710ed666e7b6657313cc70d7723975e976ca",
+          "flat_characters": 644,
+          "graph_characters": 710
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:cocitation:false_premise",
+          "semantic_atom_sha256": "ba1a2da5d977b8a5eaa4b049a231bd8809001875120012c5cca4b6bf8739a034",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__false_premise.flat.json",
+          "flat_sha256": "83b9d96e7d13588e8b22bea3dfe155e990a6bc0865d81ebe53dea17269f8482e",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__false_premise.graph.json",
+          "graph_sha256": "09716a4ad03f73cbbce33642cab35724ac39d637a26a3673dc2bbac5ec6b18dd",
+          "flat_characters": 359,
+          "graph_characters": 407
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:network_size",
+          "semantic_atom_sha256": "623d88e0ed02e2c5fadea880e9890f6cec95c53fb3c5b04caccb5124c2072a34",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__network_size.flat.json",
+          "flat_sha256": "5e49a0bd504c89ca675ca2fb1ba5912cd8fe66ccc58154f9fa9bc0f866816fc5",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__network_size.graph.json",
+          "graph_sha256": "1b4b9e29e04413fc67597dc7a9ac9fad34fada402253f1c5a3e5ae051a9fe5d8",
+          "flat_characters": 664,
+          "graph_characters": 727
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:highest_occurrence",
+          "semantic_atom_sha256": "b18cae116589fe33e673b3c8c7a842f711ab6f18e5dcdc6f3e2222dc3fd380e2",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__highest_occurrence.flat.json",
+          "flat_sha256": "622a16fe5698d3bb8c1d5c86a24302a3dec4d888ca72e9e0c926e7276277ab85",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__highest_occurrence.graph.json",
+          "graph_sha256": "7d6059e04c3d3c35eb917cd556e2122ad469086f4eb2ee7f01316048bba8bfe6",
+          "flat_characters": 1060,
+          "graph_characters": 1170
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:strongest_connection",
+          "semantic_atom_sha256": "ff9307f716a997368fab88b1b0a71582a90a107b209675a808289fc72dd260cc",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__strongest_connection.flat.json",
+          "flat_sha256": "a530b7ef6d010e51ea4cd6b9d6c960443fe2b6a37553454d4a626568da109266",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__strongest_connection.graph.json",
+          "graph_sha256": "8b052b9ec3cd90617ea36bce49d22bdbcc555cf9a22752aabcbc5d8ffe417129",
+          "flat_characters": 1641,
+          "graph_characters": 2263
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:cluster_membership",
+          "semantic_atom_sha256": "bb2c74199c3bad9e795516bff92dba152e04ba26d8cdcf3b219ca82b2f20b9e8",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__cluster_membership.flat.json",
+          "flat_sha256": "e4e0c5f8cbf2347d640accdc070c4470e8df9db01350dcaebddcba91e680c8fc",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__cluster_membership.graph.json",
+          "graph_sha256": "e57a2a5fba0f2bcabb56f21783cad7e1466df9774f8ae4d8166a7be3d4969267",
+          "flat_characters": 728,
+          "graph_characters": 802
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:false_premise",
+          "semantic_atom_sha256": "4ca01b01aef934f79b687a30d2737ccbbaca77aa726b9487726d6588bcb2a18d",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__false_premise.flat.json",
+          "flat_sha256": "86efd90055a5463233c5043fe72acd3ad3dac711798a8a11cf5d02c86fc33a04",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__false_premise.graph.json",
+          "graph_sha256": "09737454130dc3d1031ea28c52e754889fcf63c7925ff8b756a41e301d0497fa",
+          "flat_characters": 419,
+          "graph_characters": 482
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:network_size",
+          "semantic_atom_sha256": "7f7ddcecf0de39184d94f3bd7d5d1a7d6c4214241eb9a15dff82e172361a6046",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__network_size.flat.json",
+          "flat_sha256": "8f86d96328302e7abbb81600b4480698411bff2ca60caac5d4600b68e716f8ed",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__network_size.graph.json",
+          "graph_sha256": "ce10da9e0157d967fa2ebeb1a0d9227a8507df0eef83f94e5b2ba0c4f2d95829",
+          "flat_characters": 624,
+          "graph_characters": 682
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:highest_occurrence",
+          "semantic_atom_sha256": "65476cbc9751e6ad7a180a54401a159f454c68b26586c7519a8d78cc2fb5abdc",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__highest_occurrence.flat.json",
+          "flat_sha256": "b2a520271f701a018fa4b20b13c16f83cd7df136f4265043df9d73d8b32ae9f8",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__highest_occurrence.graph.json",
+          "graph_sha256": "07e29bd401586886ea5b815ce2dabc37fbfc63add93d855383278096ec814c87",
+          "flat_characters": 1047,
+          "graph_characters": 1155
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:strongest_connection",
+          "semantic_atom_sha256": "31bb4ec5aca180546d1ca7abb4021deb9bd579b6f7d11e61dbb91f77d896d2e4",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__strongest_connection.flat.json",
+          "flat_sha256": "2c03d009e093a2b61b7cddcb659356a93071b81dd56702afca346dab3bc713ce",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__strongest_connection.graph.json",
+          "graph_sha256": "56ec689bce6ec0b36137e465ffd339ed573933aab961502a60eaf6737a055f4f",
+          "flat_characters": 1530,
+          "graph_characters": 2109
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:cluster_membership",
+          "semantic_atom_sha256": "e0f8328837b6aff1e16846fc6abaed134b8102f3539a26db1fa332daddfa86f4",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__cluster_membership.flat.json",
+          "flat_sha256": "086ba59bcb06c1a4bf9c1603da8daffcd04aff69c0d04288669badab40d012f7",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__cluster_membership.graph.json",
+          "graph_sha256": "c69f9ee42aebd548bb8560cd8d3c2b848b5d1269039c5552bfff8e0424038b4c",
+          "flat_characters": 731,
+          "graph_characters": 808
+        },
+        {
+          "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:false_premise",
+          "semantic_atom_sha256": "3879347579635f460cbb5826b326b151d4dc7036a762d3b3821c7a8262ac7afa",
+          "flat_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__false_premise.flat.json",
+          "flat_sha256": "faf03028e3aac1240f507e142c73a83f2e86067218ad19cf88af71bc2a5f8970",
+          "graph_path": "evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__false_premise.graph.json",
+          "graph_sha256": "11581b6c2ec2051e730f271835bd2afd6d1429a4ff016d73bc326bb909653fb8",
+          "flat_characters": 399,
+          "graph_characters": 457
+        }
+      ]
+    },
+    "formal_graph_experiment_acceptance": {
+      "passed": true,
+      "errors": [],
+      "questions": 30,
+      "contexts_verified": 30,
+      "manifest_sha256": "9ef8c8fcd1e1bb62235a88df849bee137b9e09e48fa8d7ef0e7d621a9dd9e82b"
+    }
+  }
+]

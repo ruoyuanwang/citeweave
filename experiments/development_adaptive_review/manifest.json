@@ -1,0 +1,51 @@
+{
+  "protocol_version": "formal-adaptive-v2-constrained-human-proxy",
+  "cases_path": "D:\\project\\bibagent\\experiments\\development_adaptive_cases\\real_outputs.jsonl",
+  "cases_sha256": "7f8416b2665df105d0e3db53f83c0f588be4a19d393e8c33b00c7c52b32e1fd8",
+  "reference_registry": "D:\\project\\bibagent\\experiments\\human_references_development.yml",
+  "reference_registry_sha256": "4bf4575a3ca23d52978505a5ecce4f6cd256c80b8f74fe28cb88e97d89f8c23d",
+  "topic_sequence": [
+    "gnn_drug_discovery_2017_2023",
+    "crispr_extracellular_vesicles_2015_2022"
+  ],
+  "cases": 12,
+  "conditions": [
+    "always_review",
+    "static_review",
+    "adaptive_review"
+  ],
+  "formal_results_used": false,
+  "config": {
+    "protocol_version": "formal-adaptive-v2-constrained-human-proxy",
+    "feedback_rubric_version": "feedback-human-proxy-v2",
+    "evaluation_rubric_version": "adaptive-evaluation-v1",
+    "experiment_mode": "development_calibration",
+    "seed": 42,
+    "minimum_confirmations": 2,
+    "auto_accept_threshold": 0.95,
+    "audit_rate": 0.1,
+    "static_detector_threshold": 0.5,
+    "static_review_severities": [
+      "high",
+      "critical"
+    ]
+  },
+  "config_sha256": "2ef4e5d9c35db32a56a77da8a4804d0e8ab1d35f5494d884e4049520cefbf976",
+  "judge_separation": {
+    "feedback_updates_online_memory": true,
+    "evaluation_updates_online_memory": false
+  },
+  "human_proxy_capability": {
+    "active_only_after_visible_risk_notice": true,
+    "visible_packet_only": true,
+    "permitted_local_edits": [
+      "replace_span",
+      "delete_span",
+      "append_caveat"
+    ],
+    "maximum_edits_per_intervention": 1,
+    "maximum_edit_characters": 500,
+    "external_tools_or_retrieval": false,
+    "full_artifact_rewrite": false
+  }
+}

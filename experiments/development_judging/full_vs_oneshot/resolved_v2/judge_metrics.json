@@ -1,0 +1,31 @@
+{
+  "packets": 2,
+  "conditions": {
+    "citeweave_full": {
+      "evidence_grounded_factuality": 0.7758620689655172,
+      "unsupported_claim_rate": 0.22413793103448276,
+      "mean_completeness": 5.0,
+      "pairwise_preference_score": 1.0,
+      "counts": {
+        "supported_claims": 45,
+        "unsupported_claims": 13,
+        "wins": 2,
+        "losses": 0,
+        "ties": 0
+      }
+    },
+    "structured_one_shot": {
+      "evidence_grounded_factuality": 0.6507936507936508,
+      "unsupported_claim_rate": 0.3492063492063492,
+      "mean_completeness": 3.5,
+      "pairwise_preference_score": 0.0,
+      "counts": {
+        "supported_claims": 41,
+        "unsupported_claims": 22,
+        "wins": 0,
+        "losses": 2,
+        "ties": 0
+      }
+    }
+  }
+}

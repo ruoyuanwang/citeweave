@@ -1,0 +1,552 @@
+{
+  "schema_version": 1,
+  "registry_sha256": "7a4a5928bbdf9919fb0e9f7b14470f5fac14479a01a1395019f855d06cc3e055",
+  "api_key_used": true,
+  "sample_size": 10,
+  "results": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "search": "(\"graph neural network\" OR \"graph convolutional network\" OR \"graph attention network\" OR \"message passing neural network\" OR \"graph isomorphism network\") AND (\"drug discovery\" OR \"drug design\" OR \"drug development\" OR \"drug repurposing\" OR \"molecular property prediction\" OR \"virtual screening\" OR \"de novo drug design\" OR \"lead optimization\")",
+      "filter": "from_publication_date:2017-01-01,to_publication_date:2023-12-31,type:article",
+      "count": 2869,
+      "top_relevance_samples": [
+        {
+          "id": "https://openalex.org/W2985331920",
+          "title": "Graph convolutional networks: a comprehensive review",
+          "publication_year": 2019,
+          "relevance_score": 1445.4197
+        },
+        {
+          "id": "https://openalex.org/W2948035163",
+          "title": "Graph convolutional networks for computational drug development and discovery",
+          "publication_year": 2019,
+          "relevance_score": 1097.3407
+        },
+        {
+          "id": "https://openalex.org/W3110901318",
+          "title": "A compact review of molecular property prediction with graph neural networks",
+          "publication_year": 2020,
+          "relevance_score": 1062.6399
+        },
+        {
+          "id": "https://openalex.org/W3096561213",
+          "title": "GraphDTA: predicting drug–target binding affinity with graph neural networks",
+          "publication_year": 2020,
+          "relevance_score": 1001.50586
+        },
+        {
+          "id": "https://openalex.org/W2786016794",
+          "title": "Modeling polypharmacy side effects with graph convolutional networks",
+          "publication_year": 2018,
+          "relevance_score": 866.04535
+        },
+        {
+          "id": "https://openalex.org/W3116202926",
+          "title": "Could graph neural networks learn better molecular representation for drug discovery? A comparison study of descriptor-based and graph-based models",
+          "publication_year": 2021,
+          "relevance_score": 855.04333
+        },
+        {
+          "id": "https://openalex.org/W4214868967",
+          "title": "Molecular contrastive learning of representations via graph neural networks",
+          "publication_year": 2022,
+          "relevance_score": 789.7879
+        },
+        {
+          "id": "https://openalex.org/W3130218089",
+          "title": "Graph neural networks for automated de novo drug design",
+          "publication_year": 2021,
+          "relevance_score": 786.1107
+        },
+        {
+          "id": "https://openalex.org/W2790808809",
+          "title": "The rise of deep learning in drug discovery",
+          "publication_year": 2018,
+          "relevance_score": 741.8615
+        },
+        {
+          "id": "https://openalex.org/W3127347132",
+          "title": "Advances in De Novo Drug Design: From Conventional to Machine Learning Methods",
+          "publication_year": 2021,
+          "relevance_score": 730.03235
+        }
+      ]
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "search": "(CRISPR OR \"clustered regularly interspaced short palindromic repeats\" OR Cas9 OR Cas12 OR Cas13 OR \"CRISPR-Cas\" OR \"CRISPR/Cas\" OR \"CRISPR associated\" OR \"CRISPR-based\" OR \"CRISPR-mediated\") AND (\"extracellular vesicle\" OR \"extracellular vesicles\" OR exosome OR \"exosome-like\" OR microvesicle OR \"outer membrane vesicle\" OR \"apoptotic body\")",
+      "filter": "from_publication_date:2015-01-01,to_publication_date:2022-12-31,type:article",
+      "count": 6988,
+      "top_relevance_samples": [
+        {
+          "id": "https://openalex.org/W3028960763",
+          "title": "RNA delivery by extracellular vesicles in mammalian cells and its applications",
+          "publication_year": 2020,
+          "relevance_score": 1957.5195
+        },
+        {
+          "id": "https://openalex.org/W3194214711",
+          "title": "Mechanism and Applications of CRISPR/Cas-9-Mediated Genome Editing",
+          "publication_year": 2021,
+          "relevance_score": 1418.2595
+        },
+        {
+          "id": "https://openalex.org/W3044716001",
+          "title": "Point-of-care CRISPR/Cas nucleic acid detection: Recent advances, challenges and opportunities",
+          "publication_year": 2020,
+          "relevance_score": 1405.4688
+        },
+        {
+          "id": "https://openalex.org/W2793760887",
+          "title": "Exosome–Liposome Hybrid Nanoparticles Deliver CRISPR/Cas9 System in MSCs",
+          "publication_year": 2018,
+          "relevance_score": 1377.877
+        },
+        {
+          "id": "https://openalex.org/W2998639792",
+          "title": "Rolling Circular Amplification (RCA)-Assisted CRISPR/Cas9 Cleavage (RACE) for Highly Specific Detection of Multiple Extracellular Vesicle MicroRNAs",
+          "publication_year": 2019,
+          "relevance_score": 1377.6716
+        },
+        {
+          "id": "https://openalex.org/W3038956601",
+          "title": "Latest Developed Strategies to Minimize the Off-Target Effects in CRISPR-Cas-Mediated Genome Editing",
+          "publication_year": 2020,
+          "relevance_score": 1376.455
+        },
+        {
+          "id": "https://openalex.org/W3017240959",
+          "title": "Extracellular vesicles as drug delivery systems: Why and how?",
+          "publication_year": 2020,
+          "relevance_score": 1316.9694
+        },
+        {
+          "id": "https://openalex.org/W3014919511",
+          "title": "Prospects and challenges of extracellular vesicle-based drug delivery system: considering cell source",
+          "publication_year": 2020,
+          "relevance_score": 1262.6969
+        },
+        {
+          "id": "https://openalex.org/W2808067587",
+          "title": "Efficient RNA drug delivery using red blood cell extracellular vesicles",
+          "publication_year": 2018,
+          "relevance_score": 1081.0316
+        },
+        {
+          "id": "https://openalex.org/W3030089399",
+          "title": "Recent Advances in CRISPR/Cas9 Delivery Strategies",
+          "publication_year": 2020,
+          "relevance_score": 1078.5459
+        }
+      ]
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "search": "(\"machine learning\" OR \"deep learning\" OR \"artificial intelligence\" OR \"neural network\" OR \"random forest\" OR \"support vector machine\" OR \"gradient boosting\" OR \"reinforcement learning\") AND (\"climate change\" OR \"global warming\" OR \"climate variability\" OR \"climate adaptation\" OR \"climate mitigation\" OR \"greenhouse gas\" OR \"carbon emission\" OR \"climate model\")",
+      "filter": "from_publication_date:2008-01-01,to_publication_date:2022-12-31,type:article",
+      "count": 88778,
+      "top_relevance_samples": [
+        {
+          "id": "https://openalex.org/W2964121744",
+          "title": "",
+          "publication_year": 2021,
+          "relevance_score": 2610.0522
+        },
+        {
+          "id": "https://openalex.org/W2588003345",
+          "title": "SoilGrids250m: Global gridded soil information based on machine learning",
+          "publication_year": 2017,
+          "relevance_score": 1278.349
+        },
+        {
+          "id": "https://openalex.org/W2885770726",
+          "title": "Machine Learning in Agriculture: A Review",
+          "publication_year": 2018,
+          "relevance_score": 1196.4879
+        },
+        {
+          "id": "https://openalex.org/W2473156356",
+          "title": "Using Deep Learning for Image-Based Plant Disease Detection",
+          "publication_year": 2016,
+          "relevance_score": 1153.1088
+        },
+        {
+          "id": "https://openalex.org/W2218047931",
+          "title": "Machine learning in geosciences and remote sensing",
+          "publication_year": 2015,
+          "relevance_score": 1108.2952
+        },
+        {
+          "id": "https://openalex.org/W2764034829",
+          "title": "Deep Learning in Remote Sensing: A Comprehensive Review and List of Resources",
+          "publication_year": 2017,
+          "relevance_score": 1073.0188
+        },
+        {
+          "id": "https://openalex.org/W4210916416",
+          "title": "Tackling Climate Change with Machine Learning",
+          "publication_year": 2022,
+          "relevance_score": 1071.8075
+        },
+        {
+          "id": "https://openalex.org/W2782522152",
+          "title": "Deep learning in remote sensing: A comprehensive review and list of resources",
+          "publication_year": 2017,
+          "relevance_score": 1041.3868
+        },
+        {
+          "id": "https://openalex.org/W3022643593",
+          "title": "Time-series forecasting with deep learning: a survey",
+          "publication_year": 2021,
+          "relevance_score": 1035.4642
+        },
+        {
+          "id": "https://openalex.org/W4288039037",
+          "title": "Scientific Machine Learning Through Physics–Informed Neural Networks: Where we are and What’s Next",
+          "publication_year": 2022,
+          "relevance_score": 1018.42377
+        }
+      ]
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "search": "\"climate change\" AND (risk OR risks OR vulnerability OR impact OR threat OR hazard OR \"risk assessment\" OR \"vulnerability assessment\")",
+      "filter": "from_publication_date:1990-01-01,to_publication_date:2021-12-31,type:article",
+      "count": 595517,
+      "top_relevance_samples": [
+        {
+          "id": "https://openalex.org/W2149507322",
+          "title": "Extinction risk from climate change",
+          "publication_year": 2004,
+          "relevance_score": 2300.683
+        },
+        {
+          "id": "https://openalex.org/W2110559753",
+          "title": "Adaptation, adaptive capacity and vulnerability",
+          "publication_year": 2006,
+          "relevance_score": 1951.4766
+        },
+        {
+          "id": "https://openalex.org/W2140131090",
+          "title": "A global overview of drought and heat-induced tree mortality reveals emerging climate change risks for forests",
+          "publication_year": 2009,
+          "relevance_score": 1784.7731
+        },
+        {
+          "id": "https://openalex.org/W4233283252",
+          "title": "Vulnerability",
+          "publication_year": 2006,
+          "relevance_score": 1716.6996
+        },
+        {
+          "id": "https://openalex.org/W2133501143",
+          "title": "A globally coherent fingerprint of climate change impacts across natural systems",
+          "publication_year": 2003,
+          "relevance_score": 1703.1465
+        },
+        {
+          "id": "https://openalex.org/W1617145133",
+          "title": "Global, regional, and national comparative risk assessment of 79 behavioural, environmental and occupational, and metabolic risks or clusters of risks, 1990–2015: a systematic analysis for the Global Burden of Disease Study 2015",
+          "publication_year": 2016,
+          "relevance_score": 1644.6595
+        },
+        {
+          "id": "https://openalex.org/W2069985294",
+          "title": "Climate Change Vulnerability Assessments: An Evolution of Conceptual Thinking",
+          "publication_year": 2006,
+          "relevance_score": 1639.2332
+        },
+        {
+          "id": "https://openalex.org/W2047328724",
+          "title": "Climate Change 2007: Impacts, Adaptation and Vulnerability. Contribution of Working Group II to the Fourth Assessment Report of the Intergovernmental Panel on Climate Change",
+          "publication_year": 2008,
+          "relevance_score": 1617.3263
+        },
+        {
+          "id": "https://openalex.org/W2024649846",
+          "title": "Ecological responses to recent climate change",
+          "publication_year": 2002,
+          "relevance_score": 1551.6975
+        },
+        {
+          "id": "https://openalex.org/W2083029259",
+          "title": "Global flood risk under climate change",
+          "publication_year": 2013,
+          "relevance_score": 1497.4064
+        }
+      ]
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "search": "\"digital twin\" AND (healthcare OR \"health care\" OR medical OR clinical OR medicine OR patient OR hospital OR \"personalized medicine\" OR \"precision medicine\")",
+      "filter": "from_publication_date:2012-01-01,to_publication_date:2023-12-31,type:article",
+      "count": 11428,
+      "top_relevance_samples": [
+        {
+          "id": "https://openalex.org/W2999365564",
+          "title": "Digital twins to personalize medicine",
+          "publication_year": 2019,
+          "relevance_score": 1122.6719
+        },
+        {
+          "id": "https://openalex.org/W2982936646",
+          "title": "Digital Twin: Enabling Technologies, Challenges and Open Research",
+          "publication_year": 2020,
+          "relevance_score": 919.3072
+        },
+        {
+          "id": "https://openalex.org/W3010152544",
+          "title": "The ‘Digital Twin’ to enable the vision of precision cardiology",
+          "publication_year": 2020,
+          "relevance_score": 891.81555
+        },
+        {
+          "id": "https://openalex.org/W2941876953",
+          "title": "A Novel Cloud-Based Framework for the Elderly Healthcare Services Using Digital Twin",
+          "publication_year": 2019,
+          "relevance_score": 869.45825
+        },
+        {
+          "id": "https://openalex.org/W2786689981",
+          "title": "Digital Twins in Health Care: Ethical Implications of an Emerging Engineering Paradigm",
+          "publication_year": 2018,
+          "relevance_score": 827.4641
+        },
+        {
+          "id": "https://openalex.org/W2988359971",
+          "title": "A Survey on Digital Twin: Definitions, Characteristics, Applications, and Design Implications",
+          "publication_year": 2019,
+          "relevance_score": 758.96564
+        },
+        {
+          "id": "https://openalex.org/W3186209406",
+          "title": "Artificial intelligence in healthcare: transforming the practice of medicine",
+          "publication_year": 2021,
+          "relevance_score": 720.8749
+        },
+        {
+          "id": "https://openalex.org/W4313590025",
+          "title": "Digital twin in healthcare: Recent updates and challenges",
+          "publication_year": 2023,
+          "relevance_score": 718.33594
+        },
+        {
+          "id": "https://openalex.org/W4295951577",
+          "title": "Multimodal biomedical AI",
+          "publication_year": 2022,
+          "relevance_score": 679.8457
+        },
+        {
+          "id": "https://openalex.org/W4383552219",
+          "title": "Digital Twins: The New Frontier for Personalized Medicine?",
+          "publication_year": 2023,
+          "relevance_score": 649.3956
+        }
+      ]
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "search": "(plant OR plants OR crop OR crops OR vegetation) AND (\"heat stress\" OR \"high temperature\" OR \"heat tolerance\" OR \"heat shock\") AND (\"drought stress\" OR \"water deficit\" OR \"drought tolerance\" OR \"water stress\")",
+      "filter": "from_publication_date:2008-01-01,to_publication_date:2021-12-31,type:article",
+      "count": 33566,
+      "top_relevance_samples": [
+        {
+          "id": "https://openalex.org/W2731951690",
+          "title": "Crop Production under Drought and Heat Stress: Plant Responses and Management Options",
+          "publication_year": 2017,
+          "relevance_score": 2357.1743
+        },
+        {
+          "id": "https://openalex.org/W2163011877",
+          "title": "Plant tolerance to high temperature in a changing environment: scientific fundamentals and production of heat stress-tolerant crops",
+          "publication_year": 2013,
+          "relevance_score": 1857.8993
+        },
+        {
+          "id": "https://openalex.org/W2210066284",
+          "title": "Enhancement of drought stress tolerance in crops by plant growth promoting rhizobacteria",
+          "publication_year": 2015,
+          "relevance_score": 1756.0273
+        },
+        {
+          "id": "https://openalex.org/W2035556759",
+          "title": "Physiological, Biochemical, and Molecular Mechanisms of Heat Stress Tolerance in Plants",
+          "publication_year": 2013,
+          "relevance_score": 1725.0306
+        },
+        {
+          "id": "https://openalex.org/W2789265612",
+          "title": "Heat and Drought Stresses in Crops and Approaches for Their Mitigation",
+          "publication_year": 2018,
+          "relevance_score": 1315.1991
+        },
+        {
+          "id": "https://openalex.org/W2468932954",
+          "title": "Plant adaptation to drought stress",
+          "publication_year": 2016,
+          "relevance_score": 1305.112
+        },
+        {
+          "id": "https://openalex.org/W2463105934",
+          "title": "Transcription Factors and Plants Response to Drought Stress: Current Understanding and Future Directions",
+          "publication_year": 2016,
+          "relevance_score": 1258.6704
+        },
+        {
+          "id": "https://openalex.org/W2936861353",
+          "title": "The Role of the Plant Antioxidant System in Drought Tolerance",
+          "publication_year": 2019,
+          "relevance_score": 1228.6954
+        },
+        {
+          "id": "https://openalex.org/W2169017109",
+          "title": "Mechanisms of plant survival and mortality during drought: why do some plants survive while others succumb to drought?",
+          "publication_year": 2008,
+          "relevance_score": 1182.8651
+        },
+        {
+          "id": "https://openalex.org/W3017035840",
+          "title": "The physiology of plant responses to drought",
+          "publication_year": 2020,
+          "relevance_score": 1179.1497
+        }
+      ]
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "search": "(\"gene editing\" OR \"genome editing\" OR CRISPR OR \"base editing\" OR \"prime editing\" OR \"zinc finger nuclease\" OR TALEN) AND (\"amyotrophic lateral sclerosis\" OR \"Lou Gehrig's disease\" OR (\"ALS\" AND (\"motor neuron\" OR \"neurodegenerative\" OR \"SOD1\" OR \"TDP-43\" OR \"FUS\" OR \"C9orf72\")))",
+      "filter": "from_publication_date:2004-01-01,to_publication_date:2023-12-31,type:article",
+      "count": 5134,
+      "top_relevance_samples": [
+        {
+          "id": "https://openalex.org/W3092551839",
+          "title": "TDP-43 Triggers Mitochondrial DNA Release via mPTP to Activate cGAS/STING in ALS",
+          "publication_year": 2020,
+          "relevance_score": 1282.6257
+        },
+        {
+          "id": "https://openalex.org/W2907108807",
+          "title": "ALS-implicated protein TDP-43 sustains levels of STMN2, a mediator of motor neuron growth and repair",
+          "publication_year": 2019,
+          "relevance_score": 1229.6654
+        },
+        {
+          "id": "https://openalex.org/W3049104711",
+          "title": "The role of TDP-43 mislocalization in amyotrophic lateral sclerosis",
+          "publication_year": 2020,
+          "relevance_score": 1197.4175
+        },
+        {
+          "id": "https://openalex.org/W4213441627",
+          "title": "TDP-43 represses cryptic exon inclusion in the FTD–ALS gene UNC13A",
+          "publication_year": 2022,
+          "relevance_score": 1080.3022
+        },
+        {
+          "id": "https://openalex.org/W4213435307",
+          "title": "TDP-43 loss and ALS-risk SNPs drive mis-splicing and depletion of UNC13A",
+          "publication_year": 2022,
+          "relevance_score": 1028.769
+        },
+        {
+          "id": "https://openalex.org/W2763212735",
+          "title": "HDAC6 inhibition reverses axonal transport defects in motor neurons derived from FUS-ALS patients",
+          "publication_year": 2017,
+          "relevance_score": 915.1379
+        },
+        {
+          "id": "https://openalex.org/W2562565311",
+          "title": "Gene discovery in amyotrophic lateral sclerosis: implications for clinical management",
+          "publication_year": 2016,
+          "relevance_score": 895.5286
+        },
+        {
+          "id": "https://openalex.org/W2912043444",
+          "title": "Disrupted neuronal trafficking in amyotrophic lateral sclerosis",
+          "publication_year": 2019,
+          "relevance_score": 838.8319
+        },
+        {
+          "id": "https://openalex.org/W2777540887",
+          "title": "In vivo genome editing improves motor function and extends survival in a mouse model of ALS",
+          "publication_year": 2017,
+          "relevance_score": 752.65894
+        },
+        {
+          "id": "https://openalex.org/W2889934668",
+          "title": "Mutant FUS causes DNA ligation defects to inhibit oxidative damage repair in Amyotrophic Lateral Sclerosis",
+          "publication_year": 2018,
+          "relevance_score": 743.0124
+        }
+      ]
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "search": "\"microplastics\"",
+      "filter": "from_publication_date:2004-01-01,to_publication_date:2019-12-31,type:article",
+      "count": 6210,
+      "top_relevance_samples": [
+        {
+          "id": "https://openalex.org/W2164526292",
+          "title": "Microplastics in the marine environment",
+          "publication_year": 2011,
+          "relevance_score": 1108.2167
+        },
+        {
+          "id": "https://openalex.org/W2133892291",
+          "title": "Microplastics as contaminants in the marine environment: A review",
+          "publication_year": 2011,
+          "relevance_score": 845.7098
+        },
+        {
+          "id": "https://openalex.org/W2014173070",
+          "title": "Accumulation of Microplastic on Shorelines Woldwide: Sources and Sinks",
+          "publication_year": 2011,
+          "relevance_score": 707.04364
+        },
+        {
+          "id": "https://openalex.org/W2005404508",
+          "title": "Microplastics in the Marine Environment: A Review of the Methods Used for Identification and Quantification",
+          "publication_year": 2012,
+          "relevance_score": 693.62866
+        },
+        {
+          "id": "https://openalex.org/W2003022112",
+          "title": "The physical impacts of microplastics on marine organisms: A review",
+          "publication_year": 2013,
+          "relevance_score": 692.95966
+        },
+        {
+          "id": "https://openalex.org/W1985492666",
+          "title": "Microplastic Ingestion by Zooplankton",
+          "publication_year": 2013,
+          "relevance_score": 644.4093
+        },
+        {
+          "id": "https://openalex.org/W2948574679",
+          "title": "Human Consumption of Microplastics",
+          "publication_year": 2019,
+          "relevance_score": 640.0571
+        },
+        {
+          "id": "https://openalex.org/W2609067898",
+          "title": "The plastic in microplastics: A review",
+          "publication_year": 2017,
+          "relevance_score": 603.312
+        },
+        {
+          "id": "https://openalex.org/W2779212101",
+          "title": "Microplastics in freshwater systems: A review on occurrence, environmental effects, and methods for microplastics detection",
+          "publication_year": 2017,
+          "relevance_score": 580.4569
+        },
+        {
+          "id": "https://openalex.org/W2901309204",
+          "title": "Microplastics: Finding a consensus on the definition",
+          "publication_year": 2018,
+          "relevance_score": 533.5237
+        }
+      ]
+    }
+  ]
+}

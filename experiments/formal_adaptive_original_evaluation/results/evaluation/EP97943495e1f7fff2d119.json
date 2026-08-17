@@ -1,0 +1,1 @@
+{"packet_id":"EP97943495e1f7fff2d119","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The candidate supplies the exact visible label attached to the highest-occurrence node.","evidence_ids":["bibliographic_coupling:fact:highest_occurrence","bibliographic_coupling:node:doi:10.1145/3485128:label","bibliographic_coupling:node:doi:10.1145/3485128:occurrences"]}

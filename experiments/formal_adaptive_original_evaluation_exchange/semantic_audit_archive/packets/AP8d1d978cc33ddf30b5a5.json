@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "audit_packet_id": "AP8d1d978cc33ddf30b5a5",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "canonical_evidence": {
+    "answer_contract": {
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:highest_occurrence",
+        "bibliographic_coupling:node:doi:10.1145/3485128:label",
+        "bibliographic_coupling:node:doi:10.1145/3485128:occurrences"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1145/3485128",
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:highest_occurrence",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1145/3485128",
+          "object_type": "entity",
+          "predicate": "highest_occurrence_node",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1145/3485128:label",
+          "network": "bibliographic_coupling",
+          "object": "Tackling Climate Change…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1145/3485128"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1145/3485128:occurrences",
+          "network": "bibliographic_coupling",
+          "object": 722.0,
+          "object_type": "number",
+          "predicate": "occurrences",
+          "subject": "bibliographic_coupling:node:doi:10.1145/3485128"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "1a9566560069b87fc5637309db0d5217d0c915bf02a43b15f6b7662514209b20"
+    },
+    "question": "Which labeled node has the highest occurrence in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"label\":\"Tackling Climate Change…\"},\"explanation\":\"The context states that the node with DOI 10.1145/3485128 has the highest occurrence in the bibliographic coupling network, and its display label is 'Tackling Climate Change…'.\",\"item_id\":\"machine_learning_climate_change_2008_2022:bibliographic_coupling:highest_occurrence\"}",
+  "evaluation_decision": "pass",
+  "evaluation_confidence": 0.99,
+  "evaluation_reason": "The candidate supplies the exact visible label attached to the highest-occurrence node.",
+  "evaluation_evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1145/3485128:label",
+    "bibliographic_coupling:node:doi:10.1145/3485128:occurrences"
+  ],
+  "content_sha256": "d49a26013ecb29e127c1a78bd687ba4d97a054a12ed2f2cc943d51af5cdb182a"
+}

@@ -1,0 +1,29 @@
+{
+  "queries": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "search_expression": "(\"graph neural network\" OR \"graph convolutional network\" OR GNN OR \"graph attention network\" OR \"message passing neural network\" OR \"graph isomorphism network\") AND (\"drug discovery\" OR \"drug design\" OR \"drug development\" OR \"drug repurposing\" OR \"molecular property prediction\" OR \"virtual screening\" OR \"de novo drug design\" OR \"lead optimization\")",
+      "rationale": "Expands GNN terminology to include common model names and drug discovery to cover key subtasks, ensuring both dimensions are broadly represented."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "search_expression": "(CRISPR OR \"clustered regularly interspaced short palindromic repeats\" OR Cas9 OR Cas12 OR Cas13 OR \"gene editing\" OR \"genome editing\") AND (\"extracellular vesicle\" OR exosome OR EV OR \"exosome-like\" OR \"microvesicle\" OR \"outer membrane vesicle\" OR \"apoptotic body\")",
+      "rationale": "Includes CRISPR variants and common synonyms for extracellular vesicles to capture relevant literature using alternative terminology."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "search_expression": "(\"machine learning\" OR \"deep learning\" OR \"artificial intelligence\" OR \"neural network\" OR \"random forest\" OR \"support vector machine\" OR \"gradient boosting\" OR \"reinforcement learning\") AND (\"climate change\" OR \"global warming\" OR \"climate variability\" OR \"climate adaptation\" OR \"climate mitigation\" OR \"greenhouse gas\" OR \"carbon emission\" OR \"climate model\")",
+      "rationale": "Broadens machine learning to include major subfields and climate change to encompass related terms, improving recall without losing focus."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "search_expression": "\"digital twin\" AND (healthcare OR \"health care\" OR medical OR clinical OR medicine OR patient OR hospital OR \"personalized medicine\" OR \"precision medicine\")",
+      "rationale": "Adds common healthcare synonyms and related terms to capture the full breadth of medical applications of digital twins."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "search_expression": "(\"gene editing\" OR \"genome editing\" OR CRISPR OR \"base editing\" OR \"prime editing\" OR \"zinc finger nuclease\" OR TALEN) AND (\"amyotrophic lateral sclerosis\" OR ALS OR \"Lou Gehrig's disease\" OR \"motor neuron disease\" OR \"motor neurone disease\")",
+      "rationale": "Includes gene editing techniques and common abbreviations/synonyms for ALS to ensure comprehensive coverage of both dimensions."
+    }
+  ]
+}

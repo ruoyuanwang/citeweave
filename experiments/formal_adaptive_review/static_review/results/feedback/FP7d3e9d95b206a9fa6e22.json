@@ -1,0 +1,12 @@
+{
+  "packet_id": "FP7d3e9d95b206a9fa6e22",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible evidence gives the stated display label and assigns that node to cluster 8, matching the answer and explanation.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

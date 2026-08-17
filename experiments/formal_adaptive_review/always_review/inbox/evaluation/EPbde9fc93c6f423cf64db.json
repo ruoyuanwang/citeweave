@@ -1,0 +1,14 @@
+{
+  "packet_id": "EPbde9fc93c6f423cf64db",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The candidate returns the exact visible labels Kan Ouyang and Yujie Liang for the pair explicitly identified as the strongest displayed coauthorship connection, together with the matching weight of 4.0, and conforms to the answer contract.",
+  "evidence_ids": [
+    "coauthorship:fact:strongest_connection",
+    "coauthorship:edge:0001:relation",
+    "coauthorship:edge:0001:weight",
+    "coauthorship:node:openalex-author:A5006982957:label",
+    "coauthorship:node:orcid:0000-0002-0860-4859:label"
+  ],
+  "judge_id": "evaluation"
+}

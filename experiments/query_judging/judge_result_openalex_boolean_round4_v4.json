@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v4",
+  "prompt_sha256": "abd049df349329135d89a32b7b3110cb9830ef1ec046e0fc4a7a35ddfdb75f07",
+  "packet_sha256": "bef0d1fb792167892277c906fcab7c2ea89cbb341d38122a7317da37af72440f",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "The query requires an explicit graph-neural-network concept and a well-scoped drug-discovery concept; its variants are inclusive while avoiding the ambiguous GNN acronym."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "reject",
+      "reason": "The unqualified terms \"gene editing\" and \"genome editing\" include non-CRISPR technologies, so records about other editing platforms and extracellular vesicles can satisfy the query despite not being CRISPR-related."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The two required concept groups adequately cover machine-learning methods and climate-change research, with broad terms remaining topically constrained by the opposing group."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "accept",
+      "reason": "Requiring the exact climate-change phrase keeps the inclusive risk, vulnerability, impact, threat, and hazard vocabulary aligned with the broad climate-risks topic."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "The exact digital-twin phrase is a strong anchor, and the healthcare alternatives are appropriate and sufficiently inclusive; the explicit 2012-2023 protocol interval is valid under the rubric."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "The expression independently requires a plant context, a heat or high-temperature concept, and a drought or water-deficit concept, matching the combined-stress topic without an obvious homonym."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "reject",
+      "reason": "The phrases \"motor neuron disease\" and \"motor neurone disease\" are broader disease categories than ALS and can retrieve gene-editing studies of other motor-neuron disorders without any ALS concept."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "With query_mode=all, the sole unambiguous keyword yields the appropriate field-wide microplastics query; no geographic phrase is required for a global mapping topic."
+    }
+  ]
+}

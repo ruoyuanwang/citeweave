@@ -1,0 +1,49 @@
+{
+  "packet_id": "EP32e270d539428b8856dc",
+  "sample_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1145/3485128:cluster",
+        "bibliographic_coupling:node:doi:10.1145/3485128:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1145/3485128"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1145/3485128:cluster",
+          "network": "bibliographic_coupling",
+          "object": 4,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1145/3485128"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1145/3485128:label",
+          "network": "bibliographic_coupling",
+          "object": "Tackling Climate Change…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1145/3485128"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "b3198f9c8fbe660ae941b6f67a310726340b2d887d832f59c36425439a08cdff"
+    },
+    "question": "Which detected cluster contains the labeled node 'Tackling Climate Change…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":4,\"label\":\"Tackling Climate Change…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1145/3485128 has a display label 'Tackling Climate Change…' and is assigned to cluster 4. Therefore, the labeled node belongs to cluster 4.\",\"item_id\":\"machine_learning_climate_change_2008_2022:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1145/3485128:cluster",
+    "bibliographic_coupling:node:doi:10.1145/3485128:label"
+  ],
+  "content_sha256": "dc2b3d00101c5bca756efa63ed4075cc57c02068760589aefa9c053d0175ef56"
+}

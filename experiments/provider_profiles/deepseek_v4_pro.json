@@ -1,0 +1,12 @@
+{
+  "profile_id": "deepseek-official-v4-pro-text",
+  "base_url": "https://api.deepseek.com",
+  "model": "deepseek-v4-pro",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "modality": "text",
+  "capability_snapshot": "../api_capabilities/deepseek_models.json",
+  "response_format": "json_object",
+  "supports_json_schema": false,
+  "supports_seed": false,
+  "supports_data_uri": false
+}

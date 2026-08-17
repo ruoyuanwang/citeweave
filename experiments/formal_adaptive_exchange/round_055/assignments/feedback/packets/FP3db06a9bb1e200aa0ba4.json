@@ -1,0 +1,127 @@
+{
+  "packet_id": "FP3db06a9bb1e200aa0ba4",
+  "sample_id": "digital_twins_healthcare_2012_2024:citation:strongest_connection:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "citation:edge:0001:relation",
+        "citation:edge:0001:weight",
+        "citation:fact:strongest_connection",
+        "citation:node:doi:10.1109/comst.2023.3308717:label",
+        "citation:node:openalex:W3139024011:label"
+      ],
+      "entities": [
+        "citation:edge:0001",
+        "citation:node:doi:10.1109/comst.2023.3308717",
+        "citation:node:openalex:W3139024011"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "citation:edge:0001:relation"
+          ],
+          "nodes": [
+            "citation:node:doi:10.1109/comst.2023.3308717",
+            "citation:node:openalex:W3139024011"
+          ],
+          "path_id": "path:citation:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "citation:fact:strongest_connection"
+          ],
+          "nodes": [
+            "citation:node:doi:10.1109/comst.2023.3308717",
+            "citation:node:openalex:W3139024011"
+          ],
+          "path_id": "path:citation:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "citation:edge:0001:relation",
+          "network": "citation",
+          "object": "citation:node:openalex:W3139024011",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "citation:node:doi:10.1109/comst.2023.3308717"
+        },
+        {
+          "atom_id": "citation:edge:0001:weight",
+          "network": "citation",
+          "object": 1.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "citation:edge:0001"
+        },
+        {
+          "atom_id": "citation:fact:strongest_connection",
+          "network": "citation",
+          "object": "citation:node:openalex:W3139024011",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "citation:node:doi:10.1109/comst.2023.3308717"
+        },
+        {
+          "atom_id": "citation:node:doi:10.1109/comst.2023.3308717:label",
+          "network": "citation",
+          "object": "Networking Architecture…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "citation:node:doi:10.1109/comst.2023.3308717"
+        },
+        {
+          "atom_id": "citation:node:openalex:W3139024011:label",
+          "network": "citation",
+          "object": "Leveraging Digital Twin…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "citation:node:openalex:W3139024011"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "e91b2defd0c41604a12dcce392bda8f78f162d0206d589b2c1ef0ebdfa233908"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the citation network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"Networking Architecture…\",\"target_label\":\"Leveraging Digital Twin…\",\"weight\":1.0},\"explanation\":\"The context explicitly states that the strongest connection is between 'Networking Architecture…' and 'Leveraging Digital Twin…' with a weight of 1.0, as indicated by the 'citation:fact:strongest_connection' and 'citation:edge:0001:weight' relationships.\",\"item_id\":\"digital_twins_healthcare_2012_2024:citation:strongest_connection\"}",
+  "allowed_evidence_ids": [
+    "citation:edge:0001:relation",
+    "citation:edge:0001:weight",
+    "citation:fact:strongest_connection",
+    "citation:node:doi:10.1109/comst.2023.3308717:label",
+    "citation:node:openalex:W3139024011:label",
+    "path:citation:edge:0001:relation",
+    "path:citation:fact:strongest_connection"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:strongest_connection",
+    "issue_signature": "graph:strongest_connection",
+    "severity": "high",
+    "detector_score": 0.7,
+    "message": "The system flagged the quoted strongest_connection answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"source_label\":\"Networking Architecture…\",\"target_label\":\"Leveraging Digital Twin…\",\"weight\":1.0},\"explanation\":\"The context explicitly states that the strongest connection is between 'Networking Architecture…' and 'Leveraging Digital Twin…' with a weight of 1.0, as indicated by the 'citation:fact:strongest_connection' and 'citation:edge:0001:weight' relationships.\",\"item_id\":\"digital_twins_healthcare_2012_2024:citation:strongest_connection\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "7a5298ecccddbb027f615f153635c7d294e4e9515e7b9a748dac4d9aba44907c"
+}

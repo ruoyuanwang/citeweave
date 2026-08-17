@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "packet_role": "cross_model_figure_vlm_generation",
+  "dataset_id": "global_microplastics_2004_2019",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "prohibited_inputs": [
+    "gold_answer",
+    "graph JSON",
+    "flat structured context",
+    "human reference output",
+    "other condition output"
+  ],
+  "instructions": "Inspect each referenced figure visually and answer only its paired question. Use no external tools or data other than opening the listed images. Return one result per item with item_id, abstain, answer, and explanation. If the visible figure does not establish the requested values, abstain.",
+  "benchmark_sha256": "04175b94a0c1805e0e15f4cdc267c399eb6d6ff0c1d82ec69336ba21129f3f32",
+  "items": [
+    {
+      "item_id": "global_microplastics_2004_2019:bibliographic_coupling:network_size",
+      "task_type": "network_size",
+      "question": "How many nodes and links are displayed in the bibliographic_coupling network?",
+      "answer_contract": {
+        "nodes": "integer",
+        "links": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_bibliographic_coupling.png"
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:citation:network_size",
+      "task_type": "network_size",
+      "question": "How many nodes and links are displayed in the citation network?",
+      "answer_contract": {
+        "nodes": "integer",
+        "links": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_citation.png"
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:coauthorship:network_size",
+      "task_type": "network_size",
+      "question": "How many nodes and links are displayed in the coauthorship network?",
+      "answer_contract": {
+        "nodes": "integer",
+        "links": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_coauthorship.png"
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:cocitation:network_size",
+      "task_type": "network_size",
+      "question": "How many nodes and links are displayed in the cocitation network?",
+      "answer_contract": {
+        "nodes": "integer",
+        "links": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_cocitation.png"
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:institution_collaboration:network_size",
+      "task_type": "network_size",
+      "question": "How many nodes and links are displayed in the institution_collaboration network?",
+      "answer_contract": {
+        "nodes": "integer",
+        "links": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_institution_collaboration.png"
+    },
+    {
+      "item_id": "global_microplastics_2004_2019:keyword_cooccurrence:network_size",
+      "task_type": "network_size",
+      "question": "How many nodes and links are displayed in the keyword_cooccurrence network?",
+      "answer_contract": {
+        "nodes": "integer",
+        "links": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\global_microplastics_2004_2019\\figures\\network_keyword_cooccurrence.png"
+    }
+  ],
+  "output_schema": {
+    "schema_version": 1,
+    "packet_sha256": "<copy packet_sha256>",
+    "dataset_id": "global_microplastics_2004_2019",
+    "generator_role": "codex_visual_subagent",
+    "visible_only": true,
+    "results": [
+      {
+        "item_id": "<exact item_id>",
+        "abstain": false,
+        "answer": {
+          "nodes": 0,
+          "links": 0
+        },
+        "explanation": "<brief visual basis>"
+      }
+    ]
+  },
+  "packet_sha256": "20e1c53289666c1b5da2f193098ff8840bda4f4719382432c3d7c05d7952d8f4"
+}

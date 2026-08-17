@@ -1,0 +1,42 @@
+{
+  "curation_version": 1,
+  "created_at": "2026-08-05 18:43:59.164895+00:00",
+  "source": "crossref",
+  "selection_order": "Crossref relevance order preserved",
+  "rule": {
+    "fields": [
+      "title",
+      "abstract",
+      "subject"
+    ],
+    "case_sensitive": false,
+    "must_contain_all_terms": [
+      "graph",
+      "retrieval"
+    ],
+    "year_from": 2022,
+    "year_to": 2025,
+    "max_records": 300
+  },
+  "raw_pages": [
+    {
+      "path": "experiments\\workspaces\\rag_graph_2022_2025-crossref-rejected\\raw\\crossref-page-000001-6b1a41f10764.json",
+      "sha256": "6b1a41f10764188efb09deac31fe8e6a80d28dc2415636174152e62dff8d6f92"
+    }
+  ],
+  "counts": {
+    "source_records": 1000,
+    "unique_seen": 1000,
+    "eligible_before_cap": 172,
+    "selected": 172,
+    "excluded": {
+      "duplicate": 0,
+      "year": 0,
+      "relevance": 828
+    }
+  },
+  "output": {
+    "path": "experiments\\data\\rag_graph_2022_2025.crossref.jsonl",
+    "sha256": "73c946787e3c527ca698ba45b65229d6bb07d78bcf8a592fd588059e40ea9efe"
+  }
+}

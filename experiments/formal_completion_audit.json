@@ -1,0 +1,1428 @@
+{
+  "schema_version": 1,
+  "audit_type": "read_only_formal_experiment_completion",
+  "generated_at": "2026-08-06T08:59:19.879454+00:00",
+  "root": "D:\\project\\bibagent",
+  "registry": "experiments/formal_datasets_openalex_title_abstract.yml",
+  "formal_graph_run_id": "formal_v2_nonthinking_20260806",
+  "development_topics": [
+    "gnn_drug_discovery_2017_2023",
+    "crispr_extracellular_vesicles_2015_2022"
+  ],
+  "locked_topics": [
+    "machine_learning_climate_change_2008_2022",
+    "climate_change_risks_1990_2021",
+    "digital_twins_healthcare_2012_2024",
+    "plant_heat_drought_2008_2021",
+    "gene_editing_als_2004_2024",
+    "global_microplastics_2004_2019"
+  ],
+  "excluded_artifact_markers": [
+    "development",
+    "rejected",
+    "preflight",
+    "pilot",
+    "formal_v1"
+  ],
+  "all_complete": false,
+  "summary": {
+    "checks": 108,
+    "complete": 37,
+    "incomplete": 71,
+    "invalid": 0
+  },
+  "checks": [
+    {
+      "item": "frozen_registry",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_datasets_openalex_title_abstract.yml"
+      ],
+      "reasons": [],
+      "details": {
+        "dataset_ids": [
+          "gnn_drug_discovery_2017_2023",
+          "crispr_extracellular_vesicles_2015_2022",
+          "machine_learning_climate_change_2008_2022",
+          "climate_change_risks_1990_2021",
+          "digital_twins_healthcare_2012_2024",
+          "plant_heat_drought_2008_2021",
+          "gene_editing_als_2004_2024",
+          "global_microplastics_2004_2019"
+        ],
+        "development": [
+          "gnn_drug_discovery_2017_2023",
+          "crispr_extracellular_vesicles_2015_2022"
+        ],
+        "locked": [
+          "machine_learning_climate_change_2008_2022",
+          "climate_change_risks_1990_2021",
+          "digital_twins_healthcare_2012_2024",
+          "plant_heat_drought_2008_2021",
+          "gene_editing_als_2004_2024",
+          "global_microplastics_2004_2019"
+        ]
+      }
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:harvest",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/audit/harvest_manifest.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/audit/acquisition_manifest.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/raw/harvest/20170101-20231231/openalex-page-000001-60929e609ec7.json.gz",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/raw/harvest/20170101-20231231/openalex-page-000002-97152974d50d.json.gz",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/raw/harvest/20170101-20231231/openalex-page-000003-31d85a0eccfd.json.gz",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/raw/harvest/20170101-20231231/openalex-page-000004-79bee764a3cf.json.gz",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/raw/harvest/20170101-20231231/openalex-page-000005-d924b82a567b.json.gz",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/staged/source_records.jsonl.gz"
+      ],
+      "reasons": [],
+      "details": {
+        "received_records": 456,
+        "unique_records": 456,
+        "duplicate_records": 0,
+        "raw_pages": 5,
+        "staged_records": 456,
+        "cursor_exhausted": true
+      }
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:processing_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/audit/processing_manifest.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/quality/processing_report.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/works.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/authors.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/institutions.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/authorships.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/sources.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/keywords.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/topics.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/references.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/provenance.parquet",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/canonical/duplicates.parquet"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:visualization_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/audit/visualization_acceptance.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/figures/figure_manifest.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:evidence_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/audit/evidence_preparation_manifest.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/evidence_items.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:graph_grounding_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/graph_grounding_manifest.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/manifest.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/benchmark.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__network_size.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__network_size.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__strongest_connection.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__strongest_connection.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__cluster_membership.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__cluster_membership.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__false_premise.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__bibliographic_coupling__false_premise.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__network_size.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__network_size.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__strongest_connection.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__strongest_connection.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__cluster_membership.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__cluster_membership.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__false_premise.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__citation__false_premise.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__coauthorship__network_size.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__coauthorship__network_size.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__coauthorship__strongest_connection.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__coauthorship__strongest_connection.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__coauthorship__cluster_membership.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__coauthorship__cluster_membership.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__coauthorship__false_premise.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__coauthorship__false_premise.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__network_size.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__network_size.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__strongest_connection.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__strongest_connection.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__cluster_membership.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__cluster_membership.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__false_premise.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__cocitation__false_premise.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__network_size.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__network_size.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__strongest_connection.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__strongest_connection.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__cluster_membership.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__cluster_membership.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__false_premise.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__institution_collaboration__false_premise.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__network_size.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__network_size.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__strongest_connection.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__strongest_connection.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__cluster_membership.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__cluster_membership.graph.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__false_premise.flat.json",
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/formal_graph_experiment/contexts/gnn_drug_discovery_2017_2023__keyword_cooccurrence__false_premise.graph.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:report:structured_one_shot",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/structured_one_shot/completion.json",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/structured_one_shot/report.md",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/structured_one_shot/run_manifest.json",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/structured_one_shot/calls/01_structured_one_shot/call.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:report:citeweave_full",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/citeweave_full/completion.json",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/citeweave_full/report.md",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/citeweave_full/run_manifest.json",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/citeweave_full/calls/01_editorial_plan/call.json",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/citeweave_full/calls/02_complete_draft/call.json",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/citeweave_full/calls/03_internal_review/call.json",
+        "experiments/formal_reports/gnn_drug_discovery_2017_2023/citeweave_full/calls/04_revised_report/call.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:report_shared_evidence",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/gnn_drug_discovery_2017_2023/evidence/evidence_items.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:graph_text:no_rag",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/no_rag/run_manifest.json",
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/no_rag/items.jsonl",
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/no_rag/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 29
+      }
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:graph_text:flat_structured",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/flat_structured/run_manifest.json",
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/flat_structured/items.jsonl",
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/flat_structured/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 29
+      }
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:graph_text:graph_rag",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/graph_rag/run_manifest.json",
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/graph_rag/items.jsonl",
+        "experiments/formal_runs/gnn_drug_discovery_2017_2023/formal_v2_nonthinking_20260806/graph_rag/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 29
+      }
+    },
+    {
+      "item": "dataset:gnn_drug_discovery_2017_2023:figure_vlm",
+      "status": "complete",
+      "evidence": [
+        "experiments/vision_packets/gnn_drug_discovery_2017_2023.json",
+        "experiments/vision_outputs/gnn_drug_discovery_2017_2023.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:harvest",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/audit/harvest_manifest.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/audit/acquisition_manifest.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/raw/harvest/20150101-20221231/openalex-page-000001-4ff127d15f85.json.gz",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/raw/harvest/20150101-20221231/openalex-page-000002-451f34ac4ac8.json.gz",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/raw/harvest/20150101-20221231/openalex-page-000003-ff27f3e9a83d.json.gz",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/staged/source_records.jsonl.gz"
+      ],
+      "reasons": [],
+      "details": {
+        "received_records": 259,
+        "unique_records": 259,
+        "duplicate_records": 0,
+        "raw_pages": 3,
+        "staged_records": 259,
+        "cursor_exhausted": true
+      }
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:processing_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/audit/processing_manifest.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/quality/processing_report.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/works.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/authors.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/institutions.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/authorships.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/sources.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/keywords.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/topics.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/references.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/provenance.parquet",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/canonical/duplicates.parquet"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:visualization_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/audit/visualization_acceptance.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/figures/figure_manifest.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:evidence_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/audit/evidence_preparation_manifest.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/evidence_items.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:graph_grounding_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/graph_grounding_manifest.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/manifest.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/benchmark.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__bibliographic_coupling__network_size.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__bibliographic_coupling__network_size.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__bibliographic_coupling__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__bibliographic_coupling__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__bibliographic_coupling__cluster_membership.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__bibliographic_coupling__cluster_membership.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__bibliographic_coupling__false_premise.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__bibliographic_coupling__false_premise.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__network_size.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__network_size.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__strongest_connection.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__strongest_connection.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__cluster_membership.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__cluster_membership.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__false_premise.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__coauthorship__false_premise.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__network_size.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__network_size.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__strongest_connection.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__strongest_connection.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__cluster_membership.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__cluster_membership.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__false_premise.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__cocitation__false_premise.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__network_size.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__network_size.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__strongest_connection.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__strongest_connection.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__cluster_membership.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__cluster_membership.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__false_premise.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__institution_collaboration__false_premise.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__network_size.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__network_size.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__strongest_connection.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__strongest_connection.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__cluster_membership.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__cluster_membership.graph.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__false_premise.flat.json",
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/formal_graph_experiment/contexts/crispr_extracellular_vesicles_2015_2022__keyword_cooccurrence__false_premise.graph.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:report:structured_one_shot",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/structured_one_shot/completion.json",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/structured_one_shot/report.md",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/structured_one_shot/run_manifest.json",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/structured_one_shot/calls/01_structured_one_shot/call.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:report:citeweave_full",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/citeweave_full/completion.json",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/citeweave_full/report.md",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/citeweave_full/run_manifest.json",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/citeweave_full/calls/01_editorial_plan/call.json",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/citeweave_full/calls/02_complete_draft/call.json",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/citeweave_full/calls/03_internal_review/call.json",
+        "experiments/formal_reports/crispr_extracellular_vesicles_2015_2022/citeweave_full/calls/04_revised_report/call.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:report_shared_evidence",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/crispr_extracellular_vesicles_2015_2022/evidence/evidence_items.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:graph_text:no_rag",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/no_rag/run_manifest.json",
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/no_rag/items.jsonl",
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/no_rag/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 24
+      }
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:graph_text:flat_structured",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/flat_structured/run_manifest.json",
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/flat_structured/items.jsonl",
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/flat_structured/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 24
+      }
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:graph_text:graph_rag",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/graph_rag/run_manifest.json",
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/graph_rag/items.jsonl",
+        "experiments/formal_runs/crispr_extracellular_vesicles_2015_2022/formal_v2_nonthinking_20260806/graph_rag/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 24
+      }
+    },
+    {
+      "item": "dataset:crispr_extracellular_vesicles_2015_2022:figure_vlm",
+      "status": "complete",
+      "evidence": [
+        "experiments/vision_packets/crispr_extracellular_vesicles_2015_2022.json",
+        "experiments/vision_outputs/crispr_extracellular_vesicles_2015_2022.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:harvest",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/audit/harvest_manifest.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/audit/acquisition_manifest.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000001-26a31e66f1cf.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000002-e66b7c53dafb.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000003-85c88c929ce6.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000004-3c964ed64d74.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000005-c2cb300439b8.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000006-471ebc873023.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000007-dcdd9e428fe6.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000008-d44d69bc9152.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000009-6a23deeedd06.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000010-291a9c6ce5b8.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000011-b87c464d25c9.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000012-acae78b10412.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000013-58bc3a19f009.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000014-94dbb76939f3.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000015-859953c4fd8e.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000016-1f2b7fc3f050.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000017-795677a21ceb.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000018-19131f3f0ca5.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000019-6ed2cb5d1507.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000020-f99d5716d625.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000021-4b864745d09b.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000022-2200ee4439d1.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000023-fe5406153a31.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000024-e9a790cc3686.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000025-fcbc28837633.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000026-038f6edcb531.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000027-52c0a66a8e9c.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000028-a4f82b4a7bcc.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000029-bd9e50d0eb52.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000030-7a0b4be4e19f.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000031-6bb8d5ec2c87.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000032-db75458f6ef0.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000033-c48ffbf176fd.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000034-41664ea082dc.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000035-c40be1066140.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000036-7f4674a5ec31.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000037-3a5fabcbbc96.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000038-6631ba157a7d.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000039-65cc295aa652.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000040-c8f65476419d.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000041-b46a4cb431a2.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000042-2b37ecf5ebe9.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000043-e12e5b328902.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000044-946b91d3557e.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000045-14bae2095f57.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000046-fd28009ab579.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000047-30fdfe98863b.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000048-33cdf5897a61.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000049-1ae4dec348c3.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000050-56fdae47d20d.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000051-d62616fe2682.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000052-fad183f60866.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000053-d0ca52aa7887.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000054-308fc67459f9.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000055-7a4b01392ac4.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000056-03a9d964e935.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000057-ea1ced8ec78b.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000058-70b4da6a4337.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000059-68f83cf4e40d.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000060-5d58106b6557.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000061-083c8261330d.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000062-0f4f77cb4d77.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000063-e13ecd545f59.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000064-0b3dd6c26e84.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000065-c7ed65211a19.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000066-d7f4e001a1c8.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000067-395aa0deaee0.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000068-aaca35d10e54.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000069-a7b142df608e.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000070-71a7a97f4e2e.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000071-ec5a0f91d61f.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000072-ada77606a29a.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000073-22b0af19811b.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000074-64d450074239.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000075-bdadce0324e0.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000076-0947fe67a1e5.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000077-a0a13178a639.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/raw/harvest/20080101-20221231/openalex-page-000078-880ddc38ebc7.json.gz",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/staged/source_records.jsonl.gz"
+      ],
+      "reasons": [],
+      "details": {
+        "received_records": 7720,
+        "unique_records": 7686,
+        "duplicate_records": 34,
+        "raw_pages": 78,
+        "staged_records": 7686,
+        "cursor_exhausted": true
+      }
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:processing_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/audit/processing_manifest.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/quality/processing_report.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/works.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/authors.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/institutions.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/authorships.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/sources.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/keywords.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/topics.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/references.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/provenance.parquet",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/canonical/duplicates.parquet"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:visualization_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/audit/visualization_acceptance.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/figures/figure_manifest.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:evidence_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/audit/evidence_preparation_manifest.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/evidence_items.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:graph_grounding_acceptance",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/graph_grounding_manifest.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/manifest.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/benchmark.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__network_size.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__network_size.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__strongest_connection.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__strongest_connection.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__cluster_membership.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__cluster_membership.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__false_premise.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__bibliographic_coupling__false_premise.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__network_size.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__network_size.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__strongest_connection.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__strongest_connection.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__cluster_membership.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__cluster_membership.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__false_premise.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__citation__false_premise.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__network_size.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__network_size.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__strongest_connection.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__strongest_connection.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__cluster_membership.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__cluster_membership.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__false_premise.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__coauthorship__false_premise.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__network_size.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__network_size.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__strongest_connection.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__strongest_connection.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__cluster_membership.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__cluster_membership.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__false_premise.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__cocitation__false_premise.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__network_size.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__network_size.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__strongest_connection.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__strongest_connection.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__cluster_membership.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__cluster_membership.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__false_premise.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__institution_collaboration__false_premise.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__network_size.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__network_size.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__highest_occurrence.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__highest_occurrence.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__strongest_connection.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__strongest_connection.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__cluster_membership.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__cluster_membership.graph.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__false_premise.flat.json",
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/formal_graph_experiment/contexts/machine_learning_climate_change_2008_2022__keyword_cooccurrence__false_premise.graph.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:report:structured_one_shot",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/structured_one_shot/completion.json",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/structured_one_shot/report.md",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/structured_one_shot/run_manifest.json",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/structured_one_shot/calls/01_structured_one_shot/call.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:report:citeweave_full",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/citeweave_full/completion.json",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/citeweave_full/report.md",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/citeweave_full/run_manifest.json",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/citeweave_full/calls/01_editorial_plan/call.json",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/citeweave_full/calls/02_complete_draft/call.json",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/citeweave_full/calls/03_internal_review/call.json",
+        "experiments/formal_reports/machine_learning_climate_change_2008_2022/citeweave_full/calls/04_revised_report/call.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:report_shared_evidence",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_workspaces/machine_learning_climate_change_2008_2022/evidence/evidence_items.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:graph_text:no_rag",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/no_rag/run_manifest.json",
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/no_rag/items.jsonl",
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/no_rag/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 30
+      }
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:graph_text:flat_structured",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/flat_structured/run_manifest.json",
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/flat_structured/items.jsonl",
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/flat_structured/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 30
+      }
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:graph_text:graph_rag",
+      "status": "complete",
+      "evidence": [
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/graph_rag/run_manifest.json",
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/graph_rag/items.jsonl",
+        "experiments/formal_runs/machine_learning_climate_change_2008_2022/formal_v2_nonthinking_20260806/graph_rag/score.json"
+      ],
+      "reasons": [],
+      "details": {
+        "expected_items": 30
+      }
+    },
+    {
+      "item": "dataset:machine_learning_climate_change_2008_2022:figure_vlm",
+      "status": "complete",
+      "evidence": [
+        "experiments/vision_packets/machine_learning_climate_change_2008_2022.json",
+        "experiments/vision_outputs/machine_learning_climate_change_2008_2022.json"
+      ],
+      "reasons": [],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:harvest",
+      "status": "incomplete",
+      "evidence": [
+        "experiments/formal_workspaces/climate_change_risks_1990_2021/audit/harvest_manifest.json"
+      ],
+      "reasons": [
+        "harvest/acquisition manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:processing_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "processing manifest/report is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:visualization_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "visualization acceptance is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:evidence_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "evidence bundle or acceptance manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:graph_grounding_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "graph-grounding artifact is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:report:structured_one_shot",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:report:citeweave_full",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:report_shared_evidence",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "two report conditions do not share the frozen evidence hash"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:graph_text:no_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:graph_text:flat_structured",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:graph_text:graph_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:climate_change_risks_1990_2021:figure_vlm",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "Figure/VLM packet or visual-subagent output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:harvest",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "harvest/acquisition manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:processing_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "processing manifest/report is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:visualization_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "visualization acceptance is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:evidence_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "evidence bundle or acceptance manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:graph_grounding_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "graph-grounding artifact is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:report:structured_one_shot",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:report:citeweave_full",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:report_shared_evidence",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "two report conditions do not share the frozen evidence hash"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:graph_text:no_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:graph_text:flat_structured",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:graph_text:graph_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:digital_twins_healthcare_2012_2024:figure_vlm",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "Figure/VLM packet or visual-subagent output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:harvest",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "harvest/acquisition manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:processing_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "processing manifest/report is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:visualization_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "visualization acceptance is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:evidence_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "evidence bundle or acceptance manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:graph_grounding_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "graph-grounding artifact is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:report:structured_one_shot",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:report:citeweave_full",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:report_shared_evidence",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "two report conditions do not share the frozen evidence hash"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:graph_text:no_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:graph_text:flat_structured",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:graph_text:graph_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:plant_heat_drought_2008_2021:figure_vlm",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "Figure/VLM packet or visual-subagent output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:harvest",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "harvest/acquisition manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:processing_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "processing manifest/report is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:visualization_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "visualization acceptance is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:evidence_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "evidence bundle or acceptance manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:graph_grounding_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "graph-grounding artifact is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:report:structured_one_shot",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:report:citeweave_full",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:report_shared_evidence",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "two report conditions do not share the frozen evidence hash"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:graph_text:no_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:graph_text:flat_structured",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:graph_text:graph_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:gene_editing_als_2004_2024:figure_vlm",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "Figure/VLM packet or visual-subagent output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:harvest",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "harvest/acquisition manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:processing_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "processing manifest/report is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:visualization_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "visualization acceptance is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:evidence_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "evidence bundle or acceptance manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:graph_grounding_acceptance",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "graph-grounding artifact is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:report:structured_one_shot",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:report:citeweave_full",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal report condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:report_shared_evidence",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "two report conditions do not share the frozen evidence hash"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:graph_text:no_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:graph_text:flat_structured",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:graph_text:graph_rag",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal v2 graph condition is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "dataset:global_microplastics_2004_2019:figure_vlm",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "Figure/VLM packet or visual-subagent output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_report_judging:full_vs_oneshot",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "dual-Judge resolved formal output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_report_judging:full_vs_human",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "dual-Judge resolved formal output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_report_judging:oneshot_vs_human",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "dual-Judge resolved formal output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_graph_judging:graph_vs_no",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "dual-Judge resolved formal output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_graph_judging:graph_vs_flat",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "dual-Judge resolved formal output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_graph_judging:graph_vs_figure",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "dual-Judge resolved formal output is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_adaptive_experiment",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal adaptive manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_adaptive_original_evaluation",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "baseline-original evaluation manifest is missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_adaptive_topic_counts",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "adaptive topic counts missing: machine_learning_climate_change_2008_2022",
+        "adaptive topic counts missing: climate_change_risks_1990_2021",
+        "adaptive topic counts missing: digital_twins_healthcare_2012_2024",
+        "adaptive topic counts missing: plant_heat_drought_2008_2021",
+        "adaptive topic counts missing: gene_editing_als_2004_2024",
+        "adaptive topic counts missing: global_microplastics_2004_2019"
+      ],
+      "details": {}
+    },
+    {
+      "item": "formal_statistics",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "formal statistics manifest or outputs are missing"
+      ],
+      "details": {}
+    },
+    {
+      "item": "final_english_end_to_end_report",
+      "status": "incomplete",
+      "evidence": [],
+      "reasons": [
+        "final English report or its provenance manifest is missing"
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_a": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_b": {
+        "A": "citeweave_full",
+        "B": "structured_one_shot"
+      }
+    },
+    "packet_id": "JPc70fdbddc5e5588b7b97",
+    "sample_id": "machine_learning_climate_change_2008_2022"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_a": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_b": {
+        "A": "citeweave_full",
+        "B": "structured_one_shot"
+      }
+    },
+    "packet_id": "JP697bf9d6f55308a725e3",
+    "sample_id": "climate_change_risks_1990_2021"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_a": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_b": {
+        "A": "citeweave_full",
+        "B": "structured_one_shot"
+      }
+    },
+    "packet_id": "JP8182b1bc0156dc4ee46a",
+    "sample_id": "digital_twins_healthcare_2012_2024"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_a": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_b": {
+        "A": "citeweave_full",
+        "B": "structured_one_shot"
+      }
+    },
+    "packet_id": "JPe69d2aeacb997a0e854d",
+    "sample_id": "plant_heat_drought_2008_2021"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_a": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_b": {
+        "A": "citeweave_full",
+        "B": "structured_one_shot"
+      }
+    },
+    "packet_id": "JPf5007a07f9fab6ce8f2a",
+    "sample_id": "gene_editing_als_2004_2024"
+  },
+  {
+    "assignments": {
+      "adjudicator": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_a": {
+        "A": "structured_one_shot",
+        "B": "citeweave_full"
+      },
+      "eval_b": {
+        "A": "citeweave_full",
+        "B": "structured_one_shot"
+      }
+    },
+    "packet_id": "JPc302de2f30d857435f33",
+    "sample_id": "global_microplastics_2004_2019"
+  }
+]

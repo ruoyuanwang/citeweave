@@ -1,0 +1,127 @@
+{
+  "packet_id": "FPfefeb48f23fe38831c35",
+  "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:strongest_connection:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:edge:0001:relation",
+        "bibliographic_coupling:edge:0001:weight",
+        "bibliographic_coupling:fact:strongest_connection",
+        "bibliographic_coupling:node:doi:10.3390/ijms22158196:label",
+        "bibliographic_coupling:node:doi:10.3390/molecules25082000:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:edge:0001",
+        "bibliographic_coupling:node:doi:10.3390/ijms22158196",
+        "bibliographic_coupling:node:doi:10.3390/molecules25082000"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "bibliographic_coupling:edge:0001:relation"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.3390/ijms22158196",
+            "bibliographic_coupling:node:doi:10.3390/molecules25082000"
+          ],
+          "path_id": "path:bibliographic_coupling:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "bibliographic_coupling:fact:strongest_connection"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.3390/ijms22158196",
+            "bibliographic_coupling:node:doi:10.3390/molecules25082000"
+          ],
+          "path_id": "path:bibliographic_coupling:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:relation",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.3390/molecules25082000",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "bibliographic_coupling:node:doi:10.3390/ijms22158196"
+        },
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:weight",
+          "network": "bibliographic_coupling",
+          "object": 37.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "bibliographic_coupling:edge:0001"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:strongest_connection",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.3390/molecules25082000",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "bibliographic_coupling:node:doi:10.3390/ijms22158196"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3390/ijms22158196:label",
+          "network": "bibliographic_coupling",
+          "object": "Emerging hiPSC Models fo…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.3390/ijms22158196"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3390/molecules25082000:label",
+          "network": "bibliographic_coupling",
+          "object": "Induced Pluripotent Stem…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.3390/molecules25082000"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "06716af57c4f64b3811aa209aba9b11e8f36a91ce7b6433c06ffc2b8281a1042"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the bibliographic_coupling network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"Emerging hiPSC Models fo…\",\"target_label\":\"Induced Pluripotent Stem…\",\"weight\":37.0},\"explanation\":\"The fact 'bibliographic_coupling:fact:strongest_connection' explicitly states that the strongest connection is between the two nodes, and the edge weight is given as 37.0. The display labels for the nodes are 'Emerging hiPSC Models fo…' and 'Induced Pluripotent Stem…'.\",\"item_id\":\"gene_editing_als_2004_2024:bibliographic_coupling:strongest_connection\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.3390/ijms22158196:label",
+    "bibliographic_coupling:node:doi:10.3390/molecules25082000:label",
+    "path:bibliographic_coupling:edge:0001:relation",
+    "path:bibliographic_coupling:fact:strongest_connection"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:strongest_connection",
+    "issue_signature": "graph:strongest_connection",
+    "severity": "high",
+    "detector_score": 0.7,
+    "message": "The system flagged the quoted strongest_connection answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"source_label\":\"Emerging hiPSC Models fo…\",\"target_label\":\"Induced Pluripotent Stem…\",\"weight\":37.0},\"explanation\":\"The fact 'bibliographic_coupling:fact:strongest_connection' explicitly states that the strongest connection is between the two nodes, and the edge weight is given as 37.0. The display labels for the nodes are 'Emerging hiPSC Models fo…' and 'Induced Pluripotent Stem…'.\",\"item_id\":\"gene_editing_als_2004_2024:bibliographic_coupling:strongest_connection\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "f703c30090ec85c7b3705a87de9f8f54758d1ea033fe403f321d2cdf6ae6eb93"
+}

@@ -1,0 +1,11 @@
+{
+  "idempotent_replay": false,
+  "imported": {
+    "expected": 48,
+    "imported": 48
+  },
+  "protocol_version": "adaptive-original-evaluation-assignment-v1",
+  "schema_version": 1,
+  "status": "imported",
+  "validated_results_manifest_sha256": "889cf937a7320ba5ceff9f1bc46176d5b5b98117703fe1178cb9bdb0dee1d93d"
+}

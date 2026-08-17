@@ -1,0 +1,11 @@
+{
+  "packet_id": "EPff4e9a2322be9dc5e45d",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 0.99,
+  "reason": "The candidate returns the exact visible label and cluster 4, matching the node's label and cluster relationships.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:cluster",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label"
+  ]
+}

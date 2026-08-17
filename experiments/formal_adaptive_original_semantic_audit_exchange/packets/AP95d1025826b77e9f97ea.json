@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "audit_packet_id": "AP95d1025826b77e9f97ea",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "canonical_evidence": {
+    "answer_contract": {
+      "abstain": "true"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:absent_target"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:absent_target",
+          "network": "bibliographic_coupling",
+          "object": false,
+          "object_type": "boolean",
+          "predicate": "contains_visible_label",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "4dc1c20ea265bfd424786d0da27cab7841e52ed8bf9b5feb536947ba1ff8ed0e"
+    },
+    "question": "Which cluster contains 'CiteWeave absent benchmark node' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":\"true\",\"answer\":\"\",\"explanation\":\"The context states that the bibliographic coupling network does not contain a visible label for the 'CiteWeave absent benchmark node', meaning the node is not present in the network. Therefore, the question is based on a false premise and cannot be answered.\",\"item_id\":\"plant_heat_drought_2008_2021:bibliographic_coupling:false_premise\"}",
+  "evaluation_decision": "fail",
+  "evaluation_confidence": 0.99,
+  "evaluation_reason": "The substance calls for abstention, but the candidate encodes abstain as the string \"true\" rather than the required boolean true.",
+  "evaluation_evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "content_sha256": "6d87a6a40f8c27d3082175a9f465e33f49e41be1dede19dec3f64ad558267df4"
+}

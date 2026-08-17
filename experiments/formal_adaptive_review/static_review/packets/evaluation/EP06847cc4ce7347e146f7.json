@@ -1,0 +1,59 @@
+{
+  "packet_id": "EP06847cc4ce7347e146f7",
+  "sample_id": "climate_change_risks_1990_2021:bibliographic_coupling:highest_occurrence:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:highest_occurrence",
+        "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label",
+        "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:occurrences"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021",
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:highest_occurrence",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021",
+          "object_type": "entity",
+          "predicate": "highest_occurrence_node",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label",
+          "network": "bibliographic_coupling",
+          "object": "Atmospheric composition…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:occurrences",
+          "network": "bibliographic_coupling",
+          "object": 1059.0,
+          "object_type": "number",
+          "predicate": "occurrences",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "308fa53fb719776f3f95521f5defa08302d9a222bd6bda83d1131d0bfa1d1aa1"
+    },
+    "question": "Which labeled node has the highest occurrence in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"label\":\"Atmospheric composition…\"},\"explanation\":\"The context states that the node with DOI 10.1016/j.atmosenv.2009.08.021 is the highest occurrence node in the bibliographic coupling network, and its display label is 'Atmospheric composition…'.\",\"item_id\":\"climate_change_risks_1990_2021:bibliographic_coupling:highest_occurrence\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label",
+    "bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:occurrences"
+  ],
+  "content_sha256": "45c4fbf282522667d5bb02d0572e4e4db0705e55453b25d54685c948e239381e"
+}

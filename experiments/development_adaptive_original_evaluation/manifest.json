@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "protocol_version": "adaptive-original-evaluation-v1",
+  "evaluation_target": "untouched_pre_intervention_original_candidate",
+  "condition_identity_visible_to_judge": false,
+  "judge_role": "evaluation_only",
+  "judge_may_modify_artifacts": false,
+  "evaluation_updates_feedback_memory": false,
+  "formal_results_used": false,
+  "experiment_mode": "development_calibration",
+  "rubric_version": "adaptive-evaluation-v1",
+  "seed": 42,
+  "cases_path": "D:\\project\\bibagent\\experiments\\development_adaptive_cases\\real_outputs.jsonl",
+  "cases_sha256": "7f8416b2665df105d0e3db53f83c0f588be4a19d393e8c33b00c7c52b32e1fd8",
+  "reference_registry": "D:\\project\\bibagent\\experiments\\human_references_development.yml",
+  "reference_registry_sha256": "4bf4575a3ca23d52978505a5ecce4f6cd256c80b8f74fe28cb88e97d89f8c23d",
+  "topic_sequence": [
+    "gnn_drug_discovery_2017_2023",
+    "crispr_extracellular_vesicles_2015_2022"
+  ],
+  "items": [
+    {
+      "packet_id": "EP834fec0bb0d23cfc3bfa",
+      "sample_id": "gnn_drug_discovery_2017_2023:report:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "report",
+      "candidate_sha256": "93af710b586567f50aa42d42ef7eae93573c87868b811e5af571569f91bc6180",
+      "packet_path": "packets/evaluation/EP834fec0bb0d23cfc3bfa.json",
+      "packet_sha256": "73b847b10f55e1433a2dea16deb787bb367474f6e83a84dc66c2b0036ffc9d30"
+    },
+    {
+      "packet_id": "EPd0401f146c74d09bfe34",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "6fe81638cdf1943c9483c6baf9ebbbb3e0d432777017d3df5d8c01fb18c7ee2b",
+      "packet_path": "packets/evaluation/EPd0401f146c74d09bfe34.json",
+      "packet_sha256": "f1e06d56bcca241de273dd1f8ebb7ab99c8fe73f6b60a05e28bf5a6df2438ac6"
+    },
+    {
+      "packet_id": "EP4a9c625084dcff8570dd",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "c1531d4ce700abe15a64b8cbcf039d81b5f89ce6c6b5f1af5dd342f7b32d295d",
+      "packet_path": "packets/evaluation/EP4a9c625084dcff8570dd.json",
+      "packet_sha256": "ded00309f4c23849924cf49d9063e312e78dad7a1684f75c81746cfab065ecbe"
+    },
+    {
+      "packet_id": "EP1cc1a1fe1fd42d9ebfcf",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:strongest_connection:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "96a53951f18a9e51dbeccb0429ad3bb10089498faa358b9834d677ec4a5d4c4e",
+      "packet_path": "packets/evaluation/EP1cc1a1fe1fd42d9ebfcf.json",
+      "packet_sha256": "411e48f8f5742a20dded7c894ccc483b485d28cc9e9378d67789cb5fe35e29f6"
+    },
+    {
+      "packet_id": "EPff4e9a2322be9dc5e45d",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "7eddd5e82140c7d5be2f757d29a5adcda056f0510433042ede5bdd7530e1fe00",
+      "packet_path": "packets/evaluation/EPff4e9a2322be9dc5e45d.json",
+      "packet_sha256": "64365c21944c6c1b440f1151d2e739b64a58367b6d393054654d0a5583c1c602"
+    },
+    {
+      "packet_id": "EP3ac2c3eda0a938ada226",
+      "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "5d8802a7bfe39c75bd7042c95941185084a206e3fbf8db976f0fb03b58f3e1ba",
+      "packet_path": "packets/evaluation/EP3ac2c3eda0a938ada226.json",
+      "packet_sha256": "baaebfbffa830c180d1e39ec2bdfd07147dd34754da5a076c65151ef75053ff1"
+    },
+    {
+      "packet_id": "EP8ecd64b1b3d76a571ace",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:report:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "report",
+      "candidate_sha256": "8da1347d25421c8e0af311d47e0e5fad0c66bcf72093ca981154c02d042196e1",
+      "packet_path": "packets/evaluation/EP8ecd64b1b3d76a571ace.json",
+      "packet_sha256": "1a78058a26bbceffaef6f8b6329f883b7896f6a9317e0c17015b34da2c072d8f"
+    },
+    {
+      "packet_id": "EPa08ae28a1e34407bbfc2",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:network_size:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "93e3186255a03f4a216d0f1f700cd976d7d970f9ca12bd638b7df3839ca8dac6",
+      "packet_path": "packets/evaluation/EPa08ae28a1e34407bbfc2.json",
+      "packet_sha256": "f56595ec79f50fefa874c1920199ed78b4381f294db61f12eb3cfe63df3d033b"
+    },
+    {
+      "packet_id": "EP8d7864df32fde3557691",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:highest_occurrence:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "230ccc43bebcc2071711ecb91cb0cc48b546a6a002d7a6dfad209a660d87e71b",
+      "packet_path": "packets/evaluation/EP8d7864df32fde3557691.json",
+      "packet_sha256": "bced04a6108152e9fd29392367104d87856438c917a3af421f134659d0cc2091"
+    },
+    {
+      "packet_id": "EP0ce799911f41538c06e6",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:strongest_connection:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "e3a62640ebad28d0ef3fa75e3183c2068160e2a5079ec1b476e696a023059319",
+      "packet_path": "packets/evaluation/EP0ce799911f41538c06e6.json",
+      "packet_sha256": "939cea58625c4b8233ce6c020b418f47fefe7a8d1fd1bf23702df83face9fd24"
+    },
+    {
+      "packet_id": "EP098ce696d6bd046f5bdb",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:cluster_membership:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "dd4810d953b5ce83bc13bbad13ac556ed7ccf8ba69a709a99fbf48caf8fb6edb",
+      "packet_path": "packets/evaluation/EP098ce696d6bd046f5bdb.json",
+      "packet_sha256": "bc9f37fb0fef2733995e6b08a23f0ced0681fcdafe80c9529ee16bb312c9bdb6"
+    },
+    {
+      "packet_id": "EP657398eaf729fc87bcf9",
+      "sample_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:false_premise:grounding",
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "topic_role": "development",
+      "artifact_type": "graph",
+      "candidate_sha256": "03e292ae13ec2dc64c42b9c12fa971dae8f427f7ef9471711b57bf4b11f43614",
+      "packet_path": "packets/evaluation/EP657398eaf729fc87bcf9.json",
+      "packet_sha256": "537e8469296da2faffaf9131f865440e8efe0d17bb8b7f657d83bd8dbc3bd7d6"
+    }
+  ]
+}

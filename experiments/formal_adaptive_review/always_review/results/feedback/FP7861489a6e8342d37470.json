@@ -1,0 +1,15 @@
+{
+  "packet_id": "FP7861489a6e8342d37470",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible graph evidence identifies the strongest displayed connection as the pair labeled \"Microplastics in the env…\" and \"Worldwide distribution a…\", with edge weight 92.0, exactly matching the answer and explanation.",
+  "evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label",
+    "bibliographic_coupling:node:doi:10.1177/0734242x18785730:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

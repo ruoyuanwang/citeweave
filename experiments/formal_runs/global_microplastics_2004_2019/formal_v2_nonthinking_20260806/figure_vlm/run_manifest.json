@@ -1,0 +1,20 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "global_microplastics_2004_2019",
+  "condition": "figure_vlm",
+  "role": "cross_model_extension",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "packet_sha256": "11ec66d1db1069acfe0450fd98a8bd26d097da3b1c1b59e46a88fd218803995c",
+  "output_sha256": "0a715be3d794a6448d4b44fd01c26440fbaad383e7c65c487381b4e3c2e1e672",
+  "items": 6,
+  "item_ids": [
+    "global_microplastics_2004_2019:bibliographic_coupling:network_size",
+    "global_microplastics_2004_2019:citation:network_size",
+    "global_microplastics_2004_2019:coauthorship:network_size",
+    "global_microplastics_2004_2019:cocitation:network_size",
+    "global_microplastics_2004_2019:institution_collaboration:network_size",
+    "global_microplastics_2004_2019:keyword_cooccurrence:network_size"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "packet_id": "FPd1a464b1620b1143490a",
+  "sample_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:cluster",
+        "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1109/access.2022.3156062"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:cluster",
+          "network": "bibliographic_coupling",
+          "object": 2,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1109/access.2022.3156062"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:label",
+          "network": "bibliographic_coupling",
+          "object": "Digital Twin Perspective…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1109/access.2022.3156062"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "4d7874200dc50322a7b28025d432603df049b2fc6e3d63dcada9e3646c2b5c7c"
+    },
+    "question": "Which detected cluster contains the labeled node 'Digital Twin Perspective…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":2,\"label\":\"Digital Twin Perspective…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1109/access.2022.3156062 has a display label 'Digital Twin Perspective…' and belongs to cluster 2. Therefore, the labeled node is in cluster 2.\",\"item_id\":\"digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:cluster",
+    "bibliographic_coupling:node:doi:10.1109/access.2022.3156062:label"
+  ],
+  "risk_notice": {
+    "stage": "graph_explanation:cluster_membership",
+    "issue_signature": "graph:cluster_membership",
+    "severity": "medium",
+    "detector_score": 0.6,
+    "message": "The system flagged the quoted cluster_membership answer for focused factual review. Assess and, if necessary, edit only that span against the visible graph evidence.",
+    "flagged_text": "{\"abstain\":false,\"answer\":{\"cluster\":2,\"label\":\"Digital Twin Perspective…\"},\"explanation\":\"The context provides a relationship where the node with DOI 10.1109/access.2022.3156062 has a display label 'Digital Twin Perspective…' and belongs to cluster 2. Therefore, the labeled node is in cluster 2.\",\"item_id\":\"digital_twins_healthcare_2012_2024:bibliographic_coupling:cluster_membership\"}"
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "b26405fe5a67f63394af19145e45fc41a444c7ed67410996d8c31a10795f93c9"
+}

@@ -1,0 +1,9 @@
+{
+  "queries": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "search_expression": "(\"graph neural network\" OR \"graph convolutional network\" OR \"graph attention network\" OR \"message passing neural network\" OR \"graph isomorphism network\") AND (\"drug discovery\" OR \"drug design\" OR \"drug development\" OR \"drug repurposing\" OR \"molecular property prediction\" OR \"virtual screening\" OR \"de novo drug design\" OR \"lead optimization\")",
+      "rationale": "Removed the ambiguous acronym GNN while retaining all explicit graph neural network variants and drug discovery terms to ensure precision without losing recall."
+    }
+  ]
+}

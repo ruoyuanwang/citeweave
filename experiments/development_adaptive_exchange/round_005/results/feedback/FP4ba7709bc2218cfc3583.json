@@ -1,0 +1,15 @@
+{
+  "packet_id": "FP4ba7709bc2218cfc3583",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 0.98,
+  "reason": "The candidate identifies the same two displayed labels as the visible strongest-connection relationship and reports the visible edge weight of 38.0.",
+  "suggested_revision": null,
+  "evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbab109:label",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbad400:label"
+  ]
+}

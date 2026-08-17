@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "topics": [
+    "locked_topic_1",
+    "locked_topic_2"
+  ],
+  "report_comparisons": [
+    {
+      "name": "full_vs_oneshot",
+      "condition_a": "citeweave_full",
+      "condition_b": "structured_one_shot",
+      "files": {
+        "locked_topic_1": "formal_results/locked_topic_1/full_vs_oneshot/resolved_judgments.jsonl",
+        "locked_topic_2": "formal_results/locked_topic_2/full_vs_oneshot/resolved_judgments.jsonl"
+      }
+    },
+    {
+      "name": "full_vs_human",
+      "condition_a": "citeweave_full",
+      "condition_b": "published_human_reference",
+      "files": {
+        "locked_topic_1": "formal_results/locked_topic_1/full_vs_human/resolved_judgments.jsonl",
+        "locked_topic_2": "formal_results/locked_topic_2/full_vs_human/resolved_judgments.jsonl"
+      }
+    }
+  ],
+  "graph_comparisons": [
+    {
+      "name": "graph_vs_no_rag",
+      "condition_a": "graph_rag",
+      "condition_b": "no_rag",
+      "files": {
+        "locked_topic_1": "formal_results/locked_topic_1/graph_vs_no_rag/resolved_judgments.jsonl",
+        "locked_topic_2": "formal_results/locked_topic_2/graph_vs_no_rag/resolved_judgments.jsonl"
+      }
+    },
+    {
+      "name": "graph_vs_flat",
+      "condition_a": "graph_rag",
+      "condition_b": "flat_structured",
+      "files": {
+        "locked_topic_1": "formal_results/locked_topic_1/graph_vs_flat/resolved_judgments.jsonl",
+        "locked_topic_2": "formal_results/locked_topic_2/graph_vs_flat/resolved_judgments.jsonl"
+      }
+    },
+    {
+      "name": "graph_vs_figure",
+      "condition_a": "graph_rag",
+      "condition_b": "figure_vlm",
+      "files": {
+        "locked_topic_1": "formal_results/locked_topic_1/graph_vs_figure/resolved_judgments.jsonl",
+        "locked_topic_2": "formal_results/locked_topic_2/graph_vs_figure/resolved_judgments.jsonl"
+      }
+    }
+  ],
+  "adaptive_results": {
+    "locked_topic_1": "formal_results/locked_topic_1/adaptive_counts.json",
+    "locked_topic_2": "formal_results/locked_topic_2/adaptive_counts.json"
+  }
+}

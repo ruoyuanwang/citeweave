@@ -1,0 +1,13 @@
+{
+  "packet_id": "EP834fec0bb0d23cfc3bfa",
+  "judge_id": "evaluation",
+  "decision": "fail",
+  "confidence": 1.0,
+  "reason": "The candidate reports an unrelated 259-work 2015-2022 EV/CRISPR corpus, while the evidence describes a 456-work 2018-2023 GNN drug-discovery corpus with different annual peak and leading source.",
+  "evidence_ids": [
+    "E001",
+    "E004",
+    "E005",
+    "E008"
+  ]
+}

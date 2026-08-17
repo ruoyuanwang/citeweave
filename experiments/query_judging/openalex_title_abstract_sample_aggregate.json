@@ -1,0 +1,2557 @@
+{
+  "schema_version": 1,
+  "role": "observational_query_precision_audit",
+  "controls_or_modifies_pipeline": false,
+  "probe": {
+    "path": "experiments\\query_judging\\openalex_title_abstract_empirical_probe.json",
+    "sha256": "bb653aeb276c4036ddc82170efbe0cd33d487b28a8a0f3e281a526c116b04761"
+  },
+  "judgments": [
+    {
+      "path": "experiments\\query_judging\\openalex_title_abstract_sample_judge_a.json",
+      "sha256": "248b7eefa00de276963305c0eb425136a35d719009afdb4bfd99d35a115b4f2f"
+    },
+    {
+      "path": "experiments\\query_judging\\openalex_title_abstract_sample_judge_b.json",
+      "sha256": "33adbe2811eeeba5f63dba905f8ab637fe89b63fc4acfd59e6e490b09b76fcdf"
+    },
+    {
+      "path": "experiments\\query_judging\\openalex_title_abstract_sample_judge_c.json",
+      "sha256": "9d310ff890d7d53fd9ff03239bff7304b0421b86dac40a1ada9c0bdadffce049"
+    }
+  ],
+  "raters": 3,
+  "samples": 240,
+  "pooled": {
+    "majority_counts": {
+      "relevant": 132,
+      "borderline": 58,
+      "irrelevant": 50
+    },
+    "majority_relevant_rate": 0.55,
+    "majority_non_irrelevant_rate": 0.7916666666666666,
+    "fleiss_kappa": 0.6505781637235426
+  },
+  "results": [
+    {
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "sample_size": 30,
+      "majority_counts": {
+        "relevant": 23,
+        "borderline": 5,
+        "irrelevant": 2
+      },
+      "majority_relevant_rate": 0.7666666666666667,
+      "majority_non_irrelevant_rate": 0.9333333333333333,
+      "unanimous_rate": 0.7333333333333333,
+      "fleiss_kappa": 0.5502810743285449,
+      "items": [
+        {
+          "work_id": "https://openalex.org/W3158002239",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4387934986",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4213426032",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4297227089",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2995345309",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4386976834",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4283459310",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4390317538",
+          "labels": [
+            "borderline",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4389805301",
+          "labels": [
+            "relevant",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4310222865",
+          "labels": [
+            "borderline",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4389203344",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4220816536",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3087390197",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3212664589",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4281922383",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4322732093",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4225695739",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4213235856",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4311054714",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4387847047",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4390005328",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2957050889",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4386041723",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3185456481",
+          "labels": [
+            "relevant",
+            "borderline",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4387334953",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4282835253",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4321996988",
+          "labels": [
+            "borderline",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4221056338",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4308187210",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3215476983",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        }
+      ]
+    },
+    {
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "sample_size": 30,
+      "majority_counts": {
+        "relevant": 12,
+        "borderline": 6,
+        "irrelevant": 12
+      },
+      "majority_relevant_rate": 0.4,
+      "majority_non_irrelevant_rate": 0.6,
+      "unanimous_rate": 0.6666666666666666,
+      "fleiss_kappa": 0.6631736526946108,
+      "items": [
+        {
+          "work_id": "https://openalex.org/W2622799812",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2761649749",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2998321846",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2903480993",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2928170766",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4281556756",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4308059660",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4313398450",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2802507063",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3030089399",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4285110131",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2894914844",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4225120161",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4312127107",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2896075315",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3137486934",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3199883199",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3087905712",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3128005349",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2982575646",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4300510835",
+          "labels": [
+            "borderline",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2911858506",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4206044626",
+          "labels": [
+            "borderline",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2902282551",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3152608233",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3182877332",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4214706521",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3043849273",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3133322288",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2894898302",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        }
+      ]
+    },
+    {
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "sample_size": 30,
+      "majority_counts": {
+        "relevant": 14,
+        "borderline": 11,
+        "irrelevant": 5
+      },
+      "majority_relevant_rate": 0.4666666666666667,
+      "majority_non_irrelevant_rate": 0.8333333333333334,
+      "unanimous_rate": 0.5,
+      "fleiss_kappa": 0.4395339493772599,
+      "items": [
+        {
+          "work_id": "https://openalex.org/W3184456034",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2955270041",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2898879852",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3162810055",
+          "labels": [
+            "borderline",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3175814978",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2149228247",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4281681741",
+          "labels": [
+            "relevant",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4313229433",
+          "labels": [
+            "relevant",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4308003801",
+          "labels": [
+            "borderline",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4283800985",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3168820577",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3119525280",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4301603459",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4286252286",
+          "labels": [
+            "borderline",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3037430993",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4404382323",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2996259309",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2470898428",
+          "labels": [
+            "borderline",
+            "relevant",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4285392900",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2006255177",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4223552072",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2800754400",
+          "labels": [
+            "borderline",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4310442430",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2743737418",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3046056639",
+          "labels": [
+            "relevant",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2768515657",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3028834207",
+          "labels": [
+            "relevant",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2945880527",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4313407333",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4313334409",
+          "labels": [
+            "borderline",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        }
+      ]
+    },
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "sample_size": 30,
+      "majority_counts": {
+        "relevant": 20,
+        "borderline": 4,
+        "irrelevant": 6
+      },
+      "majority_relevant_rate": 0.6666666666666666,
+      "majority_non_irrelevant_rate": 0.8,
+      "unanimous_rate": 0.7,
+      "fleiss_kappa": 0.6006539000467073,
+      "items": [
+        {
+          "work_id": "https://openalex.org/W3089546236",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2995361637",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2604662561",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3011758476",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3017806755",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3131258452",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W28165187",
+          "labels": [
+            "relevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2905934948",
+          "labels": [
+            "borderline",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3133344225",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3184456034",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W1482551774",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2418982398",
+          "labels": [
+            "borderline",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3127317509",
+          "labels": [
+            "borderline",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2979296317",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2802690323",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3087425842",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3015381718",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3010375321",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2939444766",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2364017024",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2159332358",
+          "labels": [
+            "relevant",
+            "irrelevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2291381144",
+          "labels": [
+            "irrelevant",
+            "relevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3107694141",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2158608679",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3137573251",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2034877202",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4200250400",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W7131975842",
+          "labels": [
+            "borderline",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3194937248",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4200297278",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        }
+      ]
+    },
+    {
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "sample_size": 30,
+      "majority_counts": {
+        "relevant": 15,
+        "borderline": 9,
+        "irrelevant": 6
+      },
+      "majority_relevant_rate": 0.5,
+      "majority_non_irrelevant_rate": 0.8,
+      "unanimous_rate": 0.8333333333333334,
+      "fleiss_kappa": 0.8213576816196906,
+      "items": [
+        {
+          "work_id": "https://openalex.org/W4387843347",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4307877630",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4386280880",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3214100756",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3157282098",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4285066477",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4304092601",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4360983041",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4386825087",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4226090547",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4386781585",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4389436121",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W7117294328",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4388909877",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4387030842",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3204249062",
+          "labels": [
+            "relevant",
+            "borderline",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3207034280",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3040613403",
+          "labels": [
+            "borderline",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3214588890",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3013665273",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4386495603",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4327809914",
+          "labels": [
+            "borderline",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4295046679",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4295951577",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4362678418",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4394842328",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4313214567",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4319736366",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4386572626",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4386355924",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        }
+      ]
+    },
+    {
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "sample_size": 30,
+      "majority_counts": {
+        "relevant": 12,
+        "borderline": 10,
+        "irrelevant": 8
+      },
+      "majority_relevant_rate": 0.4,
+      "majority_non_irrelevant_rate": 0.7333333333333333,
+      "unanimous_rate": 0.7,
+      "fleiss_kappa": 0.6741615853658538,
+      "items": [
+        {
+          "work_id": "https://openalex.org/W1980192605",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2744552328",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2001994886",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2349992986",
+          "labels": [
+            "borderline",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4395020123",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3000675609",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2790050480",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2990926784",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W271423532",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3212750538",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W1999030144",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3205549233",
+          "labels": [
+            "borderline",
+            "relevant",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2888101694",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4237957179",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2287713844",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2115204306",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3210423821",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3185321953",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2103447958",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2324402161",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3170342956",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W1937840208",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2734627122",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2015197291",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2613305640",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2109485318",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2794571257",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3106660984",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3128802970",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2569069626",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "borderline"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        }
+      ]
+    },
+    {
+      "dataset_id": "gene_editing_als_2004_2024",
+      "sample_size": 30,
+      "majority_counts": {
+        "relevant": 10,
+        "borderline": 11,
+        "irrelevant": 9
+      },
+      "majority_relevant_rate": 0.3333333333333333,
+      "majority_non_irrelevant_rate": 0.7,
+      "unanimous_rate": 0.6,
+      "fleiss_kappa": 0.5493323442136497,
+      "items": [
+        {
+          "work_id": "https://openalex.org/W4380576436",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3003098361",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3203933728",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3177131040",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2803476128",
+          "labels": [
+            "borderline",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4365791131",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3107500297",
+          "labels": [
+            "relevant",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3011809905",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2785267239",
+          "labels": [
+            "borderline",
+            "relevant",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4310588932",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4283725767",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3188113104",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3014186646",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4383373908",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4388384742",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3204532686",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2327220838",
+          "labels": [
+            "borderline",
+            "relevant",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3185836147",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2797519282",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4308735856",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4281759792",
+          "labels": [
+            "borderline",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4386209643",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4327550261",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4231975754",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3013381491",
+          "labels": [
+            "borderline",
+            "relevant",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2972017733",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W7136152670",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W4385852683",
+          "labels": [
+            "borderline",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2900258644",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2579051931",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        }
+      ]
+    },
+    {
+      "dataset_id": "global_microplastics_2004_2019",
+      "sample_size": 30,
+      "majority_counts": {
+        "relevant": 26,
+        "borderline": 2,
+        "irrelevant": 2
+      },
+      "majority_relevant_rate": 0.8666666666666667,
+      "majority_non_irrelevant_rate": 0.9333333333333333,
+      "unanimous_rate": 0.8666666666666667,
+      "fleiss_kappa": 0.6765498652291105,
+      "items": [
+        {
+          "work_id": "https://openalex.org/W2909484550",
+          "labels": [
+            "relevant",
+            "relevant",
+            "irrelevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W3080521020",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2787921376",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2966973695",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2790774653",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W621532535",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2314540696",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2903437666",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2995351090",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2907599928",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2946202260",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3198387464",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2895448096",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2765305810",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2997010089",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2054536143",
+          "labels": [
+            "irrelevant",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W4241878433",
+          "labels": [
+            "borderline",
+            "borderline",
+            "borderline"
+          ],
+          "majority_label": "borderline",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2987640467",
+          "labels": [
+            "relevant",
+            "relevant",
+            "borderline"
+          ],
+          "majority_label": "relevant",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2783503112",
+          "labels": [
+            "borderline",
+            "borderline",
+            "irrelevant"
+          ],
+          "majority_label": "borderline",
+          "unanimous": false
+        },
+        {
+          "work_id": "https://openalex.org/W2733598286",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2735977812",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2806489069",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2917111661",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2626788639",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2898933860",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2807695907",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2092009824",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W3141952335",
+          "labels": [
+            "irrelevant",
+            "irrelevant",
+            "irrelevant"
+          ],
+          "majority_label": "irrelevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2762638481",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        },
+        {
+          "work_id": "https://openalex.org/W2900740505",
+          "labels": [
+            "relevant",
+            "relevant",
+            "relevant"
+          ],
+          "majority_label": "relevant",
+          "unanimous": true
+        }
+      ]
+    }
+  ]
+}

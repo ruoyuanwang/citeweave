@@ -1,0 +1,1 @@
+{"packet_id":"EP098ce696d6bd046f5bdb","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The returned label and cluster 1 exactly match the canonical node label and cluster relationship.","evidence_ids":["bibliographic_coupling:node:doi:10.3390/ijms21197362:cluster","bibliographic_coupling:node:doi:10.3390/ijms21197362:label"]}

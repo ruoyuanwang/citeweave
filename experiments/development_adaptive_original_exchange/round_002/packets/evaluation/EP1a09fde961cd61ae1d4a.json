@@ -1,0 +1,59 @@
+{
+  "packet_id": "EP1a09fde961cd61ae1d4a",
+  "sample_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:highest_occurrence:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:highest_occurrence",
+        "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label",
+        "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:occurrences"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049",
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:highest_occurrence",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049",
+          "object_type": "entity",
+          "predicate": "highest_occurrence_node",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label",
+          "network": "bibliographic_coupling",
+          "object": "Graph Neural Networks an…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:occurrences",
+          "network": "bibliographic_coupling",
+          "object": 201.0,
+          "object_type": "number",
+          "predicate": "occurrences",
+          "subject": "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "31e389a6555b1e3c72978318e189ef3763ef2f707798beec1e00b2d3f96168ea"
+    },
+    "question": "Which labeled node has the highest occurrence in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"label\":\"Graph Neural Networks an…\"},\"explanation\":\"The context states that the node with DOI 10.3389/fgene.2021.690049 has the highest occurrence in the bibliographic coupling network, and its display label is 'Graph Neural Networks an…'.\",\"item_id\":\"gnn_drug_discovery_2017_2023:bibliographic_coupling:highest_occurrence\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:occurrences"
+  ],
+  "content_sha256": "1b3cd4ddaa07f2c42e66b6414d1e1bd1ff64817d07df53f5ea93fda900498bcd"
+}

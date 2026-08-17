@@ -1,0 +1,2728 @@
+{
+  "condition": "no_graph",
+  "metadata": {
+    "dataset_id": "climate_adaptation_2018_2020",
+    "prompt_version": "graph-qa-v3",
+    "model": "qwen2.5-1.5b-q4km",
+    "base_url": "http://127.0.0.1:8091/v1",
+    "temperature": 0.0,
+    "max_tokens": 384,
+    "seed": 42,
+    "workers": 2,
+    "response_format": "json_schema",
+    "items": 29,
+    "elapsed_seconds": 96.41964100000041,
+    "raw_records": [
+      {
+        "item_id": "climate_adaptation_2018_2020:G001",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G001\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G001\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"climate_adaptation_2018_2020:G001\"],\n  \"evidence_edges\": [\"climate_adaptation_2018_2020:G001\"],\n  \"statement\": \"The bibliographic_coupling network has 2 nodes and 2 edges.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959135,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 121,
+            "prompt_tokens": 215,
+            "total_tokens": 336,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-cvtViu83EprkTNVniAFPclNR1oN9opSD",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 47,
+            "prompt_ms": 359.179,
+            "prompt_per_token_ms": 7.642106382978723,
+            "prompt_per_second": 130.85397531592884,
+            "predicted_n": 121,
+            "predicted_ms": 3439.205,
+            "predicted_per_token_ms": 28.423181818181817,
+            "predicted_per_second": 35.18254945547009
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G001",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "climate_adaptation_2018_2020:G001"
+          ],
+          "evidence_edges": [
+            "climate_adaptation_2018_2020:G001"
+          ],
+          "statement": "The bibliographic_coupling network has 2 nodes and 2 edges."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G002",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G002\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G002\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G008\",\n    \"climate_adaptation_2018_2020:G009\",\n    \"climate_adaptation_2018_2020:G010\",\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation"
+              }
+            }
+          ],
+          "created": 1785959142,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 225,
+            "total_tokens": 609,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-VqW5uEo0qF6zYSs3mjAx6C3daB0loHPp",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 57,
+            "prompt_ms": 360.11,
+            "prompt_per_token_ms": 6.317719298245614,
+            "prompt_per_second": 158.28496848185276,
+            "predicted_n": 384,
+            "predicted_ms": 11304.321,
+            "predicted_per_token_ms": 29.4383359375,
+            "predicted_per_second": 33.9693113810197
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G002",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G002\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G008\",\n    \"climate_adaptation_2018_2020:G009\",\n    \"climate_adaptation_2018_2020:G010\",\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G003",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G003\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G003\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The bibliographic_coupling network is not explicitly described in the provided information.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959137,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 81,
+            "prompt_tokens": 215,
+            "total_tokens": 296,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-Y8aSKKuYkLXWIWIVvbR36SW5LjnOVfss",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 182.087,
+            "prompt_per_token_ms": 4.138340909090909,
+            "prompt_per_second": 241.64273122188845,
+            "predicted_n": 81,
+            "predicted_ms": 2278.945,
+            "predicted_per_token_ms": 28.135123456790126,
+            "predicted_per_second": 35.542762111415584
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G003",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The bibliographic_coupling network is not explicitly described in the provided information."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G004",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G004\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G004\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"climate_adaptation_2018_2020:G004\", \"climate_adaptation_2018_2020:G003\", \"climate_adaptation_2018_2020:G002\"],\n  \"evidence_edges\": [\"climate_adaptation_2018_2020:G004\", \"climate_adaptation_2018_2020:G003\", \"climate_adaptation_2018_2020:G002\"],\n  \"statement\": \"The pair 'climate_adaptation_2018_2020:G004' and 'climate_adaptation_2018_2020:G003' has the strongest connection in the bibliographic_coupling network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959145,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 247,
+            "prompt_tokens": 226,
+            "total_tokens": 473,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-GIX0Hdoy9NdGokpsEJqtCSp2eeJMrVzU",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 55,
+            "prompt_ms": 217.116,
+            "prompt_per_token_ms": 3.9475636363636366,
+            "prompt_per_second": 253.32080546804468,
+            "predicted_n": 247,
+            "predicted_ms": 7282.3,
+            "predicted_per_token_ms": 29.482995951417006,
+            "predicted_per_second": 33.917855622536834
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G004",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "climate_adaptation_2018_2020:G004",
+            "climate_adaptation_2018_2020:G003",
+            "climate_adaptation_2018_2020:G002"
+          ],
+          "evidence_edges": [
+            "climate_adaptation_2018_2020:G004",
+            "climate_adaptation_2018_2020:G003",
+            "climate_adaptation_2018_2020:G002"
+          ],
+          "statement": "The pair 'climate_adaptation_2018_2020:G004' and 'climate_adaptation_2018_2020:G003' has the strongest connection in the bibliographic_coupling network."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G005",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G005\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G005\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n  \"statement\": \"The citation network has 5 nodes and 5 edges.\"\n}"
+              }
+            }
+          ],
+          "created": 1785959152,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 298,
+            "prompt_tokens": 212,
+            "total_tokens": 510,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-XjDSQHKAzkZ0pAgrz38jzc4I2AXh6OVg",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 41,
+            "prompt_ms": 175.202,
+            "prompt_per_token_ms": 4.273219512195122,
+            "prompt_per_second": 234.01559342929878,
+            "predicted_n": 298,
+            "predicted_ms": 8929.275,
+            "predicted_per_token_ms": 29.964010067114092,
+            "predicted_per_second": 33.373370178429944
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G005",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "climate_adaptation_2018_2020:G005",
+            "climate_adaptation_2018_2020:G004",
+            "climate_adaptation_2018_2020:G003",
+            "climate_adaptation_2018_2020:G002",
+            "climate_adaptation_2018_2020:G001"
+          ],
+          "evidence_edges": [
+            "climate_adaptation_2018_2020:G005",
+            "climate_adaptation_2018_2020:G004",
+            "climate_adaptation_2018_2020:G003",
+            "climate_adaptation_2018_2020:G002",
+            "climate_adaptation_2018_2020:G001"
+          ],
+          "statement": "The citation network has 5 nodes and 5 edges."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G006",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G006\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G006\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the citation network is 'climate_adaptation_2018_2020:G006'.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959148,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 100,
+            "prompt_tokens": 222,
+            "total_tokens": 322,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-41C83EwzO9LxhJAVIG3Bjo5xPsUycUHu",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 51,
+            "prompt_ms": 216.868,
+            "prompt_per_token_ms": 4.252313725490196,
+            "prompt_per_second": 235.16609181622,
+            "predicted_n": 100,
+            "predicted_ms": 2846.523,
+            "predicted_per_token_ms": 28.465230000000002,
+            "predicted_per_second": 35.13057860414266
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G006",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the citation network is 'climate_adaptation_2018_2020:G006'."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G007",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G007\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n  \"statement\": \"How many clusters are detected in the citation network"
+              }
+            }
+          ],
+          "created": 1785959159,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 212,
+            "total_tokens": 596,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-Qxb4rIh2trkkfl1u4Kt4kEi3XHdrRgZ1",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 41,
+            "prompt_ms": 175.169,
+            "prompt_per_token_ms": 4.272414634146342,
+            "prompt_per_second": 234.05967950950225,
+            "predicted_n": 384,
+            "predicted_ms": 11179.771,
+            "predicted_per_token_ms": 29.11398697916667,
+            "predicted_per_second": 34.347751845722065
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G007",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n  \"statement\": \"How many clusters are detected in the citation network"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G008",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G008\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G008\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"climate_adaptation_2018_2020:G008\", \"climate_adaptation_2018_2020:G007\", \"climate_adaptation_2018_2020:G006\"],\n  \"evidence_edges\": [\"climate_adaptation_2018_2020:G008 -> climate_adaptation_2018_2020:G007\", \"climate_adaptation_2018_2020:G008 -> climate_adaptation_2018_2020:G006\"],\n  \"statement\": \"The pair 'climate_adaptation_2018_2020:G008' and 'climate_adaptation_2018_2020:G007' has the strongest connection in the citation network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959159,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 263,
+            "prompt_tokens": 223,
+            "total_tokens": 486,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-kLNZrBd72pWGXruyl2jn2PPqQ0upB5RS",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 52,
+            "prompt_ms": 216.349,
+            "prompt_per_token_ms": 4.160557692307692,
+            "prompt_per_second": 240.35239358628883,
+            "predicted_n": 263,
+            "predicted_ms": 7689.228,
+            "predicted_per_token_ms": 29.236608365019013,
+            "predicted_per_second": 34.2036937908461
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G008",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "climate_adaptation_2018_2020:G008",
+            "climate_adaptation_2018_2020:G007",
+            "climate_adaptation_2018_2020:G006"
+          ],
+          "evidence_edges": [
+            "climate_adaptation_2018_2020:G008 -> climate_adaptation_2018_2020:G007",
+            "climate_adaptation_2018_2020:G008 -> climate_adaptation_2018_2020:G006"
+          ],
+          "statement": "The pair 'climate_adaptation_2018_2020:G008' and 'climate_adaptation_2018_2020:G007' has the strongest connection in the citation network."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G009",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G009\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G009\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"climate_adaptation_2018_2020:G009\"],\n  \"evidence_edges\": [\"climate_adaptation_2018_2020:G009\"],\n  \"statement\": \"The coauthorship network has 2 nodes and 2 edges.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959163,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 120,
+            "prompt_tokens": 214,
+            "total_tokens": 334,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-lzX0CtTf9ylROkfhTlZ7PSw3DbomaHvo",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 43,
+            "prompt_ms": 192.151,
+            "prompt_per_token_ms": 4.468627906976744,
+            "prompt_per_second": 223.78233784887925,
+            "predicted_n": 120,
+            "predicted_ms": 3734.199,
+            "predicted_per_token_ms": 31.118325000000002,
+            "predicted_per_second": 32.13540574564987
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G009",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "climate_adaptation_2018_2020:G009"
+          ],
+          "evidence_edges": [
+            "climate_adaptation_2018_2020:G009"
+          ],
+          "statement": "The coauthorship network has 2 nodes and 2 edges."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G010",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G010\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G010\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the coauthorship network is 'climate_adaptation_2018_2020:G010'.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959163,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 102,
+            "prompt_tokens": 224,
+            "total_tokens": 326,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-gwXFGi6H0MdM6IfxIZ6C7pLNdPvpKY66",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 54,
+            "prompt_ms": 218.095,
+            "prompt_per_token_ms": 4.038796296296296,
+            "prompt_per_second": 247.5985235791742,
+            "predicted_n": 102,
+            "predicted_ms": 2878.655,
+            "predicted_per_token_ms": 28.222107843137255,
+            "predicted_per_second": 35.43321446995211
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G010",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the coauthorship network is 'climate_adaptation_2018_2020:G010'."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G011",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G011\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G017\",\n    \"climate_adaptation_2018_2020:G018\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G020\",\n    \"climate_adaptation_2018_2020:G021\",\n    \"climate_adaptation_2018_2020:G022\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G024\",\n    \"climate_adaptation_2018_2020:G025\",\n    \"climate"
+              }
+            }
+          ],
+          "created": 1785959174,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 214,
+            "total_tokens": 598,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-y3DB839rjiMOFrZshYatLHxylbQTHjoc",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 43,
+            "prompt_ms": 182.092,
+            "prompt_per_token_ms": 4.234697674418605,
+            "prompt_per_second": 236.14436658392458,
+            "predicted_n": 384,
+            "predicted_ms": 11166.102,
+            "predicted_per_token_ms": 29.078390625,
+            "predicted_per_second": 34.38979869608929
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G011",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G017\",\n    \"climate_adaptation_2018_2020:G018\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G020\",\n    \"climate_adaptation_2018_2020:G021\",\n    \"climate_adaptation_2018_2020:G022\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G024\",\n    \"climate_adaptation_2018_2020:G025\",\n    \"climate"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G012",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G012\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G012\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate"
+              }
+            }
+          ],
+          "created": 1785959174,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 225,
+            "total_tokens": 609,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-dJLsCo1SKrsMZUmsGqK9bZC7sSex7pcp",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 55,
+            "prompt_ms": 221.568,
+            "prompt_per_token_ms": 4.0285090909090915,
+            "prompt_per_second": 248.23079145002887,
+            "predicted_n": 384,
+            "predicted_ms": 11145.775,
+            "predicted_per_token_ms": 29.025455729166666,
+            "predicted_per_second": 34.45251676083539
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G012",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G012\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G013",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G013\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation"
+              }
+            }
+          ],
+          "created": 1785959186,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 213,
+            "total_tokens": 597,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-fT5VbItDFCy4EF87aP2zGgDJL7c4TU62",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 42,
+            "prompt_ms": 186.453,
+            "prompt_per_token_ms": 4.439357142857143,
+            "prompt_per_second": 225.25783977731655,
+            "predicted_n": 384,
+            "predicted_ms": 11460.974,
+            "predicted_per_token_ms": 29.846286458333335,
+            "predicted_per_second": 33.50500577001571
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G013",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G014",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G014\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G014\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The highest weighted degree is 10.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959177,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 75,
+            "prompt_tokens": 223,
+            "total_tokens": 298,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-F390xM0unkyX8aUsgtGXMGuRWCADNEEh",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 52,
+            "prompt_ms": 209.825,
+            "prompt_per_token_ms": 4.035096153846154,
+            "prompt_per_second": 247.82556892648637,
+            "predicted_n": 75,
+            "predicted_ms": 2107.762,
+            "predicted_per_token_ms": 28.103493333333336,
+            "predicted_per_second": 35.58276503703929
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G014",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The highest weighted degree is 10."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G015",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G015\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G010\",\n    \"climate_adaptation_2018_2020:G009\",\n    \"climate_adaptation_2018_2020:G008\",\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n "
+              }
+            }
+          ],
+          "created": 1785959188,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 213,
+            "total_tokens": 597,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-Jf6gBYn8pKvI9CLWMQLNkx1GqaaXOrnE",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 42,
+            "prompt_ms": 181.362,
+            "prompt_per_token_ms": 4.318142857142857,
+            "prompt_per_second": 231.58103682138486,
+            "predicted_n": 384,
+            "predicted_ms": 11359.599,
+            "predicted_per_token_ms": 29.5822890625,
+            "predicted_per_second": 33.80401015916143
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G015",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G010\",\n    \"climate_adaptation_2018_2020:G009\",\n    \"climate_adaptation_2018_2020:G008\",\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n "
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G016",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G016\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate"
+              }
+            }
+          ],
+          "created": 1785959197,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 224,
+            "total_tokens": 608,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-ma8i33zydQvxnil1EP8Ad0V5DwxTDVhA",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 53,
+            "prompt_ms": 217.45,
+            "prompt_per_token_ms": 4.102830188679245,
+            "prompt_per_second": 243.7341917682226,
+            "predicted_n": 384,
+            "predicted_ms": 11388.001,
+            "predicted_per_token_ms": 29.656252604166667,
+            "predicted_per_second": 33.719701991596246
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G016",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G017",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G017\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G017\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G017\",\n    \"climate_adaptation_2018_2020:G018\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G020\",\n    \"climate_adaptation_2018_2020:G021\",\n    \"climate_adaptation_2018_2020:G022\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G024\",\n    \"climate_adaptation_2018_2020:G025\",\n    \"climate_adaptation_2018_2020:G026\",\n    \"climate_adaptation_2018_2020:G027\",\n    \"climate_adaptation_2018_2020:G028\",\n    \"climate_adaptation_2018_2020:G029\",\n    \"climate_adaptation_2018_2020:G030\",\n    \"climate_adaptation_2018_2020:G031\",\n    \"climate_adaptation"
+              }
+            }
+          ],
+          "created": 1785959200,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 215,
+            "total_tokens": 599,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-HjJguCymIxJ2KbcS3RMRnhbdH8S0M1XP",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 194.204,
+            "prompt_per_token_ms": 4.4137272727272725,
+            "prompt_per_second": 226.56587917859568,
+            "predicted_n": 384,
+            "predicted_ms": 11509.374,
+            "predicted_per_token_ms": 29.972328125,
+            "predicted_per_second": 33.36410824776395
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G017",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G017\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G017\",\n    \"climate_adaptation_2018_2020:G018\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G020\",\n    \"climate_adaptation_2018_2020:G021\",\n    \"climate_adaptation_2018_2020:G022\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G024\",\n    \"climate_adaptation_2018_2020:G025\",\n    \"climate_adaptation_2018_2020:G026\",\n    \"climate_adaptation_2018_2020:G027\",\n    \"climate_adaptation_2018_2020:G028\",\n    \"climate_adaptation_2018_2020:G029\",\n    \"climate_adaptation_2018_2020:G030\",\n    \"climate_adaptation_2018_2020:G031\",\n    \"climate_adaptation"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G018",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G018\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G018\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node with the highest weighted degree in the institution_collaboration network is G018.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959200,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 86,
+            "prompt_tokens": 225,
+            "total_tokens": 311,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-3m0Vl83cQ9gqRbBtTkjHafZrBV5y7IXd",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 54,
+            "prompt_ms": 220.648,
+            "prompt_per_token_ms": 4.086074074074074,
+            "prompt_per_second": 244.73369348464524,
+            "predicted_n": 86,
+            "predicted_ms": 2734.095,
+            "predicted_per_token_ms": 31.791802325581394,
+            "predicted_per_second": 31.454649527540194
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G018",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node with the highest weighted degree in the institution_collaboration network is G018."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G019",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G019\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G019\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate"
+              }
+            }
+          ],
+          "created": 1785959213,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 215,
+            "total_tokens": 599,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-h4vk6KVOJ1mbIza9FslMaGNSGHXFVSx3",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 197.41,
+            "prompt_per_token_ms": 4.486590909090909,
+            "prompt_per_second": 222.88637860290766,
+            "predicted_n": 384,
+            "predicted_ms": 12317.987,
+            "predicted_per_token_ms": 32.07809114583333,
+            "predicted_per_second": 31.173924765466957
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G019",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G019\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G020",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G020\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G020\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\"climate_adaptation_2018_2020:G020\"],\n  \"evidence_edges\": [\"climate_adaptation_2018_2020:G020\"],\n  \"statement\": \"How many nodes and edges are in the keyword_cooccurrence network?\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959204,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 120,
+            "prompt_tokens": 215,
+            "total_tokens": 335,
+            "prompt_tokens_details": {
+              "cached_tokens": 170
+            }
+          },
+          "id": "chatcmpl-8eoX1CmbpHqc1aHdzxfHPHp58Y71bNBq",
+          "timings": {
+            "cache_n": 170,
+            "prompt_n": 45,
+            "prompt_ms": 195.619,
+            "prompt_per_token_ms": 4.347088888888889,
+            "prompt_per_second": 230.039004391189,
+            "predicted_n": 120,
+            "predicted_ms": 3518.347,
+            "predicted_per_token_ms": 29.319558333333337,
+            "predicted_per_second": 34.106925780771476
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G020",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [
+            "climate_adaptation_2018_2020:G020"
+          ],
+          "evidence_edges": [
+            "climate_adaptation_2018_2020:G020"
+          ],
+          "statement": "How many nodes and edges are in the keyword_cooccurrence network?"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G021",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G021\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G021\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The highest weighted degree is 1000.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959207,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 77,
+            "prompt_tokens": 225,
+            "total_tokens": 302,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-k4q42xlYNWQ9e7rnqAlCRhkGi2340jWB",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 54,
+            "prompt_ms": 242.822,
+            "prompt_per_token_ms": 4.496703703703703,
+            "prompt_per_second": 222.3851216117156,
+            "predicted_n": 77,
+            "predicted_ms": 2265.043,
+            "predicted_per_token_ms": 29.41614285714286,
+            "predicted_per_second": 33.994939610417994
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G021",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The highest weighted degree is 1000."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G022",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G022\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G022\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The keyword cooccurrence network is not provided in the given data.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959209,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 80,
+            "prompt_tokens": 215,
+            "total_tokens": 295,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-DDxZBFsdCAoAiwK9DLP4Bl8vhgdTMG5n",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 44,
+            "prompt_ms": 198.491,
+            "prompt_per_token_ms": 4.511159090909091,
+            "prompt_per_second": 221.67251915703986,
+            "predicted_n": 80,
+            "predicted_ms": 2353.523,
+            "predicted_per_token_ms": 29.4190375,
+            "predicted_per_second": 33.99159472841353
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G022",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The keyword cooccurrence network is not provided in the given data."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:G023",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:G023\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G023\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate"
+              }
+            }
+          ],
+          "created": 1785959222,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 384,
+            "prompt_tokens": 226,
+            "total_tokens": 610,
+            "prompt_tokens_details": {
+              "cached_tokens": 171
+            }
+          },
+          "id": "chatcmpl-Mc0xmvL4tLIyByrggWg92TniHjaekIa4",
+          "timings": {
+            "cache_n": 171,
+            "prompt_n": 55,
+            "prompt_ms": 228.349,
+            "prompt_per_token_ms": 4.1518,
+            "prompt_per_second": 240.85938629028374,
+            "predicted_n": 384,
+            "predicted_ms": 12306.062,
+            "predicted_per_token_ms": 32.04703645833333,
+            "predicted_per_second": 31.204133377517522
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:G023",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G023\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate"
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:U:bibliographic_coupling",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:U:bibliographic_coupling\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the bibliographic_coupling network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:U:bibliographic_coupling\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959215,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 90,
+            "prompt_tokens": 226,
+            "total_tokens": 316,
+            "prompt_tokens_details": {
+              "cached_tokens": 168
+            }
+          },
+          "id": "chatcmpl-N9k89omD8VTdcLBA8J9DBMLWjQGZYapI",
+          "timings": {
+            "cache_n": 168,
+            "prompt_n": 58,
+            "prompt_ms": 240.187,
+            "prompt_per_token_ms": 4.141155172413793,
+            "prompt_per_second": 241.47851465732947,
+            "predicted_n": 90,
+            "predicted_ms": 2589.603,
+            "predicted_per_token_ms": 28.773366666666668,
+            "predicted_per_second": 34.75436196204592
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:U:bibliographic_coupling",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:U:citation",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:U:citation\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the citation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:U:citation\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the citation network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959218,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 84,
+            "prompt_tokens": 220,
+            "total_tokens": 304,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-A8I3No19I9rkJ8qIwsYJ7QDrrvEE6TfI",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 51,
+            "prompt_ms": 213.027,
+            "prompt_per_token_ms": 4.177,
+            "prompt_per_second": 239.40627244433807,
+            "predicted_n": 84,
+            "predicted_ms": 2424.102,
+            "predicted_per_token_ms": 28.85835714285714,
+            "predicted_per_second": 34.652007217518076
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:U:citation",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the citation network."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:U:coauthorship",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:U:coauthorship\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the coauthorship network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:U:coauthorship\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the coauthorship network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959221,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 88,
+            "prompt_tokens": 224,
+            "total_tokens": 312,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-vq21DYsHproFjTXlGe9IwSVt6qQ3oh9S",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 55,
+            "prompt_ms": 250.123,
+            "prompt_per_token_ms": 4.547690909090909,
+            "prompt_per_second": 219.8918132278919,
+            "predicted_n": 88,
+            "predicted_ms": 2581.399,
+            "predicted_per_token_ms": 29.334079545454543,
+            "predicted_per_second": 34.090041872643475
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:U:coauthorship",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the coauthorship network."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:U:cocitation",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:U:cocitation\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the cocitation network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:U:cocitation\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [\"CiteWeave absent benchmark node\"],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the cocitation network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959224,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 94,
+            "prompt_tokens": 222,
+            "total_tokens": 316,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-nDgiajk7xjghnEJlnSSAxEvcXHDYgA9k",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 53,
+            "prompt_ms": 234.814,
+            "prompt_per_token_ms": 4.430452830188679,
+            "prompt_per_second": 225.71056240258247,
+            "predicted_n": 94,
+            "predicted_ms": 2794.854,
+            "predicted_per_token_ms": 29.732489361702125,
+            "predicted_per_second": 33.633241664859774
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:U:cocitation",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [
+            "CiteWeave absent benchmark node"
+          ],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the cocitation network."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:U:institution_collaboration",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:U:institution_collaboration\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the institution_collaboration network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:U:institution_collaboration\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959225,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 90,
+            "prompt_tokens": 226,
+            "total_tokens": 316,
+            "prompt_tokens_details": {
+              "cached_tokens": 220
+            }
+          },
+          "id": "chatcmpl-tuFqCSjPDKM783KLVrAO8tsCO5y4t3zK",
+          "timings": {
+            "cache_n": 220,
+            "prompt_n": 6,
+            "prompt_ms": 63.343,
+            "prompt_per_token_ms": 10.557166666666667,
+            "prompt_per_second": 94.7223844781586,
+            "predicted_n": 90,
+            "predicted_ms": 2841.797,
+            "predicted_per_token_ms": 31.575522222222222,
+            "predicted_per_second": 31.670101699734357
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:U:institution_collaboration",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network."
+        }
+      },
+      {
+        "item_id": "climate_adaptation_2018_2020:U:keyword_cooccurrence",
+        "condition": "no_graph",
+        "request": {
+          "prompt_version": "graph-qa-v3",
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 384,
+          "seed": 42,
+          "response_format": "json_schema",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs character-for-character. Use only IDs present in the matching fact's evidence_nodes and evidence_edges arrays. Never shorten 'fact:G001' to 'G001', never add a bare DOI, and never add an uncited identifier."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: climate_adaptation_2018_2020:U:keyword_cooccurrence\nTASK_TYPE: unanswerable_false_premise\nANSWER_OBJECT_SCHEMA: null with abstain=true\nQUESTION: Which cluster contains the node 'CiteWeave absent benchmark node' in the keyword_cooccurrence network?"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"item_id\": \"climate_adaptation_2018_2020:U:keyword_cooccurrence\",\n  \"abstain\": true,\n  \"answer\": null,\n  \"evidence_nodes\": [],\n  \"evidence_edges\": [],\n  \"statement\": \"The node 'CiteWeave absent benchmark node' is not present in any cluster in the keyword_cooccurrence network.\"\n}\n"
+              }
+            }
+          ],
+          "created": 1785959227,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 93,
+            "prompt_tokens": 226,
+            "total_tokens": 319,
+            "prompt_tokens_details": {
+              "cached_tokens": 169
+            }
+          },
+          "id": "chatcmpl-VurHMfYoo0cuyGDXSiHfZcytvhesaxK5",
+          "timings": {
+            "cache_n": 169,
+            "prompt_n": 57,
+            "prompt_ms": 239.423,
+            "prompt_per_token_ms": 4.20040350877193,
+            "prompt_per_second": 238.07236564573995,
+            "predicted_n": 93,
+            "predicted_ms": 2516.464,
+            "predicted_per_token_ms": 27.058752688172042,
+            "predicted_per_second": 36.95661849325085
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "climate_adaptation_2018_2020:U:keyword_cooccurrence",
+          "abstain": true,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "The node 'CiteWeave absent benchmark node' is not present in any cluster in the keyword_cooccurrence network."
+        }
+      }
+    ]
+  },
+  "benchmark_version": 1,
+  "items": 29,
+  "predictions_received": 29,
+  "metrics": {
+    "exact_answer_accuracy": 0.20689655172413793,
+    "schema_valid_rate": 0.20689655172413793,
+    "unsupported_claim_rate": 1.0,
+    "structured_unsupported_answer_rate": 1.0,
+    "atomic_statement_precision": 0.0,
+    "statement_claim_coverage": 0.5652173913043478,
+    "format_failure_rate": 0.7931034482758621,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 0.0,
+    "evidence_recall": 0.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "abstention_f1": 1.0
+  },
+  "counts": {
+    "correct": 6,
+    "answered": 23,
+    "incorrect_answered": 23,
+    "statement_claims": 13,
+    "unsupported_statement_claims": 13,
+    "evidence_tp": 0,
+    "evidence_fp": 28,
+    "evidence_fn": 137,
+    "evidence_path_eligible_answers": 23,
+    "abstention": {
+      "tn": 23,
+      "tp": 6
+    }
+  },
+  "by_task": {
+    "cluster_count": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_weighted_degree": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_edge": {
+      "items": 5,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 4,
+      "accuracy": 0.25,
+      "schema_valid_rate": 0.25,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 0.2,
+      "schema_valid_rate": 0.2,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "climate_adaptation_2018_2020:G001",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G001",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "climate_adaptation_2018_2020:G001"
+        ],
+        "evidence_edges": [
+          "climate_adaptation_2018_2020:G001"
+        ],
+        "statement": "The bibliographic_coupling network has 2 nodes and 2 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G002",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G002",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G002\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G008\",\n    \"climate_adaptation_2018_2020:G009\",\n    \"climate_adaptation_2018_2020:G010\",\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G003",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G003",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The bibliographic_coupling network is not explicitly described in the provided information."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G004",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G004",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "climate_adaptation_2018_2020:G004",
+          "climate_adaptation_2018_2020:G003",
+          "climate_adaptation_2018_2020:G002"
+        ],
+        "evidence_edges": [
+          "climate_adaptation_2018_2020:G004",
+          "climate_adaptation_2018_2020:G003",
+          "climate_adaptation_2018_2020:G002"
+        ],
+        "statement": "The pair 'climate_adaptation_2018_2020:G004' and 'climate_adaptation_2018_2020:G003' has the strongest connection in the bibliographic_coupling network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G005",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G005",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "climate_adaptation_2018_2020:G005",
+          "climate_adaptation_2018_2020:G004",
+          "climate_adaptation_2018_2020:G003",
+          "climate_adaptation_2018_2020:G002",
+          "climate_adaptation_2018_2020:G001"
+        ],
+        "evidence_edges": [
+          "climate_adaptation_2018_2020:G005",
+          "climate_adaptation_2018_2020:G004",
+          "climate_adaptation_2018_2020:G003",
+          "climate_adaptation_2018_2020:G002",
+          "climate_adaptation_2018_2020:G001"
+        ],
+        "statement": "The citation network has 5 nodes and 5 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G006",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G006",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the citation network is 'climate_adaptation_2018_2020:G006'."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G007",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G007",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G007\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n  \"evidence_edges\": [\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n  \"statement\": \"How many clusters are detected in the citation network"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G008",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G008",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "climate_adaptation_2018_2020:G008",
+          "climate_adaptation_2018_2020:G007",
+          "climate_adaptation_2018_2020:G006"
+        ],
+        "evidence_edges": [
+          "climate_adaptation_2018_2020:G008 -> climate_adaptation_2018_2020:G007",
+          "climate_adaptation_2018_2020:G008 -> climate_adaptation_2018_2020:G006"
+        ],
+        "statement": "The pair 'climate_adaptation_2018_2020:G008' and 'climate_adaptation_2018_2020:G007' has the strongest connection in the citation network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G009",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G009",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "climate_adaptation_2018_2020:G009"
+        ],
+        "evidence_edges": [
+          "climate_adaptation_2018_2020:G009"
+        ],
+        "statement": "The coauthorship network has 2 nodes and 2 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G010",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G010",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the coauthorship network is 'climate_adaptation_2018_2020:G010'."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G011",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G011",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G011\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G017\",\n    \"climate_adaptation_2018_2020:G018\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G020\",\n    \"climate_adaptation_2018_2020:G021\",\n    \"climate_adaptation_2018_2020:G022\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G024\",\n    \"climate_adaptation_2018_2020:G025\",\n    \"climate"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G012",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G012",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G012\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G013",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G013",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G013\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G014",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G014",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The highest weighted degree is 10."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G015",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G015",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G015\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G015\",\n    \"climate_adaptation_2018_2020:G014\",\n    \"climate_adaptation_2018_2020:G013\",\n    \"climate_adaptation_2018_2020:G012\",\n    \"climate_adaptation_2018_2020:G011\",\n    \"climate_adaptation_2018_2020:G010\",\n    \"climate_adaptation_2018_2020:G009\",\n    \"climate_adaptation_2018_2020:G008\",\n    \"climate_adaptation_2018_2020:G007\",\n    \"climate_adaptation_2018_2020:G006\",\n    \"climate_adaptation_2018_2020:G005\",\n    \"climate_adaptation_2018_2020:G004\",\n    \"climate_adaptation_2018_2020:G003\",\n    \"climate_adaptation_2018_2020:G002\",\n    \"climate_adaptation_2018_2020:G001\"\n  ],\n "
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G016",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G016",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G016\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate_adaptation_2018_2020:G016\",\n    \"climate"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G017",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G017",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G017\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G017\",\n    \"climate_adaptation_2018_2020:G018\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G020\",\n    \"climate_adaptation_2018_2020:G021\",\n    \"climate_adaptation_2018_2020:G022\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G024\",\n    \"climate_adaptation_2018_2020:G025\",\n    \"climate_adaptation_2018_2020:G026\",\n    \"climate_adaptation_2018_2020:G027\",\n    \"climate_adaptation_2018_2020:G028\",\n    \"climate_adaptation_2018_2020:G029\",\n    \"climate_adaptation_2018_2020:G030\",\n    \"climate_adaptation_2018_2020:G031\",\n    \"climate_adaptation"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G018",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G018",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node with the highest weighted degree in the institution_collaboration network is G018."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G019",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G019",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G019\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate_adaptation_2018_2020:G019\",\n    \"climate"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G020",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G020",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [
+          "climate_adaptation_2018_2020:G020"
+        ],
+        "evidence_edges": [
+          "climate_adaptation_2018_2020:G020"
+        ],
+        "statement": "How many nodes and edges are in the keyword_cooccurrence network?"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G021",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G021",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The highest weighted degree is 1000."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G022",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": true,
+      "statement_supported": false,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G022",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The keyword cooccurrence network is not provided in the given data."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G023",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G023",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\n  \"item_id\": \"climate_adaptation_2018_2020:G023\",\n  \"abstain\": false,\n  \"answer\": null,\n  \"evidence_nodes\": [\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate_adaptation_2018_2020:G023\",\n    \"climate"
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:bibliographic_coupling",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:bibliographic_coupling",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the bibliographic_coupling network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:citation",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:citation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the citation network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:coauthorship",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:coauthorship",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the coauthorship network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:cocitation",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:cocitation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "CiteWeave absent benchmark node"
+        ],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the cocitation network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:institution_collaboration",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:institution_collaboration",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in the institution_collaboration network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:keyword_cooccurrence",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:keyword_cooccurrence",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "The node 'CiteWeave absent benchmark node' is not present in any cluster in the keyword_cooccurrence network."
+      }
+    }
+  ]
+}

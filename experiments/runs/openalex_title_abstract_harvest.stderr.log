@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "D:\project\bibagent\scripts\run_formal_pipeline.py", line 166, in <module>
+    main()
+  File "D:\project\bibagent\scripts\run_formal_pipeline.py", line 161, in main
+    results = [run_one(item, stage=args.stage) for item in entries if item["id"] in selected]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\project\bibagent\scripts\run_formal_pipeline.py", line 105, in run_one
+    output["harvest"] = harvest_project(workspace, config, resume=True)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\project\bibagent\src\citeweave\workflow.py", line 134, in harvest_project
+    acquisition = bulk_acquire(
+                  ^^^^^^^^^^^^^
+  File "D:\project\bibagent\src\citeweave\bulk_acquisition.py", line 678, in bulk_acquire
+    raise CompletenessError(
+citeweave.exceptions.CompletenessError: Slice 20170101-20231231 expected 456 records but received 457.

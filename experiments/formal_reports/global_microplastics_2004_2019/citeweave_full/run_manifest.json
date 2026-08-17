@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "dataset_id": "global_microplastics_2004_2019",
+  "condition": "citeweave_full",
+  "evidence_sha256": "bca91a8370a19ce560780e7d22ff9844fcb285c32037866b8dab6cdf76c26aba",
+  "model": "deepseek-v4-pro",
+  "base_url": "https://api.deepseek.com",
+  "temperature": 0.1,
+  "seed": 42,
+  "max_tokens": 8000,
+  "report_language": "English",
+  "internal_review_policy": "Revision-only artifact. It must not be reused as an experimental evaluation.",
+  "external_evaluation_policy": "Use a separately instantiated external Judge with independent prompts and traces."
+}

@@ -1,0 +1,13 @@
+{
+  "packet_id": "FPad926ffc5cd2e90d35ce",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 0.99,
+  "reason": "The candidate returns the same visible label as the graph relationship identifying the highest-occurrence node.",
+  "suggested_revision": null,
+  "evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:label",
+    "bibliographic_coupling:node:doi:10.1038/s41392-022-01056-1:occurrences"
+  ]
+}

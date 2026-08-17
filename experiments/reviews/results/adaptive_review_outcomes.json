@@ -1,0 +1,933 @@
+{
+  "evaluation_type": "retrospective_outcome_annotation",
+  "feedback_leakage": false,
+  "auto_accepted_items": 92,
+  "correct_auto_accepts": 92,
+  "auto_accept_precision": 1.0,
+  "one_sided_95_percent_clopper_pearson_lower": 0.9679621368245482,
+  "registered_quality_target": 0.95,
+  "quality_target_passed": true,
+  "outcomes": [
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G001",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G002",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G003",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G004",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G005",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G006",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G007",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G008",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G009",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G010",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G011",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G012",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G013",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G014",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G015",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G016",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G017",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G018",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G019",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G020",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G021",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G022",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G023",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:G024",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:U:bibliographic_coupling",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:U:citation",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:U:coauthorship",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:U:cocitation",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:U:institution_collaboration",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R3_quantum_candidate",
+      "item_id": "quantum_machine_learning_2019_2021:U:keyword_cooccurrence",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:quality:abstract_coverage_below_target",
+      "issue_signature": "abstract_coverage_below_target",
+      "correct": true,
+      "detail": {
+        "context_guard": true,
+        "topic_relevance": 1.0
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G001",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G002",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G003",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G004",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G005",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G006",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G007",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G008",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G009",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G010",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G011",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G012",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G013",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G014",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G015",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G016",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G017",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G018",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G019",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G020",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G021",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G022",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G023",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:G024",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:U:bibliographic_coupling",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:U:citation",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:U:coauthorship",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:U:cocitation",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:U:institution_collaboration",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R4_quantum_corrected",
+      "item_id": "quantum_machine_learning_2019_2021:U:keyword_cooccurrence",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:acquisition:truncated_registered_sample",
+      "issue_signature": "truncated_registered_sample",
+      "correct": true,
+      "detail": {
+        "truncated": true,
+        "failed_pages": 0,
+        "raw_hashes": 1
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:quality:abstract_coverage_below_target",
+      "issue_signature": "abstract_coverage_below_target",
+      "correct": true,
+      "detail": {
+        "context_guard": true,
+        "topic_relevance": 0.9733333333333334
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G001",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G002",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G003",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G004",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G005",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G006",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G007",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G008",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G009",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G010",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G011",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G012",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G013",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G014",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G015",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G016",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G017",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G018",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G019",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G020",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G021",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G022",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:G023",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:U:bibliographic_coupling",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:U:citation",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:U:coauthorship",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:U:cocitation",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:U:institution_collaboration",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    },
+    {
+      "round_id": "R5_climate_locked",
+      "item_id": "climate_adaptation_2018_2020:U:keyword_cooccurrence",
+      "issue_signature": "structured_graph_claim_unverified",
+      "correct": true,
+      "detail": {
+        "evidence_ok": true,
+        "content_or_abstention_ok": true
+      }
+    }
+  ]
+}

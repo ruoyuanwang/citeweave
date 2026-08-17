@@ -1,0 +1,18 @@
+{
+  "packet_id": "FP3623732dbf2c256fa241",
+  "judge_id": "feedback",
+  "decision": "revise",
+  "confidence": 0.99,
+  "reason": "The visible evidence supports descriptive keyword patterns and figure parameters, but not the stronger claims of deep interdisciplinary integration or growing healthcare attention.",
+  "evidence_ids": [
+    "E020",
+    "E021",
+    "E027",
+    "E067"
+  ],
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "### 4.3 Thematic Integration\nThe keyword co-occurrence and three-field plots reveal a deep interdisciplinary integration between computer science methodologies (AI, data science) and medical applications (health care, internal medicine) [E020, E021, E027]. The overlay visualization indicates that health-related keywords tend to have more recent average publication years, consistent with growing attention to healthcare applications [E067].",
+    "replacement_text": "### 4.3 Thematic Integration\nThe keyword analyses identify prominent computer-science and health-related terms, including computer science, artificial intelligence, data science, medicine, and health care; the co-occurrence map assigns these leading terms to several clusters [E020, E027]. The filtered three-field view records author–source–keyword combinations spanning these terms [E021]. The overlay figure reports average-year values across displayed nodes from 2020.95 to 2022.55 [E067]."
+  }
+}

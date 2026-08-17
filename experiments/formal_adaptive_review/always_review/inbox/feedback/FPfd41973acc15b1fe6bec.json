@@ -1,0 +1,15 @@
+{
+  "packet_id": "FPfd41973acc15b1fe6bec",
+  "decision": "revise",
+  "confidence": 1.0,
+  "reason": "The visible evidence supports abstention because the queried label is not visible in the displayed network. It does not establish the stronger claim that the node itself is absent from the network, so that sentence should be narrowed to the available-label evidence.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "Since the node is absent from the network, it cannot be assigned to any cluster, making the premise false.",
+    "replacement_text": "Because the queried label is not visible in the displayed network, no cluster membership for that label can be determined from the evidence."
+  }
+}

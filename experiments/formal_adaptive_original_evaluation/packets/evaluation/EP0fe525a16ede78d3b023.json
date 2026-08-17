@@ -1,0 +1,105 @@
+{
+  "packet_id": "EP0fe525a16ede78d3b023",
+  "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:strongest_connection:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "source_label": "visible string",
+      "target_label": "visible string",
+      "weight": "number"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:edge:0001:relation",
+        "bibliographic_coupling:edge:0001:weight",
+        "bibliographic_coupling:fact:strongest_connection",
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label",
+        "bibliographic_coupling:node:doi:10.1177/0734242x18785730:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:edge:0001",
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011",
+        "bibliographic_coupling:node:doi:10.1177/0734242x18785730"
+      ],
+      "paths": [
+        {
+          "edges": [
+            "bibliographic_coupling:edge:0001:relation"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011",
+            "bibliographic_coupling:node:doi:10.1177/0734242x18785730"
+          ],
+          "path_id": "path:bibliographic_coupling:edge:0001:relation"
+        },
+        {
+          "edges": [
+            "bibliographic_coupling:fact:strongest_connection"
+          ],
+          "nodes": [
+            "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011",
+            "bibliographic_coupling:node:doi:10.1177/0734242x18785730"
+          ],
+          "path_id": "path:bibliographic_coupling:fact:strongest_connection"
+        }
+      ],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:relation",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1177/0734242x18785730",
+          "object_type": "entity",
+          "predicate": "connected_to",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        },
+        {
+          "atom_id": "bibliographic_coupling:edge:0001:weight",
+          "network": "bibliographic_coupling",
+          "object": 92.0,
+          "object_type": "number",
+          "predicate": "weight",
+          "subject": "bibliographic_coupling:edge:0001"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:strongest_connection",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1177/0734242x18785730",
+          "object_type": "entity",
+          "predicate": "strongest_connection_to",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label",
+          "network": "bibliographic_coupling",
+          "object": "Microplastics in the env…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1177/0734242x18785730:label",
+          "network": "bibliographic_coupling",
+          "object": "Worldwide distribution a…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1177/0734242x18785730"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "8bd84935ef2224092fc077a2328234acd8c876d411c54d252f2a7558c23d614f"
+    },
+    "question": "Which labeled pair has the strongest displayed connection in the bibliographic_coupling network, and what is its weight?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"source_label\":\"Microplastics in the env…\",\"target_label\":\"Worldwide distribution a…\",\"weight\":92.0},\"explanation\":\"The fact 'bibliographic_coupling:fact:strongest_connection' explicitly states that the strongest connection is between the two nodes, and the edge weight is given as 92.0. The display labels are provided as 'Microplastics in the env…' and 'Worldwide distribution a…'.\",\"item_id\":\"global_microplastics_2004_2019:bibliographic_coupling:strongest_connection\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label",
+    "bibliographic_coupling:node:doi:10.1177/0734242x18785730:label",
+    "path:bibliographic_coupling:edge:0001:relation",
+    "path:bibliographic_coupling:fact:strongest_connection"
+  ],
+  "content_sha256": "2c85f7142ca17c53780c879b6d653d109f4e8acaecaae40a702ce71a374b88c1"
+}

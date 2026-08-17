@@ -1,0 +1,112 @@
+{
+  "assignment_role": "independent_codex_visible_only_figure_evaluation",
+  "controller_metadata_in_scope": false,
+  "dataset_id": "digital_twins_healthcare_2012_2024",
+  "figure_manifest_sha256": "91182c222849c2d8dbb6c280d0e614c4ad9b706089bb5283ea30bbc278ab53e5",
+  "generator_role": "codex_visual_subagent",
+  "instructions": [
+    "Use only the PNG files explicitly listed in items. Do not inspect the workspace, packet source, benchmark, graph data, reports, gold answers, or outputs from any other condition.",
+    "Visually inspect each PNG and answer only its paired question. If the requested values are not established by the visible image, abstain with answer=null.",
+    "Return exactly one result for every item in the listed order. Do not add fields, commentary, Markdown, or modify any other file."
+  ],
+  "items": [
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\digital_twins_healthcare_2012_2024\\figures\\network_bibliographic_coupling.png",
+      "figure_sha256": "5ead29a09db8bebf0b41f5ad8f3d0c5f12c7d3418560b88fbf266dc2d2442623",
+      "item_id": "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size",
+      "question": "How many nodes and links are displayed in the bibliographic_coupling network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\digital_twins_healthcare_2012_2024\\figures\\network_citation.png",
+      "figure_sha256": "d1be2e9ed7f56c83dce4d337881ef2f33752bc163706cf53758b99239846010b",
+      "item_id": "digital_twins_healthcare_2012_2024:citation:network_size",
+      "question": "How many nodes and links are displayed in the citation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\digital_twins_healthcare_2012_2024\\figures\\network_coauthorship.png",
+      "figure_sha256": "1beec6082dd890d272ad747fb87ea1bbb77d4d14699093777b7ca004ee956b48",
+      "item_id": "digital_twins_healthcare_2012_2024:coauthorship:network_size",
+      "question": "How many nodes and links are displayed in the coauthorship network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\digital_twins_healthcare_2012_2024\\figures\\network_cocitation.png",
+      "figure_sha256": "2d547e4f99801ac7e44354770ae4261009a46ef1aacee6f94dcc352e6f22c528",
+      "item_id": "digital_twins_healthcare_2012_2024:cocitation:network_size",
+      "question": "How many nodes and links are displayed in the cocitation network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\digital_twins_healthcare_2012_2024\\figures\\network_institution_collaboration.png",
+      "figure_sha256": "88fb8a9a2e07484541b2a2a5d74a4bfa9801fb17cfc2d41deb9d66ee587b240e",
+      "item_id": "digital_twins_healthcare_2012_2024:institution_collaboration:network_size",
+      "question": "How many nodes and links are displayed in the institution_collaboration network?",
+      "task_type": "network_size"
+    },
+    {
+      "answer_contract": {
+        "links": "integer",
+        "nodes": "integer"
+      },
+      "figure_path": "D:\\project\\bibagent\\experiments\\formal_workspaces\\digital_twins_healthcare_2012_2024\\figures\\network_keyword_cooccurrence.png",
+      "figure_sha256": "c3c1516f7b018011b3689dd3640ad9a2690fb88727dc3f8253d340b459ff7b6f",
+      "item_id": "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size",
+      "question": "How many nodes and links are displayed in the keyword_cooccurrence network?",
+      "task_type": "network_size"
+    }
+  ],
+  "main_inference": false,
+  "may_modify_pipeline_or_source_artifacts": false,
+  "may_read_unlisted_workspace_files": false,
+  "prohibited_inputs": [
+    "flat structured context",
+    "gold_answer",
+    "graph JSON",
+    "human reference output",
+    "other condition output"
+  ],
+  "registry_sha256": "7c0ea6f10726e986793780ba5469879255f034eeefdb1c506af54cde9e07d3cd",
+  "return_path": "D:\\project\\bibagent\\experiments\\formal_vision_returns\\digital_twins_healthcare_2012_2024.json",
+  "schema_version": 1,
+  "source_packet_file_sha256": "0696891515fc35de1282f768774e872c008f8a4a2cdbed775c0bfd7339dd55cf",
+  "source_packet_sha256": "8ee6268c595366711426fcb66bc2e1a87b75787eb6112fc8c90e28a1f71802e9",
+  "strict_output_schema": {
+    "dataset_id": "digital_twins_healthcare_2012_2024",
+    "generator_role": "codex_visual_subagent",
+    "packet_sha256": "8ee6268c595366711426fcb66bc2e1a87b75787eb6112fc8c90e28a1f71802e9",
+    "results": [
+      {
+        "abstain": "<boolean>",
+        "answer": "<object matching answer_contract exactly, or null iff abstain>",
+        "explanation": "<brief visible-image basis, 1..1000 characters>",
+        "item_id": "<copy exact item_id in input order>"
+      }
+    ],
+    "schema_version": 1,
+    "visible_only": true
+  },
+  "visible_only": true,
+  "write_scope": "Only return_path may be created or replaced by the assigned visual subagent."
+}

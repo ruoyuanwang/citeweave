@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "packets": 12,
+  "all_consistent": false,
+  "items": [
+    {
+      "packet_id": "EP061a45f3a6ba2dbacc10",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason accurately describes the CRISPR/EV coauthorship pair and weight, uses allowed evidence, and suggests no edits."
+    },
+    {
+      "packet_id": "EP14ee3bcaa3548757dbca",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason correctly addresses the GNN false-premise target absence, cites allowed evidence, and suggests no edits."
+    },
+    {
+      "packet_id": "EP1785d1bcaa8541e45de7",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason correctly verifies 72 nodes and 210 links from allowed graph evidence and suggests no edits."
+    },
+    {
+      "packet_id": "EP1a09fde961cd61ae1d4a",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason accurately verifies the GNN highest-occurrence visible label using allowed evidence and suggests no edits."
+    },
+    {
+      "packet_id": "EP1a7fd5a119de8d769475",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the fail reason correctly identifies non-monotonic Biology and Gene series in E020, uses allowed evidence, and suggests no edits."
+    },
+    {
+      "packet_id": "EP6529045186746961c7d4",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason concerns the GNN report and its 456-work corpus, 2023 peak, and stated caveats, with allowed supporting evidence and no edit suggestion."
+    },
+    {
+      "packet_id": "EP6610fd551c266ee997c3",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason accurately verifies the strongest GNN coupling pair and weight 38.0 using allowed evidence and suggests no edits."
+    },
+    {
+      "packet_id": "EP6f096a00bfbf01e1e979",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason correctly verifies 72 CRISPR/EV coupling nodes and 211 links from allowed evidence and suggests no edits."
+    },
+    {
+      "packet_id": "EP80db886b932ba18be90b",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason accurately verifies the CRISPR/EV visible node in cluster 1 using allowed evidence and suggests no edits."
+    },
+    {
+      "packet_id": "EP89259f134e0747c213cd",
+      "semantic_consistent": false,
+      "decision_defensible": false,
+      "audit_reason": "Packet ID and evidence IDs match, but the fail reason falsely says the candidate returned a Cyrillic-corrupted label; the visible candidate exactly returns the evidenced label \"Pseudomonas aeruginosa:…\", so the fail decision is not defensible."
+    },
+    {
+      "packet_id": "EP95ce0c14549a9ca500e5",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason correctly addresses the CRISPR/EV false-premise target absence, cites allowed evidence, and suggests no edits."
+    },
+    {
+      "packet_id": "EPc93d67d3a14c8b63469e",
+      "semantic_consistent": true,
+      "decision_defensible": true,
+      "audit_reason": "Packet ID matches; the pass reason accurately verifies the GNN visible node in cluster 4 using allowed evidence and suggests no edits."
+    }
+  ]
+}

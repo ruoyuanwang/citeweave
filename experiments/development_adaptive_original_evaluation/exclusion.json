@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "excluded_semantic_packet_result_mismatch",
+  "formal_results_used": false,
+  "metrics_used": false,
+  "reason": "Result EP834fec0bb0d23cfc3bfa evaluated an unrelated CRISPR/EV candidate even though the immutable packet contains the GNN drug-discovery report and matching 456-work evidence.",
+  "disposition": "Preserved for audit; a new packet-ID round with independent semantic result auditing is required."
+}

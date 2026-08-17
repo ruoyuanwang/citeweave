@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "AP05882b230eeda53b1f27",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The pass decision is consistent because the candidate reproduces the two displayed endpoint labels and canonical strongest edge weight of 92.0."
+}

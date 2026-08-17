@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "topics": [
+    "machine_learning_climate_change_2008_2022",
+    "climate_change_risks_1990_2021",
+    "digital_twins_healthcare_2012_2024",
+    "plant_heat_drought_2008_2021",
+    "gene_editing_als_2004_2024",
+    "global_microplastics_2004_2019"
+  ],
+  "report_comparisons": [
+    {
+      "name": "full_vs_oneshot",
+      "condition_a": "citeweave_full",
+      "condition_b": "structured_one_shot",
+      "files": {
+        "machine_learning_climate_change_2008_2022": "formal_judging/report_resolved/full_vs_oneshot/machine_learning_climate_change_2008_2022/resolved_judgments.jsonl",
+        "climate_change_risks_1990_2021": "formal_judging/report_resolved/full_vs_oneshot/climate_change_risks_1990_2021/resolved_judgments.jsonl",
+        "digital_twins_healthcare_2012_2024": "formal_judging/report_resolved/full_vs_oneshot/digital_twins_healthcare_2012_2024/resolved_judgments.jsonl",
+        "plant_heat_drought_2008_2021": "formal_judging/report_resolved/full_vs_oneshot/plant_heat_drought_2008_2021/resolved_judgments.jsonl",
+        "gene_editing_als_2004_2024": "formal_judging/report_resolved/full_vs_oneshot/gene_editing_als_2004_2024/resolved_judgments.jsonl",
+        "global_microplastics_2004_2019": "formal_judging/report_resolved/full_vs_oneshot/global_microplastics_2004_2019/resolved_judgments.jsonl"
+      }
+    },
+    {
+      "name": "full_vs_human",
+      "condition_a": "citeweave_full",
+      "condition_b": "published_human_reference",
+      "files": {
+        "machine_learning_climate_change_2008_2022": "formal_judging/report_resolved/full_vs_human/machine_learning_climate_change_2008_2022/resolved_judgments.jsonl",
+        "climate_change_risks_1990_2021": "formal_judging/report_resolved/full_vs_human/climate_change_risks_1990_2021/resolved_judgments.jsonl",
+        "digital_twins_healthcare_2012_2024": "formal_judging/report_resolved/full_vs_human/digital_twins_healthcare_2012_2024/resolved_judgments.jsonl",
+        "plant_heat_drought_2008_2021": "formal_judging/report_resolved/full_vs_human/plant_heat_drought_2008_2021/resolved_judgments.jsonl",
+        "gene_editing_als_2004_2024": "formal_judging/report_resolved/full_vs_human/gene_editing_als_2004_2024/resolved_judgments.jsonl",
+        "global_microplastics_2004_2019": "formal_judging/report_resolved/full_vs_human/global_microplastics_2004_2019/resolved_judgments.jsonl"
+      }
+    },
+    {
+      "name": "oneshot_vs_human",
+      "condition_a": "structured_one_shot",
+      "condition_b": "published_human_reference",
+      "files": {
+        "machine_learning_climate_change_2008_2022": "formal_judging/report_resolved/oneshot_vs_human/machine_learning_climate_change_2008_2022/resolved_judgments.jsonl",
+        "climate_change_risks_1990_2021": "formal_judging/report_resolved/oneshot_vs_human/climate_change_risks_1990_2021/resolved_judgments.jsonl",
+        "digital_twins_healthcare_2012_2024": "formal_judging/report_resolved/oneshot_vs_human/digital_twins_healthcare_2012_2024/resolved_judgments.jsonl",
+        "plant_heat_drought_2008_2021": "formal_judging/report_resolved/oneshot_vs_human/plant_heat_drought_2008_2021/resolved_judgments.jsonl",
+        "gene_editing_als_2004_2024": "formal_judging/report_resolved/oneshot_vs_human/gene_editing_als_2004_2024/resolved_judgments.jsonl",
+        "global_microplastics_2004_2019": "formal_judging/report_resolved/oneshot_vs_human/global_microplastics_2004_2019/resolved_judgments.jsonl"
+      }
+    }
+  ],
+  "graph_comparisons": [
+    {
+      "name": "graph_vs_no",
+      "condition_a": "graph_rag",
+      "condition_b": "no_rag",
+      "files": {
+        "machine_learning_climate_change_2008_2022": "formal_judging/graph_resolved/graph_vs_no/machine_learning_climate_change_2008_2022/resolved_judgments.jsonl",
+        "climate_change_risks_1990_2021": "formal_judging/graph_resolved/graph_vs_no/climate_change_risks_1990_2021/resolved_judgments.jsonl",
+        "digital_twins_healthcare_2012_2024": "formal_judging/graph_resolved/graph_vs_no/digital_twins_healthcare_2012_2024/resolved_judgments.jsonl",
+        "plant_heat_drought_2008_2021": "formal_judging/graph_resolved/graph_vs_no/plant_heat_drought_2008_2021/resolved_judgments.jsonl",
+        "gene_editing_als_2004_2024": "formal_judging/graph_resolved/graph_vs_no/gene_editing_als_2004_2024/resolved_judgments.jsonl",
+        "global_microplastics_2004_2019": "formal_judging/graph_resolved/graph_vs_no/global_microplastics_2004_2019/resolved_judgments.jsonl"
+      }
+    },
+    {
+      "name": "graph_vs_flat",
+      "condition_a": "graph_rag",
+      "condition_b": "flat_structured",
+      "files": {
+        "machine_learning_climate_change_2008_2022": "formal_judging/graph_resolved/graph_vs_flat/machine_learning_climate_change_2008_2022/resolved_judgments.jsonl",
+        "climate_change_risks_1990_2021": "formal_judging/graph_resolved/graph_vs_flat/climate_change_risks_1990_2021/resolved_judgments.jsonl",
+        "digital_twins_healthcare_2012_2024": "formal_judging/graph_resolved/graph_vs_flat/digital_twins_healthcare_2012_2024/resolved_judgments.jsonl",
+        "plant_heat_drought_2008_2021": "formal_judging/graph_resolved/graph_vs_flat/plant_heat_drought_2008_2021/resolved_judgments.jsonl",
+        "gene_editing_als_2004_2024": "formal_judging/graph_resolved/graph_vs_flat/gene_editing_als_2004_2024/resolved_judgments.jsonl",
+        "global_microplastics_2004_2019": "formal_judging/graph_resolved/graph_vs_flat/global_microplastics_2004_2019/resolved_judgments.jsonl"
+      }
+    },
+    {
+      "name": "graph_vs_figure",
+      "condition_a": "graph_rag",
+      "condition_b": "figure_vlm",
+      "files": {
+        "machine_learning_climate_change_2008_2022": "formal_judging/graph_resolved/graph_vs_figure/machine_learning_climate_change_2008_2022/resolved_judgments.jsonl",
+        "climate_change_risks_1990_2021": "formal_judging/graph_resolved/graph_vs_figure/climate_change_risks_1990_2021/resolved_judgments.jsonl",
+        "digital_twins_healthcare_2012_2024": "formal_judging/graph_resolved/graph_vs_figure/digital_twins_healthcare_2012_2024/resolved_judgments.jsonl",
+        "plant_heat_drought_2008_2021": "formal_judging/graph_resolved/graph_vs_figure/plant_heat_drought_2008_2021/resolved_judgments.jsonl",
+        "gene_editing_als_2004_2024": "formal_judging/graph_resolved/graph_vs_figure/gene_editing_als_2004_2024/resolved_judgments.jsonl",
+        "global_microplastics_2004_2019": "formal_judging/graph_resolved/graph_vs_figure/global_microplastics_2004_2019/resolved_judgments.jsonl"
+      }
+    }
+  ],
+  "adaptive_results": {
+    "machine_learning_climate_change_2008_2022": "formal_adaptive_topic_counts/machine_learning_climate_change_2008_2022.json",
+    "climate_change_risks_1990_2021": "formal_adaptive_topic_counts/climate_change_risks_1990_2021.json",
+    "digital_twins_healthcare_2012_2024": "formal_adaptive_topic_counts/digital_twins_healthcare_2012_2024.json",
+    "plant_heat_drought_2008_2021": "formal_adaptive_topic_counts/plant_heat_drought_2008_2021.json",
+    "gene_editing_als_2004_2024": "formal_adaptive_topic_counts/gene_editing_als_2004_2024.json",
+    "global_microplastics_2004_2019": "formal_adaptive_topic_counts/global_microplastics_2004_2019.json"
+  }
+}

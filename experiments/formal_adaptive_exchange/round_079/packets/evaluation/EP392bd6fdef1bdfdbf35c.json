@@ -1,0 +1,49 @@
+{
+  "packet_id": "EP392bd6fdef1bdfdbf35c",
+  "sample_id": "global_microplastics_2004_2019:bibliographic_coupling:cluster_membership:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "cluster": "integer",
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+          "network": "bibliographic_coupling",
+          "object": 2,
+          "object_type": "integer",
+          "predicate": "cluster",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label",
+          "network": "bibliographic_coupling",
+          "object": "Microplastics in the env…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "59e2ba206570035289b73933da7f26d74d3a31a65401d4485382917568e95adc"
+    },
+    "question": "Which detected cluster contains the labeled node 'Microplastics in the env…' in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"cluster\":2,\"label\":\"Microplastics in the env…\"},\"explanation\":\"The node with DOI 10.1016/j.envpol.2019.113011 has the display label 'Microplastics in the env…' and is assigned to cluster 2 in the bibliographic_coupling network, as shown in the provided relationships.\",\"item_id\":\"global_microplastics_2004_2019:bibliographic_coupling:cluster_membership\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.envpol.2019.113011:label"
+  ],
+  "content_sha256": "d77a27ea89a1c6fd8610a2e4f3fa8c3b73d6e4bbe47a42397bd9214c113cbc0e"
+}

@@ -1,0 +1,14 @@
+{
+  "queries": [
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "search_expression": "(CRISPR OR \"clustered regularly interspaced short palindromic repeats\" OR Cas9 OR Cas12 OR Cas13 OR \"CRISPR-Cas\" OR \"CRISPR/Cas\" OR \"CRISPR associated\" OR \"CRISPR-based\" OR \"CRISPR-mediated\") AND (\"extracellular vesicle\" OR \"extracellular vesicles\" OR exosome OR \"exosome-like\" OR microvesicle OR \"outer membrane vesicle\" OR \"apoptotic body\")",
+      "rationale": "Replaced generic 'gene editing' and 'genome editing' with CRISPR-specific terms to ensure only CRISPR-related technologies are retrieved."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "search_expression": "(\"gene editing\" OR \"genome editing\" OR CRISPR OR \"base editing\" OR \"prime editing\" OR \"zinc finger nuclease\" OR TALEN) AND (\"amyotrophic lateral sclerosis\" OR \"Lou Gehrig's disease\" OR \"ALS\")",
+      "rationale": "Removed broader 'motor neuron disease' and 'motor neurone disease' to restrict results specifically to ALS."
+    }
+  ]
+}

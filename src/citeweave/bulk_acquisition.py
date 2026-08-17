@@ -11,12 +11,18 @@ from pathlib import Path
 from typing import Any
 
 from .connectors.base import AcquisitionResult, BaseConnector
-from .exceptions import AcquisitionError, CompletenessError, ConfigurationError
+from .exceptions import (
+    AcquisitionError,
+    CompletenessError,
+    ConfigurationError,
+    InvalidCursorError,
+)
 from .io import atomic_write_bytes, read_json, sha256_bytes, sha256_file, write_json
 from .models import (
     AcquisitionManifest,
     HarvestManifest,
     HarvestPage,
+    HarvestRestart,
     HarvestSlice,
     ProjectConfig,
     ProjectPaths,
@@ -110,7 +116,7 @@ class BulkSourceAdapter:
         return {
             key: ("***" if key == "api_key" else value)
             for key, value in params.items()
-            if key not in {"cursor", "cursorMark", "rows", "per-page", "pageSize"}
+            if key not in {"cursor", "cursorMark", "rows", "per_page", "pageSize"}
         }
 
     def count(
@@ -192,12 +198,34 @@ class BulkSourceAdapter:
                 filters.append(f"type:{'|'.join(protocol.document_types)}")
             if protocol.language:
                 filters.append(f"language:{protocol.language}")
-            params = {
-                "search": protocol.query_text,
+            quoted = [json.dumps(term, ensure_ascii=False) for term in protocol.keywords]
+            if protocol.search_expression:
+                search_query = protocol.search_expression
+            elif protocol.query_mode == "phrase":
+                search_query = json.dumps(
+                    " ".join(protocol.keywords),
+                    ensure_ascii=False,
+                )
+            else:
+                operator = " AND " if protocol.query_mode == "all" else " OR "
+                search_query = operator.join(quoted)
+            params: dict[str, Any] = {
                 "filter": ",".join(filters),
-                "per-page": page_size,
+                "per_page": page_size,
                 "cursor": cursor,
             }
+            if protocol.search_scope == "fulltext":
+                # OpenAlex documents uppercase Boolean operators and quoted
+                # phrase matching. Keep each generated concept phrase intact.
+                params["search"] = search_query
+            else:
+                field = (
+                    "title_and_abstract.search"
+                    if protocol.search_scope == "title_abstract"
+                    else "title.search"
+                )
+                filters.append(f"{field}:{search_query}")
+                params["filter"] = ",".join(filters)
             api_key = getattr(self.connector, "api_key", None)
             if api_key:
                 params["api_key"] = api_key
@@ -235,7 +263,14 @@ class BulkSourceAdapter:
         received: int,
         expected: int,
     ) -> bool:
-        if not items or received >= expected:
+        if not items:
+            return True
+        if self.source == SourceName.openalex:
+            # OpenAlex's live count can drift while a cursor traversal is in
+            # progress.  Only the server's null next_cursor proves that the
+            # frozen cursor chain has been exhausted.
+            return not next_cursor
+        if received >= expected:
             return True
         if self.source == SourceName.crossref:
             # Crossref returns a next cursor even after the final page.
@@ -361,6 +396,14 @@ def _plan_slices(
 def _checkpoint(path: Path, manifest: HarvestManifest) -> None:
     manifest.updated_at = datetime.now(UTC)
     manifest.received_records = sum(item.received_records for item in manifest.slices)
+    snapshot_counts = [
+        item.cursor_snapshot_expected_records for item in manifest.slices
+    ]
+    manifest.cursor_snapshot_expected_records = (
+        sum(int(value) for value in snapshot_counts)
+        if snapshot_counts and all(value is not None for value in snapshot_counts)
+        else None
+    )
     manifest.raw_bytes_compressed = sum(
         page.bytes_compressed for item in manifest.slices for page in item.pages
     )
@@ -468,10 +511,16 @@ def _aggregate_acquisition_manifest(
         unique_records=harvest.unique_records,
         duplicate_records=harvest.duplicate_records,
         pages=len(raw_hashes),
-        failed_pages=sum(item.failure_count for item in harvest.slices),
+        # ``failure_count`` is a historical attempt counter. A slice can recover
+        # from an expired cursor or transient request failure and still finish
+        # exhaustively, so carrying that history into ``failed_pages`` makes a
+        # successful final acquisition look truncated to downstream auditors.
+        # The aggregate field describes unresolved failures in the final state;
+        # retry/restart history remains preserved on each harvest slice.
+        failed_pages=sum(1 for item in harvest.slices if item.status == "failed"),
         complete=harvest.status == "complete",
         truncated=False,
-        drift=harvest.unique_records - harvest.planned_expected_records,
+        drift=harvest.received_records - harvest.planned_expected_records,
         raw_sha256=raw_hashes,
         warnings=[
             *harvest.warnings,
@@ -576,6 +625,7 @@ def bulk_acquire(
                 shard.restart_count += 1
                 shard.status = "pending"
                 shard.cursor = "*"
+                shard.cursor_exhausted = False
                 shard.received_records = 0
                 shard.pages = []
                 shard.last_error = None
@@ -602,15 +652,66 @@ def bulk_acquire(
                         paths.root / page.raw_path for item in harvest.slices for page in item.pages
                     ]
                     return AcquisitionResult([], aggregate, raw_paths)
-                payload = adapter.page(
-                    config.protocol,
-                    date.fromisoformat(shard.date_from),
-                    date.fromisoformat(shard.date_to),
-                    page_size=page_size,
-                    cursor=cursor,
-                )
+                try:
+                    payload = adapter.page(
+                        config.protocol,
+                        date.fromisoformat(shard.date_from),
+                        date.fromisoformat(shard.date_to),
+                        page_size=page_size,
+                        cursor=cursor,
+                    )
+                except InvalidCursorError:
+                    can_restart_openalex_slice = (
+                        harvest.source == SourceName.openalex
+                        and cursor != "*"
+                        and bool(shard.pages)
+                    )
+                    if not can_restart_openalex_slice:
+                        raise
+                    if shard.restart_count >= policy.max_slice_restarts:
+                        raise AcquisitionError(
+                            f"OpenAlex slice {shard.slice_id} exceeded "
+                            "max_slice_restarts after explicit invalid-cursor errors."
+                        )
+                    shard.restart_count += 1
+                    shard.failure_count += 1
+                    shard.restart_history.append(
+                        HarvestRestart(
+                            restart_index=shard.restart_count,
+                            reason="openalex_explicit_invalid_or_expired_cursor",
+                            prior_cursor=cursor,
+                            received_records=shard.received_records,
+                            cursor_snapshot_expected_records=(
+                                shard.cursor_snapshot_expected_records
+                            ),
+                            pages=list(shard.pages),
+                        )
+                    )
+                    harvest.warnings.append(
+                        "OpenAlex explicitly rejected a persisted cursor; restarted only "
+                        f"slice {shard.slice_id} from cursor='*'. The prior raw page chain "
+                        "is preserved in restart_history and excluded from final assembly."
+                    )
+                    shard.cursor = "*"
+                    shard.cursor_exhausted = False
+                    shard.received_records = 0
+                    shard.cursor_snapshot_expected_records = None
+                    shard.pages = []
+                    shard.last_error = None
+                    cursor = "*"
+                    _checkpoint(checkpoint_path, harvest)
+                    continue
                 items = adapter.items(payload)
                 next_cursor = adapter.next_cursor(payload)
+                if not shard.pages:
+                    cursor_expected = adapter.expected(payload)
+                    shard.cursor_snapshot_expected_records = cursor_expected
+                    if cursor_expected != shard.expected_records:
+                        harvest.warnings.append(
+                            "Cursor snapshot count changed from planning for "
+                            f"{shard.slice_id}: planned={shard.expected_records}, "
+                            f"cursor_snapshot={cursor_expected}."
+                        )
                 page_index = len(shard.pages) + 1
                 raw_path, digest, compressed_bytes = _save_raw_page(
                     paths,
@@ -638,9 +739,14 @@ def bulk_acquire(
                     page_size=page_size,
                     next_cursor=next_cursor,
                     received=shard.received_records,
-                    expected=shard.expected_records,
+                    expected=(
+                        shard.cursor_snapshot_expected_records
+                        if shard.cursor_snapshot_expected_records is not None
+                        else shard.expected_records
+                    ),
                 ):
                     shard.cursor = None
+                    shard.cursor_exhausted = True
                     break
                 cursor_stalled = next_cursor == cursor and harvest.source != SourceName.crossref
                 if not next_cursor or cursor_stalled:
@@ -652,11 +758,25 @@ def bulk_acquire(
                 shard.cursor = cursor
                 _checkpoint(checkpoint_path, harvest)
 
-            if shard.received_records != shard.expected_records:
-                raise CompletenessError(
-                    f"Slice {shard.slice_id} expected {shard.expected_records} records "
-                    f"but received {shard.received_records}."
-                )
+            exhaustive_expected = (
+                shard.cursor_snapshot_expected_records
+                if shard.cursor_snapshot_expected_records is not None
+                else shard.expected_records
+            )
+            if shard.received_records != exhaustive_expected:
+                if harvest.source == SourceName.openalex and shard.cursor_exhausted:
+                    harvest.warnings.append(
+                        "OpenAlex cursor exhausted with count drift for "
+                        f"{shard.slice_id}: cursor_snapshot={exhaustive_expected}, "
+                        f"received={shard.received_records}. The server's null next_cursor "
+                        "is retained as the exhaustiveness boundary."
+                    )
+                else:
+                    raise CompletenessError(
+                        f"Slice {shard.slice_id} cursor snapshot expected "
+                        f"{exhaustive_expected} records "
+                        f"but received {shard.received_records}."
+                    )
             shard.status = "complete"
             shard.finished_at = datetime.now(UTC)
             shard.cursor = None
@@ -674,12 +794,17 @@ def bulk_acquire(
     harvest.duplicate_records = duplicates
     harvest.staged_path = staged_path.relative_to(paths.root).as_posix()
     harvest.staged_sha256 = sha256_file(staged_path)
-    if unique != harvest.planned_expected_records:
+    raw_exhaustive = (
+        all(item.status == "complete" and item.cursor_exhausted for item in harvest.slices)
+        and unique + duplicates == harvest.received_records
+    )
+    if not raw_exhaustive:
         harvest.status = "failed"
         _checkpoint(checkpoint_path, harvest)
         raise CompletenessError(
             f"Bulk acquisition completeness failed: expected={harvest.planned_expected_records}, "
-            f"unique={unique}, duplicates={duplicates}."
+            f"cursor_snapshot_expected={harvest.cursor_snapshot_expected_records}, "
+            f"received={harvest.received_records}, unique={unique}, duplicates={duplicates}."
         )
     harvest.status = "complete"
     _checkpoint(checkpoint_path, harvest)

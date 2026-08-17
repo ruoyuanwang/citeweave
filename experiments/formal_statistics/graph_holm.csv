@@ -1,0 +1,4 @@
+comparison,outcome,raw_p_value,holm_adjusted_p_value,reject_at_0_05
+graph_vs_no,UCR reduction (comparator minus Graph RAG),0.03125,0.09375,False
+graph_vs_flat,UCR reduction (comparator minus Graph RAG),0.5,1.0,False
+graph_vs_figure,UCR reduction (comparator minus Graph RAG),1.0,1.0,False

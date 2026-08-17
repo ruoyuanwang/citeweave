@@ -1,0 +1,15 @@
+{
+  "packet_id": "EP31861572365fcf5f91cc",
+  "decision": "fail",
+  "confidence": 0.99,
+  "reason": "Several material interpretations are not supported by the visible evidence. E003 establishes that 41 abstracts are missing, but it does not show that those works contribute no abstract-derived terms or that abstract missingness biases the reported keyword network. E023 and E025 provide parameterized, filtered network sizes and cluster counts; ten displayed clusters do not by themselves establish a fragmented social structure, multiple research groups, or collaboration localized within institutional or geographic groups. E026 similarly establishes six keyword-network clusters but not that the field is thematically diverse. Most clearly, E010 and E011 support author productivity counts only, while E011 explicitly warns that productivity must not be treated as research quality or causal influence; describing productive authors as thought leaders exceeds that evidence. Claims of productivity concentration across authors and institutions are also not established merely by identifying the leading records. These unsupported missing-data, social-structure, thematic, and influence claims prevent the report from being fully evidence-grounded.",
+  "evidence_ids": [
+    "E003",
+    "E010",
+    "E011",
+    "E023",
+    "E025",
+    "E026"
+  ],
+  "judge_id": "evaluation"
+}

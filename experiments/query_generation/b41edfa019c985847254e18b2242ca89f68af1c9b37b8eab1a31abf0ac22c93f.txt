@@ -1,0 +1,14 @@
+{
+  "queries": [
+    {
+      "id": "climate_change_risks_1990_2021",
+      "search_expression": "\"climate change\" AND (risk OR risks OR vulnerability OR impact OR threat OR hazard OR \"risk assessment\" OR \"vulnerability assessment\")",
+      "rationale": "Broadens beyond 'risk assessment' to capture diverse risk-related studies by requiring 'climate change' and any risk-related term."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "search_expression": "(plant OR plants OR crop OR crops OR vegetation) AND (\"heat stress\" OR \"high temperature\" OR \"heat tolerance\" OR \"heat shock\") AND (\"drought stress\" OR \"water deficit\" OR \"drought tolerance\" OR \"water stress\")",
+      "rationale": "Ensures plant focus by requiring a plant term and both heat and drought stress concepts."
+    }
+  ]
+}

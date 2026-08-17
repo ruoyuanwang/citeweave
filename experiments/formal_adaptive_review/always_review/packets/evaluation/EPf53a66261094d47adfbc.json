@@ -1,0 +1,3198 @@
+{
+  "packet_id": "EPf53a66261094d47adfbc",
+  "sample_id": "digital_twins_healthcare_2012_2024:report:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": [
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": null,
+      "claim_type": "corpus_size",
+      "evidence_id": "E001",
+      "method": "Count of canonical work_id after deterministic exact deduplication.",
+      "selector": {},
+      "statement": "The included corpus contains 796 unique works.",
+      "unit": null,
+      "value": 796
+    },
+    {
+      "artifact_path": "audit/acquisition_manifest.json",
+      "caveat": "Completeness is relative to the named source, query, time, and retrieval date.",
+      "claim_type": "acquisition_completeness",
+      "evidence_id": "E002",
+      "method": "Cursor pagination continued until the source returned no next cursor.",
+      "selector": {},
+      "statement": "The source reported 796 results and 796 unique source records were acquired.",
+      "unit": null,
+      "value": {
+        "acquired_unique": 796,
+        "complete": true,
+        "expected": 796,
+        "truncated": false
+      }
+    },
+    {
+      "artifact_path": "quality/field_coverage.parquet",
+      "caveat": "Field completeness measures metadata availability, not database recall or the substantive quality of the publications.",
+      "claim_type": "metadata_coverage",
+      "evidence_id": "E003",
+      "method": "Non-null canonical values divided by the canonical corpus size.",
+      "selector": {},
+      "statement": "Field completeness was measured after normalization for every canonical work.",
+      "unit": null,
+      "value": {
+        "abstract": {
+          "coverage_percent": 86.18,
+          "missing": 110,
+          "missing_percent": 13.82,
+          "present": 686
+        },
+        "cited_by_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 796
+        },
+        "document_type": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 796
+        },
+        "doi": {
+          "coverage_percent": 98.24,
+          "missing": 14,
+          "missing_percent": 1.76,
+          "present": 782
+        },
+        "language": {
+          "coverage_percent": 94.6,
+          "missing": 43,
+          "missing_percent": 5.4,
+          "present": 753
+        },
+        "publication_date": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 796
+        },
+        "publisher": {
+          "coverage_percent": 81.91,
+          "missing": 144,
+          "missing_percent": 18.09,
+          "present": 652
+        },
+        "reference_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 796
+        },
+        "source_id": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 796
+        },
+        "title": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 796
+        },
+        "year": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 796
+        }
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": null,
+      "claim_type": "time_span",
+      "evidence_id": "E004",
+      "method": "Minimum and maximum non-missing publication year.",
+      "selector": {},
+      "statement": "The corpus spans 2012–2023.",
+      "unit": null,
+      "value": {
+        "end": 2023,
+        "start": 2012
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_peak",
+      "evidence_id": "E005",
+      "method": "Maximum whole-counted works grouped by publication year.",
+      "selector": {},
+      "statement": "Annual output peaked in 2023 with 355 works.",
+      "unit": null,
+      "value": {
+        "publications": 355,
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "Endpoint CAGR does not establish a monotonic trend.",
+      "claim_type": "growth",
+      "evidence_id": "E006",
+      "method": "CAGR = (last/first)^(1/year difference)-1.",
+      "selector": {},
+      "statement": "Compound annual publication growth over the observed non-zero endpoints is 70.54%.",
+      "unit": null,
+      "value": 70.54
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_output_series",
+      "evidence_id": "E007",
+      "method": "Whole-counted canonical works grouped by non-missing publication year; year-over-year change is the current count minus the preceding count.",
+      "selector": {},
+      "statement": "Annual publication counts are available for every observed year.",
+      "unit": null,
+      "value": [
+        {
+          "publications": 1,
+          "year": 2012,
+          "year_over_year_change": null
+        },
+        {
+          "publications": 1,
+          "year": 2014,
+          "year_over_year_change": 0
+        },
+        {
+          "publications": 1,
+          "year": 2015,
+          "year_over_year_change": 0
+        },
+        {
+          "publications": 2,
+          "year": 2016,
+          "year_over_year_change": 1
+        },
+        {
+          "publications": 2,
+          "year": 2017,
+          "year_over_year_change": 0
+        },
+        {
+          "publications": 4,
+          "year": 2018,
+          "year_over_year_change": 2
+        },
+        {
+          "publications": 18,
+          "year": 2019,
+          "year_over_year_change": 14
+        },
+        {
+          "publications": 58,
+          "year": 2020,
+          "year_over_year_change": 40
+        },
+        {
+          "publications": 117,
+          "year": 2021,
+          "year_over_year_change": 59
+        },
+        {
+          "publications": 237,
+          "year": 2022,
+          "year_over_year_change": 120
+        },
+        {
+          "publications": 355,
+          "year": 2023,
+          "year_over_year_change": 118
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": null,
+      "claim_type": "top_source",
+      "evidence_id": "E008",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "IEEE Access ranks first with 24 publications.",
+      "unit": null,
+      "value": {
+        "name": "IEEE Access",
+        "publications": 24
+      }
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_source_ranking",
+      "evidence_id": "E009",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top source records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "IEEE Access",
+          "publications": 24
+        },
+        {
+          "name": "International Journal of Advanced Research and Innovations",
+          "publications": 19
+        },
+        {
+          "name": "Zenodo (CERN European Organization for Nuclear Research)",
+          "publications": 16
+        },
+        {
+          "name": "Applied Sciences",
+          "publications": 11
+        },
+        {
+          "name": "EP Europace",
+          "publications": 10
+        },
+        {
+          "name": "IEEE Internet of Things Journal",
+          "publications": 10
+        },
+        {
+          "name": "Journal of Medical Ethics",
+          "publications": 10
+        },
+        {
+          "name": "Sensors",
+          "publications": 10
+        },
+        {
+          "name": "European Heart Journal",
+          "publications": 9
+        },
+        {
+          "name": "IEEE Consumer Electronics Magazine",
+          "publications": 8
+        },
+        {
+          "name": "IEEE Journal of Biomedical and Health Informatics",
+          "publications": 8
+        },
+        {
+          "name": "Electronics",
+          "publications": 7
+        },
+        {
+          "name": "IFAC-PapersOnLine",
+          "publications": 7
+        },
+        {
+          "name": "Journal of Medical Internet Research",
+          "publications": 7
+        },
+        {
+          "name": "Journal of Personalized Medicine",
+          "publications": 7
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": null,
+      "claim_type": "top_author",
+      "evidence_id": "E010",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Kyle B. Enfield ranks first with 22 publications.",
+      "unit": null,
+      "value": {
+        "name": "Kyle B. Enfield",
+        "publications": 22
+      }
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_author_ranking",
+      "evidence_id": "E011",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top author records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Kyle B. Enfield",
+          "publications": 22
+        },
+        {
+          "name": "Paramesh Shamanna",
+          "publications": 11
+        },
+        {
+          "name": "Zhihan Lv",
+          "publications": 10
+        },
+        {
+          "name": "Amos Lal",
+          "publications": 9
+        },
+        {
+          "name": "Terrence Poon",
+          "publications": 9
+        },
+        {
+          "name": "Mohamed Thajudeen",
+          "publications": 8
+        },
+        {
+          "name": "Ashok Keshavamurthy",
+          "publications": 7
+        },
+        {
+          "name": "Mala Dharmalingam",
+          "publications": 7
+        },
+        {
+          "name": "Munish Bhatia",
+          "publications": 7
+        },
+        {
+          "name": "Shashank Joshi",
+          "publications": 7
+        },
+        {
+          "name": "Arun Vadavi",
+          "publications": 6
+        },
+        {
+          "name": "Edward J. Vigmond",
+          "publications": 6
+        },
+        {
+          "name": "Haibin Lv",
+          "publications": 6
+        },
+        {
+          "name": "Jahangir Mohammed",
+          "publications": 6
+        },
+        {
+          "name": "Lisa Shah",
+          "publications": 6
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": null,
+      "claim_type": "top_institution",
+      "evidence_id": "E012",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Johns Hopkins University ranks first with 12 publications.",
+      "unit": null,
+      "value": {
+        "name": "Johns Hopkins University",
+        "publications": 12
+      }
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_institution_ranking",
+      "evidence_id": "E013",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top institution records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Johns Hopkins University",
+          "publications": 12
+        },
+        {
+          "name": "Centre National de la Recherche Scientifique",
+          "publications": 11
+        },
+        {
+          "name": "Uppsala University",
+          "publications": 11
+        },
+        {
+          "name": "Harvard University",
+          "publications": 9
+        },
+        {
+          "name": "Imperial College London",
+          "publications": 9
+        },
+        {
+          "name": "Maastricht University",
+          "publications": 9
+        },
+        {
+          "name": "Stanford University",
+          "publications": 9
+        },
+        {
+          "name": "University of Oxford",
+          "publications": 9
+        },
+        {
+          "name": "KU Leuven",
+          "publications": 8
+        },
+        {
+          "name": "National Institute of Technology Kurukshetra",
+          "publications": 8
+        },
+        {
+          "name": "Sorbonne Université",
+          "publications": 8
+        },
+        {
+          "name": "University of Auckland",
+          "publications": 8
+        },
+        {
+          "name": "University of Bologna",
+          "publications": 8
+        },
+        {
+          "name": "Université Paris-Saclay",
+          "publications": 8
+        },
+        {
+          "name": "Inserm",
+          "publications": 7
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/document_types.parquet",
+      "caveat": "Document-type labels inherit source classification practices.",
+      "claim_type": "document_type_distribution",
+      "evidence_id": "E014",
+      "method": "Whole-counted canonical works grouped by source-supplied document type.",
+      "selector": {},
+      "statement": "Document types were counted across the complete canonical corpus.",
+      "unit": null,
+      "value": {
+        "review_and_systematic_review_documents": 0,
+        "types": [
+          {
+            "document_type": "article",
+            "publications": 796,
+            "share_percent": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent.",
+      "claim_type": "citation_summary",
+      "evidence_id": "E015",
+      "method": "Citation-count field supplied by the selected source at retrieval time.",
+      "selector": {},
+      "statement": "Mean citations are 53.20 and the median is 16.00.",
+      "unit": null,
+      "value": {
+        "mean": 53.2,
+        "median": 16.0
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "Recent works have had less time to accumulate citations.",
+      "claim_type": "zero_citation_share",
+      "evidence_id": "E016",
+      "method": "Count and percentage of canonical works with cited_by_count equal to zero.",
+      "selector": {},
+      "statement": "126 works have zero source-reported citations, representing 15.83% of the corpus.",
+      "unit": null,
+      "value": {
+        "share_percent": 15.83,
+        "zero_cited": 126
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent; papers have unequal citation windows.",
+      "claim_type": "citation_distribution_detail",
+      "evidence_id": "E017",
+      "method": "Descriptive statistics of the source-supplied cited-by count.",
+      "selector": {},
+      "statement": "Citation-distribution statistics include central tendency, upper quantiles, maximum, and zero-cited count.",
+      "unit": null,
+      "value": [
+        {
+          "metric": "mean",
+          "value": 53.1997487437
+        },
+        {
+          "metric": "median",
+          "value": 16.0
+        },
+        {
+          "metric": "p75",
+          "percentile": 75,
+          "value": 46.0
+        },
+        {
+          "metric": "p90",
+          "percentile": 90,
+          "value": 109.0
+        },
+        {
+          "metric": "p95",
+          "percentile": 95,
+          "value": 182.25
+        },
+        {
+          "metric": "p98",
+          "percentile": 98,
+          "value": 389.9
+        },
+        {
+          "metric": "maximum",
+          "value": 2623.0
+        },
+        {
+          "metric": "zero_cited",
+          "value": 126.0
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_cited_documents.parquet",
+      "caveat": "Raw citation counts favor older publications and do not by themselves measure quality.",
+      "claim_type": "top_cited_documents",
+      "evidence_id": "E018",
+      "method": "Descending source-reported citation count, with publication year as tie-breaker.",
+      "selector": {},
+      "statement": "The most-cited included documents are retained with title, year, DOI, and source-reported citation count.",
+      "unit": null,
+      "value": [
+        {
+          "cited_by_count": 2623,
+          "doi": "10.1109/access.2020.2998358",
+          "title": "Digital Twin: Enabling Technologies, Challenges and Open Research",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 1798,
+          "doi": "10.1016/j.jii.2021.100257",
+          "title": "Industry 5.0: A survey on enabling technologies and potential applications",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 1398,
+          "doi": "10.1109/access.2019.2953499",
+          "title": "A Survey on Digital Twin: Definitions, Characteristics, Applications, and Design Implications",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 1204,
+          "doi": "10.1038/s41591-022-01981-2",
+          "title": "Multimodal biomedical AI",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 962,
+          "doi": "10.1109/comst.2022.3208773",
+          "title": "Digital Twins: A Survey on Enabling Technologies, Challenges, Trends and Future Prospects",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 856,
+          "doi": "10.1093/eurheartj/ehaa159",
+          "title": "The ‘Digital Twin’ to enable the vision of precision cardiology",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 838,
+          "doi": "10.3390/rs14061335",
+          "title": "Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 830,
+          "doi": "10.1186/s13677-022-00314-5",
+          "title": "Future of industry 5.0 in society: human-centric solutions, challenges and prospective research areas",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 808,
+          "doi": "10.1109/jiot.2021.3079510",
+          "title": "Digital Twin Networks: A Survey",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 752,
+          "doi": "10.1109/access.2019.2909828",
+          "title": "A Novel Cloud-Based Framework for the Elderly Healthcare Services Using Digital Twin",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 673,
+          "doi": "10.1016/j.engappai.2022.105581",
+          "title": "Artificial intelligence for the metaverse: A survey",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 653,
+          "doi": "10.3389/fgene.2018.00031",
+          "title": "Digital Twins in Health Care: Ethical Implications of an Emerging Engineering Paradigm",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 517,
+          "doi": "10.1186/s13073-019-0701-3",
+          "title": "Digital twins to personalize medicine",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 515,
+          "doi": "10.3390/jpm11080745",
+          "title": "Digital Twins: From Personalised Medicine to Precision Public Health",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 435,
+          "doi": "10.1109/jiot.2021.3051158",
+          "title": "Digital Twin for Intelligent Context-Aware IoT Healthcare Systems",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/bradford_sources.parquet",
+      "caveat": "Records without a source name are excluded from Bradford zoning.",
+      "claim_type": "bradford_zone_distribution",
+      "evidence_id": "E019",
+      "method": "Sources ranked by output and divided by cumulative document thirds.",
+      "selector": {},
+      "statement": "Bradford zones summarize source concentration among records with known source names.",
+      "unit": null,
+      "value": {
+        "rounded_document_range": {
+          "lower": 250,
+          "rounding_unit": 50,
+          "upper": 300
+        },
+        "zones": [
+          {
+            "documents": 262.0,
+            "sources": 37,
+            "zone": 1
+          },
+          {
+            "documents": 262.0,
+            "sources": 169,
+            "zone": 2
+          },
+          {
+            "documents": 262.0,
+            "sources": 262,
+            "zone": 3
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/keyword_trends.parquet",
+      "caveat": "Keyword frequencies depend on source metadata, synonym normalization, and the incomplete final year.",
+      "claim_type": "keyword_temporal_dynamics",
+      "evidence_id": "E020",
+      "method": "Unique works per normalized keyword and publication year.",
+      "selector": {},
+      "statement": "Year-by-year document counts are available for the globally most frequent keywords.",
+      "unit": null,
+      "value": [
+        {
+          "documents": 1,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2012
+        },
+        {
+          "documents": 1,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2014
+        },
+        {
+          "documents": 1,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2015
+        },
+        {
+          "documents": 2,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2016
+        },
+        {
+          "documents": 4,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2018
+        },
+        {
+          "documents": 14,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2019
+        },
+        {
+          "documents": 44,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2020
+        },
+        {
+          "documents": 98,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2021
+        },
+        {
+          "documents": 186,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2022
+        },
+        {
+          "documents": 256,
+          "global_documents": 607,
+          "keyword": "Computer science",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2012
+        },
+        {
+          "documents": 1,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2014
+        },
+        {
+          "documents": 2,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2017
+        },
+        {
+          "documents": 2,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2018
+        },
+        {
+          "documents": 7,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2019
+        },
+        {
+          "documents": 27,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2020
+        },
+        {
+          "documents": 51,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2021
+        },
+        {
+          "documents": 104,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2022
+        },
+        {
+          "documents": 155,
+          "global_documents": 350,
+          "keyword": "Medicine",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 252,
+          "keyword": "Artificial intelligence",
+          "year": 2014
+        },
+        {
+          "documents": 1,
+          "global_documents": 252,
+          "keyword": "Artificial intelligence",
+          "year": 2018
+        },
+        {
+          "documents": 6,
+          "global_documents": 252,
+          "keyword": "Artificial intelligence",
+          "year": 2019
+        },
+        {
+          "documents": 17,
+          "global_documents": 252,
+          "keyword": "Artificial intelligence",
+          "year": 2020
+        },
+        {
+          "documents": 41,
+          "global_documents": 252,
+          "keyword": "Artificial intelligence",
+          "year": 2021
+        },
+        {
+          "documents": 78,
+          "global_documents": 252,
+          "keyword": "Artificial intelligence",
+          "year": 2022
+        },
+        {
+          "documents": 108,
+          "global_documents": 252,
+          "keyword": "Artificial intelligence",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 205,
+          "keyword": "Data science",
+          "year": 2016
+        },
+        {
+          "documents": 1,
+          "global_documents": 205,
+          "keyword": "Data science",
+          "year": 2018
+        },
+        {
+          "documents": 6,
+          "global_documents": 205,
+          "keyword": "Data science",
+          "year": 2019
+        },
+        {
+          "documents": 14,
+          "global_documents": 205,
+          "keyword": "Data science",
+          "year": 2020
+        },
+        {
+          "documents": 37,
+          "global_documents": 205,
+          "keyword": "Data science",
+          "year": 2021
+        },
+        {
+          "documents": 64,
+          "global_documents": 205,
+          "keyword": "Data science",
+          "year": 2022
+        },
+        {
+          "documents": 82,
+          "global_documents": 205,
+          "keyword": "Data science",
+          "year": 2023
+        },
+        {
+          "documents": 3,
+          "global_documents": 190,
+          "keyword": "Health care",
+          "year": 2018
+        },
+        {
+          "documents": 2,
+          "global_documents": 190,
+          "keyword": "Health care",
+          "year": 2019
+        },
+        {
+          "documents": 12,
+          "global_documents": 190,
+          "keyword": "Health care",
+          "year": 2020
+        },
+        {
+          "documents": 24,
+          "global_documents": 190,
+          "keyword": "Health care",
+          "year": 2021
+        },
+        {
+          "documents": 48,
+          "global_documents": 190,
+          "keyword": "Health care",
+          "year": 2022
+        },
+        {
+          "documents": 101,
+          "global_documents": 190,
+          "keyword": "Health care",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 172,
+          "keyword": "Engineering",
+          "year": 2015
+        },
+        {
+          "documents": 2,
+          "global_documents": 172,
+          "keyword": "Engineering",
+          "year": 2016
+        },
+        {
+          "documents": 2,
+          "global_documents": 172,
+          "keyword": "Engineering",
+          "year": 2018
+        },
+        {
+          "documents": 4,
+          "global_documents": 172,
+          "keyword": "Engineering",
+          "year": 2019
+        },
+        {
+          "documents": 14,
+          "global_documents": 172,
+          "keyword": "Engineering",
+          "year": 2020
+        },
+        {
+          "documents": 28,
+          "global_documents": 172,
+          "keyword": "Engineering",
+          "year": 2021
+        },
+        {
+          "documents": 61,
+          "global_documents": 172,
+          "keyword": "Engineering",
+          "year": 2022
+        },
+        {
+          "documents": 60,
+          "global_documents": 172,
+          "keyword": "Engineering",
+          "year": 2023
+        },
+        {
+          "documents": 2,
+          "global_documents": 106,
+          "keyword": "Internal medicine",
+          "year": 2019
+        },
+        {
+          "documents": 8,
+          "global_documents": 106,
+          "keyword": "Internal medicine",
+          "year": 2020
+        },
+        {
+          "documents": 19,
+          "global_documents": 106,
+          "keyword": "Internal medicine",
+          "year": 2021
+        },
+        {
+          "documents": 29,
+          "global_documents": 106,
+          "keyword": "Internal medicine",
+          "year": 2022
+        },
+        {
+          "documents": 48,
+          "global_documents": 106,
+          "keyword": "Internal medicine",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 96,
+          "keyword": "Human–computer interaction",
+          "year": 2018
+        },
+        {
+          "documents": 5,
+          "global_documents": 96,
+          "keyword": "Human–computer interaction",
+          "year": 2020
+        },
+        {
+          "documents": 12,
+          "global_documents": 96,
+          "keyword": "Human–computer interaction",
+          "year": 2021
+        },
+        {
+          "documents": 32,
+          "global_documents": 96,
+          "keyword": "Human–computer interaction",
+          "year": 2022
+        },
+        {
+          "documents": 46,
+          "global_documents": 96,
+          "keyword": "Human–computer interaction",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 94,
+          "keyword": "Business",
+          "year": 2016
+        },
+        {
+          "documents": 1,
+          "global_documents": 94,
+          "keyword": "Business",
+          "year": 2018
+        },
+        {
+          "documents": 2,
+          "global_documents": 94,
+          "keyword": "Business",
+          "year": 2019
+        },
+        {
+          "documents": 8,
+          "global_documents": 94,
+          "keyword": "Business",
+          "year": 2020
+        },
+        {
+          "documents": 15,
+          "global_documents": 94,
+          "keyword": "Business",
+          "year": 2021
+        },
+        {
+          "documents": 30,
+          "global_documents": 94,
+          "keyword": "Business",
+          "year": 2022
+        },
+        {
+          "documents": 37,
+          "global_documents": 94,
+          "keyword": "Business",
+          "year": 2023
+        },
+        {
+          "documents": 2,
+          "global_documents": 86,
+          "keyword": "Political science",
+          "year": 2018
+        },
+        {
+          "documents": 1,
+          "global_documents": 86,
+          "keyword": "Political science",
+          "year": 2019
+        },
+        {
+          "documents": 4,
+          "global_documents": 86,
+          "keyword": "Political science",
+          "year": 2020
+        },
+        {
+          "documents": 21,
+          "global_documents": 86,
+          "keyword": "Political science",
+          "year": 2021
+        },
+        {
+          "documents": 24,
+          "global_documents": 86,
+          "keyword": "Political science",
+          "year": 2022
+        },
+        {
+          "documents": 34,
+          "global_documents": 86,
+          "keyword": "Political science",
+          "year": 2023
+        },
+        {
+          "documents": 2,
+          "global_documents": 83,
+          "keyword": "Computer security",
+          "year": 2019
+        },
+        {
+          "documents": 5,
+          "global_documents": 83,
+          "keyword": "Computer security",
+          "year": 2020
+        },
+        {
+          "documents": 14,
+          "global_documents": 83,
+          "keyword": "Computer security",
+          "year": 2021
+        },
+        {
+          "documents": 27,
+          "global_documents": 83,
+          "keyword": "Computer security",
+          "year": 2022
+        },
+        {
+          "documents": 35,
+          "global_documents": 83,
+          "keyword": "Computer security",
+          "year": 2023
+        },
+        {
+          "documents": 1,
+          "global_documents": 83,
+          "keyword": "Psychology",
+          "year": 2012
+        },
+        {
+          "documents": 1,
+          "global_documents": 83,
+          "keyword": "Psychology",
+          "year": 2018
+        },
+        {
+          "documents": 1,
+          "global_documents": 83,
+          "keyword": "Psychology",
+          "year": 2019
+        },
+        {
+          "documents": 5,
+          "global_documents": 83,
+          "keyword": "Psychology",
+          "year": 2020
+        },
+        {
+          "documents": 20,
+          "global_documents": 83,
+          "keyword": "Psychology",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/three_field.parquet",
+      "caveat": "The map is a filtered descriptive view, not a causal pathway.",
+      "claim_type": "three_field_relations",
+      "evidence_id": "E021",
+      "method": "Whole-counted links among leading authors, sources, and keywords.",
+      "selector": {},
+      "statement": "Leading author–source–keyword combinations are retained for relational interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "author": "Mohsen Guizani",
+          "documents": 3,
+          "keyword": "Computer science",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Mohsen Guizani",
+          "documents": 2,
+          "keyword": "Context (archaeology)",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Munish Bhatia",
+          "documents": 2,
+          "keyword": "Computer science",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Zhihan Lv",
+          "documents": 2,
+          "keyword": "Computer science",
+          "source": "IEEE Consumer Electronics Magazine"
+        },
+        {
+          "author": "Abdulmotaleb El Saddik",
+          "documents": 2,
+          "keyword": "Computer science",
+          "source": "IEEE Access"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Digital health",
+          "source": "Journal of Personalized Medicine"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Data science",
+          "source": "Multimedia Tools and Applications"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Computer science",
+          "source": "Multimedia Tools and Applications"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Artificial intelligence",
+          "source": "Multimedia Tools and Applications"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Political science",
+          "source": "Journal of Personalized Medicine"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Medicine",
+          "source": "Journal of Personalized Medicine"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Health care",
+          "source": "Journal of Personalized Medicine"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Engineering",
+          "source": "Journal of Personalized Medicine"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Political science",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Computer science",
+          "source": "Journal of Personalized Medicine"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Machine learning",
+          "source": "Multimedia Tools and Applications"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Medicine",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Health care",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Digital health",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Data science",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Computer security",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Kyle B. Enfield",
+          "documents": 1,
+          "keyword": "Human–computer interaction",
+          "source": "Multimedia Tools and Applications"
+        },
+        {
+          "author": "Lisa Shah",
+          "documents": 1,
+          "keyword": "Health care",
+          "source": "European Heart Journal"
+        },
+        {
+          "author": "Lisa Shah",
+          "documents": 1,
+          "keyword": "Digital health",
+          "source": "European Heart Journal"
+        },
+        {
+          "author": "Matthias A. F. Gsell",
+          "documents": 1,
+          "keyword": "Medicine",
+          "source": "Zenodo (CERN European Organization for Nuclear Research)"
+        },
+        {
+          "author": "Munish Bhatia",
+          "documents": 1,
+          "keyword": "Health care",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Mohsen Guizani",
+          "documents": 1,
+          "keyword": "World wide web",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Mohsen Guizani",
+          "documents": 1,
+          "keyword": "Machine learning",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Mohsen Guizani",
+          "documents": 1,
+          "keyword": "Human–computer interaction",
+          "source": "IEEE Internet of Things Journal"
+        },
+        {
+          "author": "Mohsen Guizani",
+          "documents": 1,
+          "keyword": "Health care",
+          "source": "IEEE Internet of Things Journal"
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/network_bibliographic_coupling_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "bibliographic_coupling_structure",
+      "evidence_id": "E022",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The bibliographic coupling candidate network contains 72 nodes and 230 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 8,
+        "edges": 230,
+        "network_parameters": {
+          "candidate_edges": 5741,
+          "candidate_nodes_with_links": 350,
+          "candidate_pool": 350,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 230,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 350,
+          "full_candidate_edge_count": 5741,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.14002287163668348,
+            "mean_edge_length": 0.26107906656748375,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 649.0,
+            "weighted_edge_length": 0.007768334799252971,
+            "within_between_distance_ratio": 0.39733527836352106
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 6,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          }
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "Impactful Digital Twin in the Healthcare Revolution",
+            "occurrences": 123,
+            "weighted_degree": 911.0
+          },
+          {
+            "cluster": 2,
+            "label": "Digital Twin Perspective of Fourth Industrial and Healthcare Revolution",
+            "occurrences": 213,
+            "weighted_degree": 735.0
+          },
+          {
+            "cluster": 2,
+            "label": "Developments of digital twin technologies in industrial, smart city and healthcare sectors: a survey",
+            "occurrences": 118,
+            "weighted_degree": 698.0
+          },
+          {
+            "cluster": 1,
+            "label": "A Comprehensive Survey of Digital Twins in Healthcare in the Era of Metaverse",
+            "occurrences": 109,
+            "weighted_degree": 678.0
+          },
+          {
+            "cluster": 3,
+            "label": "Digital Twins for Multiple Sclerosis",
+            "occurrences": 213,
+            "weighted_degree": 624.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_citation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "citation_structure",
+      "evidence_id": "E023",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The citation candidate network contains 5 nodes and 4 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 1,
+        "edges": 4,
+        "network_parameters": {
+          "candidate_edges": 4,
+          "candidate_nodes_with_links": 5,
+          "candidate_pool": 5,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 1,
+          "displayed_edges": 4,
+          "displayed_nodes": 5,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 5,
+          "full_candidate_edge_count": 4,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.07716818458366648,
+            "mean_edge_length": 0.9170230499885007,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 430.0,
+            "weighted_edge_length": 0.03131703208424145,
+            "within_between_distance_ratio": 0.0
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 15,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 5,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "Leveraging Digital Twin Technology in the Healthcare Industry – A Machine Learning Based Approach",
+            "occurrences": 16,
+            "weighted_degree": 4.0
+          },
+          {
+            "cluster": 1,
+            "label": "Networking Architecture and Key Supporting Technologies for Human Digital Twin in Personalized Healthcare: A Comprehensive Survey",
+            "occurrences": 218,
+            "weighted_degree": 1.0
+          },
+          {
+            "cluster": 1,
+            "label": "A Comprehensive Survey of Digital Twins in Healthcare in the Era of Metaverse",
+            "occurrences": 87,
+            "weighted_degree": 1.0
+          },
+          {
+            "cluster": 1,
+            "label": "Digital twins for well-being: an overview",
+            "occurrences": 29,
+            "weighted_degree": 1.0
+          },
+          {
+            "cluster": 1,
+            "label": "Digital twins for well-being: an overview",
+            "occurrences": 15,
+            "weighted_degree": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_coauthorship_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "coauthorship_structure",
+      "evidence_id": "E024",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The coauthorship candidate network contains 59 nodes and 128 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 128,
+        "network_parameters": {
+          "candidate_edges": 1136,
+          "candidate_nodes_with_links": 355,
+          "candidate_pool": 355,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 128,
+          "displayed_nodes": 59,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 366,
+          "full_candidate_edge_count": 1136,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.04962911790115945,
+            "mean_edge_length": 0.11343240547385444,
+            "overlap_ratio": 0.0,
+            "selected_seed": 42.0,
+            "weighted_edge_length": 0.04395749762746673,
+            "within_between_distance_ratio": 0.0
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 59,
+        "top_nodes": [
+          {
+            "cluster": 11,
+            "label": "Paramesh Shamanna",
+            "occurrences": 11,
+            "weighted_degree": 77.0
+          },
+          {
+            "cluster": 11,
+            "label": "Terrence Poon",
+            "occurrences": 9,
+            "weighted_degree": 67.0
+          },
+          {
+            "cluster": 11,
+            "label": "Mohamed Thajudeen",
+            "occurrences": 8,
+            "weighted_degree": 65.0
+          },
+          {
+            "cluster": 11,
+            "label": "Mala Dharmalingam",
+            "occurrences": 7,
+            "weighted_degree": 58.0
+          },
+          {
+            "cluster": 11,
+            "label": "Ashok Keshavamurthy",
+            "occurrences": 7,
+            "weighted_degree": 57.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_cocitation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "cocitation_structure",
+      "evidence_id": "E025",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The cocitation candidate network contains 72 nodes and 203 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 7,
+        "edges": 203,
+        "network_parameters": {
+          "candidate_edges": 20813,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 203,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 20813,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.31467053019625923,
+            "mean_edge_length": 0.32434532257336923,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 2351.0,
+            "weighted_edge_length": 0.038272299285820974,
+            "within_between_distance_ratio": 0.8672698826058995
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "openalex:W2941876953",
+            "occurrences": 74,
+            "weighted_degree": 1359.0
+          },
+          {
+            "cluster": 1,
+            "label": "openalex:W2910597635",
+            "occurrences": 69,
+            "weighted_degree": 1178.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2988359971",
+            "occurrences": 60,
+            "weighted_degree": 1160.0
+          },
+          {
+            "cluster": 4,
+            "label": "openalex:W3010152544",
+            "occurrences": 74,
+            "weighted_degree": 1129.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2982936646",
+            "occurrences": 44,
+            "weighted_degree": 925.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_institution_collaboration_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "institution_collaboration_structure",
+      "evidence_id": "E026",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The institution collaboration candidate network contains 72 nodes and 153 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 153,
+        "network_parameters": {
+          "candidate_edges": 1065,
+          "candidate_nodes_with_links": 325,
+          "candidate_pool": 325,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 153,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 338,
+          "full_candidate_edge_count": 1065,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.18041681491796438,
+            "mean_edge_length": 0.26295914391638975,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 2157.0,
+            "weighted_edge_length": 0.06399597374388828,
+            "within_between_distance_ratio": 0.3442429465941887
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Maastricht University",
+            "occurrences": 9,
+            "weighted_degree": 36.0
+          },
+          {
+            "cluster": 1,
+            "label": "Stanford University",
+            "occurrences": 9,
+            "weighted_degree": 35.0
+          },
+          {
+            "cluster": 3,
+            "label": "Electrophysiology and Heart Modeling Institute",
+            "occurrences": 6,
+            "weighted_degree": 35.0
+          },
+          {
+            "cluster": 8,
+            "label": "Inserm",
+            "occurrences": 7,
+            "weighted_degree": 32.0
+          },
+          {
+            "cluster": 6,
+            "label": "Imperial College London",
+            "occurrences": 9,
+            "weighted_degree": 29.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_keyword_cooccurrence_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "keyword_cooccurrence_structure",
+      "evidence_id": "E027",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The keyword cooccurrence candidate network contains 72 nodes and 188 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 8,
+        "edges": 188,
+        "network_parameters": {
+          "candidate_edges": 7589,
+          "candidate_nodes_with_links": 274,
+          "candidate_pool": 274,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 188,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 274,
+          "full_candidate_edge_count": 7589,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.1252791858734702,
+            "mean_edge_length": 0.3404087290074586,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1245.0,
+            "weighted_edge_length": 0.024941947875726886,
+            "within_between_distance_ratio": 0.277722671824568
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Computer science",
+            "occurrences": 607,
+            "weighted_degree": 4577.0
+          },
+          {
+            "cluster": 4,
+            "label": "Medicine",
+            "occurrences": 350,
+            "weighted_degree": 2583.0
+          },
+          {
+            "cluster": 3,
+            "label": "Artificial intelligence",
+            "occurrences": 252,
+            "weighted_degree": 2023.0
+          },
+          {
+            "cluster": 5,
+            "label": "Data science",
+            "occurrences": 205,
+            "weighted_degree": 1794.0
+          },
+          {
+            "cluster": 5,
+            "label": "Health care",
+            "occurrences": 190,
+            "weighted_degree": 1607.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E028",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital Twin: Enabling Technologies, Challenges and Open Research",
+      "unit": null,
+      "value": {
+        "abstract": "Digital Twin technology is an emerging concept that has become the centre of attention for industry and, in more recent years, academia. The advancements in industry 4.0 concepts have facilitated its growth, particularly in the manufacturing industry. The Digital Twin is defined extensively but is best described as the effortless integration of data between a physical and virtual machine in either direction. The challenges, applications, and enabling technologies for Artificial Intelligence, Internet of Things (IoT) and Digital Twins are presented. A review of publications relating to Digital Twins is performed, producing a categorical review of recent papers. The review has categorised them by research areas: manufacturing, healthcare and smart cities, discussing a range of papers that reflect these areas and the current state of research. The paper provides an assessment of the enabling technologies, challenges and open research for Digital Twins.",
+        "authors": [
+          "Aidan Fuller",
+          "Zhong Fan",
+          "Charles Day",
+          "Chris Barlow"
+        ],
+        "doi": "10.1109/access.2020.2998358",
+        "source": "IEEE Access",
+        "title": "Digital Twin: Enabling Technologies, Challenges and Open Research",
+        "work_id": "doi:10.1109/access.2020.2998358",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E029",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: A Survey on Digital Twin: Definitions, Characteristics, Applications, and Design Implications",
+      "unit": null,
+      "value": {
+        "abstract": "When, in 1956, Artificial Intelligence (AI) was officially declared a research field, no one would have ever predicted the huge influence and impact its description, prediction, and prescription capabilities were going to have on our daily lives. In parallel to continuous advances in AI, the past decade has seen the spread of broadband and ubiquitous connectivity, (embedded) sensors collecting descriptive high dimensional data, and improvements in big data processing techniques and cloud computing. The joint usage of such technologies has led to the creation of digital twins, artificial intelligent virtual replicas of physical systems. Digital Twin (DT) technology is nowadays being developed and commercialized to optimize several manufacturing and aviation processes, while in the healthcare and medicine fields this technology is still at its early development stage. This paper presents the results of a study focused on the analysis of the state-of-the-art definitions of DT, the investigation of the main characteristics that a DT should possess, and the exploration of the domains in which DT applications are currently being developed. The design implications derived from the study are then presented: they focus on socio-technical design aspects and DT lifecycle. Open issues and challenges that require to be addressed in the future are finally discussed.",
+        "authors": [
+          "Barbara Rita Barricelli",
+          "Elena Casiraghi",
+          "Daniela Fogli"
+        ],
+        "doi": "10.1109/access.2019.2953499",
+        "source": "IEEE Access",
+        "title": "A Survey on Digital Twin: Definitions, Characteristics, Applications, and Design Implications",
+        "work_id": "doi:10.1109/access.2019.2953499",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E030",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Multimodal biomedical AI",
+      "unit": null,
+      "value": {
+        "abstract": "The increasing availability of biomedical data from large biobanks, electronic health records, medical imaging, wearable and ambient biosensors, and the lower cost of genome and microbiome sequencing have set the stage for the development of multimodal artificial intelligence solutions that capture the complexity of human health and disease. In this Review, we outline the key applications enabled, along with the technical and analytical challenges. We explore opportunities in personalized medicine, digital clinical trials, remote monitoring and care, pandemic surveillance, digital twin technology and virtual health assistants. Further, we survey the data, modeling and privacy challenges that must be overcome to realize the full potential of multimodal artificial intelligence in health. Multimodal artificial intelligence models could unlock many exciting applications in health and medicine; this Review outlines the most promising uses and the technical pitfalls to avoid.",
+        "authors": [
+          "Julián Acosta",
+          "Guido J. Falcone",
+          "Pranav Rajpurkar",
+          "Eric J. Topol"
+        ],
+        "doi": "10.1038/s41591-022-01981-2",
+        "source": "Nature Medicine",
+        "title": "Multimodal biomedical AI",
+        "work_id": "doi:10.1038/s41591-022-01981-2",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E031",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital Twins: A Survey on Enabling Technologies, Challenges, Trends and Future Prospects",
+      "unit": null,
+      "value": {
+        "abstract": "Digital Twin (DT) is an emerging technology surrounded by many promises, and potentials to reshape the future of industries and society overall. A DT is a system-of-systems which goes far beyond the traditional computer-based simulations and analysis. It is a replication of all the elements, processes, dynamics, and firmware of a physical system into a digital counterpart. The two systems (physical and digital) exist side by side, sharing all the inputs and operations using real-time data communications and information transfer. With the incorporation of Internet of Things (IoT), Artificial Intelligence (AI), 3D models, next generation mobile communications (5G/6G), Augmented Reality (AR), Virtual Reality (VR), distributed computing, Transfer Learning (TL), and electronic sensors, the digital/virtual counterpart of the real-world system is able to provide seamless monitoring, analysis, evaluation and predictions. The DT offers a platform for the testing and analysing of complex systems, which would be impossible in traditional simulations and modular evaluations. However, the development of this technology faces many challenges including the complexities in effective communication and data accumulation, data unavailability to train Machine Learning (ML) models, lack of processing power to support high fidelity twins, the high need for interdisciplinary collaboration, and the absence of standardized development methodologies and validation measures. Being in the early stages of development, DTs lack sufficient documentation. In this context, this survey paper aims to cover the important aspects in realization of the technology. The key enabling technologies, challenges and prospects of DTs are highlighted. The paper provides a deep insight into the technology, lists design goals and objectives, highlights design challenges and limitations across industries, discusses research and commercial developments, provides its applications and use cases, offers case studies in industry, infrastructure and healthcare, lists main service providers and stakeholders, and covers developments to date, as well as viable research dimensions for future developments in DTs.",
+        "authors": [
+          "Stefan Mihai",
+          "Mahnoor Yaqoob",
+          "Đặng Việt Hưng",
+          "William Davis",
+          "Praveer Towakel",
+          "Mohsin Raza",
+          "Mehmet Karamanoglu",
+          "Balbir Barn"
+        ],
+        "doi": "10.1109/comst.2022.3208773",
+        "source": "IEEE Communications Surveys & Tutorials",
+        "title": "Digital Twins: A Survey on Enabling Technologies, Challenges, Trends and Future Prospects",
+        "work_id": "doi:10.1109/comst.2022.3208773",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E032",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The ‘Digital Twin’ to enable the vision of precision cardiology",
+      "unit": null,
+      "value": {
+        "abstract": "Providing therapies tailored to each patient is the vision of precision medicine, enabled by the increasing ability to capture extensive data about individual patients. In this position paper, we argue that the second enabling pillar towards this vision is the increasing power of computers and algorithms to learn, reason, and build the 'digital twin' of a patient. Computational models are boosting the capacity to draw diagnosis and prognosis, and future treatments will be tailored not only to current health status and data, but also to an accurate projection of the pathways to restore health by model predictions. The early steps of the digital twin in the area of cardiovascular medicine are reviewed in this article, together with a discussion of the challenges and opportunities ahead. We emphasize the synergies between mechanistic and statistical models in accelerating cardiovascular research and enabling the vision of precision medicine.",
+        "authors": [
+          "Jorge Corral Acero",
+          "Francesca Margara",
+          "M Marciniak",
+          "Cristóbal Rodero",
+          "Filip Lončarić",
+          "Yingjing Feng"
+        ],
+        "doi": "10.1093/eurheartj/ehaa159",
+        "source": "European Heart Journal",
+        "title": "The ‘Digital Twin’ to enable the vision of precision cardiology",
+        "work_id": "doi:10.1093/eurheartj/ehaa159",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E033",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+      "unit": null,
+      "value": {
+        "abstract": "A digital twin is a virtual representation of a physical object or process capable of collecting information from the real environment to represent, validate and simulate the physical twin’s present and future behavior. It is a key enabler of data-driven decision making, complex systems monitoring, product validation and simulation and object lifecycle management. As an emergent technology, its widespread implementation is increasing in several domains such as industrial, automotive, medicine, smart cities, etc. The objective of this systematic literature review is to present a comprehensive view on the DT technology and its implementation challenges and limits in the most relevant domains and applications in engineering and beyond.",
+        "authors": [
+          "Diego M. Botín-Sanabria",
+          "Adriana‐Simona Mihăiţă",
+          "Rodrigo E. Peimbert-García",
+          "Mauricio A. Ramírez-Moreno",
+          "Ricardo A. Ramírez-Mendoza",
+          "Jorge de J. Lozoya-Santos"
+        ],
+        "doi": "10.3390/rs14061335",
+        "source": "Remote Sensing",
+        "title": "Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+        "work_id": "doi:10.3390/rs14061335",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E034",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Future of industry 5.0 in society: human-centric solutions, challenges and prospective research areas",
+      "unit": null,
+      "value": {
+        "abstract": "Industry 4.0 has been provided for the last 10 years to benefit the industry and the shortcomings; finally, the time for industry 5.0 has arrived. Smart factories are increasing the business productivity; therefore, industry 4.0 has limitations. In this paper, there is a discussion of the industry 5.0 opportunities as well as limitations and the future research prospects. Industry 5.0 is changing paradigm and brings the resolution since it will decrease emphasis on the technology and assume that the potential for progress is based on collaboration among the humans and machines. The industrial revolution is improving customer satisfaction by utilizing personalized products. In modern business with the paid technological developments, industry 5.0 is required for gaining competitive advantages as well as economic growth for the factory. The paper is aimed to analyze the potential applications of industry 5.0. At first, there is a discussion of the definitions of industry 5.0 and advanced technologies required in this industry revolution. There is also discussion of the applications enabled in industry 5.0 like healthcare, supply chain, production in manufacturing, cloud manufacturing, etc. The technologies discussed in this paper are big data analytics, Internet of Things, collaborative robots, Blockchain, digital twins and future 6G systems. The study also included difficulties and issues examined in this paper head to comprehend the issues caused by organizations among the robots and people in the assembly line.",
+        "authors": [
+          "Amr Adel"
+        ],
+        "doi": "10.1186/s13677-022-00314-5",
+        "source": "Journal of Cloud Computing Advances Systems and Applications",
+        "title": "Future of industry 5.0 in society: human-centric solutions, challenges and prospective research areas",
+        "work_id": "doi:10.1186/s13677-022-00314-5",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E035",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital Twin Networks: A Survey",
+      "unit": null,
+      "value": {
+        "abstract": "Digital twin network (DTN) is an emerging network that utilizes digital twin (DT) technology to create the virtual twins of physical objects. DTN realizes co-evolution between physical and virtual spaces through DT modeling, communication, computing, data processing technologies. In this article, we present a comprehensive survey of DTN to explore the potentiality of DT. First, we elaborate key features and definitions of DTN. Next, the key technologies and the technical challenges in DTN are discussed. Furthermore, we depict the typical application scenarios, such as manufacturing, aviation, healthcare, 6G networks, intelligent transportation systems, and urban intelligence in smart cities. Finally, the new trends and open research issues related to DTN are pointed out.",
+        "authors": [
+          "Yiwen Wu",
+          "Ke Zhang",
+          "Yan Zhang"
+        ],
+        "doi": "10.1109/jiot.2021.3079510",
+        "source": "IEEE Internet of Things Journal",
+        "title": "Digital Twin Networks: A Survey",
+        "work_id": "doi:10.1109/jiot.2021.3079510",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E036",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: A Novel Cloud-Based Framework for the Elderly Healthcare Services Using Digital Twin",
+      "unit": null,
+      "value": {
+        "abstract": "With the development of technologies, such as big data, cloud computing, and the Internet of Things (IoT), digital twin is being applied in industry as a precision simulation technology from concept to practice. Further, simulation plays a very important role in the healthcare field, especially in research on medical pathway planning, medical resource allocation, medical activity prediction, etc. By combining digital twin and healthcare, there will be a new and efficient way to provide more accurate and fast services for elderly healthcare. However, how to achieve personal health management throughout the entire lifecycle of elderly patients, and how to converge the medical physical world and the virtual world to realize real smart healthcare, are still two key challenges in the era of precision medicine. In this paper, a framework of the cloud healthcare system is proposed based on digital twin healthcare (CloudDTH). This is a novel, generalized, and extensible framework in the cloud environment for monitoring, diagnosing and predicting aspects of the health of individuals using, for example, wearable medical devices, toward the goal of personal health management, especially for the elderly. CloudDTH aims to achieve interaction and convergence between medical physical and virtual spaces. Accordingly, a novel concept of digital twin healthcare (DTH) is proposed and discussed, and a DTH model is implemented. Next, a reference framework of CloudDTH based on DTH is constructed, and its key enabling technologies are explored. Finally, the feasibility of some application scenarios and a case study for real-time supervision are demonstrated.",
+        "authors": [
+          "Ying Liu",
+          "Lin Zhang",
+          "Yuan Yang",
+          "Longfei Zhou",
+          "Lei Ren",
+          "Fei Wang",
+          "Rong Liu",
+          "Zhibo Pang"
+        ],
+        "doi": "10.1109/access.2019.2909828",
+        "source": "IEEE Access",
+        "title": "A Novel Cloud-Based Framework for the Elderly Healthcare Services Using Digital Twin",
+        "work_id": "doi:10.1109/access.2019.2909828",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E037",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital Twins in Health Care: Ethical Implications of an Emerging Engineering Paradigm",
+      "unit": null,
+      "value": {
+        "abstract": "Personalized medicine uses fine grained information on individual persons, to pinpoint deviations from the normal. ‘Digital Twins’ in engineering provide a conceptual framework to analyse these emerging data-driven health care practices, as well as their implications for therapy, preventative care and human enhancement. Digital Twins stands for a specific engineering paradigm, where individual physical artefacts are paired with a digital model that dynamically reflects the status of that artefact. When applied to persons, Digital Twins are an emerging technology that builds in silico representations of an individual that dynamically reflect molecular status, physiological status and life style over time. We use Digital Twins as the hypothesis that one would be in the possession of very detailed bio-physical and lifestyle information of a person over time. This perspective redefines the concept of ‘normality’ or ‘health’, as a set of patterns that are regular for a particular individual, against the backdrop of patterns observed in the population. This perspective also will impact what is considered therapy and what is enhancement, as can be illustrated with the cases of the ‘asymptomatic ill’ and life extension via anti-ageing medicine. This changes are the consequence of how meaning is derived, in case measurement data is available. Moral distinctions namely will be based on patterns found in these data and the meanings that are grafted on these patterns. Ethical and societal implications of Digital Twins are explored. Digital Twins imply a data-driven approach to health care. This approach has the potential to deliver significant societal benefits, and can function as a social equalizer, by allowing for effective equalizing enhancement interventions. It can as well though be a driver for inequality, given the fact that a digital twin might not be an accessible technology for everyone, and given the fact that patterns identified across a population of digital twins can lead to segmentation and discrimination. This duality calls for governance as this emerging technology matures, including measures that ensure transparency of data usage and derived benefits, and data privacy.",
+        "authors": [
+          "Koen Bruynseels",
+          "Filippo Santoni de Sio",
+          "Jeroen van den Hoven"
+        ],
+        "doi": "10.3389/fgene.2018.00031",
+        "source": "Frontiers in Genetics",
+        "title": "Digital Twins in Health Care: Ethical Implications of an Emerging Engineering Paradigm",
+        "work_id": "doi:10.3389/fgene.2018.00031",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E038",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital twins to personalize medicine",
+      "unit": null,
+      "value": {
+        "abstract": "Personalized medicine requires the integration and processing of vast amounts of data. Here, we propose a solution to this challenge that is based on constructing Digital Twins. These are high-resolution models of individual patients that are computationally treated with thousands of drugs to find the drug that is optimal for the patient.",
+        "authors": [
+          "Bergþór Björnsson",
+          "Carl Borrebaeck",
+          "Nils Elander",
+          "Thomas Gasslander",
+          "Danuta R. Gawel",
+          "Mika Gustafsson",
+          "Rebecka Jörnsten"
+        ],
+        "doi": "10.1186/s13073-019-0701-3",
+        "source": "Genome Medicine",
+        "title": "Digital twins to personalize medicine",
+        "work_id": "doi:10.1186/s13073-019-0701-3",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E039",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital Twins: From Personalised Medicine to Precision Public Health",
+      "unit": null,
+      "value": {
+        "abstract": "A digital twin is a virtual model of a physical entity, with dynamic, bi-directional links between the physical entity and its corresponding twin in the digital domain. Digital twins are increasingly used today in different industry sectors. Applied to medicine and public health, digital twin technology can drive a much-needed radical transformation of traditional electronic health/medical records (focusing on individuals) and their aggregates (covering populations) to make them ready for a new era of precision (and accuracy) medicine and public health. Digital twins enable learning and discovering new knowledge, new hypothesis generation and testing, and in silico experiments and comparisons. They are poised to play a key role in formulating highly personalised treatments and interventions in the future. This paper provides an overview of the technology’s history and main concepts. A number of application examples of digital twins for personalised medicine, public health, and smart healthy cities are presented, followed by a brief discussion of the key technical and other challenges involved in such applications, including ethical issues that arise when digital twins are applied to model humans.",
+        "authors": [
+          "Maged N. Kamel Boulos",
+          "Peng Zhang"
+        ],
+        "doi": "10.3390/jpm11080745",
+        "source": "Journal of Personalized Medicine",
+        "title": "Digital Twins: From Personalised Medicine to Precision Public Health",
+        "work_id": "doi:10.3390/jpm11080745",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E040",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital twin in healthcare: Recent updates and challenges",
+      "unit": null,
+      "value": {
+        "abstract": "As simulation is playing an increasingly important role in medicine, providing the individual patient with a customised diagnosis and treatment is envisaged as part of future precision medicine. Such customisation will become possible through the emergence of digital twin (DT) technology. The objective of this article is to review the progress of prominent research on DT technology in medicine and discuss the potential applications and future opportunities as well as several challenges remaining in digital healthcare. A review of the literature was conducted using PubMed, Web of Science, Google Scholar, Scopus and related bibliographic resources, in which the following terms and their derivatives were considered during the search: DT, medicine and digital health virtual healthcare. Finally, analyses of the literature yielded 465 pertinent articles, of which we selected 22 for detailed review. We summarised the application examples of DT in medicine and analysed the applications in many fields of medicine. It revealed encouraging results that DT is being increasing applied in medicine. Results from this literature review indicated that DT healthcare, as a key fusion approach of future medicine, will bring the advantages of precision diagnose and personalised treatment into reality.",
+        "authors": [
+          "Tianze Sun",
+          "Xiwang He",
+          "Zhonghai Li"
+        ],
+        "doi": "10.1177/20552076221149651",
+        "source": "Digital Health",
+        "title": "Digital twin in healthcare: Recent updates and challenges",
+        "work_id": "doi:10.1177/20552076221149651",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E041",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Harnessing the power of synthetic data in healthcare: innovation, application, and privacy",
+      "unit": null,
+      "value": {
+        "abstract": "Data-driven decision-making in modern healthcare underpins innovation and predictive analytics in public health and clinical research. Synthetic data has shown promise in finance and economics to improve risk assessment, portfolio optimization, and algorithmic trading. However, higher stakes, potential liabilities, and healthcare practitioner distrust make clinical use of synthetic data difficult. This paper explores the potential benefits and limitations of synthetic data in the healthcare analytics context. We begin with real-world healthcare applications of synthetic data that informs government policy, enhance data privacy, and augment datasets for predictive analytics. We then preview future applications of synthetic data in the emergent field of digital twin technology. We explore the issues of data quality and data bias in synthetic data, which can limit applicability across different applications in the clinical context, and privacy concerns stemming from data misuse and risk of re-identification. Finally, we evaluate the role of regulatory agencies in promoting transparency and accountability and propose strategies for risk mitigation such as Differential Privacy (DP) and a dataset chain of custody to maintain data integrity, traceability, and accountability. Synthetic data can improve healthcare, but measures to protect patient well-being and maintain ethical standards are key to promote responsible use.",
+        "authors": [
+          "Mauro Giuffrè",
+          "Dennis Shung"
+        ],
+        "doi": "10.1038/s41746-023-00927-3",
+        "source": "npj Digital Medicine",
+        "title": "Harnessing the power of synthetic data in healthcare: innovation, application, and privacy",
+        "work_id": "doi:10.1038/s41746-023-00927-3",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E042",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital twin for healthcare systems",
+      "unit": null,
+      "value": {
+        "abstract": "Digital twin technology is revolutionizing healthcare systems by leveraging real-time data integration, advanced analytics, and virtual simulations to enhance patient care, enable predictive analytics, optimize clinical operations, and facilitate training and simulation. With the ability to gather and analyze a wealth of patient data from various sources, digital twins can offer personalized treatment plans based on individual characteristics, medical history, and real-time physiological data. Predictive analytics and preventive interventions are made possible by machine learning algorithms, allowing for early detection of health risks and proactive interventions. Digital twins can optimize clinical operations by analyzing workflows and resource allocation, leading to streamlined processes and improved patient care. Moreover, digital twins can provide a safe and realistic environment for healthcare professionals to enhance their skills and practice complex procedures. The implementation of digital twin technology in healthcare has the potential to significantly improve patient outcomes, enhance patient safety, and drive innovation in the healthcare industry.",
+        "authors": [
+          "Alexandre Vallée"
+        ],
+        "doi": "10.3389/fdgth.2023.1253050",
+        "source": "Frontiers in Digital Health",
+        "title": "Digital twin for healthcare systems",
+        "work_id": "doi:10.3389/fdgth.2023.1253050",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E043",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: AI-Empowered Fog/Edge Resource Management for IoT Applications: A Comprehensive Review, Research Challenges, and Future Perspectives",
+      "unit": null,
+      "value": {
+        "abstract": "The proliferation of ubiquitous Internet of Things (IoT) sensors and smart devices in several domains embracing healthcare, Industry 4.0, transportation and agriculture are giving rise to a prodigious amount of data requiring ever-increasing computations and services from cloud to the edge of the network. Fog/Edge computing is a promising and distributed computing paradigm that has drawn extensive attention from both industry and academia. The infrastructural efficiency of these computing paradigms necessitates adaptive resource management mechanisms for offloading decisions and efficient scheduling. Resource Management (RM) is a non-trivial issue whose complexity is the result of heterogeneous resources, incoming transactional workload, edge node discovery, and Quality of Service (QoS) parameters at the same time, which makes the efficacy of resources even more challenging. Hence, the researchers have adopted Artificial Intelligence (AI)-based techniques to resolve the above-mentioned issues. This paper offers a comprehensive review of resource management issues and challenges in Fog/Edge paradigm by categorizing them into provisioning of computing resources, task offloading, resource scheduling, service placement, and load balancing. In addition, existing AI and non-AI based state-of-the-art solutions have been discussed, along with their QoS metrics, datasets analysed, limitations and challenges. The survey provides mathematical formulation corresponding to each categorized resource management issue. Our work sheds light on promising research directions on cutting-edge technologies such as Serverless computing, 5G, Industrial IoT (IIoT), blockchain, digital twins, quantum computing, and Software-Defined Networking (SDN), which can be integrated with the existing frameworks of fog/edge-of-things paradigms to improve business intelligence and analytics amongst IoT-based applications.",
+        "authors": [
+          "Guneet Kaur Walia",
+          "Mohit Kumar",
+          "Sukhpal Singh Gill"
+        ],
+        "doi": "10.1109/comst.2023.3338015",
+        "source": "IEEE Communications Surveys & Tutorials",
+        "title": "AI-Empowered Fog/Edge Resource Management for IoT Applications: A Comprehensive Review, Research Challenges, and Future Perspectives",
+        "work_id": "doi:10.1109/comst.2023.3338015",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E044",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Networking Architecture and Key Supporting Technologies for Human Digital Twin in Personalized Healthcare: A Comprehensive Survey",
+      "unit": null,
+      "value": {
+        "abstract": "Digital twin (DT), referring to a promising technique to digitally and accurately represent actual physical entities, has attracted explosive interests from both academia and industry. One typical advantage of DT is that it can be used to not only virtually replicate a system’s detailed operations but also analyze the current condition, predict the future behavior, and refine the control optimization. Although DT has been widely implemented in various fields, such as smart manufacturing and transportation, its conventional paradigm is limited to embody non-living entities, e.g., robots and vehicles. When adopted in human-centric systems, a novel concept, called human digital twin (HDT) has thus been proposed. Particularly, HDT allows in silico representation of individual human body with the ability to dynamically reflect molecular status, physiological status, emotional and psychological status, as well as lifestyle evolutions. These prompt the expected application of HDT in personalized healthcare (PH), which can facilitate the remote monitoring, diagnosis, prescription, surgery and rehabilitation, and hence significantly alleviate the heavy burden on the traditional healthcare system. However, despite the large potential, HDT faces substantial research challenges in different aspects, and becomes an increasingly popular topic recently. In this survey, with a specific focus on the networking architecture and key technologies for HDT in PH applications, we first discuss the differences between HDT and the conventional DTs, followed by the universal framework and essential functions of HDT. We then analyze its design requirements and challenges in PH applications. After that, we provide an overview of the networking architecture of HDT, including data acquisition layer, data communication layer, computation layer, data management layer and data analysis and decision making layer. Besides reviewing the key technologies for implementing such networking architecture in detail, we conclude this survey by presenting future research directions of HDT.",
+        "authors": [
+          "Jiayuan Chen",
+          "Changyan Yi",
+          "Samuel D. Okegbile",
+          "Jun Cai",
+          "Xuemin Shen"
+        ],
+        "doi": "10.1109/comst.2023.3308717",
+        "source": "IEEE Communications Surveys & Tutorials",
+        "title": "Networking Architecture and Key Supporting Technologies for Human Digital Twin in Personalized Healthcare: A Comprehensive Survey",
+        "work_id": "doi:10.1109/comst.2023.3308717",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E045",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Generative artificial intelligence empowers digital twins in drug discovery and clinical trials",
+      "unit": null,
+      "value": {
+        "abstract": "INTRODUCTION: The concept of Digital Twins (DTs) translated to drug development and clinical trials describes virtual representations of systems of various complexities, ranging from individual cells to entire humans, and enables in silico simulations and experiments. DTs increase the efficiency of drug discovery and development by digitalizing processes associated with high economic, ethical, or social burden. The impact is multifaceted: DT models sharpen disease understanding, support biomarker discovery and accelerate drug development, thus advancing precision medicine. One way to realize DTs is by generative artificial intelligence (AI), a cutting-edge technology that enables the creation of novel, realistic and complex data with desired properties. AREAS COVERED: The authors provide a brief introduction to generative AI and describe how it facilitates the modeling of DTs. In addition, they compare existing implementations of generative AI for DTs in drug discovery and clinical trials. Finally, they discuss technical and regulatory challenges that should be addressed before DTs can transform drug discovery and clinical trials. EXPERT OPINION: The current state of DTs in drug discovery and clinical trials does not exploit the entire power of generative AI yet and is limited to simulation of a small number of characteristics. Nonetheless, generative AI has the potential to transform the field by leveraging recent developments in deep learning and customizing models for the needs of scientists, physicians and patients.",
+        "authors": [
+          "Maria Bordukova",
+          "Nikita Makarov",
+          "Raul Rodriguez‐Esteban",
+          "Fabian Schmich"
+        ],
+        "doi": "10.1080/17460441.2023.2273839",
+        "source": "Expert Opinion on Drug Discovery",
+        "title": "Generative artificial intelligence empowers digital twins in drug discovery and clinical trials",
+        "work_id": "doi:10.1080/17460441.2023.2273839",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E046",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Exploring the revolution in healthcare systems through the applications of digital twin technology",
+      "unit": null,
+      "value": {
+        "abstract": "Digital Twin is a virtual replica of an item that is gaining traction in several sectors. This technology is creating significant advancements in the field of healthcare. A machine or a person's digital twin is a virtual replica of that entity. In order to create a digital model that can be tested and simulated, one has to gather enormous volumes of data through Internet of Things (IoT) sensors for the associated application. Based on the patient's lifestyle, regular eating habits, and blood sugar data, this technology helps to warn the patient about prescriptions, dietary adjustments, medical consultations, and other situations. Digital Twin uses a substantial quantity of data from multiple IoT devices and uses Artificial Intelligence (AI)-powered models. Patients' own Digital Twin uses previous data insights to help select the most appropriate medication, forecast the results of a particular surgery, and control chronic illness. The main aim of this paper is to study Digital Twin and its need for the healthcare sector. This Paper discusses various features and services of Digital Twin for Healthcare. Various technologies and tools of Digital Twins for Healthcare are also briefed and further identified and discussed, along with significant applications. The healthcare sector has realised to create a framework focused on the patient. In the future, healthcare should think about more advanced ways to provide best-in-class treatment to the patient. Planning for the post-digital era is crucial as healthcare organisations continue their digital transformation initiatives.",
+        "authors": [
+          "Abid Haleem",
+          "Mohd Javaid",
+          "Ravi Pratap Singh",
+          "Rajiv Suman"
+        ],
+        "doi": "10.1016/j.bmt.2023.02.001",
+        "source": "Biomedical Technology",
+        "title": "Exploring the revolution in healthcare systems through the applications of digital twin technology",
+        "work_id": "doi:10.1016/j.bmt.2023.02.001",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E047",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital Twins: The New Frontier for Personalized Medicine?",
+      "unit": null,
+      "value": {
+        "abstract": "Digital twins are virtual replicas of physical objects or systems. This new technology is increasingly being adopted in industry to improve the monitoring and efficiency of products and organizations. In healthcare, digital human twins (DHTs) represent virtual copies of patients, including tissues, organs, and physiological processes. Their application has the potential to transform patient care in the direction of increasingly personalized data-driven medicine. The use of DHTs can be integrated with digital twins of healthcare institutions to improve organizational management processes and resource allocation. By modeling the complex multi-omics interactions between genetic and environmental factors, DHTs help monitor disease progression and optimize treatment plans. Through digital simulation, DHT models enable the selection of the most appropriate molecular therapy and accurate 3D representation for precision surgical planning, together with augmented reality tools. Furthermore, they allow for the development of tailored early diagnosis protocols and new targeted drugs. Furthermore, digital twins can facilitate medical training and education. By creating virtual anatomy and physiology models, medical students can practice procedures, enhance their skills, and improve their understanding of the human body. Overall, digital twins have immense potential to revolutionize healthcare, improving patient care and outcomes, reducing costs, and enhancing medical research and education. However, challenges such as data security, data quality, and data interoperability must be addressed before the widespread adoption of digital twins in healthcare. We aim to propose a narrative review on this hot topic to provide an overview of the potential applications of digital twins to improve treatment and diagnostics, but also of the challenges related to their development and widespread diffusion.",
+        "authors": [
+          "Michaela Cellina",
+          "Maurizio Cè",
+          "Marco Alì",
+          "Giovanni Irmici",
+          "Simona Ibba",
+          "Elena Caloro"
+        ],
+        "doi": "10.3390/app13137940",
+        "source": "Applied Sciences",
+        "title": "Digital Twins: The New Frontier for Personalized Medicine?",
+        "work_id": "doi:10.3390/app13137940",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E048",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Digital Twin Empowered Wireless Healthcare Monitoring for Smart Home",
+      "unit": null,
+      "value": {
+        "abstract": "The dramatic progresses of wireless technologies and wearable devices have significantly promoted the development and popularity of smart home, while digital twin (DT) emerges as a game changer benefiting from its enhanced capabilities of visualization and interaction. The DT is able to build a realtime and continuous visual replica of a physical object or process, and to provide realtime monitoring, anomaly prediction, smart interaction, and lifecycle management. This paper presents a DT model to empower healthcare monitoring in the smart home with the goals of graphical monitoring, healthcare prediction, and intelligent control. High fidelity DT of the house and its equipments is created for visualized monitoring, and two suites of devices are deployed for continuously acquiring the users’ electrocardiograph (ECG) waves and the WiFi signals in the house. Two intelligent algorithms are then developed to perform fall detection from WiFi signals and to screen atrial fibrillation from ECG waves collected by wearable devices. Experimental results well validate the proposed model’s effectiveness for smart home monitoring, and the advantages of the developed smart algorithms for healthcare prediction over counterparts.",
+        "authors": [
+          "Junxin Chen",
+          "Wei Wang",
+          "Bo Fang",
+          "Yu Liu",
+          "Keping Yu",
+          "Victor C. M. Leung"
+        ],
+        "doi": "10.1109/jsac.2023.3310097",
+        "source": "IEEE Journal on Selected Areas in Communications",
+        "title": "Digital Twin Empowered Wireless Healthcare Monitoring for Smart Home",
+        "work_id": "doi:10.1109/jsac.2023.3310097",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E049",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Metaverse and Healthcare: Machine Learning-Enabled Digital Twins of Cancer",
+      "unit": null,
+      "value": {
+        "abstract": "Medical digital twins, which represent medical assets, play a crucial role in connecting the physical world to the metaverse, enabling patients to access virtual medical services and experience immersive interactions with the real world. One serious disease that can be diagnosed and treated using this technology is cancer. However, the digitalization of such diseases for use in the metaverse is a highly complex process. To address this, this study aims to use machine learning (ML) techniques to create real-time and reliable digital twins of cancer for diagnostic and therapeutic purposes. The study focuses on four classical ML techniques that are simple and fast for medical specialists without extensive Artificial Intelligence (AI) knowledge, and meet the requirements of the Internet of Medical Things (IoMT) in terms of latency and cost. The case study focuses on breast cancer (BC), the second most prevalent form of cancer worldwide. The study also presents a comprehensive conceptual framework to illustrate the process of creating digital twins of cancer, and demonstrates the feasibility and reliability of these digital twins in monitoring, diagnosing, and predicting medical parameters.",
+        "authors": [
+          "Omid Moztarzadeh",
+          "Mohammad Jamshidi",
+          "Saleh Sargolzaei",
+          "Alireza Jamshidi",
+          "Nasimeh Baghalipour",
+          "Mona Malekzadeh",
+          "Lukáš Hauer"
+        ],
+        "doi": "10.3390/bioengineering10040455",
+        "source": "Bioengineering",
+        "title": "Metaverse and Healthcare: Machine Learning-Enabled Digital Twins of Cancer",
+        "work_id": "doi:10.3390/bioengineering10040455",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E050",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Virtual patients, digital twins and causal disease models: Paving the ground for in silico clinical trials",
+      "unit": null,
+      "value": {
+        "abstract": "Computational models are being explored to simulate in silico the efficacy and safety of drug candidates and medical devices. Disease models that are based on patients' profiling data are being produced to represent interactomes of genes or proteins and to infer causality in the pathophysiology, which makes it possible to mimic the impact of drugs on relevant targets. Virtual patients designed from medical records as well as digital twins are generated to simulate specific organs and to predict treatment efficacy at the individual patient level. As the acceptance of digital evidence by regulators grows, predictive artificial intelligence (AI)-based models will support the design of confirmatory trials in humans and will accelerate the development of efficient drugs and medical devices.",
+        "authors": [
+          "Philippe Moingeon",
+          "Marylore Chenel",
+          "Cécile F. Rousseau",
+          "Emmanuelle Voisin",
+          "Mickaël Guedj"
+        ],
+        "doi": "10.1016/j.drudis.2023.103605",
+        "source": "Drug Discovery Today",
+        "title": "Virtual patients, digital twins and causal disease models: Paving the ground for in silico clinical trials",
+        "work_id": "doi:10.1016/j.drudis.2023.103605",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E051",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Achromatic diffractive liquid-crystal optics for virtual reality displays",
+      "unit": null,
+      "value": {
+        "abstract": "Diffractive liquid-crystal optics is a promising optical element for virtual reality (VR) and mixed reality as it provides an ultrathin formfactor and lightweight for human factors and ergonomics. However, its severe chromatic aberrations impose a big challenge for full-color display applications. In this study, we demonstrate an achromatic diffractive liquid-crystal device to overcome this longstanding chromatic aberration issue. The proposed device consists of three stacked diffractive liquid crystal optical elements with specifically designed spectral response and polarization selectivity. The concept is validated by both simulations and experiments. Our experimental results show a significant improvement in imaging performance with two types of light engines: a laser projector and an organic light-emitting diode display panel. In addition, our simulation results indicate that the lateral color shift is reduced by ~100 times in comparison with conventional broadband diffractive liquid-crystal lens. Potential applications for VR-enabled metaverse, spatial computing, and digital twins that have found widespread applications in smart tourism, smart education, smart healthcare, smart manufacturing, and smart construction are foreseeable.",
+        "authors": [
+          "Zhenyi Luo",
+          "Yannanqi Li",
+          "John Semmen",
+          "Yi Rao",
+          "Shin‐Tson Wu"
+        ],
+        "doi": "10.1038/s41377-023-01254-8",
+        "source": "Light Science & Applications",
+        "title": "Achromatic diffractive liquid-crystal optics for virtual reality displays",
+        "work_id": "doi:10.1038/s41377-023-01254-8",
+        "year": 2023
+      }
+    },
+    {
+      "artifact_path": "figures/annual_publications.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E052",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 1 (annual_publications) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "peak_documents": 355,
+          "peak_year": 2023,
+          "years": [
+            2012,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ]
+        },
+        "figure_name": "annual_publications",
+        "figure_number": 1
+      }
+    },
+    {
+      "artifact_path": "figures/top_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E053",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 2 (top_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "IEEE Access",
+          "top_value": 24
+        },
+        "figure_name": "top_sources",
+        "figure_number": 2
+      }
+    },
+    {
+      "artifact_path": "figures/top_authors.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E054",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 3 (top_authors) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Kyle B. Enfield",
+          "top_value": 22
+        },
+        "figure_name": "top_authors",
+        "figure_number": 3
+      }
+    },
+    {
+      "artifact_path": "figures/top_institutions.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E055",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 4 (top_institutions) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Johns Hopkins University",
+          "top_value": 12
+        },
+        "figure_name": "top_institutions",
+        "figure_number": 4
+      }
+    },
+    {
+      "artifact_path": "figures/document_types.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E056",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 5 (document_types) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed_categories": 1,
+          "total_documents": 796
+        },
+        "figure_name": "document_types",
+        "figure_number": 5
+      }
+    },
+    {
+      "artifact_path": "figures/citation_distribution.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E057",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 6 (citation_distribution) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "display_cap_p98": 389.90000000000066,
+          "documents": 796,
+          "maximum": 2623,
+          "mean": 53.199748743718594,
+          "median": 16.0,
+          "zero_cited": 126
+        },
+        "figure_name": "citation_distribution",
+        "figure_number": 6
+      }
+    },
+    {
+      "artifact_path": "figures/top_cited_documents.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E058",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 7 (top_cited_documents) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Digital Twin: Enabling Technologies, Challenges and O…",
+          "top_value": 2623
+        },
+        "figure_name": "top_cited_documents",
+        "figure_number": 7
+      }
+    },
+    {
+      "artifact_path": "figures/bradford_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E059",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 8 (bradford_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "sources": 468,
+          "zone_1_sources": 37
+        },
+        "figure_name": "bradford_sources",
+        "figure_number": 8
+      }
+    },
+    {
+      "artifact_path": "figures/keyword_trends.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E060",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 9 (keyword_trends) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "keywords": 15,
+          "years": [
+            2012,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ]
+        },
+        "figure_name": "keyword_trends",
+        "figure_number": 9
+      }
+    },
+    {
+      "artifact_path": "figures/network_coauthorship.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E061",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 10 (network_coauthorship) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 1136,
+          "candidate_nodes_with_links": 355,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 128,
+          "displayed_nodes": 59,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 366,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 16,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.04962911790115945,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.11343240547385444,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "overlap_ratio": 0.0,
+          "selected_seed": 42.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.04395749762746673,
+          "within_between_distance_ratio": 0.0
+        },
+        "figure_name": "network_coauthorship",
+        "figure_number": 10
+      }
+    },
+    {
+      "artifact_path": "figures/network_institution_collaboration.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E062",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 11 (network_institution_collaboration) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 1065,
+          "candidate_nodes_with_links": 325,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 153,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 338,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.18041681491796438,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.26295914391638975,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 2157.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.06399597374388828,
+          "within_between_distance_ratio": 0.3442429465941887
+        },
+        "figure_name": "network_institution_collaboration",
+        "figure_number": 11
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_cooccurrence.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E063",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 12 (network_keyword_cooccurrence) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 7589,
+          "candidate_nodes_with_links": 274,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 188,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 274,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.1252791858734702,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.3404087290074586,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 1245.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.024941947875726886,
+          "within_between_distance_ratio": 0.277722671824568
+        },
+        "figure_name": "network_keyword_cooccurrence",
+        "figure_number": 12
+      }
+    },
+    {
+      "artifact_path": "figures/network_cocitation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E064",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 13 (network_cocitation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 20813,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 203,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.31467053019625923,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.32434532257336923,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 4,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 2351.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.038272299285820974,
+          "within_between_distance_ratio": 0.8672698826058995
+        },
+        "figure_name": "network_cocitation",
+        "figure_number": 13
+      }
+    },
+    {
+      "artifact_path": "figures/network_citation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E065",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 14 (network_citation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 4,
+          "candidate_nodes_with_links": 5,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 1,
+          "displayed_edges": 4,
+          "displayed_nodes": 5,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 5,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 5,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.07716818458366648,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.9170230499885007,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 15,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 430.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.03131703208424145,
+          "within_between_distance_ratio": 0.0
+        },
+        "figure_name": "network_citation",
+        "figure_number": 14
+      }
+    },
+    {
+      "artifact_path": "figures/network_bibliographic_coupling.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E066",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 15 (network_bibliographic_coupling) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 5741,
+          "candidate_nodes_with_links": 350,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 230,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 350,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.14002287163668348,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.26107906656748375,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 6,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 649.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          },
+          "weighted_edge_length": 0.007768334799252971,
+          "within_between_distance_ratio": 0.39733527836352106
+        },
+        "figure_name": "network_bibliographic_coupling",
+        "figure_number": 15
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_overlay.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E067",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 16 (network_keyword_overlay) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 7589,
+          "candidate_nodes_with_links": 274,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 188,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 274,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "year_max": 2022.5510204081634,
+          "year_min": 2020.9545454545455
+        },
+        "figure_name": "network_keyword_overlay",
+        "figure_number": 16
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_density.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E068",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 17 (network_keyword_density) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 7589,
+          "candidate_nodes_with_links": 274,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "density_grid": [
+            260,
+            190
+          ],
+          "density_weight": "log(1 + occurrence), gamma 0.62",
+          "displayed_clusters": 8,
+          "displayed_edges": 188,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 274,
+          "gaussian_sigma": 8,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "figure_name": "network_keyword_density",
+        "figure_number": 17
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E069",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+      "unit": null,
+      "value": {
+        "citation": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+        "doi": "10.1016/j.jbusres.2021.04.070",
+        "role": "bibliometric workflow and interpretation guideline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E070",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+      "unit": null,
+      "value": {
+        "citation": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+        "doi": "10.1016/j.joi.2017.08.007",
+        "role": "science-mapping analysis baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E071",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+      "unit": null,
+      "value": {
+        "citation": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+        "doi": "10.1007/s11192-009-0146-3",
+        "role": "bibliometric network visualization baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E072",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+      "unit": null,
+      "value": {
+        "citation": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+        "doi": "10.1088/1742-5468/2008/10/P10008",
+        "role": "Louvain community-detection method"
+      }
+    }
+  ],
+  "anonymous_candidate": "# A Bibliometric Analysis of Digital Twin Research (2012–2023): Publication Trends, Leading Actors, and Thematic Structure\n\n## Structured Abstract\n*Background:* Digital twin technology has rapidly emerged as a key enabler across industry, healthcare, and smart cities. This report provides a comprehensive bibliometric overview of the research landscape.\n*Methods:* A corpus of 796 unique works was retrieved and deduplicated [E001, E002]. Performance analysis and science mapping were conducted using whole counting, Bradford’s law, and network analysis with Louvain community detection [E069–E072].\n*Results:* The corpus spans 2012–2023, with a compound annual growth rate of 70.54% and a peak of 355 publications in 2023 [E004–E007]. The most prolific source is *IEEE Access* (n=24) [E008], the leading author is Kyle B. Enfield (n=22) [E010], and the top institution is Johns Hopkins University (n=12) [E012]. The most-cited document is “Digital Twin: Enabling Technologies, Challenges and Open Research” (2,623 citations) [E018]. Thematic mapping reveals a core structure dominated by “Computer science,” “Medicine,” and “Artificial intelligence” [E027].\n*Conclusion:* The field exhibits rapid, accelerating growth concentrated in a core of journals and authors, with a strong interdisciplinary nexus between computer science and medicine. The findings are descriptive and bounded by the source and retrieval date.\n\n## 1. Introduction\n### 1.1 Background\nDigital twin technology, often described as the integration of data between physical and virtual entities [E028], has become central to Industry 4.0 and precision medicine [E032]. The literature has expanded rapidly, necessitating a systematic mapping of its structure and trends.\n\n### 1.2 Objectives\nThis report aims to (1) characterize the volume and growth trajectory of digital twin research [E004–E007], (2) identify the most productive journals, authors, and institutions [E008–E013], (3) analyze citation impact and document types [E014–E018], and (4) map the intellectual and social structure through network analysis [E022–E027].\n\n### 1.3 Structure\nThe report follows the bibliometric workflow guidelines of Donthu et al. (2021) [E069], presenting reproducible methods, results with performance analysis and science mapping, a discussion of findings, and a transparent account of limitations.\n\n## 2. Methods\n### 2.1 Retrieval and Corpus Assembly\nA bibliographic search was executed on a named source. Cursor pagination continued until the source returned no next cursor, confirming complete acquisition of 796 unique records matching the query [E002]. Deterministic exact deduplication yielded a final canonical corpus of 796 works [E001].\n\n### 2.2 Data Quality and Coverage\nMetadata completeness was assessed for every canonical work [E003]. Key fields showed high coverage: 100% for title, publication date, and cited-by count; 98.24% for DOI; and 86.18% for abstract [E003]. Missing data were noted for publisher (18.09%) and language (5.4%) [E003].\n\n### 2.3 Performance Analysis\nAnnual output was whole-counted by publication year [E007]. Compound annual growth rate (CAGR) was calculated from the first to the last non-zero endpoint [E006]. Top sources, authors, and institutions were ranked by whole-counted publications [E009, E011, E013]. Citation impact was described using source-supplied cited-by counts, including mean, median, and zero-citation share [E015–E017]. Bradford’s law of scattering was applied to sources with known names; records without a source name were excluded from Bradford zoning [E019].\n\n### 2.4 Science Mapping\nNetwork analyses were performed using a candidate-first association-strength method [E022–E027]. Candidate nodes were selected by minimum occurrence thresholds, edges were normalized by association strength, and communities were detected using the Louvain algorithm [E072]. Networks were visualized using VOS-style layouts or ForceAtlas2, with edge reduction via maximum-spanning forest plus strongest edges per node [E022–E027, E071]. Networks constructed include bibliographic coupling, citation, coauthorship, cocitation, institution collaboration, and keyword co-occurrence [E022–E027].\n\n## 3. Results\n### 3.1 Publication Growth and Corpus Overview\nThe corpus spans 2012 to 2023 [E004]. Annual output grew from 1 publication in 2012 to 355 in 2023, representing a compound annual growth rate of 70.54% from the first to the last non-zero endpoint; this endpoint measure does not establish a monotonic trend [E005–E007]. The largest absolute year-over-year increases occurred in 2022 (+120) and 2023 (+118), though the 2023 count may be incomplete depending on the retrieval date [E005, E007]. (Figure 1 [E052])\n\n### 3.2 Document Types and Source Landscape\nAll 796 works are classified as “article” in the source metadata; this uniform label reflects source classification practices and may not distinguish reviews or other types [E014]. (Figure 5 [E056]) The corpus is distributed across 468 sources, with a core Zone 1 of 37 journals accounting for 262 publications (approximately one-third of the corpus, noting that records without source names were excluded from zoning) [E019, E059]. *IEEE Access* is the most prolific source with 24 publications, followed by *International Journal of Advanced Research and Innovations* (19) and *Zenodo* (16) [E008, E009]. Zenodo is a general-purpose open repository; its inclusion among top sources reflects preprint deposition rather than peer-reviewed journal publication [E009]. (Figure 2 [E053])\n\n### 3.3 Leading Authors and Institutions\nKyle B. Enfield is the most productive author with 22 publications, followed by Paramesh Shamanna (11) and Zhihan Lv (10) [E010, E011]. Productivity counts are descriptive and do not measure research quality or influence [E011, E013]. (Figure 3 [E054]) Johns Hopkins University leads institutional output with 12 publications, followed by Centre National de la Recherche Scientifique and Uppsala University (11 each) [E012, E013]. (Figure 4 [E055])\n\n### 3.4 Citation Impact\nThe mean citation count is 53.20 and the median is 16.00, indicating a right-skewed distribution [E015, E017]. Citation counts are source- and time-dependent; recent works have had less time to accumulate citations [E015, E017]. The maximum citation count is 2,623 [E017]. A total of 126 works (15.83%) have zero source-reported citations [E016]. (Figure 6 [E057]) The most-cited document is “Digital Twin: Enabling Technologies, Challenges and Open Research” (Fuller et al., 2020, *IEEE Access*) with 2,623 citations [E018, E028]. (Figure 7 [E058])\n\n### 3.5 Thematic Structure and Trends\nThe most frequent keywords are “Computer science” (n=607), “Medicine” (n=350), and “Artificial intelligence” (n=252) [E020]. Keyword frequencies reflect source-supplied or algorithmically assigned terms and depend on synonym normalization [E020]. Temporal analysis shows that “Computer science” has been present since 2012. “Artificial intelligence” appeared sporadically from 2014 and accelerated sharply after 2019, while “Health care” emerged in 2018 and surged thereafter [E020]. (Figure 9 [E060])\n\n### 3.6 Network Analysis\nThe keyword co-occurrence network (72 nodes, 188 edges, 8 clusters) reveals a central cluster around “Computer science” and “Artificial intelligence,” linked to a distinct “Medicine” and “Health care” cluster [E027]. (Figures 12, 16, 17 [E063, E067, E068]) The coauthorship network (59 nodes, 128 edges, 10 clusters) reveals a densely connected research group including Paramesh Shamanna, Terrence Poon, and Mohamed Thajudeen [E024]. (Figure 10 [E061]) The institution collaboration network (72 nodes, 153 edges, 10 clusters) shows Maastricht University and Stanford University as highly connected nodes [E026]. (Figure 11 [E062]) The bibliographic coupling network (72 nodes, 230 edges, 8 clusters) shows “Impactful Digital Twin in the Healthcare Revolution” as a highly connected node [E022]. (Figure 15 [E066]) The citation network is sparse (5 nodes, 4 edges), reflecting the high minimum-occurrence threshold (15) required for candidate selection [E023]. (Figure 14 [E065]) The cocitation network (72 nodes, 203 edges, 7 clusters) identifies foundational references [E025]. (Figure 13 [E064])\n\n## 4. Discussion\n### 4.1 Interpretation of Growth\nThe 70.54% CAGR and the concentration of output in 2022–2023 suggest the field is in a phase of rapid, accelerating expansion, likely driven by the convergence of IoT, AI, and healthcare applications [E006, E007, E028, E030]. This observation is a descriptive trend, not a causal claim.\n\n### 4.2 Concentration and Core Actors\nBradford zoning confirms a strong core-periphery structure in publication sources [E019]. The dominance of a single author (Kyle B. Enfield) and institution (Johns Hopkins University) indicates concentrated productivity, though this must not be interpreted as a measure of research quality [E010, E012, E011, E013].\n\n### 4.3 Thematic Integration\nThe keyword analyses identify prominent computer-science and health-related terms, including computer science, artificial intelligence, data science, medicine, and health care; the co-occurrence map assigns these leading terms to several clusters [E020, E027]. The filtered three-field view records author–source–keyword combinations spanning these terms [E021]. The overlay figure reports average-year values across displayed nodes from 2020.95 to 2022.55 [E067].\n\n### 4.4 Citation Patterns\nThe highly skewed citation distribution, with a mean much higher than the median, is typical of scientific fields where a few seminal works attract disproportionate attention [E015, E017]. The most-cited works include titles suggesting they are surveys or enabling-technology overviews (e.g., “A Survey on Digital Twin…”, “Digital Twins: A Survey…”), though document-type labels in the source metadata do not distinguish reviews from articles [E014, E018].\n\n## 5. Limitations\n### 5.1 Source and Retrieval Bias\nAll findings are dependent on the single bibliographic source queried and the specific retrieval date. Citation counts are source- and time-dependent [E015, E017].\n\n### 5.2 Citation Window\nRecent works, particularly those from 2023, have had less time to accumulate citations, which biases citation-based metrics against newer publications [E016, E017].\n\n### 5.3 Metadata Quality\nWhile core fields are complete, 13.82% of abstracts and 18.09% of publisher names are missing, which may affect keyword and source analyses [E003]. The publisher field missingness may affect any source-level analyses that rely on publisher metadata, though the current analyses use source_id, which is 100% complete [E003]. Document-type labels inherit the source’s classification, which resulted in a uniform “article” categorization [E014].\n\n### 5.4 Network Parameterization\nNetwork structures are sensitive to the chosen thresholds (minimum occurrence, edge reduction method) and normalization (association strength). They describe the constructed corpus and do not establish causal or substantive importance [E022–E027].\n\n### 5.5 Content Depth\nAll thematic interpretations are based on titles, abstracts, and keywords. No full-text analysis was performed, so claims about detailed methodologies or findings within publications cannot be supported [E028–E051].\n\n## 6. Conclusion\nThis bibliometric analysis maps a rapidly expanding research field at the intersection of digital twin technology, computer science, and medicine. The corpus of 796 articles exhibits a 70.54% CAGR, peaking in 2023 [E001, E006, E005]. The intellectual structure is concentrated in a core of journals and authors, with *IEEE Access* and Kyle B. Enfield as the most prolific source and author, respectively [E008, E010]. Thematic mapping confirms a strong and growing integration of AI and data science methodologies into healthcare applications [E027]. These findings provide a descriptive baseline for researchers and stakeholders, with all interpretations bounded by the stated source, temporal, and methodological limitations.\n",
+  "allowed_evidence_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027",
+    "E028",
+    "E029",
+    "E030",
+    "E031",
+    "E032",
+    "E033",
+    "E034",
+    "E035",
+    "E036",
+    "E037",
+    "E038",
+    "E039",
+    "E040",
+    "E041",
+    "E042",
+    "E043",
+    "E044",
+    "E045",
+    "E046",
+    "E047",
+    "E048",
+    "E049",
+    "E050",
+    "E051",
+    "E052",
+    "E053",
+    "E054",
+    "E055",
+    "E056",
+    "E057",
+    "E058",
+    "E059",
+    "E060",
+    "E061",
+    "E062",
+    "E063",
+    "E064",
+    "E065",
+    "E066",
+    "E067",
+    "E068",
+    "E069",
+    "E070",
+    "E071",
+    "E072",
+    "doi:10.1016/j.bmt.2023.02.001",
+    "doi:10.1016/j.drudis.2023.103605",
+    "doi:10.1038/s41377-023-01254-8",
+    "doi:10.1038/s41591-022-01981-2",
+    "doi:10.1038/s41746-023-00927-3",
+    "doi:10.1080/17460441.2023.2273839",
+    "doi:10.1093/eurheartj/ehaa159",
+    "doi:10.1109/access.2019.2909828",
+    "doi:10.1109/access.2019.2953499",
+    "doi:10.1109/access.2020.2998358",
+    "doi:10.1109/comst.2022.3208773",
+    "doi:10.1109/comst.2023.3308717",
+    "doi:10.1109/comst.2023.3338015",
+    "doi:10.1109/jiot.2021.3079510",
+    "doi:10.1109/jsac.2023.3310097",
+    "doi:10.1177/20552076221149651",
+    "doi:10.1186/s13073-019-0701-3",
+    "doi:10.1186/s13677-022-00314-5",
+    "doi:10.3389/fdgth.2023.1253050",
+    "doi:10.3389/fgene.2018.00031",
+    "doi:10.3390/app13137940",
+    "doi:10.3390/bioengineering10040455",
+    "doi:10.3390/jpm11080745",
+    "doi:10.3390/rs14061335"
+  ],
+  "content_sha256": "ed2351a8729c692e5261e565d9bbd11a1e45b6e5df1543be211af7074ac0cc1c"
+}

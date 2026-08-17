@@ -1,0 +1,34 @@
+{
+  "queries": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "keywords": ["graph neural networks", "drug discovery"],
+      "rationale": "Removed 'molecular property prediction' to avoid narrowing the topic, allowing all GNN applications in drug discovery."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "keywords": ["machine learning", "climate change"],
+      "rationale": "Removed 'climate modeling' to include all ML applications in climate change research, such as impacts and adaptation."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "keywords": ["climate change", "risk"],
+      "rationale": "Replaced 'risk assessment' and 'vulnerability' with the broader term 'risk' to cover all climate-change risk aspects."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "keywords": ["digital twin", "healthcare"],
+      "rationale": "Removed 'personalized medicine' to encompass all healthcare applications of digital twins."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "keywords": ["gene editing", "amyotrophic lateral sclerosis"],
+      "rationale": "Removed 'CRISPR' to include all gene-editing techniques relevant to ALS."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "keywords": ["microplastics"],
+      "rationale": "Used only 'microplastics' as it is an unambiguous single concept, removing restrictive terms like 'marine pollution'."
+    }
+  ]
+}

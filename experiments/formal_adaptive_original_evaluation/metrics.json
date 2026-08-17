@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "protocol_version": "adaptive-original-evaluation-v1",
+  "manifest_sha256": "2dfd189c85c7e069b5a2d9e3e4268e17ab24381642a2af947c62d4412e2cbc8b",
+  "result_manifest_sha256": "a37f472d6abd9b8c151948664d00690fe388b1584a2849bce6ce6e8b247d90f5",
+  "condition": "baseline_original",
+  "items": 48,
+  "quality_passed": 37,
+  "quality_errors": 11,
+  "quality_pass_rate": 0.7708333333333334,
+  "quality_error_rate": 0.22916666666666666,
+  "evaluation_feedback_leakage": false,
+  "judge_modified_artifacts": false,
+  "topics": {
+    "gnn_drug_discovery_2017_2023": {
+      "topic_id": "gnn_drug_discovery_2017_2023",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 5,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 1,
+        "quality_errors": 1,
+        "final_quality_pass_rate": 0.8333333333333334,
+        "quality_error_rate": 0.16666666666666666
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 5,
+          "quality_errors": 0,
+          "quality_error_rate": 0.0
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    },
+    "crispr_extracellular_vesicles_2015_2022": {
+      "topic_id": "crispr_extracellular_vesicles_2015_2022",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 5,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 1,
+        "quality_errors": 1,
+        "final_quality_pass_rate": 0.8333333333333334,
+        "quality_error_rate": 0.16666666666666666
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 5,
+          "quality_errors": 0,
+          "quality_error_rate": 0.0
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    },
+    "machine_learning_climate_change_2008_2022": {
+      "topic_id": "machine_learning_climate_change_2008_2022",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 5,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 1,
+        "quality_errors": 1,
+        "final_quality_pass_rate": 0.8333333333333334,
+        "quality_error_rate": 0.16666666666666666
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 5,
+          "quality_errors": 0,
+          "quality_error_rate": 0.0
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    },
+    "climate_change_risks_1990_2021": {
+      "topic_id": "climate_change_risks_1990_2021",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 4,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 2,
+        "quality_errors": 2,
+        "final_quality_pass_rate": 0.6666666666666666,
+        "quality_error_rate": 0.3333333333333333
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 4,
+          "quality_errors": 1,
+          "quality_error_rate": 0.2
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    },
+    "digital_twins_healthcare_2012_2024": {
+      "topic_id": "digital_twins_healthcare_2012_2024",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 5,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 1,
+        "quality_errors": 1,
+        "final_quality_pass_rate": 0.8333333333333334,
+        "quality_error_rate": 0.16666666666666666
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 5,
+          "quality_errors": 0,
+          "quality_error_rate": 0.0
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    },
+    "plant_heat_drought_2008_2021": {
+      "topic_id": "plant_heat_drought_2008_2021",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 4,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 2,
+        "quality_errors": 2,
+        "final_quality_pass_rate": 0.6666666666666666,
+        "quality_error_rate": 0.3333333333333333
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 4,
+          "quality_errors": 1,
+          "quality_error_rate": 0.2
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    },
+    "gene_editing_als_2004_2024": {
+      "topic_id": "gene_editing_als_2004_2024",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 5,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 1,
+        "quality_errors": 1,
+        "final_quality_pass_rate": 0.8333333333333334,
+        "quality_error_rate": 0.16666666666666666
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 5,
+          "quality_errors": 0,
+          "quality_error_rate": 0.0
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    },
+    "global_microplastics_2004_2019": {
+      "topic_id": "global_microplastics_2004_2019",
+      "condition": "baseline_original",
+      "counts": {
+        "items": 6,
+        "review_requests": 0,
+        "final_quality_passed": 4,
+        "auto_accepts": 6,
+        "unsafe_auto_accepts": 2,
+        "quality_errors": 2,
+        "final_quality_pass_rate": 0.6666666666666666,
+        "quality_error_rate": 0.3333333333333333
+      },
+      "by_artifact_type": {
+        "graph": {
+          "items": 5,
+          "quality_passed": 4,
+          "quality_errors": 1,
+          "quality_error_rate": 0.2
+        },
+        "report": {
+          "items": 1,
+          "quality_passed": 0,
+          "quality_errors": 1,
+          "quality_error_rate": 1.0
+        }
+      }
+    }
+  },
+  "computed_at": "2026-08-06T19:53:24.802093+00:00"
+}

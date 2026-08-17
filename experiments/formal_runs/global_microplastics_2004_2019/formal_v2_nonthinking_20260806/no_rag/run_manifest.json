@@ -1,0 +1,75 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "global_microplastics_2004_2019",
+  "condition": "no_rag",
+  "prompt_version": "formal-graph-qa-v2-nonthinking",
+  "profile": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "modality": "text",
+    "capability_snapshot": "D:\\project\\bibagent\\experiments\\api_capabilities\\deepseek_models.json",
+    "response_format": "json_object",
+    "supports_json_schema": false,
+    "supports_seed": false,
+    "supports_data_uri": false
+  },
+  "capability_validation": {
+    "profile_id": "deepseek-official-v4-pro-text",
+    "snapshot_sha256": "bb06a7f1283e0b4c9375df86195f732ccaef2466ad685965a4512784af26e7c5",
+    "model_available": true,
+    "image_input_verified": null,
+    "passed": true,
+    "reasons": []
+  },
+  "comparison_design": {
+    "primary_text_panel": {
+      "profile_id": "deepseek-official-v4-pro-text",
+      "model": "deepseek-v4-pro",
+      "base_url": "https://api.deepseek.com",
+      "conditions": [
+        "no_rag",
+        "flat_structured",
+        "graph_rag"
+      ],
+      "strict_within_model_comparison": true
+    },
+    "figure_panel": null
+  },
+  "grounding_manifest_sha256": "5718afbb60fced449bb2efcdbf9c095c570739f7e378dcb5a7ad13d65efb5d88",
+  "benchmark_sha256": "04175b94a0c1805e0e15f4cdc267c399eb6d6ff0c1d82ec69336ba21129f3f32",
+  "items": 30,
+  "item_ids": [
+    "global_microplastics_2004_2019:bibliographic_coupling:network_size",
+    "global_microplastics_2004_2019:bibliographic_coupling:highest_occurrence",
+    "global_microplastics_2004_2019:bibliographic_coupling:strongest_connection",
+    "global_microplastics_2004_2019:bibliographic_coupling:cluster_membership",
+    "global_microplastics_2004_2019:bibliographic_coupling:false_premise",
+    "global_microplastics_2004_2019:citation:network_size",
+    "global_microplastics_2004_2019:citation:highest_occurrence",
+    "global_microplastics_2004_2019:citation:strongest_connection",
+    "global_microplastics_2004_2019:citation:cluster_membership",
+    "global_microplastics_2004_2019:citation:false_premise",
+    "global_microplastics_2004_2019:coauthorship:network_size",
+    "global_microplastics_2004_2019:coauthorship:highest_occurrence",
+    "global_microplastics_2004_2019:coauthorship:strongest_connection",
+    "global_microplastics_2004_2019:coauthorship:cluster_membership",
+    "global_microplastics_2004_2019:coauthorship:false_premise",
+    "global_microplastics_2004_2019:cocitation:network_size",
+    "global_microplastics_2004_2019:cocitation:highest_occurrence",
+    "global_microplastics_2004_2019:cocitation:strongest_connection",
+    "global_microplastics_2004_2019:cocitation:cluster_membership",
+    "global_microplastics_2004_2019:cocitation:false_premise",
+    "global_microplastics_2004_2019:institution_collaboration:network_size",
+    "global_microplastics_2004_2019:institution_collaboration:highest_occurrence",
+    "global_microplastics_2004_2019:institution_collaboration:strongest_connection",
+    "global_microplastics_2004_2019:institution_collaboration:cluster_membership",
+    "global_microplastics_2004_2019:institution_collaboration:false_premise",
+    "global_microplastics_2004_2019:keyword_cooccurrence:network_size",
+    "global_microplastics_2004_2019:keyword_cooccurrence:highest_occurrence",
+    "global_microplastics_2004_2019:keyword_cooccurrence:strongest_connection",
+    "global_microplastics_2004_2019:keyword_cooccurrence:cluster_membership",
+    "global_microplastics_2004_2019:keyword_cooccurrence:false_premise"
+  ]
+}

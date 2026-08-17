@@ -1,0 +1,15 @@
+{
+  "conflict_count": 33,
+  "input_sha256": {
+    "adjudications": "c159aa39fa2ac0a0cee93aec6866590923f63c9c255f927448fa56c85864b275",
+    "blind_map": "d31265a1be1cd3bd3900772b5b035f421ee5da8ca9bd83b3a1573f30ebc6f9f6",
+    "judge_a": "420943539ceaacf4b82eef0a2caabfa600a47b590320612fb2e98877313b2fba",
+    "judge_b": "64542ad9e00208bd14bd07539352f7292ba632ef067d033e72b5d07e9b35f5ec",
+    "packets_a": "e51fe57841fc681f58e47e1f03b684a2d7d3ba2657f069895741a6d34d2b35fd",
+    "packets_b": "8b859fdd111ed2717c9a5922403f66b6b1d2d7f8e3cb4557afa3c560ffb36eed"
+  },
+  "judges_may_modify_pipeline_or_source_artifacts": false,
+  "packet_count": 174,
+  "role": "read_only_blind_evaluation_and_adjudication",
+  "schema_version": 1
+}

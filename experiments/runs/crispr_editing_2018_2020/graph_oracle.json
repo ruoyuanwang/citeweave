@@ -1,0 +1,1138 @@
+{
+  "condition": "structured_graph_oracle",
+  "metadata": {
+    "dataset_id": "crispr_editing_2018_2020",
+    "purpose": "Benchmark self-test and upper-bound reference; not an LLM result."
+  },
+  "benchmark_version": 1,
+  "items": 30,
+  "predictions_received": 30,
+  "metrics": {
+    "exact_answer_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.0,
+    "atomic_statement_precision": 1.0,
+    "statement_claim_coverage": 1.0,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 1.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "abstention_f1": 1.0
+  },
+  "counts": {
+    "correct": 30,
+    "answered": 24,
+    "incorrect_answered": 0,
+    "statement_claims": 24,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 162,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 24,
+    "abstention": {
+      "tn": 24,
+      "tp": 6
+    }
+  },
+  "by_task": {
+    "cluster_count": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "highest_weighted_degree": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "strongest_edge": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "crispr_editing_2018_2020:G001",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G001",
+        "abstain": false,
+        "answer": {
+          "nodes": 186,
+          "edges": 7508
+        },
+        "evidence_nodes": [
+          "fact:G001",
+          "network:bibliographic_coupling"
+        ],
+        "evidence_edges": [],
+        "statement": "The bibliographic coupling network contains 186 nodes and 7508 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G002",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G002",
+        "abstain": false,
+        "answer": {
+          "id": "doi:10.1042/bsr20200127",
+          "label": "Gene editing and CRISPR in the clinic: current and future perspectives",
+          "weighted_degree": 1028.0,
+          "cluster": 4
+        },
+        "evidence_nodes": [
+          "fact:G002",
+          "network:bibliographic_coupling",
+          "work:doi:10.1042/bsr20200127"
+        ],
+        "evidence_edges": [],
+        "statement": "Gene editing and CRISPR in the clinic: current and future perspectives has the highest weighted degree in the bibliographic coupling network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G003",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G003",
+        "abstain": false,
+        "answer": {
+          "clusters": 9,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G003",
+          "network:bibliographic_coupling",
+          "cluster:bibliographic_coupling:1",
+          "cluster:bibliographic_coupling:2",
+          "cluster:bibliographic_coupling:3",
+          "cluster:bibliographic_coupling:4",
+          "cluster:bibliographic_coupling:5",
+          "cluster:bibliographic_coupling:6",
+          "cluster:bibliographic_coupling:7",
+          "cluster:bibliographic_coupling:8",
+          "cluster:bibliographic_coupling:9"
+        ],
+        "evidence_edges": [],
+        "statement": "The bibliographic coupling network contains 9 detected clusters."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G004",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G004",
+        "abstain": false,
+        "answer": {
+          "source": "doi:10.12688/f1000research.23185.1",
+          "source_label": "Gene editing in dermatology: Harnessing CRISPR for the treatment of cutaneous disease",
+          "target": "doi:10.12688/f1000research.23185.2",
+          "target_label": "Gene editing in dermatology: Harnessing CRISPR for the treatment of cutaneous disease",
+          "weight": 124.0,
+          "association_strength": 0.006993006993006993
+        },
+        "evidence_nodes": [
+          "fact:G004",
+          "network:bibliographic_coupling",
+          "work:doi:10.12688/f1000research.23185.1",
+          "work:doi:10.12688/f1000research.23185.2"
+        ],
+        "evidence_edges": [
+          "edge:bibliographic_coupling:work:doi:10.12688/f1000research.23185.1|work:doi:10.12688/f1000research.23185.2"
+        ],
+        "statement": "The strongest observed bibliographic coupling connection is between Gene editing in dermatology: Harnessing CRISPR for the treatment of cutaneous disease [doi:10.12688/f1000research.23185.1] and Gene editing in dermatology: Harnessing CRISPR for the treatment of cutaneous disease [doi:10.12688/f1000research.23185.2], with weight 124."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G005",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G005",
+        "abstain": false,
+        "answer": {
+          "nodes": 60,
+          "edges": 46
+        },
+        "evidence_nodes": [
+          "fact:G005",
+          "network:citation"
+        ],
+        "evidence_edges": [],
+        "statement": "The citation network contains 60 nodes and 46 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G006",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G006",
+        "abstain": false,
+        "answer": {
+          "id": "doi:10.1038/s41467-018-05843-9",
+          "label": "Cas9 immunity creates challenges for CRISPR gene editing therapies",
+          "weighted_degree": 5.0,
+          "cluster": 2
+        },
+        "evidence_nodes": [
+          "fact:G006",
+          "network:citation",
+          "work:doi:10.1038/s41467-018-05843-9"
+        ],
+        "evidence_edges": [],
+        "statement": "Cas9 immunity creates challenges for CRISPR gene editing therapies has the highest weighted degree in the citation network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G007",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G007",
+        "abstain": false,
+        "answer": {
+          "clusters": 18,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G007",
+          "network:citation",
+          "cluster:citation:1",
+          "cluster:citation:2",
+          "cluster:citation:3",
+          "cluster:citation:4",
+          "cluster:citation:5",
+          "cluster:citation:6",
+          "cluster:citation:7",
+          "cluster:citation:8",
+          "cluster:citation:9",
+          "cluster:citation:10",
+          "cluster:citation:11",
+          "cluster:citation:12",
+          "cluster:citation:13",
+          "cluster:citation:14",
+          "cluster:citation:15",
+          "cluster:citation:16",
+          "cluster:citation:17",
+          "cluster:citation:18"
+        ],
+        "evidence_edges": [],
+        "statement": "The citation network contains 18 detected clusters."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G008",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G008",
+        "abstain": false,
+        "answer": {
+          "source": "doi:10.1002/cncr.32400",
+          "source_label": "CRISPR tool enables next‐generation gene‐editing techniques",
+          "target": "doi:10.1089/crispr.2018.0054",
+          "target_label": "CRISPR-Directed Gene Editing Catalyzes Precise Gene Segment Replacement In Vitro Enabling a Novel Method for Multiplex Site-Directed Mutagenesis",
+          "weight": 1.0,
+          "association_strength": 1.0
+        },
+        "evidence_nodes": [
+          "fact:G008",
+          "network:citation",
+          "work:doi:10.1002/cncr.32400",
+          "work:doi:10.1089/crispr.2018.0054"
+        ],
+        "evidence_edges": [
+          "edge:citation:work:doi:10.1002/cncr.32400|work:doi:10.1089/crispr.2018.0054"
+        ],
+        "statement": "The strongest observed citation connection is between CRISPR tool enables next‐generation gene‐editing techniques and CRISPR-Directed Gene Editing Catalyzes Precise Gene Segment Replacement In Vitro Enabling a Novel Method for Multiplex Site-Directed Mutagenesis, with weight 1."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G009",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G009",
+        "abstain": false,
+        "answer": {
+          "nodes": 56,
+          "edges": 103
+        },
+        "evidence_nodes": [
+          "fact:G009",
+          "network:coauthorship"
+        ],
+        "evidence_edges": [],
+        "statement": "The coauthorship network contains 56 nodes and 103 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G010",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G010",
+        "abstain": false,
+        "answer": {
+          "id": "author:a33953dbd29c5a7d7aaa",
+          "label": "Katy Moffat",
+          "weighted_degree": 16.0,
+          "cluster": 22
+        },
+        "evidence_nodes": [
+          "fact:G010",
+          "network:coauthorship",
+          "author:a33953dbd29c5a7d7aaa"
+        ],
+        "evidence_edges": [],
+        "statement": "Katy Moffat has the highest weighted degree in the coauthorship network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G011",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G011",
+        "abstain": false,
+        "answer": {
+          "clusters": 23,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G011",
+          "network:coauthorship",
+          "cluster:coauthorship:1",
+          "cluster:coauthorship:2",
+          "cluster:coauthorship:3",
+          "cluster:coauthorship:4",
+          "cluster:coauthorship:5",
+          "cluster:coauthorship:6",
+          "cluster:coauthorship:7",
+          "cluster:coauthorship:8",
+          "cluster:coauthorship:9",
+          "cluster:coauthorship:10",
+          "cluster:coauthorship:11",
+          "cluster:coauthorship:12",
+          "cluster:coauthorship:13",
+          "cluster:coauthorship:14",
+          "cluster:coauthorship:15",
+          "cluster:coauthorship:16",
+          "cluster:coauthorship:17",
+          "cluster:coauthorship:18",
+          "cluster:coauthorship:19",
+          "cluster:coauthorship:20",
+          "cluster:coauthorship:21",
+          "cluster:coauthorship:22",
+          "cluster:coauthorship:23"
+        ],
+        "evidence_edges": [],
+        "statement": "The coauthorship network contains 23 detected clusters."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G012",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G012",
+        "abstain": false,
+        "answer": {
+          "source": "author:00aacaa1104b6000e930",
+          "source_label": "Ann Mullally",
+          "target": "author:0dafe6b4fa11e7a3dde3",
+          "target_label": "Nouran S. Abdelfattah",
+          "weight": 2.0,
+          "association_strength": 0.5
+        },
+        "evidence_nodes": [
+          "fact:G012",
+          "network:coauthorship",
+          "author:00aacaa1104b6000e930",
+          "author:0dafe6b4fa11e7a3dde3"
+        ],
+        "evidence_edges": [
+          "edge:coauthorship:author:00aacaa1104b6000e930|author:0dafe6b4fa11e7a3dde3"
+        ],
+        "statement": "The strongest observed coauthorship connection is between Ann Mullally and Nouran S. Abdelfattah, with weight 2."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G013",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G013",
+        "abstain": false,
+        "answer": {
+          "nodes": 640,
+          "edges": 50272
+        },
+        "evidence_nodes": [
+          "fact:G013",
+          "network:cocitation"
+        ],
+        "evidence_edges": [],
+        "statement": "The cocitation network contains 640 nodes and 50272 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G014",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G014",
+        "abstain": false,
+        "answer": {
+          "id": "doi:10.1126/science.1225829",
+          "label": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+          "weighted_degree": 2497.0,
+          "cluster": 1
+        },
+        "evidence_nodes": [
+          "fact:G014",
+          "network:cocitation",
+          "referenced_work:doi:10.1126/science.1225829"
+        ],
+        "evidence_edges": [],
+        "statement": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity has the highest weighted degree in the cocitation network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G015",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G015",
+        "abstain": false,
+        "answer": {
+          "clusters": 6,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G015",
+          "network:cocitation",
+          "cluster:cocitation:1",
+          "cluster:cocitation:2",
+          "cluster:cocitation:3",
+          "cluster:cocitation:4",
+          "cluster:cocitation:5",
+          "cluster:cocitation:6"
+        ],
+        "evidence_edges": [],
+        "statement": "The cocitation network contains 6 detected clusters."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G016",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G016",
+        "abstain": false,
+        "answer": {
+          "source": "doi:10.1126/science.1225829",
+          "source_label": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+          "target": "doi:10.1126/science.1231143",
+          "target_label": "Unresolved reference",
+          "weight": 41.0,
+          "association_strength": 0.009583917718560075
+        },
+        "evidence_nodes": [
+          "fact:G016",
+          "network:cocitation",
+          "referenced_work:doi:10.1126/science.1225829",
+          "referenced_work:doi:10.1126/science.1231143"
+        ],
+        "evidence_edges": [
+          "edge:cocitation:referenced_work:doi:10.1126/science.1225829|referenced_work:doi:10.1126/science.1231143"
+        ],
+        "statement": "The strongest observed cocitation connection is between A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity and Unresolved reference, with weight 41."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G017",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G017",
+        "abstain": false,
+        "answer": {
+          "nodes": 16,
+          "edges": 9
+        },
+        "evidence_nodes": [
+          "fact:G017",
+          "network:institution_collaboration"
+        ],
+        "evidence_edges": [],
+        "statement": "The institution collaboration network contains 16 nodes and 9 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G018",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G018",
+        "abstain": false,
+        "answer": {
+          "id": "institution:4fa0db018deaff7d416b",
+          "label": "University of Delaware",
+          "weighted_degree": 6.0,
+          "cluster": 7
+        },
+        "evidence_nodes": [
+          "fact:G018",
+          "network:institution_collaboration",
+          "institution:4fa0db018deaff7d416b"
+        ],
+        "evidence_edges": [],
+        "statement": "University of Delaware has the highest weighted degree in the institution collaboration network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G019",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G019",
+        "abstain": false,
+        "answer": {
+          "clusters": 8,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G019",
+          "network:institution_collaboration",
+          "cluster:institution_collaboration:1",
+          "cluster:institution_collaboration:2",
+          "cluster:institution_collaboration:3",
+          "cluster:institution_collaboration:4",
+          "cluster:institution_collaboration:5",
+          "cluster:institution_collaboration:6",
+          "cluster:institution_collaboration:7",
+          "cluster:institution_collaboration:8"
+        ],
+        "evidence_edges": [],
+        "statement": "The institution collaboration network contains 8 detected clusters."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G020",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G020",
+        "abstain": false,
+        "answer": {
+          "source": "institution:4fa0db018deaff7d416b",
+          "source_label": "University of Delaware",
+          "target": "institution:72bfdbe1f2cebf2205f2",
+          "target_label": "Gene Editing Institute",
+          "weight": 2.0,
+          "association_strength": 0.16666666666666666
+        },
+        "evidence_nodes": [
+          "fact:G020",
+          "network:institution_collaboration",
+          "institution:4fa0db018deaff7d416b",
+          "institution:72bfdbe1f2cebf2205f2"
+        ],
+        "evidence_edges": [
+          "edge:institution_collaboration:institution:4fa0db018deaff7d416b|institution:72bfdbe1f2cebf2205f2"
+        ],
+        "statement": "The strongest observed institution collaboration connection is between University of Delaware and Gene Editing Institute, with weight 2."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G021",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G021",
+        "abstain": false,
+        "answer": {
+          "nodes": 316,
+          "edges": 1074
+        },
+        "evidence_nodes": [
+          "fact:G021",
+          "network:keyword_cooccurrence"
+        ],
+        "evidence_edges": [],
+        "statement": "The keyword cooccurrence network contains 316 nodes and 1074 edges."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G022",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G022",
+        "abstain": false,
+        "answer": {
+          "id": "gene editing",
+          "label": "gene editing",
+          "weighted_degree": 179.0,
+          "cluster": 10
+        },
+        "evidence_nodes": [
+          "fact:G022",
+          "network:keyword_cooccurrence",
+          "keyword:gene editing"
+        ],
+        "evidence_edges": [],
+        "statement": "gene editing has the highest weighted degree in the keyword cooccurrence network."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G023",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G023",
+        "abstain": false,
+        "answer": {
+          "clusters": 20,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G023",
+          "network:keyword_cooccurrence",
+          "cluster:keyword_cooccurrence:1",
+          "cluster:keyword_cooccurrence:2",
+          "cluster:keyword_cooccurrence:3",
+          "cluster:keyword_cooccurrence:4",
+          "cluster:keyword_cooccurrence:5",
+          "cluster:keyword_cooccurrence:6",
+          "cluster:keyword_cooccurrence:7",
+          "cluster:keyword_cooccurrence:8",
+          "cluster:keyword_cooccurrence:9",
+          "cluster:keyword_cooccurrence:10",
+          "cluster:keyword_cooccurrence:11",
+          "cluster:keyword_cooccurrence:12",
+          "cluster:keyword_cooccurrence:13",
+          "cluster:keyword_cooccurrence:14",
+          "cluster:keyword_cooccurrence:15",
+          "cluster:keyword_cooccurrence:16",
+          "cluster:keyword_cooccurrence:17",
+          "cluster:keyword_cooccurrence:18",
+          "cluster:keyword_cooccurrence:19",
+          "cluster:keyword_cooccurrence:20"
+        ],
+        "evidence_edges": [],
+        "statement": "The keyword cooccurrence network contains 20 detected clusters."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:G024",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:G024",
+        "abstain": false,
+        "answer": {
+          "source": "gene",
+          "source_label": "gene",
+          "target": "gene editing",
+          "target_label": "gene editing",
+          "weight": 28.0,
+          "association_strength": 0.017241379310344827
+        },
+        "evidence_nodes": [
+          "fact:G024",
+          "network:keyword_cooccurrence",
+          "keyword:gene",
+          "keyword:gene editing"
+        ],
+        "evidence_edges": [
+          "edge:keyword_cooccurrence:keyword:gene|keyword:gene editing"
+        ],
+        "statement": "The strongest observed keyword cooccurrence connection is between gene and gene editing, with weight 28."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:bibliographic_coupling",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:bibliographic_coupling",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:bibliographic_coupling"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:citation",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:citation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:citation"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:coauthorship",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:coauthorship",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:coauthorship"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:cocitation",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:cocitation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:cocitation"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:institution_collaboration",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:institution_collaboration",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:institution_collaboration"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "crispr_editing_2018_2020:U:keyword_cooccurrence",
+      "dataset_id": "crispr_editing_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "crispr_editing_2018_2020:U:keyword_cooccurrence",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:keyword_cooccurrence"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    }
+  ]
+}

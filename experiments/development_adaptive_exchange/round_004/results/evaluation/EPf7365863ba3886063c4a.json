@@ -1,0 +1,11 @@
+{
+  "packet_id": "EPf7365863ba3886063c4a",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 0.99,
+  "reason": "The candidate exactly matches the canonical graph evidence and answer contract: the displayed bibliographic-coupling network contains 72 nodes and 210 links, with no unsupported additions.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:edge_count",
+    "bibliographic_coupling:fact:node_count"
+  ]
+}

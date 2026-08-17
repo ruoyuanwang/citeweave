@@ -1,0 +1,20 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "digital_twins_healthcare_2012_2024",
+  "condition": "figure_vlm",
+  "role": "cross_model_extension",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "packet_sha256": "0696891515fc35de1282f768774e872c008f8a4a2cdbed775c0bfd7339dd55cf",
+  "output_sha256": "c4eb3bffe5783d1b04fd0be91b9385f78585d54e7c615a3aa588945e2f6a8b16",
+  "items": 6,
+  "item_ids": [
+    "digital_twins_healthcare_2012_2024:bibliographic_coupling:network_size",
+    "digital_twins_healthcare_2012_2024:citation:network_size",
+    "digital_twins_healthcare_2012_2024:coauthorship:network_size",
+    "digital_twins_healthcare_2012_2024:cocitation:network_size",
+    "digital_twins_healthcare_2012_2024:institution_collaboration:network_size",
+    "digital_twins_healthcare_2012_2024:keyword_cooccurrence:network_size"
+  ]
+}

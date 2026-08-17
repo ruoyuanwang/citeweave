@@ -28,7 +28,6 @@ class CrossrefConnector(BaseConnector):
             "filter": ",".join(filters),
             "rows": 1000,
             "cursor": "*",
-            "cursor-max": 1000,
         }
         if self.mailto:
             params["mailto"] = self.mailto

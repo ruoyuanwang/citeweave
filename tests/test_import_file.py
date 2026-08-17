@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 from citeweave.connectors.import_file import ImportFileConnector
@@ -70,3 +71,36 @@ def test_import_ris_and_bibtex(tmp_path: Path) -> None:
             connector.close()
         assert result.manifest.complete
         assert result.manifest.unique_records == 1
+
+
+def test_import_native_crossref_jsonl_preserves_references(tmp_path: Path) -> None:
+    source = tmp_path / "crossref.jsonl"
+    row = {
+        "DOI": "10.1000/native",
+        "title": ["Graph retrieval study"],
+        "abstract": "Graph retrieval benchmark.",
+        "published": {"date-parts": [[2024, 3, 1]]},
+        "type": "journal-article",
+        "reference": [{"DOI": "10.1000/reference"}],
+    }
+    source.write_text(json.dumps(row) + "\n", encoding="utf-8")
+    protocol = SearchProtocol(
+        title="Native Crossref import",
+        keywords=["graph", "retrieval"],
+        query_mode="all",
+        year_from=2022,
+        year_to=2025,
+        source=SourceName.import_file,
+        input_file=source,
+        input_format="jsonl",
+    )
+    connector = ImportFileConnector(tmp_path / "raw-jsonl")
+    try:
+        result = connector.acquire(protocol)
+    finally:
+        connector.close()
+
+    assert result.manifest.complete
+    tables = Canonicalizer(SourceName.import_file).canonicalize(result.records)
+    assert tables.works.iloc[0]["doi"] == "10.1000/native"
+    assert tables.references.iloc[0]["cited_work_id"] == "doi:10.1000/reference"

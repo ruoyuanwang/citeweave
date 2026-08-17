@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "packet_sha256": "f5876d8add33a846652640d7418609bfc3cda3ca2ac37d684dfb8029b4d40b2e",
+  "dataset_id": "machine_learning_climate_change_2008_2022",
+  "generator_role": "codex_visual_subagent",
+  "visible_only": true,
+  "results": [
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 193
+      },
+      "explanation": "The figure subtitle visibly states '72 nodes · 193 links'."
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:citation:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 60,
+        "links": 59
+      },
+      "explanation": "The figure subtitle visibly states '60 nodes · 59 links'."
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:coauthorship:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 60,
+        "links": 120
+      },
+      "explanation": "The figure subtitle visibly states '60 nodes · 120 links'."
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:cocitation:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 199
+      },
+      "explanation": "The figure subtitle visibly states '72 nodes · 199 links'."
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:institution_collaboration:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 205
+      },
+      "explanation": "The figure subtitle visibly states '72 nodes · 205 links'."
+    },
+    {
+      "item_id": "machine_learning_climate_change_2008_2022:keyword_cooccurrence:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 192
+      },
+      "explanation": "The figure subtitle visibly states '72 nodes · 192 links'."
+    }
+  ]
+}

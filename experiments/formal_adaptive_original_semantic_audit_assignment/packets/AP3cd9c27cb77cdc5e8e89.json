@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "audit_packet_id": "AP3cd9c27cb77cdc5e8e89",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "canonical_evidence": {
+    "answer_contract": {
+      "links": "integer",
+      "nodes": "integer"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:edge_count",
+        "bibliographic_coupling:fact:node_count"
+      ],
+      "entities": [
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:edge_count",
+          "network": "bibliographic_coupling",
+          "object": 193,
+          "object_type": "integer",
+          "predicate": "displayed_edge_count",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:fact:node_count",
+          "network": "bibliographic_coupling",
+          "object": 72,
+          "object_type": "integer",
+          "predicate": "displayed_node_count",
+          "subject": "network:bibliographic_coupling"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "3b4b02750cbd91b560ccadf612e3214b949db447d269d3ed4a533fb7ac08bfc6"
+    },
+    "question": "How many nodes and links are displayed in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"links\":193,\"nodes\":72},\"explanation\":\"The context provides explicit facts: the bibliographic_coupling network has a displayed_node_count of 72 and a displayed_edge_count of 193, which correspond to nodes and links respectively.\",\"item_id\":\"machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size\"}",
+  "evaluation_decision": "pass",
+  "evaluation_confidence": 0.99,
+  "evaluation_reason": "The candidate returns exactly 72 displayed nodes and 193 displayed links.",
+  "evaluation_evidence_ids": [
+    "bibliographic_coupling:fact:edge_count",
+    "bibliographic_coupling:fact:node_count"
+  ],
+  "content_sha256": "d93504895b4a108946b8ccb5516ed0de337c0ae5bbb175324e8be92629b7cacb"
+}

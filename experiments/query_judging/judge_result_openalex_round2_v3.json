@@ -1,0 +1,48 @@
+{
+  "judge_role": "codex_query_judge",
+  "rubric_version": "query-judge-v3",
+  "prompt_sha256": "85cc2c8f23f0456a25ec2f6a66c6ea854a914e35c3a888a184ca4781fc1624f0",
+  "packet_sha256": "46bfdde1f232313499b606fa9f286e517d675fb6e2d29b133fb93e39a0ab54f3",
+  "decisions": [
+    {
+      "id": "gnn_drug_discovery_2017_2023",
+      "decision": "accept",
+      "reason": "The AND of two unambiguous concept phrases directly scopes graph neural network work to drug discovery without imposing an extra application subtype."
+    },
+    {
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "decision": "accept",
+      "reason": "CRISPR and extracellular vesicles are distinct, unambiguous concepts whose AND intersection matches the requested association while retaining delivery, detection, and editing studies."
+    },
+    {
+      "id": "machine_learning_climate_change_2008_2022",
+      "decision": "accept",
+      "reason": "The two established concept phrases joined by AND directly cover machine-learning applications across the broad climate-change research domain."
+    },
+    {
+      "id": "climate_change_risks_1990_2021",
+      "decision": "reject",
+      "reason": "Under full-text AND matching, the generic word risk can co-occur with climate change in unrelated discussions and does not reliably constrain records to climate-change risks."
+    },
+    {
+      "id": "digital_twins_healthcare_2012_2024",
+      "decision": "accept",
+      "reason": "Digital twin and healthcare form a clear topical intersection covering the requested healthcare applications, and the explicit 2012-2023 protocol range is valid."
+    },
+    {
+      "id": "plant_heat_drought_2008_2021",
+      "decision": "accept",
+      "reason": "The AND of heat stress and drought stress identifies the combined-stress literature, with drought stress providing a strong plant-research scope without requiring a narrow plant-response phrase."
+    },
+    {
+      "id": "gene_editing_als_2004_2024",
+      "decision": "accept",
+      "reason": "Gene editing and the unabbreviated disease name are unambiguous, and their AND intersection covers gene-editing approaches relevant to ALS across the explicit 2004-2023 range."
+    },
+    {
+      "id": "global_microplastics_2004_2019",
+      "decision": "accept",
+      "reason": "Microplastics is an unambiguous field term, and for a global field-wide mapping no geographic phrase or additional concept filter is required."
+    }
+  ]
+}

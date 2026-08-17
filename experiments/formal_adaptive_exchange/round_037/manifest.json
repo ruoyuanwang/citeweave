@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "blind_exchange": true,
+  "condition_identity_visible": false,
+  "packets": [
+    {
+      "packet_id": "EP00fda58abb505a5f4eeb",
+      "kind": "evaluation",
+      "packet_sha256": "fea76dc096666ba8c44ba184a77816a7e2cf06b75b2ad8091a8f6a100f519ca4"
+    },
+    {
+      "packet_id": "FP5bbb808374030a78fc41",
+      "kind": "feedback",
+      "packet_sha256": "518a36f52ba7b89ae21edbf48b23d96209b0686c37c761a7c5455ef81f66203d"
+    },
+    {
+      "packet_id": "FP7d3e9d95b206a9fa6e22",
+      "kind": "feedback",
+      "packet_sha256": "41d7e7c10c5bd76bd2f7f0401c3fd1bd08e19da03262a8f2b773d72864685a95"
+    }
+  ],
+  "result_directories": {
+    "feedback": "results/feedback",
+    "evaluation": "results/evaluation"
+  }
+}

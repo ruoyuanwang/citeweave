@@ -1,0 +1,1 @@
+{"packet_id":"EP4eb1444e982ffc122ab2","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The returned 72 nodes and 219 links exactly match the displayed network-size facts.","evidence_ids":["bibliographic_coupling:fact:edge_count","bibliographic_coupling:fact:node_count"]}

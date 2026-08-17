@@ -1,0 +1,20 @@
+{
+  "run_id": "formal_v2_nonthinking_20260806",
+  "dataset_id": "machine_learning_climate_change_2008_2022",
+  "condition": "figure_vlm",
+  "role": "cross_model_extension",
+  "generator": "independent_codex_visual_subagent",
+  "main_inference": false,
+  "visible_only": true,
+  "packet_sha256": "276ec326ded553fcb9ad848af01337367feeb99f8a9f11285b2d82531c848e8e",
+  "output_sha256": "a3e44defa106d4c3540f27aaa51527efdf2ce1e30f946df7d1080a7ba9606991",
+  "items": 6,
+  "item_ids": [
+    "machine_learning_climate_change_2008_2022:bibliographic_coupling:network_size",
+    "machine_learning_climate_change_2008_2022:citation:network_size",
+    "machine_learning_climate_change_2008_2022:coauthorship:network_size",
+    "machine_learning_climate_change_2008_2022:cocitation:network_size",
+    "machine_learning_climate_change_2008_2022:institution_collaboration:network_size",
+    "machine_learning_climate_change_2008_2022:keyword_cooccurrence:network_size"
+  ]
+}

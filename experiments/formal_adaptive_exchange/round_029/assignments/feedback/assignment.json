@@ -1,0 +1,157 @@
+{
+  "assignment_role": "constrained_llm_human_proxy",
+  "condition_identity_visible": false,
+  "instructions": [
+    "Act only as the constrained LLM-based Human Proxy in the formal human-machine interaction experiment, and only for the packet supplied.",
+    "Use only anonymous_candidate, risk_notice, canonical_evidence, and allowed_evidence_ids visible in that packet. Do not use hidden information, outside knowledge, another packet, or the complete source artifact.",
+    "Address only risk_notice.flagged_text. Do not independently inspect or change any unflagged part of the artifact.",
+    "Return accept, reject, or revise with exactly one local replace_span, delete_span, or append_caveat operation. Any target and replacement must each be at most 500 characters; a replace/delete target must lie inside the exact flagged_text.",
+    "Do not browse, retrieve, call APIs or tools, rerun analysis, inspect the workspace, change code/query/corpus/evidence, or rewrite the full artifact.",
+    "If the visible evidence is insufficient, reject or append a short caveat; never invent a correction."
+  ],
+  "items": [
+    {
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\assignments\\feedback\\packets\\FP4da8a28a3cf943fd73be.json",
+      "packet_id": "FP4da8a28a3cf943fd73be",
+      "packet_sha256": "09415707ee2bad41f1acc523aed37c2223d5529ef06f8e0fb31d14435017a5ea",
+      "result_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\results\\feedback\\FP4da8a28a3cf943fd73be.json"
+    },
+    {
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\assignments\\feedback\\packets\\FPa8383ec653f5b57b2dc6.json",
+      "packet_id": "FPa8383ec653f5b57b2dc6",
+      "packet_sha256": "f1aa723f46a9f0ebc406373df8586591a7661f3658c13703e037eb19a5cf1030",
+      "result_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\results\\feedback\\FPa8383ec653f5b57b2dc6.json"
+    },
+    {
+      "packet_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\assignments\\feedback\\packets\\FPe1dbb88a8851179105a5.json",
+      "packet_id": "FPe1dbb88a8851179105a5",
+      "packet_sha256": "e1083ef5db99b2f0afdc4da0f2841a5a0c42080714a2b1412f00eff2130ad8db",
+      "result_file": "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\results\\feedback\\FPe1dbb88a8851179105a5.json"
+    }
+  ],
+  "may_directly_modify_candidate": false,
+  "may_directly_update_feedback_memory": false,
+  "may_modify_pipeline_or_source_artifacts": false,
+  "may_read_unlisted_workspace_files": false,
+  "may_return_one_scoped_edit": true,
+  "only_listed_packets_are_visible": true,
+  "output_contract": "Return exactly one JSON object per listed packet at its unique result_file. Do not create any other file.",
+  "packet_kind": "feedback",
+  "result_schema": {
+    "$defs": {
+      "HumanProxyEdit": {
+        "additionalProperties": false,
+        "description": "One local edit available to a person reviewing the visible artifact.\n\nThe proxy cannot replace an entire report.  It may only operate on an exact\nvisible span or append a short caveat, matching the controls exposed by the\nexperimental review interface.",
+        "properties": {
+          "action": {
+            "enum": [
+              "replace_span",
+              "delete_span",
+              "append_caveat"
+            ],
+            "title": "Action",
+            "type": "string"
+          },
+          "replacement_text": {
+            "anyOf": [
+              {
+                "maxLength": 500,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Replacement Text"
+          },
+          "target_text": {
+            "anyOf": [
+              {
+                "maxLength": 500,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Target Text"
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "title": "HumanProxyEdit",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "confidence": {
+        "maximum": 1.0,
+        "minimum": 0.0,
+        "title": "Confidence",
+        "type": "number"
+      },
+      "decision": {
+        "enum": [
+          "accept",
+          "revise",
+          "reject"
+        ],
+        "title": "Decision",
+        "type": "string"
+      },
+      "evidence_ids": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Evidence Ids",
+        "type": "array"
+      },
+      "judge_id": {
+        "const": "feedback",
+        "default": "feedback",
+        "title": "Judge Id",
+        "type": "string"
+      },
+      "packet_id": {
+        "pattern": "^FP[0-9a-f]{20}$",
+        "title": "Packet Id",
+        "type": "string"
+      },
+      "reason": {
+        "minLength": 1,
+        "title": "Reason",
+        "type": "string"
+      },
+      "suggested_revision": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/HumanProxyEdit"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null
+      }
+    },
+    "required": [
+      "packet_id",
+      "decision",
+      "confidence",
+      "reason"
+    ],
+    "title": "FeedbackResult",
+    "type": "object"
+  },
+  "schema_version": 1,
+  "validated_result_eligible_for_feedback_memory": true,
+  "write_scope": [
+    "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\results\\feedback\\FP4da8a28a3cf943fd73be.json",
+    "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\results\\feedback\\FPa8383ec653f5b57b2dc6.json",
+    "D:\\project\\bibagent\\experiments\\formal_adaptive_exchange\\round_029\\results\\feedback\\FPe1dbb88a8851179105a5.json"
+  ]
+}

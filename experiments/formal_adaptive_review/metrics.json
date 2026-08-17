@@ -1,0 +1,44 @@
+{
+  "protocol_version": "formal-adaptive-v3-scoped-human-proxy",
+  "manifest_sha256": "a7013f454acbb52c365dea0cd2f754514c263d13aea8c82691a632f0ffff1b35",
+  "metrics": {
+    "always_review": {
+      "items": 48,
+      "review_requests": 48,
+      "review_request_rate": 1.0,
+      "quality_passes": 38,
+      "final_quality_pass_rate": 0.7916666666666666,
+      "auto_accepted_items": 0,
+      "unsafe_auto_accepts": 0,
+      "unsafe_auto_accept_rate": null,
+      "unsafe_auto_accept_rate_denominator": "auto_accepted_items",
+      "feedback_memory_records": 48
+    },
+    "static_review": {
+      "items": 48,
+      "review_requests": 32,
+      "review_request_rate": 0.6666666666666666,
+      "quality_passes": 38,
+      "final_quality_pass_rate": 0.7916666666666666,
+      "auto_accepted_items": 16,
+      "unsafe_auto_accepts": 1,
+      "unsafe_auto_accept_rate": 0.0625,
+      "unsafe_auto_accept_rate_denominator": "auto_accepted_items",
+      "feedback_memory_records": 32
+    },
+    "adaptive_review": {
+      "items": 48,
+      "review_requests": 32,
+      "review_request_rate": 0.6666666666666666,
+      "quality_passes": 38,
+      "final_quality_pass_rate": 0.7916666666666666,
+      "auto_accepted_items": 16,
+      "unsafe_auto_accepts": 0,
+      "unsafe_auto_accept_rate": 0.0,
+      "unsafe_auto_accept_rate_denominator": "auto_accepted_items",
+      "feedback_memory_records": 32
+    }
+  },
+  "evaluation_feedback_leakage": false,
+  "computed_at": "2026-08-06T19:39:57.914765+00:00"
+}

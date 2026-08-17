@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "run_id": "formal_v2_nonthinking_20260806",
+  "datasets": [
+    "gnn_drug_discovery_2017_2023",
+    "crispr_extracellular_vesicles_2015_2022"
+  ],
+  "comparisons": {
+    "graph_vs_no": 53,
+    "graph_vs_flat": 53,
+    "graph_vs_figure": 11
+  },
+  "figure_vlm_role": "cross_model_extension"
+}

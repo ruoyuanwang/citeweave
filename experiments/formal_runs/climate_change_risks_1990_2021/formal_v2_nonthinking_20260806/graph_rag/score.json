@@ -1,0 +1,762 @@
+{
+  "benchmark_version": 1,
+  "items": 30,
+  "predictions_received": 30,
+  "metrics": {
+    "exact_answer_accuracy": 0.9,
+    "schema_valid_rate": 0.9,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.1111111111111111,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.09999999999999998,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 0.5,
+    "abstention_recall": 1.0,
+    "abstention_f1": 0.6666666666666666
+  },
+  "counts": {
+    "correct": 27,
+    "answered": 27,
+    "incorrect_answered": 3,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 27,
+    "abstention": {
+      "tn": 24,
+      "fp": 3,
+      "tp": 3
+    }
+  },
+  "by_task": {
+    "cluster_membership": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_occurrence": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_connection": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 0.5,
+      "schema_valid_rate": 0.5,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 0.8,
+      "schema_valid_rate": 0.8,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 0.8,
+      "schema_valid_rate": 0.8,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 0.8,
+      "schema_valid_rate": 0.8,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 197
+        },
+        "explanation": "The context provides two facts: the displayed node count is 72 and the displayed edge count is 197 for the bibliographic coupling network. These directly answer the question about nodes and links."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:highest_occurrence",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Atmospheric composition…"
+        },
+        "explanation": "The context states that the node with DOI 10.1016/j.atmosenv.2009.08.021 is the highest occurrence node in the bibliographic coupling network, and its display label is 'Atmospheric composition…'."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:strongest_connection",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Atmospheric composition…",
+          "target_label": "Tropospheric ozone and i…",
+          "weight": 91.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that the node with label 'Atmospheric composition…' has the strongest connection to the node with label 'Tropospheric ozone and i…'. The weight of the edge between them is given as 91.0."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:cluster_membership",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Atmospheric composition…",
+          "cluster": 8
+        },
+        "explanation": "The context provides a relationship where the node with DOI 10.1016/j.atmosenv.2009.08.021 has a cluster value of 8 and a display label 'Atmospheric composition…'. Therefore, the node labeled 'Atmospheric composition…' belongs to cluster 8."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:false_premise",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:bibliographic_coupling:false_premise",
+        "abstain": "true",
+        "answer": "",
+        "explanation": "The question asks for the cluster of 'CiteWeave absent benchmark node', but the provided context only states that the bibliographic coupling network does not contain a visible label for this node. There is no information about any clusters or the node's membership, so the premise is false and the answer cannot be determined."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:citation:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:citation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 60,
+          "links": 55
+        },
+        "explanation": "The context provides two relationships: one states the displayed node count is 60, and the other states the displayed edge count is 55. These directly answer the question about the number of nodes and links in the citation network."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:citation:highest_occurrence",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "citation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:citation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "The next generation of s…"
+        },
+        "explanation": "The context states that the node with DOI 10.1038/nature08823 has the highest occurrence in the citation network, as indicated by the 'highest_occurrence_node' relationship. Its display label is 'The next generation of s…', which is the visible label for that node."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:citation:strongest_connection",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "citation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:citation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Communicating climate ch…",
+          "target_label": "Climate Change 2007: Imp…",
+          "weight": 1.0
+        },
+        "explanation": "The fact 'citation:fact:strongest_connection' explicitly states that the strongest connection is from 'citation:node:doi:10.1002/wcc.11' to 'citation:node:openalex:W1905429483'. The edge weight is given as 1.0, and the display labels are 'Communicating climate ch…' and 'Climate Change 2007: Imp…' respectively."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:citation:cluster_membership",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "citation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:citation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Climate Change 2007: Imp…",
+          "cluster": 1
+        },
+        "explanation": "The context provides a relationship where the node 'citation:node:openalex:W1905429483' has a 'cluster' predicate with object 1, and a 'display_label' predicate with object 'Climate Change 2007: Imp…'. Therefore, the labeled node belongs to cluster 1."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:citation:false_premise",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:citation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question asks for the cluster containing 'CiteWeave absent benchmark node' in the citation network, but the provided context only states that the citation network does not contain a visible label for this node. Since the node is absent, it cannot belong to any cluster, making the premise false."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:coauthorship:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:coauthorship:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 60,
+          "links": 149
+        },
+        "explanation": "The context provides explicit facts: the coauthorship network has a displayed node count of 60 and a displayed edge count of 149, which correspond to nodes and links respectively."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:coauthorship:highest_occurrence",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "coauthorship",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:coauthorship:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "AGB Poore"
+        },
+        "explanation": "The context specifies that the node with the highest occurrence in the coauthorship network has the display label 'AGB Poore' and an occurrence value of 5808.0. This is derived from the relationships indicating the highest occurrence node and its label."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:coauthorship:strongest_connection",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "coauthorship",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:coauthorship:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Andrea Critto",
+          "target_label": "Silvia Torresan",
+          "weight": 48.0
+        },
+        "explanation": "The fact 'coauthorship:fact:strongest_connection' explicitly states that Andrea Critto has the strongest connection to Silvia Torresan. The edge weight between them is given as 48.0 in 'coauthorship:edge:0001:weight'. Therefore, this pair has the strongest displayed connection with weight 48.0."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:coauthorship:cluster_membership",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "coauthorship",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:coauthorship:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "AGB Poore",
+          "cluster": 6
+        },
+        "explanation": "The context provides a relationship where the node with display label 'AGB Poore' has a cluster value of 6. This directly answers the question about which cluster contains the labeled node."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:coauthorship:false_premise",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:coauthorship:false_premise",
+        "abstain": "true",
+        "answer": "",
+        "explanation": "The context states that the coauthorship network does not contain any visible label for the target node, meaning 'CiteWeave absent benchmark node' is not present in the network. Therefore, the question is based on a false premise, and we must abstain."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:cocitation:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:cocitation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 192
+        },
+        "explanation": "The context provides a displayed_node_count of 72 and a displayed_edge_count of 192 for the cocitation network, directly answering the question."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:cocitation:highest_occurrence",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "cocitation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:cocitation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W4285719527"
+        },
+        "explanation": "The context states that the node 'cocitation:node:openalex:W4285719527' has the highest occurrence in the cocitation network, with a display label of 'openalex:W4285719527' and 19138.0 occurrences."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:cocitation:strongest_connection",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "cocitation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:cocitation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "openalex:W2126975094",
+          "target_label": "openalex:W4285719527",
+          "weight": 1260.0
+        },
+        "explanation": "The context includes a fact stating that the strongest connection is between openalex:W2126975094 and openalex:W4285719527, with a weight of 1260.0. The display labels for these nodes are 'openalex:W2126975094' and 'openalex:W4285719527' respectively."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:cocitation:cluster_membership",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "cocitation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:cocitation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W4285719527",
+          "cluster": 3
+        },
+        "explanation": "The context includes a relationship with atom_id 'cocitation:node:openalex:W4285719527:cluster' that explicitly states the subject 'cocitation:node:openalex:W4285719527' has predicate 'cluster' with object 3. The label is given as 'openalex:W4285719527' in the display_label relationship."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:cocitation:false_premise",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:cocitation:false_premise",
+        "abstain": "true",
+        "answer": "",
+        "explanation": "The question asks for the cluster containing 'CiteWeave absent benchmark node', but the context explicitly states that the cocitation network does not contain any visible label for this node (contains_visible_label is false). Since the node is absent from the network, it cannot be assigned to any cluster, making the premise false and the question unanswerable."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:institution_collaboration:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:institution_collaboration:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 192
+        },
+        "explanation": "The context provides two facts: the displayed node count is 72 and the displayed edge count is 192 for the institution_collaboration network. Therefore, the network has 72 nodes and 192 links."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:institution_collaboration:highest_occurrence",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "institution_collaboration",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:institution_collaboration:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Chinese Academy of Scienc…"
+        },
+        "explanation": "The context states that the node with the highest occurrence in the institution_collaboration network is institution_collaboration:node:ror:034t30j35, which has a display label of 'Chinese Academy of Scienc…' and 3468.0 occurrences."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:institution_collaboration:strongest_connection",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "institution_collaboration",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:institution_collaboration:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Chinese Academy of Scienc…",
+          "target_label": "University of Chinese Aca…",
+          "weight": 1268.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that the strongest connection is between the two institutions, and the edge weight is given as 1268.0. The display labels are provided as 'Chinese Academy of Scienc…' and 'University of Chinese Aca…'."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:institution_collaboration:cluster_membership",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "institution_collaboration",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:institution_collaboration:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Centre National de la Rec…",
+          "cluster": 5
+        },
+        "explanation": "The context provides a relationship stating that the node with label 'Centre National de la Rec…' has a cluster value of 5. This directly answers the question about which cluster contains that labeled node."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:institution_collaboration:false_premise",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:institution_collaboration:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The question asks about a cluster containing 'CiteWeave absent benchmark node', but the provided context only states that the institution_collaboration network does not contain any visible labels. Since the node is not present in the network, the premise is false, and the question cannot be answered."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:network_size",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 196
+        },
+        "explanation": "The context provides two facts: the displayed node count is 72 and the displayed edge count is 196 for the keyword_cooccurrence network. These directly answer the question about the number of nodes and links."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:highest_occurrence",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Climate change"
+        },
+        "explanation": "The context states that the node with the highest occurrence in the keyword_cooccurrence network is 'keyword_cooccurrence:node:Climate change', and its display label is 'Climate change'."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:strongest_connection",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Biology",
+          "target_label": "Ecology",
+          "weight": 41854.0
+        },
+        "explanation": "The fact 'strongest_connection' directly states that Biology has the strongest connection to Ecology. The edge weight between them is given as 41854.0. Both labels are visible in the context."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:cluster_membership",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Climate change",
+          "cluster": 2
+        },
+        "explanation": "The context includes a relationship where the node 'Climate change' has a 'cluster' predicate with object 2, indicating it belongs to cluster 2. The display label confirms the node's visible label is 'Climate change'."
+      }
+    },
+    {
+      "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:false_premise",
+      "dataset_id": "climate_change_risks_1990_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_change_risks_1990_2021:keyword_cooccurrence:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The context states that the network does not contain a visible label for 'CiteWeave absent benchmark node', so the premise is false. Therefore, the question cannot be answered."
+      }
+    }
+  ],
+  "formal_metadata": {
+    "dataset_id": "climate_change_risks_1990_2021",
+    "condition": "graph_rag",
+    "run_id": "formal_v2_nonthinking_20260806",
+    "run_manifest_sha256": "2754762d3fe5659a0942be50fbb55d4a007aa7c751a2da40d9f5a0df26ba825e",
+    "checkpoint_sha256": "fb888d4f9fdb54707edecfe2dbf773f8d33d4f4114ca289161c531495d625c6f",
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate",
+      "abstention_f1"
+    ]
+  }
+}

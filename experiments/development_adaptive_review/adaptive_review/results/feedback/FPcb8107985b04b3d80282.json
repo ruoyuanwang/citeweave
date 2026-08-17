@@ -1,0 +1,12 @@
+{
+  "packet_id": "FPcb8107985b04b3d80282",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 0.99,
+  "reason": "The candidate reports cluster 4 for the same visible labeled node, exactly matching the graph evidence.",
+  "suggested_revision": null,
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:cluster",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label"
+  ]
+}

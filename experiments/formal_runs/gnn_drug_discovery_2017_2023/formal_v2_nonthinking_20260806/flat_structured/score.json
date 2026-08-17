@@ -1,0 +1,740 @@
+{
+  "benchmark_version": 1,
+  "items": 29,
+  "predictions_received": 29,
+  "metrics": {
+    "exact_answer_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.0,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "abstention_f1": 1.0
+  },
+  "counts": {
+    "correct": 29,
+    "answered": 23,
+    "incorrect_answered": 0,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 23,
+    "abstention": {
+      "tn": 23,
+      "tp": 6
+    }
+  },
+  "by_task": {
+    "cluster_membership": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_occurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_connection": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 4,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 210
+        },
+        "explanation": "The supplied material includes two facts: one stating the displayed node count is 72, and another stating the displayed edge count is 210. These directly answer the question about the bibliographic coupling network size."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:highest_occurrence",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Graph Neural Networks an…"
+        },
+        "explanation": "The context states that the node with DOI 10.3389/fgene.2021.690049 has the highest occurrence in the bibliographic coupling network, and its display label is 'Graph Neural Networks an…'."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:strongest_connection",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "An effective self-superv…",
+          "target_label": "BatmanNet: bi-branch mas…",
+          "weight": 38.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that the strongest connection is between the two nodes with labels 'An effective self-superv…' and 'BatmanNet: bi-branch mas…'. The edge weight is given as 38.0 in the edge weight row."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:cluster_membership",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Graph Neural Networks an…",
+          "cluster": 4
+        },
+        "explanation": "The supplied material includes a row where the subject is the node with DOI 10.3389/fgene.2021.690049, the predicate is 'cluster', and the object is the integer 4. Another row confirms that the display label for this node is 'Graph Neural Networks an…'. Therefore, the node belongs to cluster 4."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:bibliographic_coupling:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The context states that the bibliographic coupling network does not contain any visible labels, and the question asks about a specific node 'CiteWeave absent benchmark node' which is not present in the provided material. Since the network lacks visible labels and the node is not mentioned, the premise is false, so we abstain."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:citation:network_size",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:citation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 5,
+          "links": 3
+        },
+        "explanation": "The context provides a displayed_node_count of 5 and a displayed_edge_count of 3 for the citation network, which correspond to nodes and links respectively."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:citation:highest_occurrence",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "citation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:citation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Graph Neural Networks an…"
+        },
+        "explanation": "The context states that the node with the highest occurrence in the citation network is citation:node:doi:10.3389/fgene.2021.690049, which has a display label of 'Graph Neural Networks an…' and an occurrence value of 401.0."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:citation:strongest_connection",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "citation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:citation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "An effective self-superv…",
+          "target_label": "Self-Supervised Graph Tr…",
+          "weight": 1.0
+        },
+        "explanation": "The context includes a fact stating that the strongest connection is between the nodes with labels 'An effective self-superv…' and 'Self-Supervised Graph Tr…', and the edge between them has a weight of 1.0."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:citation:cluster_membership",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "citation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:citation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "GraphDTA: Predicting dru…",
+          "cluster": 1
+        },
+        "explanation": "The context provides a row where the subject 'citation:node:openalex:W3015490653' has predicate 'cluster' with object 1, and another row where the same subject has predicate 'display_label' with object 'GraphDTA: Predicting dru…'. Therefore, the node with that label belongs to cluster 1."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:citation:false_premise",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:citation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the citation network does not contain any visible labels, so there is no cluster information available. The question asks about a specific node that is absent from the network, making it unanswerable."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:coauthorship:network_size",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:coauthorship:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 60,
+          "links": 127
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 60 and displayed_edge_count is 127 for the coauthorship network."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:coauthorship:strongest_connection",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "coauthorship",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:coauthorship:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Tingjun Hou",
+          "target_label": "Dongsheng Cao",
+          "weight": 9.0
+        },
+        "explanation": "The fact 'coauthorship:fact:strongest_connection' explicitly states that Tingjun Hou has the strongest connection to Dongsheng Cao. The edge weight between them is given as 9.0 in 'coauthorship:edge:0001:weight'. Their display labels are provided in the node label rows."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:coauthorship:cluster_membership",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "coauthorship",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:coauthorship:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Tingjun Hou",
+          "cluster": 2
+        },
+        "explanation": "The supplied material includes a row with atom_id 'coauthorship:node:orcid:0000-0001-7227-2580:cluster' that explicitly states the node with ORCID 0000-0001-7227-2580 belongs to cluster 2. Another row confirms the display label for that node is 'Tingjun Hou'. Therefore, the labeled node 'Tingjun Hou' is in cluster 2."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:coauthorship:false_premise",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:coauthorship:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The context states that the coauthorship network does not contain any visible labels, and the question refers to a node 'CiteWeave absent benchmark node' which is not present in the provided material. Since the node is absent and no cluster information is available, the premise is false, requiring abstention."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:cocitation:network_size",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:cocitation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 194
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 72 and displayed_edge_count is 194 for the cocitation network."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:cocitation:highest_occurrence",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "cocitation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:cocitation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W2594183968"
+        },
+        "explanation": "The context states that the highest occurrence node in the cocitation network is cocitation:node:openalex:W2594183968, with a display label of 'openalex:W2594183968' and 111 occurrences."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:cocitation:strongest_connection",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "cocitation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:cocitation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "openalex:W2290847742",
+          "target_label": "openalex:W3100157108",
+          "weight": 77.0
+        },
+        "explanation": "The context includes a fact stating that the strongest connection is between openalex:W2290847742 and openalex:W3100157108, and the edge weight for this connection is given as 77.0. The display labels for both nodes are their OpenAlex IDs."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:cocitation:cluster_membership",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "cocitation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:cocitation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W2594183968",
+          "cluster": 1
+        },
+        "explanation": "The context provides a row with atom_id 'cocitation:node:openalex:W2594183968:cluster' where the predicate is 'cluster' and the object is 1, indicating that the node 'openalex:W2594183968' belongs to cluster 1. The label is confirmed by the row with predicate 'display_label' and object 'openalex:W2594183968'."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:cocitation:false_premise",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:cocitation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the cocitation network does not contain any visible label for 'CiteWeave absent benchmark node', meaning the node is not present in the network. Therefore, the question is based on a false premise, and we must abstain."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:network_size",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 71,
+          "links": 138
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 71 and displayed_edge_count is 138 for the institution_collaboration network."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:highest_occurrence",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "institution_collaboration",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Chinese Academy of Scienc…"
+        },
+        "explanation": "The context states that the highest occurrence node in the institution_collaboration network is institution_collaboration:node:ror:034t30j35, which has the display label 'Chinese Academy of Scienc…' and an occurrence value of 24.0."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:strongest_connection",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "institution_collaboration",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Chinese Academy of Scienc…",
+          "target_label": "University of Chinese Aca…",
+          "weight": 14.0
+        },
+        "explanation": "The fact 'strongest_connection_to' explicitly identifies the pair (Chinese Academy of Scienc…, University of Chinese Aca…) as the strongest connection. The edge weight for this pair is given as 14.0 in the row with atom_id 'institution_collaboration:edge:0001:weight'."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:cluster_membership",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "institution_collaboration",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Chinese Academy of Scienc…",
+          "cluster": 1
+        },
+        "explanation": "The context provides a row where the subject 'institution_collaboration:node:ror:034t30j35' has predicate 'cluster' with object 1, and another row where the same subject has predicate 'display_label' with object 'Chinese Academy of Scienc…'. Therefore, the node labeled 'Chinese Academy of Scienc…' belongs to cluster 1."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:false_premise",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:institution_collaboration:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The context states that the institution_collaboration network does not contain any visible labels, and the question refers to a node 'CiteWeave absent benchmark node' which is not mentioned in the provided material. Therefore, the premise is false and the question cannot be answered."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:network_size",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 198
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 72 and displayed_edge_count is 198 for the keyword_cooccurrence network."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:highest_occurrence",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Computer science"
+        },
+        "explanation": "The context states that the node with the highest occurrence in the keyword_cooccurrence network is 'keyword_cooccurrence:node:Computer science', which has a display label of 'Computer science' and an occurrence value of 437.0."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:strongest_connection",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Artificial intelligence",
+          "target_label": "Computer science",
+          "weight": 393.0
+        },
+        "explanation": "The fact 'keyword_cooccurrence:fact:strongest_connection' explicitly states that 'Artificial intelligence' has the strongest connection to 'Computer science'. The weight of this connection is given as 393.0 in the edge weight row."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:cluster_membership",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Computer science",
+          "cluster": 1
+        },
+        "explanation": "The context provides a row where the subject 'keyword_cooccurrence:node:Computer science' has predicate 'cluster' with object 1, indicating that the node labeled 'Computer science' belongs to cluster 1."
+      }
+    },
+    {
+      "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:false_premise",
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "gnn_drug_discovery_2017_2023:keyword_cooccurrence:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The supplied material states that the keyword_cooccurrence network does not contain any visible labels, and there is no mention of a 'CiteWeave absent benchmark node' or any clusters. Therefore, the premise is false, and the question cannot be answered."
+      }
+    }
+  ],
+  "formal_metadata": {
+    "dataset_id": "gnn_drug_discovery_2017_2023",
+    "condition": "flat_structured",
+    "run_id": "formal_v2_nonthinking_20260806",
+    "run_manifest_sha256": "1d26740f36a63f4fdc006869eade8298eba156a8508b32b93e136881e7b2af1a",
+    "checkpoint_sha256": "7019ba9efe8300023833e90c1c489cc35118f7ae00935b4c7f5041eeaa5c68f8",
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate",
+      "abstention_f1"
+    ]
+  }
+}

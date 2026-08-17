@@ -1,0 +1,539 @@
+{
+  "condition": "graph_rag",
+  "metadata": {
+    "dataset_id": "rag_graph_2022_2025",
+    "model": "qwen2.5-1.5b-q4km",
+    "base_url": "http://127.0.0.1:8091/v1",
+    "temperature": 0.0,
+    "max_tokens": 192,
+    "seed": 42,
+    "workers": 2,
+    "items": 5,
+    "elapsed_seconds": 24.310463699999673,
+    "raw_records": [
+      {
+        "item_id": "rag_graph_2022_2025:G001",
+        "condition": "graph_rag",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G001\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the bibliographic_coupling network?\nGRAPH_CONTEXT:\n{\"retrieved_graph_facts\": [{\"fact_id\": \"G001\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"network_size\", \"statement\": \"The bibliographic coupling network contains 112 nodes and 3838 edges.\", \"value\": {\"nodes\": 112, \"edges\": 3838}, \"evidence_nodes\": [\"fact:G001\", \"network:bibliographic_coupling\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G002\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"highest_weighted_degree\", \"statement\": \"Graph Retrieval-Augmented Generation: A Survey has the highest weighted degree in the bibliographic coupling network.\", \"value\": {\"id\": \"doi:10.1145/3777378\", \"label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"weighted_degree\": 201.0, \"cluster\": 2}, \"evidence_nodes\": [\"fact:G002\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G003\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"cluster_count\", \"statement\": \"The bibliographic coupling network contains 5 detected clusters.\", \"value\": {\"clusters\": 5, \"cluster_ids\": [1, 2, 3, 4, 5]}, \"evidence_nodes\": [\"fact:G003\", \"network:bibliographic_coupling\", \"cluster:bibliographic_coupling:1\", \"cluster:bibliographic_coupling:2\", \"cluster:bibliographic_coupling:3\", \"cluster:bibliographic_coupling:4\", \"cluster:bibliographic_coupling:5\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G004\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"strongest_edge\", \"statement\": \"The strongest observed bibliographic coupling connection is between Graph Retrieval-Augmented Generation: A Survey and Review of Graph Retrieval-Augmented Generation Research, with weight 25.\", \"value\": {\"source\": \"doi:10.1145/3777378\", \"source_label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"target\": \"doi:10.12677/airr.2025.142040\", \"target_label\": \"Review of Graph Retrieval-Augmented Generation Research\", \"weight\": 25.0, \"association_strength\": 0.004528985507246377}, \"evidence_nodes\": [\"fact:G004\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\", \"work:doi:10.12677/airr.2025.142040\"], \"evidence_edges\": [\"edge:bibliographic_coupling:work:doi:10.1145/3777378|work:doi:10.12677/airr.2025.142040\"], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}]}"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"item_id\": \"rag_graph_2022_2025:G001\", \"abstain\": false, \"answer\": {\"nodes\": 112, \"edges\": 3838}, \"evidence_nodes\": [\"G001\", \"network:bibliographic_coupling\"], \"evidence_edges\": [], \"statement\": \"The bibliographic coupling network contains 112 nodes and 3838 edges.\"}"
+              }
+            }
+          ],
+          "created": 1785958600,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 100,
+            "prompt_tokens": 1013,
+            "total_tokens": 1113,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "id": "chatcmpl-SZXn3kvC1yFCgyXPmQWYOEb4AgT1zyEm",
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1013,
+            "prompt_ms": 3217.616,
+            "prompt_per_token_ms": 3.1763237907206316,
+            "prompt_per_second": 314.82936434925733,
+            "predicted_n": 100,
+            "predicted_ms": 8874.505,
+            "predicted_per_token_ms": 88.74504999999999,
+            "predicted_per_second": 11.268234115592927
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G001",
+          "abstain": false,
+          "answer": {
+            "nodes": 112,
+            "edges": 3838
+          },
+          "evidence_nodes": [
+            "G001",
+            "network:bibliographic_coupling"
+          ],
+          "evidence_edges": [],
+          "statement": "The bibliographic coupling network contains 112 nodes and 3838 edges."
+        }
+      },
+      {
+        "item_id": "rag_graph_2022_2025:G002",
+        "condition": "graph_rag",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G002\nTASK_TYPE: highest_weighted_degree\nANSWER_OBJECT_SCHEMA: {\"id\": string, \"weighted_degree\": number}; extra copied fields are allowed\nQUESTION: Which node has the highest weighted degree in the bibliographic_coupling network?\nGRAPH_CONTEXT:\n{\"retrieved_graph_facts\": [{\"fact_id\": \"G001\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"network_size\", \"statement\": \"The bibliographic coupling network contains 112 nodes and 3838 edges.\", \"value\": {\"nodes\": 112, \"edges\": 3838}, \"evidence_nodes\": [\"fact:G001\", \"network:bibliographic_coupling\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G002\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"highest_weighted_degree\", \"statement\": \"Graph Retrieval-Augmented Generation: A Survey has the highest weighted degree in the bibliographic coupling network.\", \"value\": {\"id\": \"doi:10.1145/3777378\", \"label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"weighted_degree\": 201.0, \"cluster\": 2}, \"evidence_nodes\": [\"fact:G002\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G003\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"cluster_count\", \"statement\": \"The bibliographic coupling network contains 5 detected clusters.\", \"value\": {\"clusters\": 5, \"cluster_ids\": [1, 2, 3, 4, 5]}, \"evidence_nodes\": [\"fact:G003\", \"network:bibliographic_coupling\", \"cluster:bibliographic_coupling:1\", \"cluster:bibliographic_coupling:2\", \"cluster:bibliographic_coupling:3\", \"cluster:bibliographic_coupling:4\", \"cluster:bibliographic_coupling:5\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G004\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"strongest_edge\", \"statement\": \"The strongest observed bibliographic coupling connection is between Graph Retrieval-Augmented Generation: A Survey and Review of Graph Retrieval-Augmented Generation Research, with weight 25.\", \"value\": {\"source\": \"doi:10.1145/3777378\", \"source_label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"target\": \"doi:10.12677/airr.2025.142040\", \"target_label\": \"Review of Graph Retrieval-Augmented Generation Research\", \"weight\": 25.0, \"association_strength\": 0.004528985507246377}, \"evidence_nodes\": [\"fact:G004\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\", \"work:doi:10.12677/airr.2025.142040\"], \"evidence_edges\": [\"edge:bibliographic_coupling:work:doi:10.1145/3777378|work:doi:10.12677/airr.2025.142040\"], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}]}"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"id\": \"doi:10.1145/3777378\", \"weighted_degree\": 201.0, \"cluster\": 2}"
+              }
+            }
+          ],
+          "created": 1785958595,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 40,
+            "prompt_tokens": 1023,
+            "total_tokens": 1063,
+            "prompt_tokens_details": {
+              "cached_tokens": 69
+            }
+          },
+          "id": "chatcmpl-lKJMsOTzuL6LiEprI8PmF8NPGSlRHtxY",
+          "timings": {
+            "cache_n": 69,
+            "prompt_n": 954,
+            "prompt_ms": 5842.595,
+            "prompt_per_token_ms": 6.124313417190776,
+            "prompt_per_second": 163.28360942355238,
+            "predicted_n": 40,
+            "predicted_ms": 1219.598,
+            "predicted_per_token_ms": 30.48995,
+            "predicted_per_second": 32.79769235436595
+          }
+        },
+        "parsed_prediction": {
+          "id": "doi:10.1145/3777378",
+          "weighted_degree": 201.0,
+          "cluster": 2,
+          "item_id": "rag_graph_2022_2025:G002"
+        }
+      },
+      {
+        "item_id": "rag_graph_2022_2025:G003",
+        "condition": "graph_rag",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G003\nTASK_TYPE: cluster_count\nANSWER_OBJECT_SCHEMA: {\"clusters\": integer}; extra copied fields are allowed\nQUESTION: How many clusters are detected in the bibliographic_coupling network?\nGRAPH_CONTEXT:\n{\"retrieved_graph_facts\": [{\"fact_id\": \"G001\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"network_size\", \"statement\": \"The bibliographic coupling network contains 112 nodes and 3838 edges.\", \"value\": {\"nodes\": 112, \"edges\": 3838}, \"evidence_nodes\": [\"fact:G001\", \"network:bibliographic_coupling\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G002\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"highest_weighted_degree\", \"statement\": \"Graph Retrieval-Augmented Generation: A Survey has the highest weighted degree in the bibliographic coupling network.\", \"value\": {\"id\": \"doi:10.1145/3777378\", \"label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"weighted_degree\": 201.0, \"cluster\": 2}, \"evidence_nodes\": [\"fact:G002\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G003\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"cluster_count\", \"statement\": \"The bibliographic coupling network contains 5 detected clusters.\", \"value\": {\"clusters\": 5, \"cluster_ids\": [1, 2, 3, 4, 5]}, \"evidence_nodes\": [\"fact:G003\", \"network:bibliographic_coupling\", \"cluster:bibliographic_coupling:1\", \"cluster:bibliographic_coupling:2\", \"cluster:bibliographic_coupling:3\", \"cluster:bibliographic_coupling:4\", \"cluster:bibliographic_coupling:5\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G004\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"strongest_edge\", \"statement\": \"The strongest observed bibliographic coupling connection is between Graph Retrieval-Augmented Generation: A Survey and Review of Graph Retrieval-Augmented Generation Research, with weight 25.\", \"value\": {\"source\": \"doi:10.1145/3777378\", \"source_label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"target\": \"doi:10.12677/airr.2025.142040\", \"target_label\": \"Review of Graph Retrieval-Augmented Generation Research\", \"weight\": 25.0, \"association_strength\": 0.004528985507246377}, \"evidence_nodes\": [\"fact:G004\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\", \"work:doi:10.12677/airr.2025.142040\"], \"evidence_edges\": [\"edge:bibliographic_coupling:work:doi:10.1145/3777378|work:doi:10.12677/airr.2025.142040\"], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}]}"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"item_id\": \"rag_graph_2022_2025:G003\", \"abstain\": false, \"answer\": {\"clusters\": 5}, \"evidence_nodes\": [\"fact:G003\", \"network:bibliographic_coupling\", \"cluster:bibliographic_coupling:1\", \"cluster:bibliographic_coupling:2\", \"cluster:bibliographic_coupling:3\", \"cluster:bibliographic_coupling:4\", \"cluster:bibliographic_coupling:5\"], \"evidence_edges\": [], \"statement\": \"The bibliographic coupling network contains 5 detected clusters.\"}"
+              }
+            }
+          ],
+          "created": 1785958605,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 133,
+            "prompt_tokens": 1013,
+            "total_tokens": 1146,
+            "prompt_tokens_details": {
+              "cached_tokens": 120
+            }
+          },
+          "id": "chatcmpl-CPN3dl78dEcxfgiUm6RWNDANdsOFN0Vh",
+          "timings": {
+            "cache_n": 120,
+            "prompt_n": 893,
+            "prompt_ms": 2918.3,
+            "prompt_per_token_ms": 3.267973124300112,
+            "prompt_per_second": 306.00006853305,
+            "predicted_n": 133,
+            "predicted_ms": 7097.572,
+            "predicted_per_token_ms": 53.3652030075188,
+            "predicted_per_second": 18.7388025088016
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G003",
+          "abstain": false,
+          "answer": {
+            "clusters": 5
+          },
+          "evidence_nodes": [
+            "fact:G003",
+            "network:bibliographic_coupling",
+            "cluster:bibliographic_coupling:1",
+            "cluster:bibliographic_coupling:2",
+            "cluster:bibliographic_coupling:3",
+            "cluster:bibliographic_coupling:4",
+            "cluster:bibliographic_coupling:5"
+          ],
+          "evidence_edges": [],
+          "statement": "The bibliographic coupling network contains 5 detected clusters."
+        }
+      },
+      {
+        "item_id": "rag_graph_2022_2025:G004",
+        "condition": "graph_rag",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G004\nTASK_TYPE: strongest_edge\nANSWER_OBJECT_SCHEMA: {\"source\": string, \"target\": string, \"weight\": number}; extra copied fields are allowed\nQUESTION: Which pair has the strongest connection in the bibliographic_coupling network?\nGRAPH_CONTEXT:\n{\"retrieved_graph_facts\": [{\"fact_id\": \"G001\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"network_size\", \"statement\": \"The bibliographic coupling network contains 112 nodes and 3838 edges.\", \"value\": {\"nodes\": 112, \"edges\": 3838}, \"evidence_nodes\": [\"fact:G001\", \"network:bibliographic_coupling\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G002\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"highest_weighted_degree\", \"statement\": \"Graph Retrieval-Augmented Generation: A Survey has the highest weighted degree in the bibliographic coupling network.\", \"value\": {\"id\": \"doi:10.1145/3777378\", \"label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"weighted_degree\": 201.0, \"cluster\": 2}, \"evidence_nodes\": [\"fact:G002\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G003\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"cluster_count\", \"statement\": \"The bibliographic coupling network contains 5 detected clusters.\", \"value\": {\"clusters\": 5, \"cluster_ids\": [1, 2, 3, 4, 5]}, \"evidence_nodes\": [\"fact:G003\", \"network:bibliographic_coupling\", \"cluster:bibliographic_coupling:1\", \"cluster:bibliographic_coupling:2\", \"cluster:bibliographic_coupling:3\", \"cluster:bibliographic_coupling:4\", \"cluster:bibliographic_coupling:5\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G004\", \"network\": \"bibliographic_coupling\", \"fact_type\": \"strongest_edge\", \"statement\": \"The strongest observed bibliographic coupling connection is between Graph Retrieval-Augmented Generation: A Survey and Review of Graph Retrieval-Augmented Generation Research, with weight 25.\", \"value\": {\"source\": \"doi:10.1145/3777378\", \"source_label\": \"Graph Retrieval-Augmented Generation: A Survey\", \"target\": \"doi:10.12677/airr.2025.142040\", \"target_label\": \"Review of Graph Retrieval-Augmented Generation Research\", \"weight\": 25.0, \"association_strength\": 0.004528985507246377}, \"evidence_nodes\": [\"fact:G004\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\", \"work:doi:10.12677/airr.2025.142040\"], \"evidence_edges\": [\"edge:bibliographic_coupling:work:doi:10.1145/3777378|work:doi:10.12677/airr.2025.142040\"], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}]}"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "length",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"item_id\": \"rag_graph_2022_2025:G004\", \"abstain\": false, \"answer\": {\"source\": \"doi:10.1145/3777378\", \"target\": \"doi:10.12677/airr.2025.142040\", \"weight\": 25.0}, \"evidence_nodes\": [\"fact:G004\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\", \"work:doi:10.12677/airr.2025.142040\"], \"evidence_edges\": [\"edge:bibliographic_coupling:work:doi:10.1145/37"
+              }
+            }
+          ],
+          "created": 1785958612,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 192,
+            "prompt_tokens": 1024,
+            "total_tokens": 1216,
+            "prompt_tokens_details": {
+              "cached_tokens": 120
+            }
+          },
+          "id": "chatcmpl-2jijBsvBaO197c7KLOK5WSlzmhGeP0co",
+          "timings": {
+            "cache_n": 120,
+            "prompt_n": 904,
+            "prompt_ms": 2947.261,
+            "prompt_per_token_ms": 3.260244469026549,
+            "prompt_per_second": 306.7254647620282,
+            "predicted_n": 192,
+            "predicted_ms": 8952.625,
+            "predicted_per_token_ms": 46.628255208333336,
+            "predicted_per_second": 21.446223872886442
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G004",
+          "abstain": false,
+          "answer": null,
+          "evidence_nodes": [],
+          "evidence_edges": [],
+          "statement": "{\"item_id\": \"rag_graph_2022_2025:G004\", \"abstain\": false, \"answer\": {\"source\": \"doi:10.1145/3777378\", \"target\": \"doi:10.12677/airr.2025.142040\", \"weight\": 25.0}, \"evidence_nodes\": [\"fact:G004\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\", \"work:doi:10.12677/airr.2025.142040\"], \"evidence_edges\": [\"edge:bibliographic_coupling:work:doi:10.1145/37"
+        }
+      },
+      {
+        "item_id": "rag_graph_2022_2025:G005",
+        "condition": "graph_rag",
+        "request": {
+          "model": "qwen2.5-1.5b-q4km",
+          "temperature": 0.0,
+          "max_tokens": 192,
+          "seed": 42,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Answer one bibliometric graph question. Return JSON only with keys: item_id (string), abstain (boolean), answer (object or null), evidence_nodes (array of strings), evidence_edges (array of strings), and statement (string). Never invent evidence IDs. If the supplied context cannot establish the answer, set abstain=true, answer=null, and use empty evidence arrays. When graph context establishes an answer, copy the matching fact value and evidence IDs exactly."
+            },
+            {
+              "role": "user",
+              "content": "ITEM_ID: rag_graph_2022_2025:G005\nTASK_TYPE: network_size\nANSWER_OBJECT_SCHEMA: {\"nodes\": integer, \"edges\": integer}\nQUESTION: How many nodes and edges are in the citation network?\nGRAPH_CONTEXT:\n{\"retrieved_graph_facts\": [{\"fact_id\": \"G005\", \"network\": \"citation\", \"fact_type\": \"network_size\", \"statement\": \"The citation network contains 19 nodes and 12 edges.\", \"value\": {\"nodes\": 19, \"edges\": 12}, \"evidence_nodes\": [\"fact:G005\", \"network:citation\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G006\", \"network\": \"citation\", \"fact_type\": \"highest_weighted_degree\", \"statement\": \"CLIP-Based Adaptive Graph Attention Network for Large-Scale Unsupervised Multi-Modal Hashing Retrieval has the highest weighted degree in the citation network.\", \"value\": {\"id\": \"doi:10.3390/s23073439\", \"label\": \"CLIP-Based Adaptive Graph Attention Network for Large-Scale Unsupervised Multi-Modal Hashing Retrieval\", \"weighted_degree\": 2.0, \"cluster\": 7}, \"evidence_nodes\": [\"fact:G006\", \"network:citation\", \"work:doi:10.3390/s23073439\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G007\", \"network\": \"citation\", \"fact_type\": \"cluster_count\", \"statement\": \"The citation network contains 8 detected clusters.\", \"value\": {\"clusters\": 8, \"cluster_ids\": [1, 2, 3, 4, 5, 6, 7, 8]}, \"evidence_nodes\": [\"fact:G007\", \"network:citation\", \"cluster:citation:1\", \"cluster:citation:2\", \"cluster:citation:3\", \"cluster:citation:4\", \"cluster:citation:5\", \"cluster:citation:6\", \"cluster:citation:7\", \"cluster:citation:8\"], \"evidence_edges\": [], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}, {\"fact_id\": \"G008\", \"network\": \"citation\", \"fact_type\": \"strongest_edge\", \"statement\": \"The strongest observed citation connection is between Joint-Modal Graph Convolutional Hashing for unsupervised cross-modal retrieval and CLIP-Based Adaptive Graph Attention Network for Large-Scale Unsupervised Multi-Modal Hashing Retrieval, with weight 1.\", \"value\": {\"source\": \"doi:10.1016/j.neucom.2024.127911\", \"source_label\": \"Joint-Modal Graph Convolutional Hashing for unsupervised cross-modal retrieval\", \"target\": \"doi:10.3390/s23073439\", \"target_label\": \"CLIP-Based Adaptive Graph Attention Network for Large-Scale Unsupervised Multi-Modal Hashing Retrieval\", \"weight\": 1.0, \"association_strength\": 1.0}, \"evidence_nodes\": [\"fact:G008\", \"network:citation\", \"work:doi:10.1016/j.neucom.2024.127911\", \"work:doi:10.3390/s23073439\"], \"evidence_edges\": [\"edge:citation:work:doi:10.1016/j.neucom.2024.127911|work:doi:10.3390/s23073439\"], \"caveat\": \"This fact describes the frozen corpus and network parameterization; it does not imply causality or research quality.\"}]}"
+            }
+          ]
+        },
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"item_id\": \"rag_graph_2022_2025:G005\", \"abstain\": false, \"answer\": {\"nodes\": 19, \"edges\": 12}, \"evidence_nodes\": [\"G005\", \"network:citation\"], \"evidence_edges\": [], \"statement\": \"The citation network contains 19 nodes and 12 edges.\"}"
+              }
+            }
+          ],
+          "created": 1785958611,
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "system_fingerprint": "b9632-acd79d603",
+          "object": "chat.completion",
+          "usage": {
+            "completion_tokens": 89,
+            "prompt_tokens": 1026,
+            "total_tokens": 1115,
+            "prompt_tokens_details": {
+              "cached_tokens": 120
+            }
+          },
+          "id": "chatcmpl-pvTicXn8SvxeWo6Qgfzy4iJrrssTm7Cw",
+          "timings": {
+            "cache_n": 120,
+            "prompt_n": 906,
+            "prompt_ms": 2963.787,
+            "prompt_per_token_ms": 3.2712880794701986,
+            "prompt_per_second": 305.689983794382,
+            "predicted_n": 89,
+            "predicted_ms": 2836.48,
+            "predicted_per_token_ms": 31.87056179775281,
+            "predicted_per_second": 31.376917870036102
+          }
+        },
+        "parsed_prediction": {
+          "item_id": "rag_graph_2022_2025:G005",
+          "abstain": false,
+          "answer": {
+            "nodes": 19,
+            "edges": 12
+          },
+          "evidence_nodes": [
+            "G005",
+            "network:citation"
+          ],
+          "evidence_edges": [],
+          "statement": "The citation network contains 19 nodes and 12 edges."
+        }
+      }
+    ]
+  },
+  "benchmark_version": 1,
+  "items": 5,
+  "predictions_received": 5,
+  "metrics": {
+    "exact_answer_accuracy": 0.6,
+    "schema_valid_rate": 0.6,
+    "unsupported_claim_rate": 0.4,
+    "evidence_path_validity": 0.2,
+    "evidence_precision": 0.8181818181818182,
+    "evidence_recall": 0.47368421052631576,
+    "abstention_precision": 0.0,
+    "abstention_recall": 0.0,
+    "abstention_f1": 0.0
+  },
+  "counts": {
+    "correct": 3,
+    "answered": 5,
+    "incorrect_answered": 2,
+    "evidence_tp": 9,
+    "evidence_fp": 2,
+    "evidence_fn": 10,
+    "evidence_path_eligible_answers": 5,
+    "abstention": {
+      "tn": 5
+    }
+  },
+  "by_task": {
+    "cluster_count": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "highest_weighted_degree": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 2,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_edge": {
+      "items": 1,
+      "accuracy": 0.0,
+      "schema_valid_rate": 0.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 4,
+      "accuracy": 0.5,
+      "schema_valid_rate": 0.5,
+      "evidence_path_validity": 0.25
+    },
+    "citation": {
+      "items": 1,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "rag_graph_2022_2025:G001",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G001",
+        "abstain": false,
+        "answer": {
+          "nodes": 112,
+          "edges": 3838
+        },
+        "evidence_nodes": [
+          "G001",
+          "network:bibliographic_coupling"
+        ],
+        "evidence_edges": [],
+        "statement": "The bibliographic coupling network contains 112 nodes and 3838 edges."
+      }
+    },
+    {
+      "item_id": "rag_graph_2022_2025:G002",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "id": "doi:10.1145/3777378",
+        "weighted_degree": 201.0,
+        "cluster": 2,
+        "item_id": "rag_graph_2022_2025:G002"
+      }
+    },
+    {
+      "item_id": "rag_graph_2022_2025:G003",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G003",
+        "abstain": false,
+        "answer": {
+          "clusters": 5
+        },
+        "evidence_nodes": [
+          "fact:G003",
+          "network:bibliographic_coupling",
+          "cluster:bibliographic_coupling:1",
+          "cluster:bibliographic_coupling:2",
+          "cluster:bibliographic_coupling:3",
+          "cluster:bibliographic_coupling:4",
+          "cluster:bibliographic_coupling:5"
+        ],
+        "evidence_edges": [],
+        "statement": "The bibliographic coupling network contains 5 detected clusters."
+      }
+    },
+    {
+      "item_id": "rag_graph_2022_2025:G004",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": false,
+      "correct": false,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G004",
+        "abstain": false,
+        "answer": null,
+        "evidence_nodes": [],
+        "evidence_edges": [],
+        "statement": "{\"item_id\": \"rag_graph_2022_2025:G004\", \"abstain\": false, \"answer\": {\"source\": \"doi:10.1145/3777378\", \"target\": \"doi:10.12677/airr.2025.142040\", \"weight\": 25.0}, \"evidence_nodes\": [\"fact:G004\", \"network:bibliographic_coupling\", \"work:doi:10.1145/3777378\", \"work:doi:10.12677/airr.2025.142040\"], \"evidence_edges\": [\"edge:bibliographic_coupling:work:doi:10.1145/37"
+      }
+    },
+    {
+      "item_id": "rag_graph_2022_2025:G005",
+      "dataset_id": "rag_graph_2022_2025",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "prediction": {
+        "item_id": "rag_graph_2022_2025:G005",
+        "abstain": false,
+        "answer": {
+          "nodes": 19,
+          "edges": 12
+        },
+        "evidence_nodes": [
+          "G005",
+          "network:citation"
+        ],
+        "evidence_edges": [],
+        "statement": "The citation network contains 19 nodes and 12 edges."
+      }
+    }
+  ]
+}

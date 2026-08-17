@@ -1,0 +1,196 @@
+schema_version: '1.0'
+status: query_judge_pending
+generated_at: '2026-08-06T05:36:32.845010+00:00'
+human_reference_registry_sha256: 280eedb52fcf76055d2343c646f63c4143f79bea7c11d6399b4dc533eb8461bf
+generator:
+  started_at: '2026-08-06T05:36:25.472803+00:00'
+  finished_at: '2026-08-06T05:36:32.843738+00:00'
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  prompt_sha256: af74e2b823e619e40c20c545baf406a58fa55e8539e25cff8fc5008f87201e5a
+  request_sha256: 37550374f47e76c6fc8b1164915cb58caaa3691a0d70b1601d3accac01f35bdc
+  response_sha256: 9b78cb2c6e7396de00aac38e3ed431d926aca35f17ea28066caf5aab600b48a5
+  usage:
+    prompt_tokens: 551
+    completion_tokens: 479
+    total_tokens: 1030
+    prompt_tokens_details:
+      cached_tokens: 0
+    prompt_cache_hit_tokens: 0
+    prompt_cache_miss_tokens: 551
+  response_id: 4593313c-8226-4dcf-a158-66190ac29e9d
+  response_archive: experiments/query_generation/9b78cb2c6e7396de00aac38e3ed431d926aca35f17ea28066caf5aab600b48a5.txt
+full_data_definition: All raw records returned by the frozen Crossref query.bibliographic
+  protocol over the complete natural-year interval are exhaustively paginated; all
+  unique source identities are retained in the deduplicated analysis corpus.
+datasets:
+- id: gnn_drug_discovery_2017_2023
+  role: development
+  topic: Graph neural networks for drug discovery
+  human_reference_id: gnn_drug_discovery_2017_2023
+  source: crossref
+  title: 'Independent full-year Crossref census: Graph neural networks for drug discovery'
+  keywords:
+  - graph neural networks
+  - drug discovery
+  - molecular property prediction
+  query_mode: all
+  year_from: 2017
+  year_to: 2023
+  document_types:
+  - journal-article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Focuses on the core application of GNNs in predicting molecular
+    properties for drug discovery.
+  query_status: query_judge_pending
+- id: crispr_extracellular_vesicles_2015_2022
+  role: development
+  topic: CRISPR-related technologies associated with extracellular vesicles
+  human_reference_id: crispr_extracellular_vesicles_2015_2022
+  source: crossref
+  title: 'Independent full-year Crossref census: CRISPR-related technologies associated
+    with extracellular vesicles'
+  keywords:
+  - CRISPR
+  - extracellular vesicles
+  - gene editing
+  query_mode: all
+  year_from: 2015
+  year_to: 2022
+  document_types:
+  - journal-article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Captures the intersection of CRISPR technologies and extracellular
+    vesicles in gene editing contexts.
+  query_status: query_judge_pending
+- id: machine_learning_climate_change_2008_2022
+  role: locked
+  topic: Machine learning applications in climate change research
+  human_reference_id: machine_learning_climate_change_2008_2022
+  source: crossref
+  title: 'Independent full-year Crossref census: Machine learning applications in
+    climate change research'
+  keywords:
+  - machine learning
+  - climate change
+  - climate modeling
+  query_mode: all
+  year_from: 2008
+  year_to: 2022
+  document_types:
+  - journal-article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Targets machine learning methods applied to climate modeling and
+    change analysis.
+  query_status: query_judge_pending
+- id: climate_change_risks_1990_2021
+  role: locked
+  topic: Climate change risks
+  human_reference_id: climate_change_risks_1990_2021
+  source: crossref
+  title: 'Independent full-year Crossref census: Climate change risks'
+  keywords:
+  - climate change
+  - risk assessment
+  - vulnerability
+  query_mode: all
+  year_from: 1990
+  year_to: 2021
+  document_types:
+  - journal-article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Addresses risk assessment and vulnerability aspects of climate
+    change.
+  query_status: query_judge_pending
+- id: digital_twins_healthcare_2012_2024
+  role: locked
+  topic: Digital twins in healthcare
+  human_reference_id: digital_twins_healthcare_2012_2024
+  source: crossref
+  title: 'Independent full-year Crossref census: Digital twins in healthcare'
+  keywords:
+  - digital twin
+  - healthcare
+  - personalized medicine
+  query_mode: all
+  year_from: 2012
+  year_to: 2023
+  document_types:
+  - journal-article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Emphasizes digital twin applications in personalized healthcare
+    and medicine.
+  query_status: query_judge_pending
+- id: plant_heat_drought_2008_2021
+  role: locked
+  topic: Plant responses to high temperature and drought
+  human_reference_id: plant_heat_drought_2008_2021
+  source: crossref
+  title: 'Independent full-year Crossref census: Plant responses to high temperature
+    and drought'
+  keywords:
+  - heat stress
+  - drought stress
+  - plant response
+  query_mode: all
+  year_from: 2008
+  year_to: 2021
+  document_types:
+  - journal-article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Combines the two abiotic stresses and plant physiological responses.
+  query_status: query_judge_pending
+- id: gene_editing_als_2004_2024
+  role: locked
+  topic: Gene editing and amyotrophic lateral sclerosis
+  human_reference_id: gene_editing_als_2004_2024
+  source: crossref
+  title: 'Independent full-year Crossref census: Gene editing and amyotrophic lateral
+    sclerosis'
+  keywords:
+  - gene editing
+  - amyotrophic lateral sclerosis
+  - CRISPR
+  query_mode: all
+  year_from: 2004
+  year_to: 2023
+  document_types:
+  - journal-article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Links gene editing techniques, particularly CRISPR, to ALS research.
+  query_status: query_judge_pending
+- id: global_microplastics_2004_2019
+  role: locked
+  topic: Global microplastics research
+  human_reference_id: global_microplastics_2004_2019
+  source: crossref
+  title: 'Independent full-year Crossref census: Global microplastics research'
+  keywords:
+  - microplastics
+  - marine pollution
+  - environmental contamination
+  query_mode: all
+  year_from: 2004
+  year_to: 2019
+  document_types:
+  - journal-article
+  language: null
+  max_records: null
+  include_references: true
+  query_rationale: Covers global microplastics research focusing on marine and environmental
+    pollution.
+  query_status: query_judge_pending

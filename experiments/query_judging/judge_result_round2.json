@@ -1,0 +1,48 @@
+{
+  "decisions": [
+    {
+      "decision": "accept",
+      "id": "gnn_drug_discovery_2017_2023",
+      "reason": "The two concept phrases are clear, topically specific, and inclusive of GNN applications across drug discovery."
+    },
+    {
+      "decision": "accept",
+      "id": "crispr_extracellular_vesicles_2015_2022",
+      "reason": "The phrases identify the intended CRISPR–extracellular-vesicle intersection and avoid obvious homonyms."
+    },
+    {
+      "decision": "accept",
+      "id": "machine_learning_climate_change_2008_2022",
+      "reason": "The paired concepts are unambiguous and broad enough to cover diverse machine-learning applications in climate-change research."
+    },
+    {
+      "decision": "accept",
+      "id": "climate_change_risks_1990_2021",
+      "reason": "Combining climate change with risk is topically valid and sufficiently focused despite the breadth of the risk concept."
+    },
+    {
+      "decision": "reject",
+      "id": "digital_twins_healthcare_2012_2024",
+      "reason": "The query ends in 2023, which conflicts with the listed 2012–2024 range."
+    },
+    {
+      "decision": "accept",
+      "id": "plant_heat_drought_2008_2021",
+      "reason": "The three phrases clearly target plant responses under combined heat and drought stress without evident homonym risk."
+    },
+    {
+      "decision": "reject",
+      "id": "gene_editing_als_2004_2024",
+      "reason": "The query ends in 2023, which conflicts with the listed 2004–2024 range."
+    },
+    {
+      "decision": "reject",
+      "id": "global_microplastics_2004_2019",
+      "reason": "Using only microplastics reduces the query to a generic field query and does not represent the global scope."
+    }
+  ],
+  "judge_role": "codex_query_judge",
+  "packet_sha256": "5b55dee2094f2f7078e591c547b9a0c56aed596716b4a5a6c6f4347e1a7261c9",
+  "prompt_sha256": "515dd247c02f9ca5ad9dacd18ce2f93afb1686dd67bdfdb3cab75bf390f43694",
+  "rubric_version": "query-judge-v1"
+}

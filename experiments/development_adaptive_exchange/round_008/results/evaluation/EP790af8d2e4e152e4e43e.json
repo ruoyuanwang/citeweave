@@ -1,0 +1,14 @@
+{
+  "packet_id": "EP790af8d2e4e152e4e43e",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 0.99,
+  "reason": "The candidate exactly identifies the canonical strongest displayed pair using the evidence-provided visible labels and reports the canonical weight of 38, fully satisfying the answer contract without unsupported additions.",
+  "evidence_ids": [
+    "bibliographic_coupling:edge:0001:relation",
+    "bibliographic_coupling:edge:0001:weight",
+    "bibliographic_coupling:fact:strongest_connection",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbab109:label",
+    "bibliographic_coupling:node:doi:10.1093/bib/bbad400:label"
+  ]
+}

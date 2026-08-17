@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "D:\project\bibagent\scripts\run_formal_pipeline.py", line 166, in <module>
+    main()
+  File "D:\project\bibagent\scripts\run_formal_pipeline.py", line 161, in main
+    results = [run_one(item, stage=args.stage) for item in entries if item["id"] in selected]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\project\bibagent\scripts\run_formal_pipeline.py", line 105, in run_one
+    output["harvest"] = harvest_project(workspace, config, resume=True)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\project\bibagent\src\citeweave\workflow.py", line 134, in harvest_project
+    acquisition = bulk_acquire(
+                  ^^^^^^^^^^^^^
+  File "D:\project\bibagent\src\citeweave\bulk_acquisition.py", line 636, in bulk_acquire
+    payload = adapter.page(
+              ^^^^^^^^^^^^^
+  File "D:\project\bibagent\src\citeweave\bulk_acquisition.py", line 141, in page
+    return self.connector._request_json(self.endpoint, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\project\bibagent\src\citeweave\connectors\base.py", line 84, in _request_json
+    raise AcquisitionError(
+citeweave.exceptions.AcquisitionError: openalex API budget is exhausted; the harvest checkpoint is preserved and can be resumed after quota or credentials are restored.

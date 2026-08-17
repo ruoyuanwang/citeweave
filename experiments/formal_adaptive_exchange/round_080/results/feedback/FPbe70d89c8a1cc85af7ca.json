@@ -1,0 +1,11 @@
+{
+  "packet_id": "FPbe70d89c8a1cc85af7ca",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible graph evidence states that the bibliographic coupling network does not contain the queried visible label, and the answer contract requires abstention. The candidate accurately limits its claim to the visible network and correctly concludes that cluster membership cannot be determined.",
+  "evidence_ids": [
+    "bibliographic_coupling:fact:absent_target"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

@@ -1,0 +1,1 @@
+{"packet_id":"EPef4d19023b65605c225c","judge_id":"evaluation","decision":"pass","confidence":0.99,"reason":"The answer's visible label and cluster 8 exactly match the canonical relationships.","evidence_ids":["bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:cluster","bibliographic_coupling:node:doi:10.1016/j.atmosenv.2009.08.021:label"]}

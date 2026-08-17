@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "packet_sha256": "8db9a2b7dfdef678a9d99ea1f3d3aa574981a23007499e4610f34c9d2d1954ea",
+  "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+  "generator_role": "codex_visual_subagent",
+  "visible_only": true,
+  "results": [
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:bibliographic_coupling:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 211
+      },
+      "explanation": "The figure subtitle visibly states 72 nodes and 211 links."
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:coauthorship:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 60,
+        "links": 149
+      },
+      "explanation": "The figure subtitle visibly states 60 nodes and 149 links."
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:cocitation:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 203
+      },
+      "explanation": "The figure subtitle visibly shows 72 nodes and 203 links."
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:institution_collaboration:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 71,
+        "links": 137
+      },
+      "explanation": "The figure subtitle visibly states 71 nodes and 137 links."
+    },
+    {
+      "item_id": "crispr_extracellular_vesicles_2015_2022:keyword_cooccurrence:network_size",
+      "abstain": false,
+      "answer": {
+        "nodes": 72,
+        "links": 200
+      },
+      "explanation": "The figure subtitle visibly states 72 nodes and 200 links."
+    }
+  ]
+}

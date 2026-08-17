@@ -1,0 +1,63 @@
+{
+  "dataset_id": "plant_heat_drought_2008_2021",
+  "generator_role": "codex_visual_subagent",
+  "packet_sha256": "54adfb29cd2e5c4d9604a77cfb472c3c08247487cef02be26535b1bfd83ca851",
+  "results": [
+    {
+      "abstain": false,
+      "answer": {
+        "links": 219,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle states “72 nodes · 219 links.”",
+      "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 16,
+        "nodes": 23
+      },
+      "explanation": "The visible subtitle states “23 nodes · 16 links.”",
+      "item_id": "plant_heat_drought_2008_2021:citation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 120,
+        "nodes": 59
+      },
+      "explanation": "The visible subtitle states “59 nodes · 120 links.”",
+      "item_id": "plant_heat_drought_2008_2021:coauthorship:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 192,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle states “72 nodes · 192 links.”",
+      "item_id": "plant_heat_drought_2008_2021:cocitation:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 186,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle states “72 nodes · 186 links.”",
+      "item_id": "plant_heat_drought_2008_2021:institution_collaboration:network_size"
+    },
+    {
+      "abstain": false,
+      "answer": {
+        "links": 200,
+        "nodes": 72
+      },
+      "explanation": "The visible subtitle states “72 nodes · 200 links.”",
+      "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:network_size"
+    }
+  ],
+  "schema_version": 1,
+  "visible_only": true
+}

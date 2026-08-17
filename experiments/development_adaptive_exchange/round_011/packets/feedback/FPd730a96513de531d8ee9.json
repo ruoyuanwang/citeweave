@@ -1,0 +1,3084 @@
+{
+  "packet_id": "FPd730a96513de531d8ee9",
+  "sample_id": "crispr_extracellular_vesicles_2015_2022:report:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v2",
+  "canonical_evidence": [
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": null,
+      "claim_type": "corpus_size",
+      "evidence_id": "E001",
+      "method": "Count of canonical work_id after deterministic exact deduplication.",
+      "selector": {},
+      "statement": "The included corpus contains 259 unique works.",
+      "unit": null,
+      "value": 259
+    },
+    {
+      "artifact_path": "audit/acquisition_manifest.json",
+      "caveat": "Completeness is relative to the named source, query, time, and retrieval date.",
+      "claim_type": "acquisition_completeness",
+      "evidence_id": "E002",
+      "method": "Cursor pagination continued until the source returned no next cursor.",
+      "selector": {},
+      "statement": "The source reported 259 results and 259 unique source records were acquired.",
+      "unit": null,
+      "value": {
+        "acquired_unique": 259,
+        "complete": true,
+        "expected": 259,
+        "truncated": false
+      }
+    },
+    {
+      "artifact_path": "quality/field_coverage.parquet",
+      "caveat": "Field completeness measures metadata availability, not database recall or the substantive quality of the publications.",
+      "claim_type": "metadata_coverage",
+      "evidence_id": "E003",
+      "method": "Non-null canonical values divided by the canonical corpus size.",
+      "selector": {},
+      "statement": "Field completeness was measured after normalization for every canonical work.",
+      "unit": null,
+      "value": {
+        "abstract": {
+          "coverage_percent": 84.56,
+          "missing": 40,
+          "missing_percent": 15.44,
+          "present": 219
+        },
+        "cited_by_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 259
+        },
+        "document_type": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 259
+        },
+        "doi": {
+          "coverage_percent": 97.3,
+          "missing": 7,
+          "missing_percent": 2.7,
+          "present": 252
+        },
+        "language": {
+          "coverage_percent": 99.61,
+          "missing": 1,
+          "missing_percent": 0.39,
+          "present": 258
+        },
+        "publication_date": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 259
+        },
+        "publisher": {
+          "coverage_percent": 96.14,
+          "missing": 10,
+          "missing_percent": 3.86,
+          "present": 249
+        },
+        "reference_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 259
+        },
+        "source_id": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 259
+        },
+        "title": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 259
+        },
+        "year": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 259
+        }
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": null,
+      "claim_type": "time_span",
+      "evidence_id": "E004",
+      "method": "Minimum and maximum non-missing publication year.",
+      "selector": {},
+      "statement": "The corpus spans 2015–2022.",
+      "unit": null,
+      "value": {
+        "end": 2022,
+        "start": 2015
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_peak",
+      "evidence_id": "E005",
+      "method": "Maximum whole-counted works grouped by publication year.",
+      "selector": {},
+      "statement": "Annual output peaked in 2022 with 72 works.",
+      "unit": null,
+      "value": {
+        "publications": 72,
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "Endpoint CAGR does not establish a monotonic trend.",
+      "claim_type": "growth",
+      "evidence_id": "E006",
+      "method": "CAGR = (last/first)^(1/year difference)-1.",
+      "selector": {},
+      "statement": "Compound annual publication growth over the observed non-zero endpoints is 66.85%.",
+      "unit": null,
+      "value": 66.85
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_output_series",
+      "evidence_id": "E007",
+      "method": "Whole-counted canonical works grouped by non-missing publication year; year-over-year change is the current count minus the preceding count.",
+      "selector": {},
+      "statement": "Annual publication counts are available for every observed year.",
+      "unit": null,
+      "value": [
+        {
+          "publications": 2,
+          "year": 2015,
+          "year_over_year_change": null
+        },
+        {
+          "publications": 5,
+          "year": 2016,
+          "year_over_year_change": 3
+        },
+        {
+          "publications": 13,
+          "year": 2017,
+          "year_over_year_change": 8
+        },
+        {
+          "publications": 33,
+          "year": 2018,
+          "year_over_year_change": 20
+        },
+        {
+          "publications": 34,
+          "year": 2019,
+          "year_over_year_change": 1
+        },
+        {
+          "publications": 52,
+          "year": 2020,
+          "year_over_year_change": 18
+        },
+        {
+          "publications": 48,
+          "year": 2021,
+          "year_over_year_change": -4
+        },
+        {
+          "publications": 72,
+          "year": 2022,
+          "year_over_year_change": 24
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": null,
+      "claim_type": "top_source",
+      "evidence_id": "E008",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "International Journal of Molecular Sciences ranks first with 9 publications.",
+      "unit": null,
+      "value": {
+        "name": "International Journal of Molecular Sciences",
+        "publications": 9
+      }
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_source_ranking",
+      "evidence_id": "E009",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top source records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "International Journal of Molecular Sciences",
+          "publications": 9
+        },
+        {
+          "name": "Journal of Extracellular Vesicles",
+          "publications": 7
+        },
+        {
+          "name": "Nature Communications",
+          "publications": 6
+        },
+        {
+          "name": "The FASEB Journal",
+          "publications": 6
+        },
+        {
+          "name": "Analytical Chemistry",
+          "publications": 5
+        },
+        {
+          "name": "Cancers",
+          "publications": 5
+        },
+        {
+          "name": "Molecular Therapy",
+          "publications": 5
+        },
+        {
+          "name": "Journal of Controlled Release",
+          "publications": 4
+        },
+        {
+          "name": "Pharmaceutics",
+          "publications": 4
+        },
+        {
+          "name": "Cancer Research",
+          "publications": 3
+        },
+        {
+          "name": "Cardiovascular Research",
+          "publications": 3
+        },
+        {
+          "name": "Cell Communication and Signaling",
+          "publications": 3
+        },
+        {
+          "name": "Cellular and Molecular Life Sciences",
+          "publications": 3
+        },
+        {
+          "name": "Neuro-Oncology",
+          "publications": 3
+        },
+        {
+          "name": "Scientific Reports",
+          "publications": 3
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": null,
+      "claim_type": "top_author",
+      "evidence_id": "E010",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Xiaohui Chen ranks first with 14 publications.",
+      "unit": null,
+      "value": {
+        "name": "Xiaohui Chen",
+        "publications": 14
+      }
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_author_ranking",
+      "evidence_id": "E011",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top author records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Xiaohui Chen",
+          "publications": 14
+        },
+        {
+          "name": "Chenghui Liu",
+          "publications": 4
+        },
+        {
+          "name": "Huilan Li",
+          "publications": 4
+        },
+        {
+          "name": "Kan Ouyang",
+          "publications": 4
+        },
+        {
+          "name": "Li Duan",
+          "publications": 4
+        },
+        {
+          "name": "Limei Xu",
+          "publications": 4
+        },
+        {
+          "name": "Shan Xing",
+          "publications": 4
+        },
+        {
+          "name": "Wei Ren",
+          "publications": 4
+        },
+        {
+          "name": "Xiao Xu",
+          "publications": 4
+        },
+        {
+          "name": "Yi He",
+          "publications": 4
+        },
+        {
+          "name": "Yujie Liang",
+          "publications": 4
+        },
+        {
+          "name": "Ben Davidson",
+          "publications": 3
+        },
+        {
+          "name": "Bethany N. Hannafon",
+          "publications": 3
+        },
+        {
+          "name": "Genevieve E. Melling",
+          "publications": 3
+        },
+        {
+          "name": "Hadil Onallah",
+          "publications": 3
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": null,
+      "claim_type": "top_institution",
+      "evidence_id": "E012",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Harvard University ranks first with 7 publications.",
+      "unit": null,
+      "value": {
+        "name": "Harvard University",
+        "publications": 7
+      }
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_institution_ranking",
+      "evidence_id": "E013",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top institution records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Harvard University",
+          "publications": 7
+        },
+        {
+          "name": "Peking University",
+          "publications": 7
+        },
+        {
+          "name": "Sun Yat-sen University",
+          "publications": 7
+        },
+        {
+          "name": "Nanjing Medical University",
+          "publications": 5
+        },
+        {
+          "name": "Shaanxi Normal University",
+          "publications": 5
+        },
+        {
+          "name": "University of Oxford",
+          "publications": 5
+        },
+        {
+          "name": "Air Force Medical University",
+          "publications": 4
+        },
+        {
+          "name": "Chinese Academy of Sciences",
+          "publications": 4
+        },
+        {
+          "name": "Chinese University of Hong Kong",
+          "publications": 4
+        },
+        {
+          "name": "Fudan University",
+          "publications": 4
+        },
+        {
+          "name": "Guangzhou Medical University",
+          "publications": 4
+        },
+        {
+          "name": "Nanjing University",
+          "publications": 4
+        },
+        {
+          "name": "National Institutes of Health",
+          "publications": 4
+        },
+        {
+          "name": "Shanghai Jiao Tong University",
+          "publications": 4
+        },
+        {
+          "name": "Shenzhen Second People's Hospital",
+          "publications": 4
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/document_types.parquet",
+      "caveat": "Document-type labels inherit source classification practices.",
+      "claim_type": "document_type_distribution",
+      "evidence_id": "E014",
+      "method": "Whole-counted canonical works grouped by source-supplied document type.",
+      "selector": {},
+      "statement": "Document types were counted across the complete canonical corpus.",
+      "unit": null,
+      "value": {
+        "review_and_systematic_review_documents": 0,
+        "types": [
+          {
+            "document_type": "article",
+            "publications": 259,
+            "share_percent": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent.",
+      "claim_type": "citation_summary",
+      "evidence_id": "E015",
+      "method": "Citation-count field supplied by the selected source at retrieval time.",
+      "selector": {},
+      "statement": "Mean citations are 72.09 and the median is 32.00.",
+      "unit": null,
+      "value": {
+        "mean": 72.09,
+        "median": 32.0
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "Recent works have had less time to accumulate citations.",
+      "claim_type": "zero_citation_share",
+      "evidence_id": "E016",
+      "method": "Count and percentage of canonical works with cited_by_count equal to zero.",
+      "selector": {},
+      "statement": "35 works have zero source-reported citations, representing 13.51% of the corpus.",
+      "unit": null,
+      "value": {
+        "share_percent": 13.51,
+        "zero_cited": 35
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent; papers have unequal citation windows.",
+      "claim_type": "citation_distribution_detail",
+      "evidence_id": "E017",
+      "method": "Descriptive statistics of the source-supplied cited-by count.",
+      "selector": {},
+      "statement": "Citation-distribution statistics include central tendency, upper quantiles, maximum, and zero-cited count.",
+      "unit": null,
+      "value": [
+        {
+          "metric": "mean",
+          "value": 72.0888030888
+        },
+        {
+          "metric": "median",
+          "value": 32.0
+        },
+        {
+          "metric": "p75",
+          "percentile": 75,
+          "value": 73.0
+        },
+        {
+          "metric": "p90",
+          "percentile": 90,
+          "value": 192.0
+        },
+        {
+          "metric": "p95",
+          "percentile": 95,
+          "value": 292.1
+        },
+        {
+          "metric": "p98",
+          "percentile": 98,
+          "value": 476.52
+        },
+        {
+          "metric": "maximum",
+          "value": 1436.0
+        },
+        {
+          "metric": "zero_cited",
+          "value": 35.0
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_cited_documents.parquet",
+      "caveat": "Raw citation counts favor older publications and do not by themselves measure quality.",
+      "claim_type": "top_cited_documents",
+      "evidence_id": "E018",
+      "method": "Descending source-reported citation count, with publication year as tie-breaker.",
+      "selector": {},
+      "statement": "The most-cited included documents are retained with title, year, DOI, and source-reported citation count.",
+      "unit": null,
+      "value": [
+        {
+          "cited_by_count": 1436,
+          "doi": "10.1038/s41392-022-01056-1",
+          "title": "Pseudomonas aeruginosa: pathogenesis, virulence factors, antibiotic resistance, interaction with host, technology advances and emerging therapeutics",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 651,
+          "doi": "10.1038/s41467-018-04791-8",
+          "title": "Efficient RNA drug delivery using red blood cell extracellular vesicles",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 611,
+          "doi": "10.1002/advs.201700611",
+          "title": "Exosome–Liposome Hybrid Nanoparticles Deliver CRISPR/Cas9 System in MSCs",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 589,
+          "doi": "10.1080/10717544.2020.1748758",
+          "title": "Prospects and challenges of extracellular vesicle-based drug delivery system: considering cell source",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 569,
+          "doi": "10.1038/s41392-021-00569-5",
+          "title": "Targeting circular RNAs as a therapeutic approach: current strategies and challenges",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 477,
+          "doi": "10.1016/j.cell.2015.04.034",
+          "title": "RNA Exosome-Regulated Long Non-Coding RNA Transcription Controls Super-Enhancer Activity",
+          "year": 2015
+        },
+        {
+          "cited_by_count": 474,
+          "doi": "10.1016/j.jconrel.2017.09.013",
+          "title": "Cancer-derived exosomes as a delivery platform of CRISPR/Cas9 confer cancer cell tropism-dependent targeting",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 366,
+          "doi": "10.1016/j.jconrel.2020.09.039",
+          "title": "Chronic wounds: Current status, available strategies and emerging therapeutic solutions",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 359,
+          "doi": "10.3389/fgene.2021.673286",
+          "title": "Nanoparticle Delivery of CRISPR/Cas9 for Genome Editing",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 323,
+          "doi": "10.1021/acs.analchem.9b04814",
+          "title": "Rolling Circular Amplification (RCA)-Assisted CRISPR/Cas9 Cleavage (RACE) for Highly Specific Detection of Multiple Extracellular Vesicle MicroRNAs",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 322,
+          "doi": "10.1021/acs.nanolett.8b02689",
+          "title": "In Vitro and in Vivo RNA Inhibition by CD9-HuR Functionalized Exosomes Encapsulated with miRNA or CRISPR/dCas9",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 313,
+          "doi": "10.1016/j.ymthe.2021.01.020",
+          "title": "A versatile platform for generating engineered extracellular vesicles with defined therapeutic properties",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 302,
+          "doi": "10.3390/biom10060839",
+          "title": "Recent Advances in CRISPR/Cas9 Delivery Strategies",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 291,
+          "doi": "10.1016/j.jconrel.2020.07.003",
+          "title": "A review of nanotechnology-based approaches for breast cancer and triple-negative breast cancer",
+          "year": 2020
+        },
+        {
+          "cited_by_count": 284,
+          "doi": "10.1126/sciadv.abp9435",
+          "title": "Exosome-mediated delivery of Cas9 ribonucleoprotein complexes for tissue-specific gene therapy of liver diseases",
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/bradford_sources.parquet",
+      "caveat": "Records without a source name are excluded from Bradford zoning.",
+      "claim_type": "bradford_zone_distribution",
+      "evidence_id": "E019",
+      "method": "Sources ranked by output and divided by cumulative document thirds.",
+      "selector": {},
+      "statement": "Bradford zones summarize source concentration among records with known source names.",
+      "unit": null,
+      "value": {
+        "rounded_document_range": {
+          "lower": 50,
+          "rounding_unit": 50,
+          "upper": 100
+        },
+        "zones": [
+          {
+            "documents": 85.0,
+            "sources": 23,
+            "zone": 1
+          },
+          {
+            "documents": 87.0,
+            "sources": 66,
+            "zone": 2
+          },
+          {
+            "documents": 85.0,
+            "sources": 85,
+            "zone": 3
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/keyword_trends.parquet",
+      "caveat": "Keyword frequencies depend on source metadata, synonym normalization, and the incomplete final year.",
+      "claim_type": "keyword_temporal_dynamics",
+      "evidence_id": "E020",
+      "method": "Unique works per normalized keyword and publication year.",
+      "selector": {},
+      "statement": "Year-by-year document counts are available for the globally most frequent keywords.",
+      "unit": null,
+      "value": [
+        {
+          "documents": 2,
+          "global_documents": 235,
+          "keyword": "Biology",
+          "year": 2015
+        },
+        {
+          "documents": 4,
+          "global_documents": 235,
+          "keyword": "Biology",
+          "year": 2016
+        },
+        {
+          "documents": 12,
+          "global_documents": 235,
+          "keyword": "Biology",
+          "year": 2017
+        },
+        {
+          "documents": 32,
+          "global_documents": 235,
+          "keyword": "Biology",
+          "year": 2018
+        },
+        {
+          "documents": 30,
+          "global_documents": 235,
+          "keyword": "Biology",
+          "year": 2019
+        },
+        {
+          "documents": 46,
+          "global_documents": 235,
+          "keyword": "Biology",
+          "year": 2020
+        },
+        {
+          "documents": 45,
+          "global_documents": 235,
+          "keyword": "Biology",
+          "year": 2021
+        },
+        {
+          "documents": 64,
+          "global_documents": 235,
+          "keyword": "Biology",
+          "year": 2022
+        },
+        {
+          "documents": 2,
+          "global_documents": 157,
+          "keyword": "Gene",
+          "year": 2015
+        },
+        {
+          "documents": 3,
+          "global_documents": 157,
+          "keyword": "Gene",
+          "year": 2016
+        },
+        {
+          "documents": 5,
+          "global_documents": 157,
+          "keyword": "Gene",
+          "year": 2017
+        },
+        {
+          "documents": 21,
+          "global_documents": 157,
+          "keyword": "Gene",
+          "year": 2018
+        },
+        {
+          "documents": 18,
+          "global_documents": 157,
+          "keyword": "Gene",
+          "year": 2019
+        },
+        {
+          "documents": 32,
+          "global_documents": 157,
+          "keyword": "Gene",
+          "year": 2020
+        },
+        {
+          "documents": 31,
+          "global_documents": 157,
+          "keyword": "Gene",
+          "year": 2021
+        },
+        {
+          "documents": 45,
+          "global_documents": 157,
+          "keyword": "Gene",
+          "year": 2022
+        },
+        {
+          "documents": 2,
+          "global_documents": 148,
+          "keyword": "Cell biology",
+          "year": 2015
+        },
+        {
+          "documents": 3,
+          "global_documents": 148,
+          "keyword": "Cell biology",
+          "year": 2016
+        },
+        {
+          "documents": 6,
+          "global_documents": 148,
+          "keyword": "Cell biology",
+          "year": 2017
+        },
+        {
+          "documents": 21,
+          "global_documents": 148,
+          "keyword": "Cell biology",
+          "year": 2018
+        },
+        {
+          "documents": 22,
+          "global_documents": 148,
+          "keyword": "Cell biology",
+          "year": 2019
+        },
+        {
+          "documents": 32,
+          "global_documents": 148,
+          "keyword": "Cell biology",
+          "year": 2020
+        },
+        {
+          "documents": 27,
+          "global_documents": 148,
+          "keyword": "Cell biology",
+          "year": 2021
+        },
+        {
+          "documents": 35,
+          "global_documents": 148,
+          "keyword": "Cell biology",
+          "year": 2022
+        },
+        {
+          "documents": 3,
+          "global_documents": 123,
+          "keyword": "Microvesicles",
+          "year": 2016
+        },
+        {
+          "documents": 6,
+          "global_documents": 123,
+          "keyword": "Microvesicles",
+          "year": 2017
+        },
+        {
+          "documents": 18,
+          "global_documents": 123,
+          "keyword": "Microvesicles",
+          "year": 2018
+        },
+        {
+          "documents": 18,
+          "global_documents": 123,
+          "keyword": "Microvesicles",
+          "year": 2019
+        },
+        {
+          "documents": 31,
+          "global_documents": 123,
+          "keyword": "Microvesicles",
+          "year": 2020
+        },
+        {
+          "documents": 17,
+          "global_documents": 123,
+          "keyword": "Microvesicles",
+          "year": 2021
+        },
+        {
+          "documents": 30,
+          "global_documents": 123,
+          "keyword": "Microvesicles",
+          "year": 2022
+        },
+        {
+          "documents": 1,
+          "global_documents": 117,
+          "keyword": "Genetics",
+          "year": 2015
+        },
+        {
+          "documents": 4,
+          "global_documents": 117,
+          "keyword": "Genetics",
+          "year": 2016
+        },
+        {
+          "documents": 6,
+          "global_documents": 117,
+          "keyword": "Genetics",
+          "year": 2017
+        },
+        {
+          "documents": 17,
+          "global_documents": 117,
+          "keyword": "Genetics",
+          "year": 2018
+        },
+        {
+          "documents": 15,
+          "global_documents": 117,
+          "keyword": "Genetics",
+          "year": 2019
+        },
+        {
+          "documents": 26,
+          "global_documents": 117,
+          "keyword": "Genetics",
+          "year": 2020
+        },
+        {
+          "documents": 19,
+          "global_documents": 117,
+          "keyword": "Genetics",
+          "year": 2021
+        },
+        {
+          "documents": 29,
+          "global_documents": 117,
+          "keyword": "Genetics",
+          "year": 2022
+        },
+        {
+          "documents": 2,
+          "global_documents": 107,
+          "keyword": "Microrna",
+          "year": 2016
+        },
+        {
+          "documents": 5,
+          "global_documents": 107,
+          "keyword": "Microrna",
+          "year": 2017
+        },
+        {
+          "documents": 16,
+          "global_documents": 107,
+          "keyword": "Microrna",
+          "year": 2018
+        },
+        {
+          "documents": 18,
+          "global_documents": 107,
+          "keyword": "Microrna",
+          "year": 2019
+        },
+        {
+          "documents": 25,
+          "global_documents": 107,
+          "keyword": "Microrna",
+          "year": 2020
+        },
+        {
+          "documents": 16,
+          "global_documents": 107,
+          "keyword": "Microrna",
+          "year": 2021
+        },
+        {
+          "documents": 25,
+          "global_documents": 107,
+          "keyword": "Microrna",
+          "year": 2022
+        },
+        {
+          "documents": 1,
+          "global_documents": 101,
+          "keyword": "Biochemistry",
+          "year": 2015
+        },
+        {
+          "documents": 1,
+          "global_documents": 101,
+          "keyword": "Biochemistry",
+          "year": 2016
+        },
+        {
+          "documents": 2,
+          "global_documents": 101,
+          "keyword": "Biochemistry",
+          "year": 2017
+        },
+        {
+          "documents": 15,
+          "global_documents": 101,
+          "keyword": "Biochemistry",
+          "year": 2018
+        },
+        {
+          "documents": 13,
+          "global_documents": 101,
+          "keyword": "Biochemistry",
+          "year": 2019
+        },
+        {
+          "documents": 18,
+          "global_documents": 101,
+          "keyword": "Biochemistry",
+          "year": 2020
+        },
+        {
+          "documents": 18,
+          "global_documents": 101,
+          "keyword": "Biochemistry",
+          "year": 2021
+        },
+        {
+          "documents": 33,
+          "global_documents": 101,
+          "keyword": "Biochemistry",
+          "year": 2022
+        },
+        {
+          "documents": 1,
+          "global_documents": 89,
+          "keyword": "Chemistry",
+          "year": 2015
+        },
+        {
+          "documents": 1,
+          "global_documents": 89,
+          "keyword": "Chemistry",
+          "year": 2016
+        },
+        {
+          "documents": 2,
+          "global_documents": 89,
+          "keyword": "Chemistry",
+          "year": 2017
+        },
+        {
+          "documents": 12,
+          "global_documents": 89,
+          "keyword": "Chemistry",
+          "year": 2018
+        },
+        {
+          "documents": 6,
+          "global_documents": 89,
+          "keyword": "Chemistry",
+          "year": 2019
+        },
+        {
+          "documents": 18,
+          "global_documents": 89,
+          "keyword": "Chemistry",
+          "year": 2020
+        },
+        {
+          "documents": 20,
+          "global_documents": 89,
+          "keyword": "Chemistry",
+          "year": 2021
+        },
+        {
+          "documents": 29,
+          "global_documents": 89,
+          "keyword": "Chemistry",
+          "year": 2022
+        },
+        {
+          "documents": 2,
+          "global_documents": 85,
+          "keyword": "Medicine",
+          "year": 2016
+        },
+        {
+          "documents": 7,
+          "global_documents": 85,
+          "keyword": "Medicine",
+          "year": 2017
+        },
+        {
+          "documents": 9,
+          "global_documents": 85,
+          "keyword": "Medicine",
+          "year": 2018
+        },
+        {
+          "documents": 13,
+          "global_documents": 85,
+          "keyword": "Medicine",
+          "year": 2019
+        },
+        {
+          "documents": 19,
+          "global_documents": 85,
+          "keyword": "Medicine",
+          "year": 2020
+        },
+        {
+          "documents": 11,
+          "global_documents": 85,
+          "keyword": "Medicine",
+          "year": 2021
+        },
+        {
+          "documents": 24,
+          "global_documents": 85,
+          "keyword": "Medicine",
+          "year": 2022
+        },
+        {
+          "documents": 1,
+          "global_documents": 79,
+          "keyword": "Cancer research",
+          "year": 2016
+        },
+        {
+          "documents": 7,
+          "global_documents": 79,
+          "keyword": "Cancer research",
+          "year": 2017
+        },
+        {
+          "documents": 4,
+          "global_documents": 79,
+          "keyword": "Cancer research",
+          "year": 2018
+        },
+        {
+          "documents": 12,
+          "global_documents": 79,
+          "keyword": "Cancer research",
+          "year": 2019
+        },
+        {
+          "documents": 19,
+          "global_documents": 79,
+          "keyword": "Cancer research",
+          "year": 2020
+        },
+        {
+          "documents": 10,
+          "global_documents": 79,
+          "keyword": "Cancer research",
+          "year": 2021
+        },
+        {
+          "documents": 26,
+          "global_documents": 79,
+          "keyword": "Cancer research",
+          "year": 2022
+        },
+        {
+          "documents": 1,
+          "global_documents": 73,
+          "keyword": "Crispr",
+          "year": 2016
+        },
+        {
+          "documents": 2,
+          "global_documents": 73,
+          "keyword": "Crispr",
+          "year": 2017
+        },
+        {
+          "documents": 10,
+          "global_documents": 73,
+          "keyword": "Crispr",
+          "year": 2018
+        },
+        {
+          "documents": 7,
+          "global_documents": 73,
+          "keyword": "Crispr",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/three_field.parquet",
+      "caveat": "The map is a filtered descriptive view, not a causal pathway.",
+      "claim_type": "three_field_relations",
+      "evidence_id": "E021",
+      "method": "Whole-counted links among leading authors, sources, and keywords.",
+      "selector": {},
+      "statement": "Leading author–source–keyword combinations are retained for relational interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "author": "Chenghui Liu",
+          "documents": 2,
+          "keyword": "Biochemistry",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Wei Ren",
+          "documents": 2,
+          "keyword": "Gene",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Chenghui Liu",
+          "documents": 2,
+          "keyword": "Biology",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Xiaohui Chen",
+          "documents": 2,
+          "keyword": "Microvesicles",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Xiaohui Chen",
+          "documents": 2,
+          "keyword": "Gene",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Xiaohui Chen",
+          "documents": 2,
+          "keyword": "Biology",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Xiaohui Chen",
+          "documents": 2,
+          "keyword": "Biochemistry",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Xiaohui Chen",
+          "documents": 2,
+          "keyword": "Chemistry",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Wei Ren",
+          "documents": 2,
+          "keyword": "Chemistry",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Wei Ren",
+          "documents": 2,
+          "keyword": "Biology",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Wei Ren",
+          "documents": 2,
+          "keyword": "Biochemistry",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Chenghui Liu",
+          "documents": 2,
+          "keyword": "Gene",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Chenghui Liu",
+          "documents": 2,
+          "keyword": "Chemistry",
+          "source": "Analytical Chemistry"
+        },
+        {
+          "author": "Olivier G. de Jong",
+          "documents": 1,
+          "keyword": "Microvesicles",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Extracellular vesicle",
+          "source": "Cardiovascular Research"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Chemistry",
+          "source": "Cardiovascular Research"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Cell biology",
+          "source": "Cardiovascular Research"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Biology",
+          "source": "Cardiovascular Research"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Biochemistry",
+          "source": "Cardiovascular Research"
+        },
+        {
+          "author": "Olivier G. de Jong",
+          "documents": 1,
+          "keyword": "RNA",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Olivier G. de Jong",
+          "documents": 1,
+          "keyword": "Chemistry",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Olivier G. de Jong",
+          "documents": 1,
+          "keyword": "Microrna",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Olivier G. de Jong",
+          "documents": 1,
+          "keyword": "Genetics",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Olivier G. de Jong",
+          "documents": 1,
+          "keyword": "Gene",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Olivier G. de Jong",
+          "documents": 1,
+          "keyword": "Crispr",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Biochemistry",
+          "source": "Nano Letters"
+        },
+        {
+          "author": "Olivier G. de Jong",
+          "documents": 1,
+          "keyword": "Cell biology",
+          "source": "Nature Communications"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Microvesicles",
+          "source": "Cardiovascular Research"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Gene",
+          "source": "Nano Letters"
+        },
+        {
+          "author": "Pieter Vader",
+          "documents": 1,
+          "keyword": "Biology",
+          "source": "Nano Letters"
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/network_bibliographic_coupling_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "bibliographic_coupling_structure",
+      "evidence_id": "E022",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The bibliographic coupling candidate network contains 72 nodes and 211 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 8,
+        "edges": 211,
+        "network_parameters": {
+          "candidate_edges": 1688,
+          "candidate_nodes_with_links": 176,
+          "candidate_pool": 176,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 211,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 176,
+          "full_candidate_edge_count": 1688,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.19032730394737063,
+            "mean_edge_length": 0.2283813869131691,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1658.0,
+            "weighted_edge_length": 0.0065333227657218525,
+            "within_between_distance_ratio": 0.5745830394533011
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "sparse_construction": {
+            "candidate_documents": 213,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 43,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          }
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 1,
+            "label": "Gene Editing by Extracellular Vesicles",
+            "occurrences": 264,
+            "weighted_degree": 571.0
+          },
+          {
+            "cluster": 1,
+            "label": "New Therapeutics for Extracellular Vesicles: Delivering CRISPR for Cancer Treatment",
+            "occurrences": 150,
+            "weighted_degree": 418.0
+          },
+          {
+            "cluster": 2,
+            "label": "Prospects and challenges of extracellular vesicle-based drug delivery system: considering cell source",
+            "occurrences": 211,
+            "weighted_degree": 406.0
+          },
+          {
+            "cluster": 1,
+            "label": "Extracellular Vesicles as Delivery Vehicles for Therapeutic Nucleic Acids in Cancer Gene Therapy: Progress and Challenges",
+            "occurrences": 163,
+            "weighted_degree": 359.0
+          },
+          {
+            "cluster": 1,
+            "label": "CRISPR/Cas9: Principle, Applications, and Delivery through Extracellular Vesicles",
+            "occurrences": 111,
+            "weighted_degree": 333.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_coauthorship_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "coauthorship_structure",
+      "evidence_id": "E023",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The coauthorship candidate network contains 60 nodes and 149 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 149,
+        "network_parameters": {
+          "candidate_edges": 419,
+          "candidate_nodes_with_links": 131,
+          "candidate_pool": 131,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 149,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 131,
+          "full_candidate_edge_count": 419,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.06072158178407529,
+            "mean_edge_length": 0.10371200798157917,
+            "overlap_ratio": 0.0,
+            "selected_seed": 3069.0,
+            "weighted_edge_length": 0.055535981384996325,
+            "within_between_distance_ratio": 0.0
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 60,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Huilan Li",
+            "occurrences": 4,
+            "weighted_degree": 30.0
+          },
+          {
+            "cluster": 3,
+            "label": "Shan Xing",
+            "occurrences": 4,
+            "weighted_degree": 30.0
+          },
+          {
+            "cluster": 3,
+            "label": "Yi He",
+            "occurrences": 4,
+            "weighted_degree": 30.0
+          },
+          {
+            "cluster": 2,
+            "label": "Xiaohui Chen",
+            "occurrences": 14,
+            "weighted_degree": 29.0
+          },
+          {
+            "cluster": 3,
+            "label": "Wanli Liu",
+            "occurrences": 3,
+            "weighted_degree": 26.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_cocitation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "cocitation_structure",
+      "evidence_id": "E024",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The cocitation candidate network contains 72 nodes and 203 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 7,
+        "edges": 203,
+        "network_parameters": {
+          "candidate_edges": 19487,
+          "candidate_nodes_with_links": 428,
+          "candidate_pool": 428,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 203,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 428,
+          "full_candidate_edge_count": 19487,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.19986135171412173,
+            "mean_edge_length": 0.358171934657009,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 333.0,
+            "weighted_edge_length": 0.06535509889552303,
+            "within_between_distance_ratio": 0.3886588536191608
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 3,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "openalex:W2793760887",
+            "occurrences": 24,
+            "weighted_degree": 727.0
+          },
+          {
+            "cluster": 3,
+            "label": "openalex:W2754835295",
+            "occurrences": 25,
+            "weighted_degree": 631.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2900756811",
+            "occurrences": 28,
+            "weighted_degree": 586.0
+          },
+          {
+            "cluster": 4,
+            "label": "openalex:W2786514708",
+            "occurrences": 28,
+            "weighted_degree": 583.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W2066234893",
+            "occurrences": 23,
+            "weighted_degree": 583.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_institution_collaboration_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "institution_collaboration_structure",
+      "evidence_id": "E025",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The institution collaboration candidate network contains 71 nodes and 137 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 137,
+        "network_parameters": {
+          "candidate_edges": 256,
+          "candidate_nodes_with_links": 127,
+          "candidate_pool": 127,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 137,
+          "displayed_nodes": 71,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 134,
+          "full_candidate_edge_count": 256,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.21173459776562276,
+            "mean_edge_length": 0.19987295383219209,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 3166.0,
+            "weighted_edge_length": 0.08092326825082544,
+            "within_between_distance_ratio": 0.40272560607729246
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 71,
+        "top_nodes": [
+          {
+            "cluster": 7,
+            "label": "Harvard University",
+            "occurrences": 7,
+            "weighted_degree": 20.0
+          },
+          {
+            "cluster": 1,
+            "label": "Guangzhou Medical University",
+            "occurrences": 4,
+            "weighted_degree": 18.0
+          },
+          {
+            "cluster": 1,
+            "label": "Sun Yat-sen University",
+            "occurrences": 7,
+            "weighted_degree": 12.0
+          },
+          {
+            "cluster": 1,
+            "label": "Chinese Academy of Medical Sciences & Peking Union Medical College",
+            "occurrences": 3,
+            "weighted_degree": 12.0
+          },
+          {
+            "cluster": 1,
+            "label": "Fu Wai Hospital",
+            "occurrences": 3,
+            "weighted_degree": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_keyword_cooccurrence_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "keyword_cooccurrence_structure",
+      "evidence_id": "E026",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The keyword cooccurrence candidate network contains 72 nodes and 200 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 5,
+        "edges": 200,
+        "network_parameters": {
+          "candidate_edges": 2115,
+          "candidate_nodes_with_links": 92,
+          "candidate_pool": 92,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 200,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 92,
+          "full_candidate_edge_count": 2115,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.12653051520401778,
+            "mean_edge_length": 0.38396953211264334,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 236.0,
+            "weighted_edge_length": 0.04387060999675494,
+            "within_between_distance_ratio": 0.2115380953387689
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 4,
+            "label": "Biology",
+            "occurrences": 235,
+            "weighted_degree": 2209.0
+          },
+          {
+            "cluster": 4,
+            "label": "Gene",
+            "occurrences": 157,
+            "weighted_degree": 1613.0
+          },
+          {
+            "cluster": 2,
+            "label": "Cell biology",
+            "occurrences": 148,
+            "weighted_degree": 1506.0
+          },
+          {
+            "cluster": 2,
+            "label": "Microvesicles",
+            "occurrences": 123,
+            "weighted_degree": 1412.0
+          },
+          {
+            "cluster": 2,
+            "label": "Microrna",
+            "occurrences": 107,
+            "weighted_degree": 1256.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E027",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Pseudomonas aeruginosa: pathogenesis, virulence factors, antibiotic resistance, interaction with host, technology advances and emerging therapeutics",
+      "unit": null,
+      "value": {
+        "abstract": "Pseudomonas aeruginosa (P. aeruginosa) is a Gram-negative opportunistic pathogen that infects patients with cystic fibrosis, burn wounds, immunodeficiency, chronic obstructive pulmonary disorder (COPD), cancer, and severe infection requiring ventilation, such as COVID-19. P. aeruginosa is also a widely-used model bacterium for all biological areas. In addition to continued, intense efforts in understanding bacterial pathogenesis of P. aeruginosa including virulence factors (LPS, quorum sensing, two-component systems, 6 type secretion systems, outer membrane vesicles (OMVs), CRISPR-Cas and their regulation), rapid progress has been made in further studying host-pathogen interaction, particularly host immune networks involving autophagy, inflammasome, non-coding RNAs, cGAS, etc. Furthermore, numerous technologic advances, such as bioinformatics, metabolomics, scRNA-seq, nanoparticles, drug screening, and phage therapy, have been used to improve our understanding of P. aeruginosa pathogenesis and host defense. Nevertheless, much remains to be uncovered about interactions between P. aeruginosa and host immune responses, including mechanisms of drug resistance by known or unannotated bacterial virulence factors as well as mammalian cell signaling pathways. The widespread use of antibiotics and the slow development of effective antimicrobials present daunting challenges and necessitate new theoretical and practical platforms to screen and develop mechanism-tested novel drugs to treat intractable infections, especially those caused by multi-drug resistance strains. Benefited from has advancing in research tools and technology, dissecting this pathogen's feature has entered into molecular and mechanistic details as well as dynamic and holistic views. Herein, we comprehensively review the progress and discuss the current status of P. aeruginosa biophysical traits, behaviors, virulence factors, invasive regulators, and host defense patterns against its infection, which point out new directions for future investigation and add to the design of novel and/or alternative therapeutics to combat this clinically significant pathogen.",
+        "authors": [
+          "Shugang Qin",
+          "Wen Xiao",
+          "Chuan‐Min Zhou",
+          "Qinqin Pu",
+          "Xin Deng"
+        ],
+        "doi": "10.1038/s41392-022-01056-1",
+        "source": "Signal Transduction and Targeted Therapy",
+        "title": "Pseudomonas aeruginosa: pathogenesis, virulence factors, antibiotic resistance, interaction with host, technology advances and emerging therapeutics",
+        "work_id": "doi:10.1038/s41392-022-01056-1",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E028",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Efficient RNA drug delivery using red blood cell extracellular vesicles",
+      "unit": null,
+      "value": {
+        "abstract": "Most of the current methods for programmable RNA drug therapies are unsuitable for the clinic due to low uptake efficiency and high cytotoxicity. Extracellular vesicles (EVs) could solve these problems because they represent a natural mode of intercellular communication. However, current cellular sources for EV production are limited in availability and safety in terms of horizontal gene transfer. One potentially ideal source could be human red blood cells (RBCs). Group O-RBCs can be used as universal donors for large-scale EV production since they are readily available in blood banks and they are devoid of DNA. Here, we describe and validate a new strategy to generate large-scale amounts of RBC-derived EVs for the delivery of RNA drugs, including antisense oligonucleotides, Cas9 mRNA, and guide RNAs. RNA drug delivery with RBCEVs shows highly robust microRNA inhibition and CRISPR-Cas9 genome editing in both human cells and xenograft mouse models, with no observable cytotoxicity.",
+        "authors": [
+          "Waqas Muhammad Usman",
+          "Tin Chanh Pham",
+          "Yuk Yan Kwok",
+          "Luyen Tien Vu",
+          "Victor Ma",
+          "Boya Peng",
+          "Yuen San Chan",
+          "Likun Wei"
+        ],
+        "doi": "10.1038/s41467-018-04791-8",
+        "source": "Nature Communications",
+        "title": "Efficient RNA drug delivery using red blood cell extracellular vesicles",
+        "work_id": "doi:10.1038/s41467-018-04791-8",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E029",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Exosome–Liposome Hybrid Nanoparticles Deliver CRISPR/Cas9 System in MSCs",
+      "unit": null,
+      "value": {
+        "abstract": "Targeted delivery of clustered regularly interspaced short palindromic repeats (CRISPR)/CRISPR-associated protein 9 (Cas9) system to the receptor cells is essential for in vivo gene editing. Exosomes are intensively studied as a promising targeted drug delivery carrier recently, while limited by their low efficiency in encapsulating of large nucleic acids. Here, a kind of hybrid exosomes with liposomes is developed via simple incubation. Different from the original exosomes, the resultant hybrid nanoparticles efficiently encapsulate large plasmids, including the CRISPR-Cas9 expression vectors, similarly as the liposomes. Moreover, the resultant hybrid nanoparticles can be endocytosed by and express the encapsulated genes in the mesenchymal stem cells (MSCs), which cannot be transfected by the liposome alone. Taken together, the exosome-liposome hybrid nanoparticles can deliver CRISPR-Cas9 system in MSCs and thus be promising in in vivo gene manipulation.",
+        "authors": [
+          "Yao Lin",
+          "Jiahua Wu",
+          "Weihuai Gu"
+        ],
+        "doi": "10.1002/advs.201700611",
+        "source": "Advanced Science",
+        "title": "Exosome–Liposome Hybrid Nanoparticles Deliver CRISPR/Cas9 System in MSCs",
+        "work_id": "doi:10.1002/advs.201700611",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E030",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Prospects and challenges of extracellular vesicle-based drug delivery system: considering cell source",
+      "unit": null,
+      "value": {
+        "abstract": "Extracellular vesicles (EVs), including exosomes, microvesicles, and apoptotic bodies, are nanosized membrane vesicles derived from most cell types. Carrying diverse biomolecules from their parent cells, EVs are important mediators of intercellular communication and thus play significant roles in physiological and pathological processes. Owing to their natural biogenesis process, EVs are generated with high biocompatibility, enhanced stability, and limited immunogenicity, which provide multiple advantages as drug delivery systems (DDSs) over traditional synthetic delivery vehicles. EVs have been reported to be used for the delivery of siRNAs, miRNAs, protein, small molecule drugs, nanoparticles, and CRISPR/Cas9 in the treatment of various diseases. As a natural drug delivery vectors, EVs can penetrate into the tissues and be bioengineered to enhance the targetability. Although EVs' characteristics make them ideal for drug delivery, EV-based drug delivery remains challenging, due to lack of standardized isolation and purification methods, limited drug loading efficiency, and insufficient clinical grade production. In this review, we summarized the current knowledge on the application of EVs as DDS from the perspective of different cell origin and weighted the advantages and bottlenecks of EV-based DDS.",
+        "authors": [
+          "Wanrong Meng",
+          "Chuanshi He",
+          "Yaying Hao",
+          "Linlin Wang"
+        ],
+        "doi": "10.1080/10717544.2020.1748758",
+        "source": "Drug Delivery",
+        "title": "Prospects and challenges of extracellular vesicle-based drug delivery system: considering cell source",
+        "work_id": "doi:10.1080/10717544.2020.1748758",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E031",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Targeting circular RNAs as a therapeutic approach: current strategies and challenges",
+      "unit": null,
+      "value": {
+        "abstract": "Significant progress has been made in circular RNA (circRNA) research in recent years. Increasing evidence suggests that circRNAs play important roles in many cellular processes, and their dysregulation is implicated in the pathogenesis of various diseases. CircRNAs are highly stable and usually expressed in a tissue- or cell type-specific manner. Therefore, they are currently being explored as potential therapeutic targets. Gain-of-function and loss-of-function approaches are typically performed using circRNA expression plasmids and RNA interference-based strategies, respectively. These strategies have limitations that can be mitigated using nanoparticle and exosome delivery systems. Furthermore, recent developments show that the cre-lox system can be used to knockdown circRNAs in a cell-specific manner. While still in the early stages of development, the CRISPR/Cas13 system has shown promise in knocking down circRNAs with high specificity and efficiency. In this review, we describe circRNA properties and functions and highlight their significance in disease. We summarize strategies that can be used to overexpress or knockdown circRNAs as a therapeutic approach. Lastly, we discuss major challenges and propose future directions for the development of circRNA-based therapeutics.",
+        "authors": [
+          "Alina T. He",
+          "Jinglei Liu",
+          "Feiya Li",
+          "Burton B. Yang"
+        ],
+        "doi": "10.1038/s41392-021-00569-5",
+        "source": "Signal Transduction and Targeted Therapy",
+        "title": "Targeting circular RNAs as a therapeutic approach: current strategies and challenges",
+        "work_id": "doi:10.1038/s41392-021-00569-5",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E032",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Nanoparticle Delivery of CRISPR/Cas9 for Genome Editing",
+      "unit": null,
+      "value": {
+        "abstract": "The emerging clustered regularly interspaced short palindromic repeat (CRISPR)/CRISPR-associated system (Cas) gene-editing system represents a promising tool for genome manipulation. However, its low intracellular delivery efficiency severely compromises its use and potency for clinical applications. Nanocarriers, such as liposomes, polymers, and inorganic nanoparticles, have shown great potential for gene delivery. The remarkable development of nanoparticles as non-viral carriers for the delivery of the CRISPR/Cas9 system has shown great promise for therapeutic applications. In this review, we briefly summarize the delivery components of the CRISPR/Cas9 system and report on the progress of nano-system development for CRISPR/Cas9 delivery. We also compare the advantages of various nano-delivery systems and their applications to deliver CRISPR/Cas9 for disease treatment. Nano-delivery systems can be modified to fulfill the tasks of targeting cells or tissues. We primarily emphasize the novel exosome-based CRISPR/Cas9 delivery system. Overall, we review the challenges, development trends, and application prospects of nanoparticle-based technology for CRISPR/Cas9 delivery.",
+        "authors": [
+          "Li Duan",
+          "Kan Ouyang",
+          "Xiao Xu",
+          "Limei Xu",
+          "Caining Wen",
+          "Xiaoying Zhou",
+          "Zhuan Qin",
+          "Zhiyi Xu"
+        ],
+        "doi": "10.3389/fgene.2021.673286",
+        "source": "Frontiers in Genetics",
+        "title": "Nanoparticle Delivery of CRISPR/Cas9 for Genome Editing",
+        "work_id": "doi:10.3389/fgene.2021.673286",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E033",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Rolling Circular Amplification (RCA)-Assisted CRISPR/Cas9 Cleavage (RACE) for Highly Specific Detection of Multiple Extracellular Vesicle MicroRNAs",
+      "unit": null,
+      "value": {
+        "abstract": "Multiplexed detection of extracellular vesicle (EV)-derived microRNAs (miRNAs) plays a critical role in facilitating disease diagnosis and prognosis evaluation. Herein, we developed a highly specific nucleic acid detection platform for simultaneous quantification of several EV-derived miRNAs in constant temperature by integrating the advantages of a clustered regularly interspaced short palindromic repeats/CRISPR associated nucleases (CRISPR/Cas) system and rolling circular amplification (RCA) techniques. Particularly, the proposed approach demonstrated single-base resolution attributed to the dual-specific recognition from both padlock probe-mediated ligation and protospacer adjacent motif (PAM)-triggered cleavage. The high consistency between the proposed approach RCA-assisted CRISPR/Cas9 cleavage (RACE) and reverse transcription quantitative polymerase chain reaction (RT-qPCR) in detecting EV-derived miRNAs' abundance from both cultured cancer cells and clinical lung cancer patients validated its robustness, revealing its potentials in the screening, diagnosis, and prognosis of various diseases. In summary, RACE is a powerful tool for multiplexed, specific detection of nucleic acids in point-of-care diagnostics and field-deployable analysis.",
+        "authors": [
+          "Ruixuan Wang",
+          "Xianxian Zhao",
+          "Xiaohui Chen",
+          "Xiaopei Qiu"
+        ],
+        "doi": "10.1021/acs.analchem.9b04814",
+        "source": "Analytical Chemistry",
+        "title": "Rolling Circular Amplification (RCA)-Assisted CRISPR/Cas9 Cleavage (RACE) for Highly Specific Detection of Multiple Extracellular Vesicle MicroRNAs",
+        "work_id": "doi:10.1021/acs.analchem.9b04814",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E034",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: In Vitro and in Vivo RNA Inhibition by CD9-HuR Functionalized Exosomes Encapsulated with miRNA or CRISPR/dCas9",
+      "unit": null,
+      "value": {
+        "abstract": "In vitro and in vivo delivery of RNAs of interest holds promise for gene therapy. Recently, exosomes are considered as a kind of rational vehicle for RNA delivery, especially miRNA and/or siRNA, while the loading efficiency is limited. In this study, we engineered the exosomes for RNA loading by constructing a fusion protein in which the exosomal membrane protein CD9 was fused with RNA binding protein, while the RNA of interest either natively harbors or is engineered to have the elements for the binding. By proof-of-principle experiments, we here fused CD9 with HuR, an RNA binding protein interacting with miR-155 with a relatively high affinity. In the exosome packaging cells, the fused CD9-HuR successfully enriched miR-155 into exosomes when miR-155 was excessively expressed. Moreover, miR-155 encapsulated in the exosomes in turn could be efficiently delivered into the recipient cells and recognized the endogenous targets. In addition, we also revealed that the CD9-HuR exosomes could enrich the functional miRNA inhibitor or CRISPR/dCas9 when the RNAs were engineered to have the AU rich elements. Taken together, we here have established a novel strategy for enhanced RNA cargo encapsulation into engineered exosomes, which in turn functions in the recipient cells.",
+        "authors": [
+          "Zhelong Li",
+          "Xueying Zhou",
+          "Mengying Wei",
+          "Xiaotong Gao",
+          "Lianbi Zhao",
+          "Ruijing Shi",
+          "Wenqi Sun",
+          "Yunyou Duan"
+        ],
+        "doi": "10.1021/acs.nanolett.8b02689",
+        "source": "Nano Letters",
+        "title": "In Vitro and in Vivo RNA Inhibition by CD9-HuR Functionalized Exosomes Encapsulated with miRNA or CRISPR/dCas9",
+        "work_id": "doi:10.1021/acs.nanolett.8b02689",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E035",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: A versatile platform for generating engineered extracellular vesicles with defined therapeutic properties",
+      "unit": null,
+      "value": {
+        "abstract": "Extracellular vesicles (EVs) are an important intercellular communication system facilitating the transfer of macromolecules between cells. Delivery of exogenous cargo tethered to the EV surface or packaged inside the lumen are key strategies for generating therapeutic EVs. We identified two \"scaffold\" proteins, PTGFRN and BASP1, that are preferentially sorted into EVs and enable high-density surface display and luminal loading of a wide range of molecules, including cytokines, antibody fragments, RNA binding proteins, vaccine antigens, Cas9, and members of the TNF superfamily. Molecules were loaded into EVs at high density and exhibited potent in vitro activity when fused to full-length or truncated forms of PTGFRN or BASP1. Furthermore, these engineered EVs retained pharmacodynamic activity in a variety of animal models. This engineering platform provides a simple approach to functionalize EVs with topologically diverse macromolecules and represents a significant advance toward unlocking the therapeutic potential of EVs.",
+        "authors": [
+          "Kevin Dooley",
+          "Russell E. McConnell",
+          "Ke Xu",
+          "Nuruddeen D. Lewis",
+          "Sonya Haupt",
+          "Madeleine R. Youniss",
+          "Shelly Martin",
+          "Chang Ling Sia"
+        ],
+        "doi": "10.1016/j.ymthe.2021.01.020",
+        "source": "Molecular Therapy",
+        "title": "A versatile platform for generating engineered extracellular vesicles with defined therapeutic properties",
+        "work_id": "doi:10.1016/j.ymthe.2021.01.020",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E036",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Recent Advances in CRISPR/Cas9 Delivery Strategies",
+      "unit": null,
+      "value": {
+        "abstract": "The clustered regularly interspaced short palindromic repeats (CRISPR)/Cas9 system has revolutionized the field of gene editing. Continuous efforts in developing this technology have enabled efficient in vitro, ex vivo, and in vivo gene editing through a variety of delivery strategies. Viral vectors are commonly used in in vitro, ex vivo, and in vivo delivery systems, but they can cause insertional mutagenesis, have limited cloning capacity, and/or elicit immunologic responses. Physical delivery methods are largely restricted to in vitro and ex vivo systems, whereas chemical delivery methods require extensive optimization to improve their efficiency for in vivo gene editing. Achieving a safe and efficient in vivo delivery system for CRISPR/Cas9 remains the most challenging aspect of gene editing. Recently, extracellular vesicle-based systems were reported in various studies to deliver Cas9 in vitro and in vivo. In comparison with other methods, extracellular vesicles offer a safe, transient, and cost-effective yet efficient platform for delivery, indicating their potential for Cas9 delivery in clinical trials. In this review, we first discuss the pros and cons of different Cas9 delivery strategies. We then specifically review the development of extracellular vesicle-mediated gene editing and highlight the strengths and weaknesses of this technology.",
+        "authors": [
+          "Bon Ham Yip"
+        ],
+        "doi": "10.3390/biom10060839",
+        "source": "Biomolecules",
+        "title": "Recent Advances in CRISPR/Cas9 Delivery Strategies",
+        "work_id": "doi:10.3390/biom10060839",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E037",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Exosome-mediated delivery of Cas9 ribonucleoprotein complexes for tissue-specific gene therapy of liver diseases",
+      "unit": null,
+      "value": {
+        "abstract": "CRISPR-Cas9 gene editing has emerged as a powerful therapeutic technology, but the lack of safe and efficient in vivo delivery systems, especially for tissue-specific vectors, limits its broad clinical applications. Delivery of Cas9 ribonucleoprotein (RNP) owns competitive advantages over other options; however, the large size of RNPs exceeds the loading capacity of currently available delivery vectors. Here, we report a previously unidentified genome editing delivery system, named exosome RNP , in which Cas9 RNPs were loaded into purified exosomes isolated from hepatic stellate cells through electroporation. Exosome RNP facilitated effective cytosolic delivery of RNP in vitro while specifically accumulated in the liver tissue in vivo. Exosome RNP showed vigorous therapeutic potential in acute liver injury, chronic liver fibrosis, and hepatocellular carcinoma mouse models via targeting p53 up-regulated modulator of apoptosis ( PUMA ), cyclin E1 ( CcnE1 ), and K (lysine) acetyltransferase 5 ( KAT5 ), respectively. The developed exosome RNP provides a feasible platform for precise and tissue-specific gene therapies of liver diseases.",
+        "authors": [
+          "Tao Wan",
+          "Jiafeng Zhong",
+          "Qi Pan",
+          "Tianhua Zhou",
+          "Ping Yuan",
+          "Xiangrui Liu"
+        ],
+        "doi": "10.1126/sciadv.abp9435",
+        "source": "Science Advances",
+        "title": "Exosome-mediated delivery of Cas9 ribonucleoprotein complexes for tissue-specific gene therapy of liver diseases",
+        "work_id": "doi:10.1126/sciadv.abp9435",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E038",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: ARMMs as a versatile platform for intracellular delivery of macromolecules",
+      "unit": null,
+      "value": {
+        "abstract": "Majority of disease-modifying therapeutic targets are restricted to the intracellular space and are therefore not druggable using existing biologic modalities. The ability to efficiently deliver macromolecules inside target cells or tissues would greatly expand the current landscape of therapeutic targets for future generations of biologic drugs, but remains challenging. Here we report the use of extracellular vesicles, known as arrestin domain containing protein 1 [ARRDC1]-mediated microvesicles (ARMMs), for packaging and intracellular delivery of a myriad of macromolecules, including the tumor suppressor p53 protein, RNAs, and the genome-editing CRISPR-Cas9/guide RNA complex. We demonstrate selective recruitment of these macromolecules into ARMMs. When delivered intracellularly via ARMMs, these macromolecules are biologically active in recipient cells. P53 delivered via ARMMs induces DNA damage-dependent apoptosis in multiple tissues in mice. Together, our results provide proof-of-principle demonstration that ARMMs represent a highly versatile platform for packaging and intracellular delivery of therapeutic macromolecules.",
+        "authors": [
+          "Qiyu Wang",
+          "Jiujiu Yu",
+          "Tatenda Kadungure",
+          "Joseph Beyene",
+          "Hong Zhang",
+          "Quan Lu"
+        ],
+        "doi": "10.1038/s41467-018-03390-x",
+        "source": "Nature Communications",
+        "title": "ARMMs as a versatile platform for intracellular delivery of macromolecules",
+        "work_id": "doi:10.1038/s41467-018-03390-x",
+        "year": 2018
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E039",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Chondrocyte-specific genomic editing enabled by hybrid exosomes for osteoarthritis treatment",
+      "unit": null,
+      "value": {
+        "abstract": "Rationale: A cell-specific delivery vehicle is required to achieve gene editing of the disease-associated cells, so the hereditable genome editing reactions are confined within these cells without affecting healthy cells. A hybrid exosome-based nano-sized delivery vehicle derived by fusion of engineered exosomes and liposomes will be able to encapsulate and deliver CRISPR/Cas9 plasmids selectively to chondrocytes embedded in articular cartilage and attenuate the condition of cartilage damage. Methods: Chondrocyte-targeting exosomes (CAP-Exo) were constructed by genetically fusing a chondrocyte affinity peptide (CAP) at the N-terminus of the exosomal surface protein Lamp2b. Membrane fusion of the CAP-Exo with liposomes formed hybrid CAP-exosomes (hybrid CAP-Exo) which were used to encapsulate CRISPR/Cas9 plasmids. By intra-articular (IA) administration, hybrid CAP-Exo/Cas9 sgMMP-13 entered the chondrocytes of rats with cartilage damages that mimicked the condition of osteoarthritis. Results: The hybrid CAP-Exo entered the deep region of the cartilage matrix in arthritic rats on IA administration, delivered the plasmid Cas9 sgMMP-13 to chondrocytes, knocked down the matrix metalloproteinase 13 (MMP-13), efficiently ablated the expression of MMP-13 in chondrocytes, and attenuated the hydrolytic degradation of the extracellular matrix proteins in the cartilage. Conclusion: Chondrocyte-specific knockdown of MMP-13 mitigates or prevents cartilage degradation in arthritic rats, showing that hybrid CAP-Exo/Cas9 sgMMP-13 may alleviate osteoarthritis.",
+        "authors": [
+          "Yujie Liang",
+          "Xiao Xu",
+          "Limei Xu",
+          "Zoya Iqbal",
+          "Kan Ouyang",
+          "Huawei Zhang"
+        ],
+        "doi": "10.7150/thno.69368",
+        "source": "Theranostics",
+        "title": "Chondrocyte-specific genomic editing enabled by hybrid exosomes for osteoarthritis treatment",
+        "work_id": "doi:10.7150/thno.69368",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E040",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Exosome-mediated delivery of CRISPR/Cas9 for targeting of oncogenic Kras G12D in pancreatic cancer",
+      "unit": null,
+      "value": {
+        "abstract": "CRISPR/Cas9 is a promising technology for gene editing. To date, intracellular delivery vehicles for CRISPR/Cas9 are limited by issues of immunogenicity, restricted packaging capacity, and low tolerance. Here, we report an alternative, nonviral delivery system for CRISPR/Cas9 based on engineered exosomes. We show that non-autologous exosomes can encapsulate CRISPR/Cas9 plasmid DNA via commonly available transfection reagents and can be delivered to recipient cancer cells to induce targeted gene deletion. As a proof-of-principle, we demonstrate that exosomes loaded with CRISPR/Cas9 can target the mutant Kras G12D oncogenic allele in pancreatic cancer cells to suppress proliferation and inhibit tumor growth in syngeneic subcutaneous and orthotopic models of pancreatic cancer. Exosomes may thus be a promising delivery platform for CRISPR/Cas9 gene editing for targeted therapies.",
+        "authors": [
+          "Kathleen M. McAndrews",
+          "Fei Xiao",
+          "Antonios Chronopoulos",
+          "Valerie S. LeBleu",
+          "Fernanda G. Kugeratski",
+          "Raghu Kalluri"
+        ],
+        "doi": "10.26508/lsa.202000875",
+        "source": "Life Science Alliance",
+        "title": "Exosome-mediated delivery of CRISPR/Cas9 for targeting of oncogenic Kras G12D in pancreatic cancer",
+        "work_id": "doi:10.26508/lsa.202000875",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E041",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: MGMT genomic rearrangements contribute to chemotherapy resistance in gliomas",
+      "unit": null,
+      "value": {
+        "abstract": "Temozolomide (TMZ) is an oral alkylating agent used for the treatment of glioblastoma and is now becoming a chemotherapeutic option in patients diagnosed with high-risk low-grade gliomas. The O-6-methylguanine-DNA methyltransferase (MGMT) is responsible for the direct repair of the main TMZ-induced toxic DNA adduct, the O6-Methylguanine lesion. MGMT promoter hypermethylation is currently the only known biomarker for TMZ response in glioblastoma patients. Here we show that a subset of recurrent gliomas carries MGMT genomic rearrangements that lead to MGMT overexpression, independently from changes in its promoter methylation. By leveraging the CRISPR/Cas9 technology we generated some of these MGMT rearrangements in glioma cells and demonstrated that the MGMT genomic rearrangements contribute to TMZ resistance both in vitro and in vivo. Lastly, we showed that such fusions can be detected in tumor-derived exosomes and could potentially represent an early detection marker of tumor recurrence in a subset of patients treated with TMZ.",
+        "authors": [
+          "Barbara Oldrini",
+          "Nuria Vaquero‐Siguero",
+          "Quanhua Mu",
+          "Paula Kroon",
+          "Ying Zhang"
+        ],
+        "doi": "10.1038/s41467-020-17717-0",
+        "source": "Nature Communications",
+        "title": "MGMT genomic rearrangements contribute to chemotherapy resistance in gliomas",
+        "work_id": "doi:10.1038/s41467-020-17717-0",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E042",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Engineered Cas9 extracellular vesicles as a novel gene editing tool",
+      "unit": null,
+      "value": {
+        "abstract": "Extracellular vesicles (EVs) have shown promise as biological delivery vehicles, but therapeutic applications require efficient cargo loading. Here, we developed new methods for CRISPR/Cas9 loading into EVs through reversible heterodimerization of Cas9-fusions with EV sorting partners. Cas9-loaded EVs were collected from engineered Expi293F cells using standard methodology, characterized using nanoparticle tracking analysis, western blotting, and transmission electron microscopy and analysed for CRISPR/Cas9-mediated functional gene editing in a Cre-reporter cellular assay. Light-induced dimerization using Cryptochrome 2 combined with CD9 or a Myristoylation-Palmitoylation-Palmitoylation lipid modification resulted in efficient loading with approximately 25 Cas9 molecules per EV and high functional delivery with 51% gene editing of the Cre reporter cassette in HEK293 and 25% in HepG2 cells, respectively. This approach was also effective for targeting knock-down of the therapeutically relevant PCSK9 gene with 6% indel efficiency in HEK293. Cas9 transfer was detergent-sensitive and associated with the EV fractions after size exclusion chromatography, indicative of EV-mediated transfer. Considering the advantages of EVs over other delivery vectors we envision that this study will prove useful for a range of therapeutic applications, including CRISPR/Cas9 mediated genome editing.",
+        "authors": [
+          "Xabier Osteikoetxea",
+          "Andreia Silva",
+          "Elisa Lázaro‐Ibáñez"
+        ],
+        "doi": "10.1002/jev2.12225",
+        "source": "Journal of Extracellular Vesicles",
+        "title": "Engineered Cas9 extracellular vesicles as a novel gene editing tool",
+        "work_id": "doi:10.1002/jev2.12225",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E043",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Intestinal phages interact with bacteria and are involved in human diseases",
+      "unit": null,
+      "value": {
+        "abstract": "Phages are the most abundant and diverse biological entities on Earth and exert specific effects on bacterial hosts. The coexistence of phages and bacteria in the intestinal tract is dynamic and interdependent. Phages are involved in maintaining the stability and composition of the bacterial community, and an imbalance in phages and bacteria in the intestinal tract can cause diseases. This review elucidates interactions between phages and bacteria in the human intestinal tract and their roles in the pathogenesis and treatment of diseases. Understanding the relationship among phages, bacteria and host diseases is conducive to promoting the application of phages in the treatment of human diseases.List of abbreviations EMBL-EBI The European Bioinformatics Institute; E. coli Escherichia coli; E. faecalis Enterobacter faecalis; B. fragilis Bacteroides fragilis; B. vulgatus Bacteroides vulgatus; SaPIs Staphylococcus aureus pathogenicity islands; ARGs Antibiotic resistance genes; STEC Shiga toxigenic E. coli; Stx Shiga toxin; BLAST Basic Local Alignment Search Tool; TSST-1 Toxic shock toxin 1; RBPs Receptor-binding proteins; LPS lipopolysaccharide; OMVs Outer membrane vesicles; PT Phosphorothioate; BREX Bacteriophage exclusion; OCR Overcome classical restriction; Pgl Phage growth limitation; DISARM Defense island system associated with restrictionmodification; R-M system Restriction-modification system; BREX system Bacteriophage exclusion system; CRISPR Clustered regularly interspaced short palindromic repeats; Cas CRISPR-associated; PAMs Prospacer adjacent motifs; crRNA CRISPR RNA; SIE; OMPs; Superinfection exclusion; Outer membrane proteins; Abi Abortive infection; TA Toxin-antitoxin; TLR Toll-like receptor; APCs Antigen-presenting cells; DSS Dextran sulfate sodium; IELs Intraepithelial lymphocytes; FMT Fecal microbiota transfer; IFN-γ Interferon-gamma; IBD Inflammatory bowel disease; AgNPs Silver nanoparticles; MDSC Myeloid-derived suppressor cell; CRC Colorectal cancer; VLPs Virus-like particles; TMP Tape measure protein; PSMB4 Proteasome subunit beta type-4; ALD Alcohol-related liver disease; GVHD Graft-versus-host disease; ROS Reactive oxygen species; RA Rheumatoid arthritis; CCP Cyclic citrullinated protein; AMGs Accessory metabolic genes; T1DM Type 1 diabetes mellitus; T2DM Type 2 diabetes mellitus; SCFAs Short-chain fatty acids; GLP-1 Glucagon-like peptide-1; A. baumannii Acinetobacter baumannii; CpG Deoxycytidylinate-phosphodeoxyguanosine; PEG Polyethylene glycol; MetS Metabolic syndrome; OprM Outer membrane porin M.",
+        "authors": [
+          "Shuwen Han",
+          "Kefeng Ding"
+        ],
+        "doi": "10.1080/19490976.2022.2113717",
+        "source": "Gut Microbes",
+        "title": "Intestinal phages interact with bacteria and are involved in human diseases",
+        "work_id": "doi:10.1080/19490976.2022.2113717",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E044",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: CHMP2A regulates tumor sensitivity to natural killer cell-mediated cytotoxicity",
+      "unit": null,
+      "value": {
+        "abstract": "Natural killer (NK) cells are known to mediate killing of various cancer types, but tumor cells can develop resistance mechanisms to escape NK cell-mediated killing. Here, we use a \"two cell type\" whole genome CRISPR-Cas9 screening system to discover key regulators of tumor sensitivity and resistance to NK cell-mediated cytotoxicity in human glioblastoma stem cells (GSC). We identify CHMP2A as a regulator of GSC resistance to NK cell-mediated cytotoxicity and we confirm these findings in a head and neck squamous cells carcinoma (HNSCC) model. We show that deletion of CHMP2A activates NF-κB in tumor cells to mediate increased chemokine secretion that promotes NK cell migration towards tumor cells. In the HNSCC model we demonstrate that CHMP2A mediates tumor resistance to NK cells via secretion of extracellular vesicles (EVs) that express MICA/B and TRAIL. These secreted ligands induce apoptosis of NK cells to inhibit their antitumor activity. To confirm these in vitro studies, we demonstrate that deletion of CHMP2A in CAL27 HNSCC cells leads to increased NK cell-mediated killing in a xenograft immunodeficient mouse model. These findings illustrate a mechanism of tumor immune escape through EVs secretion and identify inhibition of CHMP2A and related targets as opportunities to improve NK cell-mediated immunotherapy.",
+        "authors": [
+          "Davide Bernareggi",
+          "Qi Xie",
+          "Briana C. Prager",
+          "Ji-Young Yun",
+          "Luisjesus S. Cruz",
+          "Timothy V. Pham"
+        ],
+        "doi": "10.1038/s41467-022-29469-0",
+        "source": "Nature Communications",
+        "title": "CHMP2A regulates tumor sensitivity to natural killer cell-mediated cytotoxicity",
+        "work_id": "doi:10.1038/s41467-022-29469-0",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E045",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Cell-derived extracellular vesicles for CRISPR/Cas9 delivery: engineering strategies for cargo packaging and loading",
+      "unit": null,
+      "value": {
+        "abstract": "Genome editing technology has emerged as a potential therapeutic tool for treating incurable diseases. In particular, the discovery of clustered regularly interspaced short palindromic repeats (CRISPR)/Cas systems and the design of single-guide RNAs (sgRNAs) have revolutionized genome editing applications. Unfortunately, compared with the rapid development of gene-editing tools, the progress in the development of delivery technologies is lagging behind and thus limiting the clinical application of genome editing. To overcome these limitations, researchers have investigated various delivery systems, including viral and non-viral vectors for delivering CRISPR/Cas and sgRNA complexes. As natural endogenous nanocarriers, extracellular vesicles (EVs) present advantages of biocompatibility, low immunogenicity, stability, and high permeability, making them one of the most promising drug delivery vehicles. This review provides an overview of the fundamental mechanisms of EVs from the aspects of biogenesis, trafficking, cargo delivery, and function as nanotherapeutic agents. We also summarize the latest trends in EV-based CRISPR/Cas delivery systems and discuss the prospects for future development. In particular, we put our emphasis on the state-of-the-art engineering strategies to realize efficient cargo packaging and loading. Altogether, EVs hold promise in bridging genome editing in the laboratory and clinical applications of gene therapies by providing a safe, effective, and targeted delivery vehicle.",
+        "authors": [
+          "Yujie Liang",
+          "Zoya Iqbal",
+          "Jianhong Wang",
+          "Limei Xu",
+          "Xiao Xu",
+          "Kan Ouyang",
+          "Hao Zhang"
+        ],
+        "doi": "10.1039/d2bm00480a",
+        "source": "Biomaterials Science",
+        "title": "Cell-derived extracellular vesicles for CRISPR/Cas9 delivery: engineering strategies for cargo packaging and loading",
+        "work_id": "doi:10.1039/d2bm00480a",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E046",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: CRISPR/Cas9-engineered mesenchymal stromal/stem cells and their extracellular vesicles: A new approach to overcoming cell therapy limitations",
+      "unit": null,
+      "value": {
+        "abstract": "Cell therapy is one of the newest therapeutic approaches for treating tissue destruction diseases and replacing damaged parts in defective tissues. Among different cells, mesenchymal stem cells (MSCs) have received a lot of attention due to their advantages and desirable properties. Also, MSCs-derived secretome, which includes various growth factors, cytokines, and extracellular vesicles (EVs), is used in the treatment of different types of diseases. However, the application of MSCs in an intact form brings their functionality with limitations. For this reason, different methods are recommended to increase their efficiency and the extracellular vesicles derived from them. One of these methods is gene editing of these cells. Among the different techniques for MSCs gene editing, CRISPR/Cas9 can increase the therapeutic potential of MSCs in a targeted manner due to its advantages. In order to achieve the desired result, various genes have been manipulated in MSCs, including genes involved in stemness, aging, migration, proliferation, survival, and inflammatory responses. Engineering MSCs with this method affects the cells' characteristics, changes their cytokine and different growth factors secretions, and increases their therapeutic efficiency.",
+        "authors": [
+          "Ali Hazrati",
+          "Kosar Malekpour",
+          "Sara Soudi",
+          "Seyed Mahmoud Hashemi"
+        ],
+        "doi": "10.1016/j.biopha.2022.113943",
+        "source": "Biomedicine & Pharmacotherapy",
+        "title": "CRISPR/Cas9-engineered mesenchymal stromal/stem cells and their extracellular vesicles: A new approach to overcoming cell therapy limitations",
+        "work_id": "doi:10.1016/j.biopha.2022.113943",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E047",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Neuronal activity induces glucosylceramide that is secreted via exosomes for lysosomal degradation in glia",
+      "unit": null,
+      "value": {
+        "abstract": "Recessive variants in GBA1 cause Gaucher disease, a prevalent form of lysosome storage disease. GBA1 encodes a lysosomal enzyme that hydrolyzes glucosylceramide (GlcCer) into glucose and ceramide. Its loss causes lysosomal dysfunction and increased levels of GlcCer. We generated a null allele of the Drosophila ortholog Gba1b by inserting the Gal4 using CRISPR-Cas9. Here, we show that Gba1b is expressed in glia but not in neurons. Glial-specific knockdown recapitulates the defects found in Gba1b mutants, and these can be rescued by glial expression of human GBA1 . We show that GlcCer is synthesized upon neuronal activity, and it is transported from neurons to glia through exosomes. Furthermore, we found that glial TGF-β/BMP induces the transfer of GlcCer from neurons to glia and that the White protein, an ABCG transporter, promotes GlcCer trafficking to glial lysosomes for degradation.",
+        "authors": [
+          "Liping Wang",
+          "Guang Lin",
+          "Zhongyuan Zuo"
+        ],
+        "doi": "10.1126/sciadv.abn3326",
+        "source": "Science Advances",
+        "title": "Neuronal activity induces glucosylceramide that is secreted via exosomes for lysosomal degradation in glia",
+        "work_id": "doi:10.1126/sciadv.abn3326",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E048",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Rapid neutrophil mobilization by VCAM-1+ endothelial cell-derived extracellular vesicles",
+      "unit": null,
+      "value": {
+        "abstract": "AIMS: Acute myocardial infarction rapidly increases blood neutrophils (<2 h). Release from bone marrow, in response to chemokine elevation, has been considered their source, but chemokine levels peak up to 24 h after injury, and after neutrophil elevation. This suggests that additional non-chemokine-dependent processes may be involved. Endothelial cell (EC) activation promotes the rapid (<30 min) release of extracellular vesicles (EVs), which have emerged as an important means of cell-cell signalling and are thus a potential mechanism for communicating with remote tissues. METHODS AND RESULTS: Here, we show that injury to the myocardium rapidly mobilizes neutrophils from the spleen to peripheral blood and induces their transcriptional activation prior to arrival at the injured tissue. Time course analysis of plasma-EV composition revealed a rapid and selective increase in EVs bearing VCAM-1. These EVs, which were also enriched for miRNA-126, accumulated preferentially in the spleen where they induced local inflammatory gene and chemokine protein expression, and mobilized splenic-neutrophils to peripheral blood. Using CRISPR/Cas9 genome editing, we generated VCAM-1-deficient EC-EVs and showed that its deletion removed the ability of EC-EVs to provoke the mobilization of neutrophils. Furthermore, inhibition of miRNA-126 in vivo reduced myocardial infarction size in a mouse model. CONCLUSIONS: Our findings show a novel EV-dependent mechanism for the rapid mobilization of neutrophils to peripheral blood from a splenic reserve and establish a proof of concept for functional manipulation of EV-communications through genetic alteration of parent cells.",
+        "authors": [
+          "Naveed Akbar",
+          "Adam Braithwaite",
+          "Emma M. Corr",
+          "Graeme J. Koelwyn",
+          "Coen van Solingen",
+          "Clément Cochain"
+        ],
+        "doi": "10.1093/cvr/cvac012",
+        "source": "Cardiovascular Research",
+        "title": "Rapid neutrophil mobilization by VCAM-1+ endothelial cell-derived extracellular vesicles",
+        "work_id": "doi:10.1093/cvr/cvac012",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E049",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Encapsulating Cas9 into extracellular vesicles by protein myristoylation",
+      "unit": null,
+      "value": {
+        "abstract": "CRISPR/Cas9 genome editing is a very promising avenue for the treatment of a variety of genetic diseases. However, it is still very challenging to encapsulate CRISPR/Cas9 machinery for delivery. Protein N-myristoylation is an irreversible co/post-translational modification that results in the covalent attachment of the myristoyl-group to the N-terminus of a target protein. It serves as an anchor for a protein to associate with the cell membrane and determines its intracellular trafficking and activity. Extracellular vesicles (EVs) are secreted vesicles that mediate cell-cell communication. In this study, we demonstrate that myristoylated proteins were preferentially encapsulated into EVs. The octapeptide derived from the leading sequence of the N-terminus of Src kinase was a favourable substrate for N-myristoyltransferase 1, the enzyme that catalyzes myristoylation. The fusion of the octapeptide onto the N-terminus of Cas9 promoted the myristoylation and encapsulation of Cas9 into EVs. Encapsulation of Cas9 and sgRNA-eGFP inside EVs was confirmed using protease digestion assays. Additionally, to increase the transfection potential, VSV-G was introduced into the EVs. The encapsulated Cas9 in EVs accounted for 0.7% of total EV protein. Importantly, the EVs coated with VSV-G encapsulating Cas9/sgRNA-eGFP showed up to 42% eGFP knock out efficiency with limited off-target effects in recipient cells. Our study provides a novel approach to encapsulate CRISPR/Cas9 protein and sgRNA into EVs. This strategy may open an effective avenue to utilize EVs as vehicles to deliver CRISPR/Cas9 for genome-editing-based gene therapy.",
+        "authors": [
+          "Joseph Andrew Whitley",
+          "Sungjin Kim",
+          "Lei Lou",
+          "Chenming Ye",
+          "Omar Awad Alsaidan",
+          "Essilvo Sulejmani",
+          "Jingwen Cai"
+        ],
+        "doi": "10.1002/jev2.12196",
+        "source": "Journal of Extracellular Vesicles",
+        "title": "Encapsulating Cas9 into extracellular vesicles by protein myristoylation",
+        "work_id": "doi:10.1002/jev2.12196",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E050",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Programmable DNA-Fueled Electrochemical Analysis of Lung Cancer Exosomes",
+      "unit": null,
+      "value": {
+        "abstract": "Molecular diagnostics devoted to discover and monitor new biomarkers is gaining increasing attention in clinical diagnosis. In this work, a programmable DNA-fueled electrochemical analysis strategy is designed for the determination of an emerging biomarker in lung cancer, PD-L1-expressing exosomes. Specifically, PD-L1-expressing exosomes are first enriched onto magnetic beads functionalized with PD-L1 antibody and are able to interact with cholesterol-modified hairpin templates. Then, programmable DNA synthesis starts from the hairpin template-triggered primer exchange reaction and generates a large number of extension products to activate the trans-cleavage activity of CRISPR-Cas12a. After that, CRISPR-Cas12a-catalyzed random cleavage boosts the degradation of methylene blue-labeled signaling strands, so electro-active methylene blue molecules can be enriched onto a cucurbit[7]uril-modified electrode for quantitative determination. Our method demonstrates high sensitivity and specificity toward electrochemical analysis of PD-L1-expressing exosomes in the range from 10 3 to 10 9 particles mL –1 with a low detection limit of 708 particles mL –1 . When applied to clinical samples, our method reveals an elevated level of circulating PD-L1-expressing exosomes in lung cancer patients, especially for those at the advanced stages. Therefore, our method may provide new insight into liquid biopsy for better implementation of immunotherapy in lung cancer in the future.",
+        "authors": [
+          "Lingjun Sha",
+          "Bing Bo",
+          "Fan Yang",
+          "Jiayu Li"
+        ],
+        "doi": "10.1021/acs.analchem.2c01318",
+        "source": "Analytical Chemistry",
+        "title": "Programmable DNA-Fueled Electrochemical Analysis of Lung Cancer Exosomes",
+        "work_id": "doi:10.1021/acs.analchem.2c01318",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "figures/annual_publications.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E051",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 1 (annual_publications) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "peak_documents": 72,
+          "peak_year": 2022,
+          "years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022
+          ]
+        },
+        "figure_name": "annual_publications",
+        "figure_number": 1
+      }
+    },
+    {
+      "artifact_path": "figures/top_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E052",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 2 (top_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "International Journal of Molecular Sciences",
+          "top_value": 9
+        },
+        "figure_name": "top_sources",
+        "figure_number": 2
+      }
+    },
+    {
+      "artifact_path": "figures/top_authors.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E053",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 3 (top_authors) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Xiaohui Chen",
+          "top_value": 14
+        },
+        "figure_name": "top_authors",
+        "figure_number": 3
+      }
+    },
+    {
+      "artifact_path": "figures/top_institutions.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E054",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 4 (top_institutions) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Harvard University",
+          "top_value": 7
+        },
+        "figure_name": "top_institutions",
+        "figure_number": 4
+      }
+    },
+    {
+      "artifact_path": "figures/document_types.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E055",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 5 (document_types) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed_categories": 1,
+          "total_documents": 259
+        },
+        "figure_name": "document_types",
+        "figure_number": 5
+      }
+    },
+    {
+      "artifact_path": "figures/citation_distribution.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E056",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 6 (citation_distribution) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "display_cap_p98": 476.52000000000004,
+          "documents": 259,
+          "maximum": 1436,
+          "mean": 72.08880308880309,
+          "median": 32.0,
+          "zero_cited": 35
+        },
+        "figure_name": "citation_distribution",
+        "figure_number": 6
+      }
+    },
+    {
+      "artifact_path": "figures/top_cited_documents.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E057",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 7 (top_cited_documents) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Pseudomonas aeruginosa: pathogenesis, virulence facto…",
+          "top_value": 1436
+        },
+        "figure_name": "top_cited_documents",
+        "figure_number": 7
+      }
+    },
+    {
+      "artifact_path": "figures/bradford_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E058",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 8 (bradford_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "sources": 174,
+          "zone_1_sources": 23
+        },
+        "figure_name": "bradford_sources",
+        "figure_number": 8
+      }
+    },
+    {
+      "artifact_path": "figures/keyword_trends.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E059",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 9 (keyword_trends) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "keywords": 15,
+          "years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022
+          ]
+        },
+        "figure_name": "keyword_trends",
+        "figure_number": 9
+      }
+    },
+    {
+      "artifact_path": "figures/network_coauthorship.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E060",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 10 (network_coauthorship) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 419,
+          "candidate_nodes_with_links": 131,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 149,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 131,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 16,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.06072158178407529,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.10371200798157917,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "overlap_ratio": 0.0,
+          "selected_seed": 3069.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.055535981384996325,
+          "within_between_distance_ratio": 0.0
+        },
+        "figure_name": "network_coauthorship",
+        "figure_number": 10
+      }
+    },
+    {
+      "artifact_path": "figures/network_institution_collaboration.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E061",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 11 (network_institution_collaboration) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 256,
+          "candidate_nodes_with_links": 127,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 137,
+          "displayed_nodes": 71,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 134,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.21173459776562276,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.19987295383219209,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 2,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 3166.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.08092326825082544,
+          "within_between_distance_ratio": 0.40272560607729246
+        },
+        "figure_name": "network_institution_collaboration",
+        "figure_number": 11
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_cooccurrence.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E062",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 12 (network_keyword_cooccurrence) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 2115,
+          "candidate_nodes_with_links": 92,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 200,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 92,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.12653051520401778,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.38396953211264334,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 236.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.04387060999675494,
+          "within_between_distance_ratio": 0.2115380953387689
+        },
+        "figure_name": "network_keyword_cooccurrence",
+        "figure_number": 12
+      }
+    },
+    {
+      "artifact_path": "figures/network_cocitation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E063",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 13 (network_cocitation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 19487,
+          "candidate_nodes_with_links": 428,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 203,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 428,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.19986135171412173,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.358171934657009,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 3,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 333.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.06535509889552303,
+          "within_between_distance_ratio": 0.3886588536191608
+        },
+        "figure_name": "network_cocitation",
+        "figure_number": 13
+      }
+    },
+    {
+      "artifact_path": "figures/network_bibliographic_coupling.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E064",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 14 (network_bibliographic_coupling) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 1688,
+          "candidate_nodes_with_links": 176,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 211,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 176,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.19032730394737063,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.2283813869131691,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 1658.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "sparse_construction": {
+            "candidate_documents": 213,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 43,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          },
+          "weighted_edge_length": 0.0065333227657218525,
+          "within_between_distance_ratio": 0.5745830394533011
+        },
+        "figure_name": "network_bibliographic_coupling",
+        "figure_number": 14
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_overlay.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E065",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 15 (network_keyword_overlay) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 2115,
+          "candidate_nodes_with_links": 92,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 5,
+          "displayed_edges": 200,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 92,
+          "label_overlap_area_px2": 71.3,
+          "label_overlap_pairs": 1,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "year_max": 2020.888888888889,
+          "year_min": 2018.5714285714287
+        },
+        "figure_name": "network_keyword_overlay",
+        "figure_number": 15
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_density.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E066",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 16 (network_keyword_density) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 2115,
+          "candidate_nodes_with_links": 92,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "density_grid": [
+            260,
+            190
+          ],
+          "density_weight": "log(1 + occurrence), gamma 0.62",
+          "displayed_clusters": 5,
+          "displayed_edges": 200,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 92,
+          "gaussian_sigma": 8,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 5,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "figure_name": "network_keyword_density",
+        "figure_number": 16
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E067",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+      "unit": null,
+      "value": {
+        "citation": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+        "doi": "10.1016/j.jbusres.2021.04.070",
+        "role": "bibliometric workflow and interpretation guideline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E068",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+      "unit": null,
+      "value": {
+        "citation": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+        "doi": "10.1016/j.joi.2017.08.007",
+        "role": "science-mapping analysis baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E069",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+      "unit": null,
+      "value": {
+        "citation": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+        "doi": "10.1007/s11192-009-0146-3",
+        "role": "bibliometric network visualization baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E070",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+      "unit": null,
+      "value": {
+        "citation": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+        "doi": "10.1088/1742-5468/2008/10/P10008",
+        "role": "Louvain community-detection method"
+      }
+    }
+  ],
+  "anonymous_candidate": "# A Bibliometric Analysis of Extracellular Vesicle and CRISPR/Cas9 Research (2015–2022): Publication Trends, Key Contributors, and Thematic Networks\n\n## Structured Abstract\n\n**Background:** The intersection of extracellular vesicle (EV) biology and CRISPR/Cas9 gene-editing technology represents a rapidly evolving frontier in therapeutic delivery. A systematic bibliometric characterization of this domain is needed to map its intellectual structure.\n\n**Methods:** A corpus of 259 unique works was acquired from a single bibliographic source via cursor pagination until exhaustion [E001, E002]. Metadata completeness was assessed across 11 fields [E003]. Descriptive analyses of annual output, leading sources, authors, and institutions, and citation impact were performed. Science mapping included Bradford zoning, keyword temporal trends, a three-field plot, and five network analyses (coauthorship, institution collaboration, keyword co-occurrence, cocitation, bibliographic coupling) using association-strength normalization and Louvain community detection [E019–E026].\n\n**Results:** The corpus spans 2015–2022, with annual output peaking at 72 works in 2022 and a compound annual growth rate of 66.85% [E004–E007]. *International Journal of Molecular Sciences* is the most prolific source (9 publications) [E008]. Xiaohui Chen is the most productive author (14 publications) [E010]. Harvard University, Peking University, and Sun Yat-sen University lead institutional output (7 publications each) [E012, E013]. The mean citation count is 72.09, with a median of 32.00; 13.51% of works are uncited [E015, E016]. The keyword co-occurrence network reveals five thematic clusters, with “Biology,” “Gene,” and “Cell biology” as central nodes [E026].\n\n**Conclusion:** The field exhibits rapid, sustained growth and is concentrated in a core of high-impact journals and institutions. The thematic structure, dominated by EV-mediated CRISPR delivery, is visualized through complementary network maps. All findings are bounded by source-dependent metadata and citation windows.\n\n## 1. Introduction\n\n### 1.1 Background and Rationale\nThe convergence of extracellular vesicle research and CRISPR/Cas9 genome editing has generated a distinct, interdisciplinary literature. A bibliometric approach is warranted to quantify its growth, identify key actors, and map its conceptual structure [E067].\n\n### 1.2 Objectives\nThis report aims to: (i) characterize the volume and growth trajectory of the corpus [E001, E004–E007]; (ii) identify the most productive sources, authors, and institutions [E008–E013]; (iii) analyze citation impact and distribution [E015–E018]; and (iv) reveal the intellectual and collaborative networks underpinning the field [E019–E026].\n\n## 2. Reproducible Methods\n\n### 2.1 Data Acquisition and Corpus Assembly\nRecords were retrieved from a single bibliographic source. Cursor pagination continued until the source returned no next cursor, yielding 259 unique source records, matching the source-reported total of 259 [E002]. Deterministic exact deduplication on canonical work identifiers confirmed a final corpus of 259 unique works [E001].\n\n### 2.2 Metadata Quality Assessment\nField completeness was calculated as the percentage of non-null canonical values for 11 metadata fields. Coverage was 100% for title, publication date, year, source ID, document type, cited-by count, and reference count; 99.61% for language; 97.3% for DOI; 96.14% for publisher; and 84.56% for abstract [E003].\n\n### 2.3 Analytical Procedures\n\n#### 2.3.1 Descriptive and Productivity Analyses\nAnnual output was whole-counted by publication year [E007]. Compound annual growth rate (CAGR) was calculated from the first and last non-zero annual counts [E006]. Top sources, authors, and institutions were ranked by whole-counted publications [E008–E013]. Document types were tabulated from source-supplied classifications [E014].\n\n#### 2.3.2 Citation Analysis\nCitation counts are source- and retrieval-date-dependent [E015]. Descriptive statistics (mean, median, percentiles, maximum) and the zero-citation share were computed [E015–E017]. The 15 most-cited documents were identified by descending citation count [E018].\n\n#### 2.3.3 Science Mapping and Network Analysis\nBradford’s law of scattering was applied to sources with known names, dividing them into three zones by cumulative document thirds [E019]. Keyword temporal dynamics were tracked for the 15 most frequent normalized keywords [E020]. A three-field plot (author–source–keyword) was constructed using whole-counted links [E021].\n\nFive networks were constructed using a candidate-first association-strength method [E022–E026, E069]. Candidate nodes were selected by minimum occurrence thresholds. Edges were normalized using association strength (c_ij / (w_i * w_j)), where c_ij is the number of co-occurrences and w_i, w_j are the total occurrences of items i and j. Community detection was performed via the Louvain algorithm, with small clusters merged [E070]. Networks were visualized with edge reduction (maximum-spanning forest plus strongest edges per node) and layout optimization (VOS-style or ForceAtlas2 LinLog, best of multiple restarts) [E022–E026, E060–E066]. The specific networks are: bibliographic coupling (minimum 5 references per document, minimum 2 shared references) [E022, E064]; coauthorship (minimum 2 occurrences) [E023, E060]; cocitation (minimum 3 occurrences) [E024, E063]; institution collaboration (minimum 2 occurrences) [E025, E061]; and keyword co-occurrence (minimum 5 occurrences) [E026, E062, E065, E066].\n\n## 3. Results\n\n### 3.1 Corpus Overview and Growth\nThe corpus comprises 259 unique works published between 2015 and 2022 [E001, E004]. Annual output grew from 2 publications in 2015 to a peak of 72 in 2022, with a CAGR of 66.85% [E005–E007]. A year-over-year decline of 4 publications was observed only in 2021 [E007]. Figure 1 illustrates this trajectory [E051].\n\n### 3.2 Leading Sources, Authors, and Institutions\nAll 259 works are classified as “article” by the source; no documents are classified as reviews or systematic reviews [E014]. The 15 most productive sources are led by *International Journal of Molecular Sciences* (9 publications), followed by *Journal of Extracellular Vesicles* (7) and *Nature Communications* (6) [E008, E009, E052]. Bradford zoning reveals a core Zone 1 of 23 sources accounting for 85 documents [E019, E058].\n\nXiaohui Chen is the most prolific author with 14 publications, substantially ahead of the next-ranked authors (4 publications each) [E010, E011, E053]. Harvard University, Peking University, and Sun Yat-sen University jointly lead institutional output with 7 publications each [E012, E013, E054].\n\n### 3.3 Citation Impact\nThe mean citation count is 72.09, and the median is 32.00, indicating a right-skewed distribution [E015, E017]. The maximum citation count is 1,436 [E017]. A total of 35 works (13.51%) have zero source-reported citations [E016]. The most-cited document is a 2022 review on *Pseudomonas aeruginosa* pathogenesis (1,436 citations) [E018, E027]. Its high citation count and tangential relationship to the EV-CRISPR intersection suggest it may represent a highly cited work captured by the search strategy rather than a core document of the field.\n\n### 3.4 Thematic Structure and Networks\nThe keyword co-occurrence network contains 72 displayed nodes and 200 edges, partitioned into 5 Louvain clusters [E026, E062]. The highest-weighted nodes are “Biology,” “Gene,” and “Cell biology” [E026]. The temporal overlay indicates a mean keyword year range of 2018.57 to 2020.89 [E065]. The density visualization appears to highlight “Biology” and “Microvesicles” as high-density regions, consistent with their high occurrence in the network [E026, E066]. Keyword trends show consistent annual increases for “Biology” and “Gene” [E020, E059].\n\nThe bibliographic coupling network (72 nodes, 211 edges, 8 clusters) identifies “Gene Editing by Extracellular Vesicles” as the most central document by weighted degree [E022, E064]. The coauthorship network (60 nodes, 149 edges, 10 clusters) reveals two large clusters: one centered on Huilan Li and Shan Xing, and another, separate cluster containing the most prolific author, Xiaohui Chen [E023, E060]. The institution collaboration network (71 nodes, 137 edges, 10 clusters) shows Harvard University as the highest-degree node, with a distinct Chinese institutional cluster centered on Guangzhou Medical University and Sun Yat-sen University [E025, E061]. The cocitation network (72 nodes, 203 edges, 7 clusters) is structured around highly cited references identified by OpenAlex IDs [E024, E063]. The three-field plot confirms Xiaohui Chen’s central role, linking to “Analytical Chemistry” and multiple keywords including “Biology,” “Gene,” “Microvesicles,” “Biochemistry,” and “Chemistry” [E021].\n\n## 4. Discussion\n\n### 4.1 Principal Findings\nThis analysis documents a rapidly expanding research domain, with a 66.85% CAGR and a 36-fold increase in annual output from 2015 to 2022 [E006, E007]. The field is concentrated in a Bradford core of 23 journals, with *International Journal of Molecular Sciences* as the leading venue [E008, E019]. Author productivity is highly skewed, with Xiaohui Chen contributing to 5.4% of the corpus [E010, E001]. Institutional leadership is shared among Harvard University and two Chinese universities, reflecting a trans-Pacific research axis [E012, E013].\n\nThe citation distribution is typical of a fast-growing field: a high mean relative to the median, a long tail of highly cited works, and a non-trivial uncited share attributable to recent publication dates [E015–E017]. The most-cited work, a 2022 review on *Pseudomonas aeruginosa* pathogenesis, is not topically central to EV-mediated CRISPR delivery and may represent a highly cited work captured by the search strategy rather than a core document of the field [E018, E027].\n\nThe network analyses reveal a coherent thematic structure. The keyword co-occurrence map’s five clusters, anchored by “Biology” and “Gene,” suggest a core focus on the biological mechanisms and genetic engineering applications of EVs [E026]. The bibliographic coupling network’s central document on “Gene Editing by Extracellular Vesicles” confirms the integrative nature of the field [E022]. The coauthorship and institution collaboration networks indicate strong intra-institutional and intra-national clustering, with emerging cross-cluster links [E023, E025].\n\n### 4.2 Interpretation in Context\nThe observed growth aligns with broader trends in nanomedicine and gene therapy research. The prominence of journals such as *Journal of Extracellular Vesicles* and *Nature Communications* underscores the field’s positioning at the intersection of specialized EV biology and high-impact multidisciplinary science [E009]. The dual leadership of U.S. and Chinese institutions mirrors the global competitive landscape in biotechnology [E013]. The thematic emphasis on delivery systems, as evidenced by dominant keywords like “Microvesicles” and “Gene,” and by top-cited documents on EV-mediated CRISPR delivery, indicates that translational application is a primary driver of research activity [E018, E020, E026].\n\n## 5. Limitations\n\n### 5.1 Data Source and Coverage\nAll findings are contingent on the single bibliographic source used. Metadata completeness, while high for core fields, is lower for abstracts (84.56%) and publisher (96.14%), which may affect text-based analyses [E003]. Document-type labels inherit source classification practices [E014].\n\n### 5.2 Temporal and Citation Constraints\nThe final year (2022) may be incomplete if retrieval occurred before year-end [E005]. Citation counts are retrieval-date-dependent and favor older publications due to longer citation windows [E015, E016]. The CAGR of 66.85% is an endpoint measure; the observed year-over-year decline in 2021 confirms the growth is not monotonic [E006, E007].\n\n### 5.3 Analytical Constraints\nProductivity rankings are descriptive and must not be interpreted as measures of research quality or causal influence [E009, E011, E013]. Network centrality metrics describe the constructed corpus and parameterization, not substantive importance [E022–E026]. All abstract-based inferences are limited to source-supplied metadata and cannot support claims requiring full-text inspection [E027–E050]. Bradford zoning excludes records without a source name [E019].\n\n## 6. Conclusion\nThis bibliometric analysis maps a dynamic, rapidly growing research domain at the nexus of extracellular vesicle biology and CRISPR/Cas9 gene editing. The corpus of 259 articles (2015–2022) is characterized by exponential growth, concentration in a core of specialized and high-impact journals, and a distinct thematic structure centered on therapeutic delivery applications. Key contributors include Xiaohui Chen as the leading author and a trans-Pacific institutional axis led by Harvard, Peking, and Sun Yat-sen Universities. The network visualizations provide a reproducible, multi-perspective map of the field’s intellectual and collaborative landscape. These findings offer a structured baseline for researchers, funders, and policymakers to understand the field’s evolution and identify emerging fronts, while acknowledging the inherent constraints of source-dependent bibliometric data.\n",
+  "allowed_evidence_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027",
+    "E028",
+    "E029",
+    "E030",
+    "E031",
+    "E032",
+    "E033",
+    "E034",
+    "E035",
+    "E036",
+    "E037",
+    "E038",
+    "E039",
+    "E040",
+    "E041",
+    "E042",
+    "E043",
+    "E044",
+    "E045",
+    "E046",
+    "E047",
+    "E048",
+    "E049",
+    "E050",
+    "E051",
+    "E052",
+    "E053",
+    "E054",
+    "E055",
+    "E056",
+    "E057",
+    "E058",
+    "E059",
+    "E060",
+    "E061",
+    "E062",
+    "E063",
+    "E064",
+    "E065",
+    "E066",
+    "E067",
+    "E068",
+    "E069",
+    "E070",
+    "doi:10.1002/advs.201700611",
+    "doi:10.1002/jev2.12196",
+    "doi:10.1002/jev2.12225",
+    "doi:10.1016/j.biopha.2022.113943",
+    "doi:10.1016/j.ymthe.2021.01.020",
+    "doi:10.1021/acs.analchem.2c01318",
+    "doi:10.1021/acs.analchem.9b04814",
+    "doi:10.1021/acs.nanolett.8b02689",
+    "doi:10.1038/s41392-021-00569-5",
+    "doi:10.1038/s41392-022-01056-1",
+    "doi:10.1038/s41467-018-03390-x",
+    "doi:10.1038/s41467-018-04791-8",
+    "doi:10.1038/s41467-020-17717-0",
+    "doi:10.1038/s41467-022-29469-0",
+    "doi:10.1039/d2bm00480a",
+    "doi:10.1080/10717544.2020.1748758",
+    "doi:10.1080/19490976.2022.2113717",
+    "doi:10.1093/cvr/cvac012",
+    "doi:10.1126/sciadv.abn3326",
+    "doi:10.1126/sciadv.abp9435",
+    "doi:10.26508/lsa.202000875",
+    "doi:10.3389/fgene.2021.673286",
+    "doi:10.3390/biom10060839",
+    "doi:10.7150/thno.69368"
+  ],
+  "risk_notice": {
+    "stage": "report_finalization",
+    "issue_signature": "report_claim_grounding",
+    "severity": "high",
+    "detector_score": 0.65,
+    "message": "The system flagged this candidate for focused review."
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters."
+  ],
+  "content_sha256": "6daa4641c6ba25fb509784eb55c0957bde4d855961bb7e4b2734bf6ea065dc95"
+}

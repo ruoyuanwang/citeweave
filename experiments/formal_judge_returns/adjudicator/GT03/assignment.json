@@ -1,0 +1,48 @@
+{
+  "contains_condition_identities": false,
+  "controller_metadata_in_scope": false,
+  "judge_id": "adjudicator",
+  "may_modify_pipeline_or_source_artifacts": false,
+  "output_file": "D:\\project\\bibagent\\experiments\\formal_judge_returns\\adjudicator\\GT03\\adjudications.jsonl",
+  "output_format": "One JSON object per adjudication packet, in input order, as JSONL.",
+  "packet_file": "D:\\project\\bibagent\\experiments\\formal_graph_judging\\graph_vs_figure\\resolved_v1\\adjudication_packets.jsonl",
+  "packet_sha256": "14c10c965f9e4bbccd50e173deb69feb53a00525a73e02216c6e7ab31bd8455e",
+  "result_schema": {
+    "candidates": [
+      {
+        "claims": [
+          {
+            "claim": "one material claim",
+            "evidence_ids": [
+              "visible evidence IDs; required when supported"
+            ],
+            "verdict": "supported|contradicted|not_in_evidence"
+          }
+        ],
+        "completeness_score": "integer 1..5",
+        "slot": "A"
+      },
+      {
+        "claims": "same structure as slot A",
+        "completeness_score": "integer 1..5",
+        "slot": "B"
+      }
+    ],
+    "judge_id": "adjudicator",
+    "packet_id": "copy exactly from the packet",
+    "preference": "A|B|tie",
+    "rationale": "concise evidence-bounded rationale"
+  },
+  "role": "blind_conflict_resolution_only",
+  "rubric": [
+    "Use only the anonymous candidates and canonical evidence visible in each packet; do not browse, call APIs, use hidden files, or use outside knowledge.",
+    "For each candidate, enumerate its material factual, numeric, relational, methodological, and interpretive claims at a consistent claim granularity.",
+    "Mark each claim supported, contradicted, or not_in_evidence. Every supported claim must cite one or more evidence IDs visible for that candidate; never invent an evidence ID.",
+    "For paired-evidence packets, assess each candidate only against its own paired evidence and never treat cross-corpus count differences as errors.",
+    "Assign completeness_score from 1 to 5 for how fully and cautiously the candidate answers the question within the visible evidence.",
+    "Choose A, B, or tie by evidence-bounded factuality, completeness, explanation, caution, and usefulness—not by presumed system identity or writing style.",
+    "Resolve only the listed conflicts by independently checking both candidates and prior anonymous judgments against the visible evidence."
+  ],
+  "schema_version": 1,
+  "write_scope": "Only output_file may be written."
+}

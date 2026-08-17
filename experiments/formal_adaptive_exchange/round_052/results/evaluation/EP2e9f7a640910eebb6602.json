@@ -1,0 +1,16 @@
+{
+  "packet_id": "EP2e9f7a640910eebb6602",
+  "decision": "fail",
+  "confidence": 0.99,
+  "reason": "Several central interpretations exceed or conflict with the visible evidence. E006 is explicitly an endpoint CAGR that does not establish a monotonic trend, and E007 contains multiple annual declines, so describing the field as rapidly accelerating is overstated; neither item supports the claim that growth was driven by climate-change urgency and food security. E067 reports only the displayed overlay's overall average-year range and does not identify Horticulture or Gene as the most recent terms, while E020 and E067 do not establish the claimed directional shift from foundational biology to applied agricultural and genetic solutions—a limitation the report itself acknowledges before nevertheless asserting that evolution in its conclusion. E022 describes a parameterized coupling network and top nodes but explicitly does not establish substantive importance, so it cannot support claims that reviews are critical intellectual foundations or that they predominantly define the network. Likewise, E024 and E026 describe filtered collaboration networks, not a highly interconnected global community or a generally strong collaborative structure. These unsupported causal, temporal, and substantive network interpretations prevent the report from being fully evidence-grounded.",
+  "evidence_ids": [
+    "E006",
+    "E007",
+    "E020",
+    "E022",
+    "E024",
+    "E026",
+    "E067"
+  ],
+  "judge_id": "evaluation"
+}

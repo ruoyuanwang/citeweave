@@ -1,0 +1,7 @@
+{
+  "audit_packet_id": "AP3911aa9147a9fb458ca3",
+  "auditor_role": "independent_evaluation_consistency_auditor",
+  "semantic_consistent": true,
+  "decision_defensible": true,
+  "audit_reason": "The pass decision is consistent: the candidate abstains because the requested visible label is explicitly absent according to the bound false contains-visible-label fact."
+}

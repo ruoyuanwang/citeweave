@@ -13,9 +13,15 @@ class OpenAlexConnector(BaseConnector):
     source_name = SourceName.openalex.value
     endpoint = "https://api.openalex.org/works"
 
-    def __init__(self, *args: Any, api_key: str | None = None, **kwargs: Any):
+    def __init__(
+        self,
+        *args: Any,
+        api_key: str | None = None,
+        api_key_env: str = "OPENALEX_API_KEY",
+        **kwargs: Any,
+    ):
         super().__init__(*args, **kwargs)
-        self.api_key = api_key or os.getenv("OPENALEX_API_KEY")
+        self.api_key = api_key or os.getenv(api_key_env)
 
     def acquire(self, protocol: Any) -> AcquisitionResult:
         filters = [
@@ -27,7 +33,7 @@ class OpenAlexConnector(BaseConnector):
         params: dict[str, Any] = {
             "search": protocol.query_text,
             "filter": ",".join(filters),
-            "per-page": 100,
+            "per_page": 100,
             "cursor": "*",
         }
         if self.api_key:

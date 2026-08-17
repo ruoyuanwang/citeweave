@@ -1,0 +1,28 @@
+{
+  "packet_id": "EP55bb488302567c38f7f6",
+  "judge_id": "evaluation",
+  "decision": "pass",
+  "confidence": 0.86,
+  "reason": "The final report is evidence-bounded overall: its central corpus, acquisition, metadata, temporal, productivity, citation, concentration, and network claims are explicitly mapped to canonical evidence, numerical statements agree with that evidence, and the report states the principal source-, time-, metadata-, threshold-, and interpretation-related limitations. Its broader interpretive labels are explicitly characterized as hypotheses rather than established findings.",
+  "evidence_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E010",
+    "E015",
+    "E016",
+    "E019",
+    "E020",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027"
+  ]
+}

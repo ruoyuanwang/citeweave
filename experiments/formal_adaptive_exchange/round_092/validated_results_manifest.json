@@ -1,0 +1,20 @@
+{
+  "assignment_sha256": {
+    "evaluation": "5b94eedfb77172c3d357137599a63a49bcfd92044de07473e84dce8c05227b2a",
+    "feedback": "0d0ced9b905f4bf294858e4caa43da3ccda9de98f1144a80283272a1f881e355"
+  },
+  "batch_manifest_sha256": "46c48342610b39fb1624ac63a2b78eeda93e783e543cc3c28bac375547903312",
+  "exact_coverage": true,
+  "items": [
+    {
+      "kind": "evaluation",
+      "packet_id": "EP3d0dae8227cfe7493daf",
+      "packet_sha256": "eba62ecf3fb4525a931e544456899760bfb254552adc35c311ea3f3e12b5bb10",
+      "result_path": "results/evaluation/EP3d0dae8227cfe7493daf.json",
+      "result_sha256": "8140a5eeb10b98737c0e4c1b336cc844a112932423df689d20adb5bed513dcb3"
+    }
+  ],
+  "packet_and_result_schema_validated": true,
+  "schema_version": 1,
+  "status": "complete_results_validated"
+}

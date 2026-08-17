@@ -1,0 +1,761 @@
+{
+  "benchmark_version": 1,
+  "items": 30,
+  "predictions_received": 30,
+  "metrics": {
+    "exact_answer_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.0,
+    "atomic_statement_precision": null,
+    "statement_claim_coverage": 0.0,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 0.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "abstention_f1": 1.0
+  },
+  "counts": {
+    "correct": 30,
+    "answered": 24,
+    "incorrect_answered": 0,
+    "statement_claims": 0,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 0,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 24,
+    "abstention": {
+      "tn": 24,
+      "tp": 6
+    }
+  },
+  "by_task": {
+    "cluster_membership": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "highest_occurrence": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "strongest_connection": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "institution_collaboration": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:network_size",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 219
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 72 and displayed_edge_count is 219 for the bibliographic_coupling network."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:highest_occurrence",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Drought and heat stress-…"
+        },
+        "explanation": "The context states that the node with ID 'bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2' is the highest occurrence node in the bibliographic coupling network. Its display label is given as 'Drought and heat stress-…'."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:strongest_connection",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Individual and combined…",
+          "target_label": "Effects of Drought, Heat…",
+          "weight": 65.0
+        },
+        "explanation": "The fact 'strongest_connection' directly states that the node with label 'Individual and combined…' has its strongest connection to the node with label 'Effects of Drought, Heat…'. The edge weight for this connection is given as 65.0."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:cluster_membership",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Drought and heat stress-…",
+          "cluster": 3
+        },
+        "explanation": "The supplied material contains a row where the subject 'bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2' has predicate 'cluster' with object 3, and another row where the same subject has predicate 'display_label' with object 'Drought and heat stress-…'. Therefore, the node labeled 'Drought and heat stress-…' belongs to cluster 3."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:false_premise",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:bibliographic_coupling:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the bibliographic coupling network does not contain any visible labels, so there is no 'CiteWeave absent benchmark node' present. The question is based on a false premise, making it unanswerable."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:citation:network_size",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:citation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 23,
+          "links": 16
+        },
+        "explanation": "The context provides two facts: displayed_node_count is 23 and displayed_edge_count is 16 for the citation network. Therefore, the network has 23 nodes and 16 links."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:citation:highest_occurrence",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "citation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:citation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Stress Protective Role o…"
+        },
+        "explanation": "The context states that the highest occurrence node in the citation network is citation:node:openalex:W2259175255, which has the display label 'Stress Protective Role o…' and 230 occurrences."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:citation:strongest_connection",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "citation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:citation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Label‐Free Quantitative…",
+          "target_label": "Differentially expressed…",
+          "weight": 1.0
+        },
+        "explanation": "The fact 'citation:fact:strongest_connection' explicitly states that 'citation:node:doi:10.1002/pmic.201900004' has the strongest connection to 'citation:node:openalex:W2122268036'. The edge weight is given as 1.0, and the display labels for these nodes are 'Label‐Free Quantitative…' and 'Differentially expressed…' respectively."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:citation:cluster_membership",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "citation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:citation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Grain development in whe…",
+          "cluster": 4
+        },
+        "explanation": "The context provides a row where the subject is the node with the label 'Grain development in whe…' and the predicate is 'cluster' with an object value of 4. This directly indicates that the node belongs to cluster 4."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:citation:false_premise",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:citation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the citation network does not contain any visible label for the target node 'CiteWeave absent benchmark node'. Since the question asks for the cluster of a node that is not present in the network, it is based on a false premise and cannot be answered."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:coauthorship:network_size",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:coauthorship:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 59,
+          "links": 120
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 59 and displayed_edge_count is 120 for the coauthorship network."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:coauthorship:highest_occurrence",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "coauthorship",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:coauthorship:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Jieming Wang"
+        },
+        "explanation": "The context states that the highest occurrence node in the coauthorship network is 'coauthorship:node:openalex-author:None', which has a display label of 'Jieming Wang' and an occurrence value of 78.0. Therefore, the node with the highest occurrence is labeled 'Jieming Wang'."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:coauthorship:strongest_connection",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "coauthorship",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:coauthorship:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "M C S Bantilan",
+          "target_label": "Piara Singh",
+          "weight": 6.0
+        },
+        "explanation": "The fact 'strongest_connection' directly states that M C S Bantilan has the strongest connection to Piara Singh, and the edge weight between them is 6.0, which is the highest displayed weight in the provided data."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:coauthorship:cluster_membership",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "coauthorship",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:coauthorship:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Jieming Wang",
+          "cluster": 5
+        },
+        "explanation": "The context provides a row where the subject 'coauthorship:node:openalex-author:None' has predicate 'display_label' with object 'Jieming Wang', and another row where the same subject has predicate 'cluster' with object 5. Therefore, the node labeled 'Jieming Wang' belongs to cluster 5."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:coauthorship:false_premise",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:coauthorship:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the coauthorship network does not contain any visible labels, and the question asks about a specific node 'CiteWeave absent benchmark node' which is not present in the network. Since the node is absent, it cannot belong to any cluster."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:cocitation:network_size",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:cocitation:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 192
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 72 and displayed_edge_count is 192 for the cocitation network."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:cocitation:highest_occurrence",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "cocitation",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:cocitation:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W4285719527"
+        },
+        "explanation": "The context states that the highest occurrence node in the cocitation network is cocitation:node:openalex:W4285719527, with a display label of 'openalex:W4285719527' and 177 occurrences."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:cocitation:strongest_connection",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "cocitation",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:cocitation:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "openalex:W2128635872",
+          "target_label": "openalex:W4293247451",
+          "weight": 62.0
+        },
+        "explanation": "The context explicitly states that the strongest connection in the cocitation network is between openalex:W2128635872 and openalex:W4293247451, with a weight of 62.0. The labels are provided as 'openalex:W2128635872' and 'openalex:W4293247451', and the weight is given as 62.0."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:cocitation:cluster_membership",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "cocitation",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:cocitation:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "openalex:W1982724915",
+          "cluster": 1
+        },
+        "explanation": "The context provides a row with atom_id 'cocitation:node:openalex:W1982724915:cluster' where the subject is 'cocitation:node:openalex:W1982724915', predicate is 'cluster', and object is 1. This directly indicates that the node 'openalex:W1982724915' belongs to cluster 1."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:cocitation:false_premise",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:cocitation:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the cocitation network does not contain any visible label for 'CiteWeave absent benchmark node', meaning the node is absent from the network. Since the node is not present, it cannot belong to any cluster."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:institution_collaboration:network_size",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:institution_collaboration:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 186
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 72 and displayed_edge_count is 186 for the institution_collaboration network."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:institution_collaboration:highest_occurrence",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "institution_collaboration",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:institution_collaboration:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Chinese Academy of Scienc…"
+        },
+        "explanation": "The context states that the highest occurrence node in the institution_collaboration network is institution_collaboration:node:ror:034t30j35, which has the display label 'Chinese Academy of Scienc…' and 44 occurrences."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:institution_collaboration:strongest_connection",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "institution_collaboration",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:institution_collaboration:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "North West Agriculture an…",
+          "target_label": "Northwest A&F University",
+          "weight": 15.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that the institution with label 'North West Agriculture an…' has the strongest connection to 'Northwest A&F University'. The corresponding edge weight is given as 15.0, confirming this pair and its weight."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:institution_collaboration:cluster_membership",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "institution_collaboration",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:institution_collaboration:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Chinese Academy of Scienc…",
+          "cluster": 5
+        },
+        "explanation": "The context provides a row where the subject 'institution_collaboration:node:ror:034t30j35' has predicate 'cluster' with object 5, and another row where the same subject has predicate 'display_label' with object 'Chinese Academy of Scienc…'. Therefore, the node labeled 'Chinese Academy of Scienc…' belongs to cluster 5."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:institution_collaboration:false_premise",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:institution_collaboration:false_premise",
+        "abstain": true,
+        "answer": "",
+        "explanation": "The context states that the institution_collaboration network does not contain any visible labels, and the question refers to a 'CiteWeave absent benchmark node' which is not present in the supplied material. Therefore, the premise is false and the question cannot be answered."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:network_size",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:network_size",
+        "abstain": false,
+        "answer": {
+          "nodes": 72,
+          "links": 200
+        },
+        "explanation": "The context provides explicit counts: displayed_node_count is 72 and displayed_edge_count is 200 for the keyword_cooccurrence network."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:highest_occurrence",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_occurrence",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:highest_occurrence",
+        "abstain": false,
+        "answer": {
+          "label": "Biology"
+        },
+        "explanation": "The context states that the node with the highest occurrence in the keyword_cooccurrence network is 'keyword_cooccurrence:node:Biology', which has a display label of 'Biology' and 1485 occurrences."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:strongest_connection",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_connection",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:strongest_connection",
+        "abstain": false,
+        "answer": {
+          "source_label": "Biology",
+          "target_label": "Botany",
+          "weight": 821.0
+        },
+        "explanation": "The fact 'strongest_connection' explicitly states that Biology has the strongest connection to Botany, and the edge weight between them is 821.0. The display labels confirm the visible strings are 'Biology' and 'Botany'."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:cluster_membership",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_membership",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": false,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:cluster_membership",
+        "abstain": false,
+        "answer": {
+          "label": "Biology",
+          "cluster": 2
+        },
+        "explanation": "The context provides a row with atom_id 'keyword_cooccurrence:node:Biology:cluster' that explicitly states the node 'Biology' belongs to cluster 2. The display label is confirmed as 'Biology' in another row."
+      }
+    },
+    {
+      "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:false_premise",
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "plant_heat_drought_2008_2021:keyword_cooccurrence:false_premise",
+        "abstain": true,
+        "answer": null,
+        "explanation": "The context states that the keyword_cooccurrence network does not contain any visible label, and the question asks about a cluster containing 'CiteWeave absent benchmark node', which is not present in the network. Since the premise is false, the question is unanswerable."
+      }
+    }
+  ],
+  "formal_metadata": {
+    "dataset_id": "plant_heat_drought_2008_2021",
+    "condition": "flat_structured",
+    "run_id": "formal_v2_nonthinking_20260806",
+    "run_manifest_sha256": "8fd3fbd1c909b86e20a2971adf862ca76d601f18110a8b1b2dd7b46d53cd6c25",
+    "checkpoint_sha256": "d627a4cebf68531ff4c0656672dd6a5eb98c87bf6352d97bfc71809111ba8288",
+    "primary_mechanical_metrics": [
+      "exact_answer_accuracy",
+      "structured_unsupported_answer_rate",
+      "abstention_f1"
+    ]
+  }
+}

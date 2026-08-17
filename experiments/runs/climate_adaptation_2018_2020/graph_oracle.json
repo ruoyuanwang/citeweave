@@ -1,0 +1,1063 @@
+{
+  "condition": "structured_graph_oracle",
+  "metadata": {
+    "dataset_id": "climate_adaptation_2018_2020",
+    "purpose": "Benchmark self-test and upper-bound reference; not an LLM result."
+  },
+  "benchmark_version": 1,
+  "items": 29,
+  "predictions_received": 29,
+  "metrics": {
+    "exact_answer_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "structured_unsupported_answer_rate": 0.0,
+    "atomic_statement_precision": 1.0,
+    "statement_claim_coverage": 1.0,
+    "format_failure_rate": 0.0,
+    "evidence_path_validity": 1.0,
+    "evidence_precision": 1.0,
+    "evidence_recall": 1.0,
+    "abstention_precision": 1.0,
+    "abstention_recall": 1.0,
+    "abstention_f1": 1.0
+  },
+  "counts": {
+    "correct": 29,
+    "answered": 23,
+    "incorrect_answered": 0,
+    "statement_claims": 23,
+    "unsupported_statement_claims": 0,
+    "evidence_tp": 137,
+    "evidence_fp": 0,
+    "evidence_fn": 0,
+    "evidence_path_eligible_answers": 23,
+    "abstention": {
+      "tn": 23,
+      "tp": 6
+    }
+  },
+  "by_task": {
+    "cluster_count": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "highest_weighted_degree": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "network_size": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "strongest_edge": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "unanswerable_false_premise": {
+      "items": 6,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 0.0
+    }
+  },
+  "by_network": {
+    "bibliographic_coupling": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "citation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "coauthorship": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "cocitation": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "institution_collaboration": {
+      "items": 4,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    },
+    "keyword_cooccurrence": {
+      "items": 5,
+      "accuracy": 1.0,
+      "schema_valid_rate": 1.0,
+      "evidence_path_validity": 1.0
+    }
+  },
+  "rows": [
+    {
+      "item_id": "climate_adaptation_2018_2020:G001",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G001",
+        "abstain": false,
+        "answer": {
+          "nodes": 233,
+          "edges": 7582
+        },
+        "evidence_nodes": [
+          "fact:G001",
+          "network:bibliographic_coupling"
+        ],
+        "evidence_edges": [],
+        "statement": "The bibliographic coupling network contains 233 nodes and 7582 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G002",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G002",
+        "abstain": false,
+        "answer": {
+          "id": "doi:10.1002/wcc.695",
+          "label": "Beyond binary outcomes in climate adaptation: The illustrative case of desalination",
+          "weighted_degree": 353.0,
+          "cluster": 1
+        },
+        "evidence_nodes": [
+          "fact:G002",
+          "network:bibliographic_coupling",
+          "work:doi:10.1002/wcc.695"
+        ],
+        "evidence_edges": [],
+        "statement": "Beyond binary outcomes in climate adaptation: The illustrative case of desalination has the highest weighted degree in the bibliographic coupling network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G003",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G003",
+        "abstain": false,
+        "answer": {
+          "clusters": 12,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G003",
+          "network:bibliographic_coupling",
+          "cluster:bibliographic_coupling:1",
+          "cluster:bibliographic_coupling:2",
+          "cluster:bibliographic_coupling:3",
+          "cluster:bibliographic_coupling:4",
+          "cluster:bibliographic_coupling:5",
+          "cluster:bibliographic_coupling:6",
+          "cluster:bibliographic_coupling:7",
+          "cluster:bibliographic_coupling:8",
+          "cluster:bibliographic_coupling:9",
+          "cluster:bibliographic_coupling:10",
+          "cluster:bibliographic_coupling:11",
+          "cluster:bibliographic_coupling:12"
+        ],
+        "evidence_edges": [],
+        "statement": "The bibliographic coupling network contains 12 detected clusters."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G004",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G004",
+        "abstain": false,
+        "answer": {
+          "source": "doi:10.1007/s10584-019-02529-z",
+          "source_label": "Real options analysis of climate-change adaptation: investment flexibility and extreme weather events",
+          "target": "doi:10.2139/ssrn.3323549",
+          "target_label": "Real Options Analysis of Climate-change Adaptation: A Simplified Approach",
+          "weight": 27.0,
+          "association_strength": 0.026392961876832845
+        },
+        "evidence_nodes": [
+          "fact:G004",
+          "network:bibliographic_coupling",
+          "work:doi:10.1007/s10584-019-02529-z",
+          "work:doi:10.2139/ssrn.3323549"
+        ],
+        "evidence_edges": [
+          "edge:bibliographic_coupling:work:doi:10.1007/s10584-019-02529-z|work:doi:10.2139/ssrn.3323549"
+        ],
+        "statement": "The strongest observed bibliographic coupling connection is between Real options analysis of climate-change adaptation: investment flexibility and extreme weather events and Real Options Analysis of Climate-change Adaptation: A Simplified Approach, with weight 27."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G005",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G005",
+        "abstain": false,
+        "answer": {
+          "nodes": 61,
+          "edges": 44
+        },
+        "evidence_nodes": [
+          "fact:G005",
+          "network:citation"
+        ],
+        "evidence_edges": [],
+        "statement": "The citation network contains 61 nodes and 44 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G006",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G006",
+        "abstain": false,
+        "answer": {
+          "id": "doi:10.1002/wcc.548",
+          "label": "Data, concepts and methods for large‐ n comparative climate change adaptation policy research: A systematic literature review",
+          "weighted_degree": 5.0,
+          "cluster": 6
+        },
+        "evidence_nodes": [
+          "fact:G006",
+          "network:citation",
+          "work:doi:10.1002/wcc.548"
+        ],
+        "evidence_edges": [],
+        "statement": "Data, concepts and methods for large‐ n comparative climate change adaptation policy research: A systematic literature review has the highest weighted degree in the citation network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G007",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G007",
+        "abstain": false,
+        "answer": {
+          "clusters": 21,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G007",
+          "network:citation",
+          "cluster:citation:1",
+          "cluster:citation:2",
+          "cluster:citation:3",
+          "cluster:citation:4",
+          "cluster:citation:5",
+          "cluster:citation:6",
+          "cluster:citation:7",
+          "cluster:citation:8",
+          "cluster:citation:9",
+          "cluster:citation:10",
+          "cluster:citation:11",
+          "cluster:citation:12",
+          "cluster:citation:13",
+          "cluster:citation:14",
+          "cluster:citation:15",
+          "cluster:citation:16",
+          "cluster:citation:17",
+          "cluster:citation:18",
+          "cluster:citation:19",
+          "cluster:citation:20",
+          "cluster:citation:21"
+        ],
+        "evidence_edges": [],
+        "statement": "The citation network contains 21 detected clusters."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G008",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G008",
+        "abstain": false,
+        "answer": {
+          "source": "doi:10.1002/wcc.576",
+          "source_label": "Frontiers in data analytics for adaptation research: Topic modeling",
+          "target": "doi:10.1002/wcc.548",
+          "target_label": "Data, concepts and methods for large‐ n comparative climate change adaptation policy research: A systematic literature review",
+          "weight": 1.0,
+          "association_strength": 1.0
+        },
+        "evidence_nodes": [
+          "fact:G008",
+          "network:citation",
+          "work:doi:10.1002/wcc.576",
+          "work:doi:10.1002/wcc.548"
+        ],
+        "evidence_edges": [
+          "edge:citation:work:doi:10.1002/wcc.548|work:doi:10.1002/wcc.576"
+        ],
+        "statement": "The strongest observed citation connection is between Frontiers in data analytics for adaptation research: Topic modeling and Data, concepts and methods for large‐ n comparative climate change adaptation policy research: A systematic literature review, with weight 1."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G009",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G009",
+        "abstain": false,
+        "answer": {
+          "nodes": 11,
+          "edges": 7
+        },
+        "evidence_nodes": [
+          "fact:G009",
+          "network:coauthorship"
+        ],
+        "evidence_edges": [],
+        "statement": "The coauthorship network contains 11 nodes and 7 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G010",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G010",
+        "abstain": false,
+        "answer": {
+          "id": "orcid:0000-0002-2906-1419",
+          "label": "Robbert Biesbroek",
+          "weighted_degree": 6.0,
+          "cluster": 1
+        },
+        "evidence_nodes": [
+          "fact:G010",
+          "network:coauthorship",
+          "author:orcid:0000-0002-2906-1419"
+        ],
+        "evidence_edges": [],
+        "statement": "Robbert Biesbroek has the highest weighted degree in the coauthorship network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G011",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G011",
+        "abstain": false,
+        "answer": {
+          "clusters": 7,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G011",
+          "network:coauthorship",
+          "cluster:coauthorship:1",
+          "cluster:coauthorship:2",
+          "cluster:coauthorship:3",
+          "cluster:coauthorship:4",
+          "cluster:coauthorship:5",
+          "cluster:coauthorship:6",
+          "cluster:coauthorship:7"
+        ],
+        "evidence_edges": [],
+        "statement": "The coauthorship network contains 7 detected clusters."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G012",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G012",
+        "abstain": false,
+        "answer": {
+          "source": "author:86e5e24d4661e6b12c2b",
+          "source_label": "Viet-Ngu Hoang",
+          "target": "author:dbf002711c95ce95cf8d",
+          "target_label": "Uttam Khanal",
+          "weight": 2.0,
+          "association_strength": 0.5
+        },
+        "evidence_nodes": [
+          "fact:G012",
+          "network:coauthorship",
+          "author:86e5e24d4661e6b12c2b",
+          "author:dbf002711c95ce95cf8d"
+        ],
+        "evidence_edges": [
+          "edge:coauthorship:author:86e5e24d4661e6b12c2b|author:dbf002711c95ce95cf8d"
+        ],
+        "statement": "The strongest observed coauthorship connection is between Viet-Ngu Hoang and Uttam Khanal, with weight 2."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G013",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G013",
+        "abstain": false,
+        "answer": {
+          "nodes": 640,
+          "edges": 20973
+        },
+        "evidence_nodes": [
+          "fact:G013",
+          "network:cocitation"
+        ],
+        "evidence_edges": [],
+        "statement": "The cocitation network contains 640 nodes and 20973 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G014",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G014",
+        "abstain": false,
+        "answer": {
+          "id": "reference:e8fe5433bc141d8192a3",
+          "label": "Unresolved reference",
+          "weighted_degree": 2115.0,
+          "cluster": 2
+        },
+        "evidence_nodes": [
+          "fact:G014",
+          "network:cocitation",
+          "referenced_work:reference:e8fe5433bc141d8192a3"
+        ],
+        "evidence_edges": [],
+        "statement": "Unresolved reference has the highest weighted degree in the cocitation network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G015",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G015",
+        "abstain": false,
+        "answer": {
+          "clusters": 8,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G015",
+          "network:cocitation",
+          "cluster:cocitation:1",
+          "cluster:cocitation:2",
+          "cluster:cocitation:3",
+          "cluster:cocitation:4",
+          "cluster:cocitation:5",
+          "cluster:cocitation:6",
+          "cluster:cocitation:7",
+          "cluster:cocitation:8"
+        ],
+        "evidence_edges": [],
+        "statement": "The cocitation network contains 8 detected clusters."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G016",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G016",
+        "abstain": false,
+        "answer": {
+          "source": "doi:10.1016/j.gloenvcha.2004.12.005",
+          "source_label": "Unresolved reference",
+          "target": "reference:e8fe5433bc141d8192a3",
+          "target_label": "Unresolved reference",
+          "weight": 22.0,
+          "association_strength": 0.004799301919720768
+        },
+        "evidence_nodes": [
+          "fact:G016",
+          "network:cocitation",
+          "referenced_work:doi:10.1016/j.gloenvcha.2004.12.005",
+          "referenced_work:reference:e8fe5433bc141d8192a3"
+        ],
+        "evidence_edges": [
+          "edge:cocitation:referenced_work:doi:10.1016/j.gloenvcha.2004.12.005|referenced_work:reference:e8fe5433bc141d8192a3"
+        ],
+        "statement": "The strongest observed cocitation connection is between Unresolved reference [doi:10.1016/j.gloenvcha.2004.12.005] and Unresolved reference [reference:e8fe5433bc141d8192a3], with weight 22."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G017",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G017",
+        "abstain": false,
+        "answer": {
+          "nodes": 9,
+          "edges": 0
+        },
+        "evidence_nodes": [
+          "fact:G017",
+          "network:institution_collaboration"
+        ],
+        "evidence_edges": [],
+        "statement": "The institution collaboration network contains 9 nodes and 0 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G018",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G018",
+        "abstain": false,
+        "answer": {
+          "id": "institution:9337bb4edde3b6dea926",
+          "label": "Alabama A & M University",
+          "weighted_degree": 0.0,
+          "cluster": 1
+        },
+        "evidence_nodes": [
+          "fact:G018",
+          "network:institution_collaboration",
+          "institution:9337bb4edde3b6dea926"
+        ],
+        "evidence_edges": [],
+        "statement": "Alabama A & M University has the highest weighted degree in the institution collaboration network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G019",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G019",
+        "abstain": false,
+        "answer": {
+          "clusters": 1,
+          "cluster_ids": [
+            1
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G019",
+          "network:institution_collaboration",
+          "cluster:institution_collaboration:1"
+        ],
+        "evidence_edges": [],
+        "statement": "The institution collaboration network contains 1 detected clusters."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G020",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "network_size",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G020",
+        "abstain": false,
+        "answer": {
+          "nodes": 306,
+          "edges": 1006
+        },
+        "evidence_nodes": [
+          "fact:G020",
+          "network:keyword_cooccurrence"
+        ],
+        "evidence_edges": [],
+        "statement": "The keyword cooccurrence network contains 306 nodes and 1006 edges."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G021",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "highest_weighted_degree",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G021",
+        "abstain": false,
+        "answer": {
+          "id": "change adaptation",
+          "label": "change adaptation",
+          "weighted_degree": 39.0,
+          "cluster": 6
+        },
+        "evidence_nodes": [
+          "fact:G021",
+          "network:keyword_cooccurrence",
+          "keyword:change adaptation"
+        ],
+        "evidence_edges": [],
+        "statement": "change adaptation has the highest weighted degree in the keyword cooccurrence network."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G022",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "cluster_count",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G022",
+        "abstain": false,
+        "answer": {
+          "clusters": 15,
+          "cluster_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "evidence_nodes": [
+          "fact:G022",
+          "network:keyword_cooccurrence",
+          "cluster:keyword_cooccurrence:1",
+          "cluster:keyword_cooccurrence:2",
+          "cluster:keyword_cooccurrence:3",
+          "cluster:keyword_cooccurrence:4",
+          "cluster:keyword_cooccurrence:5",
+          "cluster:keyword_cooccurrence:6",
+          "cluster:keyword_cooccurrence:7",
+          "cluster:keyword_cooccurrence:8",
+          "cluster:keyword_cooccurrence:9",
+          "cluster:keyword_cooccurrence:10",
+          "cluster:keyword_cooccurrence:11",
+          "cluster:keyword_cooccurrence:12",
+          "cluster:keyword_cooccurrence:13",
+          "cluster:keyword_cooccurrence:14",
+          "cluster:keyword_cooccurrence:15"
+        ],
+        "evidence_edges": [],
+        "statement": "The keyword cooccurrence network contains 15 detected clusters."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:G023",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "strongest_edge",
+      "answerable": true,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": false,
+      "evidence_valid": true,
+      "statement_claim": true,
+      "statement_supported": true,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:G023",
+        "abstain": false,
+        "answer": {
+          "source": "mitigation",
+          "source_label": "mitigation",
+          "target": "mitigation adaptation",
+          "target_label": "mitigation adaptation",
+          "weight": 7.0,
+          "association_strength": 0.1
+        },
+        "evidence_nodes": [
+          "fact:G023",
+          "network:keyword_cooccurrence",
+          "keyword:mitigation",
+          "keyword:mitigation adaptation"
+        ],
+        "evidence_edges": [
+          "edge:keyword_cooccurrence:keyword:mitigation|keyword:mitigation adaptation"
+        ],
+        "statement": "The strongest observed keyword cooccurrence connection is between mitigation and mitigation adaptation, with weight 7."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:bibliographic_coupling",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "bibliographic_coupling",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:bibliographic_coupling",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:bibliographic_coupling"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:citation",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "citation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:citation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:citation"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:coauthorship",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "coauthorship",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:coauthorship",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:coauthorship"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:cocitation",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "cocitation",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:cocitation",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:cocitation"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:institution_collaboration",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "institution_collaboration",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:institution_collaboration",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:institution_collaboration"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    },
+    {
+      "item_id": "climate_adaptation_2018_2020:U:keyword_cooccurrence",
+      "dataset_id": "climate_adaptation_2018_2020",
+      "network": "keyword_cooccurrence",
+      "task_type": "unanswerable_false_premise",
+      "answerable": false,
+      "schema_valid": true,
+      "correct": true,
+      "abstained": true,
+      "evidence_valid": null,
+      "statement_claim": false,
+      "statement_supported": null,
+      "prediction": {
+        "item_id": "climate_adaptation_2018_2020:U:keyword_cooccurrence",
+        "abstain": true,
+        "answer": null,
+        "evidence_nodes": [
+          "network:keyword_cooccurrence"
+        ],
+        "evidence_edges": [],
+        "statement": "The named node is absent, so the question is not answerable."
+      }
+    }
+  ]
+}

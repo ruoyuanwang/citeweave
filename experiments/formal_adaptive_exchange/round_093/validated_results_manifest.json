@@ -1,0 +1,20 @@
+{
+  "assignment_sha256": {
+    "evaluation": "2430f2c0e3d894d524520598bd842379260a2b7313f7f2bc89c954c502b9cbe1",
+    "feedback": "1b628320e67445ea411ea6683a00e3240d9f2cdbdad155342f61600bfd3605d0"
+  },
+  "batch_manifest_sha256": "c835635f8049bc9de862e178e6b206cc7a0a548f6ef4cffbef51de0e184f7f05",
+  "exact_coverage": true,
+  "items": [
+    {
+      "kind": "feedback",
+      "packet_id": "FPaf30183011e093e2dc36",
+      "packet_sha256": "9686c58aafdb56f071c885a68d6ffa1a8d9fb74f4909cff89bc6f5bb1836f59f",
+      "result_path": "results/feedback/FPaf30183011e093e2dc36.json",
+      "result_sha256": "85833648d2743406697a8c62a7259e0ecb6e1ec2773ce602c9b2c469a064dd42"
+    }
+  ],
+  "packet_and_result_schema_validated": true,
+  "schema_version": 1,
+  "status": "complete_results_validated"
+}

@@ -1,0 +1,8 @@
+{
+  "packet_id": "EP1a7fd5a119de8d769475",
+  "judge_id": "evaluation",
+  "decision": "fail",
+  "confidence": 0.98,
+  "reason": "The extracellular-vesicle/CRISPR bibliometric report materially misstates the keyword time series: it says “Biology” and “Gene” increased consistently each year, but Biology falls from 32 to 30 in 2019 and 46 to 45 in 2021, while Gene falls from 21 to 18 and 32 to 31.",
+  "evidence_ids": ["E020"]
+}

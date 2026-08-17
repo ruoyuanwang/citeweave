@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "dataset_id": "gene_editing_als_2004_2024",
+  "condition": "citeweave_full",
+  "evidence_sha256": "a85de551a3b2ea03835348573693c819add2168829ce37541b1ec1dd72f17cf4",
+  "report_sha256": "3dd4d70702913983d39ab8039cf031639dd05ba19779f2d6bc572820c3590628",
+  "call_count": 4,
+  "model": "deepseek-v4-pro",
+  "temperature": 0.1,
+  "seed": 42,
+  "report_language": "English",
+  "internal_review_used_as_experimental_evaluation": false
+}

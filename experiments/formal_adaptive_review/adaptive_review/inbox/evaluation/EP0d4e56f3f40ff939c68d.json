@@ -1,0 +1,11 @@
+{
+  "packet_id": "EP0d4e56f3f40ff939c68d",
+  "decision": "pass",
+  "confidence": 1.0,
+  "reason": "The candidate identifies the exact visible label and cluster 1, matching both relationships in the packet and conforming to the answer contract.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3390/ijms21197362:cluster",
+    "bibliographic_coupling:node:doi:10.3390/ijms21197362:label"
+  ],
+  "judge_id": "evaluation"
+}

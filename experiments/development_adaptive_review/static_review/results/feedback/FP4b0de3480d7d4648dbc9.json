@@ -1,0 +1,12 @@
+{
+  "packet_id": "FP4b0de3480d7d4648dbc9",
+  "judge_id": "feedback",
+  "decision": "accept",
+  "confidence": 0.99,
+  "reason": "The candidate reports cluster 4 for the same visible labeled node, exactly matching the two graph relationships in the packet.",
+  "suggested_revision": null,
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:cluster",
+    "bibliographic_coupling:node:doi:10.3389/fgene.2021.690049:label"
+  ]
+}

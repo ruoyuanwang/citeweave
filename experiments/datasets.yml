@@ -1,0 +1,83 @@
+version: 1
+language: en
+snapshot_policy:
+  retain_raw_responses: true
+  record_sha256: true
+  record_retrieval_time: true
+  allow_truncated_samples: true
+  interpretation: "A truncated snapshot is a reproducible benchmark sample, not a complete source census."
+
+datasets:
+  - id: rag_graph_2022_2025
+    role: development
+    source: import_file
+    upstream_source: crossref
+    input_file: "experiments/data/rag_graph_2022_2025.crossref.jsonl"
+    input_format: jsonl
+    title: "Graph retrieval-augmented generation research"
+    keywords:
+      - "graph retrieval augmented generation"
+    query_mode: phrase
+    year_from: 2022
+    year_to: 2025
+    document_types:
+      - journal-article
+    max_records: 300
+    include_references: true
+    relevance_terms:
+      - graph
+      - retrieval
+
+  - id: crispr_editing_2018_2020
+    role: development
+    source: crossref
+    title: "CRISPR gene editing research"
+    keywords:
+      - "CRISPR gene editing"
+    query_mode: phrase
+    year_from: 2018
+    year_to: 2020
+    document_types:
+      - journal-article
+    max_records: 300
+    include_references: true
+    relevance_terms:
+      - crispr
+      - editing
+
+  - id: quantum_machine_learning_2019_2021
+    role: development
+    source: import_file
+    upstream_source: crossref
+    input_file: "experiments/data/quantum_machine_learning_2019_2021.crossref.jsonl"
+    input_format: jsonl
+    title: "Quantum machine learning research"
+    keywords:
+      - "quantum machine learning"
+    query_mode: phrase
+    year_from: 2019
+    year_to: 2021
+    document_types:
+      - journal-article
+    max_records: 300
+    include_references: true
+    relevance_terms:
+      - quantum
+      - learning
+
+  - id: climate_adaptation_2018_2020
+    role: locked_test
+    source: crossref
+    title: "Climate change adaptation research"
+    keywords:
+      - "climate change adaptation"
+    query_mode: phrase
+    year_from: 2018
+    year_to: 2020
+    document_types:
+      - journal-article
+    max_records: 300
+    include_references: true
+    relevance_terms:
+      - climate
+      - adaptation

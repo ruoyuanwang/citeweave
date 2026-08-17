@@ -1,0 +1,59 @@
+{
+  "packet_id": "EP053e346448de3876a005",
+  "sample_id": "gene_editing_als_2004_2024:bibliographic_coupling:highest_occurrence:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:highest_occurrence",
+        "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y:label",
+        "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y:occurrences"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y",
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:highest_occurrence",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y",
+          "object_type": "entity",
+          "predicate": "highest_occurrence_node",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y:label",
+          "network": "bibliographic_coupling",
+          "object": "Next Generation Precisio…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y:occurrences",
+          "network": "bibliographic_coupling",
+          "object": 325.0,
+          "object_type": "number",
+          "predicate": "occurrences",
+          "subject": "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "aa359db15a6266327be98ecbce1dfa67df12f71d3d0f6393859774f405125e3d"
+    },
+    "question": "Which labeled node has the highest occurrence in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"label\":\"Next Generation Precisio…\"},\"explanation\":\"The context states that the node with DOI 10.1007/s11481-019-09849-y has the highest occurrence in the bibliographic_coupling network, with 325.0 occurrences. Its display label is 'Next Generation Precisio…'.\",\"item_id\":\"gene_editing_als_2004_2024:bibliographic_coupling:highest_occurrence\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y:label",
+    "bibliographic_coupling:node:doi:10.1007/s11481-019-09849-y:occurrences"
+  ],
+  "content_sha256": "08d3ab4519a20878535be16cde76228ff1ab7fc4e4d849733b65c62b207ed3ca"
+}

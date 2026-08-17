@@ -1,0 +1,12 @@
+{
+  "packet_id": "FP2ad0289488e13ab923e7",
+  "decision": "accept",
+  "confidence": 1.0,
+  "reason": "The visible graph evidence gives the node's display label as \"Gene therapy for ALS: A…\" and assigns that node to cluster 3, exactly matching the answer and explanation.",
+  "evidence_ids": [
+    "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:cluster",
+    "bibliographic_coupling:node:doi:10.1016/j.ymthe.2021.04.008:label"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": null
+}

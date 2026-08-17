@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "blind_exchange": true,
+  "condition_identity_visible": false,
+  "packets": [
+    {
+      "packet_id": "EP0328dbc5263913961150",
+      "kind": "evaluation",
+      "packet_sha256": "0740db598bebcde270c5ec05498762cd8254d69ad8b9fe2652e9d7c9587cee36"
+    }
+  ],
+  "result_directories": {
+    "feedback": "results/feedback",
+    "evaluation": "results/evaluation"
+  }
+}

@@ -1,0 +1,3239 @@
+{
+  "packet_id": "FP728abdea507b57332933",
+  "sample_id": "machine_learning_climate_change_2008_2022:report:grounding",
+  "judge_id": "feedback",
+  "rubric_version": "feedback-human-proxy-v3",
+  "canonical_evidence": [
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": null,
+      "claim_type": "corpus_size",
+      "evidence_id": "E001",
+      "method": "Count of canonical work_id after deterministic exact deduplication.",
+      "selector": {},
+      "statement": "The included corpus contains 7675 unique works.",
+      "unit": null,
+      "value": 7675
+    },
+    {
+      "artifact_path": "audit/acquisition_manifest.json",
+      "caveat": "Completeness is relative to the named source, query, time, and retrieval date.",
+      "claim_type": "acquisition_completeness",
+      "evidence_id": "E002",
+      "method": "Cursor pagination continued until the source returned no next cursor.",
+      "selector": {},
+      "statement": "The source reported 7717 results and 7686 unique source records were acquired.",
+      "unit": null,
+      "value": {
+        "acquired_unique": 7686,
+        "complete": true,
+        "expected": 7717,
+        "truncated": false
+      }
+    },
+    {
+      "artifact_path": "quality/field_coverage.parquet",
+      "caveat": "Field completeness measures metadata availability, not database recall or the substantive quality of the publications.",
+      "claim_type": "metadata_coverage",
+      "evidence_id": "E003",
+      "method": "Non-null canonical values divided by the canonical corpus size.",
+      "selector": {},
+      "statement": "Field completeness was measured after normalization for every canonical work.",
+      "unit": null,
+      "value": {
+        "abstract": {
+          "coverage_percent": 74.12,
+          "missing": 1986,
+          "missing_percent": 25.88,
+          "present": 5689
+        },
+        "cited_by_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 7675
+        },
+        "document_type": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 7675
+        },
+        "doi": {
+          "coverage_percent": 93.84,
+          "missing": 473,
+          "missing_percent": 6.16,
+          "present": 7202
+        },
+        "language": {
+          "coverage_percent": 98.85,
+          "missing": 88,
+          "missing_percent": 1.15,
+          "present": 7587
+        },
+        "publication_date": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 7675
+        },
+        "publisher": {
+          "coverage_percent": 88.04,
+          "missing": 918,
+          "missing_percent": 11.96,
+          "present": 6757
+        },
+        "reference_count": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 7675
+        },
+        "source_id": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 7675
+        },
+        "title": {
+          "coverage_percent": 99.99,
+          "missing": 1,
+          "missing_percent": 0.01,
+          "present": 7674
+        },
+        "year": {
+          "coverage_percent": 100.0,
+          "missing": 0,
+          "missing_percent": 0.0,
+          "present": 7675
+        }
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": null,
+      "claim_type": "time_span",
+      "evidence_id": "E004",
+      "method": "Minimum and maximum non-missing publication year.",
+      "selector": {},
+      "statement": "The corpus spans 2008–2022.",
+      "unit": null,
+      "value": {
+        "end": 2022,
+        "start": 2008
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_peak",
+      "evidence_id": "E005",
+      "method": "Maximum whole-counted works grouped by publication year.",
+      "selector": {},
+      "statement": "Annual output peaked in 2022 with 2470 works.",
+      "unit": null,
+      "value": {
+        "publications": 2470,
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "Endpoint CAGR does not establish a monotonic trend.",
+      "claim_type": "growth",
+      "evidence_id": "E006",
+      "method": "CAGR = (last/first)^(1/year difference)-1.",
+      "selector": {},
+      "statement": "Compound annual publication growth over the observed non-zero endpoints is 35.00%.",
+      "unit": null,
+      "value": 35.0
+    },
+    {
+      "artifact_path": "analyses/annual.parquet",
+      "caveat": "The final year may be incomplete when retrieval occurs before year end.",
+      "claim_type": "annual_output_series",
+      "evidence_id": "E007",
+      "method": "Whole-counted canonical works grouped by non-missing publication year; year-over-year change is the current count minus the preceding count.",
+      "selector": {},
+      "statement": "Annual publication counts are available for every observed year.",
+      "unit": null,
+      "value": [
+        {
+          "publications": 37,
+          "year": 2008,
+          "year_over_year_change": null
+        },
+        {
+          "publications": 54,
+          "year": 2009,
+          "year_over_year_change": 17
+        },
+        {
+          "publications": 79,
+          "year": 2010,
+          "year_over_year_change": 25
+        },
+        {
+          "publications": 81,
+          "year": 2011,
+          "year_over_year_change": 2
+        },
+        {
+          "publications": 109,
+          "year": 2012,
+          "year_over_year_change": 28
+        },
+        {
+          "publications": 146,
+          "year": 2013,
+          "year_over_year_change": 37
+        },
+        {
+          "publications": 149,
+          "year": 2014,
+          "year_over_year_change": 3
+        },
+        {
+          "publications": 166,
+          "year": 2015,
+          "year_over_year_change": 17
+        },
+        {
+          "publications": 190,
+          "year": 2016,
+          "year_over_year_change": 24
+        },
+        {
+          "publications": 307,
+          "year": 2017,
+          "year_over_year_change": 117
+        },
+        {
+          "publications": 447,
+          "year": 2018,
+          "year_over_year_change": 140
+        },
+        {
+          "publications": 677,
+          "year": 2019,
+          "year_over_year_change": 230
+        },
+        {
+          "publications": 1128,
+          "year": 2020,
+          "year_over_year_change": 451
+        },
+        {
+          "publications": 1635,
+          "year": 2021,
+          "year_over_year_change": 507
+        },
+        {
+          "publications": 2470,
+          "year": 2022,
+          "year_over_year_change": 835
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": null,
+      "claim_type": "top_source",
+      "evidence_id": "E008",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Remote Sensing ranks first with 319 publications.",
+      "unit": null,
+      "value": {
+        "name": "Remote Sensing",
+        "publications": 319
+      }
+    },
+    {
+      "artifact_path": "analyses/top_sources.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_source_ranking",
+      "evidence_id": "E009",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top source records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Remote Sensing",
+          "publications": 319
+        },
+        {
+          "name": "Sustainability",
+          "publications": 144
+        },
+        {
+          "name": "The Science of The Total Environment",
+          "publications": 141
+        },
+        {
+          "name": "Water",
+          "publications": 109
+        },
+        {
+          "name": "Zenodo (CERN European Organization for Nuclear Research)",
+          "publications": 108
+        },
+        {
+          "name": "Energies",
+          "publications": 100
+        },
+        {
+          "name": "Journal of Hydrology",
+          "publications": 83
+        },
+        {
+          "name": "Journal of Cleaner Production",
+          "publications": 79
+        },
+        {
+          "name": "Remote Sensing of Environment",
+          "publications": 78
+        },
+        {
+          "name": "IEEE Access",
+          "publications": 64
+        },
+        {
+          "name": "Applied Energy",
+          "publications": 63
+        },
+        {
+          "name": "Scientific Reports",
+          "publications": 61
+        },
+        {
+          "name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+          "publications": 58
+        },
+        {
+          "name": "Applied Sciences",
+          "publications": 55
+        },
+        {
+          "name": "Environmental Research Letters",
+          "publications": 55
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": null,
+      "claim_type": "top_author",
+      "evidence_id": "E010",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Fengxian Yan ranks first with 275 publications.",
+      "unit": null,
+      "value": {
+        "name": "Fengxian Yan",
+        "publications": 275
+      }
+    },
+    {
+      "artifact_path": "analyses/top_authors.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_author_ranking",
+      "evidence_id": "E011",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top author records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Fengxian Yan",
+          "publications": 275
+        },
+        {
+          "name": "Shamsuddin Shahid",
+          "publications": 33
+        },
+        {
+          "name": "Kamal Ahmed",
+          "publications": 16
+        },
+        {
+          "name": "Felix Creutzig",
+          "publications": 14
+        },
+        {
+          "name": "Jan C. Minx",
+          "publications": 14
+        },
+        {
+          "name": "Ravinesh C. Deo",
+          "publications": 14
+        },
+        {
+          "name": "Tarmizi Ismail",
+          "publications": 14
+        },
+        {
+          "name": "De Li Liu",
+          "publications": 13
+        },
+        {
+          "name": "Elizabeth A. Barnes",
+          "publications": 13
+        },
+        {
+          "name": "Max Callaghan",
+          "publications": 13
+        },
+        {
+          "name": "Philippe Ciais",
+          "publications": 12
+        },
+        {
+          "name": "‪Eun‐Sung Chung",
+          "publications": 12
+        },
+        {
+          "name": "Ali Jamali",
+          "publications": 11
+        },
+        {
+          "name": "Biswajeet Pradhan",
+          "publications": 11
+        },
+        {
+          "name": "Gerald E. Rehfeldt",
+          "publications": 11
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": null,
+      "claim_type": "top_institution",
+      "evidence_id": "E012",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "Chinese Academy of Sciences ranks first with 366 publications.",
+      "unit": null,
+      "value": {
+        "name": "Chinese Academy of Sciences",
+        "publications": 366
+      }
+    },
+    {
+      "artifact_path": "analyses/top_institutions.parquet",
+      "caveat": "Productivity is descriptive and must not be treated as research quality or causal influence.",
+      "claim_type": "top_institution_ranking",
+      "evidence_id": "E013",
+      "method": "Whole counting within the included corpus; ties retain source sort order.",
+      "selector": {},
+      "statement": "The leading top institution records are retained for interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "name": "Chinese Academy of Sciences",
+          "publications": 366
+        },
+        {
+          "name": "University of Chinese Academy of Sciences",
+          "publications": 180
+        },
+        {
+          "name": "Centre National de la Recherche Scientifique",
+          "publications": 143
+        },
+        {
+          "name": "Institute of Geographic Sciences and Natural Resources Research",
+          "publications": 115
+        },
+        {
+          "name": "Beijing Normal University",
+          "publications": 94
+        },
+        {
+          "name": "University of Tehran",
+          "publications": 91
+        },
+        {
+          "name": "Tsinghua University",
+          "publications": 76
+        },
+        {
+          "name": "Wuhan University",
+          "publications": 75
+        },
+        {
+          "name": "Nanjing University of Information Science and Technology",
+          "publications": 67
+        },
+        {
+          "name": "University of Maryland, College Park",
+          "publications": 66
+        },
+        {
+          "name": "United States Geological Survey",
+          "publications": 58
+        },
+        {
+          "name": "North China Electric Power University",
+          "publications": 57
+        },
+        {
+          "name": "ETH Zurich",
+          "publications": 55
+        },
+        {
+          "name": "University of Oxford",
+          "publications": 55
+        },
+        {
+          "name": "Peking University",
+          "publications": 53
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/document_types.parquet",
+      "caveat": "Document-type labels inherit source classification practices.",
+      "claim_type": "document_type_distribution",
+      "evidence_id": "E014",
+      "method": "Whole-counted canonical works grouped by source-supplied document type.",
+      "selector": {},
+      "statement": "Document types were counted across the complete canonical corpus.",
+      "unit": null,
+      "value": {
+        "review_and_systematic_review_documents": 0,
+        "types": [
+          {
+            "document_type": "article",
+            "publications": 7675,
+            "share_percent": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent.",
+      "claim_type": "citation_summary",
+      "evidence_id": "E015",
+      "method": "Citation-count field supplied by the selected source at retrieval time.",
+      "selector": {},
+      "statement": "Mean citations are 44.95 and the median is 20.00.",
+      "unit": null,
+      "value": {
+        "mean": 44.95,
+        "median": 20.0
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "Recent works have had less time to accumulate citations.",
+      "claim_type": "zero_citation_share",
+      "evidence_id": "E016",
+      "method": "Count and percentage of canonical works with cited_by_count equal to zero.",
+      "selector": {},
+      "statement": "911 works have zero source-reported citations, representing 11.87% of the corpus.",
+      "unit": null,
+      "value": {
+        "share_percent": 11.87,
+        "zero_cited": 911
+      }
+    },
+    {
+      "artifact_path": "analyses/citation_distribution.parquet",
+      "caveat": "Citation counts are source- and retrieval-date-dependent; papers have unequal citation windows.",
+      "claim_type": "citation_distribution_detail",
+      "evidence_id": "E017",
+      "method": "Descriptive statistics of the source-supplied cited-by count.",
+      "selector": {},
+      "statement": "Citation-distribution statistics include central tendency, upper quantiles, maximum, and zero-cited count.",
+      "unit": null,
+      "value": [
+        {
+          "metric": "mean",
+          "value": 44.9482736156
+        },
+        {
+          "metric": "median",
+          "value": 20.0
+        },
+        {
+          "metric": "p75",
+          "percentile": 75,
+          "value": 50.0
+        },
+        {
+          "metric": "p90",
+          "percentile": 90,
+          "value": 102.0
+        },
+        {
+          "metric": "p95",
+          "percentile": 95,
+          "value": 162.0
+        },
+        {
+          "metric": "p98",
+          "percentile": 98,
+          "value": 257.0
+        },
+        {
+          "metric": "maximum",
+          "value": 3369.0
+        },
+        {
+          "metric": "zero_cited",
+          "value": 911.0
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/top_cited_documents.parquet",
+      "caveat": "Raw citation counts favor older publications and do not by themselves measure quality.",
+      "claim_type": "top_cited_documents",
+      "evidence_id": "E018",
+      "method": "Descending source-reported citation count, with publication year as tie-breaker.",
+      "selector": {},
+      "statement": "The most-cited included documents are retained with title, year, DOI, and source-reported citation count.",
+      "unit": null,
+      "value": [
+        {
+          "cited_by_count": 3369,
+          "doi": "10.5194/essd-13-3907-2021",
+          "title": "The 30 m annual land cover dataset and its dynamics in China from 1990 to 2019",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 3079,
+          "doi": "10.1109/mgrs.2017.2762307",
+          "title": "Deep Learning in Remote Sensing: A Comprehensive Review and List of Resources",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 2813,
+          "doi": null,
+          "title": "Deep learning in remote sensing: A comprehensive review and list of resources",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 2322,
+          "doi": "10.1038/nature09396",
+          "title": "Recent decline in the global land evapotranspiration trend due to limited moisture supply",
+          "year": 2010
+        },
+        {
+          "cited_by_count": 1867,
+          "doi": "10.1039/d0cs01079k",
+          "title": "Water electrolysis: from textbook knowledge to the latest scientific strategies and industrial developments",
+          "year": 2022
+        },
+        {
+          "cited_by_count": 1699,
+          "doi": "10.1098/rsta.2020.0209",
+          "title": "Time-series forecasting with deep learning: a survey",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 1481,
+          "doi": "10.1073/pnas.1706103114",
+          "title": "Soil carbon debt of 12,000 years of human land use",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 1459,
+          "doi": "10.1073/pnas.1307701110",
+          "title": "Present and future global distributions of the marine Cyanobacteria Prochlorococcus and Synechococcus",
+          "year": 2013
+        },
+        {
+          "cited_by_count": 1409,
+          "doi": "10.1175/bams-d-13-00068.1",
+          "title": "PERSIANN-CDR: Daily Precipitation Climate Data Record from Multisatellite Observations for Hydrological and Climate Studies",
+          "year": 2014
+        },
+        {
+          "cited_by_count": 1274,
+          "doi": "10.1038/s41467-019-12808-z",
+          "title": "New elevation data triple estimates of global vulnerability to sea-level rise and coastal flooding",
+          "year": 2019
+        },
+        {
+          "cited_by_count": 1188,
+          "doi": "10.1016/j.rser.2017.08.017",
+          "title": "Forecasting of photovoltaic power generation and model optimization: A review",
+          "year": 2017
+        },
+        {
+          "cited_by_count": 1072,
+          "doi": "10.1038/s41477-018-0139-4",
+          "title": "Core microbiomes for sustainable agroecosystems",
+          "year": 2018
+        },
+        {
+          "cited_by_count": 1027,
+          "doi": "10.5194/essd-13-2753-2021",
+          "title": "GLC_FCS30: global land-cover product with fine classification system at 30 m using time-series Landsat imagery",
+          "year": 2021
+        },
+        {
+          "cited_by_count": 933,
+          "doi": "10.3390/rs8030166",
+          "title": "First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe",
+          "year": 2016
+        },
+        {
+          "cited_by_count": 913,
+          "doi": "10.1145/3485128",
+          "title": "Tackling Climate Change with Machine Learning",
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/bradford_sources.parquet",
+      "caveat": "Records without a source name are excluded from Bradford zoning.",
+      "claim_type": "bradford_zone_distribution",
+      "evidence_id": "E019",
+      "method": "Sources ranked by output and divided by cumulative document thirds.",
+      "selector": {},
+      "statement": "Bradford zones summarize source concentration among records with known source names.",
+      "unit": null,
+      "value": {
+        "rounded_document_range": {
+          "lower": 2450,
+          "rounding_unit": 50,
+          "upper": 2550
+        },
+        "zones": [
+          {
+            "documents": 2474.0,
+            "sources": 40,
+            "zone": 1
+          },
+          {
+            "documents": 2519.0,
+            "sources": 328,
+            "zone": 2
+          },
+          {
+            "documents": 2497.0,
+            "sources": 1973,
+            "zone": 3
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/keyword_trends.parquet",
+      "caveat": "Keyword frequencies depend on source metadata, synonym normalization, and the incomplete final year.",
+      "claim_type": "keyword_temporal_dynamics",
+      "evidence_id": "E020",
+      "method": "Unique works per normalized keyword and publication year.",
+      "selector": {},
+      "statement": "Year-by-year document counts are available for the globally most frequent keywords.",
+      "unit": null,
+      "value": [
+        {
+          "documents": 24,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2008
+        },
+        {
+          "documents": 36,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2009
+        },
+        {
+          "documents": 53,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2010
+        },
+        {
+          "documents": 50,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2011
+        },
+        {
+          "documents": 75,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2012
+        },
+        {
+          "documents": 99,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2013
+        },
+        {
+          "documents": 107,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2014
+        },
+        {
+          "documents": 121,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2015
+        },
+        {
+          "documents": 133,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2016
+        },
+        {
+          "documents": 182,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2017
+        },
+        {
+          "documents": 268,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2018
+        },
+        {
+          "documents": 408,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2019
+        },
+        {
+          "documents": 645,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2020
+        },
+        {
+          "documents": 925,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2021
+        },
+        {
+          "documents": 1381,
+          "global_documents": 4507,
+          "keyword": "Environmental science",
+          "year": 2022
+        },
+        {
+          "documents": 17,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2008
+        },
+        {
+          "documents": 24,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2009
+        },
+        {
+          "documents": 38,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2010
+        },
+        {
+          "documents": 40,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2011
+        },
+        {
+          "documents": 53,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2012
+        },
+        {
+          "documents": 74,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2013
+        },
+        {
+          "documents": 68,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2014
+        },
+        {
+          "documents": 94,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2015
+        },
+        {
+          "documents": 102,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2016
+        },
+        {
+          "documents": 184,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2017
+        },
+        {
+          "documents": 255,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2018
+        },
+        {
+          "documents": 369,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2019
+        },
+        {
+          "documents": 650,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2020
+        },
+        {
+          "documents": 933,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2021
+        },
+        {
+          "documents": 1511,
+          "global_documents": 4412,
+          "keyword": "Computer science",
+          "year": 2022
+        },
+        {
+          "documents": 18,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2008
+        },
+        {
+          "documents": 33,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2009
+        },
+        {
+          "documents": 51,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2010
+        },
+        {
+          "documents": 46,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2011
+        },
+        {
+          "documents": 61,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2012
+        },
+        {
+          "documents": 72,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2013
+        },
+        {
+          "documents": 99,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2014
+        },
+        {
+          "documents": 101,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2015
+        },
+        {
+          "documents": 108,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2016
+        },
+        {
+          "documents": 153,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2017
+        },
+        {
+          "documents": 230,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2018
+        },
+        {
+          "documents": 355,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2019
+        },
+        {
+          "documents": 554,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2020
+        },
+        {
+          "documents": 835,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2021
+        },
+        {
+          "documents": 1169,
+          "global_documents": 3885,
+          "keyword": "Geography",
+          "year": 2022
+        },
+        {
+          "documents": 11,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2008
+        },
+        {
+          "documents": 11,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2009
+        },
+        {
+          "documents": 35,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2010
+        },
+        {
+          "documents": 30,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2011
+        },
+        {
+          "documents": 42,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2012
+        },
+        {
+          "documents": 60,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2013
+        },
+        {
+          "documents": 63,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2014
+        },
+        {
+          "documents": 75,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2015
+        },
+        {
+          "documents": 63,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2016
+        },
+        {
+          "documents": 112,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2017
+        },
+        {
+          "documents": 166,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2018
+        },
+        {
+          "documents": 226,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2019
+        },
+        {
+          "documents": 384,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2020
+        },
+        {
+          "documents": 569,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2021
+        },
+        {
+          "documents": 793,
+          "global_documents": 2640,
+          "keyword": "Ecology",
+          "year": 2022
+        },
+        {
+          "documents": 16,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2008
+        },
+        {
+          "documents": 35,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2009
+        },
+        {
+          "documents": 38,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2010
+        },
+        {
+          "documents": 44,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2011
+        },
+        {
+          "documents": 55,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2012
+        },
+        {
+          "documents": 63,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2013
+        },
+        {
+          "documents": 69,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2014
+        },
+        {
+          "documents": 70,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2015
+        },
+        {
+          "documents": 80,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2016
+        },
+        {
+          "documents": 109,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2017
+        },
+        {
+          "documents": 151,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2018
+        },
+        {
+          "documents": 211,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2019
+        },
+        {
+          "documents": 347,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2020
+        },
+        {
+          "documents": 543,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2021
+        },
+        {
+          "documents": 724,
+          "global_documents": 2555,
+          "keyword": "Climate change",
+          "year": 2022
+        },
+        {
+          "documents": 16,
+          "global_documents": 2351,
+          "keyword": "Geology",
+          "year": 2008
+        },
+        {
+          "documents": 27,
+          "global_documents": 2351,
+          "keyword": "Geology",
+          "year": 2009
+        },
+        {
+          "documents": 33,
+          "global_documents": 2351,
+          "keyword": "Geology",
+          "year": 2010
+        },
+        {
+          "documents": 31,
+          "global_documents": 2351,
+          "keyword": "Geology",
+          "year": 2011
+        },
+        {
+          "documents": 45,
+          "global_documents": 2351,
+          "keyword": "Geology",
+          "year": 2012
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/three_field.parquet",
+      "caveat": "The map is a filtered descriptive view, not a causal pathway.",
+      "claim_type": "three_field_relations",
+      "evidence_id": "E021",
+      "method": "Whole-counted links among leading authors, sources, and keywords.",
+      "selector": {},
+      "statement": "Leading author–source–keyword combinations are retained for relational interpretation.",
+      "unit": null,
+      "value": [
+        {
+          "author": "Fengxian Yan",
+          "documents": 9,
+          "keyword": "Environmental science",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 8,
+          "keyword": "Geography",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 7,
+          "keyword": "Geology",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 7,
+          "keyword": "Environmental science",
+          "source": "The Science of The Total Environment"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 7,
+          "keyword": "Environmental science",
+          "source": null
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 6,
+          "keyword": "Computer science",
+          "source": "DOAJ (DOAJ: Directory of Open Access Journals)"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 6,
+          "keyword": "Geology",
+          "source": "The Science of The Total Environment"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 6,
+          "keyword": "Geography",
+          "source": null
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 5,
+          "keyword": "Ecology",
+          "source": "The Science of The Total Environment"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 5,
+          "keyword": "Meteorology",
+          "source": null
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 5,
+          "keyword": "Computer science",
+          "source": null
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 5,
+          "keyword": "Geography",
+          "source": "The Science of The Total Environment"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 5,
+          "keyword": "Ecology",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 5,
+          "keyword": "Remote sensing",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 5,
+          "keyword": "Climatology",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 5,
+          "keyword": "Environmental science",
+          "source": "DOAJ (DOAJ: Directory of Open Access Journals)"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 4,
+          "keyword": "Climate change",
+          "source": "The Science of The Total Environment"
+        },
+        {
+          "author": "Onisimo Mutanga",
+          "documents": 4,
+          "keyword": "Geography",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Onisimo Mutanga",
+          "documents": 4,
+          "keyword": "Environmental science",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 4,
+          "keyword": "Mathematics",
+          "source": "The Science of The Total Environment"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 4,
+          "keyword": "Physical geography",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 4,
+          "keyword": "Computer science",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 4,
+          "keyword": "Climate change",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 4,
+          "keyword": "Engineering",
+          "source": "Applied Energy"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 4,
+          "keyword": "Computer science",
+          "source": "Applied Energy"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 4,
+          "keyword": "Meteorology",
+          "source": "Remote Sensing"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 3,
+          "keyword": "Computer science",
+          "source": "The Science of The Total Environment"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 3,
+          "keyword": "Engineering",
+          "source": null
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 3,
+          "keyword": "Statistics",
+          "source": "The Science of The Total Environment"
+        },
+        {
+          "author": "Fengxian Yan",
+          "documents": 3,
+          "keyword": "Ecology",
+          "source": "The international archives of the photogrammetry, remote sensing and spatial information sciences/International archives of the photogrammetry, remote sensing and spatial information sciences"
+        }
+      ]
+    },
+    {
+      "artifact_path": "analyses/network_bibliographic_coupling_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "bibliographic_coupling_structure",
+      "evidence_id": "E022",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The bibliographic coupling candidate network contains 72 nodes and 193 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 8,
+        "edges": 193,
+        "network_parameters": {
+          "candidate_edges": 3080,
+          "candidate_nodes_with_links": 412,
+          "candidate_pool": 412,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 193,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 412,
+          "full_candidate_edge_count": 3080,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.10772199820223184,
+            "mean_edge_length": 0.32696975211784135,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 3676.0,
+            "weighted_edge_length": 0.004213052256443666,
+            "within_between_distance_ratio": 0.29053486113298704
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 21,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          }
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 4,
+            "label": "Tackling Climate Change with Machine Learning",
+            "occurrences": 722,
+            "weighted_degree": 501.0
+          },
+          {
+            "cluster": 7,
+            "label": "Remote sensing of the terrestrial carbon cycle: A review of advances over 50 years",
+            "occurrences": 502,
+            "weighted_degree": 338.0
+          },
+          {
+            "cluster": 4,
+            "label": "Deep Learning and Earth Observation to Support the Sustainable Development Goals: Current approaches, open challenges, and future opportunities",
+            "occurrences": 286,
+            "weighted_degree": 281.0
+          },
+          {
+            "cluster": 1,
+            "label": "Physics-informed machine learning: case studies for weather and climate modelling",
+            "occurrences": 160,
+            "weighted_degree": 276.0
+          },
+          {
+            "cluster": 4,
+            "label": "Pathways and challenges of the application of artificial intelligence to geohazards modelling",
+            "occurrences": 137,
+            "weighted_degree": 248.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_citation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "citation_structure",
+      "evidence_id": "E023",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The citation candidate network contains 60 nodes and 59 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 59,
+        "network_parameters": {
+          "candidate_edges": 134,
+          "candidate_nodes_with_links": 146,
+          "candidate_pool": 146,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 59,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 146,
+          "full_candidate_edge_count": 134,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.11786781934150567,
+            "mean_edge_length": 0.22987854129772303,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 430.0,
+            "weighted_edge_length": 0.0022064617265050586,
+            "within_between_distance_ratio": 0.34722476850038153
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 1,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 60,
+        "top_nodes": [
+          {
+            "cluster": 13,
+            "label": "Using Machine Learning to Parameterize Moist Convection: Potential for Modeling of Climate, Climate Change, and Extreme Events",
+            "occurrences": 424,
+            "weighted_degree": 45.0
+          },
+          {
+            "cluster": 22,
+            "label": "Deep learning in remote sensing: A comprehensive review and list of resources",
+            "occurrences": 2813,
+            "weighted_degree": 38.0
+          },
+          {
+            "cluster": 13,
+            "label": "Use of neural networks for stable, accurate and physically consistent parameterization of subgrid atmospheric processes with good performance at reduced precision",
+            "occurrences": 161,
+            "weighted_degree": 10.0
+          },
+          {
+            "cluster": 16,
+            "label": "Machine learning for weather and climate are worlds apart",
+            "occurrences": 105,
+            "weighted_degree": 6.0
+          },
+          {
+            "cluster": 13,
+            "label": "Assessing the Potential of Deep Learning for Emulating Cloud Superparameterization in Climate Models With Real‐Geography Boundary Conditions",
+            "occurrences": 57,
+            "weighted_degree": 5.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_coauthorship_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "coauthorship_structure",
+      "evidence_id": "E024",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The coauthorship candidate network contains 60 nodes and 120 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 120,
+        "network_parameters": {
+          "candidate_edges": 870,
+          "candidate_nodes_with_links": 412,
+          "candidate_pool": 412,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 120,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 870,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.054299935590334775,
+            "mean_edge_length": 0.28336510777078533,
+            "overlap_ratio": 0.0,
+            "selected_seed": 3069.0,
+            "weighted_edge_length": 0.04013168020179551,
+            "within_between_distance_ratio": 0.0
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 3,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 60,
+        "top_nodes": [
+          {
+            "cluster": 3,
+            "label": "Shamsuddin Shahid",
+            "occurrences": 33,
+            "weighted_degree": 85.0
+          },
+          {
+            "cluster": 19,
+            "label": "Fengxian Yan",
+            "occurrences": 275,
+            "weighted_degree": 78.0
+          },
+          {
+            "cluster": 3,
+            "label": "Kamal Ahmed",
+            "occurrences": 16,
+            "weighted_degree": 52.0
+          },
+          {
+            "cluster": 3,
+            "label": "Tarmizi Ismail",
+            "occurrences": 14,
+            "weighted_degree": 44.0
+          },
+          {
+            "cluster": 9,
+            "label": "Ravinesh C. Deo",
+            "occurrences": 14,
+            "weighted_degree": 38.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_cocitation_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "cocitation_structure",
+      "evidence_id": "E025",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The cocitation candidate network contains 72 nodes and 199 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 4,
+        "edges": 199,
+        "network_parameters": {
+          "candidate_edges": 24819,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 199,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 24819,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.08073122061336975,
+            "mean_edge_length": 0.2895636291456927,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1342.0,
+            "weighted_edge_length": 0.010218656505589884,
+            "within_between_distance_ratio": 0.18678127550165077
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 21,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "openalex:W2911964244",
+            "occurrences": 1186,
+            "weighted_degree": 6771.0
+          },
+          {
+            "cluster": 3,
+            "label": "openalex:W273955616",
+            "occurrences": 361,
+            "weighted_degree": 2452.0
+          },
+          {
+            "cluster": 1,
+            "label": "openalex:W4285719527",
+            "occurrences": 502,
+            "weighted_degree": 2296.0
+          },
+          {
+            "cluster": 3,
+            "label": "openalex:W2582743722",
+            "occurrences": 320,
+            "weighted_degree": 2154.0
+          },
+          {
+            "cluster": 2,
+            "label": "openalex:W6610017368",
+            "occurrences": 283,
+            "weighted_degree": 1919.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_institution_collaboration_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "institution_collaboration_structure",
+      "evidence_id": "E026",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The institution collaboration candidate network contains 72 nodes and 205 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 10,
+        "edges": 205,
+        "network_parameters": {
+          "candidate_edges": 8146,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 205,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 8146,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.15065302916052598,
+            "mean_edge_length": 0.40011848766665015,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 1148.0,
+            "weighted_edge_length": 0.01979355046558157,
+            "within_between_distance_ratio": 0.36951184770537304
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 9,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 2,
+            "label": "Chinese Academy of Sciences",
+            "occurrences": 366,
+            "weighted_degree": 1108.0
+          },
+          {
+            "cluster": 4,
+            "label": "Centre National de la Recherche Scientifique",
+            "occurrences": 143,
+            "weighted_degree": 626.0
+          },
+          {
+            "cluster": 2,
+            "label": "University of Chinese Academy of Sciences",
+            "occurrences": 180,
+            "weighted_degree": 560.0
+          },
+          {
+            "cluster": 2,
+            "label": "Institute of Geographic Sciences and Natural Resources Research",
+            "occurrences": 115,
+            "weighted_degree": 369.0
+          },
+          {
+            "cluster": 4,
+            "label": "Laboratoire des Sciences du Climat et de l'Environnement",
+            "occurrences": 27,
+            "weighted_degree": 279.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "analyses/network_keyword_cooccurrence_nodes.parquet",
+      "caveat": "Network centrality describes this corpus and parameterization; it does not establish causal or substantive importance.",
+      "claim_type": "keyword_cooccurrence_structure",
+      "evidence_id": "E027",
+      "method": "Candidate selection by occurrence, association-strength edge normalization, and Louvain community detection.",
+      "selector": {},
+      "statement": "The keyword cooccurrence candidate network contains 72 nodes and 192 edges.",
+      "unit": null,
+      "value": {
+        "clusters": 7,
+        "edges": 192,
+        "network_parameters": {
+          "candidate_edges": 34217,
+          "candidate_nodes_with_links": 432,
+          "candidate_pool": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "full_candidate_edge_count": 34217,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_qa": {
+            "layout_score": 0.08074531506645577,
+            "mean_edge_length": 0.3110459264748991,
+            "optimizer_converged": 1.0,
+            "optimizer_iterations": 500.0,
+            "overlap_ratio": 0.0,
+            "selected_seed": 3263.0,
+            "weighted_edge_length": 0.006529920372654644,
+            "within_between_distance_ratio": 0.1955436612335206
+          },
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 29,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "nodes": 72,
+        "top_nodes": [
+          {
+            "cluster": 5,
+            "label": "Environmental science",
+            "occurrences": 4507,
+            "weighted_degree": 50376.0
+          },
+          {
+            "cluster": 2,
+            "label": "Computer science",
+            "occurrences": 4412,
+            "weighted_degree": 45247.0
+          },
+          {
+            "cluster": 5,
+            "label": "Geography",
+            "occurrences": 3885,
+            "weighted_degree": 43938.0
+          },
+          {
+            "cluster": 5,
+            "label": "Climate change",
+            "occurrences": 2555,
+            "weighted_degree": 29559.0
+          },
+          {
+            "cluster": 1,
+            "label": "Ecology",
+            "occurrences": 2640,
+            "weighted_degree": 29300.0
+          }
+        ]
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E028",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The 30 m annual land cover dataset and its dynamics in China from 1990 to 2019",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract. Land cover (LC) determines the energy exchange, water and carbon cycle between Earth's spheres. Accurate LC information is a fundamental parameter for the environment and climate studies. Considering that the LC in China has been altered dramatically with the economic development in the past few decades, sequential and fine-scale LC monitoring is in urgent need. However, currently, fine-resolution annual LC dataset produced by the observational images is generally unavailable for China due to the lack of sufficient training samples and computational capabilities. To deal with this issue, we produced the first Landsat-derived annual China land cover dataset (CLCD) on the Google Earth Engine (GEE) platform, which contains 30 m annual LC and its dynamics in China from 1990 to 2019. We first collected the training samples by combining stable samples extracted from China's land-use/cover datasets (CLUDs) and visually interpreted samples from satellite time-series data, Google Earth and Google Maps. Using 335 709 Landsat images on the GEE, several temporal metrics were constructed and fed to the random forest classifier to obtain classification results. We then proposed a post-processing method incorporating spatial–temporal filtering and logical reasoning to further improve the spatial–temporal consistency of CLCD. Finally, the overall accuracy of CLCD reached 79.31 % based on 5463 visually interpreted samples. A further assessment based on 5131 third-party test samples showed that the overall accuracy of CLCD outperforms that of MCD12Q1, ESACCI_LC, FROM_GLC and GlobeLand30. Besides, we intercompared the CLCD with several Landsat-derived thematic products, which exhibited good consistencies with the Global Forest Change, the Global Surface Water, and three impervious surface products. Based on the CLCD, the trends and patterns of China's LC changes during 1985 and 2019 were revealed, such as expansion of impervious surface (+148.71 %) and water (+18.39 %), decrease in cropland (−4.85 %) and grassland (−3.29 %), and increase in forest (+4.34 %). In general, CLCD reflected the rapid urbanization and a series of ecological projects (e.g. Gain for Green) in China and revealed the anthropogenic implications on LC under the condition of climate change, signifying its potential application in the global change research. The CLCD dataset introduced in this article is freely available at https://doi.org/10.5281/zenodo.4417810 (Yang and Huang, 2021).",
+        "authors": [
+          "Jie Yang",
+          "Xin Huang"
+        ],
+        "doi": "10.5194/essd-13-3907-2021",
+        "source": "Earth system science data",
+        "title": "The 30 m annual land cover dataset and its dynamics in China from 1990 to 2019",
+        "work_id": "doi:10.5194/essd-13-3907-2021",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E029",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Deep Learning in Remote Sensing: A Comprehensive Review and List of Resources",
+      "unit": null,
+      "value": {
+        "abstract": "Central to the looming paradigm shift toward data-intensive science, machine-learning techniques are becoming increasingly important. In particular, deep learning has proven to be both a major breakthrough and an extremely powerful tool in many fields. Shall we embrace deep learning as the key to everything? Or should we resist a black-box solution? These are controversial issues within the remote-sensing community. In this article, we analyze the challenges of using deep learning for remote-sensing data analysis, review recent advances, and provide resources we hope will make deep learning in remote sensing seem ridiculously simple. More importantly, we encourage remote-sensing scientists to bring their expertise into deep learning and use it as an implicit general model to tackle unprecedented, large-scale, influential challenges, such as climate change and urbanization.",
+        "authors": [
+          "Xiao Xiang Zhu",
+          "Devis Tuia",
+          "Fengxian Yan",
+          "Gui-Song Xia",
+          "Liangpei Zhang",
+          "Feng Xu"
+        ],
+        "doi": "10.1109/mgrs.2017.2762307",
+        "source": "IEEE Geoscience and Remote Sensing Magazine",
+        "title": "Deep Learning in Remote Sensing: A Comprehensive Review and List of Resources",
+        "work_id": "doi:10.1109/mgrs.2017.2762307",
+        "year": 2017
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E030",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Deep learning in remote sensing: A comprehensive review and list of resources",
+      "unit": null,
+      "value": {
+        "abstract": "Standing at the paradigm shift towards data-intensive science, machine learning techniques are becoming increasingly important. In particular, as a major breakthrough in the field, deep learning has proven as an extremely powerful tool in many fields. Shall we embrace deep learning as the key to all? Or, should we resist a 'black-box' solution? There are controversial opinions in the remote sensing community. In this article, we analyze the challenges of using deep learning for remote sensing data analysis, review the recent advances, and provide resources to make deep learning in remote sensing ridiculously simple to start with. More importantly, we advocate remote sensing scientists to bring their expertise into deep learning, and use it as an implicit general model to tackle unprecedented large-scale influential challenges, such as climate change and urbanization.",
+        "authors": [
+          "Xiao Xiang Zhu",
+          "Devis Tuia",
+          "Lichao Mou",
+          "Gui-Song Xia",
+          "Liangpei Zhang"
+        ],
+        "doi": null,
+        "source": "Open MIND",
+        "title": "Deep learning in remote sensing: A comprehensive review and list of resources",
+        "work_id": "openalex:W2782522152",
+        "year": 2017
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E031",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Water electrolysis: from textbook knowledge to the latest scientific strategies and industrial developments",
+      "unit": null,
+      "value": {
+        "abstract": "footprint. The viability of water electrolysis still hinges on the availability of durable earth-abundant electrocatalyst materials and the overall process efficiency. This review spans from the fundamentals of electrocatalytically initiated water splitting to the very latest scientific findings from university and institutional research, also covering specifications and special features of the current industrial processes and those processes currently being tested in large-scale applications. Recently developed strategies are described for the optimisation and discovery of active and durable materials for electrodes that ever-increasingly harness first-principles calculations and machine learning. In addition, a technoeconomic analysis of water electrolysis is included that allows an assessment of the extent to which a large-scale implementation of water splitting can help to combat climate change. This review article is intended to cross-pollinate and strengthen efforts from fundamental understanding to technical implementation and to improve the 'junctions' between the field's physical chemists, materials scientists and engineers, as well as stimulate much-needed exchange among these groups on challenges encountered in the different domains.",
+        "authors": [
+          "Marian Chatenet",
+          "Bruno G. Pollet",
+          "Dario R. Dekel",
+          "Fabio Dionigi"
+        ],
+        "doi": "10.1039/d0cs01079k",
+        "source": "Chemical Society Reviews",
+        "title": "Water electrolysis: from textbook knowledge to the latest scientific strategies and industrial developments",
+        "work_id": "doi:10.1039/d0cs01079k",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E032",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Time-series forecasting with deep learning: a survey",
+      "unit": null,
+      "value": {
+        "abstract": "Numerous deep learning architectures have been developed to accommodate the diversity of time-series datasets across different domains. In this article, we survey common encoder and decoder designs used in both one-step-ahead and multi-horizon time-series forecasting-describing how temporal information is incorporated into predictions by each model. Next, we highlight recent developments in hybrid deep learning models, which combine well-studied statistical models with neural network components to improve pure methods in either category. Lastly, we outline some ways in which deep learning can also facilitate decision support with time-series data. This article is part of the theme issue 'Machine learning for weather and climate modelling'.",
+        "authors": [
+          "Bryan Lim",
+          "Stefan Zohren"
+        ],
+        "doi": "10.1098/rsta.2020.0209",
+        "source": "Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences",
+        "title": "Time-series forecasting with deep learning: a survey",
+        "work_id": "doi:10.1098/rsta.2020.0209",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E033",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Soil carbon debt of 12,000 years of human land use",
+      "unit": null,
+      "value": {
+        "abstract": "Human appropriation of land for agriculture has greatly altered the terrestrial carbon balance, creating a large but uncertain carbon debt in soils. Estimating the size and spatial distribution of soil organic carbon (SOC) loss due to land use and land cover change has been difficult but is a critical step in understanding whether SOC sequestration can be an effective climate mitigation strategy. In this study, a machine learning-based model was fitted using a global compilation of SOC data and the History Database of the Global Environment (HYDE) land use data in combination with climatic, landform and lithology covariates. Model results compared favorably with a global compilation of paired plot studies. Projection of this model onto a world without agriculture indicated a global carbon debt due to agriculture of 133 Pg C for the top 2 m of soil, with the rate of loss increasing dramatically in the past 200 years. The HYDE classes \"grazing\" and \"cropland\" contributed nearly equally to the loss of SOC. There were higher percent SOC losses on cropland but since more than twice as much land is grazed, slightly higher total losses were found from grazing land. Important spatial patterns of SOC loss were found: Hotspots of SOC loss coincided with some major cropping regions as well as semiarid grazing regions, while other major agricultural zones showed small losses and even net gains in SOC. This analysis has demonstrated that there are identifiable regions which can be targeted for SOC restoration efforts.",
+        "authors": [
+          "Jonathan Sanderman",
+          "Tomislav Hengl",
+          "Greg Fiske"
+        ],
+        "doi": "10.1073/pnas.1706103114",
+        "source": "Proceedings of the National Academy of Sciences",
+        "title": "Soil carbon debt of 12,000 years of human land use",
+        "work_id": "doi:10.1073/pnas.1706103114",
+        "year": 2017
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E034",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Present and future global distributions of the marine Cyanobacteria Prochlorococcus and Synechococcus",
+      "unit": null,
+      "value": {
+        "abstract": "The Cyanobacteria Prochlorococcus and Synechococcus account for a substantial fraction of marine primary production. Here, we present quantitative niche models for these lineages that assess present and future global abundances and distributions. These niche models are the result of neural network, nonparametric, and parametric analyses, and they rely on >35,000 discrete observations from all major ocean regions. The models assess cell abundance based on temperature and photosynthetically active radiation, but the individual responses to these environmental variables differ for each lineage. The models estimate global biogeographic patterns and seasonal variability of cell abundance, with maxima in the warm oligotrophic gyres of the Indian and the western Pacific Oceans and minima at higher latitudes. The annual mean global abundances of Prochlorococcus and Synechococcus are 2.9 ± 0.1 × 10(27) and 7.0 ± 0.3 × 10(26) cells, respectively. Using projections of sea surface temperature as a result of increased concentration of greenhouse gases at the end of the 21st century, our niche models projected increases in cell numbers of 29% and 14% for Prochlorococcus and Synechococcus, respectively. The changes are geographically uneven but include an increase in area. Thus, our global niche models suggest that oceanic microbial communities will experience complex changes as a result of projected future climate conditions. Because of the high abundances and contributions to primary production of Prochlorococcus and Synechococcus, these changes may have large impacts on ocean ecosystems and biogeochemical cycles.",
+        "authors": [
+          "Pedro Flombaum",
+          "José L. Gallegos",
+          "Rodolfo A. Gordillo",
+          "José Rincón",
+          "Lina L. Zabala"
+        ],
+        "doi": "10.1073/pnas.1307701110",
+        "source": "Proceedings of the National Academy of Sciences",
+        "title": "Present and future global distributions of the marine Cyanobacteria Prochlorococcus and Synechococcus",
+        "work_id": "doi:10.1073/pnas.1307701110",
+        "year": 2013
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E035",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: PERSIANN-CDR: Daily Precipitation Climate Data Record from Multisatellite Observations for Hydrological and Climate Studies",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract A new retrospective satellite-based precipitation dataset is constructed as a climate data record for hydrological and climate studies. Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks–Climate Data Record (PERSIANN-CDR) provides daily and 0.25° rainfall estimates for the latitude band 60°S–60°N for the period of 1 January 1983 to 31 December 2012 (delayed present). PERSIANN-CDR is aimed at addressing the need for a consistent, long-term, high-resolution, and global precipitation dataset for studying the changes and trends in daily precipitation, especially extreme precipitation events, due to climate change and natural variability. PERSIANN-CDR is generated from the PERSIANN algorithm using GridSat-B1 infrared data. It is adjusted using the Global Precipitation Climatology Project (GPCP) monthly product to maintain consistency of the two datasets at 2.5° monthly scale throughout the entire record. Three case studies for testing the efficacy of the dataset against available observations and satellite products are reported. The verification study over Hurricane Katrina (2005) shows that PERSIANN-CDR has good agreement with the stage IV radar data, noting that PERSIANN-CDR has more complete spatial coverage than the radar data. In addition, the comparison of PERSIANN-CDR against gauge observations during the 1986 Sydney flood in Australia reaffirms the capability of PERSIANN-CDR to provide reasonably accurate rainfall estimates. Moreover, the probability density function (PDF) of PERSIANN-CDR over the contiguous United States exhibits good agreement with the PDFs of the Climate Prediction Center (CPC) gridded gauge data and the Tropical Rainfall Measuring Mission (TRMM) Multi-Satellite Precipitation Analysis (TMPA) product. The results indicate high potential for using PERSIANN-CDR for long-term hydroclimate studies in regional and global scales.",
+        "authors": [
+          "Hamed Ashouri",
+          "Kuolin Hsu"
+        ],
+        "doi": "10.1175/bams-d-13-00068.1",
+        "source": "Bulletin of the American Meteorological Society",
+        "title": "PERSIANN-CDR: Daily Precipitation Climate Data Record from Multisatellite Observations for Hydrological and Climate Studies",
+        "work_id": "doi:10.1175/bams-d-13-00068.1",
+        "year": 2014
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E036",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: New elevation data triple estimates of global vulnerability to sea-level rise and coastal flooding",
+      "unit": null,
+      "value": {
+        "abstract": "Most estimates of global mean sea-level rise this century fall below 2 m. This quantity is comparable to the positive vertical bias of the principle digital elevation model (DEM) used to assess global and national population exposures to extreme coastal water levels, NASA's SRTM. CoastalDEM is a new DEM utilizing neural networks to reduce SRTM error. Here we show - employing CoastalDEM-that 190 M people (150-250 M, 90% CI) currently occupy global land below projected high tide lines for 2100 under low carbon emissions, up from 110 M today, for a median increase of 80 M. These figures triple SRTM-based values. Under high emissions, CoastalDEM indicates up to 630 M people live on land below projected annual flood levels for 2100, and up to 340 M for mid-century, versus roughly 250 M at present. We estimate one billion people now occupy land less than 10 m above current high tide lines, including 250 M below 1 m.",
+        "authors": [
+          "Scott Kulp",
+          "Benjamin Strauss"
+        ],
+        "doi": "10.1038/s41467-019-12808-z",
+        "source": "Nature Communications",
+        "title": "New elevation data triple estimates of global vulnerability to sea-level rise and coastal flooding",
+        "work_id": "doi:10.1038/s41467-019-12808-z",
+        "year": 2019
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E037",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: GLC_FCS30: global land-cover product with fine classification system at 30 m using time-series Landsat imagery",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract. Over past decades, a lot of global land-cover products have been released; however, these still lack a global land-cover map with a fine classification system and spatial resolution simultaneously. In this study, a novel global 30 m land-cover classification with a fine classification system for the year 2015 (GLC_FCS30-2015) was produced by combining time series of Landsat imagery and high-quality training data from the GSPECLib (Global Spatial Temporal Spectra Library) on the Google Earth Engine computing platform. First, the global training data from the GSPECLib were developed by applying a series of rigorous filters to the CCI_LC (Climate Change Initiative Global Land Cover) land-cover and MCD43A4 NBAR products (MODIS Nadir Bidirectional Reflectance Distribution Function-Adjusted Reflectance). Secondly, a local adaptive random forest model was built for each 5∘×5∘ geographical tile by using the multi-temporal Landsat spectral and texture features and the corresponding training data, and the GLC_FCS30-2015 land-cover product containing 30 land-cover types was generated for each tile. Lastly, the GLC_FCS30-2015 was validated using three different validation systems (containing different land-cover details) using 44 043 validation samples. The validation results indicated that the GLC_FCS30-2015 achieved an overall accuracy of 82.5 % and a kappa coefficient of 0.784 for the level-0 validation system (9 basic land-cover types), an overall accuracy of 71.4 % and kappa coefficient of 0.686 for the UN-LCCS (United Nations Land Cover Classification System) level-1 system (16 LCCS land-cover types), and an overall accuracy of 68.7 % and kappa coefficient of 0.662 for the UN-LCCS level-2 system (24 fine land-cover types). The comparisons against other land-cover products (CCI_LC, MCD12Q1, FROM_GLC, and GlobeLand30) indicated that GLC_FCS30-2015 provides more spatial details than CCI_LC-2015 and MCD12Q1-2015 and a greater diversity of land-cover types than FROM_GLC-2015 and GlobeLand30-2010. They also showed that GLC_FCS30-2015 achieved the best overall accuracy of 82.5 % against FROM_GLC-2015 of 59.1 % and GlobeLand30-2010 of 75.9 %. Therefore, it is concluded that the GLC_FCS30-2015 product is the first global land-cover dataset that provides a fine classification system (containing 16 global LCCS land-cover types as well as 14 detailed and regional land-cover types) with high classification accuracy at 30 m. The GLC_FCS30-2015 global land-cover products produced in this paper are free access at https://doi.org/10.5281/zenodo.3986872 (Liu et al., 2020).",
+        "authors": [
+          "Xiao Zhang",
+          "Liangyun Liu",
+          "Xidong Chen"
+        ],
+        "doi": "10.5194/essd-13-2753-2021",
+        "source": "Earth system science data",
+        "title": "GLC_FCS30: global land-cover product with fine classification system at 30 m using time-series Landsat imagery",
+        "work_id": "doi:10.5194/essd-13-2753-2021",
+        "year": 2021
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E038",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe",
+      "unit": null,
+      "value": {
+        "abstract": "The study presents the preliminary results of two classification exercises assessing the capabilities of pre-operational (August 2015) Sentinel-2 (S2) data for mapping crop types and tree species. In the first case study, an S2 image was used to map six summer crop species in Lower Austria as well as winter crops/bare soil. Crop type maps are needed to account for crop-specific water use and for agricultural statistics. Crop type information is also useful to parametrize crop growth models for yield estimation, as well as for the retrieval of vegetation biophysical variables using radiative transfer models. The second case study aimed to map seven different deciduous and coniferous tree species in Germany. Detailed information about tree species distribution is important for forest management and to assess potential impacts of climate change. In our S2 data assessment, crop and tree species maps were produced at 10 m spatial resolution by combining the ten S2 spectral channels with 10 and 20 m pixel size. A supervised Random Forest classifier (RF) was deployed and trained with appropriate ground truth. In both case studies, S2 data confirmed its expected capabilities to produce reliable land cover maps. Cross-validated overall accuracies ranged between 65% (tree species) and 76% (crop types). The study confirmed the high value of the red-edge and shortwave infrared (SWIR) bands for vegetation mapping. Also, the blue band was important in both study sites. The S2-bands in the near infrared were amongst the least important channels. The object based image analysis (OBIA) and the classical pixel-based classification achieved comparable results, mainly for the cropland. As only single date acquisitions were available for this study, the full potential of S2 data could not be assessed. In the future, the two twin S2 satellites will offer global coverage every five days and therefore permit to concurrently exploit unprecedented spectral and temporal information with high spatial resolution.",
+        "authors": [
+          "Markus Immitzer",
+          "Francesco Vuolo",
+          "Clement Atzberger"
+        ],
+        "doi": "10.3390/rs8030166",
+        "source": "Remote Sensing",
+        "title": "First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe",
+        "work_id": "doi:10.3390/rs8030166",
+        "year": 2016
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E039",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Tackling Climate Change with Machine Learning",
+      "unit": null,
+      "value": {
+        "abstract": "Climate change is one of the greatest challenges facing humanity, and we, as machine learning experts, may wonder how we can help. Here we describe how machine learning can be a powerful tool in reducing greenhouse gas emissions and helping society adapt to a changing climate. From smart grids to disaster management, we identify high impact problems where existing gaps can be filled by machine learning, in collaboration with other fields. Our recommendations encompass exciting research questions as well as promising business opportunities. We call on the machine learning community to join the global effort against climate change.",
+        "authors": [
+          "David Rolnick",
+          "Lynn H. Kaack",
+          "Priya L. Donti"
+        ],
+        "doi": "10.1145/3485128",
+        "source": "OPUS 4 (Zuse Institute Berlin)",
+        "title": "Tackling Climate Change with Machine Learning",
+        "work_id": "doi:10.1145/3485128",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E040",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Sentinel-2 Data for Land Cover/Use Mapping: A Review",
+      "unit": null,
+      "value": {
+        "abstract": "The advancement in satellite remote sensing technology has revolutionised the approaches to monitoring the Earth’s surface. The development of the Copernicus Programme by the European Space Agency (ESA) and the European Union (EU) has contributed to the effective monitoring of the Earth’s surface by producing the Sentinel-2 multispectral products. Sentinel-2 satellites are the second constellation of the ESA Sentinel missions and carry onboard multispectral scanners. The primary objective of the Sentinel-2 mission is to provide high resolution satellite data for land cover/use monitoring, climate change and disaster monitoring, as well as complementing the other satellite missions such as Landsat. Since the launch of Sentinel-2 multispectral instruments in 2015, there have been many studies on land cover/use classification which use Sentinel-2 images. However, no review studies have been dedicated to the application of ESA Sentinel-2 land cover/use monitoring. Therefore, this review focuses on two aspects: (1) assessing the contribution of ESA Sentinel-2 to land cover/use classification, and (2) exploring the performance of Sentinel-2 data in different applications (e.g., forest, urban area and natural hazard monitoring). The present review shows that Sentinel-2 has a positive impact on land cover/use monitoring, specifically in monitoring of crop, forests, urban areas, and water resources. The contemporary high adoption and application of Sentinel-2 can be attributed to the higher spatial resolution (10 m) than other medium spatial resolution images, the high temporal resolution of 5 days and the availability of the red-edge bands with multiple applications. The ability to integrate Sentinel-2 data with other remotely sensed data, as part of data analysis, improves the overall accuracy (OA) when working with Sentinel-2 images. The free access policy drives the increasing use of Sentinel-2 data, especially in developing countries where financial resources for the acquisition of remotely sensed data are limited. The literature also shows that the use of Sentinel-2 data produces high accuracies (>80%) with machine-learning classifiers such as support vector machine (SVM) and Random forest (RF). However, other classifiers such as maximum likelihood analysis are also common. Although Sentinel-2 offers many opportunities for land cover/use classification, there are challenges which include mismatching with Landsat OLI-8 data, a lack of thermal bands, and the differences in spatial resolution among the bands of Sentinel-2. Sentinel-2 data show promise and have the potential to contribute significantly towards land cover/use monitoring.",
+        "authors": [
+          "Darius Phiri",
+          "Matamyo Simwanda",
+          "Serajis Salekin",
+          "Vincent R. Nyirenda",
+          "Yuji Murayama",
+          "Manjula Ranagalage"
+        ],
+        "doi": "10.3390/rs12142291",
+        "source": "Remote Sensing",
+        "title": "Sentinel-2 Data for Land Cover/Use Mapping: A Review",
+        "work_id": "doi:10.3390/rs12142291",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E041",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Implementation of artificial intelligence in agriculture for optimisation of irrigation and application of pesticides and herbicides",
+      "unit": null,
+      "value": {
+        "abstract": "Agriculture plays a significant role in the economic sector. The automation in agriculture is the main concern and the emerging subject across the world. The population is increasing tremendously and with this increase the demand of food and employment is also increasing. The traditional methods which were used by the farmers, were not sufficient enough to fulfill these requirements. Thus, new automated methods were introduced. These new methods satisfied the food requirements and also provided employment opportunities to billions of people. Artificial Intelligence in agriculture has brought an agriculture revolution. This technology has protected the crop yield from various factors like the climate changes, population growth, employment issues and the food security problems. This main concern of this paper is to audit the various applications of Artificial intelligence in agriculture such as for irrigation, weeding, spraying with the help of sensors and other means embedded in robots and drones. These technologies saves the excess use of water, pesticides, herbicides, maintains the fertility of the soil, also helps in the efficient use of man power and elevate the productivity and improve the quality. This paper surveys the work of many researchers to get a brief overview about the current implementation of automation in agriculture, the weeding systems through the robots and drones. The various soil water sensing methods are discussed along with two automated weeding techniques. The implementation of drones is discussed, the various methods used by drones for spraying and crop-monitoring is also discussed in this paper.",
+        "authors": [
+          "Tanha Talaviya",
+          "Dhara Shah",
+          "Nivedita Patel",
+          "Hiteshri Yagnik",
+          "Manan Shah"
+        ],
+        "doi": "10.1016/j.aiia.2020.04.002",
+        "source": "Artificial Intelligence in Agriculture",
+        "title": "Implementation of artificial intelligence in agriculture for optimisation of irrigation and application of pesticides and herbicides",
+        "work_id": "doi:10.1016/j.aiia.2020.04.002",
+        "year": 2020
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E042",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Emerging signals of declining forest resilience under climate change",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract Forest ecosystems depend on their capacity to withstand and recover from natural and anthropogenic perturbations (that is, their resilience) 1 . Experimental evidence of sudden increases in tree mortality is raising concerns about variation in forest resilience 2 , yet little is known about how it is evolving in response to climate change. Here we integrate satellite-based vegetation indices with machine learning to show how forest resilience, quantified in terms of critical slowing down indicators 3–5 , has changed during the period 2000–2020. We show that tropical, arid and temperate forests are experiencing a significant decline in resilience, probably related to increased water limitations and climate variability. By contrast, boreal forests show divergent local patterns with an average increasing trend in resilience, probably benefiting from warming and CO 2 fertilization, which may outweigh the adverse effects of climate change. These patterns emerge consistently in both managed and intact forests, corroborating the existence of common large-scale climate drivers. Reductions in resilience are statistically linked to abrupt declines in forest primary productivity, occurring in response to slow drifting towards a critical resilience threshold. Approximately 23% of intact undisturbed forests, corresponding to 3.32 Pg C of gross primary productivity, have already reached a critical threshold and are experiencing a further degradation in resilience. Together, these signals reveal a widespread decline in the capacity of forests to withstand perturbation that should be accounted for in the design of land-based mitigation and adaptation plans.",
+        "authors": [
+          "Giovanni Forzieri",
+          "Vasilis Dakos"
+        ],
+        "doi": "10.1038/s41586-022-04959-9",
+        "source": "Nature",
+        "title": "Emerging signals of declining forest resilience under climate change",
+        "work_id": "doi:10.1038/s41586-022-04959-9",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E043",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Machine Learning for Electrocatalyst and Photocatalyst Design and Discovery",
+      "unit": null,
+      "value": {
+        "abstract": "Electrocatalysts and photocatalysts are key to a sustainable future, generating clean fuels, reducing the impact of global warming, and providing solutions to environmental pollution. Improved processes for catalyst design and a better understanding of electro/photocatalytic processes are essential for improving catalyst effectiveness. Recent advances in data science and artificial intelligence have great potential to accelerate electrocatalysis and photocatalysis research, particularly the rapid exploration of large materials chemistry spaces through machine learning. Here a comprehensive introduction to, and critical review of, machine learning techniques used in electrocatalysis and photocatalysis research are provided. Sources of electro/photocatalyst data and current approaches to representing these materials by mathematical features are described, the most commonly used machine learning methods summarized, and the quality and utility of electro/photocatalyst models evaluated. Illustrations of how machine learning models are applied to novel electro/photocatalyst discovery and used to elucidate electrocatalytic or photocatalytic reaction mechanisms are provided. The review offers a guide for materials scientists on the selection of machine learning methods for electrocatalysis and photocatalysis research. The application of machine learning to catalysis science represents a paradigm shift in the way advanced, next-generation catalysts will be designed and synthesized.",
+        "authors": [
+          "Haoxin Mai",
+          "Tu C. Le",
+          "Dehong Chen",
+          "David A. Winkler",
+          "Rachel A. Caruso"
+        ],
+        "doi": "10.1021/acs.chemrev.2c00061",
+        "source": "Chemical Reviews",
+        "title": "Machine Learning for Electrocatalyst and Photocatalyst Design and Discovery",
+        "work_id": "doi:10.1021/acs.chemrev.2c00061",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E044",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Significant increase in natural disturbance impacts on European forests since 1950",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract Over the last decades, the natural disturbance is increasingly putting pressure on European forests. Shifts in disturbance regimes may compromise forest functioning and the continuous provisioning of ecosystem services to society, including their climate change mitigation potential. Although forests are central to many European policies, we lack the long‐term empirical data needed for thoroughly understanding disturbance dynamics, modeling them, and developing adaptive management strategies. Here, we present a unique database of >170,000 records of ground‐based natural disturbance observations in European forests from 1950 to 2019. Reported data confirm a significant increase in forest disturbance in 34 European countries, causing on an average of 43.8 million m 3 of disturbed timber volume per year over the 70‐year study period. This value is likely a conservative estimate due to under‐reporting, especially of small‐scale disturbances. We used machine learning techniques for assessing the magnitude of unreported disturbances, which are estimated to be between 8.6 and 18.3 million m 3 /year. In the last 20 years, disturbances on average accounted for 16% of the mean annual harvest in Europe. Wind was the most important disturbance agent over the study period (46% of total damage), followed by fire (24%) and bark beetles (17%). Bark beetle disturbance doubled its share of the total damage in the last 20 years. Forest disturbances can profoundly impact ecosystem services (e.g., climate change mitigation), affect regional forest resource provisioning and consequently disrupt long‐term management planning objectives and timber markets. We conclude that adaptation to changing disturbance regimes must be placed at the core of the European forest management and policy debate. Furthermore, a coherent and homogeneous monitoring system of natural disturbances is urgently needed in Europe, to better observe and respond to the ongoing changes in forest disturbance regimes.",
+        "authors": [
+          "Marco Patacca",
+          "Marcus Lindner",
+          "Manuel Esteban Lucas‐Borja",
+          "Thomas Cordonnier",
+          "Gal Fidej",
+          "Barry Gardiner"
+        ],
+        "doi": "10.1111/gcb.16531",
+        "source": "Global Change Biology",
+        "title": "Significant increase in natural disturbance impacts on European forests since 1950",
+        "work_id": "doi:10.1111/gcb.16531",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E045",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Widespread increasing vegetation sensitivity to soil moisture",
+      "unit": null,
+      "value": {
+        "abstract": "Global vegetation and associated ecosystem services critically depend on soil moisture availability which has decreased in many regions during the last three decades. While spatial patterns of vegetation sensitivity to global soil water have been recently investigated, long-term changes in vegetation sensitivity to soil water availability are still unclear. Here we assess global vegetation sensitivity to soil moisture during 1982-2017 by applying explainable machine learning with observation-based leaf area index (LAI) and hydro-climate anomaly data. We show that LAI sensitivity to soil moisture significantly increases in many semi-arid and arid regions. LAI sensitivity trends are associated with multiple hydro-climate and ecological variables, and strongest increasing trends occur in the most water-sensitive regions which additionally experience declining precipitation. State-of-the-art land surface models do not reproduce this increasing sensitivity as they misrepresent water-sensitive regions and sensitivity strength. Our sensitivity results imply an increasing ecosystem vulnerability to water availability which can lead to exacerbated reductions in vegetation carbon uptake under future intensified drought, consequently amplifying climate change.",
+        "authors": [
+          "Wantong Li",
+          "Mirco Migliavacca",
+          "Matthias Forkel",
+          "Jasper Denissen",
+          "Markus Reichstein"
+        ],
+        "doi": "10.1038/s41467-022-31667-9",
+        "source": "Nature Communications",
+        "title": "Widespread increasing vegetation sensitivity to soil moisture",
+        "work_id": "doi:10.1038/s41467-022-31667-9",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E046",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The fourth industrial revolution in the food industry—Part I: Industry 4.0 technologies",
+      "unit": null,
+      "value": {
+        "abstract": "Climate change, the growth in world population, high levels of food waste and food loss, and the risk of new disease or pandemic outbreaks are examples of the many challenges that threaten future food sustainability and the security of the planet and urgently need to be addressed. The fourth industrial revolution, or Industry 4.0, has been gaining momentum since 2015, being a significant driver for sustainable development and a successful catalyst to tackle critical global challenges. This review paper summarizes the most relevant food Industry 4.0 technologies including, among others, digital technologies (e.g., artificial intelligence, big data analytics, Internet of Things, and blockchain) and other technological advances (e.g., smart sensors, robotics, digital twins, and cyber-physical systems). Moreover, insights into the new food trends (such as 3D printed foods) that have emerged as a result of the Industry 4.0 technological revolution will also be discussed in Part II of this work. The Industry 4.0 technologies have significantly modified the food industry and led to substantial consequences for the environment, economics, and human health. Despite the importance of each of the technologies mentioned above, ground-breaking sustainable solutions could only emerge by combining many technologies simultaneously. The Food Industry 4.0 era has been characterized by new challenges, opportunities, and trends that have reshaped current strategies and prospects for food production and consumption patterns, paving the way for the move toward Industry 5.0.",
+        "authors": [
+          "Abdo Hassoun",
+          "Abderrahmane Aït‐Kaddour",
+          "Adnan M. Abu‐Mahfouz",
+          "Nikheel Bhojraj Rathod"
+        ],
+        "doi": "10.1080/10408398.2022.2034735",
+        "source": "Critical Reviews in Food Science and Nutrition",
+        "title": "The fourth industrial revolution in the food industry—Part I: Industry 4.0 technologies",
+        "work_id": "doi:10.1080/10408398.2022.2034735",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E047",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: A global map of local climate zones to support earth system modelling and urban-scale environmental science",
+      "unit": null,
+      "value": {
+        "abstract": "Abstract. There is a scientific consensus on the need for spatially detailed information on urban landscapes at a global scale. These data can support a range of environmental services, since cities are places of intense resource consumption and waste generation and of concentrated infrastructure and human settlement exposed to multiple hazards of natural and anthropogenic origin. In the face of climate change, urban data are also required to explore future urbanization pathways and urban design strategies in order to lock in long-term resilience and sustainability, protecting cities from future decisions that could undermine their adaptability and mitigation role. To serve this purpose, we present a 100 m-resolution global map of local climate zones (LCZs), a universal urban typology that can distinguish urban areas on a holistic basis, accounting for the typical combination of micro-scale land covers and associated physical properties. The global LCZ map, composed of 10 built and 7 natural land cover types, is generated by feeding an unprecedented number of labelled training areas and earth observation images into lightweight random forest models. Its quality is assessed using a bootstrap cross-validation alongside a thematic benchmark for 150 selected functional urban areas using independent global and open-source data on surface cover, surface imperviousness, building height, and anthropogenic heat. As each LCZ type is associated with generic numerical descriptions of key urban canopy parameters that regulate atmospheric responses to urbanization, the availability of this globally consistent and climate-relevant urban description is an important prerequisite for supporting model development and creating evidence-based climate-sensitive urban planning policies. This dataset can be downloaded from https://doi.org/10.5281/zenodo.6364594 (Demuzere et al., 2022a).",
+        "authors": [
+          "Matthias Demuzere",
+          "Jonas Kittner",
+          "Alberto Martilli",
+          "Gerald Mills",
+          "Christian Moede",
+          "Iain D. Stewart",
+          "Jasper van Vliet",
+          "Benjamin Bechtel"
+        ],
+        "doi": "10.5194/essd-14-3835-2022",
+        "source": "Earth system science data",
+        "title": "A global map of local climate zones to support earth system modelling and urban-scale environmental science",
+        "work_id": "doi:10.5194/essd-14-3835-2022",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E048",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Development of the GLASS 250-m leaf area index product (version 6) from MODIS data using the bidirectional LSTM deep learning model",
+      "unit": null,
+      "value": {
+        "abstract": "Leaf area index (LAI) is a terrestrial essential climate variable that is required in a variety of ecosystem and climate models. The Global LAnd Surface Satellite (GLASS) LAI product has been widely used, but its current version (V5) from Moderate Resolution Imaging Spectroradiometer (MODIS) data has several limitations, such as frequent temporal fluctuation, large data gaps, high dependence on the quality of surface reflectance, and low computational efficiency. To address these issues, this paper presents a deep learning model to generate a new version of the LAI product (V6) at 250-m resolution from MODIS data from 2000 onward. Unlike most existing algorithms that estimate one LAI value at one time for each pixel, this model estimates LAI for 2 years simultaneously. Three widely used LAI products (MODIS C6, GLASS V5, and PROBA-V V1) are used to generate global representative time-series LAI training samples using K-means clustering analysis and least difference criteria. We explore four machine learning models, the general regression neural network (GRNN), long short-term memory (LSTM), gated recurrent unit (GRU), and Bidirectional LSTM (Bi-LSTM), and identify Bi-LSTM as the best model for product generation. This new product is directly validated using 79 high-resolution LAI reference maps from three in situ observation networks. The results show that GLASS V6 LAI achieves higher accuracy, with a root mean square (RMSE) of 0.92 at 250 m and 0.86 at 500 m, while the RMSE is 0.98 for PROBA-V at 300 m, 1.08 for GLASS V5, and 0.95 for MODIS C6 both at 500 m. Spatial and temporal consistency analyses also demonstrate that the GLASS V6 LAI product is more spatiotemporally continuous and has higher quality in terms of presenting more realistic temporal LAI dynamics when the surface reflectance is absent for a long period owing to persistent cloud/aerosol contaminations. The results indicate that the new Bi-LSTM deep learning model runs significantly faster than the GLASS V5 algorithm, avoids the reconstruction of surface reflectance data, and is resistant to the noises (cloud and snow contamination) or missing values contained in surface reflectance than other methods, as the Bi-LSTM can effectively extract information across the entire time series of surface reflectance rather than a single time point. To our knowledge, this is the first global time-series LAI product at the 250-m spatial resolution that is freely available to the public (www.geodata.cn and www.glass.umd.edu).",
+        "authors": [
+          "Han Ma",
+          "Shunlin Liang"
+        ],
+        "doi": "10.1016/j.rse.2022.112985",
+        "source": "Remote Sensing of Environment",
+        "title": "Development of the GLASS 250-m leaf area index product (version 6) from MODIS data using the bidirectional LSTM deep learning model",
+        "work_id": "doi:10.1016/j.rse.2022.112985",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E049",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: The Carbon Footprint of Machine Learning Training Will Plateau, Then Shrink",
+      "unit": null,
+      "value": {
+        "abstract": "Machine learning (ML) workloads have rapidly grown, raising concerns about their carbon footprint. We show four best practices to reduce ML training energy and carbon dioxide emissions. If the whole ML field adopts best practices, we predict that by 2030, total carbon emissions from training will decline.",
+        "authors": [
+          "David S. Patterson",
+          "Joseph E. Gonzalez",
+          "Urs Hölzle",
+          "Quoc V. Le",
+          "Liang Chen",
+          "Lluís-Miquel Munguía",
+          "Daniel Rothchild"
+        ],
+        "doi": "10.1109/mc.2022.3148714",
+        "source": "Computer",
+        "title": "The Carbon Footprint of Machine Learning Training Will Plateau, Then Shrink",
+        "work_id": "doi:10.1109/mc.2022.3148714",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E050",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Machine Learning in Weather Prediction and Climate Analyses—Applications and Perspectives",
+      "unit": null,
+      "value": {
+        "abstract": "In this paper, we performed an analysis of the 500 most relevant scientific articles published since 2018, concerning machine learning methods in the field of climate and numerical weather prediction using the Google Scholar search engine. The most common topics of interest in the abstracts were identified, and some of them examined in detail: in numerical weather prediction research—photovoltaic and wind energy, atmospheric physics and processes; in climate research—parametrizations, extreme events, and climate change. With the created database, it was also possible to extract the most commonly examined meteorological fields (wind, precipitation, temperature, pressure, and radiation), methods (Deep Learning, Random Forest, Artificial Neural Networks, Support Vector Machine, and XGBoost), and countries (China, USA, Australia, India, and Germany) in these topics. Performing critical reviews of the literature, authors are trying to predict the future research direction of these fields, with the main conclusion being that machine learning methods will be a key feature in future weather forecasting.",
+        "authors": [
+          "Bogdan Bochenek",
+          "Zbigniew Ustrnul"
+        ],
+        "doi": "10.3390/atmos13020180",
+        "source": "Atmosphere",
+        "title": "Machine Learning in Weather Prediction and Climate Analyses—Applications and Perspectives",
+        "work_id": "doi:10.3390/atmos13020180",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "canonical/works.parquet",
+      "caveat": "An abstract cannot support claims that require full-text inspection.",
+      "claim_type": "work_content",
+      "evidence_id": "E051",
+      "method": "Source-supplied title and abstract; no full-text inference.",
+      "selector": {},
+      "statement": "Metadata and abstract for included work: Transfer learning for smart buildings: A critical review of algorithms, applications, and future perspectives",
+      "unit": null,
+      "value": {
+        "abstract": "Smart buildings play a crucial role toward decarbonizing society, as globally buildings emit about one-third of greenhouse gases. In the last few years, machine learning has achieved a notable momentum that, if properly harnessed, may unleash its potential for advanced analytics and control of smart buildings, enabling the technique to scale up for supporting the decarbonization of the building sector. In this perspective, transfer learning aims to improve the performance of a target learner exploiting knowledge in related environments. The present work provides a comprehensive overview of transfer learning applications in smart buildings, classifying and analyzing 77 papers according to their applications, algorithms, and adopted metrics. The study identified four main application areas of transfer learning: (1) building load prediction, (2) occupancy detection and activity recognition, (3) building dynamics modeling, and (4) energy systems control. Furthermore, the review highlighted the role of deep learning in transfer learning applications that has been used in more than half of the analyzed studies. The paper also discusses how to integrate transfer learning in a smart building’s ecosystem, identifying, for each application area, the research gaps and guidelines for future research directions.",
+        "authors": [
+          "Giuseppe Pinto",
+          "Zhe Wang",
+          "Abhishek Roy",
+          "Tianzhen Hong",
+          "Alfonso Capozzoli"
+        ],
+        "doi": "10.1016/j.adapen.2022.100084",
+        "source": "Advances in Applied Energy",
+        "title": "Transfer learning for smart buildings: A critical review of algorithms, applications, and future perspectives",
+        "work_id": "doi:10.1016/j.adapen.2022.100084",
+        "year": 2022
+      }
+    },
+    {
+      "artifact_path": "figures/annual_publications.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E052",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 1 (annual_publications) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "peak_documents": 2470,
+          "peak_year": 2022,
+          "years": [
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022
+          ]
+        },
+        "figure_name": "annual_publications",
+        "figure_number": 1
+      }
+    },
+    {
+      "artifact_path": "figures/top_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E053",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 2 (top_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Remote Sensing",
+          "top_value": 319
+        },
+        "figure_name": "top_sources",
+        "figure_number": 2
+      }
+    },
+    {
+      "artifact_path": "figures/top_authors.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E054",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 3 (top_authors) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Fengxian Yan",
+          "top_value": 275
+        },
+        "figure_name": "top_authors",
+        "figure_number": 3
+      }
+    },
+    {
+      "artifact_path": "figures/top_institutions.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E055",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 4 (top_institutions) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "Chinese Academy of Sciences",
+          "top_value": 366
+        },
+        "figure_name": "top_institutions",
+        "figure_number": 4
+      }
+    },
+    {
+      "artifact_path": "figures/document_types.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E056",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 5 (document_types) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed_categories": 1,
+          "total_documents": 7675
+        },
+        "figure_name": "document_types",
+        "figure_number": 5
+      }
+    },
+    {
+      "artifact_path": "figures/citation_distribution.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E057",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 6 (citation_distribution) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "display_cap_p98": 257.0,
+          "documents": 7675,
+          "maximum": 3369,
+          "mean": 44.94827361563518,
+          "median": 20.0,
+          "zero_cited": 911
+        },
+        "figure_name": "citation_distribution",
+        "figure_number": 6
+      }
+    },
+    {
+      "artifact_path": "figures/top_cited_documents.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E058",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 7 (top_cited_documents) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "displayed": 15,
+          "top_label": "The 30 m annual land cover dataset and its dynamics i…",
+          "top_value": 3369
+        },
+        "figure_name": "top_cited_documents",
+        "figure_number": 7
+      }
+    },
+    {
+      "artifact_path": "figures/bradford_sources.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E059",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 8 (bradford_sources) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "sources": 2341,
+          "zone_1_sources": 40
+        },
+        "figure_name": "bradford_sources",
+        "figure_number": 8
+      }
+    },
+    {
+      "artifact_path": "figures/keyword_trends.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E060",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 9 (keyword_trends) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "keywords": 15,
+          "years": [
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022
+          ]
+        },
+        "figure_name": "keyword_trends",
+        "figure_number": 9
+      }
+    },
+    {
+      "artifact_path": "figures/network_coauthorship.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E061",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 10 (network_coauthorship) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 870,
+          "candidate_nodes_with_links": 412,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 120,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 16,
+          "layout": "ForceAtlas2 LinLog; best of deterministic multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.054299935590334775,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.28336510777078533,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 3,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "overlap_ratio": 0.0,
+          "selected_seed": 3069.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.04013168020179551,
+          "within_between_distance_ratio": 0.0
+        },
+        "figure_name": "network_coauthorship",
+        "figure_number": 10
+      }
+    },
+    {
+      "artifact_path": "figures/network_institution_collaboration.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E062",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 11 (network_institution_collaboration) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 8146,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 205,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.15065302916052598,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.40011848766665015,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 9,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 1148.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.01979355046558157,
+          "within_between_distance_ratio": 0.36951184770537304
+        },
+        "figure_name": "network_institution_collaboration",
+        "figure_number": 11
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_cooccurrence.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E063",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 12 (network_keyword_cooccurrence) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 34217,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.08074531506645577,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.3110459264748991,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 29,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 3263.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.006529920372654644,
+          "within_between_distance_ratio": 0.1955436612335206
+        },
+        "figure_name": "network_keyword_cooccurrence",
+        "figure_number": 12
+      }
+    },
+    {
+      "artifact_path": "figures/network_cocitation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E064",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 13 (network_cocitation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 24819,
+          "candidate_nodes_with_links": 432,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 4,
+          "displayed_edges": 199,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.08073122061336975,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.2895636291456927,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 21,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 1342.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.010218656505589884,
+          "within_between_distance_ratio": 0.18678127550165077
+        },
+        "figure_name": "network_cocitation",
+        "figure_number": 13
+      }
+    },
+    {
+      "artifact_path": "figures/network_citation.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E065",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 14 (network_citation) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 134,
+          "candidate_nodes_with_links": 146,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 10,
+          "displayed_edges": 59,
+          "displayed_nodes": 60,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 146,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.11786781934150567,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 10,
+          "maximum_display_nodes": 60,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.22987854129772303,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 1,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 430.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "weighted_edge_length": 0.0022064617265050586,
+          "within_between_distance_ratio": 0.34722476850038153
+        },
+        "figure_name": "network_citation",
+        "figure_number": 14
+      }
+    },
+    {
+      "artifact_path": "figures/network_bibliographic_coupling.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E066",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 15 (network_bibliographic_coupling) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 3080,
+          "candidate_nodes_with_links": 412,
+          "color_encoding": "Louvain community",
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 8,
+          "displayed_edges": 193,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 412,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 12,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "layout_score": 0.10772199820223184,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "mean_edge_length": 0.32696975211784135,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 21,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "optimizer_converged": 1.0,
+          "optimizer_iterations": 500.0,
+          "overlap_ratio": 0.0,
+          "selected_seed": 3676.0,
+          "size_encoding": "winsorized square-root occurrence",
+          "sparse_construction": {
+            "candidate_documents": 432,
+            "construction": "candidate documents first, then sparse shared-reference self-join",
+            "matrix_materialized": false,
+            "maximum_reference_document_frequency": 87,
+            "minimum_references_per_document": 5,
+            "minimum_shared_references": 2
+          },
+          "weighted_edge_length": 0.004213052256443666,
+          "within_between_distance_ratio": 0.29053486113298704
+        },
+        "figure_name": "network_bibliographic_coupling",
+        "figure_number": 15
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_overlay.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E067",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 16 (network_keyword_overlay) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 34217,
+          "candidate_nodes_with_links": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "displayed_clusters": 7,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "label_overlap_area_px2": 64.74,
+          "label_overlap_pairs": 1,
+          "labels": 20,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 29,
+          "normalization": "association strength: c_ij / (w_i * w_j)",
+          "year_max": 2020.9078498293516,
+          "year_min": 2017.6144578313254
+        },
+        "figure_name": "network_keyword_overlay",
+        "figure_number": 16
+      }
+    },
+    {
+      "artifact_path": "figures/network_keyword_density.svg",
+      "caveat": null,
+      "claim_type": "figure",
+      "evidence_id": "E068",
+      "method": "Versioned figure skill with saved parameters and source tables.",
+      "selector": {},
+      "statement": "Figure 17 (network_keyword_density) was rendered from deterministic analysis outputs.",
+      "unit": null,
+      "value": {
+        "caption_facts": {
+          "candidate_edges": 34217,
+          "candidate_nodes_with_links": 432,
+          "community_detection": "Louvain on association strength; small clusters merged",
+          "counting_method": "full",
+          "density_grid": [
+            260,
+            190
+          ],
+          "density_weight": "log(1 + occurrence), gamma 0.62",
+          "displayed_clusters": 7,
+          "displayed_edges": 192,
+          "displayed_nodes": 72,
+          "edge_reduction": "maximum-spanning forest plus strongest edges per node",
+          "eligible_items": 432,
+          "gaussian_sigma": 8,
+          "label_overlap_area_px2": 0.0,
+          "label_overlap_pairs": 0,
+          "labels": 18,
+          "layout": "two-level VOS-style association-strength community layout; best of multiple starts",
+          "layout_iterations": 700,
+          "layout_restarts": 4,
+          "matrix_materialized": false,
+          "maximum_display_clusters": 8,
+          "maximum_display_nodes": 72,
+          "maximum_edges_per_node": 4,
+          "method": "candidate-first association-strength map",
+          "minimum_occurrence": 29,
+          "normalization": "association strength: c_ij / (w_i * w_j)"
+        },
+        "figure_name": "network_keyword_density",
+        "figure_number": 17
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E069",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+      "unit": null,
+      "value": {
+        "citation": "Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. Journal of Business Research, 133, 285–296.",
+        "doi": "10.1016/j.jbusres.2021.04.070",
+        "role": "bibliometric workflow and interpretation guideline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E070",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+      "unit": null,
+      "value": {
+        "citation": "Aria, M., & Cuccurullo, C. (2017). bibliometrix: An R-tool for comprehensive science mapping analysis. Journal of Informetrics, 11(4), 959–975.",
+        "doi": "10.1016/j.joi.2017.08.007",
+        "role": "science-mapping analysis baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E071",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+      "unit": null,
+      "value": {
+        "citation": "van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics, 84, 523–538.",
+        "doi": "10.1007/s11192-009-0146-3",
+        "role": "bibliometric network visualization baseline"
+      }
+    },
+    {
+      "artifact_path": "evidence/method_references.json",
+      "caveat": null,
+      "claim_type": "method_reference",
+      "evidence_id": "E072",
+      "method": "Curated and DOI-verified methodological reference.",
+      "selector": {},
+      "statement": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+      "unit": null,
+      "value": {
+        "citation": "Blondel, V. D., Guillaume, J.-L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment, 2008(10), P10008.",
+        "doi": "10.1088/1742-5468/2008/10/P10008",
+        "role": "Louvain community-detection method"
+      }
+    }
+  ],
+  "anonymous_candidate": "This extreme concentration may reflect genuine hyper-prolific output, but could also indicate name-disambiguation limitations in the source metadata; author-level findings should be interpreted with this uncertainty in mind.",
+  "allowed_evidence_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E022",
+    "E023",
+    "E024",
+    "E025",
+    "E026",
+    "E027",
+    "E028",
+    "E029",
+    "E030",
+    "E031",
+    "E032",
+    "E033",
+    "E034",
+    "E035",
+    "E036",
+    "E037",
+    "E038",
+    "E039",
+    "E040",
+    "E041",
+    "E042",
+    "E043",
+    "E044",
+    "E045",
+    "E046",
+    "E047",
+    "E048",
+    "E049",
+    "E050",
+    "E051",
+    "E052",
+    "E053",
+    "E054",
+    "E055",
+    "E056",
+    "E057",
+    "E058",
+    "E059",
+    "E060",
+    "E061",
+    "E062",
+    "E063",
+    "E064",
+    "E065",
+    "E066",
+    "E067",
+    "E068",
+    "E069",
+    "E070",
+    "E071",
+    "E072",
+    "doi:10.1016/j.adapen.2022.100084",
+    "doi:10.1016/j.aiia.2020.04.002",
+    "doi:10.1016/j.rse.2022.112985",
+    "doi:10.1021/acs.chemrev.2c00061",
+    "doi:10.1038/s41467-019-12808-z",
+    "doi:10.1038/s41467-022-31667-9",
+    "doi:10.1038/s41586-022-04959-9",
+    "doi:10.1039/d0cs01079k",
+    "doi:10.1073/pnas.1307701110",
+    "doi:10.1073/pnas.1706103114",
+    "doi:10.1080/10408398.2022.2034735",
+    "doi:10.1098/rsta.2020.0209",
+    "doi:10.1109/mc.2022.3148714",
+    "doi:10.1109/mgrs.2017.2762307",
+    "doi:10.1111/gcb.16531",
+    "doi:10.1145/3485128",
+    "doi:10.1175/bams-d-13-00068.1",
+    "doi:10.3390/atmos13020180",
+    "doi:10.3390/rs12142291",
+    "doi:10.3390/rs8030166",
+    "doi:10.5194/essd-13-2753-2021",
+    "doi:10.5194/essd-13-3907-2021",
+    "doi:10.5194/essd-14-3835-2022",
+    "openalex:W2782522152"
+  ],
+  "risk_notice": {
+    "stage": "report_finalization",
+    "issue_signature": "report_claim_grounding",
+    "severity": "high",
+    "detector_score": 0.65,
+    "message": "The system flagged the quoted report span for claim-grounding review. Assess and, if necessary, edit only that span against the visible evidence.",
+    "flagged_text": "This extreme concentration may reflect genuine hyper-prolific output, but could also indicate name-disambiguation limitations in the source metadata; author-level findings should be interpreted with this uncertainty in mind."
+  },
+  "permitted_interventions": [
+    "accept",
+    "reject",
+    "replace_span",
+    "delete_span",
+    "append_caveat"
+  ],
+  "human_proxy_constraints": [
+    "Use only the candidate, risk notice, and evidence visible in this packet.",
+    "Do not retrieve new evidence, invoke tools, rerun analysis, or rewrite the full artifact.",
+    "A revision must be one local edit of at most 500 characters.",
+    "Address only the risk identified in the notice; do not search for or alter unrelated issues.",
+    "Do not use model knowledge or model-scale synthesis; if visible evidence is insufficient, reject or append a caveat instead of inventing a correction."
+  ],
+  "content_sha256": "ef5aa7d7a401e8913565d74562fefb80b52d2f1df8dc7f0870276a5c36052d74"
+}

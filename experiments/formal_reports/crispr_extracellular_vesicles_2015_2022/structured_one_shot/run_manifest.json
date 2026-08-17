@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+  "condition": "structured_one_shot",
+  "evidence_sha256": "622525b5ef646192447355895e5fcac77e964a2d1a1ed911368f150aac26ee59",
+  "model": "deepseek-v4-pro",
+  "base_url": "https://api.deepseek.com",
+  "temperature": 0.1,
+  "seed": 42,
+  "max_tokens": 8000,
+  "report_language": "English",
+  "internal_review_policy": "Revision-only artifact. It must not be reused as an experimental evaluation.",
+  "external_evaluation_policy": "Use a separately instantiated external Judge with independent prompts and traces."
+}

@@ -1,0 +1,17 @@
+{
+  "packet_id": "FP67c1f54dcbbc0eccc3fb",
+  "decision": "revise",
+  "confidence": 0.98,
+  "reason": "The visible evidence supports the CAGR, non-monotonic annual counts, 2021 peak, and final-year caveat, but not the attribution to increasing global attention or the suggestion that incompleteness caused the peak. The replacement remains descriptive.",
+  "evidence_ids": [
+    "E005",
+    "E006",
+    "E007"
+  ],
+  "judge_id": "feedback",
+  "suggested_revision": {
+    "action": "replace_span",
+    "target_text": "The 17.57% CAGR between 1990 and 2021 [E006] indicates rapid expansion, consistent with increasing global attention to climate change. However, year-over-year changes were not monotonic [E007], and the endpoint CAGR does not establish a sustained exponential trend [E006 caveat]. The peak in 2021 [E005] may reflect both genuine growth and incomplete-year effects [E005 caveat].",
+    "replacement_text": "The endpoint CAGR from 1990 to 2021 is 17.57% [E006]. Annual counts increased overall but were not monotonic [E007], and the endpoint CAGR does not establish a sustained exponential trend [E006]. Annual output peaked in 2021 with 19,170 works; because 2021 is the final year, its count may be incomplete if retrieval occurred before year-end [E005]."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "packet_id": "EP4e621443998d862be083",
+  "sample_id": "plant_heat_drought_2008_2021:bibliographic_coupling:highest_occurrence:grounding",
+  "judge_id": "evaluation",
+  "rubric_version": "adaptive-evaluation-v1",
+  "canonical_evidence": {
+    "answer_contract": {
+      "label": "visible string"
+    },
+    "graph_evidence": {
+      "atom_ids": [
+        "bibliographic_coupling:fact:highest_occurrence",
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label",
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:occurrences"
+      ],
+      "entities": [
+        "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2",
+        "network:bibliographic_coupling"
+      ],
+      "paths": [],
+      "relationships": [
+        {
+          "atom_id": "bibliographic_coupling:fact:highest_occurrence",
+          "network": "bibliographic_coupling",
+          "object": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2",
+          "object_type": "entity",
+          "predicate": "highest_occurrence_node",
+          "subject": "network:bibliographic_coupling"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label",
+          "network": "bibliographic_coupling",
+          "object": "Drought and heat stress-…",
+          "object_type": "label",
+          "predicate": "display_label",
+          "subject": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2"
+        },
+        {
+          "atom_id": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:occurrences",
+          "network": "bibliographic_coupling",
+          "object": 379.0,
+          "object_type": "number",
+          "predicate": "occurrences",
+          "subject": "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2"
+        }
+      ],
+      "representation": "graph_subgraph",
+      "semantic_atom_sha256": "5c052f2acc97b32645e262004e2de893b13c9bad15123dc648e31a9481a9e017"
+    },
+    "question": "Which labeled node has the highest occurrence in the bibliographic_coupling network?"
+  },
+  "anonymous_candidate": "{\"abstain\":false,\"answer\":{\"label\":\"Drought and heat stress-…\"},\"explanation\":\"The context states that the node with DOI 10.1007/s00122-019-03331-2 has the highest occurrence in the bibliographic_coupling network, and its display label is 'Drought and heat stress-…'.\",\"item_id\":\"plant_heat_drought_2008_2021:bibliographic_coupling:highest_occurrence\"}",
+  "allowed_evidence_ids": [
+    "bibliographic_coupling:fact:highest_occurrence",
+    "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:label",
+    "bibliographic_coupling:node:doi:10.1007/s00122-019-03331-2:occurrences"
+  ],
+  "content_sha256": "e187c012d5244aa5c7d5098f6dd332037e888d577324cf368e6266b29f473756"
+}
