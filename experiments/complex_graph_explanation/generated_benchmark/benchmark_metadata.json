@@ -1,0 +1,24 @@
+{
+  "source_run": "runs/pilot-llm-bibliometrics",
+  "source_nodes": 154,
+  "source_edges": 1054,
+  "seed": 42,
+  "nodes_per_sample": 8,
+  "per_type": 6,
+  "sample_count": 24,
+  "task_counts": {
+    "path_trace": 6,
+    "cross_community_path": 6,
+    "bridge_node": 6,
+    "unsupported_edge": 6
+  },
+  "construction": {
+    "path_length_edges": [
+      3,
+      4
+    ],
+    "minimum_path_communities": 2,
+    "distractors": "neighbors of internal path nodes",
+    "subgraph_edges": "induced edges among selected nodes"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "benchmark": "generated_benchmark/benchmark.jsonl",
+  "model": "qwen3-vl-plus-2025-12-19",
+  "conditions": [
+    "vlm",
+    "vlm_flat_kg",
+    "vlm_graph_rag"
+  ],
+  "sample_count": 24,
+  "repeats": 1,
+  "temperature": 0.0,
+  "seed": 42
+}
