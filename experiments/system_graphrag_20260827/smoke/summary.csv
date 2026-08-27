@@ -1,0 +1,4 @@
+﻿mode,runs,successful_runs,failed_runs,run_completion_rate,reported_claims,verified_claims,claim_support_rate,mean_claim_support_rate,std_claim_support_rate,reported_edges,unsupported_edges,edge_hallucination_rate,reported_multi_hop_claims,valid_multi_hop_claims,path_validity_rate,mean_verified_complex_claims,std_verified_complex_claims,mean_abstention_rate,mean_reported_slot_coverage,mean_verified_slot_coverage,mean_duration_seconds,prompt_tokens,completion_tokens,total_tokens
+vlm,1,1,0,1.0,5,0,0.0,0.0,0.0,17,11,0.6471,2,0,0.0,0.0,0.0,0.0,1.0,0.0,32.745,4872,1283,6155
+flat_kg,1,1,0,1.0,5,2,0.4,0.4,0.0,10,5,0.5,2,1,0.5,2.0,0.0,0.0,1.0,0.4,38.2374,24231,1117,25348
+graph_rag,1,1,0,1.0,5,5,1.0,1.0,0.0,11,0,0.0,2,2,1.0,3.0,0.0,0.0,1.0,1.0,30.3983,11051,1164,12215

@@ -1,0 +1,1429 @@
+{
+  "figure_name": "network_keyword_cooccurrence",
+  "network_name": "keyword_cooccurrence",
+  "mode": "graph_rag",
+  "model": "qwen3-vl-plus-2025-12-19",
+  "status": "complete",
+  "overview": "关键词共现网络呈现6个结构化社区，其中Cluster 1（蓝色）以人工智能基础概念为核心，Cluster 2（橙色）聚焦新冠相关术语，Cluster 3（绿色）关联医学教育与生成式AI，Cluster 4（紫色）围绕文献计量方法，Cluster 5（红色）含数据库与软件工具，Cluster 6（青色）涉及调查与聊天机器人应用。",
+  "verified_claims": [
+    {
+      "type": "community_structure",
+      "statement": "Artificial intelligence（N5，社区1）、Machine learning（N43，社区1）、Large language models（N40，社区1）、ChatGPT（N12，社区1）同属社区1；已核验的社区内部共现边包括：Artificial intelligence（N5，社区1）—Machine learning（N43，社区1）（共现权重25）；Large language models（N40，社区1）—ChatGPT（N12，社区1）（共现权重16）。",
+      "focus_node": "",
+      "nodes": [
+        {
+          "alias": "N5",
+          "id": "Artificial intelligence",
+          "label": "Artificial intelligence",
+          "community": 1
+        },
+        {
+          "alias": "N43",
+          "id": "Machine learning",
+          "label": "Machine learning",
+          "community": 1
+        },
+        {
+          "alias": "N40",
+          "id": "Large language models",
+          "label": "Large language models",
+          "community": 1
+        },
+        {
+          "alias": "N12",
+          "id": "ChatGPT",
+          "label": "ChatGPT",
+          "community": 1
+        }
+      ],
+      "communities": {
+        "N5": 1,
+        "N43": 1,
+        "N40": 1,
+        "N12": 1
+      },
+      "path": [],
+      "evidence_edges": [
+        {
+          "source": "N5",
+          "target": "N43",
+          "weight": 25,
+          "association_strength": 0.006321112515802781,
+          "source_id": "Artificial intelligence",
+          "target_id": "Machine learning"
+        },
+        {
+          "source": "N40",
+          "target": "N12",
+          "weight": 16,
+          "association_strength": 0.007462686567164179,
+          "source_id": "Large language models",
+          "target_id": "ChatGPT"
+        }
+      ],
+      "claim_id": "GC001",
+      "model_statement": "在Cluster 1内部，'Artificial intelligence'（N5）与'Machine learning'（N43）存在共现连接，'Large language models'（N40）与'ChatGPT'（N12）存在共现连接。",
+      "verified": true
+    },
+    {
+      "type": "cross_community",
+      "statement": "显示子图中检测到以下跨社区共现边：Large language models（N40，社区1）—Medical education（N44，社区3）（共现权重8）。",
+      "focus_node": "",
+      "nodes": [
+        {
+          "alias": "N40",
+          "id": "Large language models",
+          "label": "Large language models",
+          "community": 1
+        },
+        {
+          "alias": "N44",
+          "id": "Medical education",
+          "label": "Medical education",
+          "community": 3
+        }
+      ],
+      "communities": {
+        "N40": 1,
+        "N44": 3
+      },
+      "path": [],
+      "evidence_edges": [
+        {
+          "source": "N40",
+          "target": "N44",
+          "weight": 8,
+          "association_strength": 0.009950248756218905,
+          "source_id": "Large language models",
+          "target_id": "Medical education"
+        }
+      ],
+      "claim_id": "GC002",
+      "model_statement": "'Large language models'（N40）与'Medical education'（N44）之间存在跨社区共现连接，连接Cluster 1与Cluster 3。",
+      "verified": true
+    },
+    {
+      "type": "multi_hop",
+      "statement": "显示子图中存在一条2跳共现路径：Clinical decision support（N15，社区3） → Ethics（N29，社区3） → Language（N39，社区4）；路径边权依次为[1, 1]。该路径只表示网络结构连通性，不表示时序迁移或因果关系。",
+      "focus_node": "",
+      "nodes": [
+        {
+          "alias": "N15",
+          "id": "Clinical decision support",
+          "label": "Clinical decision support",
+          "community": 3
+        },
+        {
+          "alias": "N29",
+          "id": "Ethics",
+          "label": "Ethics",
+          "community": 3
+        },
+        {
+          "alias": "N39",
+          "id": "Language",
+          "label": "Language",
+          "community": 4
+        }
+      ],
+      "communities": {
+        "N15": 3,
+        "N29": 3,
+        "N39": 4
+      },
+      "path": [
+        {
+          "alias": "N15",
+          "id": "Clinical decision support",
+          "label": "Clinical decision support"
+        },
+        {
+          "alias": "N29",
+          "id": "Ethics",
+          "label": "Ethics"
+        },
+        {
+          "alias": "N39",
+          "id": "Language",
+          "label": "Language"
+        }
+      ],
+      "evidence_edges": [
+        {
+          "source": "N15",
+          "target": "N29",
+          "weight": 1,
+          "association_strength": 0.08333333333333333,
+          "source_id": "Clinical decision support",
+          "target_id": "Ethics"
+        },
+        {
+          "source": "N39",
+          "target": "N29",
+          "weight": 1,
+          "association_strength": 0.06666666666666667,
+          "source_id": "Language",
+          "target_id": "Ethics"
+        }
+      ],
+      "claim_id": "GC003",
+      "model_statement": "'Clinical decision support'（N15）与'Language'（N39）通过'Ethics'（N29）形成三节点共现路径：N15–N29–N39，跨越Cluster 3与Cluster 4。",
+      "verified": true
+    },
+    {
+      "type": "multi_hop",
+      "statement": "显示子图中存在一条2跳共现路径：Pandemics（N53，社区2） → AI（N1，社区3） → Retrieval-augmented generation（N66，社区5）；路径边权依次为[1, 1]。该路径只表示网络结构连通性，不表示时序迁移或因果关系。",
+      "focus_node": "",
+      "nodes": [
+        {
+          "alias": "N53",
+          "id": "Pandemics",
+          "label": "Pandemics",
+          "community": 2
+        },
+        {
+          "alias": "N1",
+          "id": "AI",
+          "label": "AI",
+          "community": 3
+        },
+        {
+          "alias": "N66",
+          "id": "Retrieval-augmented generation",
+          "label": "Retrieval-augmented generation",
+          "community": 5
+        }
+      ],
+      "communities": {
+        "N53": 2,
+        "N1": 3,
+        "N66": 5
+      },
+      "path": [
+        {
+          "alias": "N53",
+          "id": "Pandemics",
+          "label": "Pandemics"
+        },
+        {
+          "alias": "N1",
+          "id": "AI",
+          "label": "AI"
+        },
+        {
+          "alias": "N66",
+          "id": "Retrieval-augmented generation",
+          "label": "Retrieval-augmented generation"
+        }
+      ],
+      "evidence_edges": [
+        {
+          "source": "N1",
+          "target": "N53",
+          "weight": 1,
+          "association_strength": 0.041666666666666664,
+          "source_id": "AI",
+          "target_id": "Pandemics"
+        },
+        {
+          "source": "N1",
+          "target": "N66",
+          "weight": 1,
+          "association_strength": 0.041666666666666664,
+          "source_id": "AI",
+          "target_id": "Retrieval-augmented generation"
+        }
+      ],
+      "claim_id": "GC004",
+      "model_statement": "'Pandemics'（N53）与'Retrieval-augmented generation'（N66）通过'AI'（N1）形成三节点共现路径：N53–N1–N66，跨越Cluster 2、Cluster 3与Cluster 5。",
+      "verified": true
+    },
+    {
+      "type": "hub",
+      "statement": "Large language models（N40，社区1）是显示子图中的高连接节点，其度为105、加权度为272.0。",
+      "focus_node": "N40",
+      "nodes": [
+        {
+          "alias": "N40",
+          "id": "Large language models",
+          "label": "Large language models",
+          "community": 1
+        },
+        {
+          "alias": "N12",
+          "id": "ChatGPT",
+          "label": "ChatGPT",
+          "community": 1
+        },
+        {
+          "alias": "N44",
+          "id": "Medical education",
+          "label": "Medical education",
+          "community": 3
+        },
+        {
+          "alias": "N30",
+          "id": "Evidence synthesis",
+          "label": "Evidence synthesis",
+          "community": 1
+        },
+        {
+          "alias": "N51",
+          "id": "Neuroimaging",
+          "label": "Neuroimaging",
+          "community": 1
+        }
+      ],
+      "communities": {
+        "N12": 1,
+        "N44": 3,
+        "N30": 1,
+        "N51": 1,
+        "N40": 1
+      },
+      "path": [],
+      "evidence_edges": [
+        {
+          "source": "N40",
+          "target": "N12",
+          "weight": 16,
+          "association_strength": 0.007462686567164179,
+          "source_id": "Large language models",
+          "target_id": "ChatGPT"
+        },
+        {
+          "source": "N40",
+          "target": "N44",
+          "weight": 8,
+          "association_strength": 0.009950248756218905,
+          "source_id": "Large language models",
+          "target_id": "Medical education"
+        },
+        {
+          "source": "N40",
+          "target": "N30",
+          "weight": 3,
+          "association_strength": 0.014925373134328358,
+          "source_id": "Large language models",
+          "target_id": "Evidence synthesis"
+        },
+        {
+          "source": "N40",
+          "target": "N51",
+          "weight": 3,
+          "association_strength": 0.014925373134328358,
+          "source_id": "Large language models",
+          "target_id": "Neuroimaging"
+        }
+      ],
+      "claim_id": "GC005",
+      "normalizations": [
+        "focus_node_added_to_nodes",
+        "focus_node_community_added"
+      ],
+      "model_statement": "'Large language models'（N40）作为中心节点，与'ChatGPT'（N12）、'Medical education'（N44）、'Bibliometric analysis'（N30）及'Computer vision'（N51）存在共现连接。",
+      "verified": true
+    }
+  ],
+  "rejected_claims": [],
+  "caveats": [
+    "所有声明仅基于图中显式共现边，不推断语义关系或因果方向；",
+    "多跳路径仅使用验证的evidence_edges，未包含间接推测边；",
+    "hub声明仅依据incident_edges列表，未考虑全局拓扑割点性质。"
+  ],
+  "verification": {
+    "reported_claims": 5,
+    "verified_claims": 5,
+    "rejected_claims": 0,
+    "claim_support_rate": 1.0
+  },
+  "metrics": {
+    "requested_slots": 5,
+    "reported_abstentions": 0,
+    "abstention_rate": 0.0,
+    "reported_claims": 5,
+    "verified_claims": 5,
+    "claim_support_rate": 1.0,
+    "reported_edges": 11,
+    "supported_edges": 11,
+    "unsupported_edges": 0,
+    "edge_hallucination_rate": 0.0,
+    "unsupported_edge_claims": 0,
+    "reported_multi_hop_claims": 2,
+    "valid_multi_hop_claims": 2,
+    "path_validity_rate": 1.0,
+    "verified_complex_claims": 3,
+    "reported_slot_coverage": 1.0,
+    "verified_slot_coverage": 1.0,
+    "reported_claims_by_type": {
+      "bridge": 0,
+      "community_structure": 1,
+      "cross_community": 1,
+      "hub": 1,
+      "multi_hop": 2
+    },
+    "verified_claims_by_type": {
+      "bridge": 0,
+      "community_structure": 1,
+      "cross_community": 1,
+      "hub": 1,
+      "multi_hop": 2
+    }
+  },
+  "retrieval": {
+    "retrieval_method": "salience + community anchors + verified multi-hop paths",
+    "salient_nodes": [
+      "N53",
+      "N15",
+      "N34",
+      "N39",
+      "N26",
+      "N62",
+      "N66",
+      "N73",
+      "N9",
+      "N65",
+      "N75",
+      "N22"
+    ],
+    "community_representatives": {
+      "C1": [
+        "N34",
+        "N62",
+        "N65"
+      ],
+      "C2": [
+        "N53",
+        "N26",
+        "N2"
+      ],
+      "C3": [
+        "N15",
+        "N28",
+        "N56"
+      ],
+      "C4": [
+        "N39",
+        "N57",
+        "N72"
+      ],
+      "C5": [
+        "N66",
+        "N9",
+        "N22"
+      ],
+      "C6": [
+        "N73",
+        "N47",
+        "N63"
+      ]
+    },
+    "community_internal_edges": {
+      "C1": [
+        {
+          "source": "N5",
+          "target": "N43",
+          "weight": 25,
+          "source_community": 1,
+          "target_community": 1
+        },
+        {
+          "source": "N40",
+          "target": "N12",
+          "weight": 16,
+          "source_community": 1,
+          "target_community": 1
+        },
+        {
+          "source": "N43",
+          "target": "N23",
+          "weight": 11,
+          "source_community": 1,
+          "target_community": 1
+        },
+        {
+          "source": "N40",
+          "target": "N30",
+          "weight": 3,
+          "source_community": 1,
+          "target_community": 1
+        }
+      ],
+      "C2": [
+        {
+          "source": "N19",
+          "target": "N67",
+          "weight": 6,
+          "source_community": 2,
+          "target_community": 2
+        },
+        {
+          "source": "N19",
+          "target": "N25",
+          "weight": 3,
+          "source_community": 2,
+          "target_community": 2
+        },
+        {
+          "source": "N49",
+          "target": "N54",
+          "weight": 3,
+          "source_community": 2,
+          "target_community": 2
+        },
+        {
+          "source": "N67",
+          "target": "N25",
+          "weight": 3,
+          "source_community": 2,
+          "target_community": 2
+        }
+      ],
+      "C3": [
+        {
+          "source": "N36",
+          "target": "N44",
+          "weight": 6,
+          "source_community": 3,
+          "target_community": 3
+        },
+        {
+          "source": "N44",
+          "target": "N27",
+          "weight": 5,
+          "source_community": 3,
+          "target_community": 3
+        },
+        {
+          "source": "N44",
+          "target": "N1",
+          "weight": 4,
+          "source_community": 3,
+          "target_community": 3
+        },
+        {
+          "source": "N36",
+          "target": "N27",
+          "weight": 3,
+          "source_community": 3,
+          "target_community": 3
+        }
+      ],
+      "C4": [
+        {
+          "source": "N8",
+          "target": "N10",
+          "weight": 7,
+          "source_community": 4,
+          "target_community": 4
+        },
+        {
+          "source": "N8",
+          "target": "N14",
+          "weight": 7,
+          "source_community": 4,
+          "target_community": 4
+        },
+        {
+          "source": "N14",
+          "target": "N79",
+          "weight": 4,
+          "source_community": 4,
+          "target_community": 4
+        },
+        {
+          "source": "N10",
+          "target": "N46",
+          "weight": 2,
+          "source_community": 4,
+          "target_community": 4
+        }
+      ],
+      "C5": [
+        {
+          "source": "N20",
+          "target": "N38",
+          "weight": 2,
+          "source_community": 5,
+          "target_community": 5
+        },
+        {
+          "source": "N22",
+          "target": "N20",
+          "weight": 1,
+          "source_community": 5,
+          "target_community": 5
+        },
+        {
+          "source": "N22",
+          "target": "N38",
+          "weight": 1,
+          "source_community": 5,
+          "target_community": 5
+        },
+        {
+          "source": "N22",
+          "target": "N66",
+          "weight": 1,
+          "source_community": 5,
+          "target_community": 5
+        }
+      ],
+      "C6": [
+        {
+          "source": "N21",
+          "target": "N73",
+          "weight": 2,
+          "source_community": 6,
+          "target_community": 6
+        },
+        {
+          "source": "N73",
+          "target": "N11",
+          "weight": 2,
+          "source_community": 6,
+          "target_community": 6
+        },
+        {
+          "source": "N11",
+          "target": "N47",
+          "weight": 1,
+          "source_community": 6,
+          "target_community": 6
+        },
+        {
+          "source": "N21",
+          "target": "N11",
+          "weight": 1,
+          "source_community": 6,
+          "target_community": 6
+        }
+      ]
+    },
+    "cross_community_edges": [
+      {
+        "source": "N40",
+        "target": "N44",
+        "weight": 8,
+        "source_community": 1,
+        "target_community": 3
+      },
+      {
+        "source": "N8",
+        "target": "N44",
+        "weight": 7,
+        "source_community": 4,
+        "target_community": 3
+      },
+      {
+        "source": "N8",
+        "target": "N27",
+        "weight": 6,
+        "source_community": 4,
+        "target_community": 3
+      },
+      {
+        "source": "N8",
+        "target": "N54",
+        "weight": 6,
+        "source_community": 4,
+        "target_community": 2
+      },
+      {
+        "source": "N12",
+        "target": "N6",
+        "weight": 4,
+        "source_community": 1,
+        "target_community": 4
+      },
+      {
+        "source": "N23",
+        "target": "N19",
+        "weight": 3,
+        "source_community": 1,
+        "target_community": 2
+      },
+      {
+        "source": "N23",
+        "target": "N67",
+        "weight": 3,
+        "source_community": 1,
+        "target_community": 2
+      },
+      {
+        "source": "N54",
+        "target": "N59",
+        "weight": 3,
+        "source_community": 2,
+        "target_community": 6
+      },
+      {
+        "source": "N12",
+        "target": "N24",
+        "weight": 2,
+        "source_community": 1,
+        "target_community": 6
+      },
+      {
+        "source": "N25",
+        "target": "N55",
+        "weight": 2,
+        "source_community": 2,
+        "target_community": 1
+      },
+      {
+        "source": "N36",
+        "target": "N80",
+        "weight": 2,
+        "source_community": 3,
+        "target_community": 6
+      },
+      {
+        "source": "N43",
+        "target": "N29",
+        "weight": 2,
+        "source_community": 1,
+        "target_community": 3
+      }
+    ],
+    "multi_hop_paths": [
+      {
+        "path_id": "P1",
+        "nodes": [
+          "N15",
+          "N29",
+          "N39"
+        ],
+        "communities": {
+          "N15": 3,
+          "N29": 3,
+          "N39": 4
+        },
+        "path": [
+          "N15",
+          "N29",
+          "N39"
+        ],
+        "evidence_edges": [
+          [
+            "N15",
+            "N29"
+          ],
+          [
+            "N29",
+            "N39"
+          ]
+        ]
+      },
+      {
+        "path_id": "P2",
+        "nodes": [
+          "N34",
+          "N29",
+          "N15"
+        ],
+        "communities": {
+          "N34": 1,
+          "N29": 3,
+          "N15": 3
+        },
+        "path": [
+          "N34",
+          "N29",
+          "N15"
+        ],
+        "evidence_edges": [
+          [
+            "N34",
+            "N29"
+          ],
+          [
+            "N29",
+            "N15"
+          ]
+        ]
+      },
+      {
+        "path_id": "P3",
+        "nodes": [
+          "N53",
+          "N1",
+          "N66"
+        ],
+        "communities": {
+          "N53": 2,
+          "N1": 3,
+          "N66": 5
+        },
+        "path": [
+          "N53",
+          "N1",
+          "N66"
+        ],
+        "evidence_edges": [
+          [
+            "N53",
+            "N1"
+          ],
+          [
+            "N1",
+            "N66"
+          ]
+        ]
+      },
+      {
+        "path_id": "P4",
+        "nodes": [
+          "N53",
+          "N25",
+          "N73"
+        ],
+        "communities": {
+          "N53": 2,
+          "N25": 2,
+          "N73": 6
+        },
+        "path": [
+          "N53",
+          "N25",
+          "N73"
+        ],
+        "evidence_edges": [
+          [
+            "N53",
+            "N25"
+          ],
+          [
+            "N25",
+            "N73"
+          ]
+        ]
+      },
+      {
+        "path_id": "P5",
+        "nodes": [
+          "N15",
+          "N38",
+          "N22",
+          "N66"
+        ],
+        "communities": {
+          "N15": 3,
+          "N38": 5,
+          "N22": 5,
+          "N66": 5
+        },
+        "path": [
+          "N15",
+          "N38",
+          "N22",
+          "N66"
+        ],
+        "evidence_edges": [
+          [
+            "N15",
+            "N38"
+          ],
+          [
+            "N38",
+            "N22"
+          ],
+          [
+            "N22",
+            "N66"
+          ]
+        ]
+      },
+      {
+        "path_id": "P6",
+        "nodes": [
+          "N34",
+          "N44",
+          "N1",
+          "N53"
+        ],
+        "communities": {
+          "N34": 1,
+          "N44": 3,
+          "N1": 3,
+          "N53": 2
+        },
+        "path": [
+          "N34",
+          "N44",
+          "N1",
+          "N53"
+        ],
+        "evidence_edges": [
+          [
+            "N34",
+            "N44"
+          ],
+          [
+            "N44",
+            "N1"
+          ],
+          [
+            "N1",
+            "N53"
+          ]
+        ]
+      },
+      {
+        "path_id": "P7",
+        "nodes": [
+          "N34",
+          "N44",
+          "N1",
+          "N66"
+        ],
+        "communities": {
+          "N34": 1,
+          "N44": 3,
+          "N1": 3,
+          "N66": 5
+        },
+        "path": [
+          "N34",
+          "N44",
+          "N1",
+          "N66"
+        ],
+        "evidence_edges": [
+          [
+            "N34",
+            "N44"
+          ],
+          [
+            "N44",
+            "N1"
+          ],
+          [
+            "N1",
+            "N66"
+          ]
+        ]
+      },
+      {
+        "path_id": "P8",
+        "nodes": [
+          "N39",
+          "N60",
+          "N70",
+          "N66"
+        ],
+        "communities": {
+          "N39": 4,
+          "N60": 5,
+          "N70": 5,
+          "N66": 5
+        },
+        "path": [
+          "N39",
+          "N60",
+          "N70",
+          "N66"
+        ],
+        "evidence_edges": [
+          [
+            "N39",
+            "N60"
+          ],
+          [
+            "N60",
+            "N70"
+          ],
+          [
+            "N70",
+            "N66"
+          ]
+        ]
+      }
+    ],
+    "hub_candidates": [
+      {
+        "node": "N5",
+        "degree": 123,
+        "weighted_degree": 408.0,
+        "incident_edges": [
+          {
+            "source": "N5",
+            "target": "N43",
+            "weight": 25,
+            "source_community": 1,
+            "target_community": 1
+          }
+        ]
+      },
+      {
+        "node": "N40",
+        "degree": 105,
+        "weighted_degree": 272.0,
+        "incident_edges": [
+          {
+            "source": "N40",
+            "target": "N12",
+            "weight": 16,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N40",
+            "target": "N44",
+            "weight": 8,
+            "source_community": 1,
+            "target_community": 3
+          },
+          {
+            "source": "N40",
+            "target": "N30",
+            "weight": 3,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N40",
+            "target": "N51",
+            "weight": 3,
+            "source_community": 1,
+            "target_community": 1
+          }
+        ]
+      },
+      {
+        "node": "N8",
+        "degree": 79,
+        "weighted_degree": 216.0,
+        "incident_edges": [
+          {
+            "source": "N8",
+            "target": "N10",
+            "weight": 7,
+            "source_community": 4,
+            "target_community": 4
+          },
+          {
+            "source": "N8",
+            "target": "N14",
+            "weight": 7,
+            "source_community": 4,
+            "target_community": 4
+          },
+          {
+            "source": "N8",
+            "target": "N44",
+            "weight": 7,
+            "source_community": 4,
+            "target_community": 3
+          },
+          {
+            "source": "N8",
+            "target": "N27",
+            "weight": 6,
+            "source_community": 4,
+            "target_community": 3
+          },
+          {
+            "source": "N8",
+            "target": "N54",
+            "weight": 6,
+            "source_community": 4,
+            "target_community": 2
+          },
+          {
+            "source": "N8",
+            "target": "N2",
+            "weight": 2,
+            "source_community": 4,
+            "target_community": 2
+          }
+        ]
+      },
+      {
+        "node": "N43",
+        "degree": 57,
+        "weighted_degree": 136.0,
+        "incident_edges": [
+          {
+            "source": "N43",
+            "target": "N5",
+            "weight": 25,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N43",
+            "target": "N23",
+            "weight": 11,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N43",
+            "target": "N29",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 3
+          },
+          {
+            "source": "N43",
+            "target": "N32",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N43",
+            "target": "N55",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N43",
+            "target": "N61",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 1
+          }
+        ]
+      },
+      {
+        "node": "N12",
+        "degree": 60,
+        "weighted_degree": 130.0,
+        "incident_edges": [
+          {
+            "source": "N12",
+            "target": "N40",
+            "weight": 16,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N12",
+            "target": "N6",
+            "weight": 4,
+            "source_community": 1,
+            "target_community": 4
+          },
+          {
+            "source": "N12",
+            "target": "N24",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 6
+          },
+          {
+            "source": "N12",
+            "target": "N45",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 1
+          }
+        ]
+      },
+      {
+        "node": "N7",
+        "degree": 57,
+        "weighted_degree": 125.0,
+        "incident_edges": [
+          {
+            "source": "N7",
+            "target": "N18",
+            "weight": 3,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N7",
+            "target": "N65",
+            "weight": 3,
+            "source_community": 1,
+            "target_community": 1
+          }
+        ]
+      },
+      {
+        "node": "N36",
+        "degree": 54,
+        "weighted_degree": 106.0,
+        "incident_edges": [
+          {
+            "source": "N36",
+            "target": "N44",
+            "weight": 6,
+            "source_community": 3,
+            "target_community": 3
+          },
+          {
+            "source": "N36",
+            "target": "N27",
+            "weight": 3,
+            "source_community": 3,
+            "target_community": 3
+          },
+          {
+            "source": "N36",
+            "target": "N15",
+            "weight": 2,
+            "source_community": 3,
+            "target_community": 3
+          },
+          {
+            "source": "N36",
+            "target": "N28",
+            "weight": 2,
+            "source_community": 3,
+            "target_community": 3
+          },
+          {
+            "source": "N36",
+            "target": "N29",
+            "weight": 2,
+            "source_community": 3,
+            "target_community": 3
+          },
+          {
+            "source": "N36",
+            "target": "N56",
+            "weight": 2,
+            "source_community": 3,
+            "target_community": 3
+          }
+        ]
+      },
+      {
+        "node": "N23",
+        "degree": 35,
+        "weighted_degree": 79.0,
+        "incident_edges": [
+          {
+            "source": "N23",
+            "target": "N43",
+            "weight": 11,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N23",
+            "target": "N19",
+            "weight": 3,
+            "source_community": 1,
+            "target_community": 2
+          },
+          {
+            "source": "N23",
+            "target": "N67",
+            "weight": 3,
+            "source_community": 1,
+            "target_community": 2
+          },
+          {
+            "source": "N23",
+            "target": "N55",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 1
+          }
+        ]
+      }
+    ],
+    "articulation_candidates": [
+      "N9",
+      "N10",
+      "N6",
+      "N43"
+    ],
+    "articulation_evidence": [
+      {
+        "node": "N9",
+        "incident_edges": [
+          {
+            "source": "N9",
+            "target": "N2",
+            "weight": 1,
+            "source_community": 5,
+            "target_community": 2
+          },
+          {
+            "source": "N9",
+            "target": "N22",
+            "weight": 1,
+            "source_community": 5,
+            "target_community": 5
+          },
+          {
+            "source": "N9",
+            "target": "N3",
+            "weight": 1,
+            "source_community": 5,
+            "target_community": 5
+          },
+          {
+            "source": "N9",
+            "target": "N66",
+            "weight": 1,
+            "source_community": 5,
+            "target_community": 5
+          },
+          {
+            "source": "N9",
+            "target": "N70",
+            "weight": 1,
+            "source_community": 5,
+            "target_community": 5
+          }
+        ]
+      },
+      {
+        "node": "N10",
+        "incident_edges": [
+          {
+            "source": "N10",
+            "target": "N8",
+            "weight": 7,
+            "source_community": 4,
+            "target_community": 4
+          },
+          {
+            "source": "N10",
+            "target": "N46",
+            "weight": 2,
+            "source_community": 4,
+            "target_community": 4
+          },
+          {
+            "source": "N10",
+            "target": "N78",
+            "weight": 2,
+            "source_community": 4,
+            "target_community": 4
+          },
+          {
+            "source": "N10",
+            "target": "N69",
+            "weight": 1,
+            "source_community": 4,
+            "target_community": 5
+          },
+          {
+            "source": "N10",
+            "target": "N72",
+            "weight": 1,
+            "source_community": 4,
+            "target_community": 4
+          }
+        ]
+      },
+      {
+        "node": "N6",
+        "incident_edges": [
+          {
+            "source": "N6",
+            "target": "N12",
+            "weight": 4,
+            "source_community": 4,
+            "target_community": 1
+          },
+          {
+            "source": "N6",
+            "target": "N14",
+            "weight": 2,
+            "source_community": 4,
+            "target_community": 4
+          },
+          {
+            "source": "N6",
+            "target": "N27",
+            "weight": 2,
+            "source_community": 4,
+            "target_community": 3
+          },
+          {
+            "source": "N6",
+            "target": "N79",
+            "weight": 2,
+            "source_community": 4,
+            "target_community": 4
+          },
+          {
+            "source": "N6",
+            "target": "N37",
+            "weight": 1,
+            "source_community": 4,
+            "target_community": 4
+          },
+          {
+            "source": "N6",
+            "target": "N4",
+            "weight": 1,
+            "source_community": 4,
+            "target_community": 2
+          }
+        ]
+      },
+      {
+        "node": "N43",
+        "incident_edges": [
+          {
+            "source": "N43",
+            "target": "N5",
+            "weight": 25,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N43",
+            "target": "N23",
+            "weight": 11,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N43",
+            "target": "N29",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 3
+          },
+          {
+            "source": "N43",
+            "target": "N32",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N43",
+            "target": "N55",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 1
+          },
+          {
+            "source": "N43",
+            "target": "N61",
+            "weight": 2,
+            "source_community": 1,
+            "target_community": 1
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 11051,
+    "completion_tokens": 1164,
+    "total_tokens": 12215,
+    "completion_tokens_details": {
+      "text_tokens": 1164
+    },
+    "prompt_tokens_details": {
+      "image_tokens": 2496,
+      "text_tokens": 8555
+    }
+  },
+  "prompt": "请为CiteWeave最终论文的“概念结构”章节生成图解释证据计划。\n这不是问答题。为保证不同输入条件可比较，请尝试完成固定的5个任务槽：1条社区内部关系、\n1条跨社区关系、2条不同的多跳关系、1条hub或bridge关系。多跳关系至少包含3个节点。\n最后一个槽位的type必须在“hub”和“bridge”中二选一，禁止输出“hub_or_bridge”等组合类型。\nhub或bridge声明必须在focus_node中填写唯一被主张为hub或割点的节点，且该节点必须出现在nodes中；\nnodes中的其他节点只是证据邻居，不会被视为hub或割点。hub或bridge的每条evidence_edges都必须连接focus_node。\n其他类型的focus_node必须留空字符串。\n某个槽位证据不足时不要猜测，将其写入abstentions并说明原因；不得用重复声明填充槽位。\nstatement不得使用“导致”“促进”“演化”“迁移趋势”“建立关联”等超出共现结构的语义；\n共现边只允许表述为结构连接或共同出现。最终系统会忽略你的自由表述并根据证据重新生成克制句子。\n\n节点别名图例：\n[\n  {\n    \"alias\": \"N1\",\n    \"label\": \"AI\"\n  },\n  {\n    \"alias\": \"N2\",\n    \"label\": \"Algorithm\"\n  },\n  {\n    \"alias\": \"N3\",\n    \"label\": \"Algorithms\"\n  },\n  {\n    \"alias\": \"N4\",\n    \"label\": \"Application\"\n  },\n  {\n    \"alias\": \"N5\",\n    \"label\": \"Artificial intelligence\"\n  },\n  {\n    \"alias\": \"N6\",\n    \"label\": \"Bibliometric\"\n  },\n  {\n    \"alias\": \"N7\",\n    \"label\": \"Bibliometric analysis\"\n  },\n  {\n    \"alias\": \"N8\",\n    \"label\": \"Bibliometrics\"\n  },\n  {\n    \"alias\": \"N9\",\n    \"label\": \"Bioinformatics\"\n  },\n  {\n    \"alias\": \"N10\",\n    \"label\": \"Biomedical research\"\n  },\n  {\n    \"alias\": \"N11\",\n    \"label\": \"Chatbots\"\n  },\n  {\n    \"alias\": \"N12\",\n    \"label\": \"ChatGPT\"\n  },\n  {\n    \"alias\": \"N13\",\n    \"label\": \"China\"\n  },\n  {\n    \"alias\": \"N14\",\n    \"label\": \"Citespace\"\n  },\n  {\n    \"alias\": \"N15\",\n    \"label\": \"Clinical decision support\"\n  },\n  {\n    \"alias\": \"N16\",\n    \"label\": \"Clinical trials\"\n  },\n  {\n    \"alias\": \"N17\",\n    \"label\": \"Computer vision\"\n  },\n  {\n    \"alias\": \"N18\",\n    \"label\": \"Content analysis\"\n  },\n  {\n    \"alias\": \"N19\",\n    \"label\": \"Covid-19\"\n  },\n  {\n    \"alias\": \"N20\",\n    \"label\": \"Critical care\"\n  },\n  {\n    \"alias\": \"N21\",\n    \"label\": \"Cross-sectional studies\"\n  },\n  {\n    \"alias\": \"N22\",\n    \"label\": \"Databases, factual\"\n  },\n  {\n    \"alias\": \"N23\",\n    \"label\": \"Deep learning\"\n  },\n  {\n    \"alias\": \"N24\",\n    \"label\": \"Dental research\"\n  },\n  {\n    \"alias\": \"N25\",\n    \"label\": \"Digital health\"\n  },\n  {\n    \"alias\": \"N26\",\n    \"label\": \"Digital technology\"\n  },\n  {\n    \"alias\": \"N27\",\n    \"label\": \"Education, medical\"\n  },\n  {\n    \"alias\": \"N28\",\n    \"label\": \"Educational measurement\"\n  },\n  {\n    \"alias\": \"N29\",\n    \"label\": \"Ethics\"\n  },\n  {\n    \"alias\": \"N30\",\n    \"label\": \"Evidence synthesis\"\n  },\n  {\n    \"alias\": \"N31\",\n    \"label\": \"Fairness\"\n  },\n  {\n    \"alias\": \"N32\",\n    \"label\": \"Federated learning\"\n  },\n  {\n    \"alias\": \"N33\",\n    \"label\": \"Feedback\"\n  },\n  {\n    \"alias\": \"N34\",\n    \"label\": \"Future directions\"\n  },\n  {\n    \"alias\": \"N35\",\n    \"label\": \"Generative ai\"\n  },\n  {\n    \"alias\": \"N36\",\n    \"label\": \"Generative artificial intelligence\"\n  },\n  {\n    \"alias\": \"N37\",\n    \"label\": \"Healthcare\"\n  },\n  {\n    \"alias\": \"N38\",\n    \"label\": \"Intensive care units\"\n  },\n  {\n    \"alias\": \"N39\",\n    \"label\": \"Language\"\n  },\n  {\n    \"alias\": \"N40\",\n    \"label\": \"Large language models\"\n  },\n  {\n    \"alias\": \"N41\",\n    \"label\": \"Large language models (llms)\"\n  },\n  {\n    \"alias\": \"N42\",\n    \"label\": \"Llm\"\n  },\n  {\n    \"alias\": \"N43\",\n    \"label\": \"Machine learning\"\n  },\n  {\n    \"alias\": \"N44\",\n    \"label\": \"Medical education\"\n  },\n  {\n    \"alias\": \"N45\",\n    \"label\": \"Medicine\"\n  },\n  {\n    \"alias\": \"N46\",\n    \"label\": \"Mental health\"\n  },\n  {\n    \"alias\": \"N47\",\n    \"label\": \"Mental health services\"\n  },\n  {\n    \"alias\": \"N48\",\n    \"label\": \"Mobile health\"\n  },\n  {\n    \"alias\": \"N49\",\n    \"label\": \"Natural language processing\"\n  },\n  {\n    \"alias\": \"N50\",\n    \"label\": \"Network analysis\"\n  },\n  {\n    \"alias\": \"N51\",\n    \"label\": \"Neuroimaging\"\n  },\n  {\n    \"alias\": \"N52\",\n    \"label\": \"Nlp\"\n  },\n  {\n    \"alias\": \"N53\",\n    \"label\": \"Pandemics\"\n  },\n  {\n    \"alias\": \"N54\",\n    \"label\": \"Periodicals as topic\"\n  },\n  {\n    \"alias\": \"N55\",\n    \"label\": \"Precision medicine\"\n  },\n  {\n    \"alias\": \"N56\",\n    \"label\": \"Prisma\"\n  },\n  {\n    \"alias\": \"N57\",\n    \"label\": \"Psychiatry\"\n  },\n  {\n    \"alias\": \"N58\",\n    \"label\": \"Public health\"\n  },\n  {\n    \"alias\": \"N59\",\n    \"label\": \"Publishing\"\n  },\n  {\n    \"alias\": \"N60\",\n    \"label\": \"Pubmed\"\n  },\n  {\n    \"alias\": \"N61\",\n    \"label\": \"Rehabilitation\"\n  },\n  {\n    \"alias\": \"N62\",\n    \"label\": \"Reproducibility of results\"\n  },\n  {\n    \"alias\": \"N63\",\n    \"label\": \"Research\"\n  },\n  {\n    \"alias\": \"N64\",\n    \"label\": \"Research design\"\n  },\n  {\n    \"alias\": \"N65\",\n    \"label\": \"Research trends\"\n  },\n  {\n    \"alias\": \"N66\",\n    \"label\": \"Retrieval-augmented generation\"\n  },\n  {\n    \"alias\": \"N67\",\n    \"label\": \"Sars-cov-2\"\n  },\n  {\n    \"alias\": \"N68\",\n    \"label\": \"Scoping review\"\n  },\n  {\n    \"alias\": \"N69\",\n    \"label\": \"Semantics\"\n  },\n  {\n    \"alias\": \"N70\",\n    \"label\": \"Software\"\n  },\n  {\n    \"alias\": \"N71\",\n    \"label\": \"Stroke\"\n  },\n  {\n    \"alias\": \"N72\",\n    \"label\": \"Students, medical\"\n  },\n  {\n    \"alias\": \"N73\",\n    \"label\": \"Surveys and questionnaires\"\n  },\n  {\n    \"alias\": \"N74\",\n    \"label\": \"Sustainable development\"\n  },\n  {\n    \"alias\": \"N75\",\n    \"label\": \"Systematic review\"\n  },\n  {\n    \"alias\": \"N76\",\n    \"label\": \"Telemedicine\"\n  },\n  {\n    \"alias\": \"N77\",\n    \"label\": \"Traditional chinese medicine\"\n  },\n  {\n    \"alias\": \"N78\",\n    \"label\": \"United states\"\n  },\n  {\n    \"alias\": \"N79\",\n    \"label\": \"Vosviewer\"\n  },\n  {\n    \"alias\": \"N80\",\n    \"label\": \"Writing\"\n  }\n]\n\n当前证据条件：\n按图结构检索出的解释证据。所有evidence_edges只能逐字选自community_internal_edges、cross_community_edges、multi_hop_paths或hub_candidates中的incident_edges、articulation_evidence中明确列出的边，不得根据PNG猜边。两个multi_hop槽必须选择两个不同的path_id，并把候选中的nodes、communities、path和evidence_edges四个字段逐字复制，禁止跨候选拼接或自行改写路径。hub槽必须从hub_candidates选择focus_node及其incident_edges：\n{\n  \"retrieval_method\": \"salience + community anchors + verified multi-hop paths\",\n  \"salient_nodes\": [\n    \"N53\",\n    \"N15\",\n    \"N34\",\n    \"N39\",\n    \"N26\",\n    \"N62\",\n    \"N66\",\n    \"N73\",\n    \"N9\",\n    \"N65\",\n    \"N75\",\n    \"N22\"\n  ],\n  \"community_representatives\": {\n    \"C1\": [\n      \"N34\",\n      \"N62\",\n      \"N65\"\n    ],\n    \"C2\": [\n      \"N53\",\n      \"N26\",\n      \"N2\"\n    ],\n    \"C3\": [\n      \"N15\",\n      \"N28\",\n      \"N56\"\n    ],\n    \"C4\": [\n      \"N39\",\n      \"N57\",\n      \"N72\"\n    ],\n    \"C5\": [\n      \"N66\",\n      \"N9\",\n      \"N22\"\n    ],\n    \"C6\": [\n      \"N73\",\n      \"N47\",\n      \"N63\"\n    ]\n  },\n  \"community_internal_edges\": {\n    \"C1\": [\n      {\n        \"source\": \"N5\",\n        \"target\": \"N43\",\n        \"weight\": 25,\n        \"source_community\": 1,\n        \"target_community\": 1\n      },\n      {\n        \"source\": \"N40\",\n        \"target\": \"N12\",\n        \"weight\": 16,\n        \"source_community\": 1,\n        \"target_community\": 1\n      },\n      {\n        \"source\": \"N43\",\n        \"target\": \"N23\",\n        \"weight\": 11,\n        \"source_community\": 1,\n        \"target_community\": 1\n      },\n      {\n        \"source\": \"N40\",\n        \"target\": \"N30\",\n        \"weight\": 3,\n        \"source_community\": 1,\n        \"target_community\": 1\n      }\n    ],\n    \"C2\": [\n      {\n        \"source\": \"N19\",\n        \"target\": \"N67\",\n        \"weight\": 6,\n        \"source_community\": 2,\n        \"target_community\": 2\n      },\n      {\n        \"source\": \"N19\",\n        \"target\": \"N25\",\n        \"weight\": 3,\n        \"source_community\": 2,\n        \"target_community\": 2\n      },\n      {\n        \"source\": \"N49\",\n        \"target\": \"N54\",\n        \"weight\": 3,\n        \"source_community\": 2,\n        \"target_community\": 2\n      },\n      {\n        \"source\": \"N67\",\n        \"target\": \"N25\",\n        \"weight\": 3,\n        \"source_community\": 2,\n        \"target_community\": 2\n      }\n    ],\n    \"C3\": [\n      {\n        \"source\": \"N36\",\n        \"target\": \"N44\",\n        \"weight\": 6,\n        \"source_community\": 3,\n        \"target_community\": 3\n      },\n      {\n        \"source\": \"N44\",\n        \"target\": \"N27\",\n        \"weight\": 5,\n        \"source_community\": 3,\n        \"target_community\": 3\n      },\n      {\n        \"source\": \"N44\",\n        \"target\": \"N1\",\n        \"weight\": 4,\n        \"source_community\": 3,\n        \"target_community\": 3\n      },\n      {\n        \"source\": \"N36\",\n        \"target\": \"N27\",\n        \"weight\": 3,\n        \"source_community\": 3,\n        \"target_community\": 3\n      }\n    ],\n    \"C4\": [\n      {\n        \"source\": \"N8\",\n        \"target\": \"N10\",\n        \"weight\": 7,\n        \"source_community\": 4,\n        \"target_community\": 4\n      },\n      {\n        \"source\": \"N8\",\n        \"target\": \"N14\",\n        \"weight\": 7,\n        \"source_community\": 4,\n        \"target_community\": 4\n      },\n      {\n        \"source\": \"N14\",\n        \"target\": \"N79\",\n        \"weight\": 4,\n        \"source_community\": 4,\n        \"target_community\": 4\n      },\n      {\n        \"source\": \"N10\",\n        \"target\": \"N46\",\n        \"weight\": 2,\n        \"source_community\": 4,\n        \"target_community\": 4\n      }\n    ],\n    \"C5\": [\n      {\n        \"source\": \"N20\",\n        \"target\": \"N38\",\n        \"weight\": 2,\n        \"source_community\": 5,\n        \"target_community\": 5\n      },\n      {\n        \"source\": \"N22\",\n        \"target\": \"N20\",\n        \"weight\": 1,\n        \"source_community\": 5,\n        \"target_community\": 5\n      },\n      {\n        \"source\": \"N22\",\n        \"target\": \"N38\",\n        \"weight\": 1,\n        \"source_community\": 5,\n        \"target_community\": 5\n      },\n      {\n        \"source\": \"N22\",\n        \"target\": \"N66\",\n        \"weight\": 1,\n        \"source_community\": 5,\n        \"target_community\": 5\n      }\n    ],\n    \"C6\": [\n      {\n        \"source\": \"N21\",\n        \"target\": \"N73\",\n        \"weight\": 2,\n        \"source_community\": 6,\n        \"target_community\": 6\n      },\n      {\n        \"source\": \"N73\",\n        \"target\": \"N11\",\n        \"weight\": 2,\n        \"source_community\": 6,\n        \"target_community\": 6\n      },\n      {\n        \"source\": \"N11\",\n        \"target\": \"N47\",\n        \"weight\": 1,\n        \"source_community\": 6,\n        \"target_community\": 6\n      },\n      {\n        \"source\": \"N21\",\n        \"target\": \"N11\",\n        \"weight\": 1,\n        \"source_community\": 6,\n        \"target_community\": 6\n      }\n    ]\n  },\n  \"cross_community_edges\": [\n    {\n      \"source\": \"N40\",\n      \"target\": \"N44\",\n      \"weight\": 8,\n      \"source_community\": 1,\n      \"target_community\": 3\n    },\n    {\n      \"source\": \"N8\",\n      \"target\": \"N44\",\n      \"weight\": 7,\n      \"source_community\": 4,\n      \"target_community\": 3\n    },\n    {\n      \"source\": \"N8\",\n      \"target\": \"N27\",\n      \"weight\": 6,\n      \"source_community\": 4,\n      \"target_community\": 3\n    },\n    {\n      \"source\": \"N8\",\n      \"target\": \"N54\",\n      \"weight\": 6,\n      \"source_community\": 4,\n      \"target_community\": 2\n    },\n    {\n      \"source\": \"N12\",\n      \"target\": \"N6\",\n      \"weight\": 4,\n      \"source_community\": 1,\n      \"target_community\": 4\n    },\n    {\n      \"source\": \"N23\",\n      \"target\": \"N19\",\n      \"weight\": 3,\n      \"source_community\": 1,\n      \"target_community\": 2\n    },\n    {\n      \"source\": \"N23\",\n      \"target\": \"N67\",\n      \"weight\": 3,\n      \"source_community\": 1,\n      \"target_community\": 2\n    },\n    {\n      \"source\": \"N54\",\n      \"target\": \"N59\",\n      \"weight\": 3,\n      \"source_community\": 2,\n      \"target_community\": 6\n    },\n    {\n      \"source\": \"N12\",\n      \"target\": \"N24\",\n      \"weight\": 2,\n      \"source_community\": 1,\n      \"target_community\": 6\n    },\n    {\n      \"source\": \"N25\",\n      \"target\": \"N55\",\n      \"weight\": 2,\n      \"source_community\": 2,\n      \"target_community\": 1\n    },\n    {\n      \"source\": \"N36\",\n      \"target\": \"N80\",\n      \"weight\": 2,\n      \"source_community\": 3,\n      \"target_community\": 6\n    },\n    {\n      \"source\": \"N43\",\n      \"target\": \"N29\",\n      \"weight\": 2,\n      \"source_community\": 1,\n      \"target_community\": 3\n    }\n  ],\n  \"multi_hop_paths\": [\n    {\n      \"path_id\": \"P1\",\n      \"nodes\": [\n        \"N15\",\n        \"N29\",\n        \"N39\"\n      ],\n      \"communities\": {\n        \"N15\": 3,\n        \"N29\": 3,\n        \"N39\": 4\n      },\n      \"path\": [\n        \"N15\",\n        \"N29\",\n        \"N39\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N15\",\n          \"N29\"\n        ],\n        [\n          \"N29\",\n          \"N39\"\n        ]\n      ]\n    },\n    {\n      \"path_id\": \"P2\",\n      \"nodes\": [\n        \"N34\",\n        \"N29\",\n        \"N15\"\n      ],\n      \"communities\": {\n        \"N34\": 1,\n        \"N29\": 3,\n        \"N15\": 3\n      },\n      \"path\": [\n        \"N34\",\n        \"N29\",\n        \"N15\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N34\",\n          \"N29\"\n        ],\n        [\n          \"N29\",\n          \"N15\"\n        ]\n      ]\n    },\n    {\n      \"path_id\": \"P3\",\n      \"nodes\": [\n        \"N53\",\n        \"N1\",\n        \"N66\"\n      ],\n      \"communities\": {\n        \"N53\": 2,\n        \"N1\": 3,\n        \"N66\": 5\n      },\n      \"path\": [\n        \"N53\",\n        \"N1\",\n        \"N66\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N53\",\n          \"N1\"\n        ],\n        [\n          \"N1\",\n          \"N66\"\n        ]\n      ]\n    },\n    {\n      \"path_id\": \"P4\",\n      \"nodes\": [\n        \"N53\",\n        \"N25\",\n        \"N73\"\n      ],\n      \"communities\": {\n        \"N53\": 2,\n        \"N25\": 2,\n        \"N73\": 6\n      },\n      \"path\": [\n        \"N53\",\n        \"N25\",\n        \"N73\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N53\",\n          \"N25\"\n        ],\n        [\n          \"N25\",\n          \"N73\"\n        ]\n      ]\n    },\n    {\n      \"path_id\": \"P5\",\n      \"nodes\": [\n        \"N15\",\n        \"N38\",\n        \"N22\",\n        \"N66\"\n      ],\n      \"communities\": {\n        \"N15\": 3,\n        \"N38\": 5,\n        \"N22\": 5,\n        \"N66\": 5\n      },\n      \"path\": [\n        \"N15\",\n        \"N38\",\n        \"N22\",\n        \"N66\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N15\",\n          \"N38\"\n        ],\n        [\n          \"N38\",\n          \"N22\"\n        ],\n        [\n          \"N22\",\n          \"N66\"\n        ]\n      ]\n    },\n    {\n      \"path_id\": \"P6\",\n      \"nodes\": [\n        \"N34\",\n        \"N44\",\n        \"N1\",\n        \"N53\"\n      ],\n      \"communities\": {\n        \"N34\": 1,\n        \"N44\": 3,\n        \"N1\": 3,\n        \"N53\": 2\n      },\n      \"path\": [\n        \"N34\",\n        \"N44\",\n        \"N1\",\n        \"N53\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N34\",\n          \"N44\"\n        ],\n        [\n          \"N44\",\n          \"N1\"\n        ],\n        [\n          \"N1\",\n          \"N53\"\n        ]\n      ]\n    },\n    {\n      \"path_id\": \"P7\",\n      \"nodes\": [\n        \"N34\",\n        \"N44\",\n        \"N1\",\n        \"N66\"\n      ],\n      \"communities\": {\n        \"N34\": 1,\n        \"N44\": 3,\n        \"N1\": 3,\n        \"N66\": 5\n      },\n      \"path\": [\n        \"N34\",\n        \"N44\",\n        \"N1\",\n        \"N66\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N34\",\n          \"N44\"\n        ],\n        [\n          \"N44\",\n          \"N1\"\n        ],\n        [\n          \"N1\",\n          \"N66\"\n        ]\n      ]\n    },\n    {\n      \"path_id\": \"P8\",\n      \"nodes\": [\n        \"N39\",\n        \"N60\",\n        \"N70\",\n        \"N66\"\n      ],\n      \"communities\": {\n        \"N39\": 4,\n        \"N60\": 5,\n        \"N70\": 5,\n        \"N66\": 5\n      },\n      \"path\": [\n        \"N39\",\n        \"N60\",\n        \"N70\",\n        \"N66\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N39\",\n          \"N60\"\n        ],\n        [\n          \"N60\",\n          \"N70\"\n        ],\n        [\n          \"N70\",\n          \"N66\"\n        ]\n      ]\n    }\n  ],\n  \"hub_candidates\": [\n    {\n      \"node\": \"N5\",\n      \"degree\": 123,\n      \"weighted_degree\": 408.0,\n      \"incident_edges\": [\n        {\n          \"source\": \"N5\",\n          \"target\": \"N43\",\n          \"weight\": 25,\n          \"source_community\": 1,\n          \"target_community\": 1\n        }\n      ]\n    },\n    {\n      \"node\": \"N40\",\n      \"degree\": 105,\n      \"weighted_degree\": 272.0,\n      \"incident_edges\": [\n        {\n          \"source\": \"N40\",\n          \"target\": \"N12\",\n          \"weight\": 16,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N40\",\n          \"target\": \"N44\",\n          \"weight\": 8,\n          \"source_community\": 1,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N40\",\n          \"target\": \"N30\",\n          \"weight\": 3,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N40\",\n          \"target\": \"N51\",\n          \"weight\": 3,\n          \"source_community\": 1,\n          \"target_community\": 1\n        }\n      ]\n    },\n    {\n      \"node\": \"N8\",\n      \"degree\": 79,\n      \"weighted_degree\": 216.0,\n      \"incident_edges\": [\n        {\n          \"source\": \"N8\",\n          \"target\": \"N10\",\n          \"weight\": 7,\n          \"source_community\": 4,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N8\",\n          \"target\": \"N14\",\n          \"weight\": 7,\n          \"source_community\": 4,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N8\",\n          \"target\": \"N44\",\n          \"weight\": 7,\n          \"source_community\": 4,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N8\",\n          \"target\": \"N27\",\n          \"weight\": 6,\n          \"source_community\": 4,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N8\",\n          \"target\": \"N54\",\n          \"weight\": 6,\n          \"source_community\": 4,\n          \"target_community\": 2\n        },\n        {\n          \"source\": \"N8\",\n          \"target\": \"N2\",\n          \"weight\": 2,\n          \"source_community\": 4,\n          \"target_community\": 2\n        }\n      ]\n    },\n    {\n      \"node\": \"N43\",\n      \"degree\": 57,\n      \"weighted_degree\": 136.0,\n      \"incident_edges\": [\n        {\n          \"source\": \"N43\",\n          \"target\": \"N5\",\n          \"weight\": 25,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N23\",\n          \"weight\": 11,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N29\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N32\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N55\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N61\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 1\n        }\n      ]\n    },\n    {\n      \"node\": \"N12\",\n      \"degree\": 60,\n      \"weighted_degree\": 130.0,\n      \"incident_edges\": [\n        {\n          \"source\": \"N12\",\n          \"target\": \"N40\",\n          \"weight\": 16,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N12\",\n          \"target\": \"N6\",\n          \"weight\": 4,\n          \"source_community\": 1,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N12\",\n          \"target\": \"N24\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 6\n        },\n        {\n          \"source\": \"N12\",\n          \"target\": \"N45\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 1\n        }\n      ]\n    },\n    {\n      \"node\": \"N7\",\n      \"degree\": 57,\n      \"weighted_degree\": 125.0,\n      \"incident_edges\": [\n        {\n          \"source\": \"N7\",\n          \"target\": \"N18\",\n          \"weight\": 3,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N7\",\n          \"target\": \"N65\",\n          \"weight\": 3,\n          \"source_community\": 1,\n          \"target_community\": 1\n        }\n      ]\n    },\n    {\n      \"node\": \"N36\",\n      \"degree\": 54,\n      \"weighted_degree\": 106.0,\n      \"incident_edges\": [\n        {\n          \"source\": \"N36\",\n          \"target\": \"N44\",\n          \"weight\": 6,\n          \"source_community\": 3,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N36\",\n          \"target\": \"N27\",\n          \"weight\": 3,\n          \"source_community\": 3,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N36\",\n          \"target\": \"N15\",\n          \"weight\": 2,\n          \"source_community\": 3,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N36\",\n          \"target\": \"N28\",\n          \"weight\": 2,\n          \"source_community\": 3,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N36\",\n          \"target\": \"N29\",\n          \"weight\": 2,\n          \"source_community\": 3,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N36\",\n          \"target\": \"N56\",\n          \"weight\": 2,\n          \"source_community\": 3,\n          \"target_community\": 3\n        }\n      ]\n    },\n    {\n      \"node\": \"N23\",\n      \"degree\": 35,\n      \"weighted_degree\": 79.0,\n      \"incident_edges\": [\n        {\n          \"source\": \"N23\",\n          \"target\": \"N43\",\n          \"weight\": 11,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N23\",\n          \"target\": \"N19\",\n          \"weight\": 3,\n          \"source_community\": 1,\n          \"target_community\": 2\n        },\n        {\n          \"source\": \"N23\",\n          \"target\": \"N67\",\n          \"weight\": 3,\n          \"source_community\": 1,\n          \"target_community\": 2\n        },\n        {\n          \"source\": \"N23\",\n          \"target\": \"N55\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 1\n        }\n      ]\n    }\n  ],\n  \"articulation_candidates\": [\n    \"N9\",\n    \"N10\",\n    \"N6\",\n    \"N43\"\n  ],\n  \"articulation_evidence\": [\n    {\n      \"node\": \"N9\",\n      \"incident_edges\": [\n        {\n          \"source\": \"N9\",\n          \"target\": \"N2\",\n          \"weight\": 1,\n          \"source_community\": 5,\n          \"target_community\": 2\n        },\n        {\n          \"source\": \"N9\",\n          \"target\": \"N22\",\n          \"weight\": 1,\n          \"source_community\": 5,\n          \"target_community\": 5\n        },\n        {\n          \"source\": \"N9\",\n          \"target\": \"N3\",\n          \"weight\": 1,\n          \"source_community\": 5,\n          \"target_community\": 5\n        },\n        {\n          \"source\": \"N9\",\n          \"target\": \"N66\",\n          \"weight\": 1,\n          \"source_community\": 5,\n          \"target_community\": 5\n        },\n        {\n          \"source\": \"N9\",\n          \"target\": \"N70\",\n          \"weight\": 1,\n          \"source_community\": 5,\n          \"target_community\": 5\n        }\n      ]\n    },\n    {\n      \"node\": \"N10\",\n      \"incident_edges\": [\n        {\n          \"source\": \"N10\",\n          \"target\": \"N8\",\n          \"weight\": 7,\n          \"source_community\": 4,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N10\",\n          \"target\": \"N46\",\n          \"weight\": 2,\n          \"source_community\": 4,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N10\",\n          \"target\": \"N78\",\n          \"weight\": 2,\n          \"source_community\": 4,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N10\",\n          \"target\": \"N69\",\n          \"weight\": 1,\n          \"source_community\": 4,\n          \"target_community\": 5\n        },\n        {\n          \"source\": \"N10\",\n          \"target\": \"N72\",\n          \"weight\": 1,\n          \"source_community\": 4,\n          \"target_community\": 4\n        }\n      ]\n    },\n    {\n      \"node\": \"N6\",\n      \"incident_edges\": [\n        {\n          \"source\": \"N6\",\n          \"target\": \"N12\",\n          \"weight\": 4,\n          \"source_community\": 4,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N6\",\n          \"target\": \"N14\",\n          \"weight\": 2,\n          \"source_community\": 4,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N6\",\n          \"target\": \"N27\",\n          \"weight\": 2,\n          \"source_community\": 4,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N6\",\n          \"target\": \"N79\",\n          \"weight\": 2,\n          \"source_community\": 4,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N6\",\n          \"target\": \"N37\",\n          \"weight\": 1,\n          \"source_community\": 4,\n          \"target_community\": 4\n        },\n        {\n          \"source\": \"N6\",\n          \"target\": \"N4\",\n          \"weight\": 1,\n          \"source_community\": 4,\n          \"target_community\": 2\n        }\n      ]\n    },\n    {\n      \"node\": \"N43\",\n      \"incident_edges\": [\n        {\n          \"source\": \"N43\",\n          \"target\": \"N5\",\n          \"weight\": 25,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N23\",\n          \"weight\": 11,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N29\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 3\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N32\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N55\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 1\n        },\n        {\n          \"source\": \"N43\",\n          \"target\": \"N61\",\n          \"weight\": 2,\n          \"source_community\": 1,\n          \"target_community\": 1\n        }\n      ]\n    }\n  ]\n}\n\n严格按照下面的JSON结构输出：\n{\n  \"overview\": \"一句不含新关系的总体观察\",\n  \"claims\": [\n    {\n      \"type\": \"hub|community_structure|cross_community|multi_hop|bridge\",\n      \"statement\": \"可直接用于论文写作的克制表述\",\n      \"focus_node\": \"N1（仅hub或bridge使用；其他类型留空）\",\n      \"nodes\": [\n        \"N1\",\n        \"N2\"\n      ],\n      \"communities\": {\n        \"N1\": 1,\n        \"N2\": 2\n      },\n      \"path\": [\n        \"N1\",\n        \"N3\",\n        \"N2\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N1\",\n          \"N3\"\n        ],\n        [\n          \"N3\",\n          \"N2\"\n        ]\n      ]\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"slot\": \"community_structure|cross_community|multi_hop_1|multi_hop_2|hub_or_bridge\",\n      \"reason\": \"当前输入不足以支持该槽位\"\n    }\n  ],\n  \"caveats\": [\n    \"解释边界\"\n  ]\n}\n",
+  "raw_answer": "{\n  \"overview\": \"关键词共现网络呈现6个结构化社区，其中Cluster 1（蓝色）以人工智能基础概念为核心，Cluster 2（橙色）聚焦新冠相关术语，Cluster 3（绿色）关联医学教育与生成式AI，Cluster 4（紫色）围绕文献计量方法，Cluster 5（红色）含数据库与软件工具，Cluster 6（青色）涉及调查与聊天机器人应用。\",\n  \"claims\": [\n    {\n      \"type\": \"community_structure\",\n      \"statement\": \"在Cluster 1内部，'Artificial intelligence'（N5）与'Machine learning'（N43）存在共现连接，'Large language models'（N40）与'ChatGPT'（N12）存在共现连接。\",\n      \"focus_node\": \"\",\n      \"nodes\": [\n        \"N5\",\n        \"N43\",\n        \"N40\",\n        \"N12\"\n      ],\n      \"communities\": {\n        \"N5\": 1,\n        \"N43\": 1,\n        \"N40\": 1,\n        \"N12\": 1\n      },\n      \"path\": [],\n      \"evidence_edges\": [\n        [\n          \"N5\",\n          \"N43\"\n        ],\n        [\n          \"N40\",\n          \"N12\"\n        ]\n      ]\n    },\n    {\n      \"type\": \"cross_community\",\n      \"statement\": \"'Large language models'（N40）与'Medical education'（N44）之间存在跨社区共现连接，连接Cluster 1与Cluster 3。\",\n      \"focus_node\": \"\",\n      \"nodes\": [\n        \"N40\",\n        \"N44\"\n      ],\n      \"communities\": {\n        \"N40\": 1,\n        \"N44\": 3\n      },\n      \"path\": [],\n      \"evidence_edges\": [\n        [\n          \"N40\",\n          \"N44\"\n        ]\n      ]\n    },\n    {\n      \"type\": \"multi_hop\",\n      \"statement\": \"'Clinical decision support'（N15）与'Language'（N39）通过'Ethics'（N29）形成三节点共现路径：N15–N29–N39，跨越Cluster 3与Cluster 4。\",\n      \"focus_node\": \"\",\n      \"nodes\": [\n        \"N15\",\n        \"N29\",\n        \"N39\"\n      ],\n      \"communities\": {\n        \"N15\": 3,\n        \"N29\": 3,\n        \"N39\": 4\n      },\n      \"path\": [\n        \"N15\",\n        \"N29\",\n        \"N39\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N15\",\n          \"N29\"\n        ],\n        [\n          \"N29\",\n          \"N39\"\n        ]\n      ]\n    },\n    {\n      \"type\": \"multi_hop\",\n      \"statement\": \"'Pandemics'（N53）与'Retrieval-augmented generation'（N66）通过'AI'（N1）形成三节点共现路径：N53–N1–N66，跨越Cluster 2、Cluster 3与Cluster 5。\",\n      \"focus_node\": \"\",\n      \"nodes\": [\n        \"N53\",\n        \"N1\",\n        \"N66\"\n      ],\n      \"communities\": {\n        \"N53\": 2,\n        \"N1\": 3,\n        \"N66\": 5\n      },\n      \"path\": [\n        \"N53\",\n        \"N1\",\n        \"N66\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N53\",\n          \"N1\"\n        ],\n        [\n          \"N1\",\n          \"N66\"\n        ]\n      ]\n    },\n    {\n      \"type\": \"hub\",\n      \"statement\": \"'Large language models'（N40）作为中心节点，与'ChatGPT'（N12）、'Medical education'（N44）、'Bibliometric analysis'（N30）及'Computer vision'（N51）存在共现连接。\",\n      \"focus_node\": \"N40\",\n      \"nodes\": [\n        \"N12\",\n        \"N44\",\n        \"N30\",\n        \"N51\"\n      ],\n      \"communities\": {\n        \"N12\": 1,\n        \"N44\": 3,\n        \"N30\": 1,\n        \"N51\": 1\n      },\n      \"path\": [],\n      \"evidence_edges\": [\n        [\n          \"N40\",\n          \"N12\"\n        ],\n        [\n          \"N40\",\n          \"N44\"\n        ],\n        [\n          \"N40\",\n          \"N30\"\n        ],\n        [\n          \"N40\",\n          \"N51\"\n        ]\n      ]\n    }\n  ],\n  \"abstentions\": [],\n  \"caveats\": [\n    \"所有声明仅基于图中显式共现边，不推断语义关系或因果方向；\",\n    \"多跳路径仅使用验证的evidence_edges，未包含间接推测边；\",\n    \"hub声明仅依据incident_edges列表，未考虑全局拓扑割点性质。\"\n  ]\n}"
+}

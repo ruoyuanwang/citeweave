@@ -12,7 +12,7 @@ from citeweave.models import AcquisitionManifest, SourceName
 from citeweave.transform import Canonicalizer
 
 
-def _bundle(crossref_records):
+def _bundle(crossref_records, graph_explanations=None):
     tables = Canonicalizer("crossref").canonicalize(crossref_records)
     analyses = analyze(tables, network_candidate_pool=100)
     manifest = AcquisitionManifest(
@@ -26,7 +26,44 @@ def _bundle(crossref_records):
         pages=1,
         complete=True,
     )
-    return build_evidence(manifest, tables, analyses, [])
+    return build_evidence(
+        manifest,
+        tables,
+        analyses,
+        [],
+        graph_explanations=graph_explanations,
+    )
+
+
+def test_verified_graph_explanation_enters_evidence_bundle(crossref_records):
+    explanations = [
+        {
+            "status": "complete",
+            "figure_name": "network_keyword_cooccurrence",
+            "network_name": "keyword_cooccurrence",
+            "mode": "graph_rag",
+            "verified_claims": [
+                {
+                    "claim_id": "GC001",
+                    "type": "cross_community",
+                    "statement": "已核验的克制表述。",
+                    "model_statement": "不应进入写作证据包的模型原句。",
+                    "verified": True,
+                }
+            ],
+            "rejected_claims": [{"reason": "unsupported evidence edge"}],
+            "verification": {"reported_claims": 2, "verified_claims": 1},
+            "caveats": ["共现不表示因果"],
+        }
+    ]
+
+    evidence = _bundle(crossref_records, explanations)
+    item = next(item for item in evidence.items if item.claim_type == "figure_interpretation")
+
+    assert item.value["mode"] == "graph_rag"
+    assert item.value["verified_claims"][0]["claim_id"] == "GC001"
+    assert "model_statement" not in item.value["verified_claims"][0]
+    assert item.artifact_path == "evidence/graph_explanations.json"
 
 
 def test_validated_text(crossref_records):
@@ -105,34 +142,3 @@ def test_journal_readiness_gate_rejects_shallow_manuscript(crossref_records):
     assert not quality["passed"]
     assert not quality["checks"]["characters_at_least_12000"]
     assert not quality["checks"]["method_moves_complete"]
-
-
-def test_english_terminal_punctuation_is_not_treated_as_truncation(crossref_records):
-    evidence = _bundle(crossref_records)
-    corpus = next(item for item in evidence.items if item.claim_type == "corpus_size")
-    text = (
-        "This complete English paragraph reports the frozen corpus size as "
-        f"{corpus.value} works and ends with standard English punctuation "
-        f"[{corpus.evidence_id}]."
-    )
-
-    result = validate_manuscript(text, evidence, strict_structure=False)
-
-    assert result["incomplete_paragraphs"] == []
-
-
-def test_english_section_contract_is_detected(crossref_records):
-    evidence = _bundle(crossref_records)
-    headings = [
-        "## Abstract",
-        "## 1 Introduction",
-        "## 2 Data and methods",
-        "## 3 Results",
-        "## 4 Discussion and limitations",
-        "## 5 Conclusion",
-    ]
-    text = "\n\n".join(f"{heading}\n\nComplete prose." for heading in headings)
-
-    result = validate_manuscript(text, evidence, strict_structure=False)
-
-    assert result["missing_sections"] == []

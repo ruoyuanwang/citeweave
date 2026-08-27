@@ -29,7 +29,8 @@ from .generation import (
     save_generation,
     validate_manuscript,
 )
-from .graph_grounding import build_bibliometric_knowledge_graph, save_graph_grounding
+from .graph_ablation import run_graph_ablation
+from .graph_explanation import generate_graph_explanations
 from .interoperability import export_all
 from .io import (
     atomic_write_bytes,
@@ -103,11 +104,7 @@ def _connector(config: ProjectConfig, paths: ProjectPaths, *, bulk: bool = False
             **connector_options,
         )
     if source == SourceName.openalex:
-        return OpenAlexConnector(
-            paths.raw,
-            api_key_env=config.openalex_api_key_env,
-            **connector_options,
-        )
+        return OpenAlexConnector(paths.raw, **connector_options)
     if source == SourceName.europe_pmc:
         return EuropePmcConnector(paths.raw, **connector_options)
     if source == SourceName.import_file:
@@ -296,166 +293,65 @@ def _deterministic_manuscript(config: ProjectConfig, evidence: EvidenceBundle) -
     citations = {item.claim_type: item for item in evidence.items}
     corpus = citations["corpus_size"]
     complete = citations["acquisition_completeness"]
-    english = config.protocol.language == "en"
     lines = [
-        (
-            f"# {config.protocol.title}: A bibliometric analysis"
-            if english
-            else f"# {config.protocol.title}：文献计量分析"
-        ),
+        f"# {config.protocol.title}：文献计量分析",
         "",
-        "## Abstract" if english else "## 摘要",
+        "## 摘要",
         "",
         (
-            (
-                f"This reproducible bibliometric analysis examines {config.protocol.title}. "
-                f"The registered protocol uses {config.protocol.source.value} and the "
-                f"predeclared publication-year range. After normalization and deterministic "
-                f"exact deduplication, the benchmark corpus contains {corpus.value} works. "
-                f"[{corpus.evidence_id}]"
-            )
-            if english
-            else (
-                f"本研究围绕“{config.protocol.title}”开展可复现的文献计量分析。"
-                f"检索采用项目配置中预先登记的年份范围，数据来自 "
-                f"{config.protocol.source.value}。经规范化和精确去重后，"
-                f"分析语料包含 {corpus.value} 篇文献。[{corpus.evidence_id}]"
-            )
+            f"本研究围绕“{config.protocol.title}”开展可复现的文献计量分析。"
+            f"检索采用项目配置中预先登记的年份范围，数据来自 "
+            f"{config.protocol.source.value}。经规范化和精确去重后，"
+            f"分析语料包含 {corpus.value} 篇文献。[{corpus.evidence_id}]"
         ),
         "",
-        "## 1 Introduction" if english else "## 1 引言",
+        "## 1 数据与方法",
         "",
         (
-            "The report evaluates a frozen metadata snapshot and treats bibliometric "
-            "relationships as descriptive evidence rather than causal mechanisms."
-            if english
-            else "本报告评估冻结的元数据快照，并将文献计量关系作为描述性证据而非因果机制。"
-        ),
-        "",
-        "## 2 Data and methods" if english else "## 2 数据与方法",
-        "",
-        (
-            (
-                "Acquisition used cursor pagination until the registered cap or the source "
-                "termination condition was reached. The source and acquisition status is "
-                f"{json.dumps(complete.value, ensure_ascii=False)}. [{complete.evidence_id}]"
-            )
-            if english
-            else (
-                f"数据采集采用游标分页直至来源不再返回后续游标。数据源报告与实际采集情况为："
-                f"{json.dumps(complete.value, ensure_ascii=False)}。[{complete.evidence_id}]"
-            )
+            f"数据采集采用游标分页直至来源不再返回后续游标。数据源报告与实际采集情况为："
+            f"{json.dumps(complete.value, ensure_ascii=False)}。[{complete.evidence_id}]"
         ),
         (
-            (
-                "The analysis uses full counting for descriptive output and retains candidate "
-                "nodes, edge weights, association strength, communities, and visualization "
-                "selection parameters. Network relations are not interpreted as causal links."
-            )
-            if english
-            else (
-                "分析采用全计数描述年度产出、来源、作者和机构分布；网络分析保存候选节点、"
-                "原始边权、关联强度、社群结果及可视化筛选参数。网络关系仅用于描述本语料中的"
-                "结构联系，不作为因果关系或论文内容结论。"
-            )
+            "分析采用全计数描述年度产出、来源、作者和机构分布；网络分析保存候选节点、"
+            "原始边权、关联强度、社群结果及可视化筛选参数。网络关系仅用于描述本语料中的"
+            "结构联系，不作为因果关系或论文内容结论。"
         ),
         "",
-        "## 3 Results" if english else "## 3 结果",
+        "## 2 结果",
         "",
     ]
-    section_claims = {
-        "3.1": (
-            "time_span",
-            "annual_peak",
-            "growth",
-            "top_source",
-        ),
-        "3.2": (
-            "top_author",
-            "top_institution",
-            "coauthorship_structure",
-            "institution_collaboration_structure",
-        ),
-        "3.3": (
-            "citation_summary",
-            "zero_citation_share",
-        ),
-        "3.4": (
-            "keyword_cooccurrence_structure",
-            "keyword_temporal_dynamics",
-        ),
-        "3.5": (
-            "citation_structure",
-            "cocitation_structure",
-            "bibliographic_coupling_structure",
-        ),
-    }
-    headings = {
-        "3.1": "Performance and sources" if english else "产出与来源结构",
-        "3.2": "Authors, institutions, and collaboration" if english else "作者、机构与合作",
-        "3.3": "Citation impact" if english else "引文影响",
-        "3.4": "Conceptual structure" if english else "概念结构",
-        "3.5": "Intellectual structure" if english else "知识基础",
-    }
-    figure_items = [
-        item for item in evidence.items if item.claim_type == "figure"
-    ]
-    for section, claim_types in section_claims.items():
-        lines.append(f"### {section} {headings[section]}")
-        lines.append("")
-        for claim_type in claim_types:
-            item = citations.get(claim_type)
-            if item:
-                lines.append(f"{item.statement} [{item.evidence_id}]")
-                lines.append("")
-        for item in figure_items:
-            figure_name = str(item.value.get("figure_name", ""))
-            if figure_section(figure_name) != section:
-                continue
-            figure_number = int(item.value.get("figure_number", 0))
-            label = figure_name.replace("_", " ")
-            sentence = (
-                f"[[FIGURE:{figure_name}]] Figure {figure_number} presents the deterministic "
-                f"{label} output for this snapshot. [{item.evidence_id}]"
-                if english
-                else (
-                    f"[[FIGURE:{figure_name}]] 图{figure_number}展示本次快照的"
-                    f"{label}确定性分析结果。[{item.evidence_id}]"
-                )
-            )
-            lines.append(sentence)
+    for claim_type in (
+        "time_span",
+        "annual_peak",
+        "growth",
+        "top_source",
+        "top_author",
+        "top_institution",
+        "citation_summary",
+        "coauthorship_structure",
+        "keyword_cooccurrence_structure",
+        "citation_structure",
+        "cocitation_structure",
+        "bibliographic_coupling_structure",
+    ):
+        item = citations.get(claim_type)
+        if item:
+            lines.append(f"{item.statement} [{item.evidence_id}]")
             lines.append("")
     lines += [
-        "## 4 Discussion and limitations" if english else "## 4 讨论与局限",
+        "## 3 讨论与局限",
         "",
         (
-            (
-                "The results describe the corpus under a specific query, date range, source, "
-                "retrieval time, and network parameterization. Database coverage, missing "
-                "metadata, entity resolution, and thresholds can alter the results; substantive "
-                "theme labels still require human verification against representative texts."
-            )
-            if english
-            else (
-                "以上结果描述的是特定检索式、年份范围、数据源和采集时点下的语料结构。"
-                "数据库覆盖、缺失元数据、实体消歧和网络阈值均可能影响结论；主题含义和机制性"
-                "判断仍需结合代表性文献全文进行人工核验。"
-            )
+            "以上结果描述的是特定检索式、年份范围、数据源和采集时点下的语料结构。"
+            "数据库覆盖、缺失元数据、实体消歧和网络阈值均可能影响结论；主题含义和机制性"
+            "判断仍需结合代表性文献全文进行人工核验。"
         ),
         "",
-        "## 5 Conclusion" if english else "## 5 结论",
+        "## 4 结论",
         "",
         (
-            (
-                "This report preserves a traceable path from raw metadata to canonical tables, "
-                "analysis figures, evidence items, and textual claims. Its outputs are "
-                "bibliometric evidence and do not replace systematic reading."
-            )
-            if english
-            else (
-                "本报告提供了一条从原始元数据到结构化表、分析图、证据项和文本声明的可追溯路径。"
-                "其结论应作为文献计量证据，而不是替代系统性阅读。"
-            )
+            "本报告提供了一条从原始元数据到结构化表、分析图、证据项和文本声明的可追溯路径。"
+            "其结论应作为文献计量证据，而不是替代系统性阅读。"
         ),
     ]
     manuscript = "\n".join(lines)
@@ -666,12 +562,6 @@ def run_project(
     save_scale_plan(tables, config, paths.audit / "scale_plan.json")
     _save_analyses(paths, analyses)
     export_all(tables, analyses, paths.analyses / "exports")
-    graph_grounding = build_bibliometric_knowledge_graph(tables, analyses)
-    graph_grounding_summary = save_graph_grounding(
-        graph_grounding,
-        paths.evidence,
-        dataset_id=config.project_id,
-    )
 
     _set_state(paths, "rendering")
     figures = render_all(
@@ -696,7 +586,25 @@ def run_project(
         ],
     )
 
-    evidence = build_evidence(acquisition.manifest, tables, analyses, figures, quality)
+    graph_explanation_path = paths.evidence / "graph_explanations.json"
+    if config.graph_explanation.mode != "disabled" and graph_explanation_path.exists():
+        graph_explanations = read_json(graph_explanation_path)
+    else:
+        graph_explanations = generate_graph_explanations(
+            analyses,
+            figures,
+            config.graph_explanation,
+            max_nodes=config.visualization_max_nodes,
+        )
+        write_json(graph_explanation_path, graph_explanations)
+    evidence = build_evidence(
+        acquisition.manifest,
+        tables,
+        analyses,
+        figures,
+        quality,
+        graph_explanations,
+    )
     save_evidence(evidence, paths.evidence)
 
     _set_state(paths, "generating")
@@ -725,7 +633,6 @@ def run_project(
         "documents": analyses.summary["documents"],
         "figures": len(figures),
         "evidence_items": len(evidence.items),
-        "graph_grounding": graph_grounding_summary,
         "generation_model": generation.model,
         "generation_validation": generation.validation,
         "report": str(html_path),
@@ -878,13 +785,25 @@ def resume_generation(
         field_coverage=pd.read_parquet(paths.quality / "field_coverage.parquet"),
         analysis_readiness=pd.read_parquet(paths.quality / "analysis_readiness.parquet"),
     )
-    graph_grounding = build_bibliometric_knowledge_graph(tables, analyses)
-    graph_grounding_summary = save_graph_grounding(
-        graph_grounding,
-        paths.evidence,
-        dataset_id=config.project_id,
+    graph_explanation_path = paths.evidence / "graph_explanations.json"
+    if config.graph_explanation.mode != "disabled" and graph_explanation_path.exists():
+        graph_explanations = read_json(graph_explanation_path)
+    else:
+        graph_explanations = generate_graph_explanations(
+            analyses,
+            figures,
+            config.graph_explanation,
+            max_nodes=config.visualization_max_nodes,
+        )
+        write_json(graph_explanation_path, graph_explanations)
+    evidence = build_evidence(
+        manifest,
+        tables,
+        analyses,
+        figures,
+        quality,
+        graph_explanations,
     )
-    evidence = build_evidence(manifest, tables, analyses, figures, quality)
     save_evidence(evidence, paths.evidence)
     _set_state(paths, "generating", {"resumed": True})
     if use_llm:
@@ -912,7 +831,6 @@ def resume_generation(
         "documents": analyses.summary["documents"],
         "figures": len(figures),
         "evidence_items": len(evidence.items),
-        "graph_grounding": graph_grounding_summary,
         "generation_model": generation.model,
         "generation_validation": generation.validation,
         "report": str(html_path),
@@ -1038,12 +956,6 @@ def recompute_downstream(root: Path) -> dict[str, Any]:
     save_scale_plan(tables, config, paths.audit / "scale_plan.json")
     _save_analyses(paths, analyses)
     export_all(tables, analyses, paths.analyses / "exports")
-    graph_grounding = build_bibliometric_knowledge_graph(tables, analyses)
-    graph_grounding_summary = save_graph_grounding(
-        graph_grounding,
-        paths.evidence,
-        dataset_id=config.project_id,
-    )
     figures = render_all(
         tables,
         analyses,
@@ -1065,7 +977,21 @@ def recompute_downstream(root: Path) -> dict[str, Any]:
             for figure in figures
         ],
     )
-    evidence = build_evidence(manifest, tables, analyses, figures, quality)
+    graph_explanations = generate_graph_explanations(
+        analyses,
+        figures,
+        config.graph_explanation,
+        max_nodes=config.visualization_max_nodes,
+    )
+    write_json(paths.evidence / "graph_explanations.json", graph_explanations)
+    evidence = build_evidence(
+        manifest,
+        tables,
+        analyses,
+        figures,
+        quality,
+        graph_explanations,
+    )
     save_evidence(evidence, paths.evidence)
     word_path = (
         export_word_report(paths.root) if (paths.report / "manuscript.md").exists() else None
@@ -1081,7 +1007,92 @@ def recompute_downstream(root: Path) -> dict[str, Any]:
         "documents": analyses.summary["documents"],
         "figures": len(figures),
         "evidence_items": len(evidence.items),
-        "graph_grounding": graph_grounding_summary,
         "state": "deterministic_complete",
         "word_report": str(word_path) if word_path else None,
     }
+
+
+def run_graph_explanation_stage(root: Path) -> dict[str, Any]:
+    """Run the real graph-explanation node against saved CiteWeave artifacts.
+
+    This entry point exists for module-level experiments, but it reads and writes
+    the same analyses, figures, EvidenceBundle, and manuscript inputs used by the
+    end-to-end workflow.
+    """
+    paths = ProjectPaths(root)
+    config = load_config(paths.root / "project.yml")
+    if config.graph_explanation.mode == "disabled":
+        raise ValueError("graph_explanation.mode must be enabled in project.yml")
+    manifest = AcquisitionManifest.model_validate(
+        read_json(paths.audit / "acquisition_manifest.json")
+    )
+    tables = _load_canonical(paths)
+    analyses = _load_analyses(paths)
+    figures = _load_figures(paths)
+    quality = build_quality_report(manifest, tables)
+    graph_explanations = generate_graph_explanations(
+        analyses,
+        figures,
+        config.graph_explanation,
+        max_nodes=config.visualization_max_nodes,
+    )
+    write_json(paths.evidence / "graph_explanations.json", graph_explanations)
+    evidence = build_evidence(
+        manifest,
+        tables,
+        analyses,
+        figures,
+        quality,
+        graph_explanations,
+    )
+    save_evidence(evidence, paths.evidence)
+    verified = sum(
+        len(item.get("verified_claims") or []) for item in graph_explanations
+    )
+    rejected = sum(
+        len(item.get("rejected_claims") or []) for item in graph_explanations
+    )
+    _set_state(
+        paths,
+        "graph_explanation_complete",
+        {
+            "mode": config.graph_explanation.mode,
+            "figures": len(graph_explanations),
+            "verified_claims": verified,
+            "rejected_claims": rejected,
+        },
+    )
+    return {
+        "project": str(paths.root),
+        "mode": config.graph_explanation.mode,
+        "figures": len(graph_explanations),
+        "verified_claims": verified,
+        "rejected_claims": rejected,
+        "evidence_items": len(evidence.items),
+        "output": str(paths.evidence / "graph_explanations.json"),
+        "next_command": f"citeweave resume {paths.root} --llm",
+    }
+
+
+def run_graph_ablation_stage(
+    root: Path,
+    *,
+    repeats: int = 5,
+    output: Path | None = None,
+) -> dict[str, Any]:
+    """Run VLM, flat-KG, and GraphRAG on the same saved system task."""
+    paths = ProjectPaths(root)
+    config = load_config(paths.root / "project.yml")
+    analyses = _load_analyses(paths)
+    figures = _load_figures(paths)
+    if output is None:
+        timestamp = datetime.now(UTC).strftime("%Y%m%d-%H%M%S")
+        output = paths.root / "experiments" / f"system-graph-ablation-{timestamp}"
+    return run_graph_ablation(
+        analyses,
+        figures,
+        config.graph_explanation,
+        max_nodes=config.visualization_max_nodes,
+        repeats=repeats,
+        output=output,
+    )

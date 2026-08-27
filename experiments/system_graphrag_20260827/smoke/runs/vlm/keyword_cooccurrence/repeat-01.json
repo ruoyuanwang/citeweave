@@ -1,0 +1,268 @@
+{
+  "figure_name": "network_keyword_cooccurrence",
+  "network_name": "keyword_cooccurrence",
+  "mode": "vlm",
+  "model": "qwen3-vl-plus-2025-12-19",
+  "status": "complete",
+  "overview": "关键词共现网络包含6个社区，节点大小反映出现频次，边表示共现关系；Cluster 1（蓝色）聚焦AI基础技术，Cluster 2（橙色）围绕Covid-19相关研究，Cluster 3（绿色）关联医学教育与生成式AI，Cluster 4（紫色）为文献计量主题，Cluster 5（红色）含数据库与软件工具，Cluster 6（青色）涉及调查方法类关键词。",
+  "verified_claims": [],
+  "rejected_claims": [
+    {
+      "claim_index": 1,
+      "reason": "unsupported evidence edge",
+      "raw": {
+        "type": "community_structure",
+        "statement": "在Cluster 1中，'Artificial intelligence'（N5）、'Machine learning'（N43）、'Large language models'（N40）与'ChatGPT'（N12）通过共现边紧密连接，构成以基础AI技术为核心的子结构。",
+        "focus_node": "",
+        "nodes": [
+          "N5",
+          "N43",
+          "N40",
+          "N12"
+        ],
+        "communities": {
+          "N5": 1,
+          "N43": 1,
+          "N40": 1,
+          "N12": 1
+        },
+        "path": [],
+        "evidence_edges": [
+          [
+            "N5",
+            "N43"
+          ],
+          [
+            "N5",
+            "N40"
+          ],
+          [
+            "N5",
+            "N12"
+          ],
+          [
+            "N43",
+            "N40"
+          ],
+          [
+            "N40",
+            "N12"
+          ]
+        ]
+      }
+    },
+    {
+      "claim_index": 2,
+      "reason": "claim has no cross-community edge; unsupported evidence edge",
+      "raw": {
+        "type": "cross_community",
+        "statement": "'Bibliometric analysis'（N7）同时出现在Cluster 1（蓝色）与Cluster 4（紫色）的边界区域，并与Cluster 1中的'Machine learning'（N43）及Cluster 4中的'Bibliometrics'（N8）存在共现边。",
+        "focus_node": "",
+        "nodes": [
+          "N7",
+          "N43",
+          "N8"
+        ],
+        "communities": {
+          "N7": 1,
+          "N43": 1,
+          "N8": 4
+        },
+        "path": [],
+        "evidence_edges": [
+          [
+            "N7",
+            "N43"
+          ],
+          [
+            "N7",
+            "N8"
+          ]
+        ]
+      }
+    },
+    {
+      "claim_index": 3,
+      "reason": "incorrect community assignment; invalid multi-hop path; unsupported evidence edge",
+      "raw": {
+        "type": "multi_hop",
+        "statement": "'Sars-cov-2'（N67）与'Generative artificial intelligence'（N36）通过'Natural language processing'（N49）形成三节点共现路径：N67—N49—N36。",
+        "focus_node": "",
+        "nodes": [
+          "N67",
+          "N49",
+          "N36"
+        ],
+        "communities": {
+          "N67": 2,
+          "N49": 1,
+          "N36": 3
+        },
+        "path": [
+          "N67",
+          "N49",
+          "N36"
+        ],
+        "evidence_edges": [
+          [
+            "N67",
+            "N49"
+          ],
+          [
+            "N49",
+            "N36"
+          ]
+        ]
+      }
+    },
+    {
+      "claim_index": 4,
+      "reason": "invalid multi-hop path; unsupported evidence edge",
+      "raw": {
+        "type": "multi_hop",
+        "statement": "'PubMed'（N60）与'Surveys and questionnaires'（N73）通过'Databases, factual'（N22）和'Cross-sectional studies'（N21）形成四节点共现路径：N60—N22—N21—N73。",
+        "focus_node": "",
+        "nodes": [
+          "N60",
+          "N22",
+          "N21",
+          "N73"
+        ],
+        "communities": {
+          "N60": 5,
+          "N22": 5,
+          "N21": 6,
+          "N73": 6
+        },
+        "path": [
+          "N60",
+          "N22",
+          "N21",
+          "N73"
+        ],
+        "evidence_edges": [
+          [
+            "N60",
+            "N22"
+          ],
+          [
+            "N22",
+            "N21"
+          ],
+          [
+            "N21",
+            "N73"
+          ]
+        ]
+      }
+    },
+    {
+      "claim_index": 5,
+      "reason": "claimed hub is outside the top weighted-degree decile; unsupported evidence edge",
+      "raw": {
+        "type": "hub",
+        "statement": "'Software'（N70）作为Hub节点，直接与'PubMed'（N60）、'Databases, factual'（N22）、'Biomedical research'（N10）、'Bibliometrics'（N8）及'Covid-19'（N19）等5个不同社区的节点共现。",
+        "focus_node": "N70",
+        "nodes": [
+          "N70",
+          "N60",
+          "N22",
+          "N10",
+          "N8",
+          "N19"
+        ],
+        "communities": {
+          "N60": 5,
+          "N22": 5,
+          "N10": 4,
+          "N8": 4,
+          "N19": 2,
+          "N70": 5
+        },
+        "path": [],
+        "evidence_edges": [
+          [
+            "N70",
+            "N60"
+          ],
+          [
+            "N70",
+            "N22"
+          ],
+          [
+            "N70",
+            "N10"
+          ],
+          [
+            "N70",
+            "N8"
+          ],
+          [
+            "N70",
+            "N19"
+          ]
+        ]
+      }
+    }
+  ],
+  "caveats": [
+    "所有关系声明仅基于图中显式边（共现），不推断语义或因果；",
+    "社区归属依据图例颜色标注，未使用算法聚类结果；",
+    "未连接节点即使视觉邻近亦不视为关系；",
+    "节点大小仅表示出现频次，不参与关系判断。"
+  ],
+  "verification": {
+    "reported_claims": 5,
+    "verified_claims": 0,
+    "rejected_claims": 5,
+    "claim_support_rate": 0.0
+  },
+  "metrics": {
+    "requested_slots": 5,
+    "reported_abstentions": 0,
+    "abstention_rate": 0.0,
+    "reported_claims": 5,
+    "verified_claims": 0,
+    "claim_support_rate": 0.0,
+    "reported_edges": 17,
+    "supported_edges": 6,
+    "unsupported_edges": 11,
+    "edge_hallucination_rate": 0.6471,
+    "unsupported_edge_claims": 5,
+    "reported_multi_hop_claims": 2,
+    "valid_multi_hop_claims": 0,
+    "path_validity_rate": 0.0,
+    "verified_complex_claims": 0,
+    "reported_slot_coverage": 1.0,
+    "verified_slot_coverage": 0.0,
+    "reported_claims_by_type": {
+      "bridge": 0,
+      "community_structure": 1,
+      "cross_community": 1,
+      "hub": 1,
+      "multi_hop": 2
+    },
+    "verified_claims_by_type": {
+      "bridge": 0,
+      "community_structure": 0,
+      "cross_community": 0,
+      "hub": 0,
+      "multi_hop": 0
+    }
+  },
+  "retrieval": null,
+  "usage": {
+    "prompt_tokens": 4872,
+    "completion_tokens": 1283,
+    "total_tokens": 6155,
+    "completion_tokens_details": {
+      "text_tokens": 1283
+    },
+    "prompt_tokens_details": {
+      "image_tokens": 2496,
+      "text_tokens": 2376
+    }
+  },
+  "prompt": "请为CiteWeave最终论文的“概念结构”章节生成图解释证据计划。\n这不是问答题。为保证不同输入条件可比较，请尝试完成固定的5个任务槽：1条社区内部关系、\n1条跨社区关系、2条不同的多跳关系、1条hub或bridge关系。多跳关系至少包含3个节点。\n最后一个槽位的type必须在“hub”和“bridge”中二选一，禁止输出“hub_or_bridge”等组合类型。\nhub或bridge声明必须在focus_node中填写唯一被主张为hub或割点的节点，且该节点必须出现在nodes中；\nnodes中的其他节点只是证据邻居，不会被视为hub或割点。hub或bridge的每条evidence_edges都必须连接focus_node。\n其他类型的focus_node必须留空字符串。\n某个槽位证据不足时不要猜测，将其写入abstentions并说明原因；不得用重复声明填充槽位。\nstatement不得使用“导致”“促进”“演化”“迁移趋势”“建立关联”等超出共现结构的语义；\n共现边只允许表述为结构连接或共同出现。最终系统会忽略你的自由表述并根据证据重新生成克制句子。\n\n节点别名图例：\n[\n  {\n    \"alias\": \"N1\",\n    \"label\": \"AI\"\n  },\n  {\n    \"alias\": \"N2\",\n    \"label\": \"Algorithm\"\n  },\n  {\n    \"alias\": \"N3\",\n    \"label\": \"Algorithms\"\n  },\n  {\n    \"alias\": \"N4\",\n    \"label\": \"Application\"\n  },\n  {\n    \"alias\": \"N5\",\n    \"label\": \"Artificial intelligence\"\n  },\n  {\n    \"alias\": \"N6\",\n    \"label\": \"Bibliometric\"\n  },\n  {\n    \"alias\": \"N7\",\n    \"label\": \"Bibliometric analysis\"\n  },\n  {\n    \"alias\": \"N8\",\n    \"label\": \"Bibliometrics\"\n  },\n  {\n    \"alias\": \"N9\",\n    \"label\": \"Bioinformatics\"\n  },\n  {\n    \"alias\": \"N10\",\n    \"label\": \"Biomedical research\"\n  },\n  {\n    \"alias\": \"N11\",\n    \"label\": \"Chatbots\"\n  },\n  {\n    \"alias\": \"N12\",\n    \"label\": \"ChatGPT\"\n  },\n  {\n    \"alias\": \"N13\",\n    \"label\": \"China\"\n  },\n  {\n    \"alias\": \"N14\",\n    \"label\": \"Citespace\"\n  },\n  {\n    \"alias\": \"N15\",\n    \"label\": \"Clinical decision support\"\n  },\n  {\n    \"alias\": \"N16\",\n    \"label\": \"Clinical trials\"\n  },\n  {\n    \"alias\": \"N17\",\n    \"label\": \"Computer vision\"\n  },\n  {\n    \"alias\": \"N18\",\n    \"label\": \"Content analysis\"\n  },\n  {\n    \"alias\": \"N19\",\n    \"label\": \"Covid-19\"\n  },\n  {\n    \"alias\": \"N20\",\n    \"label\": \"Critical care\"\n  },\n  {\n    \"alias\": \"N21\",\n    \"label\": \"Cross-sectional studies\"\n  },\n  {\n    \"alias\": \"N22\",\n    \"label\": \"Databases, factual\"\n  },\n  {\n    \"alias\": \"N23\",\n    \"label\": \"Deep learning\"\n  },\n  {\n    \"alias\": \"N24\",\n    \"label\": \"Dental research\"\n  },\n  {\n    \"alias\": \"N25\",\n    \"label\": \"Digital health\"\n  },\n  {\n    \"alias\": \"N26\",\n    \"label\": \"Digital technology\"\n  },\n  {\n    \"alias\": \"N27\",\n    \"label\": \"Education, medical\"\n  },\n  {\n    \"alias\": \"N28\",\n    \"label\": \"Educational measurement\"\n  },\n  {\n    \"alias\": \"N29\",\n    \"label\": \"Ethics\"\n  },\n  {\n    \"alias\": \"N30\",\n    \"label\": \"Evidence synthesis\"\n  },\n  {\n    \"alias\": \"N31\",\n    \"label\": \"Fairness\"\n  },\n  {\n    \"alias\": \"N32\",\n    \"label\": \"Federated learning\"\n  },\n  {\n    \"alias\": \"N33\",\n    \"label\": \"Feedback\"\n  },\n  {\n    \"alias\": \"N34\",\n    \"label\": \"Future directions\"\n  },\n  {\n    \"alias\": \"N35\",\n    \"label\": \"Generative ai\"\n  },\n  {\n    \"alias\": \"N36\",\n    \"label\": \"Generative artificial intelligence\"\n  },\n  {\n    \"alias\": \"N37\",\n    \"label\": \"Healthcare\"\n  },\n  {\n    \"alias\": \"N38\",\n    \"label\": \"Intensive care units\"\n  },\n  {\n    \"alias\": \"N39\",\n    \"label\": \"Language\"\n  },\n  {\n    \"alias\": \"N40\",\n    \"label\": \"Large language models\"\n  },\n  {\n    \"alias\": \"N41\",\n    \"label\": \"Large language models (llms)\"\n  },\n  {\n    \"alias\": \"N42\",\n    \"label\": \"Llm\"\n  },\n  {\n    \"alias\": \"N43\",\n    \"label\": \"Machine learning\"\n  },\n  {\n    \"alias\": \"N44\",\n    \"label\": \"Medical education\"\n  },\n  {\n    \"alias\": \"N45\",\n    \"label\": \"Medicine\"\n  },\n  {\n    \"alias\": \"N46\",\n    \"label\": \"Mental health\"\n  },\n  {\n    \"alias\": \"N47\",\n    \"label\": \"Mental health services\"\n  },\n  {\n    \"alias\": \"N48\",\n    \"label\": \"Mobile health\"\n  },\n  {\n    \"alias\": \"N49\",\n    \"label\": \"Natural language processing\"\n  },\n  {\n    \"alias\": \"N50\",\n    \"label\": \"Network analysis\"\n  },\n  {\n    \"alias\": \"N51\",\n    \"label\": \"Neuroimaging\"\n  },\n  {\n    \"alias\": \"N52\",\n    \"label\": \"Nlp\"\n  },\n  {\n    \"alias\": \"N53\",\n    \"label\": \"Pandemics\"\n  },\n  {\n    \"alias\": \"N54\",\n    \"label\": \"Periodicals as topic\"\n  },\n  {\n    \"alias\": \"N55\",\n    \"label\": \"Precision medicine\"\n  },\n  {\n    \"alias\": \"N56\",\n    \"label\": \"Prisma\"\n  },\n  {\n    \"alias\": \"N57\",\n    \"label\": \"Psychiatry\"\n  },\n  {\n    \"alias\": \"N58\",\n    \"label\": \"Public health\"\n  },\n  {\n    \"alias\": \"N59\",\n    \"label\": \"Publishing\"\n  },\n  {\n    \"alias\": \"N60\",\n    \"label\": \"Pubmed\"\n  },\n  {\n    \"alias\": \"N61\",\n    \"label\": \"Rehabilitation\"\n  },\n  {\n    \"alias\": \"N62\",\n    \"label\": \"Reproducibility of results\"\n  },\n  {\n    \"alias\": \"N63\",\n    \"label\": \"Research\"\n  },\n  {\n    \"alias\": \"N64\",\n    \"label\": \"Research design\"\n  },\n  {\n    \"alias\": \"N65\",\n    \"label\": \"Research trends\"\n  },\n  {\n    \"alias\": \"N66\",\n    \"label\": \"Retrieval-augmented generation\"\n  },\n  {\n    \"alias\": \"N67\",\n    \"label\": \"Sars-cov-2\"\n  },\n  {\n    \"alias\": \"N68\",\n    \"label\": \"Scoping review\"\n  },\n  {\n    \"alias\": \"N69\",\n    \"label\": \"Semantics\"\n  },\n  {\n    \"alias\": \"N70\",\n    \"label\": \"Software\"\n  },\n  {\n    \"alias\": \"N71\",\n    \"label\": \"Stroke\"\n  },\n  {\n    \"alias\": \"N72\",\n    \"label\": \"Students, medical\"\n  },\n  {\n    \"alias\": \"N73\",\n    \"label\": \"Surveys and questionnaires\"\n  },\n  {\n    \"alias\": \"N74\",\n    \"label\": \"Sustainable development\"\n  },\n  {\n    \"alias\": \"N75\",\n    \"label\": \"Systematic review\"\n  },\n  {\n    \"alias\": \"N76\",\n    \"label\": \"Telemedicine\"\n  },\n  {\n    \"alias\": \"N77\",\n    \"label\": \"Traditional chinese medicine\"\n  },\n  {\n    \"alias\": \"N78\",\n    \"label\": \"United states\"\n  },\n  {\n    \"alias\": \"N79\",\n    \"label\": \"Vosviewer\"\n  },\n  {\n    \"alias\": \"N80\",\n    \"label\": \"Writing\"\n  }\n]\n\n当前证据条件：\n本组只提供PNG；别名图例仅用于统一输出标识，不提供社区、边或中心性信息。不得把视觉上接近但没有连线的节点写成关系。\n\n严格按照下面的JSON结构输出：\n{\n  \"overview\": \"一句不含新关系的总体观察\",\n  \"claims\": [\n    {\n      \"type\": \"hub|community_structure|cross_community|multi_hop|bridge\",\n      \"statement\": \"可直接用于论文写作的克制表述\",\n      \"focus_node\": \"N1（仅hub或bridge使用；其他类型留空）\",\n      \"nodes\": [\n        \"N1\",\n        \"N2\"\n      ],\n      \"communities\": {\n        \"N1\": 1,\n        \"N2\": 2\n      },\n      \"path\": [\n        \"N1\",\n        \"N3\",\n        \"N2\"\n      ],\n      \"evidence_edges\": [\n        [\n          \"N1\",\n          \"N3\"\n        ],\n        [\n          \"N3\",\n          \"N2\"\n        ]\n      ]\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"slot\": \"community_structure|cross_community|multi_hop_1|multi_hop_2|hub_or_bridge\",\n      \"reason\": \"当前输入不足以支持该槽位\"\n    }\n  ],\n  \"caveats\": [\n    \"解释边界\"\n  ]\n}\n",
+  "raw_answer": "{\n  \"overview\": \"关键词共现网络包含6个社区，节点大小反映出现频次，边表示共现关系；Cluster 1（蓝色）聚焦AI基础技术，Cluster 2（橙色）围绕Covid-19相关研究，Cluster 3（绿色）关联医学教育与生成式AI，Cluster 4（紫色）为文献计量主题，Cluster 5（红色）含数据库与软件工具，Cluster 6（青色）涉及调查方法类关键词。\",\n  \"claims\": [\n    {\n      \"type\": \"community_structure\",\n      \"statement\": \"在Cluster 1中，'Artificial intelligence'（N5）、'Machine learning'（N43）、'Large language models'（N40）与'ChatGPT'（N12）通过共现边紧密连接，构成以基础AI技术为核心的子结构。\",\n      \"focus_node\": \"\",\n      \"nodes\": [\n        \"N5\",\n        \"N43\",\n        \"N40\",\n        \"N12\"\n      ],\n      \"communities\": {\n        \"N5\": 1,\n        \"N43\": 1,\n        \"N40\": 1,\n        \"N12\": 1\n      },\n      \"path\": [],\n      \"evidence_edges\": [\n        [\"N5\", \"N43\"],\n        [\"N5\", \"N40\"],\n        [\"N5\", \"N12\"],\n        [\"N43\", \"N40\"],\n        [\"N40\", \"N12\"]\n      ]\n    },\n    {\n      \"type\": \"cross_community\",\n      \"statement\": \"'Bibliometric analysis'（N7）同时出现在Cluster 1（蓝色）与Cluster 4（紫色）的边界区域，并与Cluster 1中的'Machine learning'（N43）及Cluster 4中的'Bibliometrics'（N8）存在共现边。\",\n      \"focus_node\": \"\",\n      \"nodes\": [\n        \"N7\",\n        \"N43\",\n        \"N8\"\n      ],\n      \"communities\": {\n        \"N7\": 1,\n        \"N43\": 1,\n        \"N8\": 4\n      },\n      \"path\": [],\n      \"evidence_edges\": [\n        [\"N7\", \"N43\"],\n        [\"N7\", \"N8\"]\n      ]\n    },\n    {\n      \"type\": \"multi_hop\",\n      \"statement\": \"'Sars-cov-2'（N67）与'Generative artificial intelligence'（N36）通过'Natural language processing'（N49）形成三节点共现路径：N67—N49—N36。\",\n      \"focus_node\": \"\",\n      \"nodes\": [\n        \"N67\",\n        \"N49\",\n        \"N36\"\n      ],\n      \"communities\": {\n        \"N67\": 2,\n        \"N49\": 1,\n        \"N36\": 3\n      },\n      \"path\": [\n        \"N67\",\n        \"N49\",\n        \"N36\"\n      ],\n      \"evidence_edges\": [\n        [\"N67\", \"N49\"],\n        [\"N49\", \"N36\"]\n      ]\n    },\n    {\n      \"type\": \"multi_hop\",\n      \"statement\": \"'PubMed'（N60）与'Surveys and questionnaires'（N73）通过'Databases, factual'（N22）和'Cross-sectional studies'（N21）形成四节点共现路径：N60—N22—N21—N73。\",\n      \"focus_node\": \"\",\n      \"nodes\": [\n        \"N60\",\n        \"N22\",\n        \"N21\",\n        \"N73\"\n      ],\n      \"communities\": {\n        \"N60\": 5,\n        \"N22\": 5,\n        \"N21\": 6,\n        \"N73\": 6\n      },\n      \"path\": [\n        \"N60\",\n        \"N22\",\n        \"N21\",\n        \"N73\"\n      ],\n      \"evidence_edges\": [\n        [\"N60\", \"N22\"],\n        [\"N22\", \"N21\"],\n        [\"N21\", \"N73\"]\n      ]\n    },\n    {\n      \"type\": \"hub\",\n      \"statement\": \"'Software'（N70）作为Hub节点，直接与'PubMed'（N60）、'Databases, factual'（N22）、'Biomedical research'（N10）、'Bibliometrics'（N8）及'Covid-19'（N19）等5个不同社区的节点共现。\",\n      \"focus_node\": \"N70\",\n      \"nodes\": [\n        \"N60\",\n        \"N22\",\n        \"N10\",\n        \"N8\",\n        \"N19\"\n      ],\n      \"communities\": {\n        \"N60\": 5,\n        \"N22\": 5,\n        \"N10\": 4,\n        \"N8\": 4,\n        \"N19\": 2\n      },\n      \"path\": [],\n      \"evidence_edges\": [\n        [\"N70\", \"N60\"],\n        [\"N70\", \"N22\"],\n        [\"N70\", \"N10\"],\n        [\"N70\", \"N8\"],\n        [\"N70\", \"N19\"]\n      ]\n    }\n  ],\n  \"abstentions\": [],\n  \"caveats\": [\n    \"所有关系声明仅基于图中显式边（共现），不推断语义或因果；\",\n    \"社区归属依据图例颜色标注，未使用算法聚类结果；\",\n    \"未连接节点即使视觉邻近亦不视为关系；\",\n    \"节点大小仅表示出现频次，不参与关系判断。\"\n  ]\n}"
+}

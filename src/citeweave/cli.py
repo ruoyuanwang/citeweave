@@ -8,6 +8,8 @@ from typing import Annotated
 import typer
 
 from .acceptance import verify_project
+from .graph_ablation import rescore_graph_ablation
+from .graph_suite import aggregate_graph_suite, prepare_graph_suite, run_graph_suite
 from .harvest_acceptance import verify_bulk_harvest
 from .io import load_config, slugify, write_json
 from .large_scale_visualization import render_large_project
@@ -25,6 +27,8 @@ from .workflow import (
     recompute_downstream,
     refine_staged_generation,
     resume_generation,
+    run_graph_ablation_stage,
+    run_graph_explanation_stage,
     run_project,
 )
 
@@ -314,6 +318,80 @@ def recompute(
 ) -> None:
     """Rebuild all deterministic downstream artifacts without network acquisition."""
     typer.echo(json.dumps(recompute_downstream(project), ensure_ascii=False, indent=2))
+
+
+@app.command("explain-graphs")
+def explain_graphs(
+    project: Annotated[Path, typer.Argument(help="Project with saved analyses and figures")],
+) -> None:
+    """Run the system graph-explanation node and refresh its EvidenceBundle."""
+    typer.echo(json.dumps(run_graph_explanation_stage(project), ensure_ascii=False, indent=2))
+
+
+@app.command("graph-ablation")
+def graph_ablation(
+    project: Annotated[Path, typer.Argument(help="Project with saved graph artifacts")],
+    repeats: Annotated[int, typer.Option("--repeats", min=1, max=20)] = 5,
+    output: Annotated[Path | None, typer.Option("--output")] = None,
+) -> None:
+    """Compare Direct VLM, flat KG, and GraphRAG inside the same system task."""
+    result = run_graph_ablation_stage(project, repeats=repeats, output=output)
+    typer.echo(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+@app.command("graph-ablation-rescore")
+def graph_ablation_rescore(
+    experiment: Annotated[Path, typer.Argument(help="Completed graph-ablation directory")],
+    output: Annotated[Path | None, typer.Option("--output")] = None,
+) -> None:
+    """Re-score saved raw responses with the current verifier; makes no API calls."""
+    result = rescore_graph_ablation(experiment, output=output)
+    typer.echo(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+@app.command("graph-suite-prepare")
+def graph_suite_prepare(
+    spec: Annotated[Path, typer.Argument(help="Frozen multi-topic suite YAML")],
+    output: Annotated[Path | None, typer.Option("--output")] = None,
+    limit: Annotated[int | None, typer.Option("--limit", min=1)] = None,
+) -> None:
+    """Acquire and build independent CiteWeave topic graphs without model calls."""
+    result = prepare_graph_suite(spec, output=output, limit=limit)
+    typer.echo(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+@app.command("graph-suite-run")
+def graph_suite_run(
+    spec: Annotated[Path, typer.Argument(help="Frozen multi-topic suite YAML")],
+    suite_root: Annotated[Path | None, typer.Option("--suite-root")] = None,
+    output: Annotated[Path | None, typer.Option("--output")] = None,
+    repeats: Annotated[int | None, typer.Option("--repeats", min=1, max=20)] = None,
+    allow_underpowered: Annotated[
+        bool,
+        typer.Option(
+            "--allow-underpowered",
+            help="Permit a development run below the pre-registered topic minimum.",
+        ),
+    ] = False,
+) -> None:
+    """Run and aggregate the frozen three-way ablation across independent topics."""
+    result = run_graph_suite(
+        spec,
+        suite_root=suite_root,
+        output=output,
+        repeats=repeats,
+        allow_underpowered=allow_underpowered,
+    )
+    typer.echo(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+@app.command("graph-suite-aggregate")
+def graph_suite_aggregate(
+    experiment: Annotated[Path, typer.Argument(help="Completed graph-suite directory")],
+) -> None:
+    """Rebuild graph-level statistics from saved suite records without API calls."""
+    result = aggregate_graph_suite(experiment)
+    typer.echo(json.dumps(result, ensure_ascii=False, indent=2))
 
 
 @app.command()

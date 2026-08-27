@@ -251,12 +251,14 @@ SECTION_CONTRACTS = (
             "three_field_relations",
             "work_content",
             "figure",
+            "figure_interpretation",
         },
         (
             "结合关键词趋势、共现网络、主题图谱和三字段关系解释概念结构",
             "说明高频、连接度、聚类和时间变化各自回答的问题",
             "使用代表性文献摘要检验主题标签是否具有内容对应",
             "避免将作者关键词直接等同于研究结论",
+            "优先使用经过关系验证的figure_interpretation解释多节点、跨社区和多跳关系",
         ),
         1600,
         2900,
@@ -509,15 +511,6 @@ def validate_manuscript(
         if empirical_numbers and not EVIDENCE_CITATION_RE.search(cleaned_sentence):
             uncited_numeric_sentences.append(cleaned_sentence[:200])
     required_sections = ["摘要", "数据与方法", "结果", "讨论", "局限", "结论"]
-    if "## Abstract" in text:
-        required_sections = [
-            "## Abstract",
-            "## 1 Introduction",
-            "## 2 Data and methods",
-            "## 3 Results",
-            "## 4 Discussion and limitations",
-            "## 5 Conclusion",
-        ]
     missing_sections = [section for section in required_sections if section not in text]
     incomplete_paragraphs = _find_incomplete_paragraphs(text)
     quality = evaluate_manuscript_quality(text, evidence)
@@ -774,7 +767,7 @@ def _find_incomplete_paragraphs(text: str) -> list[str]:
         if (
             len(value) <= 100
             or value.startswith(("#", "|", "**关键词**"))
-            or value[-1] in "。！？；：）】].!?;:)}"
+            or value[-1] in "。！？；：）】]"
         ):
             continue
         incomplete.append(value[-240:])
