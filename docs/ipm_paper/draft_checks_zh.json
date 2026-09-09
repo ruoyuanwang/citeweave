@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-08",
+  "document": "04_MANUSCRIPT_ZH.md",
+  "scope": "中文工作稿结构、结果转录和结论边界检查；不是同行评审、系统文献综述或投稿格式认证。",
+  "manuscript_version": "working_draft_v0.4",
+  "manuscript_sha256": "c9b2720e74f6eef09fdbfca5047cd22de588b3ee0cf31e2656a87632dca0c919",
+  "reference_count": 24,
+  "checks": {
+    "sections_one_through_eight_present": true,
+    "all_placeholder_results_removed": true,
+    "expected_twenty_four_references": true,
+    "expanded_related_work_positioning_verified": true,
+    "no_replacement_characters": true,
+    "graph_results_match_frozen_analysis": true,
+    "formal_article_failures_preserved": true,
+    "zero_real_human_outcomes_disclosed": true,
+    "expert_evidence_viewer_and_collection_disclosed": true,
+    "no_human_ai_superiority_claim": true,
+    "no_false_ethics_completion": true
+  },
+  "all_checks_passed": true,
+  "submission_ready": false,
+  "blocking_evidence": [
+    "RQ2没有真实人审结果。",
+    "RQ3没有完整同证据人类文章与独立专家评分。",
+    "当前API账户余额阻断token-safe文章开发实验。",
+    "作者核验、伦理判定和投稿声明尚未完成。"
+  ]
+}

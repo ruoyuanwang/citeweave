@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-08",
+  "scope": "Deterministic structure, result-transcription, status-boundary, and citation-label checks; not peer review, full literature audit, or journal format certification.",
+  "manuscript_version": "working_draft_v0.4",
+  "manuscript_sha256": "d8cab51e92efaa02276fd085cd648dc2d9637835f81ca6470d9886a92ae85156",
+  "words": 6883,
+  "reference_count": 24,
+  "result_sources": {
+    "main_panel": "experiments/graph_discovery_v2/formal_v3_analysis.json",
+    "scale_replication": "experiments/graph_discovery_v2/formal_v3_scale_replication_analysis.json",
+    "complexity_extension": "experiments/graph_discovery_v2/formal_v3_complexity_extension_analysis.json",
+    "mechanism_supplement": "experiments/graph_discovery_v2/formal_v3_mechanism_supplement_analysis.json",
+    "article_diagnostic": "experiments/article_quality_v3/deterministic_machine_human_quality_diagnostic_v1.json"
+  },
+  "checks": {
+    "sections_one_through_eight_present": true,
+    "all_placeholder_results_removed": true,
+    "expected_twenty_four_references": true,
+    "expanded_related_work_positioning_verified": true,
+    "no_replacement_characters": true,
+    "no_local_windows_paths_in_english_manuscript": true,
+    "main_800_cell_completion_reported": true,
+    "replication_120_cell_completion_reported": true,
+    "complexity_312_new_call_completion_reported": true,
+    "mechanism_216_new_call_completion_reported": true,
+    "complexity_selectivity_plus_one_reported": true,
+    "scale_amplification_zero_reported": true,
+    "same_computation_equivalence_reported": true,
+    "raw_provenance_evidence_f1_gain_reported": true,
+    "formal_article_failures_preserved": true,
+    "zero_real_human_outcomes_disclosed": true,
+    "expert_evidence_viewer_and_collection_disclosed": true,
+    "no_human_ai_superiority_claim": true,
+    "oracle_and_registered_program_scope_disclosed": true,
+    "no_false_ethics_completion": true
+  },
+  "all_checks_passed": true,
+  "submission_ready": false,
+  "blocking_evidence": [
+    "RQ2 has no real human review outcome.",
+    "RQ3 has no complete same-evidence human article panel or independent expert ratings.",
+    "Provider balance currently blocks the token-safe article development run.",
+    "Author verification, ethics determination, and submission declarations remain pending."
+  ],
+  "author_guide_verified": false,
+  "human_author_review_completed": false
+}

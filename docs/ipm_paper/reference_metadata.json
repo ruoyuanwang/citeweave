@@ -1,0 +1,730 @@
+{
+  "chen2006": {
+    "DOI": "10.1002/asi.20317",
+    "title": [
+      "CiteSpace II: Detecting and visualizing emerging trends and transient patterns in scientific literature"
+    ],
+    "author": [
+      {
+        "given": "Chaomei",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of the American Society for Information Science and Technology"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2005,
+          12,
+          14
+        ]
+      ]
+    },
+    "published-online": {
+      "date-parts": [
+        [
+          2005,
+          12,
+          14
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2006,
+          2
+        ]
+      ]
+    },
+    "volume": "57",
+    "issue": "3",
+    "page": "359-377",
+    "article-number": null,
+    "URL": "https://doi.org/10.1002/asi.20317"
+  },
+  "vaneck2010": {
+    "DOI": "10.1007/s11192-009-0146-3",
+    "title": [
+      "Software survey: VOSviewer, a computer program for bibliometric mapping"
+    ],
+    "author": [
+      {
+        "given": "Nees Jan",
+        "family": "van Eck",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ludo",
+        "family": "Waltman",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Scientometrics"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2009,
+          12,
+          31
+        ]
+      ]
+    },
+    "published-online": {
+      "date-parts": [
+        [
+          2009,
+          12,
+          31
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2010,
+          8
+        ]
+      ]
+    },
+    "volume": "84",
+    "issue": "2",
+    "page": "523-538",
+    "article-number": null,
+    "URL": "https://doi.org/10.1007/s11192-009-0146-3"
+  },
+  "aria2017": {
+    "doi": "10.1016/j.joi.2017.08.007",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  "donthu2021": {
+    "DOI": "10.1016/j.jbusres.2021.04.070",
+    "title": [
+      "How to conduct a bibliometric analysis: An overview and guidelines"
+    ],
+    "author": [
+      {
+        "given": "Naveen",
+        "family": "Donthu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Satish",
+        "family": "Kumar",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Debmalya",
+        "family": "Mukherjee",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Nitesh",
+        "family": "Pandey",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Weng Marc",
+        "family": "Lim",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Business Research"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          9
+        ]
+      ]
+    },
+    "published-online": null,
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          9
+        ]
+      ]
+    },
+    "volume": "133",
+    "issue": null,
+    "page": "285-296",
+    "article-number": null,
+    "URL": "https://doi.org/10.1016/j.jbusres.2021.04.070"
+  },
+  "chung2025": {
+    "DOI": "10.1016/j.ipm.2025.104245",
+    "title": [
+      "Harnessing language models for computational literature review of emerging AI topics"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-6011-4822",
+        "authenticated-orcid": false,
+        "given": "Jaemin",
+        "family": "Chung",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Byeongki",
+        "family": "Jeong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1464-7545",
+        "authenticated-orcid": false,
+        "given": "Young-Jae",
+        "family": "Park",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5711-4290",
+        "authenticated-orcid": false,
+        "given": "Hwihun",
+        "family": "Jeong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jiho",
+        "family": "Lee",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Janghyeok",
+        "family": "Yoon",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6994-4195",
+        "authenticated-orcid": false,
+        "given": "Jaewoong",
+        "family": "Choi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Information Processing &amp; Management"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "published-online": null,
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "volume": "62",
+    "issue": "6",
+    "page": "104245",
+    "article-number": "104245",
+    "URL": "https://doi.org/10.1016/j.ipm.2025.104245"
+  },
+  "huang2025": {
+    "DOI": "10.1016/j.ipm.2025.104225",
+    "title": [
+      "PaperEval: A universal, quantitative, and explainable paper evaluation method powered by a multi-agent system"
+    ],
+    "author": [
+      {
+        "given": "Shengzhi",
+        "family": "Huang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qicong",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wei",
+        "family": "Lu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lingyu",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhenzhen",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5953-6908",
+        "authenticated-orcid": false,
+        "given": "Yong",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Information Processing &amp; Management"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "published-online": null,
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "volume": "62",
+    "issue": "6",
+    "page": "104225",
+    "article-number": "104225",
+    "URL": "https://doi.org/10.1016/j.ipm.2025.104225"
+  },
+  "shao2024": {
+    "DOI": "10.18653/v1/2024.naacl-long.347",
+    "title": [
+      "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models"
+    ],
+    "author": [
+      {
+        "given": "Yijia",
+        "family": "Shao",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yucheng",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Theodore",
+        "family": "Kanell",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Peter",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Omar",
+        "family": "Khattab",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Monica",
+        "family": "Lam",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "published-online": null,
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "volume": null,
+    "issue": null,
+    "page": "6252-6278",
+    "article-number": null,
+    "URL": "https://doi.org/10.18653/v1/2024.naacl-long.347"
+  },
+  "go2026": {
+    "DOI": "10.1609/aaai.v40i47.41489",
+    "title": [
+      "LiRA: A Multi-Agent Framework for Reliable and Readable Literature Review Generation"
+    ],
+    "author": [
+      {
+        "given": "Gregory Hok Tjoan",
+        "family": "Go",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Khang",
+        "family": "Ly",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Anders",
+        "family": "Søgaard",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Seyed Amin",
+        "family": "Tabatabaei",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Maarten de",
+        "family": "Rijke",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xinyi",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Proceedings of the AAAI Conference on Artificial Intelligence"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          14
+        ]
+      ]
+    },
+    "published-online": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          14
+        ]
+      ]
+    },
+    "published-print": null,
+    "volume": "40",
+    "issue": "47",
+    "page": "40456-40464",
+    "article-number": null,
+    "URL": "https://doi.org/10.1609/aaai.v40i47.41489"
+  },
+  "hu2026_candidate": {
+    "DOI": "10.1016/j.ipm.2026.104885",
+    "title": [
+      "SocLitGen: An LLM-assisted framework for automated literature review in social sciences"
+    ],
+    "author": [
+      {
+        "given": "Saiquan",
+        "family": "Hu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yushan",
+        "family": "Wei",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shuyang",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Information Processing &amp; Management"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          11
+        ]
+      ]
+    },
+    "published-online": null,
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          11
+        ]
+      ]
+    },
+    "volume": "63",
+    "issue": "7",
+    "page": "104885",
+    "article-number": "104885",
+    "URL": "https://doi.org/10.1016/j.ipm.2026.104885"
+  }
+}
