@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_real_reviewer_and_factorial_outcomes",
+  "amendment": "review_policy_amendment_003_factorial_cluster_inference.yml",
+  "sha256": "c72cc9f68c94523d3df4cf0a6f8b8df12fdd4fe7387ee7513352fdcbb9c24dc7",
+  "human_outcomes_inspected": false,
+  "factorial_outcomes_inspected": false,
+  "human_outcome_files": 0,
+  "factorial_outcome_files": 0,
+  "frozen_at_local": "2026-08-31T19:32:14+08:00"
+}

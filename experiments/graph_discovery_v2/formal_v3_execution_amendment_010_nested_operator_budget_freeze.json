@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "frozen_mechanical_failure_repair_after_380_completed_cells",
+  "amendment": "formal_v3_execution_amendment_010_nested_operator_budget.yml",
+  "sha256": "a2307a08df890d1e9a2a79c6c9dab7a9425e5e1e6b8ed5ed4208777d8d668d9d",
+  "frozen_at_local": "2026-09-07T19:30:00+08:00",
+  "prior_input_freeze_sha256": "9340907c3c8a6131ab5c92b316227a2f5a6dac8b3f4fe9e9abd23d04c6e660b7",
+  "prior_qualification_sha256": "42e0a1f46ef5b4f717dc4588a23eddad36348f647363b3447448168e7d87bb4a",
+  "prior_promotion_sha256": "902e0a021ca99e6791e92ced1607ed71771b7bf6c2b34577e0fe8bf8522d5fa4",
+  "amended_token_budget_sha256": "a4db5c95e9110e7c7830c281c82fcb741bca18c7c06cff0f5ff7f305487809c9",
+  "token_budget_test_sha256": "cbad6ef19e37eb52538d4b342d6c6f5e07a1604af238a4dea50f498751d0cd6d",
+  "preserved_primary_complete_cells": 380,
+  "replication_complete_cells": 0,
+  "extension_complete_cells": 0,
+  "failed_parse_cells": 0,
+  "scientific_effects_inspected": false,
+  "automatic_api_resume": false
+}

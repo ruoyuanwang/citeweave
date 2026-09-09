@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "expert_evaluation_amendment_005_role_separation",
+  "sha256": "3af6683d4758143accebcf5feb064fa72279aef7b1eccf299c25316544eae4f1",
+  "frozen_at_utc": "2026-09-07T13:06:00Z",
+  "previous_amendment_sha256": "f6e945de98dd9fe8a340c16dabd7dc1fd92e4b544294a7ff3c65d3fa74c13af7",
+  "frozen_before_same_evidence_articles": true,
+  "frozen_before_expert_outcomes": true,
+  "same_evidence_articles_present": false,
+  "registered_evaluators": 0,
+  "expert_outcomes_present": false,
+  "role_separation_is_fail_closed": true
+}

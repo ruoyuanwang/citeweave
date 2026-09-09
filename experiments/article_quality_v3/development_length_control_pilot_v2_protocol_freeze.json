@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "protocol_id": "article_v3_checkpointed_completion_development_pilot_v2",
+  "sha256": "e4482cbc3be8f416f444e9ba0c8dba44f62f3e647fbba093a18fd6e62142511f",
+  "development_only": true,
+  "cells": 4,
+  "provider_responses_at_freeze": 0,
+  "confirmatory_replacement": false
+}

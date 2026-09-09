@@ -1,0 +1,62 @@
+schema_version: 1
+amendment_id: expert_evaluation_amendment_005_role_separation
+base_protocol_sha256: 7e8267bd91b69ac12b563aa1e5af47921cd67d521a4f17a28bb652fb1fd875a5
+previous_amendment_sha256: f6e945de98dd9fe8a340c16dabd7dc1fd92e4b544294a7ff3c65d3fa74c13af7
+status: frozen_before_any_same_evidence_article_or_expert_outcome
+
+reason:
+  - The frozen protocol requires evaluator independence, but the prior packet allocator enforced topic eligibility and declared topic conflicts without making cross-role independence a complete fail-closed gate.
+  - A producer, system developer, or prior claim reviewer could therefore have been eligible under an incomplete roster, creating avoidable self-evaluation and familiarity bias.
+  - No same-evidence article or expert rating existed when this amendment was made, so the correction cannot depend on human outcomes.
+
+role_separation_gate:
+  required_evaluator_fields:
+    - evaluator_id
+    - role
+    - eligible_topics
+    - conflicted_topics
+    - conflicts_declared
+    - independent_from_article_production
+    - independent_from_system_development
+    - review_or_revision_topics
+  global_exclusions:
+    - conflicts_declared must be true
+    - independent_from_article_production must be true
+    - independent_from_system_development must be true
+  topic_specific_exclusions:
+    - evaluator_id equals any producer_id for an article in the topic
+    - topic appears in review_or_revision_topics
+    - topic appears in conflicted_topics
+  missing_field_policy: Missing booleans or topic lists do not imply independence; the candidate is ineligible.
+  coverage_policy: Every topic must retain at least four eligible evaluators, including at least two domain experts.
+  reporting_policy: Readiness must report every undercovered topic, not stop after the first failure.
+
+unchanged_confirmatory_inference:
+  article_conditions: [citeweave_graph_review, one_shot_llm, human_same_evidence]
+  primary_tests: [A1, A2, A3]
+  cluster_unit: topic
+  multiplicity: holm_for_A1_A2_A3
+  length_and_density_controls: unchanged_from_amendment_004
+
+implementation:
+  packet_builder_cli:
+    path: scripts/build_article_expert_packets.py
+    sha256: 137be6f35aa856ea232ee52f12d3917c01b029a0cf1a4499afdbe780915fb572
+  packet_validator_and_allocator:
+    path: src/citeweave/article_expert_packets.py
+    sha256: 739af807401618f5bede7a9ddbae725273179de5ca24125d765ab43570051e70
+  packet_tests:
+    path: tests/test_article_expert_packets.py
+    sha256: 777aa71985e0cb34402e7a287023cb6880da33ccfe5b09fbffc170f86b2b7614
+
+pre_outcome_evidence:
+  article_intake_sha256: 7adc39c39968a99e41c2e86353be59de66c91f2d0e2576707c560fac0064d644
+  evaluator_roster_sha256: a5068e6d54162b7eb7a72352d03f042037cb83928334be4f7ca90bcf767cdf8c
+  submitted_article_paths: 0
+  registered_evaluators: 0
+  expert_outcomes: 0
+
+integrity_guard:
+  - This amendment narrows eligibility and cannot be used to admit a reviewer excluded by the base protocol.
+  - Identity-to-person mappings remain outside the repository; only opaque IDs enter formal artifacts.
+  - The evaluator must remain blind to conditions, automatic scores, other ratings, and producer identities.

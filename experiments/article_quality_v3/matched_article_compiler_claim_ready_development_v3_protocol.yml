@@ -1,0 +1,162 @@
+schema_version: 1
+protocol_id: matched_article_compiler_claim_ready_development_v3
+status: frozen_after_offline_compaction_audit_before_provider_calls
+frozen_at: '2026-09-08T04:57:18+08:00'
+
+timing_disclosure:
+  matched_development_v1_provider_responses: 36
+  matched_development_v1_outcomes_inspected: true
+  matched_development_v2_transport_attempts: 1
+  matched_development_v2_valid_provider_responses: 0
+  development_v3_provider_responses_before_freeze: 0
+  real_human_article_returns: 0
+
+motivation: >-
+  Development v1 solved claim-review density but used 474063 prompt tokens across
+  36 calls and had nine length-terminated sections. Development v2 increased response
+  ceilings but its first request received HTTP 402 before any valid response. An offline
+  section-view audit found that repeated retrieval metadata and irrelevant full abstracts
+  account for avoidable prompt volume. V3 retains token-safe ceilings and replaces the
+  full repeated writer payload with a hash-bound section-specific evidence view.
+
+scientific_role:
+  development_only: true
+  confirmatory_replacement: false
+  pooling_with_v1_or_v2: prohibited
+  intended_next_use: qualify_or_reject_a_future_separately_frozen_eight_topic_comparison
+
+panel:
+  datasets:
+    - explainable_ai_medical_imaging_2016_2025
+    - sodium_ion_battery_cathodes_2010_2025
+  conditions:
+    - flat_article_compiler
+    - graph_dependency_compiler
+  articles: 4
+  provider_calls_per_article: 9
+  maximum_provider_calls: 36
+  temperature: 0
+  rendered_figure_access: false
+
+unchanged_core_design:
+  - identical_writer_input_identity_across_conditions
+  - identical_five_complete_graph_phenomenon_records
+  - identical_reference_id_registry
+  - identical_three_registered_syntheses
+  - identical_section_dependencies_and_generation_order
+  - identical_claim_density_contract
+  - identical_precommitted_results_and_discussion_repairs
+  - identical_token_safe_response_ceilings
+  - identical_deterministic_budget_optimizer
+  - graph_condition_only_adds_explicit_dependency_edges
+
+section_evidence_views:
+  all_sections:
+    - complete_graph_phenomenon_records
+    - all_reference_identifiers_and_titles
+    - writing_and_condition_contracts
+    - nonvisual_graph_metadata
+    - source_writer_input_sha256
+  Introduction_Results_Discussion:
+    - exact_abstract_excerpt_for_every_registered_source
+  Abstract_Methods_Limitations_Conclusion:
+    - source_registry_without_abstract_text
+  omitted_everywhere:
+    - retrieval_query
+    - retrieval_rank
+    - bm25_rank
+    - cited_by_count
+    - topic_term_matches
+    - source_quality_gate_bookkeeping
+    - rendered_figure
+
+offline_compaction_qualification:
+  audit_path: experiments/article_quality_v3/article_prompt_compaction_audit_v1.json
+  audit_sha256: f116308c24084ded5324fa5ed34e129af0e0adb9b453a79eaa562ca5febc3d8b
+  source_calls_reconstructed: 36
+  all_section_integrity_audits_passed: true
+  original_prompt_chars: 2038568
+  compact_prompt_chars: 1377636
+  char_reduction_fraction: 0.32421385992520235
+  observed_original_prompt_tokens: 474063
+  linear_char_ratio_token_estimate: 320365
+  estimate_is_not_provider_measurement_or_billing_guarantee: true
+
+token_ceilings:
+  base:
+    Abstract: 700
+    Introduction: 1000
+    Methods: 1200
+    Results: 2400
+    Discussion: 1900
+    Limitations: 800
+    Conclusion: 600
+  repair:
+    Results: 2800
+    Discussion: 2300
+
+article_success_gate:
+  - exactly_nine_provider_responses
+  - all_nine_finish_reason_stop
+  - final_article_within_2700_3300_words
+  - all_unchanged_structural_and_provenance_gates_pass
+  - at_least_20_reviewable_claim_candidates
+  - at_least_2_candidates_for_each_phenomenon
+  - results_and_discussion_section_minima_pass
+
+pilot_qualification_gate:
+  - all_four_articles_pass_every_article_success_gate
+  - only_then_may_an_eight_topic_confirmatory_protocol_be_frozen
+  - no_effectiveness_claim_from_this_two_topic_development_pilot
+
+implementation:
+  base_compiler_module:
+    path: src/citeweave/article_compiler_v2.py
+    sha256: 4a0362f76510fa2110571733d09300d962ead7c90d8edbd0f3dff7a4178c848b
+  token_safe_compiler_module:
+    path: src/citeweave/article_compiler_v3.py
+    sha256: 3c2561ab86f3a3ef349ec4a6273e9ab90c800ad9a7069fbb51e892f1f9807fd7
+  context_compaction_module:
+    path: src/citeweave/article_context_compaction.py
+    sha256: d087587e52a7a34fe6c047777f231a29a4f5f4f4d50bf5ad6aeac55a95bc5421
+  compact_compiler_module:
+    path: src/citeweave/article_compiler_v4.py
+    sha256: 4e7308e8307f598e597b4d42d6bcfce42f0fbbe989f94b953179d7f24acf99dd
+  preparation_cli:
+    path: scripts/prepare_article_compiler_v2_pilot.py
+    sha256: a3ec4c384f12495d263fe8dc2a397e821fa7946d9b97b53c6ac715616b5b0f38
+  execution_engine:
+    path: scripts/run_article_compiler_v2_pilot.py
+    sha256: f3573312bed8dbdd6cffc213a5cf7845006092da4cfb4f4df436b93390449d3c
+  retry_wrapper:
+    path: scripts/run_article_compiler_v3_pilot.py
+    sha256: 86f87374a36fdf07ec15e2767da402e6687e3e98ae661e439450807adc6d64e3
+  compact_execution_cli:
+    path: scripts/run_article_compiler_v4_pilot.py
+    sha256: e6aaa30ad331419632eeb149e199ed735063f70fc1974ddddd44d0bc25fd9e33
+  compaction_audit_cli:
+    path: scripts/audit_article_prompt_compaction.py
+    sha256: 7327b26a45d93ae0aa940f05600d19127f17f0d9a99d5287455a6d6b40980044
+  budget_optimizer:
+    path: src/citeweave/article_budget_optimizer.py
+    sha256: c48c79a0947455cd377f7c1846ec600ad269d0c9e295cf6f4b956747003d0b9e
+  assessment_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  oversight_audit:
+    path: src/citeweave/article_oversight_readiness.py
+    sha256: 3d43820d75b31397ba22b8677e6a4ab8d2665d67c38eae6e974495f944093e3a
+  context_compaction_test:
+    path: tests/test_article_context_compaction.py
+    sha256: 5663bb1aefc89de4acfe0adf2d20d578474cc6110b79150a9ef886cc9d1ed490
+  compact_compiler_test:
+    path: tests/test_article_compiler_v4.py
+    sha256: c7a64efbf125dd67e82aecc3756c5408029c6e7dd0681a13f0656c07f85604a0
+
+integrity_guards:
+  - Protocol and plan are SHA256-frozen before any V3 provider response.
+  - Every section view binds the complete source writer input by canonical SHA256.
+  - All graph phenomenon records remain byte-equivalent after canonical serialization.
+  - Evidence-heavy sections retain exact abstract excerpts for every registered source.
+  - Flat and graph receive identical section evidence views.
+  - Provider secrets are never written to experiment artifacts.

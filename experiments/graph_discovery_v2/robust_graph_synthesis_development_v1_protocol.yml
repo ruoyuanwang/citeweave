@@ -1,0 +1,146 @@
+schema_version: 1
+protocol_id: robust_graph_synthesis_continuous_difficulty_development_v1
+status: frozen_after_deterministic_task_construction_before_any_model_outcomes
+frozen_at: '2026-09-08T07:30:00+08:00'
+role: development_difficulty_calibration_not_confirmatory_evidence
+motivation: >-
+  The completed complexity extension separated simple lookup from graph computation,
+  but several conditions reached floor or ceiling performance and scale amplification
+  was zero. This development panel asks whether perturbation ensembles, conflicting
+  structural signals, counterfactual decomposition and cross-operator synthesis create
+  an informative difficulty spectrum while retaining exact deterministic gold.
+source_status:
+  prior_model_outcomes_known: true
+  perturbation_outcomes_known_during_task_design: true
+  implication: >-
+    Results from these eight reused topics may calibrate tasks and mechanisms but may
+    not be presented as a new confirmatory test. A confirmatory panel requires new
+    held-out topics frozen before perturbation outcomes and provider responses.
+source_bindings:
+  robustness_input_freeze:
+    path: experiments/graph_discovery_v2/graph_phenomenon_robustness_v1/input_freeze.json
+    sha256: 5dd90223db8af3a09649595144efe2076ead462bc13698b63aa12c1e9b938665
+  robustness_summary:
+    path: experiments/graph_discovery_v2/graph_phenomenon_robustness_v1/summary.json
+    sha256: 7af8570445d4cbd34015c7a3890134858d6bf5749d46b1cc212fe2d32e4af3ef
+  construction_manifest:
+    path: experiments/graph_discovery_v2/robust_graph_synthesis_development_v1/construction_manifest.json
+    sha256: bcc6fbfc27b61692a6958e14666639f2f8c95d7f2fadae1d7e0d6ab5ffc6699e
+  tokenizer_manifest:
+    path: experiments/graph_discovery_v2/formal_v3_execution_prerequisites/deepseek_v4_tokenizer_manifest.json
+    sha256: 1d0e99bac9875e12668c43b67f4c789180c4ba131a48a8c6254b0574f0f25196
+panel:
+  independent_topics: 8
+  registered_perturbations_per_topic: 17
+  baseline_graphs_per_topic: 1
+  task_types:
+    - path_stability_profile
+    - community_role_instability
+    - hub_resilience_decomposition
+    - temporal_window_dependence
+    - cross_operator_robustness_triage
+  tasks_per_topic: 5
+  total_tasks: 40
+  conditions:
+    - flat_bm25
+    - graph_hierarchical_retrieval_v2
+    - flat_program
+    - graph_program
+    - operator_only
+  planned_provider_calls: 200
+  context_record_budget: 20
+  context_token_budget: 8192
+  one_valid_response_per_cell: true
+  temperature: 0
+  model_prompt_tokenizer_budget: identical_across_conditions_except_registered_context
+task_requirements:
+  - aggregate evidence across multiple perturbations rather than explain one graph
+  - identify instability and non-comparable cases rather than force a single narrative
+  - decompose pre-existing topology loss from marginal node-deletion loss
+  - distinguish label changes from community-relation changes across temporal windows
+  - compare five non-interchangeable graph operators without averaging away conflict
+outcomes:
+  primary: answer_field_accuracy
+  secondary:
+    - exact_answer_accuracy
+    - evidence_f1
+    - required_limitation_rate
+    - abstention_rate
+    - provider_tokens
+    - elapsed_seconds
+  rationale: >-
+    Field accuracy supplies a continuous outcome when an answer contains several
+    registered components; exact accuracy is retained as a strict secondary outcome.
+registered_development_questions:
+  D1_computation_value:
+    contrast: graph_program_minus_flat_bm25_answer_field_accuracy
+    expectation: positive
+  D2_graph_retrieval_value:
+    contrast: graph_hierarchical_retrieval_v2_minus_flat_bm25_answer_field_accuracy
+    expectation: positive
+  D3_representation_only:
+    contrast: graph_program_minus_flat_program_answer_field_accuracy
+    expectation: equivalence
+    equivalence_margin: 0.05
+  D4_raw_provenance_value:
+    joint_contrast:
+      - graph_program_minus_operator_only_evidence_f1_greater_than_zero
+      - graph_program_minus_operator_only_answer_field_accuracy_noninferior_margin_0.05
+statistics:
+  independent_unit: dataset_id
+  within_topic: paired_task_then_equal_task_type_weight
+  across_topics: equal_topic_weight
+  exact_test: fully_enumerated_2_to_the_8_cluster_sign_flips
+  descriptive_interval: 10000_draw_topic_cluster_bootstrap_seed_20260908
+  multiplicity: Holm_for_D1_D2_and_D4_evidence_superiority
+  no_item_level_pseudoreplication: true
+promotion_gate:
+  development_success_requires:
+    - all_200_cells_terminal_without_quality_resampling
+    - at_least_three_distinct_condition_means_on_field_accuracy
+    - neither_all_condition_floor_nor_all_condition_ceiling
+    - D3_equivalence_or_documented_information_parity_failure
+  confirmatory_success_requires_new_data: true
+  heldout_confirmation:
+    minimum_topics: 8
+    freeze_before:
+      - perturbation_generation
+      - deterministic_gold_inspection
+      - provider_responses
+    same_task_builder_and_scoring: true
+interpretation_guards:
+  - Development results cannot rescue or replace the completed C1/C2 analyses.
+  - A graph-program advantage estimates registered computation plus evidence organization, not unaided LLM graph reasoning.
+  - D3 equivalence means graph-shaped serialization has no independent value when information is matched.
+  - Robustness labels are conditional on the registered perturbation grid and corpus.
+  - Algorithmic community instability is not evidence that scientific themes are false.
+  - No development outcome may be called confirmatory or independent replication.
+implementation_bindings:
+  module:
+    path: src/citeweave/robust_graph_synthesis.py
+    sha256: d32bbc06155f953fefd07b02d3513a28b193ff02cf8d1fdacacc5c4ecdb7e4bf
+  builder:
+    path: scripts/build_robust_graph_synthesis_benchmark.py
+    sha256: ed64fa4bd58f7c35c616d1d3c76babe0e4a6e68e254673555ef1f322e85dc50f
+  tests:
+    path: tests/test_robust_graph_synthesis.py
+    sha256: 23639d9c55ea95cb9fc57a80120f5075a0b574b2bdd6a8c397000806b754ca8e
+  readiness_auditor:
+    path: scripts/audit_robust_graph_synthesis_readiness.py
+    sha256: 5157f5856a992f05b0dce17fb12a36333e48366ea2a8bbe01b2afb14aedb807b
+  execution_orchestrator:
+    path: scripts/run_robust_graph_synthesis_development.py
+    sha256: 83b58821e4f7fb81bbf7e9c83caf5ecd0a9bbb2d60f10824cd5486c2afcdbd38
+  provider_runner:
+    path: scripts/run_graph_discovery_experiment.py
+    sha256: f5bf67de724e229361c0538a5dcd9c277c7fd4944d5bec302f512a06373d7675
+  statistics_module:
+    path: src/citeweave/robust_graph_statistics.py
+    sha256: ced35bfd38b45d2f4c89323ea68fa231c8824e9a6add6f43409725c38be44d05
+  analysis_cli:
+    path: scripts/analyze_robust_graph_synthesis_development.py
+    sha256: ae5b5a52c8f11243ad813ac97a8cb6a80a48b6764d69ffbc6d4cc6d684a2d313
+execution_guard:
+  - Do not execute while the provider balance endpoint reports unavailable.
+  - Rebuild or hash drift requires a new protocol version and new freeze artifact.
+  - Existing completed formal results remain immutable.

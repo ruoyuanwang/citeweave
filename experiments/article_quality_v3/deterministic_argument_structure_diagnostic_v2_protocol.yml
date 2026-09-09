@@ -1,0 +1,100 @@
+schema_version: 1
+protocol_id: deterministic_argument_structure_diagnostic_v2
+status: frozen_before_v2_metric_execution
+study_role: exploratory_diagnostic_not_confirmatory
+objective: >-
+  Diagnose whether the existing machine drafts differ from cached published human
+  reports in argument shape, lexical reuse, evidence-marker integration, and
+  critical-synthesis surface signals beyond simple length statistics.
+comparison_scope:
+  - Abstract
+  - Results
+  - Discussion
+  - Conclusion
+implementation:
+  path: src/citeweave/article_argument_diagnostics.py
+  sha256: e853d7a19302f9afdef95da4090178108aae6ef37435ba06b1fae1cf792b8a35
+metric_contract:
+  section_balance:
+    - normalized_section_entropy
+    - largest_section_share
+    - section_word_counts
+    - section_word_shares
+  rhythmic_variation:
+    - sentence_length_cv
+  lexical_reuse:
+    - mean_paragraph_pair_cosine
+    - max_paragraph_pair_cosine
+    - paragraph_pairs_cosine_ge_0_5_rate
+    - repeated_six_content_word_opening_excess_rate
+  evidence_marker_integration:
+    - source_marker_mentions_per_1000_words
+    - distinct_source_markers
+    - source_bearing_sentence_fraction
+    - multi_source_sentence_fraction
+    - multi_source_share_among_source_bearing_sentences
+  argument_surface_markers:
+    - generic_scaffolding_markers_per_1000_words
+    - contrast_markers_per_1000_words
+    - alternative_explanation_markers_per_1000_words
+    - failure_condition_markers_per_1000_words
+    - mechanism_markers_per_1000_words
+    - numeric_mentions_per_1000_words
+interpretation_limits:
+  - Machine and human texts cover different topics and different source evidence.
+  - Cached human reports are selected article sections and are not a uniform genre.
+  - REF identifiers and conventional human citation markers have different syntax and granularity.
+  - Lexicon hits are surface proxies and are topic-sensitive; they do not prove mechanism quality or critical reasoning.
+  - The four machine drafts are development outputs; no inferential test or superiority claim is permitted.
+  - Results may motivate prompt and human-rating dimensions but may not modify confirmatory outcomes.
+inputs:
+  machine:
+    - article_id: explainable_ai_medical_imaging_2016_2025__flat_article_compiler
+      condition: flat_article_compiler
+      path: experiments/article_quality_v3/matched_article_compiler_claim_ready_development_v1/explainable_ai_medical_imaging_2016_2025/flat_article_compiler/draft.md
+      sha256: b017f83309144d432a4fdcc13b8b24aa64401bf40276c0881a0727af9014e4e9
+    - article_id: explainable_ai_medical_imaging_2016_2025__graph_dependency_compiler
+      condition: graph_dependency_compiler
+      path: experiments/article_quality_v3/matched_article_compiler_claim_ready_development_v1/explainable_ai_medical_imaging_2016_2025/graph_dependency_compiler/draft.md
+      sha256: 1022201fdb72a85b0a2f4417f85fa9628095a18763630359dc0fa3e9cb4f9f05
+    - article_id: sodium_ion_battery_cathodes_2010_2025__flat_article_compiler
+      condition: flat_article_compiler
+      path: experiments/article_quality_v3/matched_article_compiler_claim_ready_development_v1/sodium_ion_battery_cathodes_2010_2025/flat_article_compiler/draft.md
+      sha256: f5f0d02763d2ccc940588f27e5395f507c9cd89644222b2e0989878412167747
+    - article_id: sodium_ion_battery_cathodes_2010_2025__graph_dependency_compiler
+      condition: graph_dependency_compiler
+      path: experiments/article_quality_v3/matched_article_compiler_claim_ready_development_v1/sodium_ion_battery_cathodes_2010_2025/graph_dependency_compiler/draft.md
+      sha256: 3ed2aec4ecc9acdeacb18db7f4fbb391e59e2be07b190df670cb074624eb60ce
+  published_human:
+    - article_id: gnn_drug_discovery_2017_2023
+      condition: published_human_reference
+      path: experiments/human_outputs/gnn_drug_discovery_2017_2023/reference_report.md
+      sha256: 8f91152515739df33733774890395e7fc68211d883125d5e8d281bd2df0feb38
+    - article_id: crispr_extracellular_vesicles_2015_2022
+      condition: published_human_reference
+      path: experiments/human_outputs/crispr_extracellular_vesicles_2015_2022/reference_report.md
+      sha256: 1f545d302295f13d2f06c0a36002749f87e0dea861791754a1ea7c954cb702d6
+    - article_id: machine_learning_climate_change_2008_2022
+      condition: published_human_reference
+      path: experiments/human_outputs/machine_learning_climate_change_2008_2022/reference_report.md
+      sha256: b54a7a1f51adbf3a10ae2fb2a28a4a27ac836361f0dfa059f74a740009e66b10
+    - article_id: climate_change_risks_1990_2021
+      condition: published_human_reference
+      path: experiments/human_outputs/climate_change_risks_1990_2021/reference_report.md
+      sha256: 2fb930dd0c37676de2bb3041af40e8d880a3421c9513b11f9f4327fcac9a313d
+    - article_id: digital_twins_healthcare_2012_2024
+      condition: published_human_reference
+      path: experiments/human_outputs/digital_twins_healthcare_2012_2024/reference_report.md
+      sha256: 603b08c5af87e2f02d1d2d8c9ffdf48ce35e7d48a3a70f340fe6120353f2d055
+    - article_id: plant_heat_drought_2008_2021
+      condition: published_human_reference
+      path: experiments/human_outputs/plant_heat_drought_2008_2021/reference_report.md
+      sha256: 02160c6a2b24176176a60f4d09c5dfd14942ab06d8d897c1ecce3d64708a7574
+    - article_id: gene_editing_als_2004_2024
+      condition: published_human_reference
+      path: experiments/human_outputs/gene_editing_als_2004_2024/reference_report.md
+      sha256: c9de201ed766f3ac98f1924a05ce994ec176f3afe36ebe7e74805a84feca8c90
+    - article_id: global_microplastics_2004_2019
+      condition: published_human_reference
+      path: experiments/human_outputs/global_microplastics_2004_2019/reference_report.md
+      sha256: a48a6a0aa8ee47d3a2a6a3f609b338d25a39874b91caeb2361f8f362d42cc5d0

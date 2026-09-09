@@ -1,10 +1,35 @@
 # Experiment Status and Decision Log
 
-**Last updated:** 2026-08-06  
-**Protocol:** 0.3  
-**Overall status:** Core text-only experimental program complete
+**Last updated:** 2026-09-08
 
-## Current state
+**Protocol:** 0.3 plus the frozen Formal V3 and review amendments
+
+**Overall status:** Formal machine panels complete; confirmatory human-review and
+new-topic robustness stages remain blocked by their registered prerequisites
+
+## Consolidated status on 2026-09-08
+
+| Work package | State | Claim boundary |
+|---|---|---|
+| Formal V3 primary, replication, and complexity panels | Complete and terminal | The registered graph-program condition is effective on the completed benchmark; this is deterministic graph-program execution, not autonomous LLM graph reasoning. |
+| Mechanism supplement | Complete and terminal | Flat serialization alone has no independent benefit; operator traces and raw graph provenance account for the supported gain. |
+| Canonical author identity repair | Complete | Placeholder OpenAlex identities were isolated and the affected artifacts rebuilt before Formal V3 promotion. |
+| Article generation development | Complete as development evidence | The compiler and repair pipeline are operational, but the generated articles do not establish human-level writing quality. |
+| Article claim/expert review | Infrastructure complete; evidence pending | No proxy or model judgment may replace the registered independent human reviewers. |
+| Complementary oversight | Infrastructure and balanced panel complete; human execution pending | There are no completed real-review outcomes, so no human–AI complementarity claim is available. |
+| CiteCalibrator | Development benchmark and machine-judge pipeline complete; human validation pending | Controlled challenge results validate pipeline behavior, not natural defect prevalence or training need. |
+| Robust graph confirmation on new topics | Automatic candidate gates complete; blind relevance review pending | No confirmatory perturbation or provider result may be generated until the frozen human-selection gate passes. |
+
+Large workspaces, model outputs, review packets, logs, arrays, embeddings, and
+other regenerable artifacts are external experiment data. They are intentionally
+excluded from Git under `experiments/DATA_POLICY.md`; Git retains portable
+protocols, freezes, implementation, audits, and compact analyses.
+
+The sections below retain the 2026-08-06 text-only program record as historical
+provenance. Later Formal V3 records and amendments supersede it where the scope
+overlaps.
+
+## 2026-08-06 text-only program state
 
 | Work package | State | Evidence |
 |---|---|---|

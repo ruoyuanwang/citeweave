@@ -1,0 +1,56 @@
+schema_version: 1
+amendment_id: review_policy_amendment_010_ai_self_review_baseline
+status: frozen_before_ai_provider_calls_and_real_reviewer_outcomes
+frozen_at: '2026-09-08T13:57:48+08:00'
+human_outcomes_inspected: false
+ai_review_outcomes_present: false
+registered_real_reviewers: 0
+calibration_returns: 0
+confirmatory_returns: 0
+previous_amendment_sha256: 060432b73fffac87655cec9a8d7fbb8f4a4ef20c451a03c84f33a42daece34d5
+
+rationale:
+  - The generator does not emit a four-class audit verdict, so treating unaudited generation as an AI reviewer would make the complementarity baseline ill-posed.
+  - A genuine AI-only reviewer must receive the same public evidence packet and return the same structured decision schema as a human reviewer.
+
+frozen_design:
+  panel_role: fixed_outcome_balanced_real_candidate_benchmark
+  cases: 96
+  packet_arms:
+    - standard_claim_first
+    - adversarial_two_sided
+  planned_calls: 192
+  model: deepseek-v4-pro
+  temperature: 0
+  maximum_prompt_tokens: 32768
+  maximum_completion_tokens: 1200
+  response_schema:
+    - verdict
+    - decisive_evidence_ids
+    - invalid_operator_steps
+    - failure_mode
+    - minimal_rewrite
+    - rationale
+  matching_rule: Compare each human decision only with the AI decision generated from the exact packet arm seen by that human.
+  hidden_information_rule: No gold verdict, selected generation condition, private audit path, or human outcome is supplied to the AI reviewer.
+  retry_rule: Only transport failures may be retried, using the identical frozen request; parse failures are terminal observations.
+
+artifacts:
+  plan: oversight_ai_self_review_plan_v1.json
+  plan_sha256: ad2d80457fa7145209811b807e5fa2ce3cd7bb03586b3d5c822a0042387b5119
+  plan_freeze: oversight_ai_self_review_plan_v1.freeze.json
+  plan_freeze_sha256: ee6852bc6da11ac210f727996598b439118781dc14436c67b2e6539b10e5c316
+  packet_manifest: oversight_heldout_factorial_v2_balanced/manifest.json
+  packet_manifest_sha256: 68b5713f201910f08103fdb6310ff43af02668cd421f81d041c2a5b5ca28f7e2
+
+prompt_token_audit:
+  tokenizer: exact_frozen_provider_tokenizer
+  total_tokens_across_planned_calls: 361364
+  minimum_tokens: 1083
+  maximum_tokens: 15827
+  all_calls_within_limit: true
+
+interpretation_limits:
+  - This baseline estimates same-packet human-versus-AI audit performance and packet-arm sensitivity.
+  - Human-AI team benefit must be estimated prospectively from paired human, AI, and adjudication outcomes; it is not established by this freeze.
+  - Because the case panel is outcome-balanced by design, prevalence-weighted deployment accuracy requires a separate natural-prevalence evaluation.

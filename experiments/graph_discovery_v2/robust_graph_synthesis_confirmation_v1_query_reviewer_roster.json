@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_real_query_reviewers",
+  "protocol_sha256": "b6845d089a616954d2be4770c18cccff1787bccd1d4c545e9ce773dc3111102d",
+  "candidate_audit_sha256": "051977bef6d93b04c99fc1dce634321cbde3fa65cb2855d44cda2924b721d1d0",
+  "reviewer_contract": {
+    "real_humans_only": true,
+    "synthetic_or_proxy_reviewers_prohibited": true,
+    "domain_qualification_must_be_documented": true,
+    "conflicts_declared_before_assignment": true,
+    "minimum_three_eligible_reviewers_per_candidate": true,
+    "primary_answers_hidden_from_adjudicator": true
+  },
+  "candidate_requirements": [
+    {
+      "candidate_code": "CAND-e71339491f31",
+      "qualified_domain": "electrochemical_energy_storage",
+      "minimum_conflict_free_reviewers": 3,
+      "roles": "two_primary_plus_one_independent_adjudicator"
+    },
+    {
+      "candidate_code": "CAND-ed3418a996d4",
+      "qualified_domain": "drug_delivery_and_vaccinology",
+      "minimum_conflict_free_reviewers": 3,
+      "roles": "two_primary_plus_one_independent_adjudicator"
+    },
+    {
+      "candidate_code": "CAND-1557afb0a164",
+      "qualified_domain": "climate_and_separation_engineering",
+      "minimum_conflict_free_reviewers": 3,
+      "roles": "two_primary_plus_one_independent_adjudicator"
+    },
+    {
+      "candidate_code": "CAND-eb0b8ad21c42",
+      "qualified_domain": "genomics_and_systems_biology",
+      "minimum_conflict_free_reviewers": 3,
+      "roles": "two_primary_plus_one_independent_adjudicator"
+    },
+    {
+      "candidate_code": "CAND-7aa1f40d5490",
+      "qualified_domain": "computing_hardware",
+      "minimum_conflict_free_reviewers": 3,
+      "roles": "two_primary_plus_one_independent_adjudicator"
+    },
+    {
+      "candidate_code": "CAND-2103e79623a7",
+      "qualified_domain": "environmental_engineering",
+      "minimum_conflict_free_reviewers": 3,
+      "roles": "two_primary_plus_one_independent_adjudicator"
+    },
+    {
+      "candidate_code": "CAND-1cae3fbec471",
+      "qualified_domain": "quantum_information",
+      "minimum_conflict_free_reviewers": 3,
+      "roles": "two_primary_plus_one_independent_adjudicator"
+    },
+    {
+      "candidate_code": "CAND-90bbc78b41a6",
+      "qualified_domain": "porous_materials",
+      "minimum_conflict_free_reviewers": 3,
+      "roles": "two_primary_plus_one_independent_adjudicator"
+    }
+  ],
+  "reviewer_schema_example": {
+    "reviewer_id": "replace_with_pseudonymous_id",
+    "real_human_attestation": true,
+    "synthetic_or_proxy_reviewer": false,
+    "qualified_domains": [
+      "replace_with_registered_domain"
+    ],
+    "qualification_note": "degree, publications, or documented experience",
+    "conflicts_with_candidate_codes": []
+  },
+  "reviewers": []
+}

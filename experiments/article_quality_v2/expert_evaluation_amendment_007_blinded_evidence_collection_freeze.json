@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "amendment_id": "expert_evaluation_amendment_007_blinded_evidence_collection",
+  "sha256": "683bdf0709133e125a07227423c17daa5c9e1c097c880bde93f0e30210613844",
+  "frozen_at_utc": "2026-09-07T22:28:16Z",
+  "previous_amendment_sha256": "91e9eb03384df3b6450a4c3884b443ac157c715184103cb6cfb792b028b1a362",
+  "frozen_before_same_evidence_articles": true,
+  "frozen_before_expert_outcomes": true,
+  "same_evidence_articles_present": false,
+  "registered_evaluators": 0,
+  "expert_outcomes_present": false,
+  "condition_blind_evidence_viewer_required": true,
+  "server_timed_collection_required": true
+}

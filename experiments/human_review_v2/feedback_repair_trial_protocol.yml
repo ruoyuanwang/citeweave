@@ -1,0 +1,118 @@
+schema_version: 1
+protocol_id: feedback_repair_mechanism_trial_v1
+status: frozen_before_real_feedback_worklist_generation_or_evaluation_outcomes
+frozen_at: '2026-09-01T11:36:00+08:00'
+
+purpose: >-
+  Test whether compiling the same adjudicated human feedback into an explicit
+  evidence-claim-paragraph dependency intervention improves repair quality and
+  reduces collateral damage relative to appending that feedback as an untyped
+  chronological prompt memory.
+
+source_population:
+  topics: 8
+  cases_per_topic: 12
+  cases: 96
+  eligibility: >-
+    Paragraph-distinct affected components from the validated real-review
+    dependency worklist after two primary reviewers and disagreement-only
+    independent adjudication.
+  exclusion:
+    - unresolved reviewer abstention
+    - missing original paragraph hash
+    - no actionable directive
+    - fewer than 12 paragraph-distinct components in any topic
+
+conditions:
+  dependency_compiled:
+    input: >-
+      Typed directives, invalid dependency identities, allowed evidence,
+      replacement guards, the exact paragraph hash, and a lock preventing
+      mutation outside the assigned paragraph.
+  raw_memory_prompt:
+    input: >-
+      The same human rationales, actions, proposed replacements, invalid IDs,
+      and guards serialized as an untyped chronological feedback log; no
+      dependency graph, credit assignment, scope lock, or promotion gate.
+  content_parity: >-
+    Both cells bind the same canonical feedback-content SHA-256. The treatment
+    is how feedback is represented and enforced, not access to a different
+    reviewer judgment.
+
+generation:
+  logical_cells: 192
+  model_temperature_token_budget: identical across paired cells
+  provider_responses_per_cell: 1
+  quality_based_resampling: prohibited
+  failure_rule: Parse failure or abstention is a failed repair and is never replaced.
+  interference_control: >-
+    Each cell begins from an independent copy of one original paragraph.
+    Different paragraph cases are never composed into one article during this
+    mechanism trial, so one treatment cannot alter another case.
+
+blind_evaluation:
+  conditions_hidden: true
+  formatting_normalized: true
+  primary_reviewers_per_variant: 2
+  disagreement_rule: Exactly one independent third reviewer adjudicates.
+  original_claim_context_visible: true
+  decisive_evidence_visible: true
+  reviewer_exclusions:
+    - original feedback author for that case
+    - article author
+    - system developer
+    - conflicted topic expert
+  timing: server-visible-page heartbeat
+
+outcomes:
+  strict_repair_success: >-
+    All targeted defects corrected AND unaffected claims preserved AND zero new
+    unsupported claims AND no domain-specificity regression.
+  collateral_damage: >-
+    Any unaffected-claim corruption, new unsupported claim, or domain-specificity
+    regression.
+  secondary_costs:
+    - revision wall time
+    - input plus output tokens
+    - independent evaluation seconds
+
+registered_hypotheses:
+  R1:
+    estimand: Per-topic dependency-compiled minus raw-memory strict repair-success rate.
+    direction: greater
+  R2:
+    estimand: Per-topic raw-memory minus dependency-compiled collateral-damage rate.
+    direction: greater
+  joint_success: R1 and R2 must both have positive effects and pass Holm-adjusted p<0.05.
+
+statistics:
+  independent_unit: topic
+  within_topic: paired case effect then equal-weight topic mean
+  across_topic: eight equally weighted topic effects
+  primary_test: fully enumerated one-sided 2^8 topic sign flips
+  multiplicity: Holm across R1 and R2
+  case_level_tests: descriptive_only
+  cost_metrics: descriptive_only
+
+interpretation_guards:
+  - This trial identifies the repair mechanism for already-collected human feedback; it does not show that automated reviewers can replace humans.
+  - It does not estimate reviewer recruitment cost because both conditions reuse one frozen human judgment.
+  - It does not replace the same-evidence 24-article expert panel or permit a claim that machine articles exceed humans.
+  - Simulated, researcher-authored, or LLM-authored feedback cannot enter the confirmatory trial.
+
+implementation:
+  dependency_worklist_compiler:
+    path: src/citeweave/article_review_revision.py
+    sha256: f15c9007d22c195e5b406f82b34ab236b05389cd4c3480cbff19045a0a75987e
+  trial_module:
+    path: src/citeweave/feedback_repair_trial.py
+    sha256: 4d777ae84727c1733f0665fe6405d83a3713a79216e8edd164fa3dd98cebab3c
+  preparation_cli:
+    path: scripts/prepare_feedback_repair_trial.py
+    sha256: 9fb603170131b7b44b9f67fcad92ebbadd96eecad7ae9a8f65a6c8bc6983b8e1
+  analysis_cli:
+    path: scripts/analyze_feedback_repair_trial.py
+    sha256: 526bc8ab2814ae516c0c495455c5b455136af3487100ecb1c45560b337be8d59
+  tests:
+    path: tests/test_feedback_repair_trial.py
+    sha256: 5a265191df160dff300d868130d706de6778b9e041fd0afeeb3bfebe348b24c9

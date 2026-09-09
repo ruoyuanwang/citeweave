@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "expert_evaluation_amendment_004_length_parity_and_density",
+  "sha256": "f6e945de98dd9fe8a340c16dabd7dc1fd92e4b544294a7ff3c65d3fa74c13af7",
+  "frozen_at_utc": "2026-09-01T03:12:00Z",
+  "frozen_before_same_evidence_articles": true,
+  "frozen_before_expert_outcomes": true,
+  "same_evidence_articles_present": false,
+  "expert_outcomes_present": false,
+  "within_topic_max_word_ratio": 1.10,
+  "across_topic_condition_mean_max_word_ratio": 1.05,
+  "post_review_density_role": "descriptive_sensitivity_only"
+}

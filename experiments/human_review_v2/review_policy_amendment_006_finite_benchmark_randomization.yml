@@ -1,0 +1,121 @@
+schema_version: 1
+amendment_id: review_policy_amendment_006_finite_benchmark_randomization
+status: frozen_before_real_reviewer_calibration_and_heldout_human_outcomes
+frozen_at: '2026-09-07T23:55:00+08:00'
+human_outcomes_inspected: false
+heldout_outcomes_inspected: false
+registered_real_reviewers: 0
+calibration_returns: 0
+confirmatory_returns: 0
+previous_amendment_sha256: 1af115f56ade85cf4283a0c6ddb5cefd53e5acd64118e12ded2daf8135e1ba44
+
+reason:
+  - The 96-case factorial panel randomizes packet and assignment policies, but the
+    prior analysis uses only eight dataset effects. That analysis is appropriate for
+    cross-topic transportability and intentionally does not use case count as topic
+    replication.
+  - A prospective design sensitivity audit shows low power for the current
+    dataset-sign-flip analysis under moderate packet-accuracy effects. At baseline
+    accuracy 0.60 and a conservative 0.05/3 planning threshold, estimated power is
+    0.268 for a 0.20 risk difference and 0.473 for a 0.25 risk difference.
+  - Discarding the randomized case-level evidence would also be inefficient. A
+    separate Fisher-style test can identify causal effects in the finite frozen
+    benchmark without pretending that 96 cases are 96 independent topics.
+
+unchanged_transportability_analysis:
+  source: review_policy_amendment_003_factorial_cluster_inference
+  estimands: [O1, O2, O3]
+  cluster_unit: dataset_id
+  tests: exact_dataset_sign_flip
+  multiplicity: Holm_over_O1_O2_O3
+  scope: cross_topic_transportability_over_the_registered_dataset_population
+  priority_rule: >-
+    The finite-benchmark analysis cannot replace, rescue, or overturn a failed
+    transportability analysis.
+
+finite_benchmark_randomization_analysis:
+  population: exactly_the_96_prospectively_frozen_heldout_cases
+  randomization_unit: heldout_case
+  assignment_reconstruction:
+    - Reproduce the frozen blocked 2 x 2 allocation from packet dataset, domain,
+      issue type, severity, and the frozen assignment seed.
+    - Reject analysis if reconstructed arms differ from the assignment manifest or
+      finalized outcomes.
+    - Generate the null distribution by rerunning that exact allocation algorithm
+      with 50000 deterministic pseudorandom seeds fixed by seed 20260907.
+  contrasts:
+    B1:
+      estimand: marginal adversarial-two-sided minus standard packet accuracy
+      alternative: greater
+    B2:
+      estimand: marginal capability-router minus qualified-random correct outcomes per reviewer minute
+      alternative: greater
+    B3:
+      estimand: packet-by-routing interaction in final accuracy
+      alternative: two_sided
+  statistic:
+    within_dataset: factorial cell metrics followed by equal marginal contrasts
+    across_dataset: equal mean because every registered dataset has exactly 12 cases
+  null: >-
+    No case-level effect of assigned packet or routing policy on final correctness
+    and total server-accounted review time.
+  p_value: Monte Carlo randomization p with plus-one correction
+  multiplicity: Holm_over_B1_B2_B3
+  alpha: 0.05
+  minimum_monte_carlo_p: 0.00001999960000799984
+  claim_scope: causal_effect_only_within_the_frozen_96_case_benchmark_population
+
+claim_language_gate:
+  benchmark_family_passes_and_transportability_family_fails: >-
+    May state that the intervention improved outcomes in the prospectively frozen
+    benchmark; must state that cross-topic transportability was not established.
+  transportability_family_passes: >-
+    May state evidence of a consistent effect across the registered scientific-topic
+    population, subject to the original O1/O2/O3 estimand and multiplicity rules.
+  neither_family_passes: >-
+    Report estimates and uncertainty; do not claim effectiveness.
+  prohibited:
+    - Treating randomized cases as independent scientific-topic replications.
+    - Using B1, B2, or B3 to rescue O1, O2, or O3.
+    - Choosing which family to report after seeing results.
+    - Describing a nonsignificant transportability test as proof of equivalence.
+
+prospective_design_sensitivity:
+  path: experiments/human_review_v2/oversight_design_sensitivity_20260907.json
+  sha256: 3cd430d130ac8bb67378cd5b2602a5d37e4d1616d001654377a85c2934e3f6d7
+  reads_human_outcomes: false
+  reads_machine_effects: false
+  assumptions:
+    - baseline_accuracy_0.60
+    - independent_Bernoulli_cases_within_dataset
+    - conservative_Holm_planning_threshold_0.05_divided_by_3
+  interpretation: >-
+    The calculation diagnoses sensitivity; it does not predict the observed effect.
+    If broader replication is later added, it must be prospectively frozen on new
+    datasets and reported as a separate replication rather than silently merged.
+
+implementation:
+  analysis_module:
+    path: src/citeweave/oversight_randomization_analysis.py
+    sha256: 541411df3ce1de32aa171cc97c2049bef4bc8667aac018934ffdea90b23b42f7
+  analysis_cli:
+    path: scripts/analyze_oversight_randomization.py
+    sha256: e0b87d92123b600fcf11a7abd376c9113124c0580b0ed9d0f85cc1eda80f9b40
+  analysis_test:
+    path: tests/test_oversight_randomization_analysis.py
+    sha256: 3b67af0b438cd2b5f7afcdca1a37393ed76c19aa5d94b32b12444277dc7c94a5
+  sensitivity_module:
+    path: src/citeweave/oversight_design_sensitivity.py
+    sha256: 2d72db9d1c32d32bf7ca2536fb0dee39d9f80e6704c780eb68b6cb1ea2852567
+  sensitivity_cli:
+    path: scripts/audit_oversight_design_sensitivity.py
+    sha256: 443b96fb392c2a145c03d1377ac0e15c45cc2ff7cecaf06bd74a566e02132739
+  sensitivity_test:
+    path: tests/test_oversight_design_sensitivity.py
+    sha256: 898cfdfaca30e1503b48e738bde908617fa175ac7fcdc8386f1e32476e466cf1
+
+integrity_guard:
+  - The amendment was frozen with zero registered real reviewers, zero calibration
+    returns, zero confirmatory returns, and no human outcomes inspected.
+  - Both analysis families are mandatory in the final report regardless of direction.
+  - Machine-only formal effects remain sealed and are not inputs to this amendment.

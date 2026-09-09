@@ -1,0 +1,36 @@
+schema_version: 1
+amendment_id: robust_graph_synthesis_confirmation_v1_access_delivery_004
+status: frozen_before_any_real_reviewer_registration_or_human_query_judgment
+frozen_at: '2026-09-08T12:38:20+08:00'
+base_protocol_sha256: b6845d089a616954d2be4770c18cccff1787bccd1d4c545e9ce773dc3111102d
+prior_amendment:
+  sha256: d42f3ae8efc197cd75acb9bb1bfc73001dd85dcaae251f2255b40de0ba1a902d
+  freeze_sha256: 39dd88bb019a1e0ddd5d3e122191505cc40e848f00e62b101b676fc309d15885
+state_at_amendment:
+  real_query_reviewers_registered: 0
+  human_query_judgments: 0
+  selected_topics: 0
+  perturbation_outcomes: 0
+  deterministic_gold_answers: 0
+  provider_responses: 0
+change:
+  purpose: >-
+    Allow the existing one-time access-token generator to consume the structured
+    reviewer roster required by amendment 003. Plaintext tokens are returned once
+    to the coordinator; the persisted access artifact contains SHA256 hashes only.
+  scientific_design_changed: false
+  query_items_or_labels_changed: false
+  assignment_or_adjudication_changed: false
+  threshold_or_selection_changed: false
+implementation:
+  access_token_generator:
+    path: scripts/prepare_review_access.py
+    sha256: b3d043f1c160c1a1e1be953d80b3e4c4655f12b7f89d818167b381f6596b8f48
+  expanded_regression_tests:
+    path: tests/test_confirmation_query_review.py
+    sha256: f99846500791bab4078b85a3b8cc49c3cf081f621f5c891cdee9e8d22a00cc7f
+integrity:
+  - Empty or duplicate reviewer identities are rejected.
+  - Existing access-hash files cannot be overwritten.
+  - Plaintext tokens are not persisted in the access-hash artifact.
+  - This helper does not create reviewer identities or human outcomes.

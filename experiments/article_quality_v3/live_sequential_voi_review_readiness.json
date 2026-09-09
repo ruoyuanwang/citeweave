@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "blocked_before_live_human_execution",
+  "scientific_role": "development_only_not_formal_outcome_collection",
+  "protocol_id": "live_sequential_voi_review_development_v1",
+  "protocol_sha256": "75a33b435782357b7e678429f9afcd7e1bc43d136fb09a25d06226e91a8233e0",
+  "implementation_integration_tests_passed": true,
+  "synthetic_route_events": 2,
+  "synthetic_unreviewed_descendants_propagated": 1,
+  "synthetic_reviewed_descendants_reopened": 1,
+  "real_live_voi_human_outcomes": 0,
+  "execution_gates": {
+    "complete_blinded_article_packet_root": false,
+    "pre_outcome_packet_time_estimates": false,
+    "pre_outcome_reviewer_budgets": false,
+    "config_frozen_before_returns": false,
+    "separate_randomized_live_evaluation": false
+  },
+  "gaps": [
+    "The provider-blocked article development round has not produced a qualified packet root.",
+    "No real reviewer calibration times exist from which to freeze packet-level time estimates.",
+    "No real reviewer roster exists from which to freeze reviewer-specific budgets.",
+    "Live deployment cannot be used as confirmatory gold-label collection."
+  ],
+  "claim_guard": "Synthetic integration behavior proves executability only; it is not evidence of human effectiveness or labor savings."
+}

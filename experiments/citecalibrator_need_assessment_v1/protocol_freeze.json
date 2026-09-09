@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "protocol_id": "citecalibrator_need_assessment_v1",
+  "sha256": "b269dc2453538b50d143b619ee2c22bf20bdeb7c5388fddd0ca1c7de3842a5e6",
+  "frozen_before_human_gold": true,
+  "frozen_before_successful_model_judge": true,
+  "primary_metric_count": 4
+}

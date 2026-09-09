@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "artifact": "experiments/human_review_v2/review_policy_amendment_009_freeze_timestamp_correction.yml",
+  "sha256": "060432b73fffac87655cec9a8d7fbb8f4a4ef20c451a03c84f33a42daece34d5",
+  "status": "frozen_before_real_reviewer_calibration_and_heldout_human_outcomes",
+  "human_outcomes_inspected": false,
+  "heldout_outcomes_inspected": false,
+  "registered_real_reviewers": 0
+}

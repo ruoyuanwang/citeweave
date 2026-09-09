@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "review_policy_amendment_005_integrated_capability_and_factorial_execution",
+  "status": "frozen_before_real_reviewer_calibration_and_heldout_human_outcomes",
+  "sha256": "1af115f56ade85cf4283a0c6ddb5cefd53e5acd64118e12ded2daf8135e1ba44",
+  "frozen_at_utc": "2026-09-07T15:00:00Z",
+  "human_outcomes_inspected": false,
+  "heldout_outcomes_inspected": false,
+  "registered_real_reviewers": 0,
+  "calibration_returns": 0,
+  "confirmatory_returns": 0,
+  "heldout_selection_sha256": "b73f702551bb0011664fa3c2b64fc8cf6c981ba93f3224c4bcfbc3fda993fa46"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "protocol_id": "graph_dependency_article_compiler_development_pilot_v1",
+  "sha256": "9d846c103c703e09013547819046e3ba35d8ae01e3b73e1a3336607874a040d2",
+  "development_only": true,
+  "articles": 2,
+  "maximum_provider_calls": 14,
+  "provider_responses_at_freeze": 0,
+  "confirmatory_replacement": false
+}

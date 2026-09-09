@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "implementation_verified",
+  "artifact_audit": {
+    "path": "experiments/citecalibrator_need_assessment_v1/audit.json",
+    "sha256": "da58060e753740b79129f85756fc200aae7ddb836352be8236fea2e8a6966f00",
+    "passed": true
+  },
+  "tests": {
+    "focused": {
+      "command": "python -m pytest tests/test_citecalibrator_benchmark.py -q",
+      "passed": 6,
+      "failed": 0
+    },
+    "full_repository": {
+      "command": "python -m pytest",
+      "passed": 488,
+      "failed": 0,
+      "warnings": 2
+    }
+  },
+  "static_checks": {
+    "command": "python -m ruff check <new CiteCalibrator files>",
+    "passed": true
+  },
+  "scientific_conclusion_ready": false,
+  "scientific_conclusion_blocker": "Natural claim-level human gold is not yet available."
+}

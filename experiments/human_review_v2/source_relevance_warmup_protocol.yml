@@ -1,0 +1,62 @@
+schema_version: 1
+protocol_id: source_relevance_warmup_v1
+status: frozen_before_human_source_judgments
+human_judgments_inspected: false
+purpose: Calibrate reviewer evidence-relevance capability and create component-specific retrieval supervision without entering confirmatory oversight outcomes.
+
+cases:
+  writer_pack_version: topic-task-bm25-v4-title-deduplicated
+  datasets: 8
+  graph_phenomena_per_dataset: 5
+  sources_per_phenomenon: 3
+  total_source_phenomenon_pairs: 120
+  issue_type: evidence_relevance
+  confirmatory_exclusion: true
+
+review_response:
+  required:
+    - topic relevance
+    - evidence role for the registered graph interpretation
+    - exact decisive title or abstract span
+    - retrieval failure type
+    - suggested query terms
+    - rationale
+  labels:
+    topic_relevance: [direct, contextual, irrelevant, cannot_assess]
+    evidence_role: [supports_interpretation, context_only, challenges, irrelevant, cannot_assess]
+  hidden:
+    - source selection basis
+    - retrieval query and rank
+    - matched graph keyword
+    - topic-term coverage score
+    - other reviewer judgments
+
+panel:
+  minimum_reviewers: 6
+  target_decisions_per_reviewer: 30
+  minimum_cases_per_reviewer_for_capability: 12
+  minimum_domains_per_reviewer: 2
+  overlap: At least 60 of 120 pairs receive two independent first-pass judgments.
+  adjudication: Every disagreement on direct/contextual/irrelevant or evidence role receives a blinded domain-qualified third judgment.
+  timing: Server visibility-heartbeat seconds.
+
+learning_use:
+  component: evidence retriever and reranker
+  positive: direct or contextual with an exact decisive span after adjudication
+  hard_negative: irrelevant or generic_graph_anchor after adjudication
+  contrastive: challenges is retained as counterevidence, never converted to an irrelevant negative
+  query_revision: Suggested terms enter held-out replay only; they are not appended directly to future prompts.
+  promotion_gates:
+    - held-out source relevance precision
+    - no regression on challenge-evidence recall
+    - cross-dataset transfer
+    - unrelated-query regression
+
+capability_use:
+  - Adjudicated warmup correctness updates reviewer × domain × evidence_relevance Beta posteriors.
+  - All 120 cases and their times are excluded from prospective 2×2 oversight outcomes.
+  - Held-out case labels never update a route made for that case.
+
+interpretation_guard:
+  - Agreement does not prove scientific truth; it establishes reproducible relevance judgments under the supplied excerpts.
+  - Simulated or LLM judgments cannot replace the registered human panel.

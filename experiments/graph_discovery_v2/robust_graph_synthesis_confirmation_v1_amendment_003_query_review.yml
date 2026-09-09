@@ -1,0 +1,87 @@
+schema_version: 1
+amendment_id: robust_graph_synthesis_confirmation_v1_query_review_003
+status: frozen_before_any_human_query_judgment_or_task_outcome
+frozen_at: '2026-09-08T09:09:12+08:00'
+base_protocol_sha256: b6845d089a616954d2be4770c18cccff1787bccd1d4c545e9ce773dc3111102d
+prior_amendment:
+  sha256: 95f0f3bf995f6c211b9a6135a8a40ef362cc6424733caded183dedd3c56dbc84
+  freeze_sha256: 740d6f37ebb270f25c6f8c62f4db204b3292599e4f803c428c21f41718e628be
+state_at_amendment:
+  processed_candidates: 8
+  automatic_gate_passes: 8
+  real_query_reviewers_registered: 0
+  human_query_judgments: 0
+  selected_topics: 0
+  perturbation_outcomes: 0
+  deterministic_gold_answers: 0
+  provider_responses: 0
+scope:
+  purpose: >-
+    Operationalize the registered blind query-relevance gate without changing its
+    sample, label rule, threshold, priority rule, tasks, conditions, or analysis.
+  primary_review: >-
+    Every sampled item receives two complete, independent decisions by
+    conflict-free domain-qualified real humans. Review packets hide dataset
+    identity, priority, graph statistics, perturbations, gold answers, model
+    outcomes, other reviewer identities, and other reviewer answers.
+  adjudication: >-
+    Primary agreements are final. Only disagreements or cannot-assess primary
+    pairs are routed to the third reviewer frozen before collection; that reviewer
+    cannot have served as a primary reviewer and sees neither primary answer nor
+    primary identity.
+  collection_integrity:
+    - Reviewer access uses hashed tokens.
+    - Task identities and visible content are bound by SHA256.
+    - The server owns task fields, ISO timestamps, and visible-review timing.
+    - Submissions are immutable and complete return sets are mandatory.
+    - Missing, duplicated, foreign, changed, or self-adjudicated work fails closed.
+  selection: >-
+    After all disagreements are resolved, candidate rates use the registered 0.80
+    threshold and topics are selected by the frozen first-eight-eligible priority
+    rule. If fewer than eight reviewed candidates pass, selection remains empty
+    while registered reserve candidates are processed.
+unchanged:
+  - candidate sample and hash selection
+  - relevance definition and 0.80 eligibility threshold
+  - first-eight-eligible frozen priority rule
+  - graph perturbations, complex tasks, conditions, outcomes, and statistics
+  - prohibition on inspecting downstream outcomes before selection
+frozen_inputs:
+  candidate_audit:
+    path: experiments/graph_discovery_v2/robust_graph_synthesis_confirmation_v1_candidate_audit.json
+    sha256: 051977bef6d93b04c99fc1dce634321cbde3fa65cb2855d44cda2924b721d1d0
+  empty_real_reviewer_roster_template:
+    path: experiments/graph_discovery_v2/robust_graph_synthesis_confirmation_v1_query_reviewer_roster.json
+    sha256: f3bb46e0f09b1085b707914f5fdd1cb3d478a609606d5c53a93007593e76cc17
+implementation:
+  query_review_pipeline:
+    path: src/citeweave/confirmation_query_review.py
+    sha256: 8ae258eef01c49e2ffae90279b6941cda7da1bab8d2fdf65f7c89125869e327d
+  query_review_web_service:
+    path: src/citeweave/query_relevance_review_ui.py
+    sha256: 07e7f73ac0a9f38095ef66c98eb3dc242e27812ff1d7df55209e8b5afd237db4
+  roster_preparation:
+    path: scripts/prepare_robust_graph_query_reviewer_roster.py
+    sha256: 238815a78cdb2d45c7cc50c46d65a2b0395fa52bdb34c23dc19fb42ba48cee8e
+  primary_collection_preparation:
+    path: scripts/prepare_robust_graph_query_review.py
+    sha256: 6c90a9b5326a06a213f9e0021431cc6b64ca45076df1e57c0514927040ea2873
+  primary_return_validation:
+    path: scripts/validate_robust_graph_query_review.py
+    sha256: 745ea49e898d3dc89b6bc3a36f0063697f21f052c45d62028bf9ee1af07bfbfc
+  adjudication_preparation:
+    path: scripts/prepare_robust_graph_query_adjudication.py
+    sha256: f52b5801358b9cd7fa2ab259bfcc5f063c93debaad21397fb565e1b62775463c
+  selection_finalization:
+    path: scripts/finalize_robust_graph_query_review.py
+    sha256: fcddd773d65d5844561ede7bd9db05436b8cf9b603b5c3ea1d5acc4be9224a1c
+  web_service_entrypoint:
+    path: scripts/serve_robust_graph_query_review.py
+    sha256: 56da7988321ce7dac51ec375062feb4c0b9c06afb3db415aff68a1ef247c81b5
+  regression_tests:
+    path: tests/test_confirmation_query_review.py
+    sha256: 187bb37a414a90aa93b06fbc92ebd75fac6bf1a7be9ea5776a15cb4e3db6ee23
+interpretation:
+  - This amendment adds collection integrity and does not supply human outcomes.
+  - Empty reviewer fields must remain empty until identifiable real participants are recruited.
+  - Synthetic, proxy, or assistant-generated reviewer records are prohibited.

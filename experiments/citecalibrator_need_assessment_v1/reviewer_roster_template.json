@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_real_reviewers",
+  "reviewer_contract": {
+    "minimum_conflict_free_domain_qualified_reviewers_per_topic": 3,
+    "two_independent_primary_reviewers": true,
+    "third_reviewer_for_disagreements": true,
+    "synthetic_or_llm_proxy_reviewers_prohibited": true
+  },
+  "pilot_topics": [
+    "explainable_ai_medical_imaging_2016_2025",
+    "sodium_ion_battery_cathodes_2010_2025"
+  ],
+  "reviewers": []
+}

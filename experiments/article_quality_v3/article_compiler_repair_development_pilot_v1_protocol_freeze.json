@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "protocol_id": "article_compiler_posthoc_section_repair_development_pilot_v1",
+  "sha256": "7a064cd7adbc8d7f26f27550569aff017a796d5674a53aa0ca6cc0aa277583e4",
+  "development_only": true,
+  "repair_calls": 4,
+  "provider_responses_at_freeze": 0,
+  "confirmatory_replacement": false
+}

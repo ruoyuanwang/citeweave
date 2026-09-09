@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_any_robust_synthesis_model_outcomes",
+  "protocol_id": "robust_graph_synthesis_continuous_difficulty_development_v1",
+  "path": "experiments/graph_discovery_v2/robust_graph_synthesis_development_v1_protocol.yml",
+  "sha256": "39473c70279db587066fd5a57c083d684b11d1e12012c868f591fd3d8001be09",
+  "bytes": 6984,
+  "model_outcomes_at_freeze": 0,
+  "planned_provider_calls": 200,
+  "confirmatory": false
+}

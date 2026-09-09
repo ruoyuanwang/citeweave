@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "artifact": "experiments/human_review_v2/review_policy_amendment_010_ai_self_review_baseline.yml",
+  "sha256": "e62b215178483499b3cff410a08b36eb9a88ca061b711ab892476bb5c49d3137",
+  "status": "frozen_before_ai_provider_calls_and_real_reviewer_outcomes",
+  "human_outcomes_inspected": false,
+  "ai_review_outcomes_present": false,
+  "registered_real_reviewers": 0,
+  "planned_calls": 192
+}

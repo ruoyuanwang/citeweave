@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "review_policy_amendment_004_multidimensional_calibration",
+  "status": "frozen_before_multidimensional_calibration_or_heldout_human_outcomes",
+  "sha256": "79ade0f6b08372bdde34b477bfb644cb45590ed2572c4e3484f2da214b4c802c",
+  "frozen_at_utc": "2026-09-07T13:52:00Z",
+  "human_outcomes_inspected": false,
+  "heldout_outcomes_inspected": false,
+  "registered_real_reviewers": 0,
+  "calibration_returns": 0,
+  "confirmatory_returns": 0,
+  "prototype_outputs_only": true
+}

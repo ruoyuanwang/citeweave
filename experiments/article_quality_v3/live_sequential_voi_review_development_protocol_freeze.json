@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "protocol_id": "live_sequential_voi_review_development_v1",
+  "status": "frozen_before_any_live_voi_human_outcome",
+  "sha256": "75a33b435782357b7e678429f9afcd7e1bc43d136fb09a25d06226e91a8233e0",
+  "human_outcomes_at_freeze": 0
+}

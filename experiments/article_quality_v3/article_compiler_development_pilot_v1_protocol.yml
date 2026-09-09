@@ -1,0 +1,98 @@
+schema_version: 1
+protocol_id: graph_dependency_article_compiler_development_pilot_v1
+status: frozen_after_single_call_pilots_before_compiler_provider_calls
+frozen_at: '2026-09-08T03:36:56+08:00'
+
+timing_disclosure:
+  formal_single_call_responses: 16
+  formal_gate_passes: 0
+  development_pilot_v1_responses: 4
+  development_pilot_v1_passes: 2
+  development_pilot_v2_responses: 4
+  development_pilot_v2_passes: 2
+  all_prior_outcomes_inspected: true
+  real_human_article_returns: 0
+
+motivation: >-
+  Both single-call development pilots achieved complete structural coverage but word
+  counts remained unstable. Pilot v2 had all seven sections, all five PH phenomena in
+  Results/Discussion/Conclusion, and all three syntheses in every draft, yet two of four
+  drafts fell below the frozen 2700-word lower bound. Repeatedly tuning one global word
+  instruction is therefore replaced by dependency-ordered section compilation.
+
+scientific_role:
+  development_only: true
+  confirmatory_replacement: false
+  pooling_with_prior_runs: prohibited
+  intended_next_use: qualify a future separately frozen eight-topic comparison
+
+panel:
+  datasets:
+    - explainable_ai_medical_imaging_2016_2025
+    - sodium_ion_battery_cathodes_2010_2025
+  condition: graph_dependency_article_compiler
+  articles: 2
+  section_calls_per_article: 7
+  maximum_provider_calls: 14
+  temperature: 0
+  rendered_figure_access: false
+
+compiler_design:
+  generation_order:
+    - Methods
+    - Results
+    - Discussion
+    - Limitations
+    - Conclusion
+    - Introduction
+    - Abstract
+  dependency_edges:
+    - Results -> Discussion
+    - Methods + Results -> Limitations
+    - Results + Discussion + Limitations -> Conclusion
+    - Methods -> Introduction
+    - all six sections -> Abstract
+  deterministic_assembly_order:
+    - Abstract
+    - Introduction
+    - Methods
+    - Results
+    - Discussion
+    - Limitations
+    - Conclusion
+  total_target_from_section_ranges: 2880-3160_words
+  adaptive_quality_resampling: prohibited
+  section_response_limit: one
+
+success_gate:
+  - both articles finish all seven section calls without transport failure
+  - every section response has finish_reason stop
+  - assembled article passes unchanged 2700-3300 word gate
+  - all five phenomena appear in Results and Discussion
+  - at least three phenomena appear in Conclusion
+  - at least two registered synthesis pairs span at least two paragraphs
+  - no unregistered PH or REF token
+
+implementation:
+  compiler_module:
+    path: src/citeweave/article_compiler.py
+    sha256: f0fadc8bb24a64ef1cb17854d30e328330ac5ace63e072502e6518a3f06cecec
+  preparation_cli:
+    path: scripts/prepare_article_compiler_pilot.py
+    sha256: 5c2d49446a0a627e9b5dcfa7848bd4964406f577f084545e0e9d6bf7a608f782
+  execution_cli:
+    path: scripts/run_article_compiler_pilot.py
+    sha256: a9a50e003eb8e3b0250145647eadadc42dde164720ba8ec97a0b0d2743f97a8d
+  assessment_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  test:
+    path: tests/test_article_compiler.py
+    sha256: 1d64ba14ae51724d4bf1c2a92ba850972ea858601a1442978e38fbbc54aae90d
+
+integrity_guards:
+  - Every dynamically materialized section request is hashed before its provider call.
+  - A received section is immutable and is reused only after its stored hash is checked.
+  - Later requests may depend only on frozen writer input, deterministic argument plan,
+    and earlier immutable compiled sections.
+  - No result may reclassify a prior formal or single-call development draft.

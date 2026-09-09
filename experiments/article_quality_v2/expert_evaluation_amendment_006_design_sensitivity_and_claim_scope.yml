@@ -1,0 +1,100 @@
+schema_version: 1
+amendment_id: expert_evaluation_amendment_006_design_sensitivity_and_claim_scope
+status: frozen_before_registered_machine_articles_human_articles_and_expert_outcomes
+frozen_at: '2026-09-08T00:32:15+08:00'
+registered_machine_terminal_responses: 0
+same_evidence_human_articles_submitted: 0
+registered_expert_evaluators: 0
+expert_outcomes_inspected: false
+machine_article_effects_inspected: false
+base_protocol_sha256: 7e8267bd91b69ac12b563aa1e5af47921cd67d521a4f17a28bb652fb1fd875a5
+analysis_amendment_003_sha256: 3a8e707ae9f45705cbe3cfb08287ad41d31c8804bdd2f5efd76fdc1d7ff75100
+length_density_amendment_004_sha256: f6e945de98dd9fe8a340c16dabd7dc1fd92e4b544294a7ff3c65d3fa74c13af7
+role_separation_amendment_005_sha256: 3af6683d4758143accebcf5feb064fa72279aef7b1eccf299c25316544eae4f1
+
+reason:
+  - The registered article experiment has eight independent topic clusters. Twenty
+    sampled claims per article and multiple expert ratings improve measurement within
+    topic but cannot be counted as additional scientific-topic replications.
+  - A prospective sensitivity audit is required so a nonsignificant human comparison
+    is not later misreported as parity and a significant benchmark result is not
+    generalized to scientific writing as a whole.
+
+prospective_sensitivity:
+  path: experiments/article_quality_v2/article_design_sensitivity_20260908.json
+  sha256: 684745023add1cfe52a1f453dd44a9c7d07be4726aa834a6438dfbccb3e0b20d
+  simulations: 10000
+  seed: 20260908
+  planning_threshold: 0.05_divided_by_3_as_conservative_Holm_threshold
+  reads_registered_articles: false
+  reads_expert_ratings: false
+  reads_machine_effects: false
+  A1_binary_claim_result:
+    assumptions: baseline_strict_claim_accuracy_0.60_and_20_claims_per_article
+    power_at_0.15_risk_difference: 0.5214
+    power_at_0.20_risk_difference: 0.8188
+    interpretation: adequately_sensitive_only_to_large_absolute_claim_improvements
+  A2_A3_holistic_result:
+    assumptions: independent_Normal_topic_effects_with_unit_between_topic_SD
+    power_at_standardized_topic_effect_0.75: 0.3354
+    power_at_standardized_topic_effect_1.00: 0.5646
+    power_at_standardized_topic_effect_1.50: 0.9020
+    interpretation: eight_topics_are_underpowered_for_moderate_human_comparison_effects
+  twelve_topic_reference:
+    power_at_standardized_topic_effect_1.00: 0.8298
+    role: prospective_design_reference_only_not_part_of_the_registered_eight_topic_panel
+
+unchanged_confirmatory_analysis:
+  topics: 8
+  cluster_unit: topic
+  hypotheses: [A1, A2, A3]
+  primary_test: exact_one_sided_paired_topic_sign_flip
+  multiplicity: Holm_over_A1_A2_A3
+  A2_noninferiority_margin: 0.35_points_on_1_to_5_scale
+  domain_specificity_nonregression_guard: required
+  llm_judges: development_only
+
+claim_language_gate:
+  A1_passes: >-
+    May report improved strict correct-and-supported claim rate over the registered
+    one-shot baseline across the eight-topic same-evidence benchmark.
+  A2_A3_and_domain_guard_pass: >-
+    May use the protocol's narrowly defined benchmark language for research-utility
+    noninferiority and evidence-traceability superiority. The claim must name the
+    eight topics, identical evidence condition, word-parity gate, and expert panel.
+  A2_fails: >-
+    Must report that noninferiority was not established; may not call the systems
+    equivalent or conclude that humans are better solely from failure to reject.
+  A3_fails: >-
+    Must report that traceability superiority was not established.
+  prohibited:
+    - Claiming that CiteWeave replaces human scientific authors.
+    - Treating claim ratings, evaluators, or articles as independent topic replications.
+    - Generalizing the eight-topic benchmark to all disciplines without new external topics.
+    - Using automatic quality controls or LLM preferences to rescue expert outcomes.
+    - Suppressing null, unfavorable, cannot-assess, or agreement results.
+
+external_extension_rule:
+  trigger: >-
+    Any manuscript seeking a broad claim about parity with or superiority to human
+    scientific writing must add at least four independently selected topics.
+  timing: new_topic_selection_and_protocol_must_be_frozen_before_access_to_their_outputs
+  analysis: separate_replication_first_then_transparently_labeled_combined_analysis
+  prohibition: stage_one_effect_direction_cannot_select_new_topics_or_change_prompts
+
+implementation:
+  sensitivity_module:
+    path: src/citeweave/article_design_sensitivity.py
+    sha256: dd3a4ea17b42c493ba644b9516ee4fb7126ca83fb4ee06ebf1ca447b44fee5d8
+  sensitivity_cli:
+    path: scripts/audit_article_design_sensitivity.py
+    sha256: 4eb08767a14b50990d0b91bdc47bbb5d634832397b301d02c9f01e6601d63502
+  sensitivity_test:
+    path: tests/test_article_design_sensitivity.py
+    sha256: 66f1700b4d91ed269d77c93405fca96b7d105a29599026348404cff19164e35b
+
+integrity_guard:
+  - This amendment changes no article, prompt, evidence pack, rating scale, primary
+    hypothesis, multiplicity family, noninferiority margin, or analysis code.
+  - It freezes design sensitivity and the allowable language before any registered
+    article response, same-evidence human article, or expert rating exists.

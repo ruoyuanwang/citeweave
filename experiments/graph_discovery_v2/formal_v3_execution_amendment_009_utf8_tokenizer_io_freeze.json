@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "frozen_result_blind_before_confirmatory_api_execution",
+  "amendment": "formal_v3_execution_amendment_009_utf8_tokenizer_io.yml",
+  "sha256": "b2ca5554c230abf7792707cc96f37d6653bf4b384916256694bc68b30858a16d",
+  "frozen_at_local": "2026-09-01T14:15:00+08:00",
+  "prior_input_freeze_sha256": "6fe178ffdda0b37894cdef5795a03d3412415cc992c1249598f9a7f7b3257a2b",
+  "amended_token_budget_sha256": "8a049845e55e738ce0481f4fce6aff1b7304cdea2a127bb0d451887a4f8acbc2",
+  "primary_result_files": 0,
+  "replication_result_files": 0,
+  "extension_result_files": 0,
+  "qualification_file_present": false,
+  "promotion_file_present": false,
+  "provider_api_execution_started": false,
+  "model_outcomes_inspected": false
+}

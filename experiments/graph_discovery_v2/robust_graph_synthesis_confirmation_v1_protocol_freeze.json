@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_any_candidate_acquisition",
+  "protocol_id": "robust_graph_synthesis_heldout_confirmation_v1",
+  "path": "experiments/graph_discovery_v2/robust_graph_synthesis_confirmation_v1_protocol.yml",
+  "sha256": "b6845d089a616954d2be4770c18cccff1787bccd1d4c545e9ce773dc3111102d",
+  "bytes": 10140,
+  "candidate_acquisitions_at_freeze": 0,
+  "perturbation_outcomes_at_freeze": 0,
+  "deterministic_gold_answers_at_freeze": 0,
+  "provider_responses_at_freeze": 0,
+  "human_query_judgments_at_freeze": 0,
+  "confirmatory": true
+}

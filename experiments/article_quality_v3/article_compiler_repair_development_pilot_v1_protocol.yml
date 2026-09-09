@@ -1,0 +1,66 @@
+schema_version: 1
+protocol_id: article_compiler_posthoc_section_repair_development_pilot_v1
+status: frozen_after_compiler_v1_before_repair_provider_calls
+frozen_at: '2026-09-08T03:45:36+08:00'
+
+timing_disclosure:
+  compiler_v1_articles: 2
+  compiler_v1_global_gate_passes: 1
+  compiler_v1_outcomes_inspected: true
+  selected_sections: 4
+  repair_responses_at_freeze: 0
+
+reason: >-
+  Both compiler-v1 Results and Discussion section calls reached their section token
+  caps. The first assembled article nevertheless passed globally. The second failed
+  only because its truncated Results ended midway through one otherwise registered
+  REF identifier. This development repair tests a precommittable second-pass compiler
+  stage; it does not reclassify compiler v1.
+
+scientific_role:
+  posthoc_development: true
+  confirmatory_replacement: false
+  pooling_with_prior_runs: prohibited
+
+panel:
+  datasets: 2
+  selected_sections_per_dataset:
+    - Results
+    - Discussion
+  repair_calls: 4
+  generation_requests_per_repair: 1
+  result_target_words: 880-950
+  discussion_target_words: 650-720
+  result_max_tokens: 2000
+  discussion_max_tokens: 1600
+
+success_gate:
+  - four repaired sections finish with stop
+  - both separately assembled repaired articles pass the unchanged global gate
+  - no shortened or unregistered PH/REF token
+  - all five PH phenomena remain in Results and Discussion
+  - all three synthesis pairs remain represented
+
+implementation:
+  repair_module:
+    path: src/citeweave/article_section_repair.py
+    sha256: b8617cc8327f45570d2edd09eb0fbb74c8119ccf6cadab3ad5bbeea67c31e90e
+  execution_cli:
+    path: scripts/run_article_compiler_repair_pilot.py
+    sha256: d5787530400bdb3b7bc01ebf1c6057c461f9e72c4098a7e705e7347fd6a8ab0a
+  compiler_module:
+    path: src/citeweave/article_compiler.py
+    sha256: f0fadc8bb24a64ef1cb17854d30e328330ac5ace63e072502e6518a3f06cecec
+  assessment_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  test:
+    path: tests/test_article_section_repair.py
+    sha256: 6bd6c962f0f06a8d79e0197f3187e0e3ea2a875b4b5a6712b9b6612231348594
+
+integrity_guards:
+  - Compiler-v1 drafts and section artifacts are immutable inputs.
+  - Repair outputs are written to a separate root and cannot change prior statuses.
+  - Results is repaired before Discussion; repaired Discussion may depend on the
+    immutable repaired Results request output.
+  - No quality-based third request is allowed.

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "expert_evaluation_amendment_006_design_sensitivity_and_claim_scope",
+  "status": "frozen_before_registered_machine_articles_human_articles_and_expert_outcomes",
+  "sha256": "91e9eb03384df3b6450a4c3884b443ac157c715184103cb6cfb792b028b1a362",
+  "frozen_at_utc": "2026-09-07T16:32:29Z",
+  "registered_machine_terminal_responses": 0,
+  "same_evidence_human_articles_submitted": 0,
+  "registered_expert_evaluators": 0,
+  "expert_outcomes_inspected": false,
+  "machine_article_effects_inspected": false,
+  "design_sensitivity_sha256": "684745023add1cfe52a1f453dd44a9c7d07be4726aa834a6438dfbccb3e0b20d"
+}

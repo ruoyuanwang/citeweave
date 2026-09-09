@@ -1,0 +1,58 @@
+schema_version: 1
+amendment_id: robust_graph_synthesis_confirmation_v1_candidate_audit_001
+status: frozen_after_eight_candidate_acquisitions_before_query_judgments_or_task_outcomes
+frozen_at: '2026-09-08T08:47:00+08:00'
+base_protocol:
+  path: experiments/graph_discovery_v2/robust_graph_synthesis_confirmation_v1_protocol.yml
+  sha256: b6845d089a616954d2be4770c18cccff1787bccd1d4c545e9ce773dc3111102d
+base_freeze:
+  path: experiments/graph_discovery_v2/robust_graph_synthesis_confirmation_v1_protocol_freeze.json
+  sha256: 98644fab1c663a3e8e78787bbfe33372eab4c4e1971cfaf9a8c4daaf2f29ce1d
+state_at_amendment:
+  initialized_candidates: 12
+  acquired_and_processed_candidates: 8
+  automatic_data_gate_passes: 8
+  reserve_candidates_acquired: 0
+  query_review_packets_generated: 8
+  human_query_judgments: 0
+  selected_topics: 0
+  perturbation_outcomes: 0
+  deterministic_gold_answers: 0
+  provider_responses: 0
+change:
+  reason: >-
+    Add a deterministic candidate auditor and blinded 100-record relevance packets
+    after observing only acquisition completeness and registered graph-size gates.
+    The first packet serialization emitted non-standard NaN abstract values; before
+    any reviewer access, those missing values were normalized to JSON null.
+  changes_candidate_topics: false
+  changes_priority_or_selection_rule: false
+  changes_data_gates: false
+  changes_query_relevance_threshold: false
+  changes_perturbations_or_tasks: false
+  changes_model_conditions_or_statistics: false
+  changes_observed_provider_outcomes: false
+  reserve_rule: >-
+    Because priorities 1 through 8 all passed automatic gates, priorities 9 through
+    12 remain unacquired unless a blinded relevance judgment excludes a higher-priority
+    candidate. Their absence is not an automatic-gate failure.
+  packet_rule: >-
+    Select exactly 100 records by SHA256(protocol, dataset, work_id), disclose only
+    an anonymous candidate code, registered concepts, title, abstract and year, and
+    never disclose candidate priority, graph statistics, perturbations or task gold.
+implementation_bindings:
+  workspace_initializer_unchanged:
+    path: scripts/prepare_robust_graph_confirmation_workspaces.py
+    sha256: 331ce2de15c27acb1247585d9dcbfc00ef6c458f01ca6fcee9862f6d63993c12
+  candidate_auditor:
+    path: scripts/audit_robust_graph_confirmation_candidates.py
+    sha256: 975effe5159e355b171a1752841579a012f8f8437d9bd379f7e8bb69b3ef256a
+  confirmation_tests_extended:
+    path: tests/test_robust_graph_confirmation.py
+    sha256: 68e41f350f9bfafcea336546afdcaf4058691e280739c8052069efc9225d058f
+supersedes_base_implementation_binding:
+  - initializer_tests
+interpretation:
+  - This amendment adds integrity machinery and does not select topics.
+  - Automatic data-gate success is not evidence of scientific query relevance.
+  - No perturbation or model outcome may be generated until relevance resolution fixes eight topics.

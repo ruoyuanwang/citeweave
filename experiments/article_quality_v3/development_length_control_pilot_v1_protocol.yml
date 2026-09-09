@@ -1,0 +1,87 @@
+schema_version: 1
+protocol_id: article_v3_budgeted_completion_development_pilot_v1
+status: frozen_post_formal_generation_for_development_only
+frozen_at: '2026-09-08T03:15:56+08:00'
+
+timing_disclosure:
+  previous_formal_machine_responses: 16
+  previous_formal_quality_gate_failures: 16
+  previous_results_inspected: true
+  previous_parser_defect_identified: true
+  real_human_article_returns: 0
+
+purpose: >-
+  Test whether explicit section budgets, fixed paragraph counts, a prohibition on
+  nested headings, and completion-first instructions prevent overlength and
+  truncation while retaining registered graph phenomena and cross-phenomenon
+  synthesis. This is post-result development and cannot replace the prior formal run.
+
+panel:
+  datasets:
+    - explainable_ai_medical_imaging_2016_2025
+    - sodium_ion_battery_cathodes_2010_2025
+  selection_reason: one biomedical and one materials-science topic
+  conditions:
+    - budgeted_one_shot
+    - budgeted_graph_plan
+  cells: 4
+  generation_requests_per_cell: 1
+  temperature: 0
+  max_completion_tokens: 5000
+  rendered_figure_access: false
+
+shared_controls:
+  writer_input_manifest_sha256: a199256b59ab911568aa055a9eb839b015c1205c18d05724e2825c492c08194b
+  evidence: identical_within_dataset
+  target_words: 2700-3100
+  exact_top_level_sections: 7
+  nested_headings: prohibited
+  section_word_budgets: identical
+  paragraph_counts: identical
+  required_phenomena_and_synthesis_gates: identical
+
+treatment_difference:
+  budgeted_one_shot: receives shared writer input and common constraints
+  budgeted_graph_plan: >-
+    additionally receives a compact deterministic dependency plan containing PH
+    order, PH-to-REF dependencies, three registered synthesis pairs, and paragraph
+    slots, but no duplicated verified-answer payload
+
+success_criteria:
+  primary_engineering_gate:
+    - all seven required sections present
+    - 2700-3300 words under the unchanged assessment range
+    - finish_reason is stop rather than length
+  structural_retention_gate:
+    - all five PH phenomena in Results
+    - at least four PH phenomena in Discussion
+    - at least three PH phenomena in Conclusion
+    - at least two registered synthesis pairs in at least two paragraphs
+    - no unregistered PH or REF token
+  progression_rule: >-
+    This four-cell pilot may justify a separately frozen larger replication only if
+    both topics in the graph-plan condition pass all engineering and structural gates.
+    It cannot be pooled with, replace, or reclassify the prior formal 16 responses.
+
+implementation:
+  request_module:
+    path: src/citeweave/article_generation_v3.py
+    sha256: f9656a98403c72d42b74d6df304a6f01bc8819b066e07d4ed8233bb5fbfb68ef
+  preparation_cli:
+    path: scripts/prepare_article_generation_v3_pilot.py
+    sha256: e51ea7fa328ca726ae3dfc97aff6cb2bb0d4c34b3f629dbd294eed102682da92
+  execution_cli:
+    path: scripts/run_article_generation_v3_pilot.py
+    sha256: 8175ccbbecbf77b1a945888f91183192886c8fbc69e3e0de991d73c7a587afe1
+  assessment_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  test:
+    path: tests/test_article_generation_v3.py
+    sha256: b2252abf3a3ad82a7a9e492e5c91f361c51738c211c1210a5566cd5379130c26
+
+integrity_guards:
+  - Never overwrite or relabel a prior formal draft or assessment.
+  - Never issue a second generation request for a response-received pilot cell.
+  - A transport failure may retry only the identical frozen request.
+  - Pilot outcomes are engineering evidence, not confirmatory article-quality evidence.

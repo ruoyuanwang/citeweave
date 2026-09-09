@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "protocol_id": "feedback_repair_mechanism_trial_v1",
+  "sha256": "4b563db3f2772d9f1522713c11c0c3b7431ff884b5afa74204d2a4d77bc1a857",
+  "status": "frozen_before_real_feedback_worklist_generation_or_evaluation_outcomes",
+  "real_feedback_worklist_present": false,
+  "provider_outcomes_present": false,
+  "human_evaluation_outcomes_present": false,
+  "topics": 8,
+  "cases_per_topic": 12,
+  "logical_cells": 192
+}

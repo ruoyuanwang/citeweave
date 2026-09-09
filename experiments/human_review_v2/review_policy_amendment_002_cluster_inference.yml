@@ -1,0 +1,60 @@
+schema_version: 1
+amendment_id: review_policy_amendment_002_cluster_inference
+status: frozen_before_real_reviewer_and_policy_outcomes
+frozen_at: '2026-08-31T19:14:00+08:00'
+human_outcomes_inspected: false
+policy_outcomes_inspected: false
+human_outcome_files_at_freeze: 0
+policy_outcome_files_at_freeze: 0
+base_protocol_sha256: 6c613d4422cf81af7b78cca425ce3131f8208d8ec21f7728ee83c4c0e4c92ed5
+prior_complementary_oversight_amendment_sha256: 7fb864caf7b813f9a890365ebabd08234b9d7b51103cd9ca9401e528fb9b4219
+reason:
+  - The registered dataset-cluster bootstrap sampled datasets but concatenated their
+    cases before estimation, so datasets with more cases received more weight.
+  - The registered labor-success implementation only required aggregate saved seconds
+    to be positive and provided no cross-dataset uncertainty test.
+  - Item-level McNemar treats cases within one scientific topic as independent and is
+    therefore retained only as a sensitivity description, not cross-topic confirmation.
+primary_joint_inference:
+  cluster_unit: dataset_id
+  minimum_confirmatory_datasets: 8
+  within_dataset_estimate: mean paired effect over all registered cases
+  across_dataset_estimate: equal-weight mean of dataset effects
+  descriptive_interval: 10000-draw equal-dataset cluster bootstrap with frozen seed
+  quality_noninferiority:
+    estimand: active_minus_raw_memory final accuracy
+    margin: 0.02_absolute_accuracy
+    test: one-sided exact sign flip of each dataset effect plus 0.02
+    direction: greater_than_zero
+  labor_superiority:
+    estimand: raw_memory_minus_active server-timed review seconds per case
+    margin: 0_seconds
+    test: one-sided exact sign flip of dataset effects
+    direction: greater_than_zero
+  joint_success: >-
+    Both one-sided exact p values must be below 0.05, the labor estimate must be
+    positive, and at least eight independent datasets must be present.
+  multiplicity: >-
+    This is an intersection-union joint gate: both components must pass, so no
+    additional multiplicity correction is used between the two required components.
+  minimum_attainable_one_sided_p_with_eight_datasets: 0.00390625
+retained_descriptive_outputs:
+  - total review seconds and total seconds saved
+  - equal-dataset percentile intervals
+  - item-level exact McNemar as a labeled sensitivity only
+  - correction lag, AURC, unsafe autoaccept, regressions, and promotion audit
+unchanged:
+  - four policy conditions, fixed sequential replay, cases, labels, and timing source
+  - quality margin, bootstrap samples and seed, critical-case rule, and safety thresholds
+  - reviewer calibration, complementary routing, two-sided packet factorial, and blinding
+  - prohibition on simulated or researcher-authored outcomes
+implementations:
+  review_policy_experiment.py: a8ce92a0c49315c40d7ccad12839a1d910f6fb8cc63d8fd6d8bd8f97e0540779
+  analyze_review_policy_experiment.py: 4439134662c788a1816dd8b053ee23053e3cd3e1c5be23982ed552dbf87a2542
+test:
+  path: tests/test_review_policy_experiment.py
+  sha256: 60de80c595b99814174bb70e36356bee1eac62cd9cc27ae5754109c44181e9a8
+interpretation_guard: >-
+  Multiple cases within a dataset increase precision but not the number of inferential
+  replicates. Positive aggregate seconds or an item-level p value cannot establish a
+  transferable human-labor benefit without the eight-dataset exact joint gate.

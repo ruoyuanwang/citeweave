@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "matched_article_compiler_development_analyzed",
+  "scientific_role": "development_only_not_confirmatory",
+  "plan_sha256": "41eef1b6df9a593df0816d0f0f168bd235f0d4ec83e1f500658697ed52965f27",
+  "articles": 4,
+  "provider_calls": 36,
+  "finish_reason_counts": {
+    "length": 9,
+    "stop": 27
+  },
+  "machine_gate_passed": 2,
+  "oversight_ready": 4,
+  "fully_passed": 0,
+  "pilot_qualified_for_confirmatory_freeze": false,
+  "mean_graph_minus_flat_reviewable_claim_candidates": 9.0,
+  "paired_diagnostics": {
+    "explainable_ai_medical_imaging_2016_2025": {
+      "graph_minus_flat_reviewable_claim_candidates": 15,
+      "graph_minus_flat_word_count": 195,
+      "graph_minus_flat_prompt_tokens": 6972,
+      "graph_minus_flat_completion_tokens": 553,
+      "flat_machine_gate_passed": false,
+      "graph_machine_gate_passed": true,
+      "flat_oversight_ready": true,
+      "graph_oversight_ready": true
+    },
+    "sodium_ion_battery_cathodes_2010_2025": {
+      "graph_minus_flat_reviewable_claim_candidates": 3,
+      "graph_minus_flat_word_count": 216,
+      "graph_minus_flat_prompt_tokens": 7435,
+      "graph_minus_flat_completion_tokens": 659,
+      "flat_machine_gate_passed": true,
+      "graph_machine_gate_passed": false,
+      "flat_oversight_ready": true,
+      "graph_oversight_ready": true
+    }
+  },
+  "records": [
+    {
+      "article_id": "explainable_ai_medical_imaging_2016_2025__flat_article_compiler",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "condition": "flat_article_compiler",
+      "provider_calls": 9,
+      "nonstop_calls": [
+        "Methods:base",
+        "Abstract:base"
+      ],
+      "retained_nonstop_sections": [
+        "Methods",
+        "Abstract"
+      ],
+      "word_count": 2992,
+      "machine_gate_passed": false,
+      "machine_gate_failures": [
+        "no_unregistered_evidence_tokens"
+      ],
+      "unexpected_evidence_tokens": [
+        "REF-729c0c5fe068"
+      ],
+      "oversight_ready": true,
+      "reviewable_claim_candidates": 23,
+      "reviewable_claims_by_section": {
+        "discussion": 14,
+        "results": 9
+      },
+      "reviewable_claims_by_phenomenon": {
+        "PH-35ae242c934c56a5": 8,
+        "PH-450a3c1da4833cc2": 7,
+        "PH-7d7a4b1a49fea5c6": 6,
+        "PH-e4742ac20705981f": 5,
+        "PH-e60613aeecca2d22": 5
+      },
+      "multiple_phenomenon_candidates": 8,
+      "discussion_interpretation_candidates": 14,
+      "prompt_tokens": 117885,
+      "completion_tokens": 8303,
+      "fully_passed": false,
+      "draft_sha256": "b017f83309144d432a4fdcc13b8b24aa64401bf40276c0881a0727af9014e4e9"
+    },
+    {
+      "article_id": "explainable_ai_medical_imaging_2016_2025__graph_dependency_compiler",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "condition": "graph_dependency_compiler",
+      "provider_calls": 9,
+      "nonstop_calls": [
+        "Results:base",
+        "Discussion:base",
+        "Introduction:base",
+        "Abstract:base"
+      ],
+      "retained_nonstop_sections": [
+        "Introduction",
+        "Abstract"
+      ],
+      "word_count": 3187,
+      "machine_gate_passed": true,
+      "machine_gate_failures": [],
+      "unexpected_evidence_tokens": [],
+      "oversight_ready": true,
+      "reviewable_claim_candidates": 38,
+      "reviewable_claims_by_section": {
+        "discussion": 17,
+        "results": 21
+      },
+      "reviewable_claims_by_phenomenon": {
+        "PH-35ae242c934c56a5": 10,
+        "PH-450a3c1da4833cc2": 12,
+        "PH-7d7a4b1a49fea5c6": 10,
+        "PH-e4742ac20705981f": 10,
+        "PH-e60613aeecca2d22": 11
+      },
+      "multiple_phenomenon_candidates": 12,
+      "discussion_interpretation_candidates": 17,
+      "prompt_tokens": 124857,
+      "completion_tokens": 8856,
+      "fully_passed": false,
+      "draft_sha256": "1022201fdb72a85b0a2f4417f85fa9628095a18763630359dc0fa3e9cb4f9f05"
+    },
+    {
+      "article_id": "sodium_ion_battery_cathodes_2010_2025__flat_article_compiler",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "condition": "flat_article_compiler",
+      "provider_calls": 9,
+      "nonstop_calls": [
+        "Introduction:base"
+      ],
+      "retained_nonstop_sections": [
+        "Introduction"
+      ],
+      "word_count": 2835,
+      "machine_gate_passed": true,
+      "machine_gate_failures": [],
+      "unexpected_evidence_tokens": [],
+      "oversight_ready": true,
+      "reviewable_claim_candidates": 25,
+      "reviewable_claims_by_section": {
+        "discussion": 10,
+        "results": 15
+      },
+      "reviewable_claims_by_phenomenon": {
+        "PH-0d371328d0f98233": 7,
+        "PH-4e6b1efe375795ef": 5,
+        "PH-bc26908cc43bd58e": 9,
+        "PH-cfa7001c2c65c102": 8,
+        "PH-efca179c8b8cca74": 4
+      },
+      "multiple_phenomenon_candidates": 6,
+      "discussion_interpretation_candidates": 10,
+      "prompt_tokens": 111943,
+      "completion_tokens": 7632,
+      "fully_passed": false,
+      "draft_sha256": "f5f0d02763d2ccc940588f27e5395f507c9cd89644222b2e0989878412167747"
+    },
+    {
+      "article_id": "sodium_ion_battery_cathodes_2010_2025__graph_dependency_compiler",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "condition": "graph_dependency_compiler",
+      "provider_calls": 9,
+      "nonstop_calls": [
+        "Introduction:base",
+        "Abstract:base"
+      ],
+      "retained_nonstop_sections": [
+        "Introduction",
+        "Abstract"
+      ],
+      "word_count": 3051,
+      "machine_gate_passed": false,
+      "machine_gate_failures": [
+        "no_unregistered_evidence_tokens"
+      ],
+      "unexpected_evidence_tokens": [
+        "PH-ef"
+      ],
+      "oversight_ready": true,
+      "reviewable_claim_candidates": 28,
+      "reviewable_claims_by_section": {
+        "discussion": 12,
+        "results": 16
+      },
+      "reviewable_claims_by_phenomenon": {
+        "PH-0d371328d0f98233": 7,
+        "PH-4e6b1efe375795ef": 7,
+        "PH-bc26908cc43bd58e": 10,
+        "PH-cfa7001c2c65c102": 9,
+        "PH-efca179c8b8cca74": 7
+      },
+      "multiple_phenomenon_candidates": 9,
+      "discussion_interpretation_candidates": 12,
+      "prompt_tokens": 119378,
+      "completion_tokens": 8291,
+      "fully_passed": false,
+      "draft_sha256": "3ed2aec4ecc9acdeacb18db7f4fbb391e59e2be07b190df670cb074624eb60ce"
+    }
+  ]
+}

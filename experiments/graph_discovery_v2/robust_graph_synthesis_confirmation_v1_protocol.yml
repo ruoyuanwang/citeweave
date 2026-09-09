@@ -1,0 +1,285 @@
+schema_version: 1
+protocol_id: robust_graph_synthesis_heldout_confirmation_v1
+status: frozen_before_any_candidate_acquisition
+frozen_at: '2026-09-08T08:10:00+08:00'
+role: confirmatory_heldout_validation
+purpose: >-
+  Confirm whether registered graph computation and raw provenance improve exact,
+  multi-field robustness synthesis on unseen scientific topics, without reusing the
+  eight topics whose perturbation outcomes informed development.
+
+contamination_policy:
+  excluded_topic_ids:
+    - climate_change_risks_1990_2021
+    - crispr_extracellular_vesicles_2015_2022
+    - digital_twins_healthcare_2012_2024
+    - gene_editing_als_2004_2024
+    - global_microplastics_2004_2019
+    - gnn_drug_discovery_2017_2023
+    - machine_learning_climate_change_2008_2022
+    - plant_heat_drought_2008_2021
+    - climate_adaptation_2018_2020
+    - crispr_editing_2018_2020
+    - quantum_machine_learning_2019_2021
+    - rag_graph_2022_2025
+    - perovskite_solar_cell_stability_2012_2025
+    - spatial_transcriptomics_cancer_2018_2025
+    - green_hydrogen_electrolysis_2010_2025
+    - federated_learning_healthcare_2016_2025
+    - sodium_ion_battery_cathodes_2010_2025
+    - organoid_disease_modeling_2010_2025
+    - membrane_desalination_fouling_2010_2025
+    - explainable_ai_medical_imaging_2016_2025
+  rule: >-
+    No excluded topic, perturbation result, prompt response or article outcome may
+    influence candidate eligibility, task construction, thresholds or analysis.
+
+candidate_topics:
+  - priority: 1
+    id: lithium_sulfur_battery_polysulfide_2010_2025
+    title: Lithium-sulfur battery polysulfide research
+    domain: electrochemical_energy_storage
+    keywords: [lithium sulfur battery, polysulfide]
+    year_from: 2010
+    year_to: 2025
+  - priority: 2
+    id: mrna_vaccine_lipid_nanoparticle_2010_2025
+    title: mRNA vaccine lipid nanoparticles
+    domain: drug_delivery_and_vaccinology
+    keywords: [mRNA vaccine, lipid nanoparticle]
+    year_from: 2010
+    year_to: 2025
+  - priority: 3
+    id: direct_air_capture_sorbent_2010_2025
+    title: Direct air capture sorbents
+    domain: climate_and_separation_engineering
+    keywords: [direct air capture, sorbent]
+    year_from: 2010
+    year_to: 2025
+  - priority: 4
+    id: single_cell_multiomics_2013_2025
+    title: Single-cell multiomics
+    domain: genomics_and_systems_biology
+    keywords: [single cell, multiomics]
+    year_from: 2013
+    year_to: 2025
+  - priority: 5
+    id: memristor_neuromorphic_computing_2010_2025
+    title: Memristor neuromorphic computing
+    domain: computing_hardware
+    keywords: [memristor, neuromorphic computing]
+    year_from: 2010
+    year_to: 2025
+  - priority: 6
+    id: pfas_water_treatment_2000_2025
+    title: PFAS water treatment
+    domain: environmental_engineering
+    keywords: [PFAS, water treatment]
+    year_from: 2000
+    year_to: 2025
+  - priority: 7
+    id: surface_code_quantum_error_correction_2000_2025
+    title: Surface-code quantum error correction
+    domain: quantum_information
+    keywords: [surface code, quantum error correction]
+    year_from: 2000
+    year_to: 2025
+  - priority: 8
+    id: metal_organic_framework_gas_separation_2000_2025
+    title: Metal-organic frameworks for gas separation
+    domain: porous_materials
+    keywords: [metal organic framework, gas separation]
+    year_from: 2000
+    year_to: 2025
+  - priority: 9
+    id: precision_fermentation_alternative_protein_2010_2025
+    title: Precision fermentation for alternative proteins
+    domain: food_biotechnology
+    keywords: [precision fermentation, alternative protein]
+    year_from: 2010
+    year_to: 2025
+  - priority: 10
+    id: solid_oxide_electrolysis_degradation_2000_2025
+    title: Solid-oxide electrolysis degradation
+    domain: electrochemical_engineering
+    keywords: [solid oxide electrolysis, degradation]
+    year_from: 2000
+    year_to: 2025
+  - priority: 11
+    id: wearable_sweat_biosensor_2010_2025
+    title: Wearable sweat biosensors
+    domain: biomedical_sensors
+    keywords: [wearable, sweat biosensor]
+    year_from: 2010
+    year_to: 2025
+  - priority: 12
+    id: cultivated_meat_scaffold_2010_2025
+    title: Scaffolds for cultivated meat
+    domain: cellular_agriculture
+    keywords: [cultivated meat, scaffold]
+    year_from: 2010
+    year_to: 2025
+
+selection:
+  target_topics: 8
+  reserve_topics: 4
+  rule: first_eight_eligible_candidates_by_frozen_priority
+  insufficient_topics: stop_without_substitution
+  eligibility_assessed_before:
+    - registered_perturbation_generation
+    - deterministic_gold_inspection
+    - benchmark_context_construction
+    - provider_model_calls
+  data_gates:
+    exhaustive_openalex_cursor_pagination: true
+    complete_natural_years_through: 2025
+    minimum_canonical_works: 200
+    minimum_nonempty_publication_years: 6
+    minimum_large_keyword_nodes: 100
+    minimum_large_keyword_edges: 500
+    no_placeholder_author_identity: true
+  query_relevance_gate:
+    sample: 100_hash_selected_title_abstract_records_per_candidate
+    reviewers: 2_independent_domain_qualified_reviewers_or_frozen_independent_judges
+    blind_to: [candidate_priority, graph_statistics, perturbations, task_gold, model_outcomes]
+    item_label: relevant_only_if_both_concepts_are_scientifically_central
+    resolution: independent_third_reviewer_for_disagreement
+    minimum_resolved_relevance_rate: 0.80
+    exclusion_only_by_registered_gate: true
+
+acquisition:
+  source: openalex
+  document_types: [article]
+  query_mode: all
+  full_census: true
+  partition_strategy: adaptive_date
+  target_slice_records: 25000
+  candidate_pool_size: 2000
+  edge_row_limit: 1000000
+
+perturbation_design:
+  baseline_graphs_per_topic: 1
+  registered_perturbations_per_topic: 17
+  one_factor_at_a_time: true
+  families:
+    - minimum_edge_weight
+    - deterministic_edge_dropout
+    - community_seed
+    - community_resolution
+    - temporal_window
+  no_parameter_tuning_after_selection: true
+
+benchmark:
+  task_builder: robust_graph_synthesis_development_v1_unchanged
+  task_types:
+    - path_stability_profile
+    - community_role_instability
+    - hub_resilience_decomposition
+    - temporal_window_dependence
+    - cross_operator_robustness_triage
+  tasks_per_topic: 5
+  total_tasks: 40
+  answer_fields_per_task: 5_to_7
+  record_budget: 20
+  context_token_budget: 8192
+  conditions:
+    - flat_bm25
+    - graph_hierarchical_retrieval_v2
+    - flat_program
+    - graph_program
+    - operator_only
+  planned_provider_calls: 200
+  information_parity:
+    graph_program_vs_flat_program: identical_raw_evidence_and_operator_trace
+    hierarchy_and_bm25: operator_trace_hidden
+    operator_only: raw_provenance_hidden
+
+outcomes:
+  primary: answer_field_accuracy
+  secondary:
+    - exact_answer_accuracy
+    - evidence_f1
+    - required_limitation_rate
+    - abstention_rate
+    - provider_tokens
+    - elapsed_seconds
+
+hypotheses:
+  - id: C1
+    contrast: graph_program_minus_flat_bm25_answer_field_accuracy
+    direction: positive
+    primary: true
+  - id: C2
+    contrast: graph_hierarchical_retrieval_v2_minus_flat_bm25_answer_field_accuracy
+    direction: positive
+    primary: true
+  - id: C3
+    contrast: graph_program_minus_flat_program_answer_field_accuracy
+    direction: equivalence
+    equivalence_margin: 0.05
+    primary: true
+  - id: C4
+    contrast: graph_program_minus_operator_only
+    joint_gate:
+      evidence_f1: superior
+      answer_field_accuracy: noninferior
+      noninferiority_margin: -0.05
+    primary: true
+
+statistics:
+  independent_unit: dataset_id
+  within_topic: paired_task_then_equal_task_type_weight
+  across_topics: equal_topic_weight
+  exact_test: fully_enumerated_2_to_the_8_cluster_sign_flips
+  descriptive_interval: 10000_draw_topic_cluster_bootstrap_seed_20260908
+  multiplicity: Holm_for_C1_C2_and_C4_evidence_superiority
+  exact_accuracy_is_secondary: true
+  no_item_level_pseudoreplication: true
+
+execution_freeze_gate:
+  required_before_provider_calls:
+    - selected_eight_topic_ids_and_exclusion_reasons
+    - acquisition_and_canonical_table_hashes
+    - all_144_perturbation_case_hashes
+    - all_40_task_gold_answers
+    - all_200_request_message_hashes
+    - exact_tokenizer_audit
+    - implementation_hash_revalidation
+  any_hash_drift: stop_and_version_amendment_before_outcomes
+
+interpretation_guards:
+  - Graph Program estimates registered deterministic computation plus evidence organization.
+  - C3 isolates organization only; equivalence rejects graph-shaped serialization as the mechanism.
+  - C4 isolates raw provenance conditional on identical operator content.
+  - Robustness claims are conditional on the frozen perturbation grid and OpenAlex corpus.
+  - No structural association may be described as causality, quality or author intent.
+  - Candidate exclusion may use only the frozen data and query-relevance gates.
+
+implementation_bindings:
+  workspace_initializer:
+    path: scripts/prepare_robust_graph_confirmation_workspaces.py
+    sha256: 331ce2de15c27acb1247585d9dcbfc00ef6c458f01ca6fcee9862f6d63993c12
+  initializer_tests:
+    path: tests/test_robust_graph_confirmation.py
+    sha256: 2432945f1f85981bc6dd0a9f7a4a0ad8f8b018117597683d2191fc781f5af5d5
+  benchmark_builder:
+    path: src/citeweave/robust_graph_synthesis.py
+    sha256: d32bbc06155f953fefd07b02d3513a28b193ff02cf8d1fdacacc5c4ecdb7e4bf
+  statistics_module:
+    path: src/citeweave/robust_graph_statistics.py
+    sha256: ced35bfd38b45d2f4c89323ea68fa231c8824e9a6add6f43409725c38be44d05
+  perturbation_module:
+    path: src/citeweave/graph_robustness.py
+    sha256: 3871291be7545ee62128cbe0f9fd2982a61443d6358b2e5e25bed720813287d1
+  bulk_acquisition:
+    path: src/citeweave/bulk_acquisition.py
+    sha256: 557869e4f8420293273f63d9f1990b40d33280c11dfa3ad163789ece11b0d559
+  openalex_connector:
+    path: src/citeweave/connectors/openalex.py
+    sha256: fb7d7cca5046aa92e87c52b57626370bfb3d0fc0a0b3325345b7d15d1ef8f55b
+  workflow:
+    path: src/citeweave/workflow.py
+    sha256: 1490a7ee36e253cef3ac3fc5e0160404feb301f7055bc84fc5ac6b026ad03c51
+  models:
+    path: src/citeweave/models.py
+    sha256: e2ece74a8b8d2150673acd8728066c2f9d858560617bbafa2d4bfbd0d65f31a9

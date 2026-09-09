@@ -1,0 +1,92 @@
+schema_version: 1
+amendment_id: article_claim_review_shared_ui_compatibility_002
+status: frozen_after_machine_drafts_before_any_real_human_review
+frozen_at: '2026-09-08T02:39:00+08:00'
+base_protocol_sha256: c3d74f5a6d1d8de130813c780cf16aafd4f1acedb52aca10e0d4992509beb8f2
+machine_plan_sha256: af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36
+previous_amendment:
+  path: experiments/article_quality_v2/article_claim_review_amendment_001_integrity.yml
+  sha256: 57c1629381753d3d968ae0eed84b803aa24fc52d7fdf4de8ba6576e2ade71b76
+
+timing_disclosure:
+  machine_article_responses: 16
+  machine_article_generation_complete: true
+  article_claim_packets_materialized: 0
+  real_claim_reviewers_registered: 0
+  primary_human_returns: 0
+  adjudication_human_returns: 0
+  independent_expert_revision_returns: 0
+  machine_article_quality_outcomes_inspected: false
+  human_outcomes_inspected: false
+
+reason:
+  - The shared blinded review UI was extended prospectively for the separate
+    multidimensional oversight study after article-claim amendment 001 was frozen.
+  - The article-claim supervisor correctly failed closed because amendment 001 bound
+    the earlier UI hash, even though the article-claim schema and route remained
+    supported by the extended UI.
+  - This amendment rebinds the exact current shared UI and the preparation CLI that
+    selects this amendment by default. It does not alter a draft, claim selection,
+    reviewer assignment, decision schema, dependency propagation rule, endpoint, or
+    inferential procedure.
+
+unchanged_scientific_design:
+  topics: 8
+  claims_per_topic: 20
+  planned_claim_packets: 160
+  planned_primary_reviews: 320
+  primary_reviewers_per_claim: 2
+  adjudication: disagreement_only_by_precommitted_third_reviewer
+  timing: server_visibility_heartbeat_only
+  revision_scope: affected_hash_bound_paragraphs_only
+  inference_unit: topic
+  synthetic_or_llm_proxy_reviewers: prohibited
+
+compatibility_scope:
+  current_ui_sha256: df449932002d25f7d2f7b497539e984266441930a37a1fd64f3c795c31904006
+  article_claim_capabilities_retained:
+    - immutable server-bound reviewer identity
+    - visibility-heartbeat timing
+    - full containing paragraph display
+    - packet-bounded decisive and invalid dependency identifiers
+    - exact action and four-check schema validation
+  additional_ui_capabilities_ignored_by_article_claim_route:
+    - multidimensional calibration route
+    - factorial oversight route
+  prohibition:
+    - No UI capability added for another study may change article-claim packet content
+      or outcome interpretation.
+    - Passing compatibility validation is execution evidence, not an article-quality
+      or human-review efficacy result.
+
+implementation_overrides:
+  packet_module:
+    path: src/citeweave/article_claim_review.py
+    sha256: 88800163274c9f97bd6b1effea48f3fb0144d07a5eb6bce02df09c48b7eb1ee5
+  revision_module:
+    path: src/citeweave/article_review_revision.py
+    sha256: f15c9007d22c195e5b406f82b34ab236b05389cd4c3480cbff19045a0a75987e
+  blinded_review_ui:
+    path: src/citeweave/review_ui.py
+    sha256: df449932002d25f7d2f7b497539e984266441930a37a1fd64f3c795c31904006
+  preparation_cli:
+    path: scripts/prepare_article_claim_review.py
+    sha256: 555b22108c497d25a4a48e4b3bd6e498c9c7ebe4ed013a2dd8879cbb13b94573
+  finalization_cli:
+    path: scripts/finalize_article_claim_review.py
+    sha256: 524cac9b82bf0ccd543efc889b37a6da6a8de465d23a329e2c0f7314eef60f90
+  review_experiment_module:
+    path: src/citeweave/article_review_experiment.py
+    sha256: 5ebdcf7f4afb93412f6b056098cd2e0d1e4136c865eaab6b1120c8156bba78d6
+  review_experiment_cli:
+    path: scripts/run_article_review_experiment.py
+    sha256: b78d9808a9b99b96d1c18a0411c2ac50c96e5c1a4723ddcdc45745f75b4c2780
+  deferred_supervisor:
+    path: scripts/prepare_article_claim_review_after_generation.ps1
+    sha256: c6c4238c1d24e90402fde6200b32f0756964dbc6ab39ae373d92addceec5ae34
+
+execution_gate:
+  - Validate this amendment and freeze before rebuilding readiness.
+  - Preserve all 16 immutable machine execution records and request hashes.
+  - If the real reviewer roster remains incomplete, report waiting rather than
+    materializing formal assignments or substituting proxy reviewers.

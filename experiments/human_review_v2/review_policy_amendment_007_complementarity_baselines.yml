@@ -1,0 +1,81 @@
+schema_version: 1
+amendment_id: review_policy_amendment_007_complementarity_baselines
+status: frozen_before_real_reviewer_calibration_and_heldout_human_outcomes
+frozen_at: '2026-09-08T13:30:00+08:00'
+human_outcomes_inspected: false
+heldout_outcomes_inspected: false
+registered_real_reviewers: 0
+calibration_returns: 0
+confirmatory_returns: 0
+previous_amendment_sha256: 0394e7fc903a987cc83a1b065c928411d24a01c6d73c1fc97c172a97267b0a1b
+
+reason:
+  - The frozen 2 x 2 analysis tests evidence presentation and reviewer routing but
+    does not directly quantify whether the final audited team improves on the
+    unaudited model output or one assisted-human first-pass judgment.
+  - A human-AI complementarity claim requires both baselines to be declared before
+    any real reviewer outcome is observed.
+  - The already frozen primary decisions, adjudication rule, and 96-case panel can
+    support these comparisons without adding reviewer workload or changing assignment.
+
+panel_identity:
+  path: experiments/human_review_v2/oversight_heldout_factorial_v1/manifest.json
+  sha256: f3fcb024c77d0dee1a0414044f6b83f0c57d1b905b35c523290a36af655bcff7
+  cases: 96
+  datasets: 8
+  cases_per_dataset: 12
+
+baselines:
+  unaudited_ai:
+    operational_decision: >-
+      Treat every non-abstaining candidate response as supported and every explicit
+      model abstention as abstain, because the unreviewed generator supplies no
+      separate qualify/reject decision.
+    correctness: Exact match to the prospectively hidden four-class gold verdict.
+  single_primary:
+    operational_decision: One server-timed first-pass assisted-human verdict.
+    aggregation: >-
+      Average correctness across primaries within case, then equally across cases
+      and datasets. This prevents critical dual-reviewed cases receiving extra weight.
+  final_team:
+    operational_decision: >-
+      The frozen final verdict after one or two capability-qualified primary reviews
+      and disagreement-only blinded adjudication.
+    timing: Sum all server-accounted primary and adjudication seconds for the case.
+
+registered_contrasts:
+  C1:
+    estimand: Equal-dataset mean final-team minus unaudited-AI accuracy.
+    alternative: greater_than_zero
+  C2:
+    estimand: Equal-dataset mean final-team minus case-averaged single-primary accuracy.
+    alternative: greater_than_zero
+  test: fully_enumerated_one_sided_dataset_sign_flip
+  multiplicity: Holm_over_C1_and_C2
+  alpha: 0.05
+  joint_success: Both effects are positive and both Holm-adjusted p values are below 0.05.
+
+secondary_diagnostics:
+  - team rescue count where the final team is correct and at least one primary is wrong
+  - team harm count where the final team is wrong and at least one primary is correct
+  - final team correct outcomes per reviewer minute
+  - per-reviewer accuracy and correct outcomes per minute, descriptive only
+
+interpretation_guards:
+  - Passing C1 alone is not human-AI complementarity; C2 must also pass.
+  - This is an assisted claim-audit comparison, not a human-only writing comparison.
+  - The single-primary contrast estimates aggregation and adjudication benefit over one assisted first pass; it does not compare against an unaided domain expert.
+  - Reviewer-level maxima are selection-biased descriptive diagnostics and cannot replace C2.
+  - The finite 96-case benchmark and cross-topic transportability scopes remain separated as required by amendment 006.
+  - Simulated, researcher-authored, or LLM-authored feedback cannot enter this analysis.
+
+implementation:
+  analysis_module:
+    path: src/citeweave/oversight_complementarity_analysis.py
+    sha256: db863298ea203f617b69c81fa7a9cbb253b68a489a71e315bf17ff3c76dd921f
+  analysis_cli:
+    path: scripts/analyze_oversight_complementarity.py
+    sha256: 17f91d50913d637fc74139c639001873cea4ddb2ecf781e7c1390d04827c0025
+  tests:
+    path: tests/test_oversight_complementarity_analysis.py
+    sha256: fb280744d9c0654b4b33b28e1e3efbb78ac1d801e4131361fdba7d096a97a8bd

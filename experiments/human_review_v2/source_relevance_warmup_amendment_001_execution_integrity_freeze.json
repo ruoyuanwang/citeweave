@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "source_relevance_warmup_amendment_001_execution_integrity",
+  "sha256": "3efd9eddcd09ed2f0d0dcbe6f49d0b01f18a95e4baf7d29d621b2da99a8d2997",
+  "frozen_at_utc": "2026-09-07T13:18:00Z",
+  "base_protocol_sha256": "d34d70c7ba4934274955c716ddc8cf1d25ef7639b1c0e561f4b9dd1fb1fe45de",
+  "packet_manifest_sha256": "7345dd17f0057e4625a7a4ec93eb65cc80e7c72f4857db65685edf513c503852",
+  "frozen_before_assignment": true,
+  "frozen_before_human_source_judgments": true,
+  "registered_real_reviewers": 0,
+  "human_source_review_returns": 0,
+  "assignment_gate_is_fail_closed": true
+}

@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "status": "ready_for_development_execution",
+  "confirmatory": false,
+  "protocol_sha256": "39473c70279db587066fd5a57c083d684b11d1e12012c868f591fd3d8001be09",
+  "freeze_sha256": "e6245cbf53ae97c958aab5287baff74250153d7cd4ad6c2a4418055b625f9989",
+  "construction_manifest_sha256": "bcc6fbfc27b61692a6958e14666639f2f8c95d7f2fadae1d7e0d6ab5ffc6699e",
+  "topics": 8,
+  "tasks": 40,
+  "planned_calls": 200,
+  "difficulty_diagnostic": {
+    "rate_fields": 32,
+    "interior_rate_fields": 19,
+    "minimum_rate": 0.176471,
+    "maximum_rate": 1.0,
+    "distinct_rates": 13
+  },
+  "context_size_diagnostic": {
+    "flat_bm25": {
+      "minimum_characters": 13461,
+      "maximum_characters": 19150,
+      "mean_characters": 16141.375
+    },
+    "flat_program": {
+      "minimum_characters": 2344,
+      "maximum_characters": 19154,
+      "mean_characters": 14104.725
+    },
+    "graph_hierarchical_retrieval_v2": {
+      "minimum_characters": 2096,
+      "maximum_characters": 24346,
+      "mean_characters": 15058.75
+    },
+    "graph_program": {
+      "minimum_characters": 2639,
+      "maximum_characters": 25376,
+      "mean_characters": 16522.725
+    },
+    "operator_only": {
+      "minimum_characters": 631,
+      "maximum_characters": 4291,
+      "mean_characters": 1557.975
+    }
+  },
+  "context_token_diagnostic": {
+    "flat_bm25": {
+      "minimum_tokens": 3758,
+      "maximum_tokens": 5414,
+      "mean_tokens": 4532.375
+    },
+    "flat_program": {
+      "minimum_tokens": 606,
+      "maximum_tokens": 5446,
+      "mean_tokens": 3916.6
+    },
+    "graph_hierarchical_retrieval_v2": {
+      "minimum_tokens": 579,
+      "maximum_tokens": 7347,
+      "mean_tokens": 4371.325
+    },
+    "graph_program": {
+      "minimum_tokens": 694,
+      "maximum_tokens": 7586,
+      "mean_tokens": 4767.5
+    },
+    "operator_only": {
+      "minimum_tokens": 133,
+      "maximum_tokens": 1271,
+      "mean_tokens": 416.175
+    }
+  },
+  "parity_checks": {
+    "flat_program_and_graph_program_share_raw_evidence": true,
+    "flat_program_and_graph_program_share_operator_trace": true,
+    "retrieval_conditions_hide_operator_trace": true
+  },
+  "blocking_reasons": [],
+  "task_records": [
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:robustness:path_stability_profile",
+      "task_type": "path_stability_profile",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:robustness:community_role_instability",
+      "task_type": "community_role_instability",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:robustness:hub_resilience_decomposition",
+      "task_type": "hub_resilience_decomposition",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:robustness:temporal_window_dependence",
+      "task_type": "temporal_window_dependence",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:robustness:cross_operator_robustness_triage",
+      "task_type": "cross_operator_robustness_triage",
+      "answer_fields": 6,
+      "evidence_ids": 4
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:robustness:path_stability_profile",
+      "task_type": "path_stability_profile",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:robustness:community_role_instability",
+      "task_type": "community_role_instability",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:robustness:hub_resilience_decomposition",
+      "task_type": "hub_resilience_decomposition",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:robustness:temporal_window_dependence",
+      "task_type": "temporal_window_dependence",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:robustness:cross_operator_robustness_triage",
+      "task_type": "cross_operator_robustness_triage",
+      "answer_fields": 6,
+      "evidence_ids": 4
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:robustness:path_stability_profile",
+      "task_type": "path_stability_profile",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:robustness:community_role_instability",
+      "task_type": "community_role_instability",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:robustness:hub_resilience_decomposition",
+      "task_type": "hub_resilience_decomposition",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:robustness:temporal_window_dependence",
+      "task_type": "temporal_window_dependence",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:robustness:cross_operator_robustness_triage",
+      "task_type": "cross_operator_robustness_triage",
+      "answer_fields": 6,
+      "evidence_ids": 4
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:robustness:path_stability_profile",
+      "task_type": "path_stability_profile",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:robustness:community_role_instability",
+      "task_type": "community_role_instability",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:robustness:hub_resilience_decomposition",
+      "task_type": "hub_resilience_decomposition",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:robustness:temporal_window_dependence",
+      "task_type": "temporal_window_dependence",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:robustness:cross_operator_robustness_triage",
+      "task_type": "cross_operator_robustness_triage",
+      "answer_fields": 6,
+      "evidence_ids": 4
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:robustness:path_stability_profile",
+      "task_type": "path_stability_profile",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:robustness:community_role_instability",
+      "task_type": "community_role_instability",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:robustness:hub_resilience_decomposition",
+      "task_type": "hub_resilience_decomposition",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:robustness:temporal_window_dependence",
+      "task_type": "temporal_window_dependence",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:robustness:cross_operator_robustness_triage",
+      "task_type": "cross_operator_robustness_triage",
+      "answer_fields": 6,
+      "evidence_ids": 4
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:robustness:path_stability_profile",
+      "task_type": "path_stability_profile",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:robustness:community_role_instability",
+      "task_type": "community_role_instability",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:robustness:hub_resilience_decomposition",
+      "task_type": "hub_resilience_decomposition",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:robustness:temporal_window_dependence",
+      "task_type": "temporal_window_dependence",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:robustness:cross_operator_robustness_triage",
+      "task_type": "cross_operator_robustness_triage",
+      "answer_fields": 6,
+      "evidence_ids": 4
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:robustness:path_stability_profile",
+      "task_type": "path_stability_profile",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:robustness:community_role_instability",
+      "task_type": "community_role_instability",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:robustness:hub_resilience_decomposition",
+      "task_type": "hub_resilience_decomposition",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:robustness:temporal_window_dependence",
+      "task_type": "temporal_window_dependence",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:robustness:cross_operator_robustness_triage",
+      "task_type": "cross_operator_robustness_triage",
+      "answer_fields": 6,
+      "evidence_ids": 4
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:robustness:path_stability_profile",
+      "task_type": "path_stability_profile",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:robustness:community_role_instability",
+      "task_type": "community_role_instability",
+      "answer_fields": 7,
+      "evidence_ids": 8
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:robustness:hub_resilience_decomposition",
+      "task_type": "hub_resilience_decomposition",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:robustness:temporal_window_dependence",
+      "task_type": "temporal_window_dependence",
+      "answer_fields": 5,
+      "evidence_ids": 2
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:robustness:cross_operator_robustness_triage",
+      "task_type": "cross_operator_robustness_triage",
+      "answer_fields": 6,
+      "evidence_ids": 4
+    }
+  ],
+  "execution_note": "Provider execution requires a separate live balance preflight."
+}

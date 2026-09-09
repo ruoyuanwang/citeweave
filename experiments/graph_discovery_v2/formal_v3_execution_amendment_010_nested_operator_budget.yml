@@ -1,0 +1,110 @@
+schema_version: 1
+amendment_id: formal_v3_execution_amendment_010_nested_operator_budget
+status: frozen_mechanical_failure_repair_after_380_completed_cells
+frozen_at: '2026-09-07T19:30:00+08:00'
+trigger:
+  stage: primary_execution
+  failed_cell:
+    dataset_id: green_hydrogen_electrolysis_2010_2025
+    item_id: green_hydrogen_electrolysis_2010_2025:coauthorship:large:community_role_contrast
+    condition: operator_only
+  exception: Fixed context exceeds token budget and has no trimmable records
+  interpretation: >-
+    The registered community_aggregate operator trace scales with the number of
+    communities, but the transport budgeter recognized only top-level evidence
+    arrays. The failure occurred before a provider request was sent. This is a
+    deterministic message-assembly defect, not a provider, parse, scoring, or
+    scientific-outcome failure.
+state_at_freeze:
+  primary_complete_cells: 380
+  primary_planned_cells: 800
+  replication_complete_cells: 0
+  extension_complete_cells: 0
+  failed_parse_cells: 0
+  cell_retry_attempts: 0
+  scientific_effects_inspected: false
+  provider_outputs_used_to_design_change: false
+  automatic_api_resume: false
+prior_execution_chain:
+  input_freeze_sha256: 9340907c3c8a6131ab5c92b316227a2f5a6dac8b3f4fe9e9abd23d04c6e660b7
+  qualification_sha256: 42e0a1f46ef5b4f717dc4588a23eddad36348f647363b3447448168e7d87bb4a
+  promotion_sha256: 902e0a021ca99e6791e92ced1607ed71771b7bf6c2b34577e0fe8bf8522d5fa4
+preserved_outcomes:
+  federated_learning_healthcare_2016_2025:
+    complete_cells: 200
+    results_sha256: d5508417680dbb35f5c25cc33d3f3fa62d9fd3428f8fc266d87e6882de8e43b7
+  green_hydrogen_electrolysis_2010_2025:
+    complete_cells: 180
+    results_sha256: e758136ed4360f38da3d7afde1b987ed45b5fd260869b11ee3a38d3609e13a0f
+allowed_changes:
+  token_budget:
+    file: src/citeweave/token_budget.py
+    prior_sha256: 8a049845e55e738ce0481f4fce6aff1b7304cdea2a127bb0d451887a4f8acbc2
+    amended_sha256: a4db5c95e9110e7c7830c281c82fcb741bca18c7c06cff0f5ff7f305487809c9
+  controller:
+    file: scripts/run_identity_corrected_formal_pipeline.ps1
+    prior_sha256: 5721e0ff259e4caa2404efc7fe13f2b1ba167113aa17f1befa709ce1f7e2655e
+    amended_sha256: 41d815a808a4421ae4884867edcdede57327a00df805ac78ca90c4d4281985c0
+  repair_auditor:
+    file: scripts/audit_formal_v3_repair_exact_messages.py
+    binding: repair qualification
+  repair_qualification_gate:
+    file: scripts/prepare_formal_v3_repair_010.py
+    binding: repair qualification
+  behavior:
+    - Run the legacy top-level allocation unchanged whenever it can satisfy the budget.
+    - Invoke nested operator compaction only when the legacy allocator would deterministically fail before a provider request.
+    - Recognize only community_aggregate.metrics inside operator_trace or derived_rows as an additional trimmable ranked list.
+    - Derive mandatory community rows only from downstream role_contrast dominant and outward selectors in the operator program.
+    - Preserve mandatory rows, all other operator arguments, the interpretation contract, and original list ordering.
+    - Apply the change only when the unmodified canonical context exceeds the frozen budget; under-budget messages remain byte-identical.
+    - Continue to reject any fixed context that cannot fit after all registered trimmable records are removed.
+scope_guard:
+  permitted_nested_operator: community_aggregate
+  permitted_nested_field: metrics
+  permitted_downstream_operator: role_contrast
+  permitted_selector_fields:
+    - dominant
+    - outward
+  gold_answer_access: prohibited
+  provider_outcome_access: prohibited
+  task_or_cell_skipping: prohibited
+  token_budget_change: prohibited
+  prompt_change: prohibited
+regression_evidence:
+  test_file: tests/test_token_budget.py
+  sha256: cbad6ef19e37eb52538d4b342d6c6f5e07a1604af238a4dea50f498751d0cd6d
+  targeted_tests_passed: 9
+  lint_passed: true
+local_reproduction_after_patch:
+  provider_calls: 0
+  condition_audits:
+    operator_only:
+      full_context_tokens: 8614
+      budgeted_context_tokens: 8163
+      retained_community_metrics: 193
+      original_community_metrics: 204
+    graph_program:
+      full_context_tokens: 19005
+      budgeted_context_tokens: 8163
+      retained_community_metrics: 86
+      original_community_metrics: 204
+    flat_program:
+      full_context_tokens: 19800
+      budgeted_context_tokens: 8185
+      retained_community_metrics: 83
+      original_community_metrics: 204
+unchanged:
+  - Benchmark tasks, questions, gold answers, source evidence, graph construction and operator outputs.
+  - Conditions, prompt text, model, temperature, output budget and 8192-token context budget.
+  - Tokenizer command, tokenizer model revision and API-usage probes.
+  - Registered hypotheses, estimands, scoring, multiplicity and terminal rules.
+  - Neural embeddings, retrieval ranks and sidecars.
+  - Existing complete provider records and attempt logs.
+repair_gate:
+  - Preserve and hash-bind all 380 complete records before any resumed request.
+  - Reconstruct every completed request and prove its message hash is unchanged.
+  - Assemble every registered primary, replication and extension request with the exact frozen tokenizer and prove it fits the budget.
+  - Materialize a new immutable repair qualification binding the amendment, implementation, tests, old qualification chain, result hashes and exact-message audit.
+  - Require explicit repair promotion after independent inspection.
+  - Resume only incomplete cells; never resend a completed identity.

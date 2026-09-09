@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "amendment_id": "article_generation_diagnostic_hierarchical_section_parser_001",
+  "sha256": "beb041c0bf911f2a132eb026f85cd1ccb46ef2f7d24a3eaf40ec9a98f94b5d20",
+  "machine_plan_sha256": "af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36",
+  "post_generation": true,
+  "before_any_real_human_review": true,
+  "confirmatory_reclassification_prohibited": true,
+  "original_execution_records_mutable": false,
+  "provider_resampling_prohibited": true
+}

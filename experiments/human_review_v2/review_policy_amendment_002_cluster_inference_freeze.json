@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_real_reviewer_and_policy_outcomes",
+  "amendment": "review_policy_amendment_002_cluster_inference.yml",
+  "sha256": "5f0d04bf59cafb863cc0be0761f3ff80dcccaaba7548977acd5c22ee99540723",
+  "human_outcomes_inspected": false,
+  "policy_outcomes_inspected": false,
+  "human_outcome_files": 0,
+  "policy_outcome_files": 0,
+  "frozen_at_local": "2026-08-31T19:14:00+08:00"
+}

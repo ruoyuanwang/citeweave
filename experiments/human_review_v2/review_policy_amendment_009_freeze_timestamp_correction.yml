@@ -1,0 +1,23 @@
+schema_version: 1
+amendment_id: review_policy_amendment_009_freeze_timestamp_correction
+status: frozen_before_real_reviewer_calibration_and_heldout_human_outcomes
+frozen_at: '2026-09-08T13:46:00+08:00'
+human_outcomes_inspected: false
+heldout_outcomes_inspected: false
+registered_real_reviewers: 0
+calibration_returns: 0
+confirmatory_returns: 0
+previous_amendment_sha256: 243be1bea2aae4aaf8c1ef58f2d9e85959d5749706a14d3497894070ca519f9b
+
+correction:
+  affected_field: review_policy_amendment_008.frozen_at
+  erroneous_value: '2026-09-08T14:05:00+08:00'
+  authoritative_filesystem_creation_time: '2026-09-08T13:35:53+08:00'
+  authoritative_freeze_creation_time: '2026-09-08T13:36:13+08:00'
+  corrected_interpretation: Amendment 008 was frozen at 13:36 Asia/Shanghai.
+  cause: Manual future-time transcription error.
+
+scope:
+  - No substantive protocol, selection, case, gold, implementation, or analysis field changes.
+  - Amendment 008 and its original hash remain immutable and are not silently rewritten.
+  - This correction was frozen before any reviewer recruitment, calibration return, assignment, or held-out human outcome.

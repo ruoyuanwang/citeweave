@@ -1,0 +1,121 @@
+schema_version: 1
+amendment_id: review_policy_amendment_004_multidimensional_calibration
+status: frozen_before_multidimensional_calibration_or_heldout_human_outcomes
+frozen_at: '2026-09-07T21:52:00+08:00'
+human_outcomes_inspected: false
+heldout_outcomes_inspected: false
+previous_factorial_amendment_sha256: c72cc9f68c94523d3df4cf0a6f8b8df12fdd4fe7387ee7513352fdcbb9c24dc7
+prototype_packet_manifest_sha256: 764ede8c2d6eaa625a206ef637da2870022bafad388811d9b3a631455debf3c6
+
+reason:
+  - The source-relevance warmup calibrates evidence relevance only; it cannot identify
+    which reviewer is better at graph arithmetic, causal-overreach detection,
+    counterevidence use, or revision safety.
+  - The prior capability model fell from reviewer-domain-issue directly to domain or
+    reviewer-global evidence, erasing transferable issue-specific expertise when a
+    held-out scientific domain was unseen during warmup.
+  - Calling that fallback a capability-aware router would overstate personalization and
+    could make the qualified-random and routed arms operationally indistinguishable.
+
+calibration_panel:
+  study_role: training_only_reviewer_capability_calibration
+  confirmatory_exclusion: true
+  source: The 40 pre-existing prototype graph-audit packets; no formal held-out candidate output.
+  datasets: 8
+  cases: 96
+  cases_per_dataset: 12
+  issue_types:
+    - graph_answer_consistency
+    - causal_overreach
+    - counterevidence_coverage
+    - revision_safety
+  cases_per_issue_per_dataset: 3
+  class_balance: 48 valid and 48 invalid controlled variants
+  gold_construction: Deterministic injected-error transformations with private labels.
+  primary_review: 96 first judgments plus independent overlap on 48 packets, for 144 total.
+  adjudication: Every overlapping verdict disagreement goes to its preassigned blinded third reviewer.
+  capability_scoring: Primary judgments are scored only against private injected gold; adjudicators are not self-scored and do not define correctness.
+  blinding:
+    - expected verdict
+    - injected mutation
+    - generation condition
+    - support-versus-challenge evidence role
+  prohibition:
+    - Calibration cases cannot enter confirmatory outcomes.
+    - A reviewer cannot see the same base graph case under multiple issue variants.
+    - Researcher-authored reviewer responses cannot substitute for real responses.
+
+capability_model_correction:
+  family: hierarchical_beta
+  prior_alpha: 2.0
+  prior_beta: 2.0
+  fallback_order:
+    - reviewer_domain_issue
+    - reviewer_issue_across_domains
+    - reviewer_domain_across_issues
+    - reviewer_global
+    - prior
+  minimum_exact_observations: 3
+  minimum_issue_observations: 3
+  minimum_domain_observations: 5
+  heldout_rule: All observations and posteriors are frozen before held-out assignment.
+
+promotion_gate:
+  - Every issue type present in the prospective held-out panel must have reviewer-issue
+    evidence for enough conflict-free reviewers to satisfy the requested route.
+  - A global-only or prior-only posterior cannot qualify as personalized expertise.
+  - Missing qualified coverage yields blocked_insufficient_reviewers; no silent fallback.
+
+implementation:
+  capability_model:
+    path: src/citeweave/complementary_oversight.py
+    sha256: f828dab27162482fc510b2c6efdfb566c9e5072573d47d0298ba2d0d6b4a7a1c
+  packet_builder:
+    path: src/citeweave/oversight_calibration.py
+    sha256: e733ac8145f973e3cbc496a7b1376e2b5cb39f7cb3bcf05aec970e75c336fb2e
+  packet_cli:
+    path: scripts/build_oversight_calibration_packets.py
+    sha256: 6c6287cb6a0db89458986d5126ddaf89adaeecc8ff909f947a5de8b35cc9d70e
+  assignment_builder:
+    path: src/citeweave/oversight_calibration_assignment.py
+    sha256: 5a197f7febaf68dbda3f0e837257dd34a732de40785d14906a652afe53a1f2cd
+  assignment_cli:
+    path: scripts/prepare_oversight_calibration_panel.py
+    sha256: 311b644c238bccee996a22393e860eab98ffed1059a2d2c300bac983e143bf79
+  outcome_compiler:
+    path: src/citeweave/oversight_calibration_outcomes.py
+    sha256: 97f93c983e1a4d553e943b3872b0ffc456114232b4e828cb968af28a9d2c2406
+  outcome_cli:
+    path: scripts/run_oversight_calibration_outcomes.py
+    sha256: 9006949ca6aa5b2df76a5e86291a76fd35930518f89cffd4bbaba4df953a249d
+  server_timed_review_ui:
+    path: src/citeweave/review_ui.py
+    sha256: df449932002d25f7d2f7b497539e984266441930a37a1fd64f3c795c31904006
+  capability_tests:
+    path: tests/test_complementary_oversight.py
+    sha256: 319a52ce33ded0acecc648d9a24e425dd5bcc4357463931d5a606bab4958657a
+  packet_tests:
+    path: tests/test_oversight_calibration.py
+    sha256: 44ccde56b075bf7670831e36261b95c0988fbb27cb80d72d6ac897fc166880a3
+  review_ui_tests:
+    path: tests/test_review_ui.py
+    sha256: 4fcc03f2a7e83b4a432f3de88c6fbdfb0ef86ce31a81b6d68bc8adc985c648bb
+  assignment_tests:
+    path: tests/test_oversight_calibration_assignment.py
+    sha256: 0b914f80219030e39200aa9c1b667dfb73c76e8fb3dbfeadfc62bc6e2a056b7f
+  outcome_tests:
+    path: tests/test_oversight_calibration_outcomes.py
+    sha256: fad05cceb193ebefc54a90f3bfa3de48c505335e1bd5fc9a014749f85f890af4
+
+materialized_panel:
+  path: experiments/human_review_v2/oversight_calibration_v1/manifest.json
+  sha256: a993ff8590db8aa448cf2026973bc20167f1755e34b4c01511a10997d48b1485
+  cases: 96
+  datasets: 8
+  human_returns: 0
+
+interpretation_guard:
+  - Controlled warmup accuracy estimates task-specific reviewer capability under the
+    calibration interface; it is not a confirmatory estimate of article quality.
+  - Capability-aware routing is an experimental treatment only after frozen assignments
+    demonstrably differ from qualified random assignment on the same held-out sample.

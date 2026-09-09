@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "protocol_id": "article_v3_budgeted_completion_development_pilot_v1",
+  "sha256": "99ad862413c6c4f160ba1f518dcfd6ff5fccec7ced3ed79670d86c326f6e296e",
+  "post_formal_generation": true,
+  "development_only": true,
+  "cells": 4,
+  "confirmatory_replacement": false,
+  "prior_formal_outcomes_mutable": false
+}

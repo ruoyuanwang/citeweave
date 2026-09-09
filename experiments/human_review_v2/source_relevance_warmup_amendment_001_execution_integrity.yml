@@ -1,0 +1,60 @@
+schema_version: 1
+amendment_id: source_relevance_warmup_amendment_001_execution_integrity
+base_protocol_sha256: d34d70c7ba4934274955c716ddc8cf1d25ef7639b1c0e561f4b9dd1fb1fe45de
+packet_manifest_sha256: 7345dd17f0057e4625a7a4ec93eb65cc80e7c72f4857db65685edf513c503852
+status: frozen_before_assignment_or_human_source_judgments
+
+reason:
+  - The source-relevance warmup protocol and packet manifest were frozen, but the assignment CLI did not verify the protocol freeze or implementation identities before materializing reviewer tasks.
+  - A later implementation drift could therefore create apparently formal assignments under code different from the registered mechanism.
+  - The correction was made with an empty real-reviewer roster, no assignment directory, and no human source-review return.
+
+prospective_execution_gate:
+  protocol_checks:
+    - protocol bytes match the frozen protocol hash
+    - protocol identity matches the freeze
+    - human_judgments_inspected remains false
+    - warmup cases remain excluded from confirmatory outcomes
+  packet_checks:
+    - packet manifest bytes match this amendment
+    - packet status states that packets were built before human judgments
+    - exactly 120 packets are present
+    - confirmatory_exclusion remains true
+  implementation_checks:
+    - assignment module hash matches this amendment
+    - preparation CLI hash matches this amendment
+    - regression-test hash matches this amendment
+  failure_policy: Any mismatch aborts before assignment files are written.
+
+unchanged_design:
+  reviewers: 6
+  decisions_per_reviewer: 30
+  total_packets: 120
+  double_reviewed_packets: 60
+  minimum_domains_per_reviewer: 2
+  disagreement_resolution: blinded domain-qualified third reviewer
+  confirmatory_exclusion: true
+
+implementation:
+  assignment_module:
+    path: src/citeweave/source_review_assignment.py
+    sha256: 5604f506bfaa1deb43f6af9c1c5ee5ce74ce7adae4a650f775bdf9d80b73a55d
+  preparation_cli:
+    path: scripts/prepare_source_relevance_panel.py
+    sha256: 551e001f8a7ecff5aaf0fdd027eeedb66ae809ca2085b66de6b56ca9d50282d2
+  readiness_cli:
+    path: scripts/audit_source_relevance_panel_readiness.py
+    sha256: 6ce92459523c7123a663b6d9d3ecdedf6fe0f182b9b3b4207fe4a6877dda1ee4
+  regression_tests:
+    path: tests/test_source_relevance_packets.py
+    sha256: 409d75525e65da3bca7d9629c3f5678493188bd162da37b4fc97d8a68669a2bc
+
+pre_outcome_evidence:
+  reviewer_roster_sha256: 88d893c0284b01cdfdb2a1d59b750e673bff3951f08f72ccbc33d349af3a55b5
+  registered_real_reviewers: 0
+  assignment_directory_present: false
+  human_source_review_returns: 0
+
+integrity_guard:
+  - This amendment changes only pre-assignment integrity checks; it does not change cases, labels, reviewer workload, capability modeling, promotion thresholds, or confirmatory analyses.
+  - Simulated, researcher-proxy, or LLM judgments remain prohibited as substitutes for the human panel.

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "matched_article_compiler_claim_ready_development_v2_plan_frozen_before_provider_calls",
+  "sha256": "e8d466c55b9d97f52988d1572ecebbe0e5471bdf7aaa02c915922022daf355f6",
+  "protocol_sha256": "1f877518babf4c4dc15f248dc9b361e9e5a8a10bdf0a79225d8743660ecb93f1",
+  "articles": 4,
+  "provider_calls_per_article": 9,
+  "maximum_provider_calls": 36,
+  "provider_responses_at_freeze": 0
+}

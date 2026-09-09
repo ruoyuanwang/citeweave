@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "artifact": "experiments/article_quality_v3/deterministic_argument_structure_diagnostic_v2_protocol.yml",
+  "sha256": "8adfcd269c887b5d16d2a8185e266d8e6727396018dac9eb3a593170798aa8d8",
+  "status": "frozen_before_v2_metric_execution",
+  "machine_articles": 4,
+  "published_human_articles": 8,
+  "human_judgments_observed_at_freeze": 0
+}

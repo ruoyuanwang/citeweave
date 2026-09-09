@@ -1,0 +1,91 @@
+schema_version: 1
+status: frozen_before_real_review_and_policy_outcomes
+protocol_date: '2026-08-24'
+purpose: Test whether typed, dependency-aware, actively selected human feedback improves quality-labor tradeoffs beyond a raw feedback log.
+
+evaluation_unit: adjudicated_claim_evidence_plan_bundle
+minimum_cases: 180
+minimum_independent_datasets: 4
+case_identity_rule: The same frozen case, original output, severity, and issue type must appear in every policy condition.
+
+human_ground_truth:
+  reviewers: 2
+  overlap_fraction: 0.5
+  blinding:
+    - generation condition
+    - deterministic answer and evidence score
+    - other reviewer decision
+    - policy route and prior policy state
+  adjudication: Independent third reviewer resolves every common-packet disagreement.
+  timing: Server-visible-page heartbeat time; client-authored durations are forbidden.
+  label_reuse: Humans label each case once; the frozen adjudicated action is replayed only after a policy requests human review.
+
+conditions:
+  - always_review
+  - static_risk
+  - raw_memory_prompt
+  - review_compiler_active
+condition_definitions:
+  always_review: Every case receives the frozen adjudicated human action.
+  static_risk: A fixed pre-outcome severity rule selects cases for review; no online learning.
+  raw_memory_prompt: Prior visible feedback is appended as an untyped chronological context without credit assignment or promotion gates.
+  review_compiler_active: Typed feedback is credited to retriever, planner, generator, or risk router; candidate changes require held-out replay and guarded promotion.
+
+sequential_replay:
+  order: Fixed seeded order within dataset, identical across conditions.
+  seed: 20260824
+  predecision_freeze: Route, risk, active feedback IDs, and policy version are hashed before exposing the adjudicated label.
+  feedback_visibility: A human action becomes available only after the corresponding condition routed that earlier case to review.
+  critical_rule: Critical cases always require human review and may never be auto-accepted or auto-corrected.
+  leakage_rule: Hidden correctness, deterministic outcome, reviewer action, and future feedback cannot be policy features.
+
+primary_estimand:
+  contrast: review_compiler_active_minus_raw_memory_prompt
+  quality_constraint: Final accuracy is noninferior with margin 0.02.
+  labor_outcome: Server-timed review seconds per case.
+  success_rule: Quality noninferiority and fewer review seconds must both pass.
+
+secondary_contrasts:
+  - review_compiler_active_vs_always_review
+  - review_compiler_active_vs_static_risk
+  - raw_memory_prompt_vs_static_risk
+
+metrics:
+  - final_accuracy
+  - error_correction_rate
+  - introduced_regression_rate
+  - review_request_rate
+  - review_seconds
+  - unsafe_autoaccept_rate
+  - predecision_aurc
+  - post_feedback_accuracy
+  - correction_lag
+  - unrelated_regression_rate
+correction_lag:
+  definition: Ordinal number of semantic-neighbor cases after a feedback signal until the first three consecutive correct final outcomes.
+  stability_window: 3
+  censoring: Signals without three consecutive later correct neighbors are right-censored and reported separately.
+
+statistics:
+  cluster_unit: dataset_id
+  bootstrap_samples: 10000
+  bootstrap_seed: 20260824
+  paired_binary_test: exact_two_sided_mcnemar
+  confidence_interval: dataset_cluster_bootstrap_percentile_95
+  unsafe_autoaccept_bound: upper_endpoint_of_two_sided_95_wilson_interval
+  unsafe_autoaccept_upper_threshold: 0.05
+  safety_exposure_requirement: At least 73 auto-accepted audit cases are required for a zero-error Wilson upper bound below 0.05.
+  missing_pair: Analysis stops; no pairwise deletion.
+
+promotion_gates:
+  - minimum independent dataset support
+  - final-quality noninferiority
+  - positive review-time saving
+  - unsafe auto-accept upper bound
+  - zero critical automation
+  - unrelated regression at or below 0.05
+
+reporting_guard:
+  - Simulated or researcher-authored feedback cannot substitute for real reviewer outcomes.
+  - Replay estimates policy routing under frozen human labels; it does not estimate reviewer behavior under repeated exposure.
+  - No policy may be called self-improving unless a new version passes held-out replay and is promoted with its predecessor retained.

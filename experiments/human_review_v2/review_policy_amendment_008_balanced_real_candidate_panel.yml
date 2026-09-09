@@ -1,0 +1,103 @@
+schema_version: 1
+amendment_id: review_policy_amendment_008_balanced_real_candidate_panel
+status: frozen_before_real_reviewer_calibration_and_heldout_human_outcomes
+frozen_at: '2026-09-08T14:05:00+08:00'
+human_outcomes_inspected: false
+heldout_outcomes_inspected: false
+registered_real_reviewers: 0
+calibration_returns: 0
+confirmatory_returns: 0
+previous_amendment_sha256: ba0a51921f6b759c519f4ea51a5f37a8ff360d99d53bc6395514013b7a1db678
+
+reason:
+  - The first 96-case materialization contains 90 qualify and 6 reject gold verdicts,
+    no supported or abstain gold, and four datasets with 12 of 12 qualify cases.
+  - An always-qualify rule would achieve 93.75 percent pooled accuracy, making the
+    registered packet and routing comparisons insensitive and potentially misleading.
+  - The task identities were frozen without reading model outcomes. Before any human
+    outcome, this amendment keeps those same 96 tasks but deterministically selects
+    real completed candidate outputs to obtain exactly six qualify and six reject
+    cases within every dataset.
+
+superseded_panel:
+  path: experiments/human_review_v2/oversight_heldout_factorial_v1/manifest.json
+  sha256: f3fcb024c77d0dee1a0414044f6b83f0c57d1b905b35c523290a36af655bcff7
+  gold_distribution: {qualify: 90, reject: 6}
+  disposition: development_diagnostic_only_not_for_confirmatory_human_effects
+
+balanced_panel:
+  task_selection_path: experiments/human_review_v2/oversight_heldout_selection_v2_balanced.json
+  task_selection_sha256: fcaa6b137839d1746aa438c377e196092ced36953db21dc595a85cf5bcf0a307
+  packet_manifest_path: experiments/human_review_v2/oversight_heldout_factorial_v2_balanced/manifest.json
+  packet_manifest_sha256: 68b5713f201910f08103fdb6310ff43af02668cd421f81d041c2a5b5ca28f7e2
+  private_construction_audit_path: experiments/human_review_v2/oversight_heldout_factorial_v2_balanced/construction_audit_private.json
+  private_construction_audit_sha256: 94d264ae0d7cc20d9588712aefa5d90692a4bab4069b655a9a395840b3c6aea6
+  datasets: 8
+  cases_per_dataset: 12
+  gold_per_dataset: {qualify: 6, reject: 6}
+  total_gold: {qualify: 48, reject: 48}
+  real_candidate_outputs_only: true
+  task_identity_changed: false
+  reviewer_packets_hide_generation_condition: true
+  reviewer_packets_hide_gold_and_gold_distribution: true
+
+selection_rule:
+  mandatory_rejects: Retain every task for which all completed candidate conditions are reject.
+  remaining_rejects: >-
+    Choose a deterministic six-case subset per dataset minimizing squared issue-type
+    imbalance, maximizing task-type diversity, and breaking ties by a seeded SHA-256.
+  qualify_condition_priority:
+    - graph_program
+    - flat_program
+    - operator_only
+    - graph_hierarchical_retrieval_v2
+    - graph_query_retrieval
+    - flat_hybrid
+    - flat_neural_dense
+    - flat_bm25
+  reject_condition_priority: same_as_qualify_condition_priority
+  rationale: >-
+    Prefer the strongest available representation for both valid and invalid real
+    outputs, using weaker retrieval conditions only when a stronger completed output
+    does not supply the target verdict.
+
+analysis_scope:
+  randomized_effects: >-
+    The previously frozen 2 x 2 packet-presentation and reviewer-routing contrasts
+    remain valid for causal effects inside this fixed balanced benchmark because
+    balancing precedes human assignment and human outcomes.
+  prevalence: >-
+    Accuracy and class proportions cannot estimate natural deployment prevalence;
+    report the original 90/6 panel separately as a prevalence diagnostic.
+  transportability: >-
+    Equal-dataset inference remains required. Result-aware outcome balancing limits
+    claims to the registered case spectrum and must be disclosed.
+
+complementarity_correction:
+  withdrawn_confirmatory_contrast: amendment_007_C1_operational_unaudited_acceptance
+  reason: >-
+    The generator emits an answer, not a four-class self-verdict. Treating every
+    non-abstaining answer as supported creates an ill-posed, mechanically zero
+    baseline on a qualify/reject-only gold panel.
+  retained_contrast: amendment_007_C2_final_team_minus_case_averaged_single_primary
+  retained_claim_scope: aggregation_and_blind_adjudication_benefit_only
+  requirement_for_broad_human_ai_complementarity: >-
+    Add a separately frozen AI-only self-reviewer that receives the exact assigned
+    packet and emits the same four-class verdict before inspecting human outcomes.
+
+implementation:
+  builder_module:
+    path: src/citeweave/oversight_balanced_panel.py
+    sha256: 04bd1a09c364d2cece6a29a2465df747d3a69ad3245447278eab87d4955830fd
+  builder_cli:
+    path: scripts/prepare_balanced_oversight_heldout_packets.py
+    sha256: 94d5c8e3e62d2b45fed17e5b419cd2dfbb05a3cc90e63626973d976a84d9b598
+  tests:
+    path: tests/test_oversight_balanced_panel.py
+    sha256: 31131a41f167c1c9023e3e01dfa87c443956bdef332c872ee551b0d5eab8dc1e
+
+integrity_guards:
+  - No researcher-authored or model-generated proxy human judgment is permitted.
+  - No human return exists at panel construction or amendment freeze.
+  - The superseded imbalanced panel remains immutable for transparent reporting.
+  - The private construction audit and internal gold files are never served to reviewers.

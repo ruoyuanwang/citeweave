@@ -1,0 +1,122 @@
+schema_version: 1
+protocol_id: matched_article_compiler_claim_ready_development_v2
+status: refrozen_after_first_402_with_zero_valid_responses
+frozen_at: '2026-09-08T04:46:45+08:00'
+
+timing_disclosure:
+  matched_development_v1_articles: 4
+  matched_development_v1_provider_calls: 36
+  matched_development_v1_finish_stop: 27
+  matched_development_v1_finish_length: 9
+  matched_development_v1_machine_gate_passes: 2
+  matched_development_v1_oversight_ready: 4
+  matched_development_v1_fully_passed: 0
+  matched_development_v1_outcomes_inspected: true
+  real_human_article_returns: 0
+  v2_transport_attempts_before_refreeze: 1
+  v2_valid_provider_responses_before_refreeze: 0
+
+diagnosis: >-
+  All v1 articles reached 23-38 reviewable claim candidates, but nine calls ended with
+  finish_reason length. The two machine-gate failures each contained a partial PH or REF
+  token at a retained truncated section boundary. Long provenance identifiers produce a
+  higher token-to-word ratio than the original ceilings allowed.
+
+scientific_role:
+  development_only: true
+  confirmatory_replacement: false
+  pooling_with_v1: prohibited
+  single_changed_factor_from_v1: response_token_ceilings
+
+panel:
+  datasets:
+    - explainable_ai_medical_imaging_2016_2025
+    - sodium_ion_battery_cathodes_2010_2025
+  conditions:
+    - flat_article_compiler
+    - graph_dependency_compiler
+  articles: 4
+  provider_calls_per_article: 9
+  maximum_provider_calls: 36
+  temperature: 0
+  rendered_figure_access: false
+
+unchanged_from_v1:
+  - writer_inputs
+  - condition_payloads_and_manipulated_factor
+  - prompts_except_prompt_version_marker
+  - generation_order_and_dependency_contexts
+  - claim_density_contract
+  - precommitted_results_and_discussion_repairs
+  - deterministic_assembly_and_budget_optimizer
+  - all_article_and_pilot_success_gates
+
+token_ceilings:
+  base:
+    Abstract: 700
+    Introduction: 1000
+    Methods: 1200
+    Results: 2400
+    Discussion: 1900
+    Limitations: 800
+    Conclusion: 600
+  repair:
+    Results: 2800
+    Discussion: 2300
+
+article_success_gate:
+  - exactly_nine_provider_responses
+  - all_nine_finish_reason_stop
+  - final_article_within_2700_3300_words
+  - all_unchanged_structural_and_provenance_gates_pass
+  - at_least_20_reviewable_claim_candidates
+  - at_least_2_candidates_for_each_phenomenon
+  - results_and_discussion_section_minima_pass
+
+pilot_qualification_gate:
+  - all_four_articles_pass_every_article_success_gate
+  - only_then_may_an_eight_topic_confirmatory_protocol_be_frozen
+  - no_effectiveness_claim_from_this_two_topic_development_pilot
+
+implementation:
+  base_compiler_module:
+    path: src/citeweave/article_compiler_v2.py
+    sha256: 4a0362f76510fa2110571733d09300d962ead7c90d8edbd0f3dff7a4178c848b
+  token_safe_compiler_module:
+    path: src/citeweave/article_compiler_v3.py
+    sha256: 3c2561ab86f3a3ef349ec4a6273e9ab90c800ad9a7069fbb51e892f1f9807fd7
+  preparation_cli:
+    path: scripts/prepare_article_compiler_v2_pilot.py
+    sha256: a3ec4c384f12495d263fe8dc2a397e821fa7946d9b97b53c6ac715616b5b0f38
+  execution_engine:
+    path: scripts/run_article_compiler_v2_pilot.py
+    sha256: f3573312bed8dbdd6cffc213a5cf7845006092da4cfb4f4df436b93390449d3c
+  token_safe_execution_cli:
+    path: scripts/run_article_compiler_v3_pilot.py
+    sha256: 86f87374a36fdf07ec15e2767da402e6687e3e98ae661e439450807adc6d64e3
+  budget_optimizer:
+    path: src/citeweave/article_budget_optimizer.py
+    sha256: c48c79a0947455cd377f7c1846ec600ad269d0c9e295cf6f4b956747003d0b9e
+  assessment_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  oversight_audit:
+    path: src/citeweave/article_oversight_readiness.py
+    sha256: 3d43820d75b31397ba22b8677e6a4ab8d2665d67c38eae6e974495f944093e3a
+  base_compiler_test:
+    path: tests/test_article_compiler_v2.py
+    sha256: c88574fd62a1b940be703d1e37fbb5906d26b23abe6785dae54c97756cf68c15
+  plan_test:
+    path: tests/test_article_compiler_v2_plan.py
+    sha256: 20b32daa6a2f518b5627822e1ecd6d68d156116e599eb1b619ed8a6076967aab
+  token_safe_test:
+    path: tests/test_article_compiler_v3.py
+    sha256: 6139ebb43d7c12c01dc0b36f40508545d0a78543fef75aac6bac5bc7fd444467
+
+integrity_guards:
+  - Protocol and plan are SHA256-frozen before any v2 provider response.
+  - V1 requests and responses remain immutable.
+  - Every v2 request is new and stored under a separate output root.
+  - Both conditions receive exactly nine calls independent of intermediate quality.
+  - A failed transport record is preserved before retrying the identical request.
+  - Provider secrets are never written to experiment artifacts.

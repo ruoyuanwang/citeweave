@@ -1,0 +1,122 @@
+schema_version: 1
+amendment_id: review_policy_amendment_001_complementary_oversight
+base_protocol_sha256: 6c613d4422cf81af7b78cca425ce3131f8208d8ec21f7728ee83c4c0e4c92ed5
+status: frozen_before_real_reviewer_and_policy_outcomes
+human_outcomes_inspected: false
+policy_outcomes_inspected: false
+reason:
+  - The base protocol learns whether a case should be reviewed, but treats qualified reviewers as interchangeable.
+  - A raw claim-first packet can anchor reviewers on the model conclusion and conceal counterevidence or fragile operator steps.
+  - Publication-grade human-AI complementarity requires testing who reviews, how many reviewers are needed, and how evidence is presented.
+
+capability_calibration:
+  warmup_cases_per_reviewer: 12
+  minimum_reviewers: 6
+  minimum_domains_per_reviewer: 2
+  source: Independently adjudicated factual, semantic, evidence, and operator cases.
+  exclusion: Warmup cases are excluded from every confirmatory oversight outcome.
+  model: Hierarchical Beta posterior at reviewer × domain × issue type, with domain and reviewer-global fallback.
+  freeze_rule: Capability posteriors and eligible reviewer sets are hashed before held-out case assignment.
+  leakage_rule: Held-out correctness, future reviewer actions, and future adjudication may never update a predecision route.
+
+joint_routing_actions:
+  - auto_accept
+  - single_review
+  - dual_review_with_adjudication
+  - blocked_insufficient_reviewers
+objective: Minimize expected severity-weighted final error plus server-timed review cost.
+safety:
+  auto_accept_predecision_risk_ceiling: 0.05
+  critical_minimum_reviewers: 2
+  critical_adjudication: A distinct third reviewer resolves every disagreement.
+  capability_gate: Reviewer posterior lower 95 percent bound must exceed the frozen eligibility threshold.
+  no_silent_fallback: Insufficient qualified reviewers produces a blocked route, never automation.
+
+adversarial_packet:
+  public_fields:
+    - claim
+    - blinded evidence set A
+    - blinded evidence set B
+    - operator trace
+    - alternative explanations
+    - forbidden inferences
+  hidden_fields:
+    - generation condition
+    - deterministic score
+    - gold answer
+    - which evidence set was selected as support or challenge
+    - other reviewer decision
+  required_response:
+    - verdict
+    - decisive evidence IDs
+    - invalid operator steps
+    - failure mode
+    - smallest defensible rewrite
+    - rationale
+
+prospective_factorial:
+  design: 2 × 2 randomized blocked factorial with reviewer crossover
+  factors:
+    packet:
+      - standard_claim_first
+      - adversarial_two_sided
+    assignment:
+      - qualified_random
+      - capability_cost_router
+  minimum_heldout_cases: 96
+  blocking:
+    - dataset
+    - domain
+    - issue_type
+    - severity
+  crossover_rule: Each reviewer receives every arm but never sees the same case twice.
+  overlap: At least 50 percent of cases receive two independent first-pass judgments.
+  adjudication: Every disagreement receives a blinded third judgment.
+
+primary_hypotheses:
+  O1:
+    contrast: adversarial_two_sided_minus_standard_claim_first
+    outcome: adjudicated_final_correctness
+    direction: greater_than_zero
+  O2:
+    contrast: capability_cost_router_minus_qualified_random
+    outcome: adjudicated_final_correctness_per_review_minute
+    direction: greater_than_zero
+  O3:
+    contrast: packet_by_assignment_interaction
+    outcome: adjudicated_final_correctness
+    direction: two_sided
+secondary_outcomes:
+  - decisive_evidence_precision
+  - invalid_operator_detection_recall
+  - causal_overreach_detection
+  - abstention_calibration
+  - introduced_revision_error
+  - server_timed_seconds
+  - reviewer_disagreement
+  - adjudication_rate
+  - reviewer_workload_inequality
+
+analysis:
+  correctness_model: Mixed-effects logistic regression with packet, assignment, interaction, severity, and random intercepts for case and reviewer.
+  time_model: Mixed-effects log-time model on reviewed cases.
+  paired_binary_sensitivity: Exact McNemar on doubly reviewed matched cases.
+  reviewer_capability_sensitivity: Leave-one-domain-out capability fitting.
+  multiplicity: Holm correction for O1, O2, and O3.
+  missingness: Report by arm; no complete-case claim if dropout differs by arm.
+
+implementation:
+  router: src/citeweave/complementary_oversight.py
+  packet_builder: build_adversarial_review_packet
+  predecision_identity: SHA-256 over case, capability estimates, eligible reviewers, policy parameters, and selected action.
+
+unchanged:
+  - Typed claim/evidence/operator/plan feedback and dependency propagation.
+  - Component-specific credit assignment and held-out rule promotion gates.
+  - The four original policy replay conditions and their primary noninferiority analysis.
+  - Prohibition on substituting simulated feedback for real reviewer outcomes.
+
+reporting_guard:
+  - Capability routing is not human-AI complementarity unless the team exceeds both AI-only and the best single-reviewer baseline on held-out cases.
+  - Adversarial packets are not claimed to reduce bias unless O1 improves correctness without an unacceptable time increase.
+  - Reviewer specialization is descriptive unless it transfers in leave-one-domain-out analysis.

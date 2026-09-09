@@ -1,0 +1,133 @@
+schema_version: 1
+protocol_id: matched_article_compiler_claim_ready_development_v1
+status: refrozen_after_presend_serialization_fix_before_provider_calls
+frozen_at: '2026-09-08T04:21:18+08:00'
+
+timing_disclosure:
+  formal_single_call_responses: 16
+  formal_gate_passes: 0
+  earlier_development_single_call_responses: 8
+  earlier_development_single_call_gate_passes: 4
+  earlier_dependency_compiler_articles: 2
+  earlier_budget_optimized_machine_gate_passes: 2
+  earlier_budget_optimized_oversight_ready: 0
+  all_prior_outcomes_inspected: true
+  real_human_article_returns: 0
+  provider_responses_before_refreeze: 0
+
+motivation: >-
+  Earlier compiler drafts passed structural and provenance gates after deterministic
+  budgeting but contained only 15 independently reviewable PH-bearing claim sentences,
+  below the frozen human-review packet requirement of 20. This pilot tests a generation
+  contract aligned to the human-review interface and isolates graph dependency structure
+  from a flat same-information control under matched provider-call budgets.
+
+scientific_role:
+  development_only: true
+  confirmatory_replacement: false
+  pooling_with_prior_runs: prohibited
+  intended_next_use: qualify_or_reject_a_future_separately_frozen_eight_topic_comparison
+
+panel:
+  datasets:
+    - explainable_ai_medical_imaging_2016_2025
+    - sodium_ion_battery_cathodes_2010_2025
+  conditions:
+    - flat_article_compiler
+    - graph_dependency_compiler
+  articles: 4
+  provider_calls_per_article: 9
+  maximum_provider_calls: 36
+  temperature: 0
+  rendered_figure_access: false
+
+matched_design:
+  shared_information:
+    - identical_writer_input
+    - identical_five_phenomena_and_reference_ids
+    - identical_three_registered_syntheses
+    - identical_section_slots_and_section_dependencies
+    - identical_generation_and_assembly_order
+    - identical_prompt_word_budgets
+    - identical_two_precommitted_repair_calls
+    - identical_deterministic_budget_optimizer
+  manipulated_factor:
+    flat_article_compiler: >-
+      A list of independent argument records with synthesis membership and section slots;
+      no explicit dependency_edges field.
+    graph_dependency_compiler: >-
+      The same content represented as a graph argument plan with explicit dependency edges.
+  generation_order:
+    - Methods base
+    - Results base
+    - Results repair
+    - Discussion base
+    - Discussion repair
+    - Limitations base
+    - Conclusion base
+    - Introduction base
+    - Abstract base
+  adaptive_resampling: prohibited
+  section_response_limit: one_per_precommitted_call
+
+claim_interface_contract:
+  results: exactly_8_paragraphs_first_2_sentences_each_contain_PH_and_REF
+  discussion: exactly_5_paragraphs_first_2_sentences_each_contain_PH_and_REF
+  target_reviewable_candidates: at_least_20
+  minimum_per_phenomenon: 2
+  minimum_results_candidates: 8
+  minimum_discussion_candidates: 6
+
+final_processing:
+  deterministic_assembly: true
+  deterministic_sentence_budget_optimizer: true
+  optimizer_only_removes_complete_sentences_without_PH_or_REF: true
+  exact_evidence_token_set_preserved: true
+
+article_success_gate:
+  - exactly_nine_provider_responses
+  - all_nine_finish_reason_stop
+  - final_article_within_2700_3300_words
+  - all_unchanged_structural_and_provenance_gates_pass
+  - at_least_20_reviewable_claim_candidates
+  - at_least_2_candidates_for_each_phenomenon
+  - results_and_discussion_section_minima_pass
+
+pilot_qualification_gate:
+  - all_four_articles_pass_every_article_success_gate
+  - only_then_may_an_eight_topic_confirmatory_protocol_be_frozen
+  - no_effectiveness_claim_from_this_two_topic_development_pilot
+
+implementation:
+  compiler_module:
+    path: src/citeweave/article_compiler_v2.py
+    sha256: 4a0362f76510fa2110571733d09300d962ead7c90d8edbd0f3dff7a4178c848b
+  preparation_cli:
+    path: scripts/prepare_article_compiler_v2_pilot.py
+    sha256: a3ec4c384f12495d263fe8dc2a397e821fa7946d9b97b53c6ac715616b5b0f38
+  execution_cli:
+    path: scripts/run_article_compiler_v2_pilot.py
+    sha256: f3573312bed8dbdd6cffc213a5cf7845006092da4cfb4f4df436b93390449d3c
+  budget_optimizer:
+    path: src/citeweave/article_budget_optimizer.py
+    sha256: c48c79a0947455cd377f7c1846ec600ad269d0c9e295cf6f4b956747003d0b9e
+  assessment_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  oversight_audit:
+    path: src/citeweave/article_oversight_readiness.py
+    sha256: 3d43820d75b31397ba22b8677e6a4ab8d2665d67c38eae6e974495f944093e3a
+  compiler_test:
+    path: tests/test_article_compiler_v2.py
+    sha256: c88574fd62a1b940be703d1e37fbb5906d26b23abe6785dae54c97756cf68c15
+  plan_test:
+    path: tests/test_article_compiler_v2_plan.py
+    sha256: 20b32daa6a2f518b5627822e1ecd6d68d156116e599eb1b619ed8a6076967aab
+
+integrity_guards:
+  - Protocol and plan are SHA256-frozen before any provider response.
+  - Every dynamically reconstructed request must match its stored request hash.
+  - Base and repair responses remain separate and immutable.
+  - Both conditions receive exactly nine calls whether or not the base sections pass.
+  - Provider secrets are never written to experiment artifacts.
+  - No result may reclassify prior formal or development runs.

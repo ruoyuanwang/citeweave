@@ -1,0 +1,148 @@
+schema_version: 1
+protocol_id: formal_v3_same_computation_mechanism_supplement
+status: frozen_before_primary_replication_extension_or_supplement_model_outcomes
+frozen_at: '2026-08-31T20:40:29+08:00'
+formal_model_outcomes_inspected: false
+purpose: >-
+  Separate the value of deterministic graph computation from graph-shaped
+  serialization and from raw graph provenance after a result-blind exposure audit
+  found that operator traces already contain most registered answer fields.
+source_bindings:
+  primary_protocol_sha256: 2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f
+  replication_protocol_sha256: 872c28cd84e56cc98d6522ed36db01ee24026f58c639695b127d6cdebc999fec
+  complexity_extension_protocol_sha256: 32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988
+  complexity_execution_amendment_sha256: 9eaded9d966becdc02fe49b23b1262757c9a911e409c3848d3a6eca6ce750c4f
+  identity_corrected_input_freeze_sha256: 6fe178ffdda0b37894cdef5795a03d3412415cc992c1249598f9a7f7b3257a2b
+  answer_exposure_audit:
+    path: experiments/graph_discovery_v2/formal_v3_graph_program_answer_exposure_audit.json
+    sha256: b22ee1a554cd6fea472eff075f8a6f82707abb2bb420698a2ae8ce27ca61eb9f
+    complex_tasks: 120
+    operator_trace_fully_derivable_tasks: 96
+    operator_trace_mean_answer_field_coverage: 0.96
+    graph_program_full_context_fully_derivable_tasks: 120
+    flat_program_full_context_fully_derivable_tasks: 120
+panel:
+  datasets: 8
+  tasks_per_dataset: 21
+  tasks: 168
+  conditions:
+    - graph_program
+    - flat_program
+    - operator_only
+  logical_cells: 504
+  context_token_budget: 8192
+  model_prompt_temperature_thinking_tokenizer: identical_to_frozen_extension
+reuse_plan:
+  graph_program_all_extension_tasks:
+    cells: 168
+    source: merged_formal_v3_complexity_extension
+  primary_complex_flat_program_and_operator_only:
+    tasks: 60
+    conditions: [flat_program, operator_only]
+    cells: 120
+    source: formal_v3_primary_results
+  incremental_calls:
+    replication_complex_tasks:
+      tasks: 60
+      conditions: [flat_program, operator_only]
+      calls: 120
+    all_simple_controls:
+      tasks: 48
+      conditions: [flat_program, operator_only]
+      calls: 96
+    total: 216
+  equivalence_fields:
+    - dataset_id
+    - item_id
+    - task_payload_sha256
+    - condition
+    - context_sha256_after_token_budget
+    - prompt_version
+    - model
+    - temperature
+    - thinking
+    - tokenizer_manifest_sha256
+    - context_token_budget
+  mismatch_action: fail_closed_without_rerun_after_outcomes
+registered_hypotheses:
+  M1_same_computation_representation:
+    estimand: graph_program_minus_flat_program_answer_accuracy
+    population: all_168_tasks
+    test: two_one_sided_exact_dataset_sign_flip
+    equivalence_margin: 0.05_absolute_accuracy
+    interpretation: >-
+      Equivalence means the system gain comes from graph computation, not JSON graph
+      layout. Non-equivalence requires reporting direction and investigating context
+      truncation, provenance visibility, or formatting.
+  M2_raw_provenance_value:
+    estimands:
+      - graph_program_minus_operator_only_evidence_f1
+      - graph_program_minus_operator_only_answer_accuracy
+    population: 120_complex_tasks
+    joint_gate:
+      evidence_f1: one_sided_exact_dataset_sign_flip_greater_than_zero
+      answer_accuracy: one_sided_exact_dataset_sign_flip_noninferiority_margin_0.05
+    interpretation: >-
+      Success supports raw graph/provenance value beyond an answer-bearing operator
+      trace; answer accuracy alone is insufficient.
+  M3_incomplete_trace_selectivity:
+    estimand: >-
+      (graph_program - operator_only) on bridge-counterfactual tasks minus the same
+      contrast on fully trace-derivable task types
+    outcome: answer_accuracy
+    fully_trace_derivable_task_types:
+      - multi_hop_connector
+      - community_role_contrast
+      - hub_removal_resilience
+      - temporal_structural_shift
+    test: one_sided_exact_dataset_sign_flip
+    role: secondary_mechanism_check
+statistics:
+  independent_unit: dataset_id
+  minimum_datasets: 8
+  within_dataset: paired_task_effect_then_equal_weight
+  across_dataset: equal_weight_mean
+  exact_tests: fully_enumerated_2_to_the_8_sign_flips
+  descriptive_interval: 10000_draw_equal_dataset_bootstrap_seed_20260831
+  multiplicity: Holm_for_M2_evidence_superiority_and_M3_selectivity
+  mixed_models: diagnostic_only
+interpretation_guards:
+  - >-
+    Graph-program versus retrieval-only contrasts estimate deterministic graph
+    computation plus grounded synthesis, not unaided LLM graph reasoning.
+  - >-
+    Graph-shaped serialization is not an innovation claim if flat-program is
+    equivalent under identical computed content.
+  - >-
+    Operator-only answer accuracy cannot establish provenance sufficiency; evidence
+    fidelity and raw-record traceability are required.
+  - >-
+    This supplement is separate from C1/C2 and cannot replace or rescue a failed
+    registered complexity-by-scale result.
+execution_guard:
+  - No provider call before the corrected neural qualification and explicit promotion.
+  - No supplement execution before primary, replication, and extension source cells are terminal and hash-audited.
+  - No change to existing 800, 120, or 312-call confirmatory plans.
+  - Incremental supplement calls terminate after the first valid provider response; no quality-based resampling.
+audit_implementation:
+  script: scripts/audit_graph_program_answer_exposure.py
+  script_sha256: 5493a6c39752ec3f580bb602cd00890a2f24d6b48e958030b59b35a10a31d9ef
+  test: tests/test_graph_program_answer_exposure.py
+  test_sha256: db93dcc283b9c9c8ff4a1f00aff9eed1577f01290faabfc3ed1cba8407fac75b
+execution_implementation:
+  runner: scripts/run_formal_v3_mechanism_supplement_panel.py
+  runner_sha256: 5ac387cfe0a0000497f1a89c1c7312114864cc0b1bb000f367b83841c95829b1
+  test: tests/test_run_formal_v3_mechanism_supplement_panel.py
+  test_sha256: a11bdc0eb9aaa07dbc40e50078d77119ca0254bccf4e38a5e3ea2c1ce136c3fc
+  readiness_auditor: scripts/audit_formal_v3_mechanism_supplement_readiness.py
+  readiness_auditor_sha256: 7fc084347b09148e5a3072d25d391444f5a68bd492b5bdd46843aa9746710677
+  readiness_test: tests/test_mechanism_supplement_readiness.py
+  readiness_test_sha256: 93ad5160fb40691f31e367e0584bdaafc5dedf1f4c92422eb96a8bbb54fe2925
+  merger: scripts/merge_formal_v3_mechanism_supplement_results.py
+  merger_sha256: 9d3529d33d48b88f9b39c6d389b6e80eaff30ed159b0f4ce08573737d4e47abd
+  merger_test: tests/test_merge_formal_v3_mechanism_supplement_results.py
+  merger_test_sha256: 7165870dedef27eb16c37a11d8c69fab94b6e9d2bcfb9331ab897a6c72d8199a
+  analysis: scripts/analyze_formal_v3_mechanism_supplement.py
+  analysis_sha256: 625234eecf1b36c99e1b908b0ad99a3867ce1240d1dfebb96864d046ec5bc09e
+  analysis_test: tests/test_analyze_formal_v3_mechanism_supplement.py
+  analysis_test_sha256: 71484e6c16f7c5be0f2e5dd4a6febd5689e9f5db9d81f16f9f66a3223adf1f14

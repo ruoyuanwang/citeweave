@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "blocked_awaiting_real_reviewers",
+  "pilot_topics": 2,
+  "pilot_articles": 4,
+  "pilot_cases": 114,
+  "primary_reviews_required": 228,
+  "minimum_reviewers_per_topic": 3,
+  "real_reviewers_registered": 0,
+  "llm_or_synthetic_gold_prohibited": true,
+  "blocking_reasons": [
+    "No real domain-qualified reviewers are registered.",
+    "Sentence candidates still require human atomicity confirmation."
+  ],
+  "not_a_blocker": [
+    "Article generation outputs already exist.",
+    "Graph evidence and perturbation profiles already exist.",
+    "No new LLM call is required to build or human-label the pilot benchmark."
+  ]
+}

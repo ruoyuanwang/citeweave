@@ -1,0 +1,62 @@
+schema_version: 1
+protocol_id: deterministic_article_sentence_budget_optimizer_development_v1
+status: frozen_after_section_repair_before_budget_optimization
+frozen_at: '2026-09-08T03:52:17+08:00'
+
+timing_disclosure:
+  repaired_compiler_articles: 2
+  repaired_compiler_gate_passes: 0
+  repaired_compiler_outcomes_inspected: true
+  only_remaining_gate_failure: word_range
+
+purpose: >-
+  Test a deterministic final compiler pass because language-model word-count
+  instructions and a posthoc compression prompt remained unreliable. The optimizer
+  removes whole low-risk sentences until the article is at or below 3250 words.
+
+scientific_role:
+  posthoc_development: true
+  confirmatory_replacement: false
+  semantic_quality_claim: prohibited_without_human_review
+
+algorithm:
+  target_words: 3250
+  permitted_range: 2700-3300
+  deletion_unit: complete_sentence
+  never_delete:
+    - first sentence of a paragraph
+    - any sentence containing a PH or REF identifier
+    - a sentence whose deletion would leave fewer than two sentences in its paragraph
+  candidate_order:
+    - longest eligible sentence first
+    - section priority Results, Discussion, Introduction, Methods, Limitations, Abstract, Conclusion
+    - stable paragraph and sentence order tie-break
+  hard_invariants:
+    - exact PH/REF token set preserved
+    - all seven top-level sections preserved
+    - source draft remains immutable
+    - every removed sentence recorded by section, position, word count, and SHA256
+
+success_gate:
+  - both optimized articles are within 2700-3300 words
+  - both pass all unchanged structural and provenance gates
+  - exact evidence-token sets match their source drafts
+
+implementation:
+  optimizer_module:
+    path: src/citeweave/article_budget_optimizer.py
+    sha256: c48c79a0947455cd377f7c1846ec600ad269d0c9e295cf6f4b956747003d0b9e
+  optimizer_cli:
+    path: scripts/optimize_article_compiler_budget.py
+    sha256: cdda912d795cbbd5c23d21fa3e42362794631b34d15db8aa7e30fb905f0a75e5
+  assessment_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  test:
+    path: tests/test_article_budget_optimizer.py
+    sha256: 1324f390c0b20c80bef7f2e5244bb1f70f8355d60bc5465f01cc8fc3464f67e3
+
+integrity_guards:
+  - No provider call is permitted in this stage.
+  - No sentence may be rewritten or partially truncated.
+  - Optimization cannot reclassify any earlier formal or development artifact.

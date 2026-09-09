@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "status": "confirmatory_analysis_complete",
+  "datasets": 8,
+  "matched_pairs": 48,
+  "registered_contrasts": {
+    "C1_complexity_selectivity": {
+      "dataset_effects": {
+        "explainable_ai_medical_imaging_2016_2025": 1.0,
+        "federated_learning_healthcare_2016_2025": 1.0,
+        "green_hydrogen_electrolysis_2010_2025": 1.0,
+        "membrane_desalination_fouling_2010_2025": 1.0,
+        "organoid_disease_modeling_2010_2025": 1.0,
+        "perovskite_solar_cell_stability_2012_2025": 1.0,
+        "sodium_ion_battery_cathodes_2010_2025": 1.0,
+        "spatial_transcriptomics_cancer_2018_2025": 1.0
+      },
+      "cluster_bootstrap": {
+        "estimate": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "exact_cluster_signflip": {
+        "estimate": 1.0,
+        "clusters": 8,
+        "cluster_effects": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_value_one_sided": 0.00390625,
+        "minimum_attainable_p": 0.00390625
+      },
+      "multiplicity": {
+        "raw_p_value_one_sided": 0.00390625,
+        "holm_adjusted_p_value": 0.0078125,
+        "reject_at_0_05": true
+      }
+    },
+    "C2_scale_amplification_of_complexity_selectivity": {
+      "dataset_effects": {
+        "explainable_ai_medical_imaging_2016_2025": 0.0,
+        "federated_learning_healthcare_2016_2025": 0.0,
+        "green_hydrogen_electrolysis_2010_2025": 0.0,
+        "membrane_desalination_fouling_2010_2025": 0.0,
+        "organoid_disease_modeling_2010_2025": 0.0,
+        "perovskite_solar_cell_stability_2012_2025": 0.0,
+        "sodium_ion_battery_cathodes_2010_2025": 0.0,
+        "spatial_transcriptomics_cancer_2018_2025": 0.0
+      },
+      "cluster_bootstrap": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "exact_cluster_signflip": {
+        "estimate": 0.0,
+        "clusters": 8,
+        "cluster_effects": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p_value_one_sided": 1.0,
+        "minimum_attainable_p": 0.00390625
+      },
+      "multiplicity": {
+        "raw_p_value_one_sided": 1.0,
+        "holm_adjusted_p_value": 1.0,
+        "reject_at_0_05": false
+      }
+    }
+  },
+  "mixed_logistic": {
+    "model": "binomial_logit_random_dataset_intercept",
+    "estimation": "30_point_gauss_hermite_marginal_maximum_likelihood",
+    "population": "48 registered matched anchors x simple/complex x graph_program/flat_neural_dense",
+    "observations": 192,
+    "datasets": [
+      "explainable_ai_medical_imaging_2016_2025",
+      "federated_learning_healthcare_2016_2025",
+      "green_hydrogen_electrolysis_2010_2025",
+      "membrane_desalination_fouling_2010_2025",
+      "organoid_disease_modeling_2010_2025",
+      "perovskite_solar_cell_stability_2012_2025",
+      "sodium_ion_battery_cathodes_2010_2025",
+      "spatial_transcriptomics_cancer_2018_2025"
+    ],
+    "scale_coding": {
+      "small": -0.5,
+      "medium": 0.0,
+      "large": 0.5
+    },
+    "converged": true,
+    "boundary_solution": true,
+    "optimizer_message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+    "negative_log_likelihood": 0.004358393279666473,
+    "random_intercept_standard_deviation": 0.006737946999085467,
+    "fixed_effects": {
+      "intercept": {
+        "estimate_log_odds": 10.000005093784576,
+        "standard_error": 417.0680822448788,
+        "z_value": 0.023976912929801086,
+        "p_value_two_sided": 0.9808710242254737
+      },
+      "graph_program": {
+        "estimate_log_odds": 20.0,
+        "standard_error": 1.0,
+        "z_value": 20.0,
+        "p_value_two_sided": 5.507248237212311e-89
+      },
+      "complex": {
+        "estimate_log_odds": -20.0,
+        "standard_error": 1.0,
+        "z_value": -20.0,
+        "p_value_two_sided": 5.507248237212311e-89
+      },
+      "scale": {
+        "estimate_log_odds": -0.0003023561931625694,
+        "standard_error": 337.914587510222,
+        "z_value": -8.947710585398242e-07,
+        "p_value_two_sided": 0.999999286075987
+      },
+      "graph_program_x_complex": {
+        "estimate_log_odds": 20.0,
+        "standard_error": 1.0,
+        "z_value": 20.0,
+        "p_value_two_sided": 5.507248237212311e-89
+      },
+      "graph_program_x_scale": {
+        "estimate_log_odds": -5.172529298667287e-06,
+        "standard_error": 1.0000000001184772,
+        "z_value": -5.17252929805446e-06,
+        "p_value_two_sided": 0.9999958729187328
+      },
+      "complex_x_scale": {
+        "estimate_log_odds": 0.00020574280708763058,
+        "standard_error": 289.9207420907607,
+        "z_value": 7.096519055653565e-07,
+        "p_value_two_sided": 0.999999433779701
+      },
+      "graph_program_x_complex_x_scale": {
+        "estimate_log_odds": -5.172529298667287e-06,
+        "standard_error": 1.000000000118477,
+        "z_value": -5.172529298054461e-06,
+        "p_value_two_sided": 0.9999958729187328
+      }
+    },
+    "registered_coefficient_mapping": {
+      "C1_at_medium_scale": "graph_program_x_complex",
+      "C2_large_minus_small": "graph_program_x_complex_x_scale"
+    },
+    "standardized_effects": {
+      "small": {
+        "conditional_probability_at_random_intercept_zero": {
+          "simple_flat_neural_dense": 0.9999546092248316,
+          "simple_graph_program": 0.9999999999999065,
+          "complex_flat_neural_dense": 4.540029292497008e-05,
+          "complex_graph_program": 0.9999999999999065
+        },
+        "complexity_selectivity_probability_difference": 0.9999092089319066
+      },
+      "medium": {
+        "conditional_probability_at_random_intercept_zero": {
+          "simple_flat_neural_dense": 0.9999546023625333,
+          "simple_graph_program": 0.9999999999999065,
+          "complex_flat_neural_dense": 4.539809993948856e-05,
+          "complex_graph_program": 0.9999999999999065
+        },
+        "complexity_selectivity_probability_difference": 0.9999092042625938
+      },
+      "large": {
+        "conditional_probability_at_random_intercept_zero": {
+          "simple_flat_neural_dense": 0.9999545954991979,
+          "simple_graph_program": 0.9999999999999065,
+          "complex_flat_neural_dense": 4.539590705993073e-05,
+          "complex_graph_program": 0.9999999999999065
+        },
+        "complexity_selectivity_probability_difference": 0.999909199592138
+      }
+    },
+    "inference_guard": "With eight dataset clusters, exact cluster tests are confirmatory. Wald statistics are model diagnostics and boundary/separation must be disclosed."
+  },
+  "secondary": {
+    "C3_graph_program_advantage_on_simple_tasks": {
+      "dataset_effects": {
+        "explainable_ai_medical_imaging_2016_2025": 0.0,
+        "federated_learning_healthcare_2016_2025": 0.0,
+        "green_hydrogen_electrolysis_2010_2025": 0.0,
+        "membrane_desalination_fouling_2010_2025": 0.0,
+        "organoid_disease_modeling_2010_2025": 0.0,
+        "perovskite_solar_cell_stability_2012_2025": 0.0,
+        "sodium_ion_battery_cathodes_2010_2025": 0.0,
+        "spatial_transcriptomics_cancer_2018_2025": 0.0
+      },
+      "cluster_bootstrap": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "exact_cluster_signflip": {
+        "estimate": 0.0,
+        "clusters": 8,
+        "cluster_effects": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "p_value_one_sided": 1.0,
+        "minimum_attainable_p": 0.00390625
+      },
+      "cluster_tost": {
+        "margin": 0.05,
+        "lower_test": {
+          "null": "effect <= -0.05",
+          "estimate": 0.05,
+          "clusters": 8,
+          "cluster_effects": [
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05
+          ],
+          "p_value_one_sided": 0.00390625,
+          "minimum_attainable_p": 0.00390625
+        },
+        "upper_test": {
+          "null": "effect >= 0.05",
+          "estimate": 0.05,
+          "clusters": 8,
+          "cluster_effects": [
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05
+          ],
+          "p_value_one_sided": 0.00390625,
+          "minimum_attainable_p": 0.00390625
+        },
+        "equivalent_at_0_05": true
+      }
+    },
+    "C4_hierarchical_complexity_selectivity": {
+      "dataset_effects": {
+        "explainable_ai_medical_imaging_2016_2025": 0.6666666666666666,
+        "federated_learning_healthcare_2016_2025": 0.3333333333333333,
+        "green_hydrogen_electrolysis_2010_2025": 0.6666666666666666,
+        "membrane_desalination_fouling_2010_2025": 0.3333333333333333,
+        "organoid_disease_modeling_2010_2025": 0.6666666666666666,
+        "perovskite_solar_cell_stability_2012_2025": 0.16666666666666666,
+        "sodium_ion_battery_cathodes_2010_2025": 0.16666666666666666,
+        "spatial_transcriptomics_cancer_2018_2025": 0.8333333333333334
+      },
+      "cluster_bootstrap": {
+        "estimate": 0.47916666666666663,
+        "ci_low": 0.3125,
+        "ci_high": 0.6458333333333334
+      },
+      "exact_cluster_signflip": {
+        "estimate": 0.47916666666666663,
+        "clusters": 8,
+        "cluster_effects": [
+          0.6666666666666666,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.8333333333333334
+        ],
+        "p_value_one_sided": 0.00390625,
+        "minimum_attainable_p": 0.00390625
+      }
+    }
+  },
+  "cluster_validity_checks": {
+    "purpose": "Eight-dataset confirmatory protection against treating tasks within a dataset as independent inferential replicates.",
+    "E1_graph_program_over_flat_hybrid_complex_3_to_5": {
+      "dataset_effects": {
+        "explainable_ai_medical_imaging_2016_2025": 1.0,
+        "federated_learning_healthcare_2016_2025": 1.0,
+        "green_hydrogen_electrolysis_2010_2025": 1.0,
+        "membrane_desalination_fouling_2010_2025": 1.0,
+        "organoid_disease_modeling_2010_2025": 1.0,
+        "perovskite_solar_cell_stability_2012_2025": 1.0,
+        "sodium_ion_battery_cathodes_2010_2025": 1.0,
+        "spatial_transcriptomics_cancer_2018_2025": 1.0
+      },
+      "cluster_bootstrap": {
+        "estimate": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "exact_cluster_signflip": {
+        "estimate": 1.0,
+        "clusters": 8,
+        "cluster_effects": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "p_value_one_sided": 0.00390625,
+        "minimum_attainable_p": 0.00390625
+      },
+      "task_counts_by_dataset": {
+        "explainable_ai_medical_imaging_2016_2025": 15,
+        "federated_learning_healthcare_2016_2025": 15,
+        "green_hydrogen_electrolysis_2010_2025": 15,
+        "membrane_desalination_fouling_2010_2025": 15,
+        "organoid_disease_modeling_2010_2025": 15,
+        "perovskite_solar_cell_stability_2012_2025": 12,
+        "sodium_ion_battery_cathodes_2010_2025": 15,
+        "spatial_transcriptomics_cancer_2018_2025": 15
+      },
+      "multiplicity": {
+        "raw_p_value_one_sided": 0.00390625,
+        "holm_adjusted_p_value": 0.0078125,
+        "reject_at_0_05": true
+      }
+    },
+    "E2_hierarchical_over_flat_hybrid_global_counterfactual": {
+      "dataset_effects": {
+        "explainable_ai_medical_imaging_2016_2025": 0.4166666666666667,
+        "federated_learning_healthcare_2016_2025": 0.4166666666666667,
+        "green_hydrogen_electrolysis_2010_2025": 0.4166666666666667,
+        "membrane_desalination_fouling_2010_2025": 0.25,
+        "organoid_disease_modeling_2010_2025": 0.4166666666666667,
+        "perovskite_solar_cell_stability_2012_2025": 0.16666666666666666,
+        "sodium_ion_battery_cathodes_2010_2025": 0.25,
+        "spatial_transcriptomics_cancer_2018_2025": 0.4166666666666667
+      },
+      "cluster_bootstrap": {
+        "estimate": 0.34375,
+        "ci_low": 0.2708333333333333,
+        "ci_high": 0.39583333333333337
+      },
+      "exact_cluster_signflip": {
+        "estimate": 0.34375,
+        "clusters": 8,
+        "cluster_effects": [
+          0.4166666666666667,
+          0.4166666666666667,
+          0.4166666666666667,
+          0.25,
+          0.4166666666666667,
+          0.16666666666666666,
+          0.25,
+          0.4166666666666667
+        ],
+        "p_value_one_sided": 0.00390625,
+        "minimum_attainable_p": 0.00390625
+      },
+      "task_counts_by_dataset": {
+        "explainable_ai_medical_imaging_2016_2025": 12,
+        "federated_learning_healthcare_2016_2025": 12,
+        "green_hydrogen_electrolysis_2010_2025": 12,
+        "membrane_desalination_fouling_2010_2025": 12,
+        "organoid_disease_modeling_2010_2025": 12,
+        "perovskite_solar_cell_stability_2012_2025": 12,
+        "sodium_ion_battery_cathodes_2010_2025": 12,
+        "spatial_transcriptomics_cancer_2018_2025": 12
+      },
+      "task_types": [
+        "bridge_counterfactual",
+        "community_role_contrast",
+        "hub_removal_resilience",
+        "temporal_structural_shift"
+      ],
+      "multiplicity": {
+        "raw_p_value_one_sided": 0.00390625,
+        "holm_adjusted_p_value": 0.0078125,
+        "reject_at_0_05": true
+      }
+    }
+  },
+  "interpretation_guard": "C1 and C2 require their Holm-adjusted exact cluster tests. C1 without C2 does not establish scale amplification. Simple-task equivalence requires both cluster TOST p-values below 0.05. E1/E2 are an eight-dataset validation family and require their Holm-adjusted exact cluster tests; item-level McNemar results do not replace them. A boundary GLMM fit must be disclosed and does not replace exact dataset-cluster inference.",
+  "protocol_sha256": "32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988",
+  "analysis_amendment_sha256": "955ee81ec7baefa1035cf9cd0a24ef26ae26776181eb01fbd607caa748863bfb"
+}

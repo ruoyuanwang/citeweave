@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "protocol_sha256": "2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f",
+  "neural_dense_amendment_sha256": "0c9e3c47a93f5e9c56cc0b2426f920f94229e61c27f1a20da8fcd3c843a5a39a",
+  "statistics_amendment_sha256": "7482f0d4060e1ef39412fe32febdf2ffd7e220065a9cf3957f2805850c5b7a5c",
+  "equal_dataset_weighting_amendment_sha256": "4ad307c691a4d768379b1d3ec7b20a5295607f73da24ff79d2fda242952bc097",
+  "scale_pairs_sha256": "c996f0bcacdcbc49ec7e67bb439a87c1478d2d632878181b34dee3608f7cfdae",
+  "datasets": 4,
+  "tasks": 100,
+  "records": 800,
+  "condition_summaries": {
+    "flat_bm25": {
+      "items": 100,
+      "accuracy": 0.0,
+      "mean_evidence_f1": 0.047191919191919195,
+      "prompt_tokens": 838367,
+      "completion_tokens": 39299,
+      "mean_latency_seconds": 6.552060629001789,
+      "failed_parse": 0
+    },
+    "flat_hybrid": {
+      "items": 100,
+      "accuracy": 0.0,
+      "mean_evidence_f1": 0.061691919191919194,
+      "prompt_tokens": 837372,
+      "completion_tokens": 39228,
+      "mean_latency_seconds": 6.578169796000875,
+      "failed_parse": 0
+    },
+    "flat_neural_dense": {
+      "items": 100,
+      "accuracy": 0.0,
+      "mean_evidence_f1": 0.0064444444444444445,
+      "prompt_tokens": 789963,
+      "completion_tokens": 37288,
+      "mean_latency_seconds": 5.967779677997169,
+      "failed_parse": 0
+    },
+    "flat_program": {
+      "items": 100,
+      "accuracy": 0.82,
+      "mean_evidence_f1": 0.43356460206460207,
+      "prompt_tokens": 841716,
+      "completion_tokens": 36040,
+      "mean_latency_seconds": 5.452568604000407,
+      "failed_parse": 0
+    },
+    "graph_hierarchical_retrieval_v2": {
+      "items": 100,
+      "accuracy": 0.22,
+      "mean_evidence_f1": 0.24082428682428683,
+      "prompt_tokens": 843139,
+      "completion_tokens": 38529,
+      "mean_latency_seconds": 6.359649805001681,
+      "failed_parse": 0
+    },
+    "graph_program": {
+      "items": 100,
+      "accuracy": 0.88,
+      "mean_evidence_f1": 0.4037442557442557,
+      "prompt_tokens": 808232,
+      "completion_tokens": 34992,
+      "mean_latency_seconds": 5.284627198999224,
+      "failed_parse": 0
+    },
+    "graph_query_retrieval": {
+      "items": 100,
+      "accuracy": 0.08,
+      "mean_evidence_f1": 0.19744405594405595,
+      "prompt_tokens": 790176,
+      "completion_tokens": 38098,
+      "mean_latency_seconds": 6.107099902998453,
+      "failed_parse": 0
+    },
+    "operator_only": {
+      "items": 100,
+      "accuracy": 0.56,
+      "mean_evidence_f1": 0.12083516483516483,
+      "prompt_tokens": 65750,
+      "completion_tokens": 28484,
+      "mean_latency_seconds": 4.179969493999525,
+      "failed_parse": 0
+    }
+  },
+  "primary_hypotheses": {
+    "H1": {
+      "hypothesis": "H1",
+      "items": 97,
+      "contrast": "graph_program_minus_flat_hybrid",
+      "estimate": 0.875909090909091,
+      "ci_low": 0.8677272727272727,
+      "ci_high": 0.88,
+      "clusters": 4,
+      "cluster_weighting": "equal_dataset",
+      "evidence_f1_difference": {
+        "estimate": 0.33479441265804905,
+        "ci_low": 0.31922144522144524,
+        "ci_high": 0.35131267217630857,
+        "clusters": 4,
+        "cluster_weighting": "equal_dataset"
+      },
+      "mcnemar": {
+        "left_only": 85,
+        "right_only": 0,
+        "discordant": 85,
+        "p_value": 5.169878828456423e-26
+      },
+      "matched_odds_ratio": "inf",
+      "raw_p_value": 5.169878828456423e-26,
+      "holm_adjusted_p_value": 1.550963648536927e-25
+    },
+    "H2": {
+      "hypothesis": "H2",
+      "items": 80,
+      "contrast": "graph_hierarchical_retrieval_v2_minus_flat_hybrid",
+      "estimate": 0.25,
+      "ci_low": 0.15,
+      "ci_high": 0.32499999999999996,
+      "clusters": 4,
+      "cluster_weighting": "equal_dataset",
+      "evidence_f1_difference": {
+        "estimate": 0.2172429653679654,
+        "ci_low": 0.20209415584415585,
+        "ci_high": 0.23943722943722948,
+        "clusters": 4,
+        "cluster_weighting": "equal_dataset"
+      },
+      "mcnemar": {
+        "left_only": 20,
+        "right_only": 0,
+        "discordant": 20,
+        "p_value": 1.9073486328125e-06
+      },
+      "matched_odds_ratio": "inf",
+      "raw_p_value": 1.9073486328125e-06,
+      "holm_adjusted_p_value": 3.814697265625e-06
+    },
+    "H3": {
+      "hypothesis": "H3",
+      "groups": 14,
+      "items": 28,
+      "contrast": "small_to_large_graph_program_vs_flat_hybrid_interaction",
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "clusters": 4,
+      "cluster_weighting": "equal_dataset",
+      "cluster_signflip": {
+        "cluster_effects": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "estimate": 0.0,
+        "permutations": 16,
+        "p_value_one_sided": 1.0,
+        "minimum_attainable_p": 0.0625
+      },
+      "secondary_small_to_medium": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "clusters": 4,
+        "cluster_weighting": "equal_dataset"
+      },
+      "raw_p_value": 1.0,
+      "holm_adjusted_p_value": 1.0
+    }
+  },
+  "holm_family": {
+    "raw": {
+      "H1": 5.169878828456423e-26,
+      "H2": 1.9073486328125e-06,
+      "H3": 1.0
+    },
+    "adjusted": {
+      "H1": 1.550963648536927e-25,
+      "H2": 3.814697265625e-06,
+      "H3": 1.0
+    }
+  },
+  "interpretation_guard": "H3 has four dataset clusters; its minimum exact one-sided p-value is 0.0625. Item-level pseudo-replication must not replace the registered cluster test."
+}

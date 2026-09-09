@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "review_policy_amendment_006_finite_benchmark_randomization",
+  "status": "frozen_before_real_reviewer_calibration_and_heldout_human_outcomes",
+  "sha256": "0394e7fc903a987cc83a1b065c928411d24a01c6d73c1fc97c172a97267b0a1b",
+  "frozen_at_utc": "2026-09-07T16:00:30Z",
+  "human_outcomes_inspected": false,
+  "heldout_outcomes_inspected": false,
+  "registered_real_reviewers": 0,
+  "calibration_returns": 0,
+  "confirmatory_returns": 0,
+  "design_sensitivity_sha256": "3cd430d130ac8bb67378cd5b2602a5d37e4d1616d001654377a85c2934e3f6d7"
+}

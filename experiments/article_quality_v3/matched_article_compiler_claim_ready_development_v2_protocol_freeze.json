@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "protocol_id": "matched_article_compiler_claim_ready_development_v2",
+  "sha256": "1f877518babf4c4dc15f248dc9b361e9e5a8a10bdf0a79225d8743660ecb93f1",
+  "development_only": true,
+  "articles": 4,
+  "provider_calls_per_article": 9,
+  "maximum_provider_calls": 36,
+  "provider_responses_at_freeze": 0,
+  "confirmatory_replacement": false
+}

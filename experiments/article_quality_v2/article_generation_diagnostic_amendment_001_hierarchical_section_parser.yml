@@ -1,0 +1,62 @@
+schema_version: 1
+amendment_id: article_generation_diagnostic_hierarchical_section_parser_001
+status: frozen_post_generation_before_any_real_human_review
+frozen_at: '2026-09-08T02:48:24+08:00'
+machine_plan_sha256: af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36
+
+timing_disclosure:
+  machine_article_responses: 16
+  original_generation_gate_failures: 16
+  original_gate_outcomes_inspected: true
+  parser_failure_pattern_inspected: true
+  real_claim_reviewers_registered: 0
+  article_claim_packets_materialized: 0
+  human_review_returns: 0
+
+reason:
+  - The frozen generation gate's section extractor stops at every subsequent Markdown
+    heading. A nested level-three finding heading therefore terminates its containing
+    level-two Results or Discussion section.
+  - All generated drafts use nested finding headings, so the extractor can report empty
+    or incomplete top-level sections even when the relevant text is present.
+  - Word-count excess and any evidence-token defects are independent of this parser
+    defect and remain substantive failures when reproduced by the diagnostic.
+
+scientific_role:
+  analysis_type: post_generation_secondary_diagnostic
+  confirmatory_reclassification: prohibited
+  original_execution_records_mutable: false
+  original_assessments_mutable: false
+  provider_resampling: prohibited
+  human_review_eligibility_changed: false
+  permitted_claim: distinguish parser-induced gate failures from substantive failures
+
+single_correction:
+  original_boundary: stop at any subsequent Markdown heading
+  diagnostic_boundary: stop only at a heading of the same or a higher level
+  all_other_gate_definitions: unchanged
+
+immutable_inputs:
+  machine_plan:
+    path: experiments/article_quality_v2/machine_generation_v1/plan.json
+    sha256: af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36
+  frozen_generation_runner:
+    path: scripts/run_machine_article_generation.py
+    sha256: 1b54b93c6e56ac7aed4586c6ea659c24c96040edf9eb4cc9ca4c818bc3595141
+  article_generation_module:
+    path: src/citeweave/article_generation.py
+    sha256: ffc07bf922956da0941e549afce732a90a1e036ead4f82c718f623782abd27af
+
+implementation:
+  diagnostic_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  diagnostic_cli:
+    path: scripts/audit_machine_article_section_parser.py
+    sha256: c13fadf9235ebfb46acc9be207f59ef1d8a182ab78d800fd36325903ff6c89bf
+
+execution_gate:
+  - Validate this amendment hash and both diagnostic implementation hashes.
+  - Verify every draft against its immutable execution-record draft hash.
+  - Write one separate diagnostic report; never overwrite a draft, execution record,
+    or original draft assessment.

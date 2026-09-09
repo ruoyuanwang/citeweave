@@ -1,0 +1,80 @@
+schema_version: 1
+protocol_id: article_v3_checkpointed_completion_development_pilot_v2
+status: frozen_after_pilot_v1_before_pilot_v2_provider_calls
+frozen_at: '2026-09-08T03:26:35+08:00'
+
+timing_disclosure:
+  prior_formal_responses: 16
+  prior_formal_gate_passes: 0
+  pilot_v1_responses: 4
+  pilot_v1_gate_passes: 2
+  pilot_v1_outcomes_inspected: true
+  real_human_article_returns: 0
+
+reason_for_iteration:
+  - Pilot v1 graph-plan drafts both stopped normally and met the word range, but one
+    failed only because Discussion used no literal PH identifiers.
+  - One pilot-v1 one-shot draft exceeded the range, hit the 5000-token cap, and ended
+    with a truncated unregistered PH token.
+  - Pilot v2 adds cumulative completion checkpoints, an absolute 3000-word instruction,
+    and exact PH-pair requirements in the first sentence of every Discussion paragraph.
+
+scientific_role:
+  post_result_development: true
+  confirmatory_replacement: false
+  pooling_with_formal_or_pilot_v1: prohibited
+  prior_outcomes_mutable: false
+
+panel:
+  datasets:
+    - explainable_ai_medical_imaging_2016_2025
+    - sodium_ion_battery_cathodes_2010_2025
+  conditions:
+    - checkpoint_one_shot
+    - checkpoint_graph_plan
+  cells: 4
+  requests_per_cell: 1
+  model: deepseek-v4-pro
+  temperature: 0
+  max_completion_tokens: 5000
+  rendered_figure_access: false
+
+shared_changes_from_v1:
+  target_words: 2750-2900
+  absolute_ceiling_instruction: 3000
+  results_end_checkpoint: below_1800_cumulative_words
+  limitations_start_checkpoint: before_2700_cumulative_words
+  discussion_paragraphs: 5
+  discussion_max_words_each: 140
+  discussion_first_sentence_exact_ph_pairs: required
+
+treatment_difference:
+  checkpoint_one_shot: common writer input and checkpoint contract only
+  checkpoint_graph_plan: common inputs plus compact dependency and synthesis plan
+
+progression_rule: >-
+  A separately frozen eight-topic confirmation may be prepared only if both graph-plan
+  cells pass the complete unchanged hierarchical quality gate, finish with stop, and
+  contain no unexpected evidence token. Pilot v2 outcomes remain development evidence.
+
+implementation:
+  request_module:
+    path: src/citeweave/article_generation_v3_1.py
+    sha256: 2ddfac336aba352f911de776171c4c263aabf895266d4206c205874d70f59d38
+  preparation_cli:
+    path: scripts/prepare_article_generation_v3_1_pilot.py
+    sha256: 1fd1c9fe9752cc8760586f8cd41e3a76166aa2126c93331a605088c525eed161
+  execution_cli:
+    path: scripts/run_article_generation_v3_pilot.py
+    sha256: 8175ccbbecbf77b1a945888f91183192886c8fbc69e3e0de991d73c7a587afe1
+  assessment_module:
+    path: src/citeweave/article_generation_diagnostic.py
+    sha256: d734ef1665a4b79033361cd989bc28ef2f75f7b506f86608f02d28ac7b367821
+  test:
+    path: tests/test_article_generation_v3_1.py
+    sha256: c7cc0c1673d9d708ee356bee1bbb218d727b155b5790fcfcf7685a66de5f05c4
+
+integrity_guards:
+  - Never overwrite or relabel formal or pilot-v1 artifacts.
+  - Never resend a response-received pilot-v2 cell.
+  - Transport retry is restricted to the identical frozen request.

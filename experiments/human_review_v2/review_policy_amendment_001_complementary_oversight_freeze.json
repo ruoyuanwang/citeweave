@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_real_reviewer_and_policy_outcomes",
+  "amendment_id": "review_policy_amendment_001_complementary_oversight",
+  "base_protocol_sha256": "6c613d4422cf81af7b78cca425ce3131f8208d8ec21f7728ee83c4c0e4c92ed5",
+  "amendment_sha256": "7fb864caf7b813f9a890365ebabd08234b9d7b51103cd9ca9401e528fb9b4219",
+  "frozen_at_utc": "2026-08-26T03:49:40.0377144Z",
+  "human_outcomes_inspected": false,
+  "policy_outcomes_inspected": false,
+  "note": "Who/how-many reviewer routing and two-sided evidence presentation were frozen before any real review return or policy replay outcome existed."
+}

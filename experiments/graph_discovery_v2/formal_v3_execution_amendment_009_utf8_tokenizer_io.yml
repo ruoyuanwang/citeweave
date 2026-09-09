@@ -1,0 +1,66 @@
+schema_version: 1
+amendment_id: formal_v3_execution_amendment_009_utf8_tokenizer_io
+status: frozen_result_blind_before_confirmatory_api_execution
+frozen_at: '2026-09-01T14:15:00+08:00'
+trigger:
+  stage: identity_corrected_qualification_extension_readiness
+  failed_at: '2026-09-01T14:13:06+08:00'
+  exception: UnicodeEncodeError
+  host_default_encoding: gbk
+  unencodable_code_point: U+00F6
+  interpretation: >-
+    The Windows parent process attempted to encode a real Unicode graph context with
+    the host locale before sending it to the frozen tokenizer command. This is a
+    process-boundary encoding defect, not a readiness, model, tokenizer, task, or
+    outcome failure.
+prospective_state_at_freeze:
+  primary_result_files: 0
+  replication_result_files: 0
+  extension_result_files: 0
+  qualification_file_present: false
+  promotion_file_present: false
+  provider_api_execution_started: false
+  model_outcomes_inspected: false
+prior_input_freeze:
+  archived_path: formal_v3_identity_corrected_execution/failures/qualification_failure_20260901_1413/input_freeze.json
+  sha256: 6fe178ffdda0b37894cdef5795a03d3412415cc992c1249598f9a7f7b3257a2b
+failure_evidence:
+  extension_readiness_log:
+    path: formal_v3_identity_corrected_execution/failures/qualification_failure_20260901_1413/extension_readiness.log
+    sha256: 0f1a98d3901ff5d0dbfcf9eb7fbccd9e933485787054340251d10760d576d0a8
+  qualification_stdout:
+    path: formal_v3_identity_corrected_execution/failures/qualification_failure_20260901_1413/qualification_20260901_110604.stdout.log
+    sha256: c4c6ab934008fb9bfbf689bd0202d4fc543d1e34f77085cd741c1ec33651a133
+  qualification_stderr:
+    path: formal_v3_identity_corrected_execution/failures/qualification_failure_20260901_1413/qualification_20260901_110604.stderr.log
+    sha256: b7f02b2e99765f06f424497972a436d2e8eb228b54986753ef09428252950209
+  failed_pipeline_status:
+    path: formal_v3_identity_corrected_execution/failures/qualification_failure_20260901_1413/formal_v3_confirmatory_pipeline_status.json
+    sha256: 746adb87bc0c24edca77baaf9409c90712993ebb14bc7c726f9fd037744c5d5b
+allowed_change:
+  file: src/citeweave/token_budget.py
+  prior_sha256: d07b952ce588ba3ad43ead6db43cbb10c65b35415442d67fb39e2938c08e5c06
+  amended_sha256: 8a049845e55e738ce0481f4fce6aff1b7304cdea2a127bb0d451887a4f8acbc2
+  behavior:
+    - Encode parent-process stdin and decode stdout strictly as UTF-8.
+    - Set PYTHONIOENCODING=utf-8 for the frozen child tokenizer command.
+    - Preserve shell=false, the frozen command, timeout, payload schema, and output validation.
+regression_evidence:
+  test_file: tests/test_token_budget.py
+  sha256: ad6b9aed847f6868a1c14b791bf654f426b237928079549dfc6d34a941a9931a
+  targeted_tests_passed: 6
+  lint_passed: true
+  unicode_probe: 'Göttingen – 癌症'
+unchanged:
+  - Benchmark tasks, questions, answers, operator traces, evidence and contexts.
+  - Conditions, prompts, model, model revision, temperature and token cap.
+  - Frozen tokenizer command, tokenizer model revision, token budget and probe expectations.
+  - Primary, replication and extension estimands, hypotheses, scoring and multiplicity rules.
+  - Neural embeddings, retrieval ranks, sidecars and all graph construction artifacts.
+  - Automatic API resume remains prohibited.
+rerun_policy:
+  - Archive the failed qualification evidence and prior input freeze.
+  - Generate a new input freeze that binds this amendment and the amended process boundary.
+  - Re-run freeze verification and all qualification stages from the beginning.
+  - Require independent inspection of qualification before explicit promotion.
+  - Do not execute provider API calls unless promotion succeeds.

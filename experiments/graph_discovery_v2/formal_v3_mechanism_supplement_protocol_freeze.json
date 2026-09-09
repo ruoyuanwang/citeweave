@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_primary_replication_extension_or_supplement_model_outcomes",
+  "protocol": "formal_v3_mechanism_supplement_protocol.yml",
+  "sha256": "a318c00e31c0dd3fedb965c285af7cf73ea800423c2b7b989dce8e1ad7b1fb39",
+  "formal_model_outcomes_inspected": false,
+  "primary_result_files": 0,
+  "replication_result_files": 0,
+  "extension_result_files": 0,
+  "supplement_result_files": 0,
+  "frozen_at_local": "2026-08-31T21:17:56+08:00"
+}

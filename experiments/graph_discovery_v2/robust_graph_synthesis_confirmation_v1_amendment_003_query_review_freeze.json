@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_any_human_query_judgment_or_task_outcome",
+  "amendment_id": "robust_graph_synthesis_confirmation_v1_query_review_003",
+  "path": "experiments/graph_discovery_v2/robust_graph_synthesis_confirmation_v1_amendment_003_query_review.yml",
+  "sha256": "d42f3ae8efc197cd75acb9bb1bfc73001dd85dcaae251f2255b40de0ba1a902d",
+  "bytes": 4603,
+  "real_query_reviewers_registered_at_freeze": 0,
+  "human_query_judgments_at_freeze": 0,
+  "selected_topics_at_freeze": 0,
+  "perturbation_outcomes_at_freeze": 0,
+  "deterministic_gold_answers_at_freeze": 0,
+  "provider_responses_at_freeze": 0,
+  "confirmatory": true
+}

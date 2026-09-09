@@ -1,0 +1,68 @@
+schema_version: 1
+amendment_id: expert_evaluation_amendment_004_length_parity_and_density
+base_protocol_sha256: 7e8267bd91b69ac12b563aa1e5af47921cd67d521a4f17a28bb652fb1fd875a5
+complements_analysis_amendment_sha256: 3a8e707ae9f45705cbe3cfb08287ad41d31c8804bdd2f5efd76fdc1d7ff75100
+supersedes_packet_validator_hash_from_amendment_sha256: eb144b0d6f5cac41f5ee009d5e8af6a87474f97ff03836b5aadb6483a1e1212e
+status: frozen_before_any_same_evidence_article_or_expert_outcome
+
+reason:
+  - Prior work shows that longer machine answers can be preferred because they expose more breadth, so a shared broad word range alone does not rule out a systematic length advantage.
+  - Raw correct-claim counts, citation counts, and subjective preference can reward verbosity even when scientific information density does not improve.
+  - The registered confirmatory tests remain unchanged; these controls prevent an avoidable treatment-exposure imbalance and add descriptive robustness diagnostics.
+
+pre_review_length_gate:
+  tokenizer: Unicode word regex used by the frozen packet validator.
+  individual_rule: Every article remains inside the shared topic writing brief.
+  within_topic_rule: For every topic, longest article word count divided by shortest article word count must be at most 1.10.
+  across_topic_rule: Across the eight topics, the largest condition-mean word count divided by the smallest condition-mean word count must be at most 1.05.
+  enforcement_timing: Before blinding, evaluator assignment, or release of any packet.
+  failure_rule: Edit or regenerate the article under its original condition and re-freeze all affected hashes; do not truncate after ratings.
+
+pre_review_density_diagnostics:
+  level: article
+  metrics:
+    - evidence token mentions per 1000 words
+    - unique evidence tokens per 1000 words
+    - candidate claims per 1000 words
+    - exact-normalized duplicate candidate claim rate
+  role: Descriptive diagnostics only; hidden from evaluators and excluded from A1/A2/A3 testing.
+
+post_review_density_diagnostics:
+  claim_resolution: Same two-primary-rater and third-person-adjudication rule as analysis amendment 003.
+  metrics:
+    - adjudicated correct-and-supported sampled claims per 1000 words
+    - adjudicated overclaims per 1000 words
+    - cannot-assess sampled claims per 1000 words
+  aggregation: Compute per article, then average eight equally weighted topic articles within each condition.
+  role: Descriptive sensitivity analysis only; no new p-values or superiority decisions.
+
+unchanged_confirmatory_inference:
+  primary_cluster_unit: topic
+  primary_tests: [A1, A2, A3]
+  multiplicity: Holm across A1, A2, and A3
+  rule: Word-normalized diagnostics cannot replace, overturn, or rescue the frozen exact topic-cluster tests.
+
+implementation:
+  packet_builder_cli:
+    path: scripts/build_article_expert_packets.py
+    sha256: 309612faceb1ece29288a2611d51a06f1f03f9db0b0a89ee16c7ed7116c15b6c
+  packet_validator:
+    path: src/citeweave/article_expert_packets.py
+    sha256: 6d465812dbb10fbfa972bce3a942c7d7fbd9fd848986564db6cda9d54abddea9
+  density_analysis_module:
+    path: src/citeweave/article_quality_controls.py
+    sha256: c6fd50d594613f1ddb1399e0fba6a3ac76a4ef2912c9653a41a55db0a0fa4e3f
+  density_analysis_cli:
+    path: scripts/analyze_article_quality_controls.py
+    sha256: cfa0acfe859aabfdd757bb4ca5acad5f8591a615e7158b832e65a2eb0f434106
+  packet_tests:
+    path: tests/test_article_expert_packets.py
+    sha256: 08b6ddacbf8acb570c7a9e4b3de30c9cf8ddd85ac68b6ab574ba378b4b5eaf11
+  density_tests:
+    path: tests/test_article_quality_controls.py
+    sha256: 73f2888e1e620fe9ed93b7e6fb2f3754790477b872031a528dea97535f5163e2
+
+integrity_guard:
+  - This amendment was frozen while the registered intake still had zero submitted articles and the evaluator roster had zero real evaluators.
+  - Density metrics must never be shown to a blinded evaluator before ratings are locked.
+  - Published-article comparisons remain ecological descriptions and cannot substitute for the same-evidence human condition.

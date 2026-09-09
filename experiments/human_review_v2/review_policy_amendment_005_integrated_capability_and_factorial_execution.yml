@@ -1,0 +1,191 @@
+schema_version: 1
+amendment_id: review_policy_amendment_005_integrated_capability_and_factorial_execution
+status: frozen_before_real_reviewer_calibration_and_heldout_human_outcomes
+frozen_at: '2026-09-07T23:00:00+08:00'
+human_outcomes_inspected: false
+heldout_outcomes_inspected: false
+registered_real_reviewers: 0
+calibration_returns: 0
+confirmatory_returns: 0
+previous_amendment_sha256: 79ade0f6b08372bdde34b477bfb644cb45590ed2572c4e3484f2da214b4c802c
+
+reason:
+  - The earlier protocol calibrated source relevance but did not establish reviewer
+    competence for graph consistency, causal overreach, counterevidence coverage, or
+    revision safety.
+  - Per-case greedy routing and a contextual review log are insufficient evidence for
+    an advanced human-machine oversight contribution.
+  - The confirmatory panel therefore requires multidimensional calibration, an
+    integrated predecision capability freeze, globally constrained assignment, blind
+    adjudication, and a cryptographically bound result compiler.
+
+scientific_integrity_disclosure:
+  heldout_selection_timing: >-
+    Task identities were frozen while the machine-only formal run was already in
+    progress, before any real human review or human outcome existed.
+  selector_result_access: false
+  selector_inputs:
+    - frozen construction manifests
+    - benchmark task payloads and hashes
+  heldout_selection_path: experiments/human_review_v2/oversight_heldout_selection_v1.json
+  heldout_selection_sha256: b73f702551bb0011664fa3c2b64fc8cf6c981ba93f3224c4bcfbc3fda993fa46
+  operational_unblinding_disclosure: >-
+    An earlier operational monitor accidentally exposed aggregate in-progress machine
+    metrics. The heldout selector never reads result files, scores, or aggregate
+    effects. This amendment does not erase that disclosure and no confirmatory human
+    outcome existed at freeze time.
+
+calibration_and_capability_freeze:
+  reviewers_required: 6
+  source_relevance_observations_required: 120
+  multidimensional_primary_observations_required: 144
+  combined_observations_required: 264
+  issue_types_required:
+    - evidence_relevance
+    - graph_answer_consistency
+    - causal_overreach
+    - counterevidence_coverage
+    - revision_safety
+  minimum_observations_per_reviewer_issue: 3
+  minimum_domains_per_reviewer: 2
+  posterior_fallback_order:
+    - reviewer_domain_issue
+    - reviewer_issue_across_domains
+    - reviewer_domain_across_issues
+    - reviewer_global
+    - prior
+  personalized_tiers_only:
+    - exact
+    - issue
+    - domain
+  prohibition:
+    - Global-only and prior-only posteriors cannot qualify as personalized expertise.
+    - Calibration packets and outcomes cannot enter the confirmatory panel.
+    - Researcher-authored or simulated judgments cannot substitute for real reviewers.
+
+prospective_heldout_panel:
+  cases: 96
+  datasets: 8
+  cases_per_dataset: 12
+  source_condition: graph_program
+  terminal_gate: >-
+    Candidate outputs are materialized only after primary, replication, and complexity
+    extension terminal audits are complete with no parse, retry, or integrity failures.
+  generation_condition_blinded: true
+  gold_verdict_blinded: true
+  public_condition_labels_prohibited: true
+  same_evidence_across_packet_arms: true
+  private_gold_rule: >-
+    A deterministic verdict is derived from the frozen benchmark answer, evidence
+    precision and recall, abstention, and required-limitation checks. It is never
+    exposed in reviewer packets.
+
+factorial_assignment:
+  design: blocked_2x2
+  packet_arms:
+    - standard_claim_first
+    - adversarial_two_sided
+  assignment_arms:
+    - qualified_random
+    - capability_cost_router
+  blocks:
+    - dataset
+    - domain
+    - issue_type
+    - severity
+  minimum_cases_per_arm_per_dataset: 3
+  optimizer: binary_milp
+  crossover: every reviewer receives all four arms
+  double_review_overlap_minimum: 0.5
+  critical_cases_double_reviewed: true
+  adjudicator: precommitted, distinct, and shown neither primary identity nor judgment
+  qualified_random_control: frozen hash objective over the same capability-qualified team space
+  capability_router_objective: >-
+    Minimize expected severity-weighted residual error plus server-timed reviewer cost.
+  no_silent_fallback: true
+
+human_outcome_closure:
+  primary_returns: exact assignment match with no duplicates or missing decisions
+  timing: visibility-heartbeat server-accounted time only
+  client_reported_timing_rejected: true
+  answer_validation: adversarial schema plus packet evidence and operator-trace bounds
+  adjudication_trigger: verdict disagreement between two primary reviewers only
+  adjudication_blinding:
+    primary_identities_hidden: true
+    primary_judgments_hidden: true
+  final_record_unit: one final verdict and total reviewer seconds per heldout case
+  correctness: final verdict exactly matches the private deterministic gold verdict
+  analysis: frozen equal-dataset O1/O2/O3 exact sign-flip analysis from amendment 003
+
+readiness_gate_v2:
+  - Exactly 96 unique cases across exactly 8 datasets and 12 cases per dataset.
+  - Exactly 3 cases in each factorial arm within every dataset.
+  - Packet, registry, capability, observations, assignment, and amendment hashes match.
+  - Every route retains its predecision hash and uses only personalized qualified profiles.
+  - Conflict constraints, reviewer/adjudicator role separation, critical double review,
+    at least 50 percent overlap, and four-arm crossover all pass.
+  - No real human return file may exist before readiness is recorded.
+
+implementation:
+  capability_freeze:
+    path: src/citeweave/oversight_capability_freeze.py
+    sha256: 072288841a412446764971b44ce921a59e87ba2386a691d79d8c748fb5e78782
+  heldout_packet_builder:
+    path: src/citeweave/oversight_heldout_packets.py
+    sha256: d390092adf2daa434475024c5245f4c6688bcfafffd5122d1af97989a6dedaf9
+  factorial_assignment:
+    path: src/citeweave/oversight_factorial_assignment.py
+    sha256: 970a63a6e833d93ceb03d325273e5a85be033f397f76d27fb2baf8b59a57a425
+  factorial_outcomes:
+    path: src/citeweave/oversight_factorial_outcomes.py
+    sha256: 11a007fb25521a252e49ec7b09880ce1c6d4488e737ed9a955267cb516414d44
+  factorial_analysis:
+    path: src/citeweave/oversight_factorial_analysis.py
+    sha256: 97f8070ec1d6f1f29e78ecbce96853b8152eac4b10e2b6c860061aa8421a536b
+  server_timed_review_ui:
+    path: src/citeweave/review_ui.py
+    sha256: df449932002d25f7d2f7b497539e984266441930a37a1fd64f3c795c31904006
+  readiness_v2:
+    path: src/citeweave/oversight_factorial_readiness_v2.py
+    sha256: a95dd2741246a621fa7014a55e8239490da971e7fcfac4168e3ec4c2e2e95658
+  capability_freeze_cli:
+    path: scripts/freeze_integrated_oversight_capabilities.py
+    sha256: d798e7de6d09ce31235c781c7b56064ea88155dcecc8d3ed0c27ed0fdddb1ada
+  heldout_packet_cli:
+    path: scripts/prepare_oversight_heldout_packets.py
+    sha256: c8977b4584a060049950ede0c0586733a0b5d44afb86fc38370ac8ff8eab27a6
+  factorial_assignment_cli:
+    path: scripts/prepare_factorial_oversight_assignment.py
+    sha256: 2563b7b750afcbe3c9f527b359139d2962ec3bc62da231e10b96150f20c50493
+  factorial_outcomes_cli:
+    path: scripts/run_oversight_factorial_outcomes.py
+    sha256: ea5cfdd42bcc946dc2f2f2e5551358fd8ac037f232c394b3c23cde3279c0c30b
+  factorial_analysis_cli:
+    path: scripts/analyze_complementary_oversight_factorial.py
+    sha256: 774e5c1d38113341e994a5f38311614cf292c1b44efa202eed3763f73dc9ac1b
+  readiness_v2_cli:
+    path: scripts/audit_factorial_oversight_readiness_v2.py
+    sha256: 40d36b188c78e31dcfd625c6b8c5185ef90d0311f3f0c139e39b1d645522e2ae
+
+tests:
+  capability_freeze:
+    path: tests/test_oversight_capability_freeze.py
+    sha256: 8229d4c8bbbb22241d8c85ac54c61c044b7b09feca2afecf1c925a3ece3ec738
+  heldout_packets:
+    path: tests/test_oversight_heldout_packets.py
+    sha256: a0595bc3667addfbcec448030bd0056f6b5c828ec3c177a212a075e3aed5bd63
+  factorial_assignment:
+    path: tests/test_oversight_factorial_assignment.py
+    sha256: 876a6aaf6550e4484bf3591a260dc092840eb430561f78f430769c84d58c5060
+  factorial_outcomes:
+    path: tests/test_oversight_factorial_outcomes.py
+    sha256: 4168fafdcf1e72ba37da0130d169f68e2676fd1718e33903e5b72376eec2874a
+  readiness_v2:
+    path: tests/test_oversight_factorial_readiness_v2.py
+    sha256: e02d9b5fd2854012c5d45886876f120c75a98c23008c1566114ae73921a254a0
+
+interpretation_guard:
+  - Passing readiness proves execution integrity, not a positive scientific effect.
+  - Human-oversight effects remain unavailable until six real reviewers complete the
+    frozen calibration and confirmatory workflow.
+  - Cases within one dataset are not independent scientific-topic replications.

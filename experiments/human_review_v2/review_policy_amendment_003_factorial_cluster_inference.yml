@@ -1,0 +1,78 @@
+schema_version: 1
+amendment_id: review_policy_amendment_003_factorial_cluster_inference
+status: frozen_before_real_reviewer_and_factorial_outcomes
+frozen_at: '2026-08-31T19:32:14+08:00'
+human_outcomes_inspected: false
+factorial_outcomes_inspected: false
+human_outcome_files_at_freeze: 0
+factorial_outcome_files_at_freeze: 0
+base_protocol_sha256: 6c613d4422cf81af7b78cca425ce3131f8208d8ec21f7728ee83c4c0e4c92ed5
+complementary_oversight_amendment_sha256: 7fb864caf7b813f9a890365ebabd08234b9d7b51103cd9ca9401e528fb9b4219
+cluster_inference_amendment_sha256: 5f0d04bf59cafb863cc0be0761f3ff80dcccaaba7548977acd5c22ee99540723
+reason:
+  - The registered mixed-effects models include case and reviewer intercepts but do
+    not make the eight scientific datasets the inferential replication unit.
+  - Ninety-six cases and repeated reviewer judgments cannot be treated as ninety-six
+    independent topic replications for a transferable human-oversight claim.
+  - The correction is registered before any real reviewer, adjudication, timing, or
+    factorial outcome exists.
+confirmatory_panel_requirements:
+  minimum_datasets: 8
+  minimum_cases_per_dataset: 12
+  minimum_cases_per_arm_within_dataset: 3
+  required_arms_within_every_dataset:
+    - standard_claim_first__qualified_random
+    - standard_claim_first__capability_cost_router
+    - adversarial_two_sided__qualified_random
+    - adversarial_two_sided__capability_cost_router
+  final_record_unit: one adjudicated outcome per held-out case
+  timing: positive server-timed total reviewer seconds including adjudication
+primary_inference:
+  cluster_unit: dataset_id
+  within_dataset:
+    O1: >-
+      Mean adversarial-minus-standard final-accuracy effect, averaging the two
+      assignment arms equally.
+    O2: >-
+      Mean capability-router-minus-qualified-random correct outcomes per reviewer
+      minute, averaging the two packet arms equally. Each arm rate is total correct
+      divided by total positive server-timed reviewer minutes within that dataset.
+    O3: >-
+      Difference-in-differences in final accuracy: packet effect under the capability
+      router minus packet effect under qualified random assignment.
+  across_dataset: equal-weight mean of the eight dataset effects
+  exact_tests:
+    O1: one-sided dataset sign-flip, greater than zero
+    O2: one-sided dataset sign-flip, greater than zero
+    O3: two-sided dataset sign-flip
+  multiplicity: Holm correction over O1, O2, and O3
+  descriptive_interval: 10000-draw equal-dataset percentile bootstrap with frozen seed 20260831
+  alpha: 0.05
+  minimum_attainable_one_sided_p_with_eight_datasets: 0.00390625
+  minimum_attainable_two_sided_p_with_eight_datasets: 0.0078125
+secondary_models:
+  mixed_effects_logistic: diagnostic sensitivity only
+  mixed_effects_log_time: diagnostic sensitivity only
+  item_level_mcnemar: diagnostic sensitivity only
+  guard: None can replace the dataset-level exact tests for cross-topic claims.
+unchanged:
+  - The 2 x 2 randomized blocked design, crossover, blinding, dual review, and adjudication.
+  - Reviewer warmup exclusion, capability freeze, safety routing, and no-silent-fallback rule.
+  - The minimum 96 prospective candidate-output cases and prohibition on prototypes.
+  - O1, O2, O3 directions and Holm family; only the inferential unit is corrected.
+  - Prohibition on simulated or researcher-authored human outcomes.
+implementations:
+  oversight_factorial_analysis.py: 97f8070ec1d6f1f29e78ecbce96853b8152eac4b10e2b6c860061aa8421a536b
+  analyze_complementary_oversight_factorial.py: 774e5c1d38113341e994a5f38311614cf292c1b44efa202eed3763f73dc9ac1b
+  oversight_readiness.py: a15297fede345d9bb089a6ea1c4f86f97a91477193e97c320067da506e721e01
+  audit_complementary_oversight_readiness.py: a4033c7e98d7b1b588a40c862568c0f9e4ed34ad6d3969ce8c6c799a941d81d6
+test:
+  path: tests/test_oversight_factorial_analysis.py
+  sha256: 1a35bd5b7423eaadeebbf444031bd72ea844f1e4cedf339016d3a0ece2059a4c
+readiness_test:
+  path: tests/test_oversight_readiness.py
+  sha256: f907119c27b5c6c2feb07b5ae81d2fdab4ef90ba97412e87b785c37fb91a6e41
+interpretation_guard: >-
+  Cases and repeated judgments within a scientific dataset increase precision but
+  not the number of transferable topic replications. A mixed-model or item-level
+  p value cannot establish complementary-oversight generalization by itself.

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "amendment_id": "article_claim_review_sequential_dependency_voi_003",
+  "sha256": "f4abe30e1bda26455648a1b3084ac95a6f07efad7cb0b6ef94ceb6c7dcc77a1e",
+  "base_protocol_sha256": "c3d74f5a6d1d8de130813c780cf16aafd4f1acedb52aca10e0d4992509beb8f2",
+  "previous_amendment_sha256": "90075db50aa2913e7b7557c76045cf8275782622b33ad6bf75cb09946a655df3",
+  "frozen_before_real_article_claim_outcomes": true,
+  "development_feature_claims": 80,
+  "development_human_outcomes": 0,
+  "formal_human_outcomes": 0,
+  "primary_human_design_changed": false
+}

@@ -1,0 +1,95 @@
+schema_version: 1
+protocol_id: live_sequential_voi_review_development_v1
+status: frozen_before_any_live_voi_human_outcome
+frozen_at: '2026-09-08T05:47:00+08:00'
+
+scientific_role:
+  development_only: true
+  formal_outcome_collection: false
+  confirmatory_replacement: false
+  effectiveness_claim_permitted: false
+
+timing_disclosure:
+  real_live_voi_human_outcomes_before_freeze: 0
+  synthetic_integration_scenarios_before_freeze: 1
+  formal_article_claim_outcomes: 0
+
+motivation: >-
+  The registered offline replay estimates whether outcome-adaptive dependency routing
+  would capture more actionable claims under a fixed review-time budget, but it does
+  not demonstrate that the deployed review system can change its queue safely after
+  a human discovery. This development protocol adds an outcome-adaptive server while
+  keeping confirmatory label collection on the unchanged, independent static server.
+
+routing_unit:
+  layer: article
+  reviewer_state: private
+  cross_reviewer_outcome_sharing: prohibited
+  dependency_namespace: routing_scope_id_plus_dependency_id
+  initial_dependency_posterior:
+    alpha_invalid: 1.0
+    beta_sufficient: 4.0
+  score: severity_weight_times_claim_prior_plus_expected_new_downstream_coverage_per_estimated_second
+  deterministic_tie_break: sha256_of_seed_and_packet_id
+  budget_accounting_for_selection: pre_outcome_frozen_estimated_seconds
+  actual_server_time_use: posthoc_reporting_only
+
+human_feedback_use:
+  valid_dependency_observation: increments_sufficient_posterior
+  invalid_dependency_observation: increments_invalid_posterior
+  invalid_upstream_unreviewed_descendants: skip_direct_review_and_add_revision_target
+  invalid_upstream_already_reviewed_descendants: reopen_as_revision_target
+  remaining_budget: reallocated_to_highest_current_marginal_value
+  accepted_text_mutation_during_review: prohibited
+  repair_stage: consumes_revision_targets_after_review
+
+auditability:
+  - Every configuration is SHA256-frozen before the first human return.
+  - Every selection event records its score before outcome reveal.
+  - Selection events form a SHA256 chain beginning with 64 zeroes.
+  - Submissions cannot override routing events, identity, or server timing.
+  - Replaying stored returns must reproduce every selected packet and event hash.
+  - Mutated configuration, invisible dependency IDs, stale sessions, and route-order changes fail closed.
+
+separation_from_formal_experiment:
+  - Formal double review and adjudication continue to use static independent assignments.
+  - The prospective four-policy comparison remains an offline replay over complete resolved labels.
+  - Live VOI may be evaluated later only in a separately randomized deployment study.
+  - Synthetic integration behavior cannot be reported as human effectiveness evidence.
+
+synthetic_acceptance_case:
+  first_review: accepts_an_upstream_dependency
+  second_review: later_finds_the_same_dependency_invalid
+  required_effects:
+    - an_unreviewed_descendant_is_propagated_without_direct_review
+    - the_earlier_reviewed_descendant_is_reopened_for_revision
+    - all_affected_claims_enter_the_revision_target_set
+    - the_second_event_hash_binds_the_first_event_hash
+
+implementation:
+  unchanged_static_review_server:
+    path: src/citeweave/review_ui.py
+    sha256: df449932002d25f7d2f7b497539e984266441930a37a1fd64f3c795c31904006
+  unchanged_offline_voi_replay:
+    path: src/citeweave/review_voi.py
+    sha256: aa2548e74a4465897d56397b46008764db7b54f374ec544ba6e06a5983c08992
+  live_voi_server:
+    path: src/citeweave/live_voi_review.py
+    sha256: 00eafe7aac647c0b0e7c138771a4f1b4f30f22d2c33aca0329cb97bd34a993d6
+  config_preparation_cli:
+    path: scripts/prepare_live_voi_review.py
+    sha256: ca6698a1b1c3ce070155b971a3811f169fd8a55e20c144ab5dc3f4731911baed
+  serving_cli:
+    path: scripts/serve_live_voi_review.py
+    sha256: a3925c82e364fa51cf913b3de9c9cad608b852495124d339a247f78e6ebbadd9
+  integration_test:
+    path: tests/test_live_voi_review.py
+    sha256: 822b5028d2762e165f5a269f5e8f66d6708611c2eef8db14dabddc7774e23883
+
+execution_gate:
+  - a_complete_blinded_article_packet_root_exists
+  - no_human_return_exists_in_that_packet_root
+  - every_article_packet_has_visible_dependency_ids_and_risk_features
+  - every_packet_has_a_positive_pre_outcome_time_estimate
+  - every_article_reviewer_has_a_positive_pre_outcome_budget
+  - live_voi_config_and_adjacent_freeze_are_created_before_serving

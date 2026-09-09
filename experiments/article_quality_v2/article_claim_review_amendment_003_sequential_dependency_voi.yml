@@ -1,0 +1,144 @@
+schema_version: 1
+amendment_id: article_claim_review_sequential_dependency_voi_003
+status: frozen_before_any_real_article_claim_review_or_outcome
+frozen_at: '2026-09-08T05:11:47+08:00'
+base_protocol_sha256: c3d74f5a6d1d8de130813c780cf16aafd4f1acedb52aca10e0d4992509beb8f2
+previous_amendment:
+  path: experiments/article_quality_v2/article_claim_review_amendment_002_shared_ui_compatibility.yml
+  sha256: 90075db50aa2913e7b7557c76045cf8275782622b33ad6bf75cb09946a655df3
+
+timing_disclosure:
+  formal_article_claim_packets: 0
+  real_claim_reviewers_registered: 0
+  primary_human_returns: 0
+  adjudication_human_returns: 0
+  independent_revision_expert_returns: 0
+  development_feature_articles: 4
+  development_feature_claims: 80
+  development_machine_gate_passed_articles: 2
+  development_human_outcomes: 0
+
+motivation: >-
+  The prior dependency-active policy ranks claims once using static risk multiplied by
+  shared evidence count. It does not use an invalid PH, REF, synthesis, or graph-evidence
+  dependency discovered during review to update which claim should be inspected next.
+  The sequential VOI policy treats each resolved review as an observation over the
+  claim-evidence graph, propagates invalid upstream dependencies, updates dependency
+  posteriors, and reallocates the remaining precommitted human-time budget.
+
+unchanged_primary_human_design:
+  topics: 8
+  claims_per_topic: 20
+  primary_reviewers_per_claim: 2
+  adjudication: disagreement_only_by_precommitted_third_reviewer
+  decision_schema: four_binary_checks_plus_action_and_dependency_ids
+  timing: server_visibility_heartbeat_only
+  synthetic_or_llm_proxy_reviewers: prohibited
+  inference_unit: topic
+  original_article_claim_primary_endpoints_unchanged: true
+
+sequential_policy:
+  name: sequential_dependency_value_of_information
+  routing_scope: one_article_with_no_cross_condition_feedback_leakage
+  state:
+    - reviewed_claim_ids
+    - invalid_upstream_dependency_ids
+    - propagated_downstream_claim_ids
+    - beta_posterior_per_dependency
+    - remaining_preoutcome_estimated_seconds
+  prior:
+    dependency_invalidity_beta: [1, 4]
+    claim_risk_components:
+      base: 0.06
+      causal_language: 0.24
+      numeric_language: 0.12
+      multiple_phenomena: 0.18
+      discussion_interpretation: 0.10
+      cap: 0.85
+  action_score: >-
+    severity_weight times the sum of claim defect prior and expected newly reachable
+    downstream claims, divided by a pre-outcome frozen review-time estimate.
+  update:
+    invalid_visible_dependency: increment_invalidity_alpha_and_propagate_all_descendants
+    sufficient_visible_dependency: increment_validity_beta
+    claim_local_rewrite_without_invalid_dependency: affect_only_the_reviewed_claim_paragraph
+  hard_guards:
+    - invalid dependency IDs must have been visible in the packet
+    - one routing scope cannot mix articles or experimental conditions
+    - propagated claims consume no direct review time but remain mandatory revision targets
+    - abstention cannot be treated as validation
+    - actual observed review time is reported but never used to choose the current claim
+
+matched_policy_replay:
+  budgets: [0.25, 0.50, 0.75]
+  budget_unit: fraction_of_preoutcome_predicted_always_review_seconds_per_topic
+  policies:
+    - uniform_hash_with_dependency_propagation
+    - static_risk_with_dependency_propagation
+    - static_dependency_with_dependency_propagation
+    - sequential_dependency_value_of_information
+  outcome_visibility: >-
+    Complete independently resolved labels are stored for evaluation, but a policy may
+    access only the outcome of the claim it has selected at each replay step.
+  common_mechanism:
+    - same_packet_graph
+    - same_resolved_human_labels
+    - same_preoutcome_time_estimates
+    - same_budget
+    - same_upstream_invalidation_propagation
+  manipulated_factor: adaptive_posterior_and_marginal_downstream_value
+
+prospective_endpoints:
+  primary_budget: 0.50
+  primary:
+    - topic_equal_actionable_claim_capture_rate_vs_best_fixed_policy
+    - topic_equal_captured_actionable_claims_per_actual_review_minute
+  safety_guards:
+    - unresolved_critical_actionable_claims
+    - overpropagated_nonactionable_claims
+    - abstention_count
+  secondary:
+    - results_at_0.25_and_0.75_budgets
+    - invalid_dependencies_found
+    - direct_reviews_avoided_by_valid_propagation
+    - posterior_and_queue_trace_for_every_step
+  inference: >-
+    Compute paired differences within each of eight topics, then exact topic-level sign
+    flips with Holm correction across the two primary endpoints. Claim-level rows are
+    precision observations, not independent replicates.
+  interpretation_guard: >-
+    Full-label sequential replay estimates policy value under observed cases. It is not
+    causal evidence of live labor savings; a later prospective deployment must confirm
+    realized time and correction quality.
+
+development_schema_audit:
+  path: experiments/article_quality_v3/development_claim_voi_features_v1.json
+  sha256: 670de94fb48b1d801d2904f9e4a35342eca44022d2ccfa089c89631475702ea9
+  articles: 4
+  claims: 80
+  scoped_unique_dependencies: 132
+  scoped_shared_dependencies: 130
+  maximum_within_article_dependency_fanout: 20
+  human_outcomes_present: 0
+  use_for_formal_effect_estimation: prohibited
+
+implementation:
+  sequential_voi_module:
+    path: src/citeweave/review_voi.py
+    sha256: aa2548e74a4465897d56397b46008764db7b54f374ec544ba6e06a5983c08992
+  development_feature_cli:
+    path: scripts/build_development_claim_voi_panel.py
+    sha256: 27d13a68944a4b529f0d6677d45d1e745722fb780cc90b2daf76ac0cdd9aa6f7
+  test:
+    path: tests/test_review_voi.py
+    sha256: a1a71cf6e3425d92e05132193ded27b8f018637c9622b2df21efc5917b0cd494
+  protocol_integrity_test:
+    path: tests/test_review_voi_protocol.py
+    sha256: 9b6364f2b0fad71429a6bfd0a50cb4ed26c642fb0eed54edc4fc072d483f1854
+
+execution_gate:
+  - Formal features must be rebuilt from eight hash-valid claim-ready articles.
+  - Reviewer capability and time estimates must be frozen before claim outcomes.
+  - Replay accepts only complete independently resolved real-human labels.
+  - Development articles and injected unit-test outcomes cannot enter formal estimates.
+  - No policy may be promoted without the existing unsafe-auto-accept and unrelated-regression guards.

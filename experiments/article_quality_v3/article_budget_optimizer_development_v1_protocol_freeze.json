@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "protocol_id": "deterministic_article_sentence_budget_optimizer_development_v1",
+  "sha256": "49a263d2e50205342c08cabfa88f1ff504bb2831f3f9de4ef7d0891aff20fa35",
+  "development_only": true,
+  "provider_calls": 0,
+  "source_artifacts_mutable": false
+}

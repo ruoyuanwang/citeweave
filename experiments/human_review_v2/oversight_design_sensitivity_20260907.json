@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "status": "prospective_design_sensitivity_no_outcomes_read",
+  "current_design": {
+    "datasets": 8,
+    "cases_per_factor_level_per_dataset": 6
+  },
+  "designs": [
+    {
+      "datasets": 8,
+      "cases_per_factor_level_per_dataset": 6,
+      "total_factor_level_cases": 48,
+      "baseline_accuracy": 0.6,
+      "simulations": 10000,
+      "seed": 20260907,
+      "conservative_holm_threshold": 0.016666666666666666,
+      "results": [
+        {
+          "risk_difference": 0.1,
+          "power": 0.0583,
+          "monte_carlo_standard_error": 0.0023430985894750565
+        },
+        {
+          "risk_difference": 0.15,
+          "power": 0.1395,
+          "monte_carlo_standard_error": 0.0034646753094626347
+        },
+        {
+          "risk_difference": 0.2,
+          "power": 0.2681,
+          "monte_carlo_standard_error": 0.004429699651217901
+        },
+        {
+          "risk_difference": 0.25,
+          "power": 0.4729,
+          "monte_carlo_standard_error": 0.004992650498482745
+        },
+        {
+          "risk_difference": 0.3,
+          "power": 0.6888,
+          "monte_carlo_standard_error": 0.004629844057849033
+        }
+      ],
+      "assumptions": [
+        "independent Bernoulli cases within each dataset",
+        "equal cases in packet factor levels after averaging assignment arms",
+        "exact one-sided dataset sign-flip test",
+        "alpha divided by three as a conservative Holm planning threshold",
+        "no human or machine outcome file is read"
+      ]
+    },
+    {
+      "datasets": 8,
+      "cases_per_factor_level_per_dataset": 12,
+      "total_factor_level_cases": 96,
+      "baseline_accuracy": 0.6,
+      "simulations": 10000,
+      "seed": 20260908,
+      "conservative_holm_threshold": 0.016666666666666666,
+      "results": [
+        {
+          "risk_difference": 0.1,
+          "power": 0.1318,
+          "monte_carlo_standard_error": 0.003382732031952871
+        },
+        {
+          "risk_difference": 0.15,
+          "power": 0.3078,
+          "monte_carlo_standard_error": 0.004615833185893961
+        },
+        {
+          "risk_difference": 0.2,
+          "power": 0.5646,
+          "monte_carlo_standard_error": 0.004958092778478434
+        },
+        {
+          "risk_difference": 0.25,
+          "power": 0.8194,
+          "monte_carlo_standard_error": 0.0038468641774827457
+        },
+        {
+          "risk_difference": 0.3,
+          "power": 0.9587,
+          "monte_carlo_standard_error": 0.0019898319024480434
+        }
+      ],
+      "assumptions": [
+        "independent Bernoulli cases within each dataset",
+        "equal cases in packet factor levels after averaging assignment arms",
+        "exact one-sided dataset sign-flip test",
+        "alpha divided by three as a conservative Holm planning threshold",
+        "no human or machine outcome file is read"
+      ]
+    },
+    {
+      "datasets": 12,
+      "cases_per_factor_level_per_dataset": 6,
+      "total_factor_level_cases": 72,
+      "baseline_accuracy": 0.6,
+      "simulations": 10000,
+      "seed": 20260909,
+      "conservative_holm_threshold": 0.016666666666666666,
+      "results": [
+        {
+          "risk_difference": 0.1,
+          "power": 0.1107,
+          "monte_carlo_standard_error": 0.0031376027473215915
+        },
+        {
+          "risk_difference": 0.15,
+          "power": 0.2797,
+          "monte_carlo_standard_error": 0.004488517684046706
+        },
+        {
+          "risk_difference": 0.2,
+          "power": 0.5066,
+          "monte_carlo_standard_error": 0.004999564381023611
+        },
+        {
+          "risk_difference": 0.25,
+          "power": 0.7664,
+          "monte_carlo_standard_error": 0.00423120597466018
+        },
+        {
+          "risk_difference": 0.3,
+          "power": 0.9324,
+          "monte_carlo_standard_error": 0.0025105824025512483
+        }
+      ],
+      "assumptions": [
+        "independent Bernoulli cases within each dataset",
+        "equal cases in packet factor levels after averaging assignment arms",
+        "exact one-sided dataset sign-flip test",
+        "alpha divided by three as a conservative Holm planning threshold",
+        "no human or machine outcome file is read"
+      ]
+    },
+    {
+      "datasets": 12,
+      "cases_per_factor_level_per_dataset": 12,
+      "total_factor_level_cases": 144,
+      "baseline_accuracy": 0.6,
+      "simulations": 10000,
+      "seed": 20260910,
+      "conservative_holm_threshold": 0.016666666666666666,
+      "results": [
+        {
+          "risk_difference": 0.1,
+          "power": 0.2499,
+          "monte_carlo_standard_error": 0.004329549514672399
+        },
+        {
+          "risk_difference": 0.15,
+          "power": 0.561,
+          "monte_carlo_standard_error": 0.004962650501496151
+        },
+        {
+          "risk_difference": 0.2,
+          "power": 0.8555,
+          "monte_carlo_standard_error": 0.0035159600395908938
+        },
+        {
+          "risk_difference": 0.25,
+          "power": 0.9825,
+          "monte_carlo_standard_error": 0.0013112494041943343
+        },
+        {
+          "risk_difference": 0.3,
+          "power": 0.9997,
+          "monte_carlo_standard_error": 0.00017317909804591517
+        }
+      ],
+      "assumptions": [
+        "independent Bernoulli cases within each dataset",
+        "equal cases in packet factor levels after averaging assignment arms",
+        "exact one-sided dataset sign-flip test",
+        "alpha divided by three as a conservative Holm planning threshold",
+        "no human or machine outcome file is read"
+      ]
+    }
+  ],
+  "scope_guard": "Power is conditional on planning assumptions and does not predict the observed effect. The 96-case randomization analysis and the dataset-level transportability analysis answer different questions."
+}

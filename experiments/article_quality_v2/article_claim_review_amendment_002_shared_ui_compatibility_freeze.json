@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "article_claim_review_shared_ui_compatibility_002",
+  "sha256": "90075db50aa2913e7b7557c76045cf8275782622b33ad6bf75cb09946a655df3",
+  "base_protocol_sha256": "c3d74f5a6d1d8de130813c780cf16aafd4f1acedb52aca10e0d4992509beb8f2",
+  "previous_amendment_sha256": "57c1629381753d3d968ae0eed84b803aa24fc52d7fdf4de8ba6576e2ade71b76",
+  "frozen_after_machine_drafts_before_any_real_human_review": true,
+  "machine_article_responses": 16,
+  "article_claim_packets_materialized": 0,
+  "real_claim_reviewers_registered": 0,
+  "human_review_returns": 0,
+  "scientific_design_changed": false
+}

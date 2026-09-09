@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "estimand": "(graph_program_large-flat_hybrid_large)-(graph_program_small-flat_hybrid_small)",
+  "equal_dataset_weighting_amendment_sha256": "4ad307c691a4d768379b1d3ec7b20a5295607f73da24ff79d2fda242952bc097",
+  "primary": {
+    "groups": 14,
+    "datasets": 4,
+    "dataset_effects": {
+      "federated_learning_healthcare_2016_2025": 0.0,
+      "green_hydrogen_electrolysis_2010_2025": 0.0,
+      "perovskite_solar_cell_stability_2012_2025": 0.0,
+      "spatial_transcriptomics_cancer_2018_2025": 0.0
+    },
+    "cluster_bootstrap": {
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "clusters": 4,
+      "cluster_weighting": "equal_dataset"
+    },
+    "cluster_signflip": {
+      "estimate": 0.0,
+      "cluster_effects": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "clusters": 4,
+      "permutations": 16,
+      "p_value_one_sided": 1.0,
+      "minimum_attainable_p": 0.0625
+    },
+    "scale_pairs_sha256": "c996f0bcacdcbc49ec7e67bb439a87c1478d2d632878181b34dee3608f7cfdae"
+  },
+  "replication": {
+    "groups": 14,
+    "datasets": 4,
+    "dataset_effects": {
+      "explainable_ai_medical_imaging_2016_2025": 0.0,
+      "membrane_desalination_fouling_2010_2025": 0.0,
+      "organoid_disease_modeling_2010_2025": 0.0,
+      "sodium_ion_battery_cathodes_2010_2025": 0.0
+    },
+    "cluster_bootstrap": {
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "clusters": 4,
+      "cluster_weighting": "equal_dataset"
+    },
+    "cluster_signflip": {
+      "estimate": 0.0,
+      "cluster_effects": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "clusters": 4,
+      "permutations": 16,
+      "p_value_one_sided": 1.0,
+      "minimum_attainable_p": 0.0625
+    },
+    "scale_pairs_sha256": "e74af08327bffa391027767c76b9bada28fa524d983f42919ee8b0ed6b190e6a"
+  },
+  "combined": {
+    "groups": 28,
+    "datasets": 8,
+    "dataset_effects": {
+      "explainable_ai_medical_imaging_2016_2025": 0.0,
+      "federated_learning_healthcare_2016_2025": 0.0,
+      "green_hydrogen_electrolysis_2010_2025": 0.0,
+      "membrane_desalination_fouling_2010_2025": 0.0,
+      "organoid_disease_modeling_2010_2025": 0.0,
+      "perovskite_solar_cell_stability_2012_2025": 0.0,
+      "sodium_ion_battery_cathodes_2010_2025": 0.0,
+      "spatial_transcriptomics_cancer_2018_2025": 0.0
+    },
+    "cluster_bootstrap": {
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "clusters": 8,
+      "cluster_weighting": "equal_dataset"
+    },
+    "cluster_signflip": {
+      "estimate": 0.0,
+      "cluster_effects": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "clusters": 8,
+      "permutations": 256,
+      "p_value_one_sided": 1.0,
+      "minimum_attainable_p": 0.00390625
+    }
+  },
+  "replication_minus_primary_effect": 0.0,
+  "interpretation_guard": "The combined exact test treats dataset as the cluster. Scale-pair items are not independent replicates, and primary and replication estimates must also be reported separately."
+}

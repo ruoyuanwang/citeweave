@@ -1,0 +1,91 @@
+schema_version: 1
+amendment_id: source_relevance_warmup_amendment_002_closed_loop
+base_protocol_sha256: d34d70c7ba4934274955c716ddc8cf1d25ef7639b1c0e561f4b9dd1fb1fe45de
+previous_amendment_sha256: 3efd9eddcd09ed2f0d0dcbe6f49d0b01f18a95e4baf7d29d621b2da99a8d2997
+status: frozen_before_assignment_or_human_source_judgments
+
+reason:
+  - The frozen warmup specified double review, blinded adjudication, capability updates, and retriever supervision, but the implemented path ended after primary assignment.
+  - The legacy two-reviewer factual/semantic finalizer cannot validate or resolve the six-reviewer source panel.
+  - Without a source-specific outcome compiler, reviewer time could not be proven server-accounted, adjudicators were not committed before outcomes, and capability files used by the held-out router could only be assembled manually.
+
+closed_loop_stages:
+  - stage: commit_adjudicators
+    timing: After the six-reviewer primary assignment is frozen and before any primary return.
+    rule: Preassign one domain-eligible reviewer other than both primaries to every one of the 60 double-reviewed packets.
+  - stage: validate_primary_returns
+    rule: Require exactly 180 assigned immutable decisions, valid source-answer schema, server visibility-heartbeat timing, and packet hashes matching the pre-return commitment.
+  - stage: prepare_blind_adjudication
+    rule: Release only packets with disagreement on topic relevance or evidence role; withhold primary identities and judgments from the precommitted third reviewer.
+  - stage: resolve_and_freeze
+    rule: Resolve double-review agreements by consensus and disagreements by the precommitted third reviewer; freeze labels, capability observations, reviewer registry, and capability profiles before any held-out assignment.
+
+label_and_capability_policy:
+  all_120_labels:
+    use: Retriever training with an explicit confidence tier.
+    single_review_cases: Mark single_review_training_only and prohibit use for reviewer capability or confirmatory promotion.
+  double_reviewed_60_labels:
+    use: Eligible for retriever promotion and reviewer capability calibration after consensus or third-person resolution.
+  reviewer_observations:
+    count: 120 primary judgments from the 60 double-reviewed packets.
+    correctness: Exact match to the independently resolved pair of topic_relevance and evidence_role.
+    adjudicator_self_scoring: prohibited
+  capability_model:
+    family: hierarchical_beta
+    prior_alpha: 2.0
+    prior_beta: 2.0
+    minimum_exact_observations: 3
+    minimum_domain_observations: 5
+    fallback_order: [reviewer_domain_issue, reviewer_domain, reviewer_global, prior]
+    freeze_timing: Before held-out case assignment or outcomes.
+
+timing_integrity:
+  required_method: visibility_heartbeat_server_accounted
+  required_fields:
+    - review_seconds
+    - server_elapsed_seconds
+    - submitted_at_unix
+    - reviewer_code
+    - packet_id
+  guards:
+    - all numeric times are finite and positive
+    - active review seconds cannot exceed server elapsed seconds beyond rounding tolerance
+    - client-reported or missing timing methods are rejected
+
+provenance:
+  - The adjudicator commitment binds the primary assignment, roster, all 60 packet hashes, and deterministic seed.
+  - Primary validation binds all six return-file hashes and the adjudicator commitment.
+  - Final capability output binds primary validation, adjudication manifest, adjudication return hashes, resolved labels, observations, and reviewer registry.
+
+unchanged_design:
+  primary_packets: 120
+  primary_decisions: 180
+  double_reviewed_packets: 60
+  reviewers: 6
+  warmup_excluded_from_confirmatory: true
+  heldout_outcomes_available_at_freeze: false
+  source_retriever_promotion_thresholds: unchanged
+
+implementation:
+  outcome_compiler:
+    path: src/citeweave/source_review_outcomes.py
+    sha256: 609aa119610504dd2080dcb2d89770a197797e2889633131c4113a221bfec928
+  outcome_cli:
+    path: scripts/run_source_relevance_warmup_outcomes.py
+    sha256: 0f5f33966bb0e702c5467ff71e305e97d9490c049c397efde41e6c01fa082dd4
+  end_to_end_tests:
+    path: tests/test_source_review_outcomes.py
+    sha256: 7df11524ee68c4e2ae4626638571368114b170bff82fb3ca7d9c9a109e249431
+
+pre_outcome_evidence:
+  registered_real_reviewers: 0
+  primary_assignment_present: false
+  primary_returns: 0
+  adjudication_returns: 0
+  capability_observations: 0
+  heldout_outcomes_inspected: false
+
+interpretation_guard:
+  - Consensus and adjudication establish reproducible relevance labels under visible excerpts, not scientific truth.
+  - Capability estimates are warmup-calibrated routing inputs; they cannot be reported as confirmatory human-performance outcomes.
+  - Single-review labels cannot be used to score the same reviewer or to pass the retriever promotion gate.

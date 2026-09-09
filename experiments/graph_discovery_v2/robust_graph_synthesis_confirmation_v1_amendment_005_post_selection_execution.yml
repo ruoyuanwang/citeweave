@@ -1,0 +1,85 @@
+schema_version: 1
+amendment_id: robust_graph_synthesis_confirmation_v1_post_selection_execution_005
+status: frozen_before_any_human_query_judgment_or_downstream_task_outcome
+frozen_at: '2026-09-08T12:55:54+08:00'
+base_protocol_sha256: b6845d089a616954d2be4770c18cccff1787bccd1d4c545e9ce773dc3111102d
+prior_amendment:
+  sha256: 37617d034818432c076026a1f148adcd888a82b6b5d290f1f94429877856f632
+  freeze_sha256: b4108146334f266ccc023b951c0d73a9f94a46124887dc6e5871694b7e27dbfc
+state_at_amendment:
+  real_query_reviewers_registered: 0
+  human_query_judgments: 0
+  selected_topics: 0
+  robustness_cases_for_confirmation: 0
+  deterministic_gold_answers_for_confirmation: 0
+  frozen_request_identities_for_confirmation: 0
+  provider_responses_for_confirmation: 0
+purpose: >-
+  Operationalize the protocol's post-selection freeze gate before any selected
+  topic is known. The implementation must refuse to create a perturbation file
+  unless blind human query relevance is complete and the selected topics exactly
+  equal the first eight eligible candidates under frozen priority.
+post_selection_construction:
+  baseline_tasks_per_topic: 5
+  baseline_graph: large_keyword_cooccurrence
+  registered_variants_per_topic_including_baseline: 18
+  perturbation_families:
+    - minimum_edge_weight
+    - deterministic_edge_dropout
+    - community_seed
+    - community_resolution
+    - temporal_window
+  final_tasks_per_topic: 5
+  total_topics: 8
+  total_robustness_cases: 144
+  total_tasks: 40
+  total_request_identities: 200
+request_freeze:
+  model: deepseek-v4-pro
+  temperature: 0
+  thinking: disabled
+  response_format: json_object
+  max_tokens: 2200
+  context_token_budget: 8192
+  exact_message_tokenizer_required: true
+  no_context_truncation_permitted: true
+  fields_bound_per_cell:
+    - dataset_id
+    - item_id
+    - condition
+    - task_payload_sha256
+    - context_sha256
+    - request_messages_sha256
+    - request_payload_sha256
+    - context_tokens
+    - prompt_tokens
+execution_integrity:
+  - Recompute all 200 request identities before provider execution.
+  - Revalidate protocol, selection, canonical sources, 144 cases, 8 benchmarks, tokenizer, and implementation hashes.
+  - Check provider balance before the first paid call.
+  - Resume only matching incomplete cells and retain prior attempt records.
+  - Reject foreign, duplicate, task-drifted, or message-drifted results.
+  - Terminal status requires exactly 200 complete current cells and zero parse failures.
+unchanged:
+  - candidate eligibility and priority selection
+  - registered perturbation grid
+  - five complex task types and record budget
+  - five experimental conditions
+  - outcomes, hypotheses, exact cluster inference, and multiplicity correction
+implementation:
+  post_selection_builder:
+    path: src/citeweave/confirmation_panel.py
+    sha256: 57420b97cbaf743e54d36dee158008860b34377700ad3f47d9f615730fe765c7
+  builder_entrypoint:
+    path: scripts/build_robust_graph_confirmation_panel.py
+    sha256: 60746675a83a0eb43ebcbfda042ba2ccb25a4750fbbc84b67bdd7eb2a320fdf1
+  execution_entrypoint:
+    path: scripts/run_robust_graph_confirmation_panel.py
+    sha256: de62b09e70a354c60d374a1169109e9e32a6557df4bc21f98d9e27e45f63891e
+  regression_tests:
+    path: tests/test_confirmation_panel.py
+    sha256: 4212903a3de7ae99809a4d0cc0d1820d5419831d231cbd2a59d64664b9b632b5
+interpretation:
+  - This amendment freezes future construction and execution behavior, not outcomes.
+  - The current absence of selected topics must continue to block construction.
+  - Any later code change requires a new pre-outcome amendment and freeze.

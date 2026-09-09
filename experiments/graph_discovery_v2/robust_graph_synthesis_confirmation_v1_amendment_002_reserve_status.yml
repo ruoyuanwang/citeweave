@@ -1,0 +1,31 @@
+schema_version: 1
+amendment_id: robust_graph_synthesis_confirmation_v1_reserve_status_002
+status: frozen_before_query_judgments_or_task_outcomes
+frozen_at: '2026-09-08T08:49:00+08:00'
+base_protocol_sha256: b6845d089a616954d2be4770c18cccff1787bccd1d4c545e9ce773dc3111102d
+prior_amendment:
+  sha256: 687debcf4b07f2ab401732853a2e824b65e591a17788011a2e7b3b3d1a37ae00
+  freeze_sha256: 38fa4dc59e6fc9530de0f0e332b25816c9efd83b0e1828cad51a97f671e04bea
+state_at_amendment:
+  priorities_1_to_8_acquired_and_processed: 8
+  priorities_1_to_8_automatic_gate_passes: 8
+  reserve_candidates_acquired: 0
+  human_query_judgments: 0
+  selected_topics: 0
+  perturbation_outcomes: 0
+  deterministic_gold_answers: 0
+  provider_responses: 0
+change:
+  reason: >-
+    Correct only the top-level candidate-audit status: when priorities 1 through 8
+    all pass automatic data gates, unacquired reserve candidates do not imply that
+    processing is pending. The next registered state is blinded query review.
+  changes_candidate_records_or_hashes: false
+  changes_selection_rule_or_thresholds: false
+  changes_tasks_conditions_or_statistics: false
+implementation_binding:
+  path: scripts/audit_robust_graph_confirmation_candidates.py
+  sha256: 4c92b481efc80471698e24dcc6283b7b1ad7f1a449dd93bf7b2f17ba385d2b7a
+interpretation:
+  - This is a state-label correction and cannot affect eligibility or outcomes.
+  - Reserves remain untouched unless a blinded relevance decision excludes a higher-priority candidate.

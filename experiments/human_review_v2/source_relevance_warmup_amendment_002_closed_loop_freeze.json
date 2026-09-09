@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "amendment_id": "source_relevance_warmup_amendment_002_closed_loop",
+  "sha256": "592982ef3024576e563840b2fb5558cac7b16629fc22a5f3467b70882fd2d4a9",
+  "frozen_at_utc": "2026-09-07T13:42:00Z",
+  "base_protocol_sha256": "d34d70c7ba4934274955c716ddc8cf1d25ef7639b1c0e561f4b9dd1fb1fe45de",
+  "previous_amendment_sha256": "3efd9eddcd09ed2f0d0dcbe6f49d0b01f18a95e4baf7d29d621b2da99a8d2997",
+  "frozen_before_primary_assignment": true,
+  "frozen_before_human_source_judgments": true,
+  "registered_real_reviewers": 0,
+  "primary_returns": 0,
+  "adjudication_returns": 0,
+  "heldout_outcomes_inspected": false,
+  "closed_loop_is_fail_closed": true
+}

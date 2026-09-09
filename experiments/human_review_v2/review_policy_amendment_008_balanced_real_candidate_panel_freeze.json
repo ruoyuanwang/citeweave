@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "artifact": "experiments/human_review_v2/review_policy_amendment_008_balanced_real_candidate_panel.yml",
+  "sha256": "243be1bea2aae4aaf8c1ef58f2d9e85959d5749706a14d3497894070ca519f9b",
+  "status": "frozen_before_real_reviewer_calibration_and_heldout_human_outcomes",
+  "human_outcomes_inspected": false,
+  "heldout_outcomes_inspected": false,
+  "registered_real_reviewers": 0,
+  "heldout_cases": 96,
+  "gold_verdicts": {"qualify": 48, "reject": 48}
+}

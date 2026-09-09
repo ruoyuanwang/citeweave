@@ -1,0 +1,88 @@
+protocol_id: citecalibrator_need_assessment_v1
+status: development_protocol
+objective: >-
+  Determine whether a trainable claim-calibration model is necessary after accounting for
+  deterministic rules and prompt-only model baselines.
+
+scientific_separation:
+  pilot_benchmark:
+    role: rubric and pipeline development
+    prevalence_claims_allowed: false
+  controlled_challenge:
+    role: error-sensitivity and implementation validation
+    prevalence_claims_allowed: false
+    training_need_claims_allowed: false
+  natural_need_assessment:
+    role: estimate natural major defects and compare non-trained baselines
+    required_before_training_claim: true
+  training_confirmation:
+    role: compare the same base model before and after training on untouched topics
+    required_before_model_claim: true
+
+case_unit:
+  primary: one atomic empirical or interpretive claim
+  context: paragraph, graph phenomenon, operator trace, references, and perturbation profile
+  extraction_note: >-
+    Existing PH-bearing sentences are only pilot candidates. Human reviewers must confirm
+    atomicity; confirmatory cases must be sampled from newly generated, untouched articles.
+
+gold_standard:
+  primary_reviewers_per_case: 2
+  adjudication: independent third reviewer on any action or major-severity disagreement
+  llm_as_gold: prohibited
+  reviewer_blinding:
+    hide_generation_condition: true
+    hide_baseline_outputs: true
+    hide_training_status: true
+
+actions:
+  - accept
+  - qualify
+  - reject
+  - abstain
+
+primary_metrics:
+  - major_critical_defect_recall
+  - accept_false_intervention_rate
+  - action_macro_f1
+  - mean_latency_seconds
+
+discovery_design:
+  topics: 8
+  disciplinary_families_minimum: 4
+  research_questions_per_topic: 5
+  qualified_articles_target: 30-40
+  claims_per_article: 15-20
+  primary_review_claims_target: 450-800
+  sampling: all evidence-bearing claims up to the cap; seeded random sampling above the cap
+  independent_unit: topic
+
+need_decision:
+  prevalence_gate: >-
+    On untouched articles, the natural major/critical claim rate is at least 0.08 or at least
+    0.30 of qualified articles contain one; defects must occur in at least four topics. Report
+    topic-cluster bootstrap 95% intervals without changing the frozen point thresholds.
+  baseline_failure_gate: >-
+    The strongest non-trained baseline has major/critical defect recall below 0.80, accept
+    false-intervention rate above 0.10, or unacceptable measured deployment cost/latency.
+  operational_gate: >-
+    Residual errors include evidence/graph interpretation failures that deterministic rules
+    cannot represent without case-specific semantics.
+  conclusion_rule: all three gates must pass before claiming training is necessary
+
+training_confirmation:
+  comparison:
+    - same_base_model_zero_shot
+    - same_base_model_few_shot
+    - same_base_model_supervised_finetuned
+  split: group by topic; no topic may cross train, validation, and test
+  success_gate: >-
+    On untouched test topics, fine-tuning improves major/critical defect recall by at least
+    0.10 over the stronger prompt-only baseline, does not increase accept false-intervention
+    rate above 0.10, and improves action macro-F1. Report paired bootstrap 95% intervals.
+
+current_limits:
+  existing_articles: 4
+  existing_claim_candidates: 114
+  human_gold_available: false
+  permitted_conclusion: pipeline feasibility only

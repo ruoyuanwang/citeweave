@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "status": "prospective_article_design_sensitivity_no_outcomes_read",
+  "registered_topics": 8,
+  "a1_binary_claim_sensitivity": {
+    "datasets": 8,
+    "cases_per_factor_level_per_dataset": 20,
+    "total_factor_level_cases": 160,
+    "baseline_accuracy": 0.6,
+    "simulations": 10000,
+    "seed": 20260908,
+    "conservative_holm_threshold": 0.016666666666666666,
+    "results": [
+      {
+        "risk_difference": 0.1,
+        "power": 0.2341,
+        "monte_carlo_standard_error": 0.004234349891069467
+      },
+      {
+        "risk_difference": 0.15,
+        "power": 0.5214,
+        "monte_carlo_standard_error": 0.004995418300803247
+      },
+      {
+        "risk_difference": 0.2,
+        "power": 0.8188,
+        "monte_carlo_standard_error": 0.0038518380028241066
+      },
+      {
+        "risk_difference": 0.25,
+        "power": 0.9637,
+        "monte_carlo_standard_error": 0.0018703558484951465
+      },
+      {
+        "risk_difference": 0.3,
+        "power": 0.9979,
+        "monte_carlo_standard_error": 0.0004577761461675336
+      }
+    ],
+    "assumptions": [
+      "independent Bernoulli cases within each dataset",
+      "equal cases in packet factor levels after averaging assignment arms",
+      "exact one-sided dataset sign-flip test",
+      "alpha divided by three as a conservative Holm planning threshold",
+      "no human or machine outcome file is read"
+    ],
+    "semantic_role": "A1 graph-review minus one-shot strict correct-and-supported claim rate"
+  },
+  "a2_a3_standardized_topic_sensitivity": [
+    {
+      "topics": 8,
+      "simulations": 10000,
+      "seed": 20260916,
+      "conservative_holm_threshold": 0.016666666666666666,
+      "results": [
+        {
+          "standardized_topic_effect": 0.25,
+          "power": 0.0596,
+          "monte_carlo_standard_error": 0.002367442501941705
+        },
+        {
+          "standardized_topic_effect": 0.5,
+          "power": 0.1581,
+          "monte_carlo_standard_error": 0.003648347434113149
+        },
+        {
+          "standardized_topic_effect": 0.75,
+          "power": 0.3354,
+          "monte_carlo_standard_error": 0.004721301091860167
+        },
+        {
+          "standardized_topic_effect": 1.0,
+          "power": 0.5646,
+          "monte_carlo_standard_error": 0.004958092778478434
+        },
+        {
+          "standardized_topic_effect": 1.25,
+          "power": 0.7573,
+          "monte_carlo_standard_error": 0.004287151851754262
+        },
+        {
+          "standardized_topic_effect": 1.5,
+          "power": 0.902,
+          "monte_carlo_standard_error": 0.0029731464814233416
+        }
+      ],
+      "assumptions": [
+        "independent Normal topic effects with unit between-topic standard deviation",
+        "exact one-sided topic sign-flip test",
+        "alpha divided by three as a conservative Holm planning threshold",
+        "no article, expert rating, human outcome, or machine effect is read"
+      ]
+    },
+    {
+      "topics": 12,
+      "simulations": 10000,
+      "seed": 20260920,
+      "conservative_holm_threshold": 0.016666666666666666,
+      "results": [
+        {
+          "standardized_topic_effect": 0.25,
+          "power": 0.0871,
+          "monte_carlo_standard_error": 0.002819815419491141
+        },
+        {
+          "standardized_topic_effect": 0.5,
+          "power": 0.2859,
+          "monte_carlo_standard_error": 0.004518419967200924
+        },
+        {
+          "standardized_topic_effect": 0.75,
+          "power": 0.5689,
+          "monte_carlo_standard_error": 0.004952300374573416
+        },
+        {
+          "standardized_topic_effect": 1.0,
+          "power": 0.8298,
+          "monte_carlo_standard_error": 0.0037580840863397406
+        },
+        {
+          "standardized_topic_effect": 1.25,
+          "power": 0.9571,
+          "monte_carlo_standard_error": 0.0020263166090223918
+        },
+        {
+          "standardized_topic_effect": 1.5,
+          "power": 0.9939,
+          "monte_carlo_standard_error": 0.0007786391975748456
+        }
+      ],
+      "assumptions": [
+        "independent Normal topic effects with unit between-topic standard deviation",
+        "exact one-sided topic sign-flip test",
+        "alpha divided by three as a conservative Holm planning threshold",
+        "no article, expert rating, human outcome, or machine effect is read"
+      ]
+    }
+  ],
+  "scope_guard": "Multiple claim ratings and evaluators improve within-topic measurement but do not increase the number of independent scientific topics. Failure to reject is not evidence of equivalence unless the registered noninferiority test itself passes."
+}

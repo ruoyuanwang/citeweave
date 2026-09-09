@@ -1,0 +1,1033 @@
+{
+  "schema_version": 1,
+  "status": "article_prompt_compaction_offline_audited",
+  "scientific_role": "cost_and_integrity_diagnostic_not_provider_result",
+  "source_plan_sha256": "41eef1b6df9a593df0816d0f0f168bd235f0d4ec83e1f500658697ed52965f27",
+  "articles": 4,
+  "calls": 36,
+  "all_section_views_pass_integrity_audit": true,
+  "original_prompt_chars": 2038568,
+  "compact_prompt_chars": 1377636,
+  "char_reduction_fraction": 0.32421385992520235,
+  "observed_original_prompt_tokens": 474063,
+  "linear_char_ratio_prompt_token_estimate": 320365,
+  "estimate_warning": "The token estimate is a character-ratio diagnostic, not a provider tokenizer measurement and not a billing guarantee.",
+  "condition_totals": {
+    "flat_article_compiler": {
+      "original_prompt_chars": 994679,
+      "compact_prompt_chars": 664213,
+      "observed_original_prompt_tokens": 229828,
+      "char_reduction_fraction": 0.33223381613565783
+    },
+    "graph_dependency_compiler": {
+      "original_prompt_chars": 1043889,
+      "compact_prompt_chars": 713423,
+      "observed_original_prompt_tokens": 244235,
+      "char_reduction_fraction": 0.316571972690583
+    }
+  },
+  "section_view_audits": [
+    {
+      "schema_version": 1,
+      "section": "Methods",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 13203,
+      "original_source_chars": 35522,
+      "view_source_chars": 3144
+    },
+    {
+      "schema_version": 1,
+      "section": "Results",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37152,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Results",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37152,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Discussion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37155,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Discussion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37155,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Limitations",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 13207,
+      "original_source_chars": 35522,
+      "view_source_chars": 3144
+    },
+    {
+      "schema_version": 1,
+      "section": "Conclusion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 13206,
+      "original_source_chars": 35522,
+      "view_source_chars": 3144
+    },
+    {
+      "schema_version": 1,
+      "section": "Introduction",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37157,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Abstract",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 13204,
+      "original_source_chars": 35522,
+      "view_source_chars": 3144
+    },
+    {
+      "schema_version": 1,
+      "section": "Methods",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 13203,
+      "original_source_chars": 35522,
+      "view_source_chars": 3144
+    },
+    {
+      "schema_version": 1,
+      "section": "Results",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37152,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Results",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37152,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Discussion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37155,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Discussion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37155,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Limitations",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 13207,
+      "original_source_chars": 35522,
+      "view_source_chars": 3144
+    },
+    {
+      "schema_version": 1,
+      "section": "Conclusion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 13206,
+      "original_source_chars": 35522,
+      "view_source_chars": 3144
+    },
+    {
+      "schema_version": 1,
+      "section": "Introduction",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 37157,
+      "original_source_chars": 35522,
+      "view_source_chars": 27094
+    },
+    {
+      "schema_version": 1,
+      "section": "Abstract",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 46023,
+      "view_serialized_chars": 13204,
+      "original_source_chars": 35522,
+      "view_source_chars": 3144
+    },
+    {
+      "schema_version": 1,
+      "section": "Methods",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 12621,
+      "original_source_chars": 30280,
+      "view_source_chars": 2993
+    },
+    {
+      "schema_version": 1,
+      "section": "Results",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31545,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Results",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31545,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Discussion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31548,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Discussion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31548,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Limitations",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 12625,
+      "original_source_chars": 30280,
+      "view_source_chars": 2993
+    },
+    {
+      "schema_version": 1,
+      "section": "Conclusion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 12624,
+      "original_source_chars": 30280,
+      "view_source_chars": 2993
+    },
+    {
+      "schema_version": 1,
+      "section": "Introduction",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31550,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Abstract",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 12622,
+      "original_source_chars": 30280,
+      "view_source_chars": 2993
+    },
+    {
+      "schema_version": 1,
+      "section": "Methods",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 12621,
+      "original_source_chars": 30280,
+      "view_source_chars": 2993
+    },
+    {
+      "schema_version": 1,
+      "section": "Results",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31545,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Results",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31545,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Discussion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31548,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Discussion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31548,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Limitations",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 12625,
+      "original_source_chars": 30280,
+      "view_source_chars": 2993
+    },
+    {
+      "schema_version": 1,
+      "section": "Conclusion",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 12624,
+      "original_source_chars": 30280,
+      "view_source_chars": 2993
+    },
+    {
+      "schema_version": 1,
+      "section": "Introduction",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 31550,
+      "original_source_chars": 30280,
+      "view_source_chars": 21918
+    },
+    {
+      "schema_version": 1,
+      "section": "Abstract",
+      "passed": true,
+      "quality_gates": {
+        "source_hash_bound": true,
+        "dataset_preserved": true,
+        "writing_brief_preserved": true,
+        "condition_contract_preserved": true,
+        "all_phenomenon_records_byte_equivalent": true,
+        "all_reference_ids_preserved": true,
+        "full_section_excerpt_hashes_preserved": true,
+        "rendered_figure_withheld": true
+      },
+      "original_serialized_chars": 40350,
+      "view_serialized_chars": 12622,
+      "original_source_chars": 30280,
+      "view_source_chars": 2993
+    }
+  ],
+  "records": [
+    {
+      "article_id": "explainable_ai_medical_imaging_2016_2025__flat_article_compiler",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "condition": "flat_article_compiler",
+      "calls": [
+        {
+          "section": "Methods",
+          "pass_type": "base",
+          "original_prompt_chars": 49401,
+          "compact_prompt_chars": 16585,
+          "char_reduction_fraction": 0.6642780510515982,
+          "observed_original_prompt_tokens": 10984
+        },
+        {
+          "section": "Results",
+          "pass_type": "base",
+          "original_prompt_chars": 49789,
+          "compact_prompt_chars": 40922,
+          "char_reduction_fraction": 0.17809154632549362,
+          "observed_original_prompt_tokens": 11109
+        },
+        {
+          "section": "Results",
+          "pass_type": "repair",
+          "original_prompt_chars": 57586,
+          "compact_prompt_chars": 48719,
+          "char_reduction_fraction": 0.1539783975271768,
+          "observed_original_prompt_tokens": 12852
+        },
+        {
+          "section": "Discussion",
+          "pass_type": "base",
+          "original_prompt_chars": 57929,
+          "compact_prompt_chars": 49065,
+          "char_reduction_fraction": 0.15301489754699715,
+          "observed_original_prompt_tokens": 12970
+        },
+        {
+          "section": "Discussion",
+          "pass_type": "repair",
+          "original_prompt_chars": 63427,
+          "compact_prompt_chars": 54563,
+          "char_reduction_fraction": 0.13975121005250135,
+          "observed_original_prompt_tokens": 14246
+        },
+        {
+          "section": "Limitations",
+          "pass_type": "base",
+          "original_prompt_chars": 60741,
+          "compact_prompt_chars": 27929,
+          "char_reduction_fraction": 0.5401952552641544,
+          "observed_original_prompt_tokens": 13572
+        },
+        {
+          "section": "Conclusion",
+          "pass_type": "base",
+          "original_prompt_chars": 64852,
+          "compact_prompt_chars": 32039,
+          "char_reduction_fraction": 0.5059674335409856,
+          "observed_original_prompt_tokens": 14524
+        },
+        {
+          "section": "Introduction",
+          "pass_type": "base",
+          "original_prompt_chars": 52788,
+          "compact_prompt_chars": 43926,
+          "char_reduction_fraction": 0.16787906342350534,
+          "observed_original_prompt_tokens": 11780
+        },
+        {
+          "section": "Abstract",
+          "pass_type": "base",
+          "original_prompt_chars": 71307,
+          "compact_prompt_chars": 38492,
+          "char_reduction_fraction": 0.4601932489096442,
+          "observed_original_prompt_tokens": 15848
+        }
+      ]
+    },
+    {
+      "article_id": "explainable_ai_medical_imaging_2016_2025__graph_dependency_compiler",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "condition": "graph_dependency_compiler",
+      "calls": [
+        {
+          "section": "Methods",
+          "pass_type": "base",
+          "original_prompt_chars": 51334,
+          "compact_prompt_chars": 18518,
+          "char_reduction_fraction": 0.6392644251373358,
+          "observed_original_prompt_tokens": 11669
+        },
+        {
+          "section": "Results",
+          "pass_type": "base",
+          "original_prompt_chars": 51722,
+          "compact_prompt_chars": 42855,
+          "char_reduction_fraction": 0.17143575267777733,
+          "observed_original_prompt_tokens": 11794
+        },
+        {
+          "section": "Results",
+          "pass_type": "repair",
+          "original_prompt_chars": 59417,
+          "compact_prompt_chars": 50550,
+          "char_reduction_fraction": 0.14923338438494038,
+          "observed_original_prompt_tokens": 13565
+        },
+        {
+          "section": "Discussion",
+          "pass_type": "base",
+          "original_prompt_chars": 60419,
+          "compact_prompt_chars": 51555,
+          "char_reduction_fraction": 0.1467088167629388,
+          "observed_original_prompt_tokens": 13804
+        },
+        {
+          "section": "Discussion",
+          "pass_type": "repair",
+          "original_prompt_chars": 66464,
+          "compact_prompt_chars": 57600,
+          "char_reduction_fraction": 0.13336543090996633,
+          "observed_original_prompt_tokens": 15225
+        },
+        {
+          "section": "Limitations",
+          "pass_type": "base",
+          "original_prompt_chars": 63016,
+          "compact_prompt_chars": 30204,
+          "char_reduction_fraction": 0.5206931572933858,
+          "observed_original_prompt_tokens": 14147
+        },
+        {
+          "section": "Conclusion",
+          "pass_type": "base",
+          "original_prompt_chars": 68249,
+          "compact_prompt_chars": 35436,
+          "char_reduction_fraction": 0.48078360122492636,
+          "observed_original_prompt_tokens": 15527
+        },
+        {
+          "section": "Introduction",
+          "pass_type": "base",
+          "original_prompt_chars": 54506,
+          "compact_prompt_chars": 45644,
+          "char_reduction_fraction": 0.16258760503430814,
+          "observed_original_prompt_tokens": 12206
+        },
+        {
+          "section": "Abstract",
+          "pass_type": "base",
+          "original_prompt_chars": 75440,
+          "compact_prompt_chars": 42625,
+          "char_reduction_fraction": 0.43498144220572643,
+          "observed_original_prompt_tokens": 16920
+        }
+      ]
+    },
+    {
+      "article_id": "sodium_ion_battery_cathodes_2010_2025__flat_article_compiler",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "condition": "flat_article_compiler",
+      "calls": [
+        {
+          "section": "Methods",
+          "pass_type": "base",
+          "original_prompt_chars": 43728,
+          "compact_prompt_chars": 16003,
+          "char_reduction_fraction": 0.6340331137943651,
+          "observed_original_prompt_tokens": 10553
+        },
+        {
+          "section": "Results",
+          "pass_type": "base",
+          "original_prompt_chars": 44116,
+          "compact_prompt_chars": 35315,
+          "char_reduction_fraction": 0.19949678121316528,
+          "observed_original_prompt_tokens": 10672
+        },
+        {
+          "section": "Results",
+          "pass_type": "repair",
+          "original_prompt_chars": 50465,
+          "compact_prompt_chars": 41664,
+          "char_reduction_fraction": 0.1743980976914693,
+          "observed_original_prompt_tokens": 12227
+        },
+        {
+          "section": "Discussion",
+          "pass_type": "base",
+          "original_prompt_chars": 50923,
+          "compact_prompt_chars": 42125,
+          "char_reduction_fraction": 0.17277065373210532,
+          "observed_original_prompt_tokens": 12396
+        },
+        {
+          "section": "Discussion",
+          "pass_type": "repair",
+          "original_prompt_chars": 56206,
+          "compact_prompt_chars": 47408,
+          "char_reduction_fraction": 0.1565313311746077,
+          "observed_original_prompt_tokens": 13524
+        },
+        {
+          "section": "Limitations",
+          "pass_type": "base",
+          "original_prompt_chars": 52916,
+          "compact_prompt_chars": 25195,
+          "char_reduction_fraction": 0.5238680172348629,
+          "observed_original_prompt_tokens": 12657
+        },
+        {
+          "section": "Conclusion",
+          "pass_type": "base",
+          "original_prompt_chars": 57775,
+          "compact_prompt_chars": 30053,
+          "char_reduction_fraction": 0.4798269147555171,
+          "observed_original_prompt_tokens": 13795
+        },
+        {
+          "section": "Introduction",
+          "pass_type": "base",
+          "original_prompt_chars": 46296,
+          "compact_prompt_chars": 37500,
+          "char_reduction_fraction": 0.18999481596682222,
+          "observed_original_prompt_tokens": 10998
+        },
+        {
+          "section": "Abstract",
+          "pass_type": "base",
+          "original_prompt_chars": 64434,
+          "compact_prompt_chars": 36710,
+          "char_reduction_fraction": 0.4302697333705807,
+          "observed_original_prompt_tokens": 15121
+        }
+      ]
+    },
+    {
+      "article_id": "sodium_ion_battery_cathodes_2010_2025__graph_dependency_compiler",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "condition": "graph_dependency_compiler",
+      "calls": [
+        {
+          "section": "Methods",
+          "pass_type": "base",
+          "original_prompt_chars": 45661,
+          "compact_prompt_chars": 17936,
+          "char_reduction_fraction": 0.6071921333304133,
+          "observed_original_prompt_tokens": 11221
+        },
+        {
+          "section": "Results",
+          "pass_type": "base",
+          "original_prompt_chars": 46049,
+          "compact_prompt_chars": 37248,
+          "char_reduction_fraction": 0.19112249994570996,
+          "observed_original_prompt_tokens": 11340
+        },
+        {
+          "section": "Results",
+          "pass_type": "repair",
+          "original_prompt_chars": 53493,
+          "compact_prompt_chars": 44692,
+          "char_reduction_fraction": 0.16452619968967908,
+          "observed_original_prompt_tokens": 12970
+        },
+        {
+          "section": "Discussion",
+          "pass_type": "base",
+          "original_prompt_chars": 53757,
+          "compact_prompt_chars": 44959,
+          "char_reduction_fraction": 0.16366240675632937,
+          "observed_original_prompt_tokens": 13072
+        },
+        {
+          "section": "Discussion",
+          "pass_type": "repair",
+          "original_prompt_chars": 59755,
+          "compact_prompt_chars": 50957,
+          "char_reduction_fraction": 0.1472345410425906,
+          "observed_original_prompt_tokens": 14339
+        },
+        {
+          "section": "Limitations",
+          "pass_type": "base",
+          "original_prompt_chars": 56463,
+          "compact_prompt_chars": 28742,
+          "char_reduction_fraction": 0.4909586809060801,
+          "observed_original_prompt_tokens": 13680
+        },
+        {
+          "section": "Conclusion",
+          "pass_type": "base",
+          "original_prompt_chars": 61040,
+          "compact_prompt_chars": 33318,
+          "char_reduction_fraction": 0.4541612057667104,
+          "observed_original_prompt_tokens": 14539
+        },
+        {
+          "section": "Introduction",
+          "pass_type": "base",
+          "original_prompt_chars": 48942,
+          "compact_prompt_chars": 40146,
+          "char_reduction_fraction": 0.17972293735441947,
+          "observed_original_prompt_tokens": 12013
+        },
+        {
+          "section": "Abstract",
+          "pass_type": "base",
+          "original_prompt_chars": 68162,
+          "compact_prompt_chars": 40438,
+          "char_reduction_fraction": 0.4067368915231361,
+          "observed_original_prompt_tokens": 16204
+        }
+      ]
+    }
+  ]
+}
