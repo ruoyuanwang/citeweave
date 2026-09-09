@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "judge_role": "independent_pre_acquisition_query_reviewer",
+  "protocol_sha256": "872c28cd84e56cc98d6522ed36db01ee24026f58c639695b127d6cdebc999fec",
+  "query_amendment_sha256": "0e051fc11e86895250256f5b2d47a603f771680d17e4904f5cc525c4258969c5",
+  "model": "deepseek-v4-pro",
+  "temperature": 0,
+  "request_sha256": "950df35e4d282145462f22c7808c1fc1e9ce95a512b968cdefe96cb92213fc54",
+  "response_content_sha256": "b656457514e967c9b570a2115c1412e34256443b9456fcbab3f83934b2f018b7",
+  "usage": {
+    "prompt_tokens": 894,
+    "completion_tokens": 4994,
+    "total_tokens": 5888,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4387
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 894
+  },
+  "judgment": {
+    "overall_approved": true,
+    "judgments": [
+      {
+        "id": "sodium_ion_battery_cathodes_2010_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Exact phrase 'sodium ion battery' may under-recall hyphenated, plural, and acronym variants such as 'sodium-ion battery', 'Na-ion battery', and 'sodium ion batteries'; full-text AND can also include articles that mention both terms only in passing.",
+        "rationale": "Construct is valid for sodium-ion battery cathode research, date window 2010-2025 covers the modern expansion of the field, and the topic is distinct from excluded existing topics. The recall caveat is acceptable for a frozen bibliometric dataset but should be noted."
+      },
+      {
+        "id": "organoid_disease_modeling_2010_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Exact phrase 'disease model' may miss variants such as 'disease modeling', 'disease models', or 'model of disease'; broad full-text AND may capture incidental co-occurrences of 'organoid' and 'disease model'.",
+        "rationale": "Core construct is valid, the 2010-2025 date window aligns with organoid disease modeling emergence, and domain distinctness is adequate. These limitations are manageable and do not require pre-acquisition amendment."
+      },
+      {
+        "id": "membrane_desalination_fouling_2010_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Exact phrase 'membrane fouling' may miss related terms such as 'fouling of membranes', 'biofouling', and 'scaling'; combining with 'desalination' over full text may introduce background-mention false positives.",
+        "rationale": "The query targets a valid environmental engineering construct, the date window is appropriate, and there is no problematic overlap with excluded topics. Recall and precision limitations are minor."
+      },
+      {
+        "id": "explainable_ai_medical_imaging_2016_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Exact phrases 'explainable AI' and 'medical imaging' may miss acronyms and synonyms such as 'XAI', 'interpretable AI', 'radiology', 'CT', or 'MRI'; full-text search may include papers that mention both concepts only incidentally.",
+        "rationale": "The construct validity is acceptable, the 2016-2025 window aligns with growth in explainable AI for medical imaging, and the topic is sufficiently distinct from excluded federated learning healthcare topics. The caveat is minor and does not warrant rejection."
+      }
+    ]
+  },
+  "outcome_visibility": "no acquisition counts, graph structures, or model outcomes supplied"
+}

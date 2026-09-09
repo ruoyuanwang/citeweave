@@ -1,0 +1,35 @@
+schema_version: 1
+amendment_id: formal_v3_neural_runtime_amendment_004_execution_scope_clarification
+status: frozen_before_keyword_neural_retrieval_and_confirmatory_generation
+prior_semantic_representation_amendment_sha256: dca3905cfe1402a1333279dace2c5c2d0d361c2bdb495fd8edf161ace8f09367
+formal_outcome_file_count: 0
+semantic_v2_sidecar_count: 0
+correction:
+  broad_feasibility_audit:
+    artifact: formal_v3_execution_prerequisites/exact_scale_embedding_reuse_semantic_v2_audit.json
+    sha256: 55921661d220828ce5c3c7a19f440e6546b90b11fa04fc0a36bc0c822de62bc0
+    cells: 24
+    target_rows: 191656
+    reused_rows: 191514
+    note: This crossed every primary network with Small and Medium to test general
+      feasibility. Some coauthorship and institution scale cells are not scheduled.
+  registered_execution_scope:
+    artifact: formal_v3_execution_prerequisites/exact_scale_embedding_reuse_semantic_v2_execution_scope_audit.json
+    sha256: 8eea0b2552b9e086c051df1e63b8b07572f35db9b123ffc3d547adbf2cfd5719
+    datasets: 8
+    network: keyword_cooccurrence
+    target_scales: [small, medium]
+    cells: 16
+    target_rows: 247995
+    reused_rows: 247995
+    newly_encoded_rows: 0
+    reuse_fraction: 1.0
+reporting_rule: Runtime and storage claims must use the registered execution scope.
+  The broad audit may be reported only as a feasibility/sensitivity audit.
+implementation_unchanged:
+  builder_sha256: 48b5d30362f7fef637394d3cb1361e5430cff161fdd07b4f8044ecf27e18d5a0
+  audit_script_sha256: e3dc25126444f9a9de9712794d8c13232469d9b4c671f5498382ff36d1a8455c
+experimental_design_unchanged: true
+tasks_or_conditions_changed: false
+validity_note: This corrects the denominator used for a runtime claim. It does not
+  change embeddings, retrieval ranks, tasks, contexts, or statistical estimands.

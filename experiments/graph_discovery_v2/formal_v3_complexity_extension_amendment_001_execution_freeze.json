@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_primary_replication_or_extension_model_outcomes",
+  "amendment": "formal_v3_complexity_extension_amendment_001_execution.yml",
+  "sha256": "9eaded9d966becdc02fe49b23b1262757c9a911e409c3848d3a6eca6ce750c4f",
+  "amends_protocol_sha256": "32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988",
+  "model_outcomes_inspected": false,
+  "logical_cells": 672,
+  "reused_cells": 360,
+  "incremental_api_calls": 312
+}

@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_model_execution",
+  "selection_rule": "Include a keyword task family only when the registered semantic entity anchor fields are identical in small, medium, and large graphs.",
+  "anchor_fields_by_task_type": {
+    "multi_hop_connector": [
+      "source_label",
+      "target_label"
+    ],
+    "bridge_counterfactual": [
+      "source_label",
+      "target_label"
+    ],
+    "community_role_contrast": [
+      "dominant_representative",
+      "outward_representative"
+    ],
+    "hub_removal_resilience": [
+      "removed_hub"
+    ],
+    "temporal_structural_shift": [
+      "emerging_label",
+      "established_label"
+    ]
+  },
+  "scales": [
+    "small",
+    "medium",
+    "large"
+  ],
+  "benchmark_hashes": {
+    "sodium_ion_battery_cathodes_2010_2025": "9823027a7fcc1d24245161e7493664f789c1d501625f4ee1638b3590e884ded6",
+    "organoid_disease_modeling_2010_2025": "b3cbf2b7ca9be748ac8c297d58f0ea0f2d9a7d2edfc5f172f8700a07b92e518b",
+    "membrane_desalination_fouling_2010_2025": "2a072a96ece1c84d1cdc57797cb980d4d80048fc13901ed840e8e30fda7f9b0b",
+    "explainable_ai_medical_imaging_2016_2025": "f42714b982c9f46255a0d4e312e2b437f2749560659b0e044e821374cf537a25"
+  },
+  "groups": 14,
+  "items": 42,
+  "pairs": [
+    {
+      "pair_id": "SP9d846c0d95f71f77",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "multi_hop_connector",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Energy storage",
+        "target_label": "Redox"
+      },
+      "item_ids": {
+        "small": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:multi_hop_connector",
+        "medium": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:multi_hop_connector",
+        "large": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:multi_hop_connector"
+      }
+    },
+    {
+      "pair_id": "SP0289323d7bb128dd",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "community_role_contrast",
+      "anchor_fields": [
+        "dominant_representative",
+        "outward_representative"
+      ],
+      "anchor": {
+        "dominant_representative": "Materials science",
+        "outward_representative": "Electrolyte"
+      },
+      "item_ids": {
+        "small": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:community_role_contrast",
+        "medium": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:community_role_contrast",
+        "large": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:community_role_contrast"
+      }
+    },
+    {
+      "pair_id": "SP696a0427abf0f796",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "hub_removal_resilience",
+      "anchor_fields": [
+        "removed_hub"
+      ],
+      "anchor": {
+        "removed_hub": "Materials science"
+      },
+      "item_ids": {
+        "small": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:hub_removal_resilience",
+        "medium": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+        "large": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:hub_removal_resilience"
+      }
+    },
+    {
+      "pair_id": "SPb0379e32c9cadfb5",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "temporal_structural_shift",
+      "anchor_fields": [
+        "emerging_label",
+        "established_label"
+      ],
+      "anchor": {
+        "emerging_label": "Nanotechnology",
+        "established_label": "Materials science"
+      },
+      "item_ids": {
+        "small": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:temporal_structural_shift",
+        "medium": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+        "large": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:temporal_structural_shift"
+      }
+    },
+    {
+      "pair_id": "SP45fa54d5ab1b459f",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "multi_hop_connector",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Cell biology",
+        "target_label": "Psychology"
+      },
+      "item_ids": {
+        "small": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:multi_hop_connector",
+        "medium": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:multi_hop_connector",
+        "large": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:multi_hop_connector"
+      }
+    },
+    {
+      "pair_id": "SPd7bf394d4a69eab9",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "hub_removal_resilience",
+      "anchor_fields": [
+        "removed_hub"
+      ],
+      "anchor": {
+        "removed_hub": "Biology"
+      },
+      "item_ids": {
+        "small": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:hub_removal_resilience",
+        "medium": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+        "large": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:hub_removal_resilience"
+      }
+    },
+    {
+      "pair_id": "SP366095e3c8a22c2c",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "temporal_structural_shift",
+      "anchor_fields": [
+        "emerging_label",
+        "established_label"
+      ],
+      "anchor": {
+        "emerging_label": "Neuroscience",
+        "established_label": "Biology"
+      },
+      "item_ids": {
+        "small": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:temporal_structural_shift",
+        "medium": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+        "large": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:temporal_structural_shift"
+      }
+    },
+    {
+      "pair_id": "SP5c9b6aa4eeed17f2",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "multi_hop_connector",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Materials science",
+        "target_label": "Ecology"
+      },
+      "item_ids": {
+        "small": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:multi_hop_connector",
+        "medium": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:multi_hop_connector",
+        "large": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:multi_hop_connector"
+      }
+    },
+    {
+      "pair_id": "SPb7ad4bec91329db5",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "hub_removal_resilience",
+      "anchor_fields": [
+        "removed_hub"
+      ],
+      "anchor": {
+        "removed_hub": "Chemistry"
+      },
+      "item_ids": {
+        "small": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:hub_removal_resilience",
+        "medium": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+        "large": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:hub_removal_resilience"
+      }
+    },
+    {
+      "pair_id": "SPa7b0734bfff5e599",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "temporal_structural_shift",
+      "anchor_fields": [
+        "emerging_label",
+        "established_label"
+      ],
+      "anchor": {
+        "emerging_label": "Materials science",
+        "established_label": "Chemistry"
+      },
+      "item_ids": {
+        "small": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:temporal_structural_shift",
+        "medium": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+        "large": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:temporal_structural_shift"
+      }
+    },
+    {
+      "pair_id": "SPa5d77811007334a7",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "multi_hop_connector",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Radiology",
+        "target_label": "Feature (linguistics)"
+      },
+      "item_ids": {
+        "small": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:multi_hop_connector",
+        "medium": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:multi_hop_connector",
+        "large": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:multi_hop_connector"
+      }
+    },
+    {
+      "pair_id": "SPd0d3b2775e3973b5",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "bridge_counterfactual",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Computer science",
+        "target_label": "Medicine"
+      },
+      "item_ids": {
+        "small": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:bridge_counterfactual",
+        "medium": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+        "large": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:bridge_counterfactual"
+      }
+    },
+    {
+      "pair_id": "SPc0a840a92b3c9305",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "hub_removal_resilience",
+      "anchor_fields": [
+        "removed_hub"
+      ],
+      "anchor": {
+        "removed_hub": "Computer science"
+      },
+      "item_ids": {
+        "small": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:hub_removal_resilience",
+        "medium": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+        "large": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:hub_removal_resilience"
+      }
+    },
+    {
+      "pair_id": "SP8b4b8b83c10f4aa6",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "temporal_structural_shift",
+      "anchor_fields": [
+        "emerging_label",
+        "established_label"
+      ],
+      "anchor": {
+        "emerging_label": "Medicine",
+        "established_label": "Computer science"
+      },
+      "item_ids": {
+        "small": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:temporal_structural_shift",
+        "medium": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+        "large": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:temporal_structural_shift"
+      }
+    }
+  ],
+  "model_outcomes_inspected": false
+}

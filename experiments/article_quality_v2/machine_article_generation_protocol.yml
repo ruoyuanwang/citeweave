@@ -1,0 +1,85 @@
+schema_version: 1
+protocol_id: machine_article_generation_v1
+status: frozen_before_any_machine_article_response
+purpose: Generate eight one-shot and eight CiteWeave pre-review drafts under identical text-only evidence, without repeated sampling or image access.
+
+population:
+  topics: 8
+  conditions: [one_shot_llm, citeweave_graph_review]
+  planned_generation_responses: 16
+  model: deepseek-v4-pro
+  temperature: 0
+  thinking: disabled
+  max_tokens: 8000
+
+shared_evidence:
+  manifest: experiments/article_quality_v2/same_evidence_text_writer_inputs_v1/manifest.json
+  manifest_sha256: a199256b59ab911568aa055a9eb839b015c1205c18d05724e2825c492c08194b
+  rendered_figure_access: false
+  visible_inputs:
+    - writing brief
+    - five verified graph phenomena
+    - operator traces and interpretation contracts
+    - fifteen representative source excerpts
+    - nonvisual figure metadata
+
+conditions:
+  one_shot_llm:
+    generation_requests: 1
+    graph_blueprint_access: false
+    iterative_revision: false
+    disposition: Candidate article is terminal after its single response, even if a deterministic quality gate fails.
+  citeweave_graph_review:
+    draft_generation_requests: 1
+    graph_blueprint_access: true
+    blueprint_method: Deterministic cross-phenomenon plan derived only from the shared graph records.
+    disposition: Passing output is a pre-review draft and cannot be labeled a final CiteWeave article before real claim review, dependency propagation, and controlled revision.
+
+deterministic_graph_blueprint:
+  phenomenon_cards: 5
+  registered_syntheses:
+    - connectivity versus redundancy
+    - centrality versus deletion resilience
+    - temporal growth versus established topology
+  dependency_edges:
+    - REF to PH literature-context edges
+    - PH to synthesis required-dependency edges
+  information_rule: The blueprint can reorganize but cannot add evidence unavailable to the one-shot condition.
+
+quality_gates:
+  word_range: 2700_to_3300_from_writer_pack
+  required_sections: [Abstract, Introduction, Methods, Results, Discussion, Limitations, Conclusion]
+  evidence_tokens: No PH or REF outside the frozen writer input.
+  phenomenon_coverage: All five overall; at least four in Results and four in Discussion.
+  rendered_image_markup: prohibited
+  failure_rule: Preserve failed output as a terminal generation-quality failure; do not resample.
+
+execution:
+  transport_rule: A request may be retried only when no provider response was received; the request bytes must remain identical.
+  response_rule: Once any provider response is received, the cell is terminal and cannot be regenerated.
+  api_scheduling: Execute only after the larger formal GraphRAG panels reach terminal analysis, avoiding concurrent use of the configured API key.
+  secret_rule: API key bytes may not appear in any request, response, error, or manifest artifact.
+
+frozen_plan:
+  path: experiments/article_quality_v2/machine_generation_v1/plan.json
+  sha256: af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36
+  cells: 16
+
+implementation:
+  planning_module:
+    path: src/citeweave/article_generation.py
+    sha256: ffc07bf922956da0941e549afce732a90a1e036ead4f82c718f623782abd27af
+  planning_cli:
+    path: scripts/prepare_machine_article_generation.py
+    sha256: 9ecab003362e3f2628f2e37f0e002f037144eb0ac6ededac8eb41728df4acff1
+  execution_cli:
+    path: scripts/run_machine_article_generation.py
+    sha256: 56edd231b56d1d421ab440e298cdf66cff5aecbaebc3bcf13d6f349d86bd4cb7
+  deferred_supervisor:
+    path: scripts/run_machine_article_generation_after_formal.ps1
+    sha256: a3c28e75aff4e8be95755253a10b0369d0fdd085ab955bd587f48f1f31b809c0
+
+interpretation_guard:
+  - Draft quality gates are process checks, not evidence that CiteWeave is better.
+  - The one-shot condition sees the same graph facts; the contrast isolates deterministic graph planning plus later validated human review, not evidence availability.
+  - No final article-quality comparison exists until human articles and blinded expert outcomes are complete.

@@ -1,0 +1,105 @@
+schema_version: 1
+status: frozen_after_corpus_acquisition_before_extension_task_construction_and_model_outcomes
+protocol_date: '2026-08-24'
+purpose: Test whether GraphRAG gains arise specifically from task complexity and whether this complexity advantage increases with graph scale.
+
+design_timing:
+  corpus_acquisition_complete: true
+  primary_and_replication_model_outcomes_inspected: false
+  extension_tasks_constructed_before_freeze: false
+  rule: This extension cannot change or replace any H1-H3 or R1 analysis in the frozen primary and replication protocols.
+
+datasets:
+  - id: perovskite_solar_cell_stability_2012_2025
+    source_panel: primary
+  - id: spatial_transcriptomics_cancer_2018_2025
+    source_panel: primary
+  - id: green_hydrogen_electrolysis_2010_2025
+    source_panel: primary
+  - id: federated_learning_healthcare_2016_2025
+    source_panel: primary
+  - id: sodium_ion_battery_cathodes_2010_2025
+    source_panel: replication
+  - id: organoid_disease_modeling_2010_2025
+    source_panel: replication
+  - id: membrane_desalination_fouling_2010_2025
+    source_panel: replication
+  - id: explainable_ai_medical_imaging_2016_2025
+    source_panel: replication
+
+factorial_design:
+  cluster_unit: dataset_id
+  graph_scales:
+    small: 100_nodes
+    medium: 300_nodes
+    large: bounded_full_corpus_2000_candidate_index
+  task_complexity:
+    simple:
+      complexity_level: 1
+      task_types: [direct_edge_lookup, node_attribute_lookup]
+    complex:
+      complexity_levels: [2, 3, 4, 5]
+      task_types:
+        - multi_hop_connector
+        - bridge_counterfactual
+        - community_role_contrast
+        - hub_removal_resilience
+        - temporal_structural_shift
+  registered_anchor_matches:
+    - simple: direct_edge_lookup
+      complex: bridge_counterfactual
+      invariant: identical_selected_edge_and_raw_edge_evidence
+    - simple: node_attribute_lookup
+      complex: hub_removal_resilience
+      invariant: identical_selected_hub_and_raw_node_evidence
+  conditions:
+    - flat_hybrid
+    - flat_neural_dense
+    - graph_hierarchical_retrieval_v2
+    - graph_program
+  record_budget: 160
+  exact_context_token_budget_equal: true
+  expected_tasks_per_dataset: 21
+  expected_total_tasks: 168
+  expected_model_calls: 672
+
+hypotheses:
+  - id: C1
+    primary: true
+    estimand: '(graph_program - flat_neural_dense)_complex - (graph_program - flat_neural_dense)_simple'
+    subset: registered_anchor_matches_all_scales
+    direction: greater_than_zero
+  - id: C2
+    primary: true
+    estimand: 'C1_large - C1_small'
+    subset: registered_anchor_matches
+    direction: greater_than_zero
+  - id: C3
+    primary: false
+    estimand: graph_program_minus_flat_neural_dense_on_simple_tasks
+    test: equivalence
+    margin: 0.05_absolute_accuracy
+  - id: C4
+    primary: false
+    estimand: graph_hierarchical_retrieval_v2_minus_flat_neural_dense_by_complexity
+    purpose: Separate graph indexing from executable graph operators.
+
+statistics:
+  paired_unit: matched_task_anchor_within_dataset_and_scale
+  primary_model: mixed_logistic_condition_by_complexity_by_scale_with_dataset_random_intercept
+  descriptive_ci: dataset_cluster_bootstrap_percentile_95
+  exact_sensitivity: dataset_cluster_sign_flip
+  multiplicity: holm_for_C1_C2
+  simple_equivalence: two_one_sided_cluster_tests
+  report: [answer_accuracy, evidence_f1, abstention, latency, input_tokens, output_tokens]
+
+interpretation_guard:
+  - A main effect of graph condition without C1 cannot support a task-complexity claim.
+  - C1 without C2 supports complexity selectivity but not scale amplification.
+  - Failure of simple-task equivalence must be reported and investigated for retrieval or formatting confounds.
+  - No extension result may be pooled with the primary experiment without being labeled post-acquisition pre-outcome extension evidence.
+
+freeze_rules:
+  - No task generator, anchor-match rule, condition, prompt, token budget, or metric change after this freeze without a versioned amendment made before model outcomes are inspected.
+  - Existing primary and replication results remain unopened until all extension benchmarks and hashes are frozen.
+  - The exact DeepSeek tokenizer and BGE-M3 sidecars remain execution prerequisites.

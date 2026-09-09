@@ -1,0 +1,135 @@
+schema_version: 1
+status: preregistered_data_pending
+frozen_before_acquisition: true
+protocol_date: '2026-08-24'
+purpose: Independent replication of the GraphRAG condition-by-scale interaction after the four-dataset confirmatory panel was found to have a minimum attainable exact p-value of 0.0625.
+
+contamination_policy:
+  excluded_existing_topics:
+    - climate_change_risks_1990_2021
+    - crispr_extracellular_vesicles_2015_2022
+    - digital_twins_healthcare_2012_2024
+    - gene_editing_als_2004_2024
+    - global_microplastics_2004_2019
+    - gnn_drug_discovery_2017_2023
+    - machine_learning_climate_change_2008_2022
+    - plant_heat_drought_2008_2021
+    - climate_adaptation_2018_2020
+    - crispr_editing_2018_2020
+    - quantum_machine_learning_2019_2021
+    - rag_graph_2022_2025
+    - perovskite_solar_cell_stability_2012_2025
+    - spatial_transcriptomics_cancer_2018_2025
+    - green_hydrogen_electrolysis_2010_2025
+    - federated_learning_healthcare_2016_2025
+  rule: No excluded topic may contribute replication query selection, prompt changes, retrieval changes, or replication outcomes.
+
+datasets:
+  - id: sodium_ion_battery_cathodes_2010_2025
+    title: Sodium-ion battery cathodes
+    domain: electrochemical_energy_storage
+    source: openalex
+    keywords: [sodium ion battery, cathode]
+    query_mode: all
+    year_from: 2010
+    year_to: 2025
+    document_types: [article]
+    max_records: null
+  - id: organoid_disease_modeling_2010_2025
+    title: Organoid disease modeling
+    domain: translational_biomedicine
+    source: openalex
+    keywords: [organoid, disease model]
+    query_mode: all
+    year_from: 2010
+    year_to: 2025
+    document_types: [article]
+    max_records: null
+  - id: membrane_desalination_fouling_2010_2025
+    title: Membrane desalination fouling
+    domain: environmental_engineering
+    source: openalex
+    keywords: [membrane desalination, fouling]
+    query_mode: all
+    year_from: 2010
+    year_to: 2025
+    document_types: [article]
+    max_records: null
+  - id: explainable_ai_medical_imaging_2016_2025
+    title: Explainable AI in medical imaging
+    domain: medical_artificial_intelligence
+    source: openalex
+    keywords: [explainable AI, medical imaging]
+    query_mode: all
+    year_from: 2016
+    year_to: 2025
+    document_types: [article]
+    max_records: null
+
+data_gates:
+  exhaustive_cursor_pagination: true
+  complete_natural_years: true
+  minimum_canonical_works: 200
+  minimum_large_graph_nodes: 100
+  minimum_temporal_years: 6
+  required_networks: [keyword_cooccurrence]
+  exclusion_timing: before_benchmark_answers_and_model_calls
+  exclusion_rule: Exclude only a dataset that fails a frozen data gate; report every exclusion.
+
+graph_materialization:
+  candidate_pool_size: 2000
+  edge_row_limit: 1000000
+  primary_scales:
+    small: 100
+    medium: 300
+    large: bounded_full_corpus_2000_candidate_index
+
+benchmark:
+  record_budget: 160
+  random_seed: 20260824
+  network: keyword_cooccurrence
+  scales: [small, medium, large]
+  task_types:
+    - multi_hop_connector
+    - bridge_counterfactual
+    - community_role_contrast
+    - hub_removal_resilience
+    - temporal_structural_shift
+  expected_tasks_per_eligible_dataset: 15
+  expected_total_tasks_if_all_eligible: 60
+  scale_pair_rule: Include a task family in the interaction analysis only when its semantic entity anchors are identical at small, medium, and large scale.
+
+conditions:
+  confirmatory: [flat_hybrid, graph_program]
+  record_budget_equal: true
+  exact_token_budget_equal: true
+
+model_protocol:
+  model: deepseek-v4-pro
+  temperature: 0
+  thinking: disabled
+  prompt_version: graph-discovery-v2-strong-controls-20260820
+  retry_rule: Retry only transport or parse failures with the identical frozen request.
+
+hypotheses:
+  - id: R1
+    contrast: graph_program_vs_flat_hybrid_by_scale
+    subset: frozen_semantically_paired_keyword_tasks
+    direction: graph_program_relative_advantage_increases_from_small_to_large
+    primary: true
+
+statistics:
+  combined_cluster_unit: dataset_id
+  primary_estimand: '(graph_program_large - flat_hybrid_large) - (graph_program_small - flat_hybrid_small)'
+  replication_estimand: same_as_primary_estimand_on_replication_datasets_only
+  combined_test: exact_one_sided_dataset_cluster_sign_flip_over_primary_and_replication_datasets
+  bootstrap_samples: 10000
+  bootstrap_seed: 20260824
+  report: [interaction_effect, cluster_confidence_interval, exact_p_value, evidence_f1, latency, tokens]
+  multiplicity: R1_is_the_only_replication_primary_hypothesis
+
+freeze_rules:
+  - No replication query, task, retrieval parameter, prompt, threshold, or exclusion rule changes after acquisition begins.
+  - Replication data and results must remain separate from the four-dataset primary formal_v3 directory.
+  - Primary four-dataset outcomes may not be inspected before replication benchmarks and scale-pair artifacts are frozen.
+  - Any post-acquisition implementation fix requires a versioned pre-outcome amendment.

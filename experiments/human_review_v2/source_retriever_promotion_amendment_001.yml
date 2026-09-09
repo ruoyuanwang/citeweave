@@ -1,0 +1,51 @@
+schema_version: 1
+amendment_id: source_retriever_promotion_amendment_001
+status: frozen_before_human_source_judgments
+base_protocol_sha256: d34d70c7ba4934274955c716ddc8cf1d25ef7639b1c0e561f4b9dd1fb1fe45de
+human_source_result_files_at_freeze: 0
+purpose: Convert adjudicated source-relevance feedback into a held-out retriever
+  promotion decision rather than appending review history to prompts.
+evaluation_unit:
+  query: registered phenomenon
+  candidate: source reference
+  labels:
+    direct_gain: 3.0
+    contextual_gain: 1.0
+    challenges_gain: 0.5
+    irrelevant_gain: 0.0
+    cannot_assess: excluded
+  cutoff: 3
+validation:
+  design: leave-one-dataset-out replay
+  minimum_heldout_datasets: 4
+  integrity:
+    - Every evaluated row must identify its held-out dataset.
+    - The held-out dataset may not appear in training_datasets.
+    - Baseline and candidate ranks must be unique within each query.
+    - Human suggested query terms may be used only in the fold where their source
+      dataset is not held out.
+promotion_gates:
+  mean_ndcg_at_3_improvement: 0.02
+  positive_recall_at_3_noninferiority_margin: 0.0
+  challenge_recall_at_3_noninferiority_margin: 0.02
+  off_topic_at_3: candidate_not_greater_than_baseline
+  unrelated_query_regression_rate_maximum: 0.05
+  all_gates_required: true
+fail_closed:
+  - No challenge examples yields hold.
+  - No unrelated-query controls yields hold.
+  - Fold leakage or duplicate ranks yields hold.
+  - Missing human labels yields hold.
+  - A held candidate may not alter production retrieval or future reviewer routing.
+implementation:
+  library: src/citeweave/source_retriever_promotion.py
+  library_sha256: fa7de1e4bdeb7e06dd602c4fe936d39e20587abaadad8c9025984db50de1fd26
+  audit_script: scripts/audit_source_retriever_promotion.py
+  audit_script_sha256: 3193fae5560373b8f5c380df54ba3accb6c637a7cc4e64df232f9b2ae337285e
+comparison:
+  baseline: frozen topic-task BM25 v4 source ranking
+  candidate: component-specific reranker or query revision trained only on non-heldout
+    adjudicated labels
+  raw_memory_prompt: prohibited_as_a_retriever_update
+interpretation: Promotion establishes cross-dataset retrieval utility under the registered
+  labels; it does not establish scientific truth or replace final evidence review.

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_neural_sidecars_and_confirmatory_generation",
+  "artifact": "formal_v3_complexity_extension_pre_generation_retrieval_curve.json",
+  "sha256": "cf79315ea961fd051128ed888093b124197ae41d7f25ed8bb89e7bbab0e5e3df",
+  "source_graph_necessity_audit_sha256": "d2cbe2d39c2a7fdbb8136e13bb04931852bd5a99a677820a017dd47aea96d2e6",
+  "frozen_at_local": "2026-08-26T13:44:00+08:00",
+  "formal_outcome_file_count": 0,
+  "semantic_v2_neural_sidecar_count": 0,
+  "tasks_or_retrieval_settings_changed_after_inspection": false
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "protocol_id": "article_claim_review_v1",
+  "sha256": "c3d74f5a6d1d8de130813c780cf16aafd4f1acedb52aca10e0d4992509beb8f2",
+  "frozen_before_machine_drafts": true,
+  "frozen_before_human_review_outcomes": true,
+  "machine_drafts_present": 0,
+  "real_reviewers_registered": 0,
+  "human_review_outcomes_present": 0,
+  "planned_claim_packets": 160,
+  "planned_primary_reviews": 320,
+  "adjudication": "disagreements_only_exactly_one_independent_third_reviewer",
+  "unaffected_paragraphs_locked": true
+}

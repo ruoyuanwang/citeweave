@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "amendment_id": "article_claim_review_integrity_and_effects_001",
+  "sha256": "57c1629381753d3d968ae0eed84b803aa24fc52d7fdf4de8ba6576e2ade71b76",
+  "base_protocol_sha256": "c3d74f5a6d1d8de130813c780cf16aafd4f1acedb52aca10e0d4992509beb8f2",
+  "frozen_before_machine_article_and_human_outcomes": true,
+  "machine_article_responses": 0,
+  "human_claim_reviews": 0,
+  "independent_expert_revision_reviews": 0,
+  "targeted_tests_passed_at_freeze": 18,
+  "supersedes_original_implementation_hashes_only": true
+}

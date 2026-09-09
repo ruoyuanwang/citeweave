@@ -1,0 +1,16 @@
+{
+  "schema_version": 2,
+  "protocol_id": "machine_article_generation_v2_cross_phenomenon_gate",
+  "sha256": "d6c30511a04f85bd0ad61fd211f28627dda3f7a35944adfdd71f1019fc29c983",
+  "base_protocol_sha256": "a204f520a6698f5c22b82cb40d5236359ea2c01c195e6f2772a146204921a4c0",
+  "plan_sha256": "af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36",
+  "frozen_before_machine_article_responses": true,
+  "machine_article_responses_present": false,
+  "machine_drafts_present": false,
+  "planned_cells": 16,
+  "generation_requests_per_cell": 1,
+  "request_bytes_modified": false,
+  "quality_resampling_allowed": false,
+  "rendered_figure_access": false,
+  "frozen_at_local": "2026-08-31T17:29:33+08:00"
+}

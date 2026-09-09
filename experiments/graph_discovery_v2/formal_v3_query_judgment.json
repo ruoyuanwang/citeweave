@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "judge_role": "independent_pre_acquisition_query_reviewer",
+  "protocol_sha256": "2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f",
+  "model": "deepseek-v4-pro",
+  "temperature": 0,
+  "request_sha256": "2fdee8173f7dd96ff66534ad403fafde7fe4adce7c98326db7ea1b89b71a6e50",
+  "response_content_sha256": "4138f1b7aea408cadfc4e3e8ad0292c313b7b20e5a169183716266c3237620e4",
+  "usage": {
+    "prompt_tokens": 776,
+    "completion_tokens": 4820,
+    "total_tokens": 5596,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4299
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 776
+  },
+  "judgment": {
+    "overall_approved": true,
+    "judgments": [
+      {
+        "id": "perovskite_solar_cell_stability_2012_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Phrase 'perovskite solar cell' may miss common plural variant 'perovskite solar cells' under exact-phrase search; year_to 2025 is not a complete natural year as defined by full data definition.",
+        "rationale": "The query captures the core field of perovskite solar cell stability with high precision when both phrases are required. The date window is appropriate for the main stability research period, though 2025 completeness should be verified or the analysis restricted to completed years."
+      },
+      {
+        "id": "spatial_transcriptomics_cancer_2018_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Year_to 2025 is not a complete natural year; 'cancer' is broad and may capture some off-topic papers, but AND with spatial transcriptomics maintains acceptable precision.",
+        "rationale": "Construct validity is strong: spatial transcriptomics emerged shortly before 2018 and cancer is a primary application area. Broadness of 'cancer' is a minor precision caveat, not a material defect."
+      },
+      {
+        "id": "green_hydrogen_electrolysis_2010_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "The exact phrase 'green hydrogen' may have low recall before the term became widely adopted, and year_to 2025 is incomplete.",
+        "rationale": "The Boolean AND of 'green hydrogen' and 'electrolysis' targets a well-defined chemical engineering topic. Early-year sparsity from terminology adoption is a minor recall caveat, not a reason for rejection."
+      },
+      {
+        "id": "federated_learning_healthcare_2016_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Exact spelling 'healthcare' may miss variants such as 'health care'; year_to 2025 is incomplete.",
+        "rationale": "Federated learning began in 2016, so the date window is well aligned. The two-keyword AND query yields high precision for healthcare applications; spelling variant undercount is a minor recall limitation."
+      }
+    ]
+  },
+  "outcome_visibility": "no acquisition counts, graph structures, or model outcomes supplied"
+}

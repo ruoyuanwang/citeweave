@@ -1,0 +1,98 @@
+schema_version: 1
+protocol_id: article_claim_review_v1
+status: frozen_before_machine_drafts_and_human_outcomes
+purpose: Convert real expert review into auditable claim corrections and dependency-scoped article revisions, rather than prompt memory.
+
+population:
+  topics: 8
+  source_condition: citeweave_graph_review
+  claims_per_topic: 20
+  planned_claim_packets: 160
+  planned_primary_reviews: 320
+  sampling_frame: Evidence-bearing sentences in Results and Discussion only.
+  coverage_constraint: At least two distinct selected claims for each of five registered graph phenomena per topic.
+  risk_priority:
+    - causal language
+    - numerical language
+    - multiple-phenomenon synthesis
+    - discussion interpretation
+
+review_design:
+  primary_reviewers_per_claim: 2
+  adjudicators_per_disagreement: 1
+  minimum_reviewers_per_topic: 3
+  eligibility: Domain-qualified and conflict-free for the assigned topic.
+  synthetic_or_llm_proxy_reviewers: prohibited
+  assignment_seed: 20260827
+  adjudication_rule: Exact agreement is required across four binary judgments, action, decisive evidence, invalid dependencies, replacement, and transfer guard. Only disagreements are sent to the frozen third reviewer.
+  adjudicator_blinding: Primary identities and judgments are withheld; the third reviewer independently sees the same claim and evidence packet.
+
+review_schema:
+  binary_judgments:
+    - factual_supported
+    - interpretation_calibrated
+    - alternative_adequate
+    - evidence_sufficient
+  actions: [accept, rewrite, reject_claim, abstain]
+  grounded_decisions: Decisive and invalid dependency IDs must be unique and drawn only from the visible packet.
+  accept_guard: All four judgments must pass and no invalid dependency may be recorded.
+  corrective_guard: Rewrite or rejection requires an explicit recorded defect; rewrite requires replacement text.
+  timing: Visibility-heartbeat server accounting; submissions are immutable after acceptance.
+
+feedback_use:
+  dependency_graph: source or graph evidence -> claim -> paragraph
+  propagation: Invalid upstream evidence marks every dependent claim and paragraph for review.
+  revision_scope: Only affected hash-bound paragraphs may be replaced; all other article bytes remain unchanged.
+  citation_guard: A replacement may not introduce PH or REF identifiers outside its frozen affected-paragraph evidence set.
+  abstention_rule: Any resolved abstention blocks automatic revision until a qualified human resolves it.
+  learning_rule: Feedback may train component-specific guarded rules only through the separately frozen held-out transfer and regression gates; raw reviewer history is not appended as prompt memory.
+
+prospective_outcomes:
+  process:
+    - primary disagreement rate
+    - adjudication rate
+    - active review seconds per claim and per corrected paragraph
+    - affected paragraphs per invalid upstream dependency
+    - fraction of article bytes preserved exactly
+  efficacy:
+    - independent blind expert strict support-and-calibration change from pre-review to post-review claims
+    - correction precision among modified claims
+    - harm rate among independently sampled unchanged claims
+    - final CiteWeave versus one-shot and human article outcomes under the frozen expert evaluation protocol
+  inference: Topic is the independent cluster; paired topic-level exact sign-flip tests and confidence intervals are primary where applicable.
+  interpretation: Process invariants can establish correct execution. Human-review benefit requires real reviewer and independent expert outcomes.
+
+prerequisites:
+  machine_generation_plan:
+    path: experiments/article_quality_v2/machine_generation_v1/plan.json
+    sha256: af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36
+  roster_template:
+    path: experiments/article_quality_v2/article_claim_review_v1/reviewer_roster.json
+    sha256: 17fa36fa0de78c81085e06585c04c80673e5d735f1badc1bf24eb073fb06e928
+    rule: The completed real roster is outcome-independent and must receive its own hash freeze before packet generation.
+
+implementation:
+  packet_module:
+    path: src/citeweave/article_claim_review.py
+    sha256: 40e36cff8b88c7ee73965ecce9eea43b939ceb94c6d13a3d4ae245cf3faa7700
+  revision_module:
+    path: src/citeweave/article_review_revision.py
+    sha256: 7672bf3acc62661fa29252f40aab2c97b030edc77b2cb018cecc54a9da95dbb3
+  blinded_review_ui:
+    path: src/citeweave/review_ui.py
+    sha256: a5d01fef37e763c56373ef42a7b3d950e86e71faca24e65da01eefdad788b94d
+  preparation_cli:
+    path: scripts/prepare_article_claim_review.py
+    sha256: 1cbcd9cd72ef42b8f470f4fe691f66b126f9ded94062cf700126dd962e706cb9
+  finalization_cli:
+    path: scripts/finalize_article_claim_review.py
+    sha256: 4bae4b1510eea14fd034059891e574f458a2c1ed87a6c3aa3629b8723b22d4db
+  deferred_supervisor:
+    path: scripts/prepare_article_claim_review_after_generation.ps1
+    sha256: c6c4238c1d24e90402fde6200b32f0756964dbc6ab39ae373d92addceec5ae34
+
+current_state:
+  machine_drafts_present: 0
+  real_reviewers_registered: 0
+  human_review_outcomes_present: 0
+  causal_or_efficacy_claims_allowed: false

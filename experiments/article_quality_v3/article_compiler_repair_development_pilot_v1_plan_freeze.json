@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "posthoc_development_repair_plan_frozen_before_provider_calls",
+  "sha256": "0ac1f399e64d8aa5766ecf827ae3a7aecf93373b93a5820fe335b98faaab98b3",
+  "protocol_sha256": "7a064cd7adbc8d7f26f27550569aff017a796d5674a53aa0ca6cc0aa277583e4",
+  "repair_calls": 4,
+  "provider_responses_at_freeze": 0
+}

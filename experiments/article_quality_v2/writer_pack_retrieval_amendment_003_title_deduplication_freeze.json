@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "amendment_id": "writer_pack_retrieval_amendment_003_title_deduplication",
+  "amendment_sha256": "771e095623388e60daf2ef107437104889ff89564d9877554a510eb425c9c837",
+  "source_selection_version": "topic-task-bm25-v4-title-deduplicated",
+  "frozen_before_v4_writer_packs": true,
+  "frozen_before_same_evidence_articles": true,
+  "frozen_before_expert_outcomes": true,
+  "v3_source_titles_inspected": true,
+  "machine_article_outcomes_inspected": false,
+  "expert_outcomes_inspected": false
+}

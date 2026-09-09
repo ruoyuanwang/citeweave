@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "status": "ready",
+  "checked_before_same_evidence_articles": true,
+  "same_evidence_articles_present": false,
+  "writer_access_mode": "structured_graph_text_only_figure_inserted_posthoc",
+  "writer_input_manifest": "experiments/article_quality_v2/same_evidence_text_writer_inputs_v1/manifest.json",
+  "writer_input_manifest_sha256": "a199256b59ab911568aa055a9eb839b015c1205c18d05724e2825c492c08194b",
+  "text_only_writer_inputs": 8,
+  "writer_inputs_with_image_locator": 0,
+  "rendered_figure_exposed_to_any_writer": false,
+  "rendered_figure_policy": "One frozen topic figure is attached unchanged after each draft freezes and is shown in every blinded evaluator packet.",
+  "figure_access_amendment": "experiments/article_quality_v2/expert_evaluation_amendment_002_text_only_writer_access.yml",
+  "figure_access_amendment_sha256": "eb144b0d6f5cac41f5ee009d5e8af6a87474f97ff03836b5aadb6483a1e1212e",
+  "freeze_sha256": "65c2ba85328d47a667dfb252cb2b23122684786ad56fbe19b357290c82977338",
+  "blocking_reasons": [],
+  "remaining_non_access_requirements": [
+    "Generate and freeze 8 CiteWeave and 8 one-shot model drafts from the audited text-only inputs.",
+    "Collect 8 independently authored human drafts from the same audited inputs.",
+    "Recruit the conflict-screened expert panel and collect registered ratings."
+  ]
+}

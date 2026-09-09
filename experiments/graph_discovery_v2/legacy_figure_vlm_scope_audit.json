@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "status": "scope_confirmed",
+  "run_id": "formal_v2_nonthinking_20260806",
+  "summary": {
+    "datasets_with_figure_vlm": 8,
+    "figure_items": 46,
+    "figure_task_type_counts": {
+      "network_size": 46
+    },
+    "direct_printed_subtitle_reads": 46,
+    "figure_correct_items": 46,
+    "figure_exact_accuracy": 1.0,
+    "all_figure_items_are_network_size": true,
+    "all_figure_answers_read_printed_subtitles": true,
+    "graph_items": 227,
+    "graph_task_type_counts": {
+      "cluster_membership": 46,
+      "highest_occurrence": 45,
+      "network_size": 46,
+      "strongest_connection": 44,
+      "unanswerable_false_premise": 46
+    },
+    "figure_graph_overlap_items": 46,
+    "graph_correct_on_overlap_items": 46,
+    "graph_exact_accuracy_on_overlap": 1.0,
+    "both_conditions_correct_on_overlap_items": 46,
+    "graph_items_without_visual_counterpart": 181,
+    "formal_judged_pairs": 35,
+    "formal_judged_task_type_counts": {
+      "network_size": 35
+    },
+    "formal_preferences": {
+      "tie": 35
+    },
+    "all_formal_judgments_are_network_size": true,
+    "unknown_formal_judgment_ids": []
+  },
+  "datasets": [
+    {
+      "dataset_id": "climate_change_risks_1990_2021",
+      "figure_items": 6,
+      "figure_task_types": {
+        "network_size": 6
+      },
+      "direct_printed_subtitle_reads": 6,
+      "graph_items": 30,
+      "graph_only_items": 24,
+      "overlap_items": 6
+    },
+    {
+      "dataset_id": "crispr_extracellular_vesicles_2015_2022",
+      "figure_items": 5,
+      "figure_task_types": {
+        "network_size": 5
+      },
+      "direct_printed_subtitle_reads": 5,
+      "graph_items": 24,
+      "graph_only_items": 19,
+      "overlap_items": 5
+    },
+    {
+      "dataset_id": "digital_twins_healthcare_2012_2024",
+      "figure_items": 6,
+      "figure_task_types": {
+        "network_size": 6
+      },
+      "direct_printed_subtitle_reads": 6,
+      "graph_items": 29,
+      "graph_only_items": 23,
+      "overlap_items": 6
+    },
+    {
+      "dataset_id": "gene_editing_als_2004_2024",
+      "figure_items": 5,
+      "figure_task_types": {
+        "network_size": 5
+      },
+      "direct_printed_subtitle_reads": 5,
+      "graph_items": 25,
+      "graph_only_items": 20,
+      "overlap_items": 5
+    },
+    {
+      "dataset_id": "global_microplastics_2004_2019",
+      "figure_items": 6,
+      "figure_task_types": {
+        "network_size": 6
+      },
+      "direct_printed_subtitle_reads": 6,
+      "graph_items": 30,
+      "graph_only_items": 24,
+      "overlap_items": 6
+    },
+    {
+      "dataset_id": "gnn_drug_discovery_2017_2023",
+      "figure_items": 6,
+      "figure_task_types": {
+        "network_size": 6
+      },
+      "direct_printed_subtitle_reads": 6,
+      "graph_items": 29,
+      "graph_only_items": 23,
+      "overlap_items": 6
+    },
+    {
+      "dataset_id": "machine_learning_climate_change_2008_2022",
+      "figure_items": 6,
+      "figure_task_types": {
+        "network_size": 6
+      },
+      "direct_printed_subtitle_reads": 6,
+      "graph_items": 30,
+      "graph_only_items": 24,
+      "overlap_items": 6
+    },
+    {
+      "dataset_id": "plant_heat_drought_2008_2021",
+      "figure_items": 6,
+      "figure_task_types": {
+        "network_size": 6
+      },
+      "direct_printed_subtitle_reads": 6,
+      "graph_items": 30,
+      "graph_only_items": 24,
+      "overlap_items": 6
+    }
+  ],
+  "interpretation": {
+    "supports": "The legacy visual panel measured transcription of node/link counts printed in figure subtitles and exhibited a ceiling on that narrow task.",
+    "does_not_support": "It does not estimate Figure/VLM performance on node ranking, edge selection, community membership, multi-hop paths, counterfactual deletion, temporal-structural joins, or graph-level synthesis, and therefore cannot establish equivalence between visual input and structural GraphRAG."
+  },
+  "source_files": [
+    {
+      "path": "experiments\\formal_runs\\climate_change_risks_1990_2021\\formal_v2_nonthinking_20260806\\figure_vlm\\score.json",
+      "sha256": "9d3dd2ee4f4b7f91612094f59c2c70ed244638d05c27243242f47e5d1708293c"
+    },
+    {
+      "path": "experiments\\formal_runs\\climate_change_risks_1990_2021\\formal_v2_nonthinking_20260806\\graph_rag\\score.json",
+      "sha256": "2c208de4dc7a835fa9a8cc1945506bec9833beed3879bbcdde0199767e743de0"
+    },
+    {
+      "path": "experiments\\formal_runs\\crispr_extracellular_vesicles_2015_2022\\formal_v2_nonthinking_20260806\\figure_vlm\\score.json",
+      "sha256": "38129e1ba556370bd1c0a968f8d28b0f77a00936f4947606248d31069a411bdf"
+    },
+    {
+      "path": "experiments\\formal_runs\\crispr_extracellular_vesicles_2015_2022\\formal_v2_nonthinking_20260806\\graph_rag\\score.json",
+      "sha256": "6c779dce9ee33a0495c2b0f426c31786882316595a180d7d956c9536b778d812"
+    },
+    {
+      "path": "experiments\\formal_runs\\digital_twins_healthcare_2012_2024\\formal_v2_nonthinking_20260806\\figure_vlm\\score.json",
+      "sha256": "cac2b1984080aebf8a833128fb79e91ae83ac5335b1684706f828d155e58f767"
+    },
+    {
+      "path": "experiments\\formal_runs\\digital_twins_healthcare_2012_2024\\formal_v2_nonthinking_20260806\\graph_rag\\score.json",
+      "sha256": "4f6fd4c045287c2c2d7e4c82e458f87f53095a36088cc1220355931032d031c2"
+    },
+    {
+      "path": "experiments\\formal_runs\\gene_editing_als_2004_2024\\formal_v2_nonthinking_20260806\\figure_vlm\\score.json",
+      "sha256": "3d256fbc0938be10618f4efd9e9a3e1336ef7b24f267aad83d17edd43db7a243"
+    },
+    {
+      "path": "experiments\\formal_runs\\gene_editing_als_2004_2024\\formal_v2_nonthinking_20260806\\graph_rag\\score.json",
+      "sha256": "e56fcdb666f6d0166adee3c0f066f929779615ccd11c4edfe0387371d67062bd"
+    },
+    {
+      "path": "experiments\\formal_runs\\global_microplastics_2004_2019\\formal_v2_nonthinking_20260806\\figure_vlm\\score.json",
+      "sha256": "33f3f1fa63dd1b67dc9de3b69d6b9962311d2b4628949cc1744e26ae20787e4b"
+    },
+    {
+      "path": "experiments\\formal_runs\\global_microplastics_2004_2019\\formal_v2_nonthinking_20260806\\graph_rag\\score.json",
+      "sha256": "5880c61a6831368414ca0b74876fa27951c1de622aca03e9477e7c459b81fcaa"
+    },
+    {
+      "path": "experiments\\formal_runs\\gnn_drug_discovery_2017_2023\\formal_v2_nonthinking_20260806\\figure_vlm\\score.json",
+      "sha256": "35dfa10afa1150c143da5910fd5639c9310431094ddc6777add40f0c17f0ffb1"
+    },
+    {
+      "path": "experiments\\formal_runs\\gnn_drug_discovery_2017_2023\\formal_v2_nonthinking_20260806\\graph_rag\\score.json",
+      "sha256": "479c2e787387ae796b2735ee52ceea0c11d827f1c94c9ece8701c96485e9f38f"
+    },
+    {
+      "path": "experiments\\formal_runs\\machine_learning_climate_change_2008_2022\\formal_v2_nonthinking_20260806\\figure_vlm\\score.json",
+      "sha256": "55c40913f2e27f66385cdfadeee39c92023812ee279a9e25a039544f4fbf8a8d"
+    },
+    {
+      "path": "experiments\\formal_runs\\machine_learning_climate_change_2008_2022\\formal_v2_nonthinking_20260806\\graph_rag\\score.json",
+      "sha256": "93a2708952e825e34c610db8e33305619e9bafc1c1a18f0166ccdfbcb4e13ff6"
+    },
+    {
+      "path": "experiments\\formal_runs\\plant_heat_drought_2008_2021\\formal_v2_nonthinking_20260806\\figure_vlm\\score.json",
+      "sha256": "e4b72f5d1c47c160929f7ec9be55d5a9a8883403dcbf210d1349fc89f27f06f6"
+    },
+    {
+      "path": "experiments\\formal_runs\\plant_heat_drought_2008_2021\\formal_v2_nonthinking_20260806\\graph_rag\\score.json",
+      "sha256": "5f15fdf2ba28db42a2db2a8c5c15c778152c90498018dfa263ee4f92ab70e714"
+    },
+    {
+      "path": "experiments\\formal_graph_judging\\graph_vs_figure\\resolved_v1\\resolved_judgments.jsonl",
+      "sha256": "689bf11c4561f4e929803c54c831632bca4863e1f4483d7a78786f8a2e543122"
+    }
+  ]
+}

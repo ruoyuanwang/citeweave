@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_keyword_neural_retrieval_and_confirmatory_generation",
+  "amendment": "formal_v3_neural_runtime_amendment_004_execution_scope_clarification.yml",
+  "sha256": "b02b76c56d73e901f5962774594271a7e1b75c956630299b01d96de44330ba65",
+  "formal_outcome_file_count": 0,
+  "semantic_v2_sidecar_count": 0,
+  "registered_execution_target_rows": 247995,
+  "registered_execution_reused_rows": 247995,
+  "frozen_at_local": "2026-08-26T13:58:00+08:00"
+}

@@ -1,0 +1,5098 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "construction_manifest_sha256": "203a6f145ebfb0c1fac625f0e525b40766b49480c69fbf3c49c5407e52aa5246",
+  "benchmark_sha256": {
+    "perovskite_solar_cell_stability_2012_2025": "2ddd73d257cbd40180ce185c44d5fdf7d03a0ee9fe3ad6e4f001f3ee646af476",
+    "spatial_transcriptomics_cancer_2018_2025": "b9b087c809d937dbd2eb5ae6bd5064de00dbe2f2ae9035b9e8128c855b3a6a9a",
+    "green_hydrogen_electrolysis_2010_2025": "9b75bbb9f467134ff17e8f17b292120a6720bc1cd4a11ad256a06ed0606d7d0c",
+    "federated_learning_healthcare_2016_2025": "e0d3e7bd0a7bb5228c39c1ae1f06e5a5b36777ce9d3a7c140d1188772eb167d3",
+    "sodium_ion_battery_cathodes_2010_2025": "751384ab05870baa48b4880d08230ff861c963f8077cb0c5aee5c36aee3513db",
+    "organoid_disease_modeling_2010_2025": "46e5e3f259ef8c1464e7c4e93dca607148c46c760c1e318bd24c97ec0aa3c4ad",
+    "membrane_desalination_fouling_2010_2025": "ac8ec050bed72e681edec6b5843d5f9e7ca7131869099ab3094cb10114f8a499",
+    "explainable_ai_medical_imaging_2016_2025": "56493f53557c8b64338b4ddf0c580f1124a1b63c342ed4a09538c763e0425560"
+  },
+  "records": [
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:multi_hop_connector",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "small",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 2,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.4,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:bridge_counterfactual",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "small",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:community_role_contrast",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "small",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:hub_removal_resilience",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "small",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:temporal_structural_shift",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "small",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:multi_hop_connector",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "medium",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 2,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.4,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "medium",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:community_role_contrast",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "medium",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "medium",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "medium",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:multi_hop_connector",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "large",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 2,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.4,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:bridge_counterfactual",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "large",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:community_role_contrast",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "large",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:hub_removal_resilience",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "large",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:temporal_structural_shift",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "large",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:direct_edge_lookup",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "large",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:node_attribute_lookup",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "large",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:direct_edge_lookup",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "medium",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:node_attribute_lookup",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "medium",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:direct_edge_lookup",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "small",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:node_attribute_lookup",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "scale": "small",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:multi_hop_connector",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "small",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5555555555555556,
+        "graph_hierarchical_retrieval_v2": 0.8888888888888888,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:bridge_counterfactual",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "small",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:community_role_contrast",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "small",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:hub_removal_resilience",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "small",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:temporal_structural_shift",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "small",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:multi_hop_connector",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "medium",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 0.8888888888888888,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "medium",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:community_role_contrast",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "medium",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "medium",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "medium",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:multi_hop_connector",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "large",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.1111111111111111,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:bridge_counterfactual",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "large",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:community_role_contrast",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "large",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:hub_removal_resilience",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "large",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:temporal_structural_shift",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "large",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:direct_edge_lookup",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "large",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:node_attribute_lookup",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "large",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:direct_edge_lookup",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "medium",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:node_attribute_lookup",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "medium",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:direct_edge_lookup",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "small",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:node_attribute_lookup",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "scale": "small",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:multi_hop_connector",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "small",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.8571428571428571,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:bridge_counterfactual",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "small",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:community_role_contrast",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "small",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:hub_removal_resilience",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "small",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:temporal_structural_shift",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "small",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:multi_hop_connector",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "medium",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.2857142857142857,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "medium",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:community_role_contrast",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "medium",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "medium",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "medium",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:multi_hop_connector",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "large",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.2857142857142857,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:bridge_counterfactual",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "large",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:community_role_contrast",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "large",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:hub_removal_resilience",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "large",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:temporal_structural_shift",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "large",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:direct_edge_lookup",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "large",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:node_attribute_lookup",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "large",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:direct_edge_lookup",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "medium",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:node_attribute_lookup",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "medium",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:direct_edge_lookup",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "small",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:node_attribute_lookup",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "scale": "small",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:multi_hop_connector",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "small",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.8571428571428571,
+        "graph_hierarchical_retrieval_v2": 0.8571428571428571,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:bridge_counterfactual",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "small",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:community_role_contrast",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "small",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:hub_removal_resilience",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "small",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:temporal_structural_shift",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "small",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:multi_hop_connector",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "medium",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.7142857142857143,
+        "graph_hierarchical_retrieval_v2": 0.8571428571428571,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "medium",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:community_role_contrast",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "medium",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "medium",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "medium",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:multi_hop_connector",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "large",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.42857142857142855,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:bridge_counterfactual",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "large",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:community_role_contrast",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "large",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:hub_removal_resilience",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "large",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:temporal_structural_shift",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "large",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:direct_edge_lookup",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "large",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:node_attribute_lookup",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "large",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:direct_edge_lookup",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "medium",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:node_attribute_lookup",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "medium",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:direct_edge_lookup",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "small",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:node_attribute_lookup",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "scale": "small",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:multi_hop_connector",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "small",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.42857142857142855,
+        "graph_hierarchical_retrieval_v2": 0.8571428571428571,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:bridge_counterfactual",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "small",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:community_role_contrast",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "small",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:hub_removal_resilience",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "small",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:temporal_structural_shift",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "small",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:multi_hop_connector",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "medium",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.2857142857142857,
+        "graph_hierarchical_retrieval_v2": 0.8571428571428571,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "medium",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:community_role_contrast",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "medium",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "medium",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "medium",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:multi_hop_connector",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "large",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.2857142857142857,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:bridge_counterfactual",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "large",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:community_role_contrast",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "large",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:hub_removal_resilience",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "large",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:temporal_structural_shift",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "large",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:direct_edge_lookup",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "large",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:large:node_attribute_lookup",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "large",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:direct_edge_lookup",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "medium",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:medium:node_attribute_lookup",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "medium",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:direct_edge_lookup",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "small",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "sodium_ion_battery_cathodes_2010_2025:keyword_cooccurrence:small:node_attribute_lookup",
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "scale": "small",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:multi_hop_connector",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "small",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.7142857142857143,
+        "graph_hierarchical_retrieval_v2": 0.8571428571428571,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:bridge_counterfactual",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "small",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:community_role_contrast",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "small",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:hub_removal_resilience",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "small",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:temporal_structural_shift",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "small",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:multi_hop_connector",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "medium",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5714285714285714,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "medium",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:community_role_contrast",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "medium",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "medium",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "medium",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:multi_hop_connector",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "large",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.2857142857142857,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:bridge_counterfactual",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "large",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:community_role_contrast",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "large",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:hub_removal_resilience",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "large",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:temporal_structural_shift",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "large",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:direct_edge_lookup",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "large",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:large:node_attribute_lookup",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "large",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:direct_edge_lookup",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "medium",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:medium:node_attribute_lookup",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "medium",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:direct_edge_lookup",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "small",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "organoid_disease_modeling_2010_2025:keyword_cooccurrence:small:node_attribute_lookup",
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "scale": "small",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:multi_hop_connector",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "small",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.8571428571428571,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:bridge_counterfactual",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "small",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:community_role_contrast",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "small",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:hub_removal_resilience",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "small",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:temporal_structural_shift",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "small",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:multi_hop_connector",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "medium",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.42857142857142855,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "medium",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:community_role_contrast",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "medium",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "medium",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "medium",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:multi_hop_connector",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "large",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 3,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.42857142857142855,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:bridge_counterfactual",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "large",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:community_role_contrast",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "large",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:hub_removal_resilience",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "large",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:temporal_structural_shift",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "large",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:direct_edge_lookup",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "large",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:large:node_attribute_lookup",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "large",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:direct_edge_lookup",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "medium",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:medium:node_attribute_lookup",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "medium",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:direct_edge_lookup",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "small",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "membrane_desalination_fouling_2010_2025:keyword_cooccurrence:small:node_attribute_lookup",
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "scale": "small",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:multi_hop_connector",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "small",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.4444444444444444,
+        "graph_hierarchical_retrieval_v2": 0.8888888888888888,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:bridge_counterfactual",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "small",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:community_role_contrast",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "small",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:hub_removal_resilience",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "small",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:temporal_structural_shift",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "small",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:multi_hop_connector",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "medium",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.2222222222222222,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "medium",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:community_role_contrast",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "medium",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "medium",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "medium",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:multi_hop_connector",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "large",
+      "task_type": "multi_hop_connector",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "intermediate_labels",
+        "hops",
+        "total_inverse_weight_distance"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_filter",
+        "shortest_path",
+        "path_projection"
+      ],
+      "required_operator_classes": [
+        "community_constraint",
+        "path"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.1111111111111111,
+        "graph_hierarchical_retrieval_v2": 0.8888888888888888,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:bridge_counterfactual",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "large",
+      "task_type": "bridge_counterfactual",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "alternate_hops_after_deletion",
+        "component_increase"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "community_boundary_edges",
+        "edge_betweenness",
+        "delete_edge_counterfactual"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:community_role_contrast",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "large",
+      "task_type": "community_role_contrast",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "dominant_community",
+        "dominant_nodes",
+        "outward_community",
+        "outward_external_share"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "louvain",
+        "community_aggregate",
+        "role_contrast"
+      ],
+      "required_operator_classes": [
+        "community_detection",
+        "global_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.5,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:hub_removal_resilience",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "large",
+      "task_type": "hub_removal_resilience",
+      "registered_complexity": 4,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "replacement_hub",
+        "components_after",
+        "largest_component_fraction_of_original_nodes"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 4,
+      "operators": [
+        "weighted_degree_argmax",
+        "delete_node",
+        "component_recompute",
+        "weighted_degree_argmax"
+      ],
+      "required_operator_classes": [
+        "global_selection",
+        "intervention",
+        "recompute"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:temporal_structural_shift",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "large",
+      "task_type": "temporal_structural_shift",
+      "registered_complexity": 5,
+      "simple_control": false,
+      "intrinsic_single_record_lookup": false,
+      "decisive_answer_keys": [
+        "emerging_recent_documents",
+        "emerging_growth_ratio",
+        "established_weighted_degree",
+        "same_community"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 3,
+      "operators": [
+        "temporal_window_aggregate",
+        "weighted_degree_argmax",
+        "cross_layer_join"
+      ],
+      "required_operator_classes": [
+        "cross_layer_join",
+        "temporal_aggregation"
+      ],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:direct_edge_lookup",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "large",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:large:node_attribute_lookup",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "large",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": false,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:direct_edge_lookup",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "medium",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.3333333333333333,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:medium:node_attribute_lookup",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "medium",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:direct_edge_lookup",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "small",
+      "task_type": "direct_edge_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "source_label",
+        "target_label",
+        "edge_weight"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "edge_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 0.6666666666666666,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    },
+    {
+      "item_id": "explainable_ai_medical_imaging_2016_2025:keyword_cooccurrence:small:node_attribute_lookup",
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "scale": "small",
+      "task_type": "node_attribute_lookup",
+      "registered_complexity": 1,
+      "simple_control": true,
+      "intrinsic_single_record_lookup": true,
+      "decisive_answer_keys": [
+        "node_label",
+        "importance",
+        "weighted_degree"
+      ],
+      "decisive_answer_single_flat_row": true,
+      "operator_stages": 1,
+      "operators": [
+        "node_attribute_lookup"
+      ],
+      "required_operator_classes": [],
+      "gold_evidence_recall": {
+        "flat_hybrid": 1.0,
+        "graph_hierarchical_retrieval_v2": 1.0,
+        "graph_program": 1.0
+      },
+      "necessity_certificate_passed": true
+    }
+  ],
+  "summary": {
+    "tasks": 168,
+    "task_type_counts": {
+      "bridge_counterfactual": 24,
+      "community_role_contrast": 24,
+      "direct_edge_lookup": 24,
+      "hub_removal_resilience": 24,
+      "multi_hop_connector": 24,
+      "node_attribute_lookup": 24,
+      "temporal_structural_shift": 24
+    },
+    "simple_controls": 48,
+    "complex_tasks": 120,
+    "simple_intrinsic_single_record_lookups": 48,
+    "simple_flat_hybrid_single_row_available": 39,
+    "complex_flat_hybrid_single_row_available": 0,
+    "complex_with_two_or_more_operator_stages": 120,
+    "scale_sensitive_dataset_task_anchors": 43,
+    "dataset_task_anchors": 56,
+    "retrieval_diagnostics_not_used_for_task_selection": {
+      "flat_hybrid": {
+        "simple_mean_gold_evidence_recall": 0.5555555555555556,
+        "complex_mean_gold_evidence_recall": 0.38771164021164023,
+        "simple_full_gold_evidence_coverage": 18,
+        "complex_full_gold_evidence_coverage": 28
+      },
+      "graph_hierarchical_retrieval_v2": {
+        "simple_mean_gold_evidence_recall": 1.0,
+        "complex_mean_gold_evidence_recall": 0.9903439153439153,
+        "simple_full_gold_evidence_coverage": 48,
+        "complex_full_gold_evidence_coverage": 111
+      },
+      "graph_program": {
+        "simple_mean_gold_evidence_recall": 1.0,
+        "complex_mean_gold_evidence_recall": 1.0,
+        "simple_full_gold_evidence_coverage": 48,
+        "complex_full_gold_evidence_coverage": 120
+      }
+    },
+    "all_certificates_passed": true
+  }
+}

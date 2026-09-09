@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "amendment_id": "expert_evaluation_analysis_amendment_003",
+  "sha256": "3a8e707ae9f45705cbe3cfb08287ad41d31c8804bdd2f5efd76fdc1d7ff75100",
+  "frozen_before_same_evidence_articles": true,
+  "frozen_before_expert_outcomes": true,
+  "same_evidence_articles_present": false,
+  "expert_outcomes_present": false,
+  "primary_cluster_unit": "topic",
+  "independent_clusters": 8,
+  "primary_test": "fully_enumerated_paired_topic_signflip",
+  "multiplicity": "holm_A1_A2_A3"
+}

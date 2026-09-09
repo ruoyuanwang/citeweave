@@ -1,0 +1,33 @@
+schema_version: 1
+amendment_id: expert_evaluation_amendment_001_figure_access
+base_protocol_sha256: 7e8267bd91b69ac12b563aa1e5af47921cd67d521a4f17a28bb652fb1fd875a5
+status: frozen_before_any_same_evidence_article_or_expert_outcome
+reason:
+  - The base protocol requires identical frozen figures but the original production-record validator did not prove that each writer actually received the rendered image.
+  - The configured DeepSeek V4-Pro provider is text-only, and the recorded deepseek-v4-flash image-input probe was rejected with HTTP 400.
+  - Structured graph phenomena are not a substitute for access to the rendered figure under a same-evidence contract.
+
+required_shared_fields:
+  figure_sha256: Must equal the rendered figure hash frozen in the writer pack.
+  figure_access_mode: rendered_image
+
+machine_conditions:
+  required_receipts:
+    - multimodal_request_sha256
+    - vision_capability_snapshot_sha256
+  capability_rule: The snapshot must predate generation and show that the exact provider/model accepted image input.
+  request_rule: The request hash must bind the exact rendered image bytes and complete text evidence.
+  fail_closed: Text-only fallback cannot be relabeled as same-evidence generation.
+
+human_condition:
+  required_receipt: figure_view_log_sha256
+  rule: The server log must bind the same figure hash and record that the figure was opened during the writing interval.
+
+interpretation_guard:
+  - Article generation remains blocked until a verified multimodal provider is available or a new pre-outcome amendment removes rendered figures from every condition.
+  - Supplying graph records to a text model does not establish visual reasoning.
+  - A visual-only VLM condition is an external modality comparison and is not evidence that GraphRAG is unnecessary.
+
+implementation:
+  validator: src/citeweave/article_expert_packets.py
+  contract: experiments/article_quality_v2/expert_packet_intake/production_record_contract.json

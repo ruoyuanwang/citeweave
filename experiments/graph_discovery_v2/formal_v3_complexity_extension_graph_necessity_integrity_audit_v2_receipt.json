@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "validated_without_task_or_condition_changes",
+  "created_at_local": "2026-08-31T17:12:41+08:00",
+  "reason": "The original certificate checked trace length but did not verify that concrete operators covered every task-type-specific required capability class.",
+  "original_frozen_audit": {
+    "path": "experiments/graph_discovery_v2/formal_v3_complexity_extension_graph_necessity_audit.json",
+    "sha256": "d2cbe2d39c2a7fdbb8136e13bb04931852bd5a99a677820a017dd47aea96d2e6",
+    "modified": false
+  },
+  "strengthened_integrity_audit": {
+    "path": "experiments/graph_discovery_v2/formal_v3_complexity_extension_graph_necessity_integrity_audit_v2.json",
+    "sha256": "b4ef9222e90dcd22db919d4e981aa9e37c7802a7572dbd432151d80c27fa3aa5",
+    "tasks": 168,
+    "complex_tasks": 120,
+    "complex_with_all_required_operator_classes": 120,
+    "complex_with_missing_operator_classes": 0,
+    "complex_single_flat_row_available": 0,
+    "all_certificates_passed": true
+  },
+  "execution_state": {
+    "confirmatory_api_calls_completed": 0,
+    "formal_status": "waiting_identity_corrected_neural",
+    "tasks_removed_or_modified": 0,
+    "conditions_added_or_modified": 0,
+    "retrieval_budget_modified": false
+  },
+  "interpretation": "The strengthened audit establishes structural task requirements only. It is not model answer-quality evidence and must not be used for task selection or tuning."
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "judge_role": "independent_pre_acquisition_query_reviewer",
+  "protocol_sha256": "872c28cd84e56cc98d6522ed36db01ee24026f58c639695b127d6cdebc999fec",
+  "model": "deepseek-v4-pro",
+  "temperature": 0,
+  "request_sha256": "ce80d43c72efcf481d8cc9fcb61ab7f103031c72822410b88518484800c56b66",
+  "response_content_sha256": "0a8e82d4534b4fd2f88f0abba3df18681a39872a0cb0afba725b4d97890d2b2c",
+  "usage": {
+    "prompt_tokens": 895,
+    "completion_tokens": 6519,
+    "total_tokens": 7414,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5947
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 895
+  },
+  "judgment": {
+    "overall_approved": false,
+    "judgments": [
+      {
+        "id": "sodium_ion_battery_cathodes_2010_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Exact phrase 'sodium ion battery' may miss hyphenated, abbreviated, or variant forms; 'cathode' may miss plural form if not stemmed.",
+        "rationale": "Query combines the relevant topical phrase with cathode; date window 2010-2025 is aligned with modern sodium-ion cathode research. Domain is distinct from excluded topics. Recall loss from hyphen and plural variants is modest and not material enough to require amendment."
+      },
+      {
+        "id": "organoid_disease_modeling_2010_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Exact phrase 'disease model' may underretrieve variants such as 'disease modeling', 'disease models', or British 'modelling'.",
+        "rationale": "Boolean AND of 'organoid' and 'disease model' is construct-valid for organoid disease modeling; the 2010 start date coincides with the field's emergence. The recall gap is modest and can be addressed post hoc if required."
+      },
+      {
+        "id": "membrane_desalination_fouling_2010_2025",
+        "approved": false,
+        "severity": "major",
+        "issue": "Exact phrase 'membrane desalination' is too restrictive and causes material recall loss for the intended domain of desalination membrane fouling.",
+        "rationale": "Relevant literature frequently uses phrases such as 'desalination membrane', 'membrane-based desalination', 'reverse osmosis membrane fouling', or 'membrane fouling in desalination' rather than the contiguous phrase 'membrane desalination'. Requiring this exact phrase with Boolean AND would systematically miss a substantial portion of relevant articles, compromising exhaustive bibliometric coverage."
+      },
+      {
+        "id": "explainable_ai_medical_imaging_2016_2025",
+        "approved": true,
+        "severity": "minor",
+        "issue": "Exact phrase 'explainable AI' may miss long-form 'explainable artificial intelligence' and abbreviation 'XAI' variants when the exact phrase is absent.",
+        "rationale": "The domain is well targeted; the 2016 start date reflects the emergence of explainable AI in medical imaging. Precision is high, and the recall gap from abbreviation/long-form variants is modest and does not require a pre-acquisition amendment."
+      }
+    ]
+  },
+  "outcome_visibility": "no acquisition counts, graph structures, or model outcomes supplied"
+}

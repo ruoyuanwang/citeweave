@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_neural_retrieval_sidecars_and_confirmatory_generation",
+  "audit": "formal_v3_complexity_extension_graph_necessity_audit.json",
+  "sha256": "d2cbe2d39c2a7fdbb8136e13bb04931852bd5a99a677820a017dd47aea96d2e6",
+  "frozen_at_local": "2026-08-26T13:41:00+08:00",
+  "formal_outcome_file_count": 0,
+  "semantic_v2_neural_sidecar_count": 0,
+  "existing_frozen_contexts_inspected": true,
+  "neural_retrieval_outcomes_inspected": false,
+  "tasks_removed_or_modified": 0,
+  "retrieval_parameters_modified": false,
+  "summary": {
+    "tasks": 168,
+    "simple_intrinsic_single_record_lookups": 48,
+    "complex_tasks": 120,
+    "complex_single_flat_row_available": 0,
+    "complex_with_two_or_more_operator_stages": 120,
+    "all_certificates_passed": true
+  },
+  "note": "Existing flat-hybrid and graph-context recall is descriptive mechanism evidence only. It is prohibited from task selection, tuning, or condition changes."
+}

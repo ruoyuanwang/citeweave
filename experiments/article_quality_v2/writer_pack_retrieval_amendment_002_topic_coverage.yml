@@ -1,0 +1,33 @@
+schema_version: 1
+amendment_id: writer_pack_retrieval_amendment_002_topic_coverage
+supersedes_amendment_sha256: c78a59e25d813008e4530b915a195012cd2c75f8f237f769d659dcb664834856
+status: frozen_after_v2_source_relevance_audit_before_v3_articles_or_expert_outcomes
+human_outcomes_inspected: false
+machine_article_outcomes_inspected: false
+development_evidence_inspected:
+  artifact: experiments/article_quality_v2/same_evidence_writer_packs_v2/manifest.json
+  finding: Requiring any one dataset term remained too weak because generic terms such as learning or battery admitted cross-domain records.
+
+replacement:
+  version: topic-task-bm25-v3-topic-coverage
+  ranking_key:
+    - descending count of distinct nontrivial dataset-topic terms found in title, abstract, or work keywords
+    - ascending deterministic task-query BM25 rank
+  query_fields:
+    - dataset topic terms
+    - registered graph question
+    - verified answer labels
+    - task type
+  uniqueness: Prefer sources not already assigned to another phenomenon.
+  citation_count_role: Recorded metadata only; never a ranking key.
+
+versioning:
+  v1_development: experiments/article_quality_v2/same_evidence_writer_packs
+  v2_development: experiments/article_quality_v2/same_evidence_writer_packs_v2
+  v3_prospective_candidate: experiments/article_quality_v2/same_evidence_writer_packs_v3
+  rule: Only v3 may be considered for the prospective article experiment, subject to an outcome-blind source-relevance audit.
+
+guard:
+  - This amendment was motivated by v2 source titles, not generated article quality or expert outcomes.
+  - No source may be manually replaced after v3 construction based on a desired article conclusion.
+  - Topic-term coverage is a retrieval heuristic, not a gold relevance label.

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_confirmatory_api_execution",
+  "amendment": "formal_v3_complexity_analysis_amendment_008_cluster_validity.yml",
+  "sha256": "955ee81ec7baefa1035cf9cd0a24ef26ae26776181eb01fbd607caa748863bfb",
+  "formal_provider_result_files": 0,
+  "model_outcomes_inspected": false,
+  "frozen_at_local": "2026-08-31T18:28:00+08:00"
+}

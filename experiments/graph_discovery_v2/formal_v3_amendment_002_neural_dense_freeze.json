@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_model_execution",
+  "amendment_id": "formal_v3_amendment_002_neural_dense",
+  "base_protocol_sha256": "2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f",
+  "prior_amendment_sha256": "4ba476b5cf7506761f116a903552150a22bdd0e6aa4a61702510163f24ca1a9b",
+  "amendment_sha256": "0c9e3c47a93f5e9c56cc0b2426f920f94229e61c27f1a20da8fcd3c843a5a39a",
+  "frozen_at_utc": "2026-08-24T10:28:56.2526888Z",
+  "model_outcomes_inspected": false,
+  "note": "Required external neural dense baseline identity and retrieval parameters frozen before any neural retrieval or confirmatory generation output."
+}

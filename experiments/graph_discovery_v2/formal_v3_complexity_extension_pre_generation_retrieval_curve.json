@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "descriptive_frozen_no_task_or_retrieval_changes_permitted",
+  "source_graph_necessity_audit_sha256": "d2cbe2d39c2a7fdbb8136e13bb04931852bd5a99a677820a017dd47aea96d2e6",
+  "population": "120 frozen complex tasks; 40 per graph scale",
+  "metric": "gold evidence IDs visible anywhere in the frozen condition context",
+  "by_scale": {
+    "small": {
+      "flat_hybrid": {"mean_recall": 0.8111904761904762, "full_coverage": 22, "tasks": 40},
+      "graph_hierarchical_retrieval_v2": {"mean_recall": 0.9837301587301587, "full_coverage": 35, "tasks": 40},
+      "graph_program": {"mean_recall": 1.0, "full_coverage": 40, "tasks": 40}
+    },
+    "medium": {
+      "flat_hybrid": {"mean_recall": 0.281031746031746, "full_coverage": 6, "tasks": 40},
+      "graph_hierarchical_retrieval_v2": {"mean_recall": 0.990079365079365, "full_coverage": 37, "tasks": 40},
+      "graph_program": {"mean_recall": 1.0, "full_coverage": 40, "tasks": 40}
+    },
+    "large": {
+      "flat_hybrid": {"mean_recall": 0.0709126984126984, "full_coverage": 0, "tasks": 40},
+      "graph_hierarchical_retrieval_v2": {"mean_recall": 0.9972222222222221, "full_coverage": 39, "tasks": 40},
+      "graph_program": {"mean_recall": 1.0, "full_coverage": 40, "tasks": 40}
+    }
+  },
+  "interpretation": {
+    "supported": "Under a fixed 160-record budget, flat-hybrid evidence visibility degrades sharply with graph scale while hierarchical graph retrieval remains stable.",
+    "not_supported": "This retrieval curve alone does not establish answer-quality superiority, statistical significance, or neural-dense inferiority.",
+    "analysis_role": "pre-generation retrieval-level secondary endpoint and mechanism diagnostic"
+  },
+  "post_inspection_actions_prohibited": [
+    "task removal",
+    "task replacement",
+    "retriever tuning",
+    "condition changes",
+    "record-budget changes"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "frozen_after_corpus_acquisition_before_extension_task_construction_and_model_outcomes",
+  "protocol": "formal_v3_complexity_extension_protocol.yml",
+  "sha256": "32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988",
+  "primary_and_replication_model_outcomes_inspected": false,
+  "extension_tasks_constructed_before_freeze": false,
+  "note": "Post-acquisition, pre-outcome extension; it cannot modify the frozen primary or replication analyses."
+}

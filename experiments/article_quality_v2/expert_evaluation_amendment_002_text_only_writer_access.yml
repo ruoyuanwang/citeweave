@@ -1,0 +1,69 @@
+schema_version: 1
+amendment_id: expert_evaluation_amendment_002_text_only_writer_access
+base_protocol_sha256: 7e8267bd91b69ac12b563aa1e5af47921cd67d521a4f17a28bb652fb1fd875a5
+supersedes_amendment_sha256: 45ed3a923acb5a567bc880a3de4f66aa01fb5abe6b9390800a17c812c7ac5388
+status: frozen_before_any_same_evidence_article_or_expert_outcome
+
+reason:
+  - No configured provider has a verified image-input capability, so requiring rendered-image access would block the registered article comparison for a modality unrelated to the focal GraphRAG workflow.
+  - A rendered overview is a lossy projection of the same graph records and cannot expose the multi-stage operator traces, deletion counterfactuals, temporal joins, or exact provenance required by the writing task.
+  - The article-quality experiment should isolate graph-conditioned reasoning and review workflow effects; visual-only interpretation remains a separate modality experiment.
+
+writer_access_contract:
+  identical_across_conditions: true
+  access_mode: structured_graph_text_only_figure_inserted_posthoc
+  visible_during_drafting:
+    - identical writing brief
+    - five verified graph-phenomenon records with operator traces
+    - identical source titles and abstract excerpts
+    - identical nonvisual figure metadata
+    - frozen commitment to one posthoc figure hash
+  prohibited_during_drafting:
+    - rendered figure bytes
+    - image path, URL, URI, or data URI
+    - drafts or feedback from another condition
+  rendered_figure_access_by_any_writer: false
+
+posthoc_figure_contract:
+  insertion_timing: after_writer_draft_is_frozen
+  mutation_rule: The rendered figure bytes must be copied unchanged; no writer may revise after seeing it.
+  equality_rule: All three final condition packets within a topic must expose the exact same figure SHA-256.
+  evaluator_access: The blinded evaluator packet contains the shared rendered figure as a separate attachment.
+  required_receipt: posthoc_figure_insertion_receipt_sha256
+
+production_record_contract:
+  shared:
+    - writer_input_sha256 equals the audited text-only writer input hash
+    - writer_rendered_figure_access is false
+    - figure_access_mode equals withheld_during_drafting_inserted_posthoc
+    - draft_sha256 is recorded before attachment
+    - article_sha256 and figure_sha256 are bound by a posthoc insertion receipt
+  machine_conditions:
+    input_modality: text_only_structured_graph
+    required_receipt: text_request_sha256
+  human_condition:
+    required_receipt: writer_input_delivery_log_sha256
+
+separation_from_visual_experiment:
+  rule: VLM rendered-image interpretation is analyzed as an external modality comparison and cannot enter the confirmatory article-quality contrasts.
+  implication: A visual-only baseline does not receive hidden graph records, and its performance cannot be used to claim that structured graph retrieval is unnecessary.
+
+frozen_inputs:
+  source_writer_pack_manifest: experiments/article_quality_v2/same_evidence_writer_packs_v4/manifest.json
+  source_writer_pack_manifest_sha256: b3a9ffdf61ad1f58e607753f32d10e312d8f706d8e6a5dc80dc9333378a1555d
+  text_only_writer_input_manifest: experiments/article_quality_v2/same_evidence_text_writer_inputs_v1/manifest.json
+  text_only_writer_input_manifest_sha256: a199256b59ab911568aa055a9eb839b015c1205c18d05724e2825c492c08194b
+  topics: 8
+
+implementation:
+  writer_input_builder: src/citeweave/article_writer_inputs.py
+  writer_input_builder_sha256: c23b505fbaf4770a69127272ca6daec08eac7b328d12521cf943c783d17378aa
+  packet_validator: src/citeweave/article_expert_packets.py
+  packet_validator_sha256: 6b321f8a72da5d13db7737be66711d5a5a5ee506e0d9a45047bd4fa7e5e1bf8d
+  intake_builder: scripts/prepare_article_expert_evaluation.py
+  intake_builder_sha256: 7c5209f8cf492fd4fa499e84058c77f8828b8dc4a808c18f22cca7feeaa60b59
+
+interpretation_guard:
+  - This amendment resolves writer-access fairness; it does not create human articles, expert ratings, or evidence of system superiority.
+  - Human-vs-machine claims remain blocked until the registered 24 articles and real expert panel are complete.
+  - The rendered graph overview is an evaluation aid, not the source of the structured graph phenomena.

@@ -1,0 +1,44 @@
+schema_version: 1
+amendment_id: formal_v3_analysis_amendment_007_equal_dataset_weighting
+status: frozen_before_confirmatory_api_execution
+frozen_at: '2026-08-31T18:13:00+08:00'
+formal_provider_result_files_at_freeze: 0
+model_outcomes_inspected: false
+prior_statistics_sha256: 7482f0d4060e1ef39412fe32febdf2ffd7e220065a9cf3957f2805850c5b7a5c
+reason: >-
+  A result-blind implementation audit found that the dataset-cluster bootstrap
+  sampled datasets but then concatenated their rows and recomputed an item-weighted
+  mean. Frozen scale-pair counts differ by dataset (primary 2/5/3/4 and replication
+  4/3/3/4), so that estimator gave topics with more matched anchors more weight and
+  did not match the equal-dataset estimand used by the registered exact cluster
+  sign-flip test.
+correction:
+  cluster_unit: dataset_id
+  within_dataset_effect: mean of all registered paired effects in that dataset
+  point_estimate: unweighted mean of dataset effects
+  bootstrap: resample datasets with replacement and average their precomputed effects
+  confidence_interval: percentile_95
+  exact_test: unchanged one-sided sign flip of the same dataset effects
+  applies_to:
+    - primary H1/H2/H3 descriptive cluster intervals
+    - primary H1/H2 evidence-F1 descriptive cluster intervals
+    - replication and combined scale-interaction descriptive cluster intervals
+  output_disclosure:
+    cluster_weighting: equal_dataset
+    clusters: report count
+registered_decisions_unchanged:
+  - hypotheses, directions, contrasts, task subsets, scale pairs, and multiplicity
+  - exact McNemar tests and exact dataset sign-flip tests
+  - bootstrap sample counts and seeds
+  - tasks, labels, prompts, contexts, conditions, token budgets, and API calls
+  - complexity-extension analysis, which already bootstrapped precomputed equally
+    weighted dataset effects
+implementations:
+  analyze_formal_v3_results.py: b10eaa3b4129626f473732a99667a81a1bb62ff2803dc07d98f4dbb78239c13f
+  analyze_formal_v3_scale_replication.py: 0e5dd72fda322a3abb6c5d8f088c34ad0f654d3c2f30efd494e7add3e59c87b4
+tests:
+  test_analyze_formal_v3_results.py: aab1a88e11cfadb9e0be652dd81c5189b74ac4a65d4343e8c0d9f4a5e90aa752
+  test_analyze_formal_v3_scale_replication.py: e747e789563cebb8b3b02fd8178e3445d9b4b4148b4651c96f1d67a9cdf3c256
+interpretation_guard: >-
+  Every dataset contributes one equally weighted effect. Matched anchors improve
+  within-dataset precision but are not independent inferential replicates.

@@ -1,0 +1,82 @@
+schema_version: 1
+amendment_id: formal_v3_neural_runtime_amendment_003_semantic_representation
+status: frozen_before_confirmatory_retrieval_and_generation
+frozen_at: '2026-08-26T13:34:00+08:00'
+supersedes:
+  amendment: formal_v3_neural_runtime_amendment_002_exact_scale_reuse.yml
+  reason: The full-row exact-reuse rule passed its unit gate but was empirically
+    ineffective because scale-dependent graph statistics and ordinal edge evidence
+    IDs changed the serialized text.
+negative_feasibility_result:
+  audit: experiments/graph_discovery_v2/formal_v3_execution_prerequisites/exact_scale_embedding_reuse_audit.json
+  audit_sha256: e468edc87d13494da21596d3e0fbeaa7004efc6178f24f3e662213d1bfca2e39
+  target_rows: 191656
+  reusable_rows: 4
+  reuse_fraction: 0.000020870726718704347
+base_runtime_implementation:
+  path: experiments/graph_discovery_v2/formal_v3_neural_runtime_implementation.yml
+  sha256: 72ce1d3f0e6909c3f32996c8ab799d9dad9ff0fccb94c90eedb73a5f206e2468
+implementation:
+  builder_path: scripts/build_neural_dense_sidecars.py
+  builder_sha256: 48b5d30362f7fef637394d3cb1361e5430cff161fdd07b4f8044ecf27e18d5a0
+  pipeline_path: scripts/run_formal_v3_neural_prerequisites.ps1
+  pipeline_sha256: 9227da3db7f027b6be34a77d0585e96aab0647c2dca95b5ff4b2e026d0a9de49
+representation:
+  id: semantic_entity_relation_json_v2
+  node_fields: [network, record_type, label]
+  edge_fields: [network, record_type, source_label, target_label]
+  excluded_from_embedding:
+    - evidence_id
+    - node_id
+    - importance
+    - community
+    - weighted_degree
+    - edge_weight
+  rationale:
+    - Ordinal evidence IDs have no linguistic meaning and may refer to different
+      relations across graph scales.
+    - Importance, community, degree, and edge weight are scale-dependent graph
+      features. Excluding them prevents structural information from leaking into the
+      flat neural baseline; they remain intact in evidence rows for graph retrieval,
+      reranking, reasoning, and generation.
+    - Display labels are the human-readable semantic content available equally to the
+      flat neural baseline and graph conditions.
+semantic_duplicate_rule:
+  behavior: encode_or_reuse_one_identical_vector_but_preserve_distinct_graph_rows
+  rationale: Different graph identities can have the same visible label. They share
+    neural text and therefore a vector, but their node IDs, evidence IDs, graph edges,
+    weights, and communities are never merged.
+cross_scale_reuse:
+  source_scale: large
+  match_key: sha256_of_semantic_entity_relation_json_v2
+  approximate_matching: prohibited
+  unmatched_rows: encoded_normally
+  audit: experiments/graph_discovery_v2/formal_v3_execution_prerequisites/exact_scale_embedding_reuse_semantic_v2_audit.json
+  audit_sha256: 55921661d220828ce5c3c7a19f440e6546b90b11fa04fc0a36bc0c822de62bc0
+  dataset_network_target_scale_cells: 24
+  target_rows: 191656
+  reusable_rows: 191514
+  newly_encoded_rows: 142
+  reuse_fraction: 0.999259089201486
+cache_isolation:
+  index_root: formal_v3_execution_prerequisites/neural_dense_semantic_v2_index_cache
+  primary_sidecar_root: formal_v3_execution_prerequisites/neural_dense_semantic_v2
+  extension_sidecar_root: formal_v3_execution_prerequisites/complexity_extension_neural_dense_semantic_v2
+  old_full_row_caches: retained_as_nonconfirmatory_audit_artifacts
+integrity:
+  - Cache identity includes embedding_document_schema=semantic_entity_relation_json_v2.
+  - Large source runtime identity, row order, embedding file, and manifests are hashed.
+  - Reused and newly encoded counts are recorded in every derived cache manifest.
+  - Target ranking and returned evidence rows retain all original graph fields.
+observed_before_freeze:
+  formal_outcome_file_count: 0
+  model_outcomes_inspected: false
+  retrieval_outcomes_inspected: false
+  focused_tests_passed: true
+unchanged:
+  - Frozen corpora, graph snapshots, tasks, questions, gold answers, and evidence rows.
+  - BGE-M3 revision, tokenizer, FP32 runtime, L2 normalization, cosine similarity,
+    record budget, prompts, generation model, conditions, hypotheses, and analyses.
+validity_note: This correction makes the dense baseline semantically interpretable and
+  prevents graph-feature leakage. It was selected from representation and feasibility
+  audits before any confirmatory retrieval rank, answer, or score existed.

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_confirmatory_retrieval_and_generation",
+  "implementation_id": "formal_v3_neural_runtime_implementation_001",
+  "implementation_sha256": "72ce1d3f0e6909c3f32996c8ab799d9dad9ff0fccb94c90eedb73a5f206e2468",
+  "equivalence_probe_sha256": "a98d179b06f4e0b78d0431fcfed53daf3a173561beb18eeb670109de2a67bb17",
+  "frozen_at_utc": "2026-08-26T03:28:00.0689357Z",
+  "model_outcomes_inspected": false,
+  "runtime_probe_inspected": true,
+  "note": "The execution backend was frozen after an implementation-only equivalence and throughput probe, before any confirmatory retrieval sidecar or generation result existed."
+}

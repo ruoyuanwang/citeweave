@@ -1,0 +1,64 @@
+schema_version: 1
+implementation_id: formal_v3_neural_runtime_implementation_001
+status: frozen_before_confirmatory_retrieval_and_generation
+base_protocol_sha256: 2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f
+neural_amendment_sha256: 0c9e3c47a93f5e9c56cc0b2426f920f94229e61c27f1a20da8fcd3c843a5a39a
+model_outcomes_inspected: false
+runtime_probe_inspected: true
+selection_basis:
+  - Runtime feasibility on the registered local execution hardware.
+  - Numerical equivalence to the official FP32 CPU ONNX output.
+  - No task was scored against gold and no experimental conditions were compared.
+model:
+  id: BAAI/bge-m3
+  revision: 5617a9f61b028005a4858fdac845db406aefb181
+  onnx_file: onnx/model.onnx
+  onnx_file_sha256: f84251230831afb359ab26d9fd37d5936d4d9bb5d1d5410e66442f630f24435b
+  onnx_external_data_sha256: 1eebfb28493f67bba03ce0ef64bfdc7fc5a3bd9d7493f818bb1d78cd798416b4
+runtime:
+  package: onnxruntime-directml
+  version: 1.24.4
+  provider: DmlExecutionProvider
+  device: AMD Radeon (TM) 780M Graphics
+  driver: 32.0.11020.16
+  device_id: 0
+  precision: float32
+  batch_size: 32
+  fallback_provider: CPUExecutionProvider
+  fallback_rule: A provider change requires a fresh embedding cache; providers may not be mixed within one cache.
+representation:
+  tokenizer_revision: 5617a9f61b028005a4858fdac845db406aefb181
+  max_sequence_length: 8192
+  pooling_output: sentence_embedding
+  normalization: l2_float32
+  similarity: cosine
+  document_serialization: canonical_sorted_compact_json
+  query_serialization: registered_question_text_only
+  record_budget: 160
+index:
+  query_independent: true
+  cache_dtype: float32
+  cache_key: dataset_network_scale_model_revision_runtime_precision_row_ids_sha256
+  checkpointed: true
+  reusable_across_panels: true
+  integrity: manifest_and_embedding_sha256
+equivalence_gate:
+  artifact: formal_v3_execution_prerequisites/bge_m3_onnx_directml_equivalence_probe.json
+  minimum_document_cosine: 0.99999
+  minimum_query_cosine: 0.99999
+  minimum_top10_overlap: 1.0
+  deterministic_repeat_max_absolute_difference: 0.0
+observed_probe:
+  passed: true
+  document_minimum_cosine: 0.9999998807907104
+  query_minimum_cosine: 1.0
+  maximum_absolute_embedding_difference: 0.000002391636371612549
+  minimum_top10_overlap: 1.0
+  deterministic_repeat_max_absolute_difference: 0.0
+  cpu_records_per_second: 4.875077971601811
+  directml_records_per_second: 17.85449656568768
+unchanged:
+  - Frozen datasets, tasks, gold answers, evidence IDs, and graph contexts.
+  - Neural model identity, revision, serialization, normalization, cosine similarity, and top-k budget.
+  - Generation model, prompt, token budget, conditions, hypotheses, and statistical analysis.
+validity_note: The runtime probe selected an execution implementation, not a retrieval outcome; all confirmatory sidecars and generations remained absent when this file was frozen.

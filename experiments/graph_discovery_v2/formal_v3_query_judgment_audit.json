@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "judgment_artifact": "formal_v3_query_judgment.json",
+  "judgment_response_content_sha256": "4138f1b7aea408cadfc4e3e8ad0292c313b7b20e5a169183716266c3237620e4",
+  "accepted_dataset_queries": 4,
+  "rejected_dataset_queries": 0,
+  "auditor_note": {
+    "judge_error": "The judge repeatedly called year_to=2025 incomplete. The frozen protocol date is 2026-08-20, so 2025 is a completed natural year.",
+    "effect_on_decision": "none; all four queries were approved",
+    "retained_valid_caveats": [
+      "singular/plural phrase variants may affect perovskite query recall",
+      "green hydrogen terminology may under-represent early work",
+      "healthcare versus health care spelling may affect recall",
+      "broad cancer terminology may reduce precision"
+    ],
+    "artifact_policy": "The original judge response is preserved unchanged; this audit does not rewrite it."
+  },
+  "next_gate": "A human query reviewer must confirm construct validity before acquisition begins."
+}

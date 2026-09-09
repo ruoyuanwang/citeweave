@@ -1,0 +1,69 @@
+schema_version: 1
+amendment_id: formal_v3_complexity_analysis_amendment_006
+status: frozen_before_confirmatory_api_execution
+frozen_at: '2026-08-27T00:00:46+08:00'
+base_protocol_sha256: 32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988
+formal_result_files_at_freeze: 0
+model_outcomes_inspected: false
+reason: The frozen protocol named the primary model and cluster tests but did not
+  specify numerical estimation, scale coding, separation reporting, Holm mechanics,
+  or the exact implementation of the simple-task TOST. These are fixed here before
+  outcomes so the analysis cannot be selected after seeing results.
+primary_mixed_model:
+  family: binomial
+  link: logit
+  population: 48 registered matched anchors, each observed for simple and complex
+    tasks under graph_program and flat_neural_dense
+  observations: 192
+  fixed_effects:
+    - graph_program
+    - complex
+    - scale
+    - graph_program_x_complex
+    - graph_program_x_scale
+    - complex_x_scale
+    - graph_program_x_complex_x_scale
+  scale_coding:
+    small: -0.5
+    medium: 0.0
+    large: 0.5
+  random_effect: dataset_random_intercept
+  clusters: 8
+  estimation: 30_point_gauss_hermite_marginal_maximum_likelihood
+  optimizer: L-BFGS-B from sigma starts [0.2, 0.5, 1.0]
+  coefficient_mapping:
+    C1_at_medium_scale: graph_program_x_complex
+    C2_large_minus_small: graph_program_x_complex_x_scale
+  numerical_bounds:
+    fixed_log_odds: [-20, 20]
+    log_random_intercept_sd: [-5, 3]
+  reporting:
+    - convergence and optimizer message
+    - boundary solution
+    - negative log likelihood
+    - random intercept standard deviation
+    - fixed effects, approximate Wald SE and two-sided p
+    - standardized conditional probabilities at random intercept zero
+  inference_guard: Wald statistics are diagnostics. With eight clusters, registered
+    exact dataset-cluster tests control the confirmatory C1/C2 decisions.
+confirmatory_cluster_inference:
+  C1: one-sided exact sign flip of eight dataset-level accuracy difference-in-differences
+  C2: one-sided exact sign flip of eight dataset-level large-minus-small C1 effects
+  multiplicity: Holm step-down over C1 and C2, alpha 0.05
+  zero_handling: zeros remain in every sign assignment
+simple_equivalence_C3:
+  estimand: graph_program_minus_flat_neural_dense absolute accuracy on simple tasks
+  margin: 0.05
+  lower_test: exact sign flip of dataset effects plus 0.05
+  upper_test: exact sign flip of 0.05 minus dataset effects
+  decision: equivalent only when both one-sided p values are below 0.05
+secondary_C4: dataset-cluster bootstrap and exact sign flip remain descriptive
+implementation:
+  path: scripts/analyze_formal_v3_complexity_extension.py
+  sha256: c95b05b6a62664478201991d6b7c7c5a30f908e34411bb5bc25eff683de4ed18
+  numpy_version: 1.26.4
+  scipy_version: 1.13.1
+unchanged:
+  - Tasks, labels, conditions, prompts, contexts, model calls, and outcome scoring.
+  - C1-C4 estimands, dataset cluster unit, 10,000 bootstrap draws, and seed.
+  - The analysis must retain parse failures as incorrect outcomes.

@@ -1,0 +1,42 @@
+schema_version: 1
+amendment_id: source_retriever_promotion_amendment_002_replay_integrity
+status: frozen_before_human_source_judgments
+base_amendment_freeze_sha256: 335ab0156eeef99a28316b6739a04241484363acb0a5dd219d69c10ca23690ee
+human_source_result_files_at_freeze: 0
+human_judgments_inspected: false
+reason:
+  - The original promotion gate rejected held-out leakage and duplicate ranks but did
+    not explicitly reject duplicate query-reference rows.
+  - Nonpositive or noninteger ranks could make ranking metrics invalid.
+  - Rows sharing a query ID could silently mix datasets, held-out folds, or training
+    dataset sets.
+added_fail_closed_integrity_gates:
+  row_identity_integrity:
+    rule: Every query_id and reference_id pair is unique.
+  rank_value_integrity:
+    rule: Every observed baseline or candidate rank is a positive non-boolean integer.
+  query_fold_integrity:
+    rule: All rows for one query share exactly one dataset, held-out dataset, and training-dataset set.
+  safe_metric_evaluation:
+    rule: Invalid ranks are excluded from metric arithmetic and independently force a hold decision.
+unchanged:
+  - Relevance labels and gain values.
+  - Leave-one-dataset-out design and minimum four held-out datasets.
+  - NDCG@3 improvement threshold of 0.02.
+  - Positive and challenge recall noninferiority margins.
+  - Off-topic and unrelated-query regression gates.
+  - Requirement that all promotion and integrity gates pass.
+  - Prohibition on appending raw reviewer history to prompts.
+implementation:
+  library: src/citeweave/source_retriever_promotion.py
+  library_sha256: 0f619d36966e9fe18842accf8620a37c7bc76f0e70c867a2fd61249abba4e2e7
+  tests: tests/test_source_retriever_promotion.py
+verification:
+  relevant_tests_passed: 25
+  includes_negative_tests:
+    - duplicate query-reference row
+    - nonpositive rank
+    - mixed query folds
+interpretation: This amendment hardens replay identity and arithmetic validity. It does
+  not change the registered effectiveness threshold and does not constitute evidence
+  that a retriever has been promoted.

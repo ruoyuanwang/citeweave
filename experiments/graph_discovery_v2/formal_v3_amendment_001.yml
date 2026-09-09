@@ -1,0 +1,32 @@
+schema_version: 1
+amendment_id: formal_v3_amendment_001
+base_protocol_sha256: 2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f
+status: frozen_before_model_execution
+discovered_at_stage: post_acquisition_pre_model
+model_outcomes_inspected: false
+reason:
+  - The disk pipeline's default 640-node candidate pool prevented the large tier from increasing with the newly expanded corpora.
+  - In dense keyword graphs, unweighted shortest paths collapse to direct edges and fail to instantiate the preregistered multi-hop task.
+  - Temporal tasks require a deterministic keyword-by-year aggregate that was not materialized by the process-only workflow.
+changes:
+  graph_materialization:
+    candidate_pool_size: 2000
+    edge_row_limit: 1000000
+    rationale: Increase the active graph scale while retaining bounded-memory construction.
+  multi_hop_operator:
+    before: unweighted_shortest_path
+    after: shortest_path_with_distance_equal_to_inverse_edge_weight
+    eligible_hops: [2, 4]
+    rationale: Preserve a meaningful multi-hop relation in dense weighted bibliometric graphs.
+  temporal_prerequisite:
+    materialize: analyses/keyword_trends.parquet
+    source: full canonical keyword-work-year relations
+    top_keywords: 15
+    rationale: Complete a missing deterministic pre-model analysis prerequisite.
+unchanged:
+  - datasets and acquisition queries
+  - registered task families and task counts
+  - retrieval conditions and record budget
+  - hypotheses, statistics, and human-review protocol
+  - model, temperature, prompt version, and equal-token requirement
+validity_note: This amendment fixes construction feasibility and scale before any confirmatory model call; it does not use or respond to model outcomes.

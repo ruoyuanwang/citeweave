@@ -1,0 +1,63 @@
+schema_version: 1
+amendment_id: expert_evaluation_analysis_amendment_003
+base_protocol_sha256: 7e8267bd91b69ac12b563aa1e5af47921cd67d521a4f17a28bb652fb1fd875a5
+status: frozen_before_any_same_evidence_article_or_expert_outcome
+
+reason:
+  - The protocol has eight independent topic clusters, so treating claims or ratings as independent would create pseudoreplication and anti-conservative precision.
+  - The previously implemented topic bootstrap was descriptive and could not evaluate A1, A2, or A3.
+  - Mixed-model asymptotics can be unstable with eight topic clusters; fully enumerated paired cluster tests provide a finite-cluster primary analysis while preserving the registered topic cluster unit.
+
+claim_resolution:
+  primary_raters_per_claim: 2
+  agreement_rule: Identical primary signatures are collapsed to one claim outcome.
+  disagreement_rule: Exactly one independent third-person adjudicator supplies the resolved outcome.
+  unnecessary_adjudication: prohibited
+  strict_missingness_rule: cannot_assess counts as not correct-and-supported.
+  sensitivity_rule: A1 additionally reports worst- and best-case assignment of cannot_assess by condition.
+
+topic_effects:
+  A1:
+    estimand: Per-topic CiteWeave minus one-shot adjudicated strict correct-and-supported claim rate.
+    test: Exact one-sided paired sign-flip against zero over eight topic effects.
+  A2:
+    estimand: Per-topic CiteWeave minus human research-utility score, paired within evaluator before averaging within topic.
+    test: Exact one-sided paired sign-flip against the registered -0.35 noninferiority boundary.
+  A3:
+    estimand: Per-topic CiteWeave minus human evidence-traceability score, paired within evaluator before averaging within topic.
+    test: Exact one-sided paired sign-flip against zero.
+  domain_specificity_guard:
+    estimand: Per-topic CiteWeave minus human domain-specificity score, paired within evaluator before averaging within topic.
+    material_regression_margin: -0.35
+    test: Exact one-sided paired sign-flip against the -0.35 boundary.
+
+multiplicity:
+  family: [A1, A2, A3]
+  correction: Holm
+  alpha: 0.05
+  domain_specificity_guard: Prospective success guard outside the superiority family; report its exact p-value without using it as a positive efficacy claim.
+
+success_rule:
+  machine_exceeds_human_language_permitted_only_if:
+    - Holm-adjusted A2 noninferiority passes.
+    - Holm-adjusted A3 superiority passes.
+    - Domain-specificity non-regression guard passes.
+  A1_role: Establishes benefit over one-shot LLM but is not sufficient for a claim about humans.
+
+model_role:
+  cumulative_link_and_mixed_logistic_models: Diagnostic sensitivity analyses when estimable.
+  priority_rule: Mixed-model Wald tests cannot replace or overturn the exact topic-cluster primary tests.
+  reporting_rule: Boundary, convergence, and singularity must be disclosed.
+
+implementation:
+  analysis_module:
+    path: src/citeweave/article_expert_evaluation.py
+    sha256: de76a078a872cddeff1f47b317280df6bf5da0878f037bad1dcfe4cfb4cd13df
+  analysis_cli:
+    path: scripts/analyze_article_expert_evaluation.py
+    sha256: 207412a923fb2cfbd2f4c46892119a8b6e012087e6463ac17d9af01e5ccf9fca
+
+interpretation_guard:
+  - The minimum attainable unadjusted one-sided p-value with eight topics is 1/256; this limitation must be reported.
+  - Claim-level ratings and evaluator scores never increase the inferential cluster count above eight.
+  - No confirmatory conclusion exists until all 24 registered articles and the real conflict-screened expert panel pass integrity checks.

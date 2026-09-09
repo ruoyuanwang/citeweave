@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    {
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "graphs": {
+        "original_bounded": {
+          "source_sha256": "44ef0723b67ba13b13225a7431e150319dcb8d08f381ba312a7daf57274e359a",
+          "graph": {
+            "nodes": 1760,
+            "edges": 5810,
+            "components": 101,
+            "largest_component": 1449
+          },
+          "tasks": {
+            "federated_learning_healthcare_2016_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": 1.924242424242424
+            },
+            "federated_learning_healthcare_2016_2025:coauthorship:large:bridge_counterfactual": {
+              "component_increase": 0,
+              "alternate_hops_after_deletion": 2
+            },
+            "federated_learning_healthcare_2016_2025:coauthorship:large:hub_removal_resilience": {
+              "components_after": 190,
+              "largest_component_fraction_of_original_nodes": 0.6585227272727273
+            }
+          }
+        },
+        "corrected_bounded": {
+          "source_sha256": "5b6562c410cfc5fde0b99fa0d6cb0f9e1b7bd765e0ec80993b69bbc67bc97298",
+          "graph": {
+            "nodes": 1713,
+            "edges": 5269,
+            "components": 143,
+            "largest_component": 1160
+          },
+          "tasks": {
+            "federated_learning_healthcare_2016_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": null
+            },
+            "federated_learning_healthcare_2016_2025:coauthorship:large:bridge_counterfactual": null,
+            "federated_learning_healthcare_2016_2025:coauthorship:large:hub_removal_resilience": null
+          }
+        },
+        "corrected_uncapped": {
+          "source_sha256": "204d8a5317bc1495952c10742790e3b019576b1f528deeab54e1b9eaf0e8d131",
+          "graph": {
+            "nodes": 64698,
+            "edges": 317586,
+            "components": 8492,
+            "largest_component": 22886
+          },
+          "tasks": {
+            "federated_learning_healthcare_2016_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": null
+            },
+            "federated_learning_healthcare_2016_2025:coauthorship:large:bridge_counterfactual": null,
+            "federated_learning_healthcare_2016_2025:coauthorship:large:hub_removal_resilience": null
+          }
+        }
+      },
+      "task_comparisons": [
+        {
+          "item_id": "federated_learning_healthcare_2016_2025:coauthorship:large:multi_hop_connector",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": true,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": false
+        },
+        {
+          "item_id": "federated_learning_healthcare_2016_2025:coauthorship:large:bridge_counterfactual",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        },
+        {
+          "item_id": "federated_learning_healthcare_2016_2025:coauthorship:large:hub_removal_resilience",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        }
+      ],
+      "benchmark_sha256": "00d9383fbf88ebd965eb3f9cffb1a606a1682fc44b480461f6a7782d8c2863f7",
+      "limits": [
+        "Fixed old anchors only; no new task selection, no LLM outcomes.",
+        "Checks path distance and deletion arithmetic, not full answers, community assignments or highest-betweenness selection.",
+        "Uncapped includes unresolved per-work author occurrences, not an assertion that all nodes identify distinct real people."
+      ]
+    },
+    {
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "graphs": {
+        "original_bounded": {
+          "source_sha256": "297a8185f7690cc110c1963daa812119fde5e380c38cfa2c14854b64ccd97da0",
+          "graph": {
+            "nodes": 1872,
+            "edges": 5710,
+            "components": 111,
+            "largest_component": 1501
+          },
+          "tasks": {
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": 1.3333333333333333
+            },
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:bridge_counterfactual": {
+              "component_increase": 1,
+              "alternate_hops_after_deletion": null
+            },
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:hub_removal_resilience": {
+              "components_after": 207,
+              "largest_component_fraction_of_original_nodes": 0.6287393162393162
+            }
+          }
+        },
+        "corrected_bounded": {
+          "source_sha256": "b8bf0fc8d9f065f3adca0ec8b9f72898de03fa3d0d08bc59f23ad37f3773f539",
+          "graph": {
+            "nodes": 1832,
+            "edges": 5212,
+            "components": 166,
+            "largest_component": 1181
+          },
+          "tasks": {
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": 2.583333333333333
+            },
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:bridge_counterfactual": null,
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:hub_removal_resilience": null
+          }
+        },
+        "corrected_uncapped": {
+          "source_sha256": "1e45f50e7ee493ae856f6bd5ed125b6a186ddc60e328565b9be3072ef0bdf3ae",
+          "graph": {
+            "nodes": 42016,
+            "edges": 164189,
+            "components": 4002,
+            "largest_component": 17659
+          },
+          "tasks": {
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": 2.583333333333333
+            },
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:bridge_counterfactual": null,
+            "green_hydrogen_electrolysis_2010_2025:coauthorship:large:hub_removal_resilience": null
+          }
+        }
+      },
+      "task_comparisons": [
+        {
+          "item_id": "green_hydrogen_electrolysis_2010_2025:coauthorship:large:multi_hop_connector",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": true,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": false
+        },
+        {
+          "item_id": "green_hydrogen_electrolysis_2010_2025:coauthorship:large:bridge_counterfactual",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        },
+        {
+          "item_id": "green_hydrogen_electrolysis_2010_2025:coauthorship:large:hub_removal_resilience",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        }
+      ],
+      "benchmark_sha256": "8b6a53e0d4b14cec8e952919f892d08502000f2a05a097f98eeaa2242b07e314",
+      "limits": [
+        "Fixed old anchors only; no new task selection, no LLM outcomes.",
+        "Checks path distance and deletion arithmetic, not full answers, community assignments or highest-betweenness selection.",
+        "Uncapped includes unresolved per-work author occurrences, not an assertion that all nodes identify distinct real people."
+      ]
+    },
+    {
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "graphs": {
+        "original_bounded": {
+          "source_sha256": "5e5616fc86fa6b3d0c9f4a0c12a27c4730fc0a85c9e0fd22a8374ab0b194c71a",
+          "graph": {
+            "nodes": 1997,
+            "edges": 38635,
+            "components": 2,
+            "largest_component": 1993
+          },
+          "tasks": {
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": 0.18674560733384266
+            },
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:bridge_counterfactual": {
+              "component_increase": 0,
+              "alternate_hops_after_deletion": 2
+            },
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:hub_removal_resilience": {
+              "components_after": 6,
+              "largest_component_fraction_of_original_nodes": 0.9944917376064096
+            }
+          }
+        },
+        "corrected_bounded": {
+          "source_sha256": "4049f0d61f89e7a9460c02b2612bbe3aeee95fe687fb054b646c40353605355b",
+          "graph": {
+            "nodes": 1995,
+            "edges": 37167,
+            "components": 4,
+            "largest_component": 1987
+          },
+          "tasks": {
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:multi_hop_connector": null,
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:bridge_counterfactual": null,
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:hub_removal_resilience": null
+          }
+        },
+        "corrected_uncapped": {
+          "source_sha256": "a6c181e2e62a3055cf7abacc772f4de438774c7d854c7d6257707b2a55b524a4",
+          "graph": {
+            "nodes": 103976,
+            "edges": 802862,
+            "components": 4160,
+            "largest_component": 81116
+          },
+          "tasks": {
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:multi_hop_connector": null,
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:bridge_counterfactual": null,
+            "perovskite_solar_cell_stability_2012_2025:coauthorship:large:hub_removal_resilience": null
+          }
+        }
+      },
+      "task_comparisons": [
+        {
+          "item_id": "perovskite_solar_cell_stability_2012_2025:coauthorship:large:multi_hop_connector",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        },
+        {
+          "item_id": "perovskite_solar_cell_stability_2012_2025:coauthorship:large:bridge_counterfactual",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        },
+        {
+          "item_id": "perovskite_solar_cell_stability_2012_2025:coauthorship:large:hub_removal_resilience",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        }
+      ],
+      "benchmark_sha256": "0627ba76d81f2feaad3c819ed856c285f7a7c2936221d99ec6397ffc8ee201aa",
+      "limits": [
+        "Fixed old anchors only; no new task selection, no LLM outcomes.",
+        "Checks path distance and deletion arithmetic, not full answers, community assignments or highest-betweenness selection.",
+        "Uncapped includes unresolved per-work author occurrences, not an assertion that all nodes identify distinct real people."
+      ]
+    },
+    {
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "graphs": {
+        "original_bounded": {
+          "source_sha256": "a94b915363fd954d9e8cf80143f09c09a56166d750c9ee0e82dc6b7f983a1f26",
+          "graph": {
+            "nodes": 1956,
+            "edges": 15867,
+            "components": 23,
+            "largest_component": 1871
+          },
+          "tasks": {
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": 1.0595238095238095
+            },
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:bridge_counterfactual": {
+              "component_increase": 0,
+              "alternate_hops_after_deletion": 2
+            },
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:hub_removal_resilience": {
+              "components_after": 83,
+              "largest_component_fraction_of_original_nodes": 0.8967280163599182
+            }
+          }
+        },
+        "corrected_bounded": {
+          "source_sha256": "a17c443b148901b8d4d822187f682c81e86775525778e8de92fed52a3475f3d2",
+          "graph": {
+            "nodes": 1917,
+            "edges": 15010,
+            "components": 44,
+            "largest_component": 1755
+          },
+          "tasks": {
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": 1.3333333333333333
+            },
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:bridge_counterfactual": null,
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:hub_removal_resilience": null
+          }
+        },
+        "corrected_uncapped": {
+          "source_sha256": "5753874b1e47232a14692d4ef78fcf9404fe21f53d231b8c9ecbd9c5389c4518",
+          "graph": {
+            "nodes": 93204,
+            "edges": 884928,
+            "components": 4690,
+            "largest_component": 60265
+          },
+          "tasks": {
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:multi_hop_connector": {
+              "total_inverse_weight_distance": 1.3333333333333333
+            },
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:bridge_counterfactual": null,
+            "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:hub_removal_resilience": null
+          }
+        }
+      },
+      "task_comparisons": [
+        {
+          "item_id": "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:multi_hop_connector",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": true,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": false
+        },
+        {
+          "item_id": "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:bridge_counterfactual",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        },
+        {
+          "item_id": "spatial_transcriptomics_cancer_2018_2025:coauthorship:large:hub_removal_resilience",
+          "original_arithmetic_matches_registered_fields": true,
+          "anchor_survives_correction": false,
+          "registered_arithmetic_changes_after_repair": true,
+          "registered_anchor_arithmetic_changes_after_uncapping": null
+        }
+      ],
+      "benchmark_sha256": "681de84a57a16bd84e922154806db83ecaadc2dbdb408e503c4a89fe0621266f",
+      "limits": [
+        "Fixed old anchors only; no new task selection, no LLM outcomes.",
+        "Checks path distance and deletion arithmetic, not full answers, community assignments or highest-betweenness selection.",
+        "Uncapped includes unresolved per-work author occurrences, not an assertion that all nodes identify distinct real people."
+      ]
+    },
+    {
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "graphs": {
+        "original_bounded": {
+          "source_sha256": "1c6443923ac063f167dc6c04ede03bf12feb113ef17f877ac6b2c3b1bc904edc",
+          "graph": {
+            "nodes": 1771,
+            "edges": 6058,
+            "components": 142,
+            "largest_component": 1309
+          },
+          "tasks": {}
+        },
+        "corrected_bounded": {
+          "source_sha256": "76435bebe6b0d165bc4c8ed84f17b81e03559ef057c9fc8aa7d04d1b5ebcd3f6",
+          "graph": {
+            "nodes": 1722,
+            "edges": 5558,
+            "components": 216,
+            "largest_component": 849
+          },
+          "tasks": {}
+        },
+        "corrected_uncapped": {
+          "source_sha256": "564aa3895d512618d076e77ad53fec40563db82f023aae53894e89c3ee9cb29b",
+          "graph": {
+            "nodes": 37880,
+            "edges": 181484,
+            "components": 5233,
+            "largest_component": 8833
+          },
+          "tasks": {}
+        }
+      },
+      "task_comparisons": [],
+      "benchmark_sha256": null,
+      "limits": [
+        "Fixed old anchors only; no new task selection, no LLM outcomes.",
+        "Checks path distance and deletion arithmetic, not full answers, community assignments or highest-betweenness selection.",
+        "Uncapped includes unresolved per-work author occurrences, not an assertion that all nodes identify distinct real people."
+      ]
+    },
+    {
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "graphs": {
+        "original_bounded": {
+          "source_sha256": "7e0a5a77428c1c80d9d21a610af8ff01c70899fcc3387be2c1ed8c787429f117",
+          "graph": {
+            "nodes": 1918,
+            "edges": 6813,
+            "components": 64,
+            "largest_component": 1743
+          },
+          "tasks": {}
+        },
+        "corrected_bounded": {
+          "source_sha256": "ee9ffb1dba9b123f4fa22680e604a74667385a98490dcce8d4577607e81a8ac8",
+          "graph": {
+            "nodes": 1900,
+            "edges": 6416,
+            "components": 79,
+            "largest_component": 1665
+          },
+          "tasks": {}
+        },
+        "corrected_uncapped": {
+          "source_sha256": "5c8356f2a6cef3d1256b657b5a787e485cc8bdeb52e337b053409d2a3cab0aa7",
+          "graph": {
+            "nodes": 29462,
+            "edges": 101514,
+            "components": 2624,
+            "largest_component": 15153
+          },
+          "tasks": {}
+        }
+      },
+      "task_comparisons": [],
+      "benchmark_sha256": null,
+      "limits": [
+        "Fixed old anchors only; no new task selection, no LLM outcomes.",
+        "Checks path distance and deletion arithmetic, not full answers, community assignments or highest-betweenness selection.",
+        "Uncapped includes unresolved per-work author occurrences, not an assertion that all nodes identify distinct real people."
+      ]
+    },
+    {
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "graphs": {
+        "original_bounded": {
+          "source_sha256": "d0ff5ac5920fdd685d5f016c20cd4132f01c2c94c559af4958a4004c06095091",
+          "graph": {
+            "nodes": 1919,
+            "edges": 10843,
+            "components": 46,
+            "largest_component": 1788
+          },
+          "tasks": {}
+        },
+        "corrected_bounded": {
+          "source_sha256": "6c91d4a3d0843699d7b0bebfac38ed50a90b0ddba9fce3e5833d1f357e38d255",
+          "graph": {
+            "nodes": 1896,
+            "edges": 10142,
+            "components": 65,
+            "largest_component": 1691
+          },
+          "tasks": {}
+        },
+        "corrected_uncapped": {
+          "source_sha256": "ab9be416708b715eab48c6ac9f5ba48ae9a76c1c7cd3ff007c87f76be0d4d120",
+          "graph": {
+            "nodes": 82337,
+            "edges": 638586,
+            "components": 4697,
+            "largest_component": 50746
+          },
+          "tasks": {}
+        }
+      },
+      "task_comparisons": [],
+      "benchmark_sha256": null,
+      "limits": [
+        "Fixed old anchors only; no new task selection, no LLM outcomes.",
+        "Checks path distance and deletion arithmetic, not full answers, community assignments or highest-betweenness selection.",
+        "Uncapped includes unresolved per-work author occurrences, not an assertion that all nodes identify distinct real people."
+      ]
+    },
+    {
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "graphs": {
+        "original_bounded": {
+          "source_sha256": "e9e33a70841984d6f4eaa816da7e38b524290a72dd258a166f0b2f0ad9012b52",
+          "graph": {
+            "nodes": 1990,
+            "edges": 18870,
+            "components": 7,
+            "largest_component": 1976
+          },
+          "tasks": {}
+        },
+        "corrected_bounded": {
+          "source_sha256": "02b1d2f90a54ec5df5d3b549358feee86c6da4b7bf5ae2736152fa3173cd5ffa",
+          "graph": {
+            "nodes": 1984,
+            "edges": 17820,
+            "components": 13,
+            "largest_component": 1953
+          },
+          "tasks": {}
+        },
+        "corrected_uncapped": {
+          "source_sha256": "2cdcd6822bdc43b9e244102d358948a2f54e28a14a95a5638decf44e748c444b",
+          "graph": {
+            "nodes": 59118,
+            "edges": 346073,
+            "components": 2238,
+            "largest_component": 46024
+          },
+          "tasks": {}
+        }
+      },
+      "task_comparisons": [],
+      "benchmark_sha256": null,
+      "limits": [
+        "Fixed old anchors only; no new task selection, no LLM outcomes.",
+        "Checks path distance and deletion arithmetic, not full answers, community assignments or highest-betweenness selection.",
+        "Uncapped includes unresolved per-work author occurrences, not an assertion that all nodes identify distinct real people."
+      ]
+    }
+  ]
+}

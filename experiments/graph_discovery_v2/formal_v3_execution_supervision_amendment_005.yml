@@ -1,0 +1,77 @@
+schema_version: 1
+amendment_id: formal_v3_execution_supervision_amendment_005
+status: frozen_before_confirmatory_api_execution
+frozen_at: '2026-08-26T23:52:50+08:00'
+protocols:
+  primary_sha256: 2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f
+  replication_sha256: 872c28cd84e56cc98d6522ed36db01ee24026f58c639695b127d6cdebc999fec
+  complexity_extension_sha256: 32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988
+observed_before_freeze:
+  primary_result_files: 0
+  replication_result_files: 0
+  extension_result_files: 0
+  model_outcomes_inspected: false
+execution_order:
+  - wait_until_primary_replication_and_extension_readiness_are_all_ready
+  - materialize_and_verify_800_call_primary_plan
+  - materialize_and_verify_120_call_replication_plan
+  - materialize_and_verify_312_call_incremental_extension_plan
+  - execute_primary_then_replication_then_incremental_extension
+  - merge_exactly_672_extension_cells_with_360_reused_and_312_incremental
+  - run_frozen_primary_scale_replication_and_complexity_analyses
+retry_policy:
+  parse_failure:
+    maximum_attempts_per_cell: 3
+    request_identity: byte_identical_messages_model_temperature_thinking_and_token_cap
+    successful_cells_never_retried: true
+    third_failure: retain_as_terminal_failed_parse_and_score_as_wrong
+  transport_or_process_interruption:
+    maximum_resume_rounds_per_panel: 10
+    completed_cells_skipped_by_identity: true
+    semantic_or_outcome_based_retry: prohibited
+    request_modification: prohibited
+  rationale: The base protocols allow identical retry of transport or parse failures.
+    This amendment fixes finite operational limits prospectively and prevents selective
+    retry after observing correctness.
+terminal_audit:
+  expected_cell_identity: item_id_x_condition_from_frozen_plan
+  accepted_final_status:
+    - complete
+    - failed_parse_at_or_above_maximum_attempts
+  hard_failures:
+    - duplicate final cells
+    - unexpected cells
+    - benchmark hash mismatch
+    - condition manifest mismatch
+    - unregistered status
+provenance_upgrade:
+  - Readiness must validate semantic representation amendment 003 and execution-scope
+    clarification 004, including builder and audit hashes.
+  - Every result manifest records both neural runtime amendment hashes directly.
+  - This adds audit fields only; request messages and scoring are unchanged.
+implementation:
+  supervisor:
+    path: scripts/run_formal_v3_confirmatory_pipeline.ps1
+    sha256: 24004985ee125222ece67c6aa160c69f97f335b0b11b6f91d39a38af76c5ee33
+  terminal_audit_library:
+    path: src/citeweave/panel_terminal_audit.py
+    sha256: 19ff6c1b5fe23a72c5a387f28d22271fafee902ea265466852eb3ab2a7051ab0
+  terminal_audit_script:
+    path: scripts/audit_formal_panel_terminal.py
+    sha256: 56d82858968603375dee98dbb2bf7eaef37d467fda5f9453508752ba439b2162
+  request_runner:
+    path: scripts/run_graph_discovery_experiment.py
+    sha256: 2f5d222cd9fe81ef0d42afd94ca8c54a36cd522ba436ed249d629d760b0dbf4f
+  primary_readiness:
+    path: scripts/audit_formal_v3_readiness.py
+    sha256: 1174facea04be9030c2242a1a540971a3499420187c56f0bc7759fc55895a168
+  extension_readiness:
+    path: scripts/audit_formal_v3_complexity_extension_readiness.py
+    sha256: 65e813d1545f4de674577945f3acb1d8a68f74685a84ce90bf2f2ddef3ab1e56
+  neural_index_audit:
+    path: src/citeweave/neural_index_audit.py
+    sha256: 8118847f67e603ea0ecc832799bc5fe7f1cdde5f9740ef9d407bd51047d5f11b
+unchanged:
+  - Frozen tasks, conditions, contexts, prompt, model, temperature, token budget, and scoring.
+  - Hypotheses, estimands, scale pairs, cluster unit, and multiplicity correction.
+  - API execution remains impossible until every readiness artifact is ready.

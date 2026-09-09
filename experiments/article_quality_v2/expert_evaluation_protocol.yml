@@ -1,0 +1,89 @@
+schema_version: 1
+status: frozen_before_expert_ratings_and_same_evidence_human_articles
+protocol_date: '2026-08-24'
+purpose: Compare CiteWeave, one-shot LLM, and human-authored articles under the same evidence and writing brief without using LLM judges as confirmatory evidence.
+
+topics:
+  minimum_independent_topics: 8
+  domain_rule: At least four scientific domains; topic is the inferential cluster.
+  contamination_rule: Development articles and prior LLM-judge preferences cannot be included in confirmatory topic selection.
+
+article_conditions:
+  - citeweave_graph_review
+  - one_shot_llm
+  - human_same_evidence
+same_evidence_contract:
+  corpus: Identical frozen bibliographic records, source excerpts, graph analyses, figures, and word target.
+  writing_brief: Identical research questions, required sections, citation style, and deadline.
+  human_author: A domain-knowledgeable researcher who did not build the system and does not see machine drafts.
+  one_shot_rule: One frozen generation request with no graph operators, review compiler, or iterative repair.
+  citeweave_rule: Frozen graph-program, phenomenon-card, provenance, and validated-review pipeline.
+  prohibited_comparison: Published articles built from different corpora may be reported only as an ecological descriptive benchmark.
+
+blinding:
+  formatting_normalization: Strip generator labels, metadata, acknowledgments, file names, and distinctive evidence-ID syntax from the visible article.
+  citation_mapping: Map citations and graph provenance to condition-independent opaque tokens; evaluators may open the same evidence viewer.
+  randomized_order: Independent seeded article order per evaluator and topic.
+  seed: 20260824
+  evaluator_hidden_fields: [condition, author identity, automatic scores, other ratings]
+
+expert_panel:
+  minimum_raters_per_article: 3
+  minimum_domain_experts_per_topic: 2
+  methods_expert_pool: true
+  conflict_policy: Evaluators disclose authorship, collaboration, and topic conflicts before assignment.
+  assignment: Balanced incomplete block with every condition pair co-rated within topic.
+  timing: Server-visible-page heartbeat seconds.
+
+holistic_dimensions:
+  factual_accuracy: 1_to_5
+  evidence_traceability: 1_to_5
+  phenomenon_depth: 1_to_5
+  alternative_explanations: 1_to_5
+  epistemic_calibration: 1_to_5
+  domain_specificity: 1_to_5
+  argumentative_coherence: 1_to_5
+  research_utility: 1_to_5
+
+claim_verification:
+  claims_per_article: 20
+  sampling: Stratified over Results, Discussion, graph-derived claims, numerical claims, and causal-risk language.
+  labels: [supported, correct, overclaim, evidence_sufficient, cannot_assess]
+  overlap: Every sampled claim receives at least two independent ratings; disagreements receive third-person adjudication.
+
+primary_hypotheses:
+  - id: A1
+    contrast: citeweave_graph_review_vs_one_shot_llm
+    outcome: claim_level_correct_and_supported
+    direction: greater
+  - id: A2
+    contrast: citeweave_graph_review_vs_human_same_evidence
+    outcome: holistic_research_utility
+    test: noninferiority
+    margin: 0.35_points_on_1_to_5_scale
+  - id: A3
+    contrast: citeweave_graph_review_vs_human_same_evidence
+    outcome: evidence_traceability
+    direction: greater
+
+secondary_outcomes:
+  - domain_specificity
+  - phenomenon_depth
+  - argumentative_coherence
+  - overclaim_rate
+  - evaluation_seconds
+  - forced_pairwise_preference
+
+statistics:
+  cluster_unit: topic
+  ordinal_model: cumulative_link_mixed_model_with_topic_and_evaluator_random_intercepts
+  binary_model: mixed_logistic_model_with_topic_article_and_evaluator_intercepts
+  descriptive_ci: topic_cluster_bootstrap_percentile_95
+  multiplicity: holm_for_A1_A2_A3
+  missingness: Report cannot-assess and missing ratings; no complete-case deletion without sensitivity analysis.
+  agreement: Krippendorff_alpha_ordinal_for_holistic_and_nominal_for_claim_labels
+
+success_guard:
+  - No claim that machine articles exceed humans unless A2 noninferiority and A3 superiority both pass and domain specificity does not materially regress.
+  - LLM-judge scores remain development diagnostics and cannot enter confirmatory tests.
+  - Better provenance formatting alone cannot be described as better scientific reasoning.

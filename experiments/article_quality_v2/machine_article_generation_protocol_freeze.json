@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "protocol_id": "machine_article_generation_v1",
+  "sha256": "a204f520a6698f5c22b82cb40d5236359ea2c01c195e6f2772a146204921a4c0",
+  "plan_sha256": "af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36",
+  "frozen_before_machine_article_responses": true,
+  "machine_article_responses_present": false,
+  "machine_drafts_present": false,
+  "planned_cells": 16,
+  "generation_requests_per_cell": 1,
+  "rendered_figure_access": false
+}

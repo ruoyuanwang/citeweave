@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_model_execution",
+  "selection_rule": "Include a keyword task family only when the registered semantic entity anchor fields are identical in small, medium, and large graphs.",
+  "anchor_fields_by_task_type": {
+    "multi_hop_connector": [
+      "source_label",
+      "target_label"
+    ],
+    "bridge_counterfactual": [
+      "source_label",
+      "target_label"
+    ],
+    "community_role_contrast": [
+      "dominant_representative",
+      "outward_representative"
+    ],
+    "hub_removal_resilience": [
+      "removed_hub"
+    ],
+    "temporal_structural_shift": [
+      "emerging_label",
+      "established_label"
+    ]
+  },
+  "scales": [
+    "small",
+    "medium",
+    "large"
+  ],
+  "benchmark_hashes": {
+    "perovskite_solar_cell_stability_2012_2025": "0627ba76d81f2feaad3c819ed856c285f7a7c2936221d99ec6397ffc8ee201aa",
+    "spatial_transcriptomics_cancer_2018_2025": "681de84a57a16bd84e922154806db83ecaadc2dbdb408e503c4a89fe0621266f",
+    "green_hydrogen_electrolysis_2010_2025": "8b6a53e0d4b14cec8e952919f892d08502000f2a05a097f98eeaa2242b07e314",
+    "federated_learning_healthcare_2016_2025": "00d9383fbf88ebd965eb3f9cffb1a606a1682fc44b480461f6a7782d8c2863f7"
+  },
+  "groups": 14,
+  "items": 42,
+  "pairs": [
+    {
+      "pair_id": "SP8276f2af0f6e8afe",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "multi_hop_connector",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Perovskite (structure)",
+        "target_label": "Organic chemistry"
+      },
+      "item_ids": {
+        "small": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:multi_hop_connector",
+        "medium": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:multi_hop_connector",
+        "large": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:multi_hop_connector"
+      }
+    },
+    {
+      "pair_id": "SPf8b5464bc79840a7",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "hub_removal_resilience",
+      "anchor_fields": [
+        "removed_hub"
+      ],
+      "anchor": {
+        "removed_hub": "Materials science"
+      },
+      "item_ids": {
+        "small": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:hub_removal_resilience",
+        "medium": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+        "large": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:hub_removal_resilience"
+      }
+    },
+    {
+      "pair_id": "SP507e46c4f01497c2",
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "temporal_structural_shift",
+      "anchor_fields": [
+        "emerging_label",
+        "established_label"
+      ],
+      "anchor": {
+        "emerging_label": "Chemical engineering",
+        "established_label": "Materials science"
+      },
+      "item_ids": {
+        "small": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:small:temporal_structural_shift",
+        "medium": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+        "large": "perovskite_solar_cell_stability_2012_2025:keyword_cooccurrence:large:temporal_structural_shift"
+      }
+    },
+    {
+      "pair_id": "SP97f7d540ee3ba273",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "multi_hop_connector",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Disease",
+        "target_label": "Data mining"
+      },
+      "item_ids": {
+        "small": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:multi_hop_connector",
+        "medium": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:multi_hop_connector",
+        "large": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:multi_hop_connector"
+      }
+    },
+    {
+      "pair_id": "SPe3eec3bc0a97aa08",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "bridge_counterfactual",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Biology",
+        "target_label": "Medicine"
+      },
+      "item_ids": {
+        "small": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:bridge_counterfactual",
+        "medium": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+        "large": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:bridge_counterfactual"
+      }
+    },
+    {
+      "pair_id": "SPe7efd934f747baf1",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "hub_removal_resilience",
+      "anchor_fields": [
+        "removed_hub"
+      ],
+      "anchor": {
+        "removed_hub": "Biology"
+      },
+      "item_ids": {
+        "small": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:hub_removal_resilience",
+        "medium": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+        "large": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:hub_removal_resilience"
+      }
+    },
+    {
+      "pair_id": "SPa701ba9be154a7a6",
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "temporal_structural_shift",
+      "anchor_fields": [
+        "emerging_label",
+        "established_label"
+      ],
+      "anchor": {
+        "emerging_label": "Internal medicine",
+        "established_label": "Biology"
+      },
+      "item_ids": {
+        "small": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:small:temporal_structural_shift",
+        "medium": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+        "large": "spatial_transcriptomics_cancer_2018_2025:keyword_cooccurrence:large:temporal_structural_shift"
+      }
+    },
+    {
+      "pair_id": "SP8e02bc2c2e060a91",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "multi_hop_connector",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Materials science",
+        "target_label": "Renewable energy"
+      },
+      "item_ids": {
+        "small": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:multi_hop_connector",
+        "medium": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:multi_hop_connector",
+        "large": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:multi_hop_connector"
+      }
+    },
+    {
+      "pair_id": "SPdad67ad1a0c59f18",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "bridge_counterfactual",
+      "anchor_fields": [
+        "source_label",
+        "target_label"
+      ],
+      "anchor": {
+        "source_label": "Chemistry",
+        "target_label": "Engineering"
+      },
+      "item_ids": {
+        "small": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:bridge_counterfactual",
+        "medium": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:bridge_counterfactual",
+        "large": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:bridge_counterfactual"
+      }
+    },
+    {
+      "pair_id": "SPeb3226c52cb91569",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "community_role_contrast",
+      "anchor_fields": [
+        "dominant_representative",
+        "outward_representative"
+      ],
+      "anchor": {
+        "dominant_representative": "Engineering",
+        "outward_representative": "Geology"
+      },
+      "item_ids": {
+        "small": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:community_role_contrast",
+        "medium": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:community_role_contrast",
+        "large": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:community_role_contrast"
+      }
+    },
+    {
+      "pair_id": "SP2a7f6f69946f9431",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "hub_removal_resilience",
+      "anchor_fields": [
+        "removed_hub"
+      ],
+      "anchor": {
+        "removed_hub": "Chemistry"
+      },
+      "item_ids": {
+        "small": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:hub_removal_resilience",
+        "medium": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+        "large": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:hub_removal_resilience"
+      }
+    },
+    {
+      "pair_id": "SPaccd9a848702d0a8",
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "temporal_structural_shift",
+      "anchor_fields": [
+        "emerging_label",
+        "established_label"
+      ],
+      "anchor": {
+        "emerging_label": "Organic chemistry",
+        "established_label": "Chemistry"
+      },
+      "item_ids": {
+        "small": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:small:temporal_structural_shift",
+        "medium": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+        "large": "green_hydrogen_electrolysis_2010_2025:keyword_cooccurrence:large:temporal_structural_shift"
+      }
+    },
+    {
+      "pair_id": "SP769439642b3c55ea",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "hub_removal_resilience",
+      "anchor_fields": [
+        "removed_hub"
+      ],
+      "anchor": {
+        "removed_hub": "Computer science"
+      },
+      "item_ids": {
+        "small": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:hub_removal_resilience",
+        "medium": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:hub_removal_resilience",
+        "large": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:hub_removal_resilience"
+      }
+    },
+    {
+      "pair_id": "SPfa3f577bfc05294b",
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "network": "keyword_cooccurrence",
+      "task_type": "temporal_structural_shift",
+      "anchor_fields": [
+        "emerging_label",
+        "established_label"
+      ],
+      "anchor": {
+        "emerging_label": "Medicine",
+        "established_label": "Computer science"
+      },
+      "item_ids": {
+        "small": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:small:temporal_structural_shift",
+        "medium": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:medium:temporal_structural_shift",
+        "large": "federated_learning_healthcare_2016_2025:keyword_cooccurrence:large:temporal_structural_shift"
+      }
+    }
+  ],
+  "model_outcomes_inspected": false
+}

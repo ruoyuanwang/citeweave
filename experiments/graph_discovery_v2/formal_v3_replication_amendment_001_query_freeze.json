@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "amendment": "formal_v3_replication_amendment_001_query.yml",
+  "sha256": "0e051fc11e86895250256f5b2d47a603f771680d17e4904f5cc525c4258969c5",
+  "base_protocol_sha256": "872c28cd84e56cc98d6522ed36db01ee24026f58c639695b127d6cdebc999fec",
+  "frozen_before_acquisition": true,
+  "acquisition_started_at_freeze": false,
+  "primary_or_replication_outcomes_inspected": false
+}

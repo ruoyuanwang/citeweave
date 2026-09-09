@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_confirmatory_retrieval_and_generation",
+  "amendment": "formal_v3_neural_runtime_amendment_003_semantic_representation.yml",
+  "sha256": "dca3905cfe1402a1333279dace2c5c2d0d361c2bdb495fd8edf161ace8f09367",
+  "supersedes_amendment_sha256": "c149a37b72df2621678f7c6c5040467a80fec76ae65c774ae2938e2ccdd76edb",
+  "frozen_at_utc": "2026-08-26T05:34:00Z",
+  "formal_outcome_file_count": 0,
+  "model_outcomes_inspected": false,
+  "retrieval_outcomes_inspected": false,
+  "semantic_v2_reuse_fraction": 0.999259089201486
+}

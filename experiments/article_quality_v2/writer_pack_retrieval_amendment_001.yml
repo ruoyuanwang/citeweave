@@ -1,0 +1,42 @@
+schema_version: 1
+amendment_id: writer_pack_retrieval_amendment_001
+base_protocol_sha256: 7e8267bd91b69ac12b563aa1e5af47921cd67d521a4f17a28bb652fb1fd875a5
+status: frozen_before_same_evidence_articles_and_expert_outcomes
+human_outcomes_inspected: false
+machine_article_outcomes_inspected: false
+problem:
+  - The original source selector treated any work carrying a generic graph answer keyword such as Chemistry, Biology, or Computer science as relevant.
+  - All 120 original sources were labeled answer_keyword_match, but many were topically peripheral; the label therefore did not measure article-level evidence relevance.
+  - High citation count was used before topical task relevance and could amplify generic reviews.
+
+replacement:
+  version: topic-task-bm25-v2
+  corpus: The same frozen topic corpus; no new external work is introduced.
+  query_fields:
+    - dataset topic terms
+    - registered graph question
+    - verified answer labels
+    - task type
+  document_fields:
+    - title
+    - abstract
+    - work keywords
+  ranking:
+    - Require a nonempty abstract.
+    - Prioritize documents matching at least one nontrivial dataset-topic term.
+    - Rank within the topic-matched tier by deterministic BM25.
+    - Use answer-keyword overlap only as recorded provenance, not as the primary ranking key.
+    - Prefer unique works across the five phenomena.
+  prohibited:
+    - citation-count-first fallback
+    - external search after inspecting generated articles
+    - manual source replacement based on preferred conclusions
+
+versioning:
+  original_packs: experiments/article_quality_v2/same_evidence_writer_packs
+  replacement_packs: experiments/article_quality_v2/same_evidence_writer_packs_v2
+  rule: Original packs remain immutable development artifacts; only v2 may enter the prospective same-evidence article experiment.
+
+quality_claim_guard:
+  - BM25 topical selection is a deterministic evidence-screening improvement, not proof that every selected source supports the graph interpretation.
+  - Claim-level domain experts must still label relevance, support, and cannot-assess.

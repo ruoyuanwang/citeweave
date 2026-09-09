@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_confirmatory_api_execution",
+  "amendment": "formal_v3_execution_supervision_amendment_005.yml",
+  "sha256": "9090aa99cf4aac5f9caedef77ededcce4a76f24d80acde71f3385ef676f925e7",
+  "frozen_at_local": "2026-08-26T23:53:00+08:00",
+  "primary_result_files": 0,
+  "replication_result_files": 0,
+  "extension_result_files": 0,
+  "model_outcomes_inspected": false,
+  "maximum_parse_attempts": 3,
+  "maximum_transport_rounds_per_panel": 10
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_confirmatory_api_execution",
+  "amendment": "formal_v3_analysis_amendment_007_equal_dataset_weighting.yml",
+  "sha256": "4ad307c691a4d768379b1d3ec7b20a5295607f73da24ff79d2fda242952bc097",
+  "formal_provider_result_files": 0,
+  "model_outcomes_inspected": false,
+  "frozen_at_local": "2026-08-31T18:13:00+08:00"
+}

@@ -1,0 +1,51 @@
+schema_version: 1
+status: frozen_before_primary_replication_or_extension_model_outcomes
+amendment_date: '2026-08-24'
+amends_protocol_sha256: 32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988
+reason: Avoid rerunning deterministic logical cells that are byte-equivalent to cells already registered in the primary or replication panel.
+
+changes:
+  logical_cells_unchanged: 672
+  reuse_rule:
+    primary_complex_cells:
+      tasks: 60
+      reusable_conditions: [flat_hybrid, flat_neural_dense, graph_hierarchical_retrieval_v2, graph_program]
+      reusable_cells: 240
+      source: formal_v3_primary_results
+    replication_complex_cells:
+      tasks: 60
+      reusable_conditions: [flat_hybrid, graph_program]
+      reusable_cells: 120
+      source: formal_v3_replication_results
+  new_calls:
+    simple_controls_all_four_conditions: 192
+    replication_complex_neural_and_hierarchical: 120
+    total: 312
+  equivalence_gate:
+    required_equal_fields:
+      - dataset_id
+      - item_id
+      - task_payload_sha256
+      - condition
+      - context_sha256_after_token_budget
+      - prompt_version
+      - model
+      - temperature
+      - thinking
+      - tokenizer_manifest_sha256
+      - context_token_budget
+    mismatch_action: Refuse reuse and keep the logical cell missing; never silently rerun after outcomes are visible.
+  merge_rule:
+    - Every logical cell stores source_panel, source_result_path, source_result_sha256, and reuse_equivalence_audit.
+    - The merged 672-cell panel must contain exactly one record per item-condition.
+    - Reused and newly executed cells are analyzed together only after all equivalence gates pass.
+
+analysis_impact:
+  hypotheses: unchanged
+  estimands: unchanged
+  task_set: unchanged
+  conditions: unchanged
+  multiplicity: unchanged
+  disclosure: Report 672 logical cells, 360 reused cells, and 312 incremental API calls.
+
+freeze_rule: Any relaxation of an equivalence field requires a new pre-outcome amendment; post-outcome relaxation is forbidden.

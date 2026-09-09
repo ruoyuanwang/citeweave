@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "erratum_type": "administrative_timestamp_only",
+  "amendment_sha256_unchanged": "dca3905cfe1402a1333279dace2c5c2d0d361c2bdb495fd8edf161ace8f09367",
+  "freeze_sha256_unchanged": "2b3c374a161745b3fd25d175fb49468c5b8a0875ac942c4ebff7b0927e8193fc",
+  "incorrect_embedded_local_time": "2026-08-26T13:34:00+08:00",
+  "filesystem_amendment_creation_time_local": "2026-08-26T13:29:25+08:00",
+  "filesystem_freeze_creation_time_local": "2026-08-26T13:29:41+08:00",
+  "semantic_v2_pipeline_start_time_local": "2026-08-26T13:30:02+08:00",
+  "substantive_fields_changed": false,
+  "note": "The embedded timestamp was entered 4 minutes 35 seconds late. File creation metadata establishes that both the amendment and its freeze artifact existed before the semantic-v2 retrieval process started. Frozen files were not modified."
+}

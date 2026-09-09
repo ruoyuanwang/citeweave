@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "amendment_id": "writer_pack_retrieval_amendment_001",
+  "amendment_sha256": "c78a59e25d813008e4530b915a195012cd2c75f8f237f769d659dcb664834856",
+  "source_selection_version": "topic-task-bm25-v2",
+  "frozen_before_same_evidence_articles": true,
+  "frozen_before_expert_outcomes": true,
+  "same_evidence_articles_present": false,
+  "expert_outcomes_present": false
+}

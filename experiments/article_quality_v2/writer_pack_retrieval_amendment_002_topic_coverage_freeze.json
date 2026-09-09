@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "amendment_id": "writer_pack_retrieval_amendment_002_topic_coverage",
+  "amendment_sha256": "6da306fd0fd204d422335f09d5fff49b7af7c4c11a962509e4d9fd18141a43c0",
+  "source_selection_version": "topic-task-bm25-v3-topic-coverage",
+  "frozen_before_v3_writer_packs": true,
+  "frozen_before_same_evidence_articles": true,
+  "frozen_before_expert_outcomes": true,
+  "v2_source_titles_inspected": true,
+  "machine_article_outcomes_inspected": false,
+  "expert_outcomes_inspected": false
+}

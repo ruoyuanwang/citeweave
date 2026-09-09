@@ -1,0 +1,49 @@
+schema_version: 1
+amendment_id: formal_v3_neural_runtime_amendment_002_exact_scale_reuse
+status: frozen_before_confirmatory_retrieval_and_generation
+frozen_at: '2026-08-26T13:22:00+08:00'
+base_runtime_implementation:
+  path: experiments/graph_discovery_v2/formal_v3_neural_runtime_implementation.yml
+  sha256: 72ce1d3f0e6909c3f32996c8ab799d9dad9ff0fccb94c90eedb73a5f206e2468
+implementation:
+  path: scripts/build_neural_dense_sidecars.py
+  sha256: fb3a16599d9e2c2bcca43d294e37ebab26f8a10dfb1625ea130bc46aa6cd55d7
+reason:
+  - The expanded scale-by-complexity experiment repeatedly embeds nodes that are
+    byte-identical across the registered small, medium, and large graph snapshots.
+  - Query-independent reuse reduces prerequisite runtime without using questions,
+    answers, gold labels, retrieval ranks, generation outputs, or evaluation outcomes.
+eligibility_rule:
+  source_scale: large
+  target_scales: [small, medium]
+  document_serialization: canonical_sorted_compact_json
+  match_key: sha256_of_full_canonical_document
+  approximate_matching: prohibited
+  partial_field_matching: prohibited
+  unmatched_target_rows: encoded_with_the_frozen_bge_m3_runtime
+  duplicate_source_documents: fail_closed
+ordering_and_integrity:
+  - Matched target rows are ordered first in their original target order, followed by
+    unmatched rows in their original target order.
+  - Retrieval tie-breaking remains evidence-id SHA-256 and is independent of row order.
+  - The source cache must be complete and must match runtime identity, row count,
+    row-order SHA-256, embedding-file SHA-256, and embedding shape.
+  - The target manifest records the source manifest SHA-256, source embedding SHA-256,
+    source row-order SHA-256, reused row count, and newly encoded row count.
+  - Resume reconstructs the same deterministic row order before validating a partial
+    or completed target cache.
+equivalence_gate:
+  test: tests/test_neural_dense_sidecars.py::test_exact_large_scale_reuse_only_encodes_unmatched_rows
+  required: reused rows are never passed to the encoder and the assembled target
+    matrix is elementwise identical to direct deterministic encoding.
+observed_before_freeze:
+  formal_outcome_file_count: 0
+  model_outcomes_inspected: false
+  retrieval_outcomes_inspected: false
+  equivalence_test_passed: true
+unchanged:
+  - Frozen datasets, graph snapshots, tasks, questions, gold answers, and evidence IDs.
+  - Model revision, tokenizer, serialization, precision, normalization, similarity,
+    record budget, conditions, prompts, generation model, hypotheses, and analysis.
+validity_note: This is a lossless cache-construction optimization, not a new retrieval
+  condition. It cannot change any embedding or ranking for an eligible row.

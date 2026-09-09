@@ -1,0 +1,22 @@
+schema_version: 1
+amendment_id: formal_v3_replication_amendment_001_query
+base_protocol_sha256: 872c28cd84e56cc98d6522ed36db01ee24026f58c639695b127d6cdebc999fec
+status: frozen_pre_acquisition_query_review_fix
+discovered_at_stage: frozen_protocol_pre_acquisition
+acquisition_started: false
+primary_or_replication_outcomes_inspected: false
+trigger:
+  artifact: formal_v3_replication_query_judgment.json
+  overall_approved: false
+  rejected_dataset: membrane_desalination_fouling_2010_2025
+  issue: Exact phrase 'membrane desalination' causes material recall loss for desalination-membrane fouling literature.
+changes:
+  datasets:
+    membrane_desalination_fouling_2010_2025:
+      keywords: [desalination, membrane fouling]
+      rationale: Covers desalination membrane, membrane-based desalination, reverse-osmosis membrane fouling, and membrane fouling in desalination without requiring one uncommon contiguous phrase.
+unchanged:
+  - dataset identity, domain, years, document type, and uncapped exhaustive acquisition
+  - the other three replication queries
+  - graph scales, task types, conditions, model protocol, estimand, and statistics
+validity_note: The only trigger was an independent query judgment that had no acquisition counts, graph structures, benchmark answers, or model outcomes.

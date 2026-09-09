@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "status": "scoped_data_invariants_passed",
+  "datasets": [
+    {
+      "dataset_id": "federated_learning_healthcare_2016_2025",
+      "group": "primary",
+      "passed": true,
+      "issues": [],
+      "membership": {
+        "known_author_membership_multiset_differences": 0,
+        "unresolved_author_occurrences": 4418,
+        "max_canonical_works_per_unresolved_id": 1,
+        "remaining_placeholder_membership_rows": 0,
+        "non_author_membership_field_multiset_differences": 0,
+        "passed": true
+      },
+      "unchanged_graphs": {
+        "keyword_occurrences.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "e83198dd226b94dce87a17f178c98c7f027e194d190c81e3c7fbe8e22a06b57b",
+          "new_sha256": "e83198dd226b94dce87a17f178c98c7f027e194d190c81e3c7fbe8e22a06b57b"
+        },
+        "keyword_cooccurrence_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "59bdc5467ef780f3934918e260514f7aabec93473b1da1c8c4b8c3a83fbdee04",
+          "new_sha256": "59bdc5467ef780f3934918e260514f7aabec93473b1da1c8c4b8c3a83fbdee04"
+        },
+        "institution_productivity.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "56b11ddf10383eac24eb13286b4ceeb15695d0a445f551cf55c00bc38e8611a2",
+          "new_sha256": "56b11ddf10383eac24eb13286b4ceeb15695d0a445f551cf55c00bc38e8611a2"
+        },
+        "institution_collaboration_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "a645983b7fb0e257f0de47da7612ad4af3a30b79d44dbadf89543833d6475108",
+          "new_sha256": "a645983b7fb0e257f0de47da7612ad4af3a30b79d44dbadf89543833d6475108"
+        }
+      },
+      "reprocessing_verification_sha256": "c1e2744abd61da967fe0d53f400d201b95ba102208ebd75a6fb78a3bc4c35732",
+      "old_membership_sha256": "3fe8bb86ae6fffe5fb72b0bc2cd97dca8ef620beca1ed5983a3c131fa15532c5",
+      "new_membership_sha256": "3d590cb743ec29b0d5d8b821da1750c7e07d06d0481cabcbde60694614021202"
+    },
+    {
+      "dataset_id": "green_hydrogen_electrolysis_2010_2025",
+      "group": "primary",
+      "passed": true,
+      "issues": [],
+      "membership": {
+        "known_author_membership_multiset_differences": 0,
+        "unresolved_author_occurrences": 2024,
+        "max_canonical_works_per_unresolved_id": 1,
+        "remaining_placeholder_membership_rows": 0,
+        "non_author_membership_field_multiset_differences": 0,
+        "passed": true
+      },
+      "unchanged_graphs": {
+        "keyword_occurrences.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "b9ec3f52a03b5bedef2ed59accc85f04e41d5a6fedc56af42a38deebd3342a13",
+          "new_sha256": "b9ec3f52a03b5bedef2ed59accc85f04e41d5a6fedc56af42a38deebd3342a13"
+        },
+        "keyword_cooccurrence_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "8a0ab0c99bfc75ed132d03881f3cbadac1cf64c1ff2485daaef10065ec968ba9",
+          "new_sha256": "8a0ab0c99bfc75ed132d03881f3cbadac1cf64c1ff2485daaef10065ec968ba9"
+        },
+        "institution_productivity.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "c38ee724553fb67ccbe5def12076794126b6872a5bf30c669046da636d24bef5",
+          "new_sha256": "c38ee724553fb67ccbe5def12076794126b6872a5bf30c669046da636d24bef5"
+        },
+        "institution_collaboration_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "2ce1177053d068c75a1871cca11a0174a0effc03b63d50b8ea4fe0d147ffbb0e",
+          "new_sha256": "2ce1177053d068c75a1871cca11a0174a0effc03b63d50b8ea4fe0d147ffbb0e"
+        }
+      },
+      "reprocessing_verification_sha256": "3ac381b134f60ed5f88cf1308af7aab482968d3e5092fa453000425af10e366d",
+      "old_membership_sha256": "9d9719be2d0869497841711350ee39d4e8cbeb1633911455f533b0ea70477cd6",
+      "new_membership_sha256": "5bb632d4921d76d0a4f03d5902becc2f0324a61148b5f557e987ed94530b22b9"
+    },
+    {
+      "dataset_id": "perovskite_solar_cell_stability_2012_2025",
+      "group": "primary",
+      "passed": true,
+      "issues": [],
+      "membership": {
+        "known_author_membership_multiset_differences": 0,
+        "unresolved_author_occurrences": 7583,
+        "max_canonical_works_per_unresolved_id": 1,
+        "remaining_placeholder_membership_rows": 0,
+        "non_author_membership_field_multiset_differences": 0,
+        "passed": true
+      },
+      "unchanged_graphs": {
+        "keyword_occurrences.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "bc27da7105c7c065c4cd39575926233bda137994e58fe35299e1ef706b2e85d5",
+          "new_sha256": "bc27da7105c7c065c4cd39575926233bda137994e58fe35299e1ef706b2e85d5"
+        },
+        "keyword_cooccurrence_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "600378058f302eba2a6d7d8207f3ae91d5de883d24b0f9d8b44785c5b735064f",
+          "new_sha256": "600378058f302eba2a6d7d8207f3ae91d5de883d24b0f9d8b44785c5b735064f"
+        },
+        "institution_productivity.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "e7b1d0cd31d61f8537f9c9bf1af13d83f34061ef6cc32001718d48c42d284b80",
+          "new_sha256": "e7b1d0cd31d61f8537f9c9bf1af13d83f34061ef6cc32001718d48c42d284b80"
+        },
+        "institution_collaboration_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "bc5d65dd225a38d3c7712c8aec9341bbfb59191daade0090e61814e3b639e524",
+          "new_sha256": "bc5d65dd225a38d3c7712c8aec9341bbfb59191daade0090e61814e3b639e524"
+        }
+      },
+      "reprocessing_verification_sha256": "fdb5aadf077ae7443724d5218f24ffbc83b8e206b7929da0a694857ed2918233",
+      "old_membership_sha256": "fa6146c05631d802fbb12e8e9e7955f649c5d9ab511ab78915d6c327b0f78e5f",
+      "new_membership_sha256": "5780bfd8c59b12740e118dc8c59cd3b6ec66cfab353898f888cbce8210fca8ac"
+    },
+    {
+      "dataset_id": "spatial_transcriptomics_cancer_2018_2025",
+      "group": "primary",
+      "passed": true,
+      "issues": [],
+      "membership": {
+        "known_author_membership_multiset_differences": 0,
+        "unresolved_author_occurrences": 3763,
+        "max_canonical_works_per_unresolved_id": 1,
+        "remaining_placeholder_membership_rows": 0,
+        "non_author_membership_field_multiset_differences": 0,
+        "passed": true
+      },
+      "unchanged_graphs": {
+        "keyword_occurrences.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "c874497f7700216477ad14155cb0e73af530410bf99d92a57a8526e9bf9fe7ea",
+          "new_sha256": "c874497f7700216477ad14155cb0e73af530410bf99d92a57a8526e9bf9fe7ea"
+        },
+        "keyword_cooccurrence_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "ad3cb2e7b1bf754f0029af30805f995dfcbc614ed7ec42d4a9de0c78eca12845",
+          "new_sha256": "ad3cb2e7b1bf754f0029af30805f995dfcbc614ed7ec42d4a9de0c78eca12845"
+        },
+        "institution_productivity.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "308092cbdfa4aad33ce9280f35f30c905f579138d74f94c07929c554687e514c",
+          "new_sha256": "308092cbdfa4aad33ce9280f35f30c905f579138d74f94c07929c554687e514c"
+        },
+        "institution_collaboration_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "d08bf8e9d1e023d3e43460c05269b392b05487c0a5745cadb1f124401c1a0617",
+          "new_sha256": "d08bf8e9d1e023d3e43460c05269b392b05487c0a5745cadb1f124401c1a0617"
+        }
+      },
+      "reprocessing_verification_sha256": "e78684ffb0c1e0057f9e5f976ddf9b26d0b5729225e56e440d563e17f4bb0a5c",
+      "old_membership_sha256": "711ecf5d83bf60ab96de16149de8d8057ad25b58e5631d03ca03720b1d18b503",
+      "new_membership_sha256": "170945934029413ab851b685dfaca5b9477bb7c3bb40236a25eac70edcb95871"
+    },
+    {
+      "dataset_id": "explainable_ai_medical_imaging_2016_2025",
+      "group": "replication",
+      "passed": true,
+      "issues": [],
+      "membership": {
+        "known_author_membership_multiset_differences": 0,
+        "unresolved_author_occurrences": 2455,
+        "max_canonical_works_per_unresolved_id": 1,
+        "remaining_placeholder_membership_rows": 0,
+        "non_author_membership_field_multiset_differences": 0,
+        "passed": true
+      },
+      "unchanged_graphs": {
+        "keyword_occurrences.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "f6a20608c19fa8bb4ecf9dfe836b2700466f4d0fb9296472ae0cf224b2610162",
+          "new_sha256": "f6a20608c19fa8bb4ecf9dfe836b2700466f4d0fb9296472ae0cf224b2610162"
+        },
+        "keyword_cooccurrence_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "7a1b8d9fc4459d8c473f66d5ab371ecb68452e75cac833443915efbc80361fe2",
+          "new_sha256": "7a1b8d9fc4459d8c473f66d5ab371ecb68452e75cac833443915efbc80361fe2"
+        },
+        "institution_productivity.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "fa1b10b0f5e6e90e179ba1e3b84e2d012ad45cb8a36ed57c54ea4b3e12df8781",
+          "new_sha256": "fa1b10b0f5e6e90e179ba1e3b84e2d012ad45cb8a36ed57c54ea4b3e12df8781"
+        },
+        "institution_collaboration_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "913e56333978f0d9e5be7fca292e9c03fe4ff4287c0d5743dfe75d19f7c45f40",
+          "new_sha256": "913e56333978f0d9e5be7fca292e9c03fe4ff4287c0d5743dfe75d19f7c45f40"
+        }
+      },
+      "reprocessing_verification_sha256": "5deb045294d8ef7d84d6c766410cbc5a85f234dadd4ba57728e6ce82b8dc29b4",
+      "old_membership_sha256": "ccd288b28aa0f10d48f909e20f6da4826faa8eda21bc24c62ea769790a2d812e",
+      "new_membership_sha256": "d41fb3e35b48b8d68f37dfa5ec43eb1ca3a9444fa53a14592ea3fde9dc5554d5"
+    },
+    {
+      "dataset_id": "membrane_desalination_fouling_2010_2025",
+      "group": "replication",
+      "passed": true,
+      "issues": [],
+      "membership": {
+        "known_author_membership_multiset_differences": 0,
+        "unresolved_author_occurrences": 863,
+        "max_canonical_works_per_unresolved_id": 1,
+        "remaining_placeholder_membership_rows": 0,
+        "non_author_membership_field_multiset_differences": 0,
+        "passed": true
+      },
+      "unchanged_graphs": {
+        "keyword_occurrences.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "6ea26923807cd28bb51ce2b6548a6d3a851f9e93423a4ecae1c7b6b0e7853060",
+          "new_sha256": "6ea26923807cd28bb51ce2b6548a6d3a851f9e93423a4ecae1c7b6b0e7853060"
+        },
+        "keyword_cooccurrence_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "5a218e8eab58126805476ca599447f603958c65bb33a7c1d0d5bb396e4e9416c",
+          "new_sha256": "5a218e8eab58126805476ca599447f603958c65bb33a7c1d0d5bb396e4e9416c"
+        },
+        "institution_productivity.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "545d1da153fe376f97d45629f3d260b2e6381cb114f477d67f7cd4ab704f87f5",
+          "new_sha256": "545d1da153fe376f97d45629f3d260b2e6381cb114f477d67f7cd4ab704f87f5"
+        },
+        "institution_collaboration_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "5b6fce7bb40140980faab60e5f1b1d3c41cc3f07d1344cd87418f163faec92d1",
+          "new_sha256": "5b6fce7bb40140980faab60e5f1b1d3c41cc3f07d1344cd87418f163faec92d1"
+        }
+      },
+      "reprocessing_verification_sha256": "57cf9a4f5da0e918271f1089552bb6e0397868ceb0cf7ebabe5257ca16ce0493",
+      "old_membership_sha256": "53d088c9dc496c25a73e10dcf5b0cf3e086199ae667b114af21cb1a96fa07532",
+      "new_membership_sha256": "2d9fc43d864bcf9bf0da40f97c5c070804963ef607f68d92674d2a92ee6932f8"
+    },
+    {
+      "dataset_id": "organoid_disease_modeling_2010_2025",
+      "group": "replication",
+      "passed": true,
+      "issues": [],
+      "membership": {
+        "known_author_membership_multiset_differences": 0,
+        "unresolved_author_occurrences": 2337,
+        "max_canonical_works_per_unresolved_id": 1,
+        "remaining_placeholder_membership_rows": 0,
+        "non_author_membership_field_multiset_differences": 0,
+        "passed": true
+      },
+      "unchanged_graphs": {
+        "keyword_occurrences.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "ca8f045353c81f9a642a86df32819f00f497610257a8b4550bb045c3afa3e601",
+          "new_sha256": "ca8f045353c81f9a642a86df32819f00f497610257a8b4550bb045c3afa3e601"
+        },
+        "keyword_cooccurrence_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "db0c61d182cb8362332b5ef02888cf061546ed3d4a0dbc28387941bf24a95cff",
+          "new_sha256": "db0c61d182cb8362332b5ef02888cf061546ed3d4a0dbc28387941bf24a95cff"
+        },
+        "institution_productivity.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "3ccbc4f253fc7ef50e0a67911ab0bfb0b5aa1946c8371d489d2122f20cb64b57",
+          "new_sha256": "3ccbc4f253fc7ef50e0a67911ab0bfb0b5aa1946c8371d489d2122f20cb64b57"
+        },
+        "institution_collaboration_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "c95081704b0e22b0844c6e42a8321bb4a8dfc64f3227f26ad420e08b40a2be7b",
+          "new_sha256": "c95081704b0e22b0844c6e42a8321bb4a8dfc64f3227f26ad420e08b40a2be7b"
+        }
+      },
+      "reprocessing_verification_sha256": "1733b05295132cb703fd4a97cfc26788cec4db333e3b0d162170eca96fa3483e",
+      "old_membership_sha256": "6cf66223e2896754159bf4fb86e3cfb6011d74309e7e2b967cc5b0f120c3fc5c",
+      "new_membership_sha256": "4afd7ec24e9cb21cf2989c063734d10b6155e39f2aeb9c8ee8a2dea0dbcef708"
+    },
+    {
+      "dataset_id": "sodium_ion_battery_cathodes_2010_2025",
+      "group": "replication",
+      "passed": true,
+      "issues": [],
+      "membership": {
+        "known_author_membership_multiset_differences": 0,
+        "unresolved_author_occurrences": 3922,
+        "max_canonical_works_per_unresolved_id": 1,
+        "remaining_placeholder_membership_rows": 0,
+        "non_author_membership_field_multiset_differences": 0,
+        "passed": true
+      },
+      "unchanged_graphs": {
+        "keyword_occurrences.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "4101f5aae14030c3a4ea2896ed9424d6bfb4365967368fa011353f3635f7e1c5",
+          "new_sha256": "4101f5aae14030c3a4ea2896ed9424d6bfb4365967368fa011353f3635f7e1c5"
+        },
+        "keyword_cooccurrence_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "b370767cda5ad21a0a8f13579df68a9b3a8bbcf5c4e1d866a3bfffa2e5640d51",
+          "new_sha256": "b370767cda5ad21a0a8f13579df68a9b3a8bbcf5c4e1d866a3bfffa2e5640d51"
+        },
+        "institution_productivity.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "daf8d3824a6a5a603978dd3ff7e3346eae327c27fa5805bf2498a97dd94ddaeb",
+          "new_sha256": "daf8d3824a6a5a603978dd3ff7e3346eae327c27fa5805bf2498a97dd94ddaeb"
+        },
+        "institution_collaboration_edges.parquet": {
+          "ordered_rows_equal": true,
+          "old_sha256": "ef0ec8ab9f2c1f0e1a76353296724a189bdff2b571f0f0c7435de64bbb877189",
+          "new_sha256": "ef0ec8ab9f2c1f0e1a76353296724a189bdff2b571f0f0c7435de64bbb877189"
+        }
+      },
+      "reprocessing_verification_sha256": "b9e566cec92269c03d6da759498c2e4da1dca1a5b13590dd5930ca2c5d6871c2",
+      "old_membership_sha256": "76196142f95188fee6fcec9d9d3bfe48db72ee65eab79701f99f9f88ba792b5c",
+      "new_membership_sha256": "8ca470298820daa37e781e7bb24c8fddcf2339143e25c1200dd5658f17df6ce8"
+    }
+  ],
+  "limitations": [
+    "Does not prove complete real-person disambiguation or scientific validity of all source metadata.",
+    "Formal model and real human outcomes remain unmeasured."
+  ]
+}

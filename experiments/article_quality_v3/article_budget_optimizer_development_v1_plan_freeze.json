@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "deterministic_budget_plan_frozen_before_execution",
+  "sha256": "47ed20b973379185050bd4711e7d6b7dc2dfe55ba1a6feb7fbd8c4a2e92379ba",
+  "protocol_sha256": "49a263d2e50205342c08cabfa88f1ff504bb2831f3f9de4ef7d0891aff20fa35",
+  "datasets": 2,
+  "provider_calls": 0
+}

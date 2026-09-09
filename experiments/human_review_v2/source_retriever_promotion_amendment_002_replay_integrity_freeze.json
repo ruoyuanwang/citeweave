@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_human_source_judgments",
+  "amendment": "source_retriever_promotion_amendment_002_replay_integrity.yml",
+  "sha256": "656b6f7fc9df8eddf0893158afdcbc7f82561c7c2d2822fb954b9448a5a9769d",
+  "base_amendment_freeze_sha256": "335ab0156eeef99a28316b6739a04241484363acb0a5dd219d69c10ca23690ee",
+  "human_source_result_files": 0,
+  "human_judgments_inspected": false,
+  "frozen_at_local": "2026-08-31T17:19:18+08:00",
+  "effectiveness_thresholds_modified": false
+}

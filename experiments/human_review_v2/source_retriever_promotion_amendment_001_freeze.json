@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_human_source_judgments",
+  "amendment": "source_retriever_promotion_amendment_001.yml",
+  "sha256": "335ab0156eeef99a28316b6739a04241484363acb0a5dd219d69c10ca23690ee",
+  "base_protocol_sha256": "d34d70c7ba4934274955c716ddc8cf1d25ef7639b1c0e561f4b9dd1fb1fe45de",
+  "human_source_result_files": 0,
+  "human_judgments_inspected": false,
+  "frozen_at_local": "2026-08-26T13:49:00+08:00"
+}

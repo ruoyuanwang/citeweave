@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "blocked",
+  "human_outcomes_inspected": false,
+  "checks": {
+    "packet_manifest_pre_outcome": true,
+    "unique_nonempty_case_ids": true,
+    "minimum_96_heldout_cases": false,
+    "prospective_candidate_outputs_not_prototypes": false,
+    "candidate_generation_records_bound": false,
+    "minimum_6_reviewers": false,
+    "reviewer_ids_unique_nonempty": false,
+    "reviewer_warmup_and_exclusion_valid": false,
+    "capability_model_frozen_without_heldout_leakage": false,
+    "assignment_references_valid": false,
+    "four_factorial_arms_present": false,
+    "reviewer_crossover_valid": false,
+    "no_reviewer_sees_same_case_twice": true,
+    "double_review_overlap_at_least_50_percent": false,
+    "assignment_frozen_without_heldout_leakage": false,
+    "factorial_analysis_amendment_frozen_pre_outcome": true,
+    "factorial_analysis_amendment_chain_valid": true,
+    "factorial_analysis_implementation_hashes_valid": true
+  },
+  "blocking_reasons": [
+    "minimum_96_heldout_cases",
+    "prospective_candidate_outputs_not_prototypes",
+    "candidate_generation_records_bound",
+    "minimum_6_reviewers",
+    "reviewer_ids_unique_nonempty",
+    "reviewer_warmup_and_exclusion_valid",
+    "capability_model_frozen_without_heldout_leakage",
+    "assignment_references_valid",
+    "four_factorial_arms_present",
+    "reviewer_crossover_valid",
+    "double_review_overlap_at_least_50_percent",
+    "assignment_frozen_without_heldout_leakage"
+  ],
+  "counts": {
+    "heldout_cases": 40,
+    "reviewers": 0,
+    "assignments": 0,
+    "double_reviewed_cases": 0,
+    "double_review_overlap_fraction": 0.0,
+    "factorial_arm_counts": {}
+  },
+  "artifact_hashes": {
+    "packet_manifest_sha256": "764ede8c2d6eaa625a206ef637da2870022bafad388811d9b3a631455debf3c6",
+    "reviewer_registry_sha256": null,
+    "capability_freeze_sha256": null,
+    "assignment_manifest_sha256": null,
+    "complementary_amendment_sha256": "7fb864caf7b813f9a890365ebabd08234b9d7b51103cd9ca9401e528fb9b4219",
+    "cluster_inference_amendment_sha256": "5f0d04bf59cafb863cc0be0761f3ff80dcccaaba7548977acd5c22ee99540723",
+    "factorial_analysis_amendment_sha256": "c72cc9f68c94523d3df4cf0a6f8b8df12fdd4fe7387ee7513352fdcbb9c24dc7",
+    "factorial_analysis_freeze_sha256": "9fe1f0805546e26c244a27d73450395d2b7361fc97d1a95350ab15f8bbe52f6e"
+  }
+}

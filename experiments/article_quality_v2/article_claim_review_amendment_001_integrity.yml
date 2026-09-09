@@ -1,0 +1,77 @@
+schema_version: 1
+amendment_id: article_claim_review_integrity_and_effects_001
+status: frozen_before_machine_article_and_human_outcomes
+base_protocol_sha256: c3d74f5a6d1d8de130813c780cf16aafd4f1acedb52aca10e0d4992509beb8f2
+machine_plan_sha256: af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36
+
+reason:
+  - A code audit found that propagation events were calculated but indirect paragraphs were omitted from the revision worklist.
+  - Evidence identifiers containing digits were incorrectly treated as numerical claim content.
+  - Reviewer identity, frozen return provenance, newline preservation, and no-change article output needed stricter validation.
+  - The original article-review protocol registered efficacy outcomes but did not implement independent pre/post packets or pre-outcome selection replay.
+
+prospective_integrity_changes:
+  - Propagate through all explicitly cited article paragraphs, including unsampled paragraphs, using graph-evidence and literature-context to phenomenon dependencies.
+  - Propagation is conservative review routing, not automatic deletion or proof of semantic entailment. Uncited semantic dependencies remain outside the automatic guarantee.
+  - Bind every draft, writer input, packet, reviewer assignment, primary return and adjudication return to immutable identities or hashes.
+  - Reject duplicate reviewers, unassigned returns, nonfinite or zero time, server-identity overrides, unexpected adjudication and altered resolved verdicts.
+  - Show the full containing paragraph to claim reviewers; expose all visible linked references as allowable decisive evidence.
+  - Exclude PH/REF identifier digits from the numerical-risk feature.
+  - Preserve source UTF-8 bytes outside replacement spans, including CRLF. Copy no-change articles verbatim. Never overwrite a different reviewed artifact.
+  - A revised draft remains an independently unverified candidate; passing a mechanical revision check is not an efficacy result.
+
+selection_replay:
+  freeze_point: Immediately after packet construction and before any primary review return.
+  budget_unit: Dual-reviewed claim count per topic; real elapsed review time is measured separately and is not assumed equal.
+  budgets: [0.25, 0.5, 0.75]
+  policies:
+    always_review: All claims; descriptive ceiling.
+    uniform_hash: 100 pre-outcome deterministic random rankings per budget.
+    risk_priority: Score = 4 causal + 2 numeric + 2 multiple phenomena + 1 discussion.
+    dependency_active: Score = (risk score + 1) times number of claims sharing explicit PH/REF evidence in the same topic.
+  tie_seed: 20260827
+  observations: Captured actionable claims, direct corrective paragraphs surfaced, and sum of both primary reviewers plus adjudicator active seconds.
+  inference: Descriptive offline selection replay only. It does not estimate ungenerated article quality, causal labor savings, or learned reviewer complementarity.
+
+independent_revision_evaluation:
+  unit: Modified evidence-bearing paragraph, separately shown before and after revision.
+  independent_topics: 8
+  primary_evaluators_per_version: 2
+  adjudicators_per_disagreement: 1
+  evaluator_exclusion: Exclude all authoring/claim-review participants for that topic; require domain qualification, conflict screening and explicit production independence.
+  blinding: Opaque packet IDs, hidden version/pair labels and seeded shuffled presentation. Similar wording may reveal a pair; perfect blinding is not claimed.
+  interface: Existing article review UI, with the same evidence for both versions.
+  primary_endpoint: Difference in strict four-check adequacy; abstention is unsuccessful. Average within topic, then weight the eight topics equally.
+  no_change_topics: Contribute zero intervention effect without inventing evaluation rows.
+  primary_test: One-sided exact enumeration of 2^8 paired topic-effect sign flips; sign-exchangeability is an assumption, not a randomized treatment guarantee.
+  interval: 5000 seeded topic-bootstrap percentile draws, reported as descriptive small-cluster uncertainty.
+  diagnostics: Strict harm pairs, check-score changes and abstention counts.
+  exclusions: No whole-article superiority or causal human-versus-no-human claim follows from this targeted pre/post comparison.
+
+implementation_overrides:
+  packet_module:
+    path: src/citeweave/article_claim_review.py
+    sha256: 88800163274c9f97bd6b1effea48f3fb0144d07a5eb6bce02df09c48b7eb1ee5
+  revision_module:
+    path: src/citeweave/article_review_revision.py
+    sha256: f15c9007d22c195e5b406f82b34ab236b05389cd4c3480cbff19045a0a75987e
+  blinded_review_ui:
+    path: src/citeweave/review_ui.py
+    sha256: b082e9aebb3ebbf1edb7d75a9933bc028c196f13ac0a014fb9649d055becc5c9
+  preparation_cli:
+    path: scripts/prepare_article_claim_review.py
+    sha256: 382fa4b57f505c955d30420991c5343f47dc44c534820536908e60b5191c00d2
+  finalization_cli:
+    path: scripts/finalize_article_claim_review.py
+    sha256: 524cac9b82bf0ccd543efc889b37a6da6a8de465d23a329e2c0f7314eef60f90
+  review_experiment_module:
+    path: src/citeweave/article_review_experiment.py
+    sha256: 5ebdcf7f4afb93412f6b056098cd2e0d1e4136c865eaab6b1120c8156bba78d6
+  review_experiment_cli:
+    path: scripts/run_article_review_experiment.py
+    sha256: b78d9808a9b99b96d1c18a0411c2ac50c96e5c1a4723ddcdc45745f75b4c2780
+
+outcomes_at_freeze:
+  machine_article_responses: 0
+  human_claim_reviews: 0
+  independent_expert_revision_reviews: 0

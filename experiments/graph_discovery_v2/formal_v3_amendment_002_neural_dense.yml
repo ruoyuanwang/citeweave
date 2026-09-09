@@ -1,0 +1,34 @@
+schema_version: 1
+amendment_id: formal_v3_amendment_002_neural_dense
+base_protocol_sha256: 2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f
+prior_amendment_sha256: 4ba476b5cf7506761f116a903552150a22bdd0e6aa4a61702510163f24ca1a9b
+status: frozen_before_model_execution
+discovered_at_stage: post_benchmark_pre_model
+model_outcomes_inspected: false
+reason:
+  - The base protocol requires an external neural dense baseline but did not freeze its public model identity or retrieval parameters.
+  - The corpus contains multilingual metadata and long structured graph records, so the baseline must support multilingual and long-context embedding without task-specific fine-tuning.
+changes:
+  neural_dense_baseline:
+    condition_name: flat_neural_dense
+    model: BAAI/bge-m3
+    model_revision: 5617a9f61b028005a4858fdac845db406aefb181
+    license: mit
+    runtime: sentence-transformers
+    representation: normalized_dense_embedding
+    similarity: cosine
+    document_serialization: canonical_sorted_compact_json
+    query_serialization: registered_question_text_only
+    record_budget: 160
+    index_rule: query_independent_no_finetuning
+    tie_break: sha256_evidence_id
+    batching: streaming_top_k
+  sensitivity_baseline:
+    status: optional_nonconfirmatory
+    rule: Any second embedding model must be declared before its outputs are inspected and reported separately from the confirmatory BGE-M3 contrast.
+unchanged:
+  - frozen datasets, tasks, gold answers, and graph contexts
+  - primary hypotheses and multiplicity correction
+  - DeepSeek generation model, prompt, temperature, and output schema
+  - exact-token budget requirement
+validity_note: This amendment resolves an underspecified required external baseline before any confirmatory generation or neural retrieval output exists.

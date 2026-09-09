@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "protocol": "expert_evaluation_protocol.yml",
+  "sha256": "7e8267bd91b69ac12b563aa1e5af47921cd67d521a4f17a28bb652fb1fd875a5",
+  "frozen_before_expert_ratings": true,
+  "frozen_before_same_evidence_human_articles": true,
+  "confirmatory_expert_ratings_present": false,
+  "same_evidence_human_articles_present": false
+}

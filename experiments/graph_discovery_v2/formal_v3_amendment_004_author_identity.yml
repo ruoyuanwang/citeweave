@@ -1,0 +1,53 @@
+schema_version: 1
+name: Prospective author-identity correction before any formal model outcome
+status: integrity_correction_requires_revalidation
+base_protocol: experiments/graph_discovery_v2/formal_v3_protocol.yml
+base_protocol_sha256: 2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f
+reason: >-
+  Missing OpenAlex author IDs collapsed many different raw names and works into
+  openalex-author:None. All twenty primary author-network tasks mention the
+  placeholder in their core evidence/trace. Existing operator replay reproduced
+  the corruption and therefore did not establish source validity.
+timing:
+  formal_model_outcomes: 0
+  formal_machine_article_outcomes: 0
+  real_human_review_outcomes: 0
+  note: >-
+    The identity failure, old scope accounting and isolated corrected graph sizes
+    were observed before this correction plan. This is not preregistration of
+    those diagnostics. It is a prospective constraint on rebuilding and use of
+    data before formal model outcomes.
+correction:
+  known_orcid_or_openalex_id: preserve
+  missing_author_id: deterministic_work_id_and_author_position_occurrence
+  cross_work_name_merging: forbidden
+  unresolved_occurrences_are_distinct_people: false
+  cleaning_rules_version: 3
+  old_partition_resume: reject
+  original_frozen_workspaces: preserve_unchanged
+  rebuilt_workspace_root: experiments/formal_v3_identity_corrected_workspaces
+  rebuild_method: same_accepted_raw_and_staged_data_with_corrected_canonicalizer
+  processing_candidate_pool_size: 2000
+  processing_edge_row_limit: 1000000
+  independent_uncapped_graphs: exploratory_scope_sensitivity_only
+invariants:
+  new_api_acquisition: forbidden
+  change_conditions_hypotheses_budgets_or_models: forbidden
+  drop_author_tasks_to_avoid_failure: forbidden
+  primary_task_count: 100
+  author_tasks_to_rebuild: 20
+  author_task_selection: same_builders_parameters_and_seeds_for_all_four_primary_topics
+  unaffected_keyword_and_institution_tasks: require_exact_content_comparison
+  replication_and_complexity_cells: require_exact_content_comparison
+  unaffected_source_tables: require_row_multiset_equivalence
+  invalidated_neural_indexes: all_four_primary_author_large_indexes
+  unchanged_neural_indexes: reuse_only_with_original_identity_and_content_checks
+promotion:
+  automatic_api_resume: forbidden
+  required:
+    - all_rebuilt_workspaces_pass_fresh_processing_and_identity_checks
+    - new_benchmark_hashes_and_old_to_new_mapping_recorded
+    - independent_arithmetic_and_operator_trace_checks_pass
+    - all_model_conditions_receive_same_corrected_evidence_universe
+    - token_budget_and_readiness_reaudited_on_corrected_material
+    - persistent_integrity_hold_archived_with_verifiable_promotion_receipt

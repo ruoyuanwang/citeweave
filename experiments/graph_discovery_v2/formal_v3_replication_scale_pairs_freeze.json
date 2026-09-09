@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "artifact": "formal_v3_replication_scale_pairs.json",
+  "sha256": "e74af08327bffa391027767c76b9bada28fa524d983f42919ee8b0ed6b190e6a",
+  "protocol_sha256": "872c28cd84e56cc98d6522ed36db01ee24026f58c639695b127d6cdebc999fec",
+  "query_amendment_sha256": "0e051fc11e86895250256f5b2d47a603f771680d17e4904f5cc525c4258969c5",
+  "groups": 14,
+  "items": 42,
+  "datasets": 4,
+  "frozen_before_model_execution": true,
+  "primary_or_replication_outcomes_inspected": false
+}

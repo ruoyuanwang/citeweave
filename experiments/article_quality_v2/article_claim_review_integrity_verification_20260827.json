@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-27",
+  "amendment_sha256": "57c1629381753d3d968ae0eed84b803aa24fc52d7fdf4de8ba6576e2ade71b76",
+  "checks": {
+    "targeted_article_claim_revision_ui_tests": {"passed": 18, "exit_code": 0},
+    "full_pytest_suite": {"command": ".venv/Scripts/python.exe -m pytest -q", "exit_code": 0},
+    "full_ruff_check": {"command": ".venv/Scripts/python.exe -m ruff check src scripts tests", "exit_code": 0},
+    "amended_protocol_hash_validation": "passed",
+    "machine_generation_dry_run": {"status": "ready_to_execute", "cells": 16, "executed": 0}
+  },
+  "regression_coverage": [
+    "invalid source reaches unsampled downstream paragraph",
+    "unchanged paragraphs and no-change articles preserve original bytes including CRLF",
+    "numeric-risk detection ignores digits inside PH/REF identifiers",
+    "unassigned reviewer and server-identity overrides rejected",
+    "edited resolution and drifted original draft rejected",
+    "routing plan cannot be created after review outcomes",
+    "review time includes both primary reviewers and adjudicator",
+    "independent pre/post packets hide version labels and use topic-level inference"
+  ],
+  "known_limitations": [
+    "No real human or independent expert outcomes exist yet.",
+    "Automatic propagation covers explicit evidence dependencies, not all implicit semantic dependencies.",
+    "Offline routing replay does not establish causal labor savings.",
+    "Targeted pre/post paragraph evaluation does not establish whole-article superiority.",
+    "Starlette emits an existing httpx deprecation warning during tests."
+  ]
+}

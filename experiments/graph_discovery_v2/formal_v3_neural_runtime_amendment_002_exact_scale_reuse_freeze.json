@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_confirmatory_retrieval_and_generation",
+  "amendment": "formal_v3_neural_runtime_amendment_002_exact_scale_reuse.yml",
+  "sha256": "c149a37b72df2621678f7c6c5040467a80fec76ae65c774ae2938e2ccdd76edb",
+  "base_runtime_implementation_sha256": "72ce1d3f0e6909c3f32996c8ab799d9dad9ff0fccb94c90eedb73a5f206e2468",
+  "frozen_at_utc": "2026-08-26T05:22:00Z",
+  "formal_outcome_file_count": 0,
+  "model_outcomes_inspected": false,
+  "retrieval_outcomes_inspected": false
+}

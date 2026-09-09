@@ -1,0 +1,163 @@
+schema_version: 1
+status: preregistered_data_pending
+frozen_before_acquisition: true
+protocol_date: '2026-08-20'
+purpose: Independent confirmation of query-adaptive GraphRAG and executable graph programs.
+
+contamination_policy:
+  excluded_existing_topics:
+    - climate_change_risks_1990_2021
+    - crispr_extracellular_vesicles_2015_2022
+    - digital_twins_healthcare_2012_2024
+    - gene_editing_als_2004_2024
+    - global_microplastics_2004_2019
+    - gnn_drug_discovery_2017_2023
+    - machine_learning_climate_change_2008_2022
+    - plant_heat_drought_2008_2021
+    - climate_adaptation_2018_2020
+    - crispr_editing_2018_2020
+    - quantum_machine_learning_2019_2021
+    - rag_graph_2022_2025
+  rule: No excluded topic may contribute model-selection, prompt, threshold, or confirmatory outcome data.
+
+datasets:
+  - id: perovskite_solar_cell_stability_2012_2025
+    domain: energy_materials
+    source: openalex
+    keywords: [perovskite solar cell, stability]
+    query_mode: all
+    year_from: 2012
+    year_to: 2025
+    document_types: [article]
+    max_records: null
+  - id: spatial_transcriptomics_cancer_2018_2025
+    domain: biomedicine
+    source: openalex
+    keywords: [spatial transcriptomics, cancer]
+    query_mode: all
+    year_from: 2018
+    year_to: 2025
+    document_types: [article]
+    max_records: null
+  - id: green_hydrogen_electrolysis_2010_2025
+    domain: chemical_engineering
+    source: openalex
+    keywords: [green hydrogen, electrolysis]
+    query_mode: all
+    year_from: 2010
+    year_to: 2025
+    document_types: [article]
+    max_records: null
+  - id: federated_learning_healthcare_2016_2025
+    domain: computing_health
+    source: openalex
+    keywords: [federated learning, healthcare]
+    query_mode: all
+    year_from: 2016
+    year_to: 2025
+    document_types: [article]
+    max_records: null
+
+data_gates:
+  exhaustive_cursor_pagination: true
+  complete_natural_years: true
+  minimum_canonical_works: 200
+  minimum_large_graph_nodes: 100
+  minimum_temporal_years: 6
+  required_networks: [keyword_cooccurrence, institution_collaboration, coauthorship]
+  exclusion_timing: before_benchmark_answers_and_model_calls
+  exclusion_rule: Exclude a dataset only when a predeclared data gate fails; retain all others.
+
+benchmark:
+  record_budget: 160
+  random_seed: 20260820
+  primary_network: keyword_cooccurrence
+  primary_scales: [small, medium, large]
+  primary_task_types:
+    - multi_hop_connector
+    - bridge_counterfactual
+    - community_role_contrast
+    - hub_removal_resilience
+    - temporal_structural_shift
+  external_validity_networks: [institution_collaboration, coauthorship]
+  external_validity_scale: large
+  external_validity_task_types:
+    - multi_hop_connector
+    - bridge_counterfactual
+    - community_role_contrast
+    - hub_removal_resilience
+    - productivity_centrality_divergence
+  expected_tasks_per_eligible_dataset: 25
+  expected_total_tasks_if_all_eligible: 100
+
+conditions:
+  primary:
+    - flat_bm25
+    - flat_hybrid
+    - graph_query_retrieval
+    - graph_hierarchical_retrieval_v2
+    - operator_only
+    - graph_program
+  diagnostic:
+    - flat_program
+  forbidden_as_end_to_end_baseline:
+    - graph_retrieval
+  note: graph_retrieval is oracle-support and may only be reported as an upper-bound diagnostic.
+
+model_protocol:
+  model: deepseek-v4-pro
+  temperature: 0
+  thinking: disabled
+  prompt_version: graph-discovery-v2-strong-controls-20260820
+  retry_rule: Retry only transport or parse failures with the identical frozen request.
+  token_budget_rule: Use a tokenizer-enforced equal context budget before confirmatory execution.
+
+hypotheses:
+  - id: H1
+    contrast: graph_program_vs_flat_hybrid
+    subset: complexity_3_to_5
+    direction: graph_program_greater
+    primary: true
+  - id: H2
+    contrast: graph_hierarchical_retrieval_v2_vs_flat_hybrid
+    subset: global_and_counterfactual_tasks
+    direction: hierarchy_greater
+    primary: true
+  - id: H3
+    contrast: condition_by_scale_interaction
+    subset: paired_keyword_tasks
+    direction: flat_retrieval_degrades_more_with_scale
+    primary: true
+  - id: H4
+    contrast: graph_program_vs_operator_only
+    subset: provenance_required_tasks
+    direction: graph_program_greater
+    primary: false
+  - id: N1
+    contrast: graph_program_vs_flat_program
+    subset: same_information_ablation
+    direction: no_material_difference_expected
+    primary: false
+
+statistics:
+  cluster_unit: dataset_id
+  bootstrap_samples: 10000
+  bootstrap_seed: 20260820
+  paired_binary_test: exact_mcnemar
+  multiplicity: holm_for_three_primary_hypotheses
+  report: [absolute_risk_difference, confidence_interval, odds_ratio, p_value, evidence_f1, latency, tokens]
+
+human_review:
+  factual_per_reviewer: 80
+  semantic_per_reviewer: 50
+  requested_overlap_fraction: 0.5
+  sampling_seed: 20260820
+  agreement: cohen_kappa_on_common_packets
+  adjudication: independent_third_reviewer_for_all_common_packet_disagreements
+  policy_leakage_rule: Hidden deterministic outcomes may balance evaluation sampling but may not be online policy features.
+
+freeze_rules:
+  - No prompt, task definition, metric schema, retrieval parameter, or threshold change after acquisition begins.
+  - Any implementation bug discovered after acquisition must produce a versioned amendment before inspecting model outcomes.
+  - Development and confirmatory artifacts must use separate directories and manifests.
+  - Neural dense retrieval remains a required external baseline and may not be relabeled from LSA.

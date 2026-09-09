@@ -1,0 +1,52 @@
+schema_version: 1
+amendment_id: formal_v3_amendment_003_statistics
+base_protocol_sha256: 2e59e2029df034470b93a10cb86548fda1322ee3a322d4200c6ffeb692761b8f
+prior_amendments:
+  - 4ba476b5cf7506761f116a903552150a22bdd0e6aa4a61702510163f24ca1a9b
+  - 0c9e3c47a93f5e9c56cc0b2426f920f94229e61c27f1a20da8fcd3c843a5a39a
+status: frozen_before_model_execution
+discovered_at_stage: post_benchmark_pre_model
+model_outcomes_inspected: false
+reason:
+  - The base protocol names global/counterfactual and paired-scale subsets but does not define their exact registered task mapping.
+  - Independent task construction can choose different semantic anchors at different scales, confounding graph scale with item identity.
+scale_pair_artifact:
+  path: formal_v3_scale_pairs.json
+  sha256: 061e85391fa56ecf61fe24714a8d1df4d4f643a2dbbe29bf2c30408ed22d3339
+  groups: 14
+  items: 42
+  rule: Include a task family only when its registered semantic entity anchors are identical at small, medium, and large scale.
+primary_hypotheses:
+  H1:
+    contrast: graph_program_minus_flat_hybrid
+    subset: complexity_between_3_and_5_inclusive
+    estimand: paired_absolute_accuracy_difference
+    test: exact_two_sided_mcnemar
+  H2:
+    contrast: graph_hierarchical_retrieval_v2_minus_flat_hybrid
+    task_types:
+      - bridge_counterfactual
+      - community_role_contrast
+      - hub_removal_resilience
+      - temporal_structural_shift
+      - productivity_centrality_divergence
+    estimand: paired_absolute_accuracy_difference
+    test: exact_two_sided_mcnemar
+  H3:
+    contrast: graph_program_vs_flat_hybrid_by_scale
+    subset: frozen_scale_pair_artifact
+    primary_estimand: '(graph_program_large - flat_hybrid_large) - (graph_program_small - flat_hybrid_small)'
+    secondary_estimand: analogous small_to_medium interaction
+    direction: greater_than_zero
+    test: exact_one_sided_dataset_cluster_sign_flip
+    limitation: With four dataset clusters the minimum attainable one-sided p-value is 0.0625; inferential replication requires additional independently frozen datasets.
+statistics:
+  confidence_interval: dataset_cluster_bootstrap_percentile_95
+  bootstrap_samples: 10000
+  bootstrap_seed: 20260820
+  multiplicity: holm_for_H1_H2_H3
+  evidence_f1: paired_descriptive_and_cluster_bootstrap
+  cost_metrics: [prompt_tokens, completion_tokens, latency_seconds]
+  failed_parse: retained_and_not_scored_as_correct
+  missing_pair: no_pairwise_deletion_primary_analysis_stops
+validity_note: Subsets and tests are frozen using benchmark structure and gold entity identity only, before any model outcome exists.

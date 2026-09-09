@@ -1,0 +1,61 @@
+schema_version: 1
+amendment_id: formal_v3_complexity_analysis_amendment_008_cluster_validity
+status: frozen_before_confirmatory_api_execution
+frozen_at: '2026-08-31T18:28:00+08:00'
+formal_provider_result_files_at_freeze: 0
+model_outcomes_inspected: false
+base_protocol_sha256: 32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988
+prior_analysis_amendment_sha256: 06ce2c7d14b0e1570eb6aa084c0ef7fc77f60ea37adb634e0e2f8b8f3c937595
+reason: >-
+  A result-blind inference audit found that the original primary-panel H1/H2 exact
+  McNemar tests operate at the matched-task level even though dataset_id is the
+  registered cluster unit. Tasks from one scientific topic may be correlated, so
+  item-level significance alone can be anti-conservative. The already frozen
+  eight-dataset complexity-extension panel contains the necessary conditions and
+  permits exact topic-cluster validation without any new model calls.
+cluster_validity_family:
+  cluster_unit: dataset_id
+  clusters: 8
+  within_dataset_weighting: equal mean over all registered included tasks
+  across_dataset_weighting: equal
+  tests:
+    E1:
+      contrast: graph_program_minus_flat_hybrid
+      subset: complexity_3_to_5_inclusive_in_extension_panel
+      direction: greater_than_zero
+      inference: one_sided_exact_dataset_cluster_sign_flip
+    E2:
+      contrast: graph_hierarchical_retrieval_v2_minus_flat_hybrid
+      subset_task_types:
+        - bridge_counterfactual
+        - community_role_contrast
+        - hub_removal_resilience
+        - temporal_structural_shift
+      direction: greater_than_zero
+      inference: one_sided_exact_dataset_cluster_sign_flip
+  multiplicity: Holm step-down over E1 and E2 at alpha 0.05
+  minimum_attainable_one_sided_p: 0.00390625
+  descriptive_interval: 10000-draw equal-dataset cluster bootstrap
+relationship_to_existing_tests:
+  - Original registered item-level McNemar results remain reported and are not erased.
+  - E1/E2 are the required cluster-validity checks for paper-level claims that graph
+    program or hierarchical GraphRAG outperforms flat hybrid on complex tasks.
+  - C1/C2 remain the separate registered complexity-selectivity and scale-amplification
+    family and retain their own Holm adjustment.
+  - E1/E2 do not establish C1 or C2 and cannot substitute for them.
+unchanged:
+  - tasks, labels, conditions, prompts, contexts, model, tokenizer, token budgets
+  - all API calls and the 672-cell reuse plan
+  - C1-C4 estimands, GLMM, TOST, bootstrap counts, and seeds
+  - original H1-H3 and R1 outputs
+implementation:
+  path: scripts/analyze_formal_v3_complexity_extension.py
+  sha256: 3841ef8fbdbf0e2d293482f15d4fcc0e08199162265d3d8c53bf48bd3c8a8754
+test:
+  path: tests/test_analyze_formal_v3_complexity_extension.py
+  sha256: 23446e2f991db6b4e57b434bef513378ba728e0ecd3efad7501114b866fafb9c
+interpretation_guard: >-
+  Matched tasks increase within-topic precision but never increase the number of
+  inferential replicates. Rejecting an item-level McNemar test without passing the
+  corresponding Holm-adjusted E1/E2 topic-cluster test is insufficient for a
+  cross-topic superiority claim.

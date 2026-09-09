@@ -1,0 +1,88 @@
+schema_version: 2
+protocol_id: machine_article_generation_v2_cross_phenomenon_gate
+status: frozen_before_any_machine_article_response
+base_protocol_sha256: a204f520a6698f5c22b82cb40d5236359ea2c01c195e6f2772a146204921a4c0
+purpose: Generate the same frozen 16 machine articles while fail-closing outputs that
+  merely scatter phenomenon identifiers instead of developing distributed
+  cross-phenomenon reasoning.
+
+population:
+  topics: 8
+  conditions: [one_shot_llm, citeweave_graph_review]
+  planned_generation_responses: 16
+  responses_present_at_freeze: 0
+  model: deepseek-v4-pro
+  temperature: 0
+  thinking: disabled
+  max_tokens: 8000
+
+shared_evidence:
+  manifest: experiments/article_quality_v2/same_evidence_text_writer_inputs_v1/manifest.json
+  manifest_sha256: a199256b59ab911568aa055a9eb839b015c1205c18d05724e2825c492c08194b
+  rendered_figure_access: false
+  condition_parity: Both machine conditions receive identical writer inputs and use identical output gates.
+
+conditions:
+  one_shot_llm:
+    generation_requests: 1
+    graph_blueprint_access: false
+    iterative_revision: false
+  citeweave_graph_review:
+    generation_requests: 1
+    graph_blueprint_access: true
+    human_review_before_draft: false
+  terminal_response_rule: Any provider response terminates the cell even when a gate fails; no quality resampling.
+
+registered_synthesis_pairs:
+  connectivity_redundancy: [multi_hop_connector, bridge_counterfactual]
+  centrality_resilience: [community_role_contrast, hub_removal_resilience]
+  temporal_topology: [temporal_structural_shift, community_role_contrast]
+
+quality_gates:
+  unchanged:
+    - 2700-to-3300 word range from each writer input
+    - all seven required top-level sections
+    - no unregistered PH or REF evidence token
+    - all five phenomena used overall
+    - at least four phenomena in Discussion
+    - no rendered-image markup
+  strengthened_before_responses:
+    - all five registered phenomena appear in Results
+    - at least three registered phenomena appear in Conclusion
+    - at least two of the three registered synthesis pairs co-occur in prose paragraphs in Results or Discussion
+    - qualifying cross-phenomenon evidence is distributed over at least two prose paragraphs
+    - a paragraph containing all five PH identifiers is not by itself counted as a focused synthesis paragraph
+  interpretation: These are deterministic structural process gates, not semantic expert ratings.
+
+frozen_plan:
+  path: experiments/article_quality_v2/machine_generation_v1/plan.json
+  sha256: af255455239da650f4bc53839ea4f87d30448f08bdc6948904f27ccd4767db36
+  cells: 16
+  requests_modified_by_v2: false
+
+implementation:
+  planning_module:
+    path: src/citeweave/article_generation.py
+    sha256: ffc07bf922956da0941e549afce732a90a1e036ead4f82c718f623782abd27af
+  planning_cli:
+    path: scripts/prepare_machine_article_generation.py
+    sha256: 9ecab003362e3f2628f2e37f0e002f037144eb0ac6ededac8eb41728df4acff1
+  execution_cli:
+    path: scripts/run_machine_article_generation.py
+    sha256: 1b54b93c6e56ac7aed4586c6ea659c24c96040edf9eb4cc9ca4c818bc3595141
+  deferred_supervisor:
+    path: scripts/run_machine_article_generation_after_formal.ps1
+    sha256: 4f75b954c92a76ab695d74688f4adfdb626b2d2143c58f3dde8101a1142b6f05
+
+verification:
+  tests:
+    - tests/test_run_machine_article_generation.py
+    - tests/test_article_generation.py
+    - tests/test_article_writer_inputs.py
+  tests_passed: 7
+  negative_control: A document that piles all five PH identifiers into one paragraph fails the distributed-synthesis gate.
+
+interpretation_guard:
+  - Passing does not prove scientific quality or superiority over human writing.
+  - Cross-phenomenon token co-occurrence is necessary but not sufficient for a valid scientific synthesis.
+  - Claim-level real review and independent blinded expert evaluation remain required.

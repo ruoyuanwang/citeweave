@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "development_pilot_plan_frozen_before_provider_calls",
+  "sha256": "44f175603baf907e9b998d3e885f162beaf0250be26a26e0f48336501acc7431",
+  "protocol_sha256": "e4482cbc3be8f416f444e9ba0c8dba44f62f3e647fbba093a18fd6e62142511f",
+  "cells": 4,
+  "provider_responses_at_freeze": 0,
+  "generation_requests_per_cell": 1
+}

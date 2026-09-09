@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "amendment_id": "expert_evaluation_amendment_001_figure_access",
+  "amendment_sha256": "45ed3a923acb5a567bc880a3de4f66aa01fb5abe6b9390800a17c812c7ac5388",
+  "frozen_before_same_evidence_articles": true,
+  "frozen_before_expert_outcomes": true,
+  "same_evidence_articles_present": false,
+  "expert_outcomes_present": false,
+  "configured_text_provider_supports_images": false,
+  "recorded_candidate_vlm_probe_accepted_image_input": false
+}

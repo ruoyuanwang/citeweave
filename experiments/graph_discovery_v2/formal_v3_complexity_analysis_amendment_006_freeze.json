@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_confirmatory_api_execution",
+  "amendment": "formal_v3_complexity_analysis_amendment_006.yml",
+  "sha256": "06ce2c7d14b0e1570eb6aa084c0ef7fc77f60ea37adb634e0e2f8b8f3c937595",
+  "base_protocol_sha256": "32cd49e3335b74cba48524e4c7d769e4f0b7e41d9a2720d7451542a27e386988",
+  "formal_result_files": 0,
+  "model_outcomes_inspected": false,
+  "frozen_at_local": "2026-08-27T00:00:46+08:00"
+}
