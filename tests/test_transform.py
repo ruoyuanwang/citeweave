@@ -1,3 +1,5 @@
+import pytest
+
 from citeweave.transform import (
     Canonicalizer,
     _date_parts_crossref,
@@ -9,6 +11,46 @@ from citeweave.transform import (
 def test_normalize_doi():
     assert normalize_doi("https://doi.org/10.1234/ABC.1") == "10.1234/abc.1"
     assert normalize_doi("not-a-doi") is None
+
+
+@pytest.mark.parametrize(
+    "missing", [None, "", "  ", "None", "null", "NaN", "https://openalex.org/None"]
+)
+def test_openalex_unknown_authors_are_work_position_scoped(missing):
+    records = [
+        {
+            "id": f"https://openalex.org/W{number}",
+            "title": f"Work {number}",
+            "authorships": [
+                {"author": {"id": missing, "display_name": "Same name"}},
+                {"author": {"display_name": "Same name"}},
+            ],
+        }
+        for number in (1, 2)
+    ]
+    tables = Canonicalizer("openalex").canonicalize(records)
+    assert len(tables.authors) == 4
+    assert tables.authorships.author_id.nunique() == 4
+    assert tables.authorships.author_id.str.startswith("openalex-author-occurrence:").all()
+    repeated = Canonicalizer("openalex").canonicalize(records + records)
+    assert set(repeated.authors.author_id) == set(tables.authors.author_id)
+
+
+def test_openalex_known_author_identities_are_preserved():
+    records = [
+        {
+            "id": f"https://openalex.org/W{number}",
+            "title": f"Work {number}",
+            "authorships": [
+                {"author": {"id": "https://openalex.org/A123", "display_name": "Known"}},
+                {"author": {"id": None, "orcid": "https://orcid.org/0000-0002-1825-0097"}},
+            ],
+        }
+        for number in (1, 2)
+    ]
+    tables = Canonicalizer("openalex").canonicalize(records)
+    assert set(tables.authors.author_id) == {"openalex-author:A123", "orcid:0000-0002-1825-0097"}
+    assert tables.authorships.author_id.nunique() == 2
 
 
 def test_crossref_canonical_tables(crossref_records):

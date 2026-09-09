@@ -234,7 +234,7 @@ def _run_metadata(
 ) -> dict[str, Any]:
     return {
         "pipeline_version": 1,
-        "cleaning_rules_version": 2,
+        "cleaning_rules_version": 3,
         "protocol": {
             "year_from": config.protocol.year_from,
             "year_to": config.protocol.year_to,

@@ -481,10 +481,19 @@ class Canonicalizer:
             for position, authorship in enumerate(item.get("authorships") or [], start=1):
                 author = authorship.get("author") or {}
                 orcid = normalize_orcid(author.get("orcid"))
+                external_author_id = str(author.get("id") or "").strip().rstrip("/").split("/")[-1]
+                if external_author_id.casefold() in {"", "none", "null", "nan"}:
+                    external_author_id = None
+                # A missing identity is an occurrence, not a corpus-wide person.
+                # Names are deliberately not used to merge unknown authors across works.
                 author_id = (
                     f"orcid:{orcid}"
                     if orcid
-                    else f"openalex-author:{str(author.get('id', '')).split('/')[-1]}"
+                    else (
+                        f"openalex-author:{external_author_id}"
+                        if external_author_id
+                        else stable_id("openalex-author-occurrence", work_id, position)
+                    )
                 )
                 out["authors"].append(
                     {

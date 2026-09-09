@@ -5,10 +5,12 @@ import json
 from copy import deepcopy
 from pathlib import Path
 
+import pandas as pd
 import pytest
 
 from citeweave.bulk_processing import process_large_metadata
 from citeweave.exceptions import ProcessingError
+from citeweave.io import read_json, write_json
 from citeweave.models import (
     ProcessingPolicy,
     ProjectConfig,
@@ -84,9 +86,7 @@ def test_disk_processing_global_dedup_and_visualization_contract(tmp_path: Path)
                 "URL": f"https://doi.org/10.1234/large.{index}",
                 "title": [f"Bibliometric processing theme{index % 12} work {index}"],
                 "abstract": "<p>Structured metadata and science mapping.</p>",
-                "published": {
-                    "date-parts": [[2026 if index == 199 else 2020 + index % 6, 1, 1]]
-                },
+                "published": {"date-parts": [[2026 if index == 199 else 2020 + index % 6, 1, 1]]},
                 "container-title": ["Journal of Structured Evidence"],
                 "ISSN": ["1234-5678"],
                 "type": "journal-article",
@@ -131,9 +131,7 @@ def test_disk_processing_global_dedup_and_visualization_contract(tmp_path: Path)
     idempotent = process_large_metadata(tmp_path, _config(), resume=True)
     changed = _config()
     changed = changed.model_copy(
-        update={
-            "processing": changed.processing.model_copy(update={"edge_row_limit": 9_999})
-        }
+        update={"processing": changed.processing.model_copy(update={"edge_row_limit": 9_999})}
     )
 
     assert partial["partial"]
@@ -152,10 +150,24 @@ def test_disk_processing_global_dedup_and_visualization_contract(tmp_path: Path)
         name: 0 for name in result["quality"]["foreign_key_orphans"]
     }
     assert acceptance["passed"]
-    assert acceptance["passed_checks"] == acceptance["total_checks"] == 6
+    assert acceptance["passed_checks"] == acceptance["total_checks"] == 7
     assert idempotent["already_complete"]
     with pytest.raises(ProcessingError, match="--refinalize"):
         process_large_metadata(tmp_path, changed, resume=True)
     rebuilt = process_large_metadata(tmp_path, changed, resume=True, refinalize=True)
     assert rebuilt["refinalized"]
     assert verify_large_processing(tmp_path)["passed"]
+    checkpoint = read_json(paths.audit / "processing_manifest.json")
+    checkpoint["run_contract"]["cleaning_rules_version"] = 2
+    write_json(paths.audit / "processing_manifest.json", checkpoint)
+    with pytest.raises(ProcessingError, match="Cleaning rules changed"):
+        process_large_metadata(tmp_path, changed, resume=True)
+    authors = pd.read_parquet(paths.canonical / "authors.parquet")
+    authors.loc[0, "author_id"] = "openalex-author:None"
+    authors.to_parquet(paths.canonical / "authors.parquet", index=False)
+    rejected = verify_large_processing(tmp_path)
+    identity_check = next(
+        c for c in rejected["checks"] if c["name"] == "graph_entity_identity_not_placeholder"
+    )
+    assert not identity_check["passed"]
+    assert identity_check["detail"]["authors"] == 1

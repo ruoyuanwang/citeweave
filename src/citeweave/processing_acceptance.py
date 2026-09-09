@@ -80,6 +80,7 @@ def verify_large_processing(root: Path) -> dict[str, Any]:
     independent: dict[str, Any] = {}
     relation_errors: dict[str, int] = {}
     unique_errors: dict[str, dict[str, int]] = {}
+    placeholder_identities: dict[str, int] = {}
     if not missing:
         connection = duckdb.connect(":memory:")
         try:
@@ -138,8 +139,26 @@ def verify_large_processing(root: Path) -> dict[str, Any]:
                 name: int(connection.execute(query).fetchone()[0])
                 for name, query in relation_queries.items()
             }
+            for table, identifier in {
+                "authors": "author_id",
+                "institutions": "institution_id",
+            }.items():
+                placeholder_identities[table] = int(
+                    connection.execute(
+                        f"SELECT count(*) FROM {table} WHERE {identifier} IS NULL "
+                        f"OR regexp_matches(lower(trim({identifier})), '(^|:)(none|null|nan|)$')"
+                    ).fetchone()[0]
+                )
         finally:
             connection.close()
+    checks.append(
+        _check(
+            "graph_entity_identity_not_placeholder",
+            bool(placeholder_identities)
+            and all(value == 0 for value in placeholder_identities.values()),
+            placeholder_identities,
+        )
+    )
     checks.append(
         _check(
             "primary_and_foreign_key_integrity",
