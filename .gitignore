@@ -42,3 +42,60 @@ tmp/
 docs/*.inspect.ndjson
 !experiments/runs/
 !experiments/runs/**
+
+# Codex/test scratch space and generated deliverables.
+.codex_work/
+.codex_tmp/
+.tmp/
+deliverables/
+docs/*.pptx
+docs/CiteWeave_*/
+
+# Runtime logs, regression reports, and packaged release candidates.
+experiments/releases/
+experiments/runs/**/*.log
+experiments/runs/**/*.xml
+
+# Regenerable formal workspaces and local model/index prerequisites.
+experiments/formal_v3_workspaces/
+experiments/formal_v3_identity_corrected_workspaces/
+experiments/formal_v3_replication_workspaces/
+experiments/robust_graph_confirmation_v1_workspaces/
+experiments/graph_discovery_v2/formal_v3_execution_prerequisites/
+
+# Bulky derived benchmark, execution, panel, and packet payloads. Compact
+# protocols, freezes, manifests, audits, and analyses remain versionable.
+experiments/graph_discovery_v2/*benchmarks*/
+experiments/graph_discovery_v2/formal_v3_*_runs/
+experiments/graph_discovery_v2/formal_v3_runs/
+experiments/graph_discovery_v2/formal_v3_identity_corrected_execution/
+experiments/graph_discovery_v2/graph_phenomenon_robustness_v1/
+experiments/graph_discovery_v2/robust_graph_synthesis_development_v1/
+experiments/graph_discovery_v2/robust_graph_synthesis_confirmation_v1_query_review_packets/
+experiments/graph_discovery_v2/formal_v3_mechanism_supplement_merged.json
+experiments/human_review_v2/*panel*/
+experiments/human_review_v2/oversight_heldout_factorial*/
+experiments/human_review_v2/source_relevance_warmup_v4/
+experiments/article_quality_v2/same_evidence_writer_packs*/
+experiments/article_quality_v2/machine_generation_v1/
+experiments/article_quality_v2/article_claim_review_v1/
+experiments/article_quality_v2/expert_packet_intake/
+experiments/article_quality_v3/*pilot*/
+experiments/article_quality_v3/matched_article_compiler_claim_ready_development_v1/
+experiments/citecalibrator_need_assessment_v1/pilot_benchmark/
+experiments/citecalibrator_need_assessment_v1/controlled_challenge/
+experiments/citecalibrator_need_assessment_v1/baselines/
+experiments/citecalibrator_need_assessment_v1/llm_judging_v1/
+experiments/**/review_packets/
+
+# Generated scientific data and binary model artifacts. Published datasets
+# use an external immutable archive or an explicit Git LFS exception.
+experiments/**/*.npy
+experiments/**/*.bin
+experiments/**/*.parquet
+experiments/**/*.dat
+experiments/**/*.jsonl
+experiments/**/*.gz
+experiments/**/*.zip
+experiments/**/*.png
+experiments/**/*.graphml
